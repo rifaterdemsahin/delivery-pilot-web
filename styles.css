@@ -311,7 +311,7 @@ body {
 /* Use Cases Section */
 .use-cases {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: var(--bg-white);
 }
 
 .use-cases-grid {
