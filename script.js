@@ -168,7 +168,7 @@ const translations = {
                 blog: "Blog",
                 support: "Support"
             },
-            copyright: "© 2024 Delivery Pilot. All rights reserved."
+            copyright: "© {year} Delivery Pilot. All rights reserved."
         }
     },
     tr: {
@@ -339,7 +339,7 @@ const translations = {
                 blog: "Blog",
                 support: "Destek"
             },
-            copyright: "© 2024 Delivery Pilot. Tüm hakları saklıdır."
+            copyright: "© {year} Delivery Pilot. Tüm hakları saklıdır."
         },
         onboarding: {
             hero: {
@@ -689,12 +689,16 @@ function getNestedTranslation(obj, path) {
 function updateContent(lang) {
     currentLang = lang;
     
+    // Get current year
+    const currentYear = new Date().getFullYear();
+    
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
         if (translation) {
-            element.textContent = translation;
+            // Replace {year} placeholder with current year
+            element.textContent = translation.replace('{year}', currentYear);
         }
     });
     
@@ -719,8 +723,24 @@ function updateContent(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
+// Function to update copyright year in all elements
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    
+    // Update all copyright elements that contain "2024 Delivery Pilot"
+    document.querySelectorAll('p, span, div').forEach(element => {
+        if (element.textContent.includes('2024 Delivery Pilot. All rights reserved.') ||
+            element.textContent.includes('2024 Delivery Pilot. Tüm hakları saklıdır.')) {
+            element.textContent = element.textContent.replace('2024', currentYear);
+        }
+    });
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    // Update copyright year on all pages
+    updateCopyrightYear();
+    
     // Initialize language from localStorage or default to English
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     updateContent(savedLang);
