@@ -723,12 +723,18 @@ function updateContent(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
-// Function to update copyright year in all elements
+// Function to update copyright year in elements without data-i18n
 function updateCopyrightYear() {
     const currentYear = new Date().getFullYear();
     
-    // Update all copyright elements using a regex to match copyright text patterns
-    document.querySelectorAll('.footer-bottom p, footer p, [data-i18n="footer.copyright"]').forEach(element => {
+    // Update copyright elements that don't use the translation system
+    // Only target elements without data-i18n attribute to avoid conflicts
+    document.querySelectorAll('.footer-bottom p, footer p').forEach(element => {
+        // Skip elements that use the translation system
+        if (element.hasAttribute('data-i18n')) {
+            return;
+        }
+        
         // Match copyright text with 4-digit year and replace with current year
         const copyrightPattern = /©\s*(\d{4})\s+Delivery Pilot/;
         if (copyrightPattern.test(element.textContent)) {
@@ -739,12 +745,13 @@ function updateCopyrightYear() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Update copyright year on all pages
-    updateCopyrightYear();
-    
     // Initialize language from localStorage or default to English
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     updateContent(savedLang);
+    
+    // Update copyright year for pages that don't use the translation system
+    // This runs after updateContent() to avoid conflicts
+    updateCopyrightYear();
     
     // Add click event listeners to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
