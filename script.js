@@ -78,7 +78,8 @@ const translations = {
                 email: "Your Email",
                 company: "Company Name",
                 message: "Tell us about your AI transformation goals",
-                submit: "Request Consultation"
+                submit: "Request Consultation",
+                successMessage: "Thank you for your interest! Our team will contact you shortly to discuss your AI transformation journey."
             }
         },
         footer: {
@@ -182,7 +183,8 @@ const translations = {
                 email: "E-posta Adresiniz",
                 company: "Şirket Adı",
                 message: "Yapay zeka dönüşüm hedefleriniz hakkında bize bilgi verin",
-                submit: "Danışmanlık Talep Edin"
+                submit: "Danışmanlık Talep Edin",
+                successMessage: "İlginiz için teşekkür ederiz! Ekibimiz, yapay zeka dönüşüm yolculuğunuzu görüşmek için yakında sizinle iletişime geçecek."
             }
         },
         footer: {
@@ -252,8 +254,9 @@ function updateContent(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
-// Initialize language from localStorage or default to English
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize language from localStorage or default to English
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     updateContent(savedLang);
     
@@ -264,24 +267,22 @@ document.addEventListener('DOMContentLoaded', () => {
             updateContent(lang);
         });
     });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
-});
-
-// Form submission handler
-document.addEventListener('DOMContentLoaded', () => {
+    
+    // Form submission handler
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -291,12 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(this);
             
             // Show success message based on current language
-            const successMessages = {
-                en: 'Thank you for your interest! Our team will contact you shortly to discuss your AI transformation journey.',
-                tr: 'İlginiz için teşekkür ederiz! Ekibimiz, yapay zeka dönüşüm yolculuğunuzu görüşmek için yakında sizinle iletişime geçecek.'
-            };
-            
-            alert(successMessages[currentLang] || successMessages['en']);
+            const successMessage = getNestedTranslation(translations[currentLang], 'contact.form.successMessage');
+            alert(successMessage);
             
             // Reset form
             this.reset();
