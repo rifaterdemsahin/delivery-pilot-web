@@ -136,6 +136,67 @@
             margin: 0 0.5rem 0.5rem 0;
         }
 
+        .social-links {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .social-links h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            background: var(--secondary-color);
+        }
+
+        .social-btn.linkedin {
+            background: #0077b5;
+        }
+
+        .social-btn.linkedin:hover {
+            background: #005885;
+        }
+
+        .social-btn.youtube {
+            background: #ff0000;
+        }
+
+        .social-btn.youtube:hover {
+            background: #cc0000;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .founder-hero h1 {
@@ -160,6 +221,17 @@
 
             .profile-section p,
             .expertise-list li {
+                font-size: 1rem;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .social-btn {
+                justify-content: center;
+                padding: 0.875rem 1.5rem;
                 font-size: 1rem;
             }
         }
@@ -258,6 +330,20 @@
                             <span class="company">(Microsoft):</span>
                         </div>
                         <p>Increased technology utilization by 50% as Enterprise Transformation Architect.</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Connect with Rifat Erdem Sahin</h3>
+                    <div class="social-buttons">
+                        <a href="https://www.linkedin.com/in/rifaterdemsahin/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+                            <span class="social-icon">💼</span>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://www.youtube.com/@RifatErdemSahin" target="_blank" rel="noopener noreferrer" class="social-btn youtube">
+                            <span class="social-icon">🎥</span>
+                            <span>YouTube Channel</span>
+                        </a>
                     </div>
                 </div>
             </div>
