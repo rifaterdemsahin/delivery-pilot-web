@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your AI transformation assessments">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard - Delivery Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dashboard-container {
+            min-height: 100vh;
+            background: #f3f4f6;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dashboard-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dashboard-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .dashboard-title h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .user-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .dashboard-content {
+            padding: 32px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+        
+        .assessments-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .section-header h2 {
+            font-size: 20px;
+            color: #1f2937;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            border: 1px solid #e5e7eb;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .assessment-list {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .assessment-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        
+        .assessment-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .assessment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+        
+        .assessment-info h3 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .assessment-meta {
+            font-size: 13px;
+            color: #6b7280;
+        }
+        
+        .assessment-score {
+            text-align: right;
+        }
+        
+        .score-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .score-badge.excellent {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .score-badge.good {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .score-badge.fair {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .score-badge.poor {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .score-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 4px;
+        }
+        
+        .assessment-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f3f4f6;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        
+        .detail-icon {
+            font-size: 16px;
+        }
+        
+        .detail-label {
+            color: #6b7280;
+        }
+        
+        .detail-value {
+            color: #1f2937;
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6b7280;
+        }
+        
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        
+        .empty-state p {
+            font-size: 14px;
+        }
+        
+        .new-assessment-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        
+        .new-assessment-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span>📊</span>
+                    <h1>Assessment Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <div class="user-name" id="userName"></div>
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Assessments</h3>
+                        <div class="stat-value" id="totalAssessments">0</div>
+                        <div class="stat-label">All time</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Score</h3>
+                        <div class="stat-value" id="averageScore">0%</div>
+                        <div class="stat-label">Overall readiness</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Latest Assessment</h3>
+                        <div class="stat-value" id="latestDate">-</div>
+                        <div class="stat-label">Most recent</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Team Members</h3>
+                        <div class="stat-value" id="teamMembers">0</div>
+                        <div class="stat-label">Assessed users</div>
+                    </div>
+                </div>
+                
+                <div class="assessments-section">
+                    <div class="section-header">
+                        <h2>Assessment History</h2>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="recent">Recent</button>
+                            <button class="filter-btn" data-filter="high">High Score</button>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-list" id="assessmentList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Check if user is logged in
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (!currentUser) {
+            window.location.href = 'signin.html';
+        }
+        
+        // Mock assessment data for different enterprises
+        const allAssessments = [
+            // Enterprise A assessments
+            {
+                id: 'asmt-001',
+                enterpriseId: 'enterprise-a',
+                userName: 'John Smith',
+                userEmail: 'john.smith@enterprisea.com',
+                userRole: 'AI Lead',
+                date: '2024-12-01',
+                overallScore: 78,
+                categoryScores: {
+                    prereq: 85,
+                    creative: 72,
+                    comm: 80,
+                    ai: 75,
+                    github: 70,
+                    markdown: 82,
+                    advanced: 68,
+                    delivery: 92
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 42
+            },
+            {
+                id: 'asmt-002',
+                enterpriseId: 'enterprise-a',
+                userName: 'Sarah Johnson',
+                userEmail: 'sarah.j@enterprisea.com',
+                userRole: 'Product Manager',
+                date: '2024-11-28',
+                overallScore: 65,
+                categoryScores: {
+                    prereq: 70,
+                    creative: 68,
+                    comm: 75,
+                    ai: 60,
+                    github: 55,
+                    markdown: 62,
+                    advanced: 50,
+                    delivery: 80
+                },
+                readinessLevel: 'Intermediate Track',
+                completionTime: 45
+            },
+            {
+                id: 'asmt-003',
+                enterpriseId: 'enterprise-a',
+                userName: 'Michael Chen',
+                userEmail: 'mchen@enterprisea.com',
+                userRole: 'Developer',
+                date: '2024-11-25',
+                overallScore: 82,
+                categoryScores: {
+                    prereq: 90,
+                    creative: 75,
+                    comm: 78,
+                    ai: 85,
+                    github: 92,
+                    markdown: 88,
+                    advanced: 80,
+                    delivery: 68
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 38
+            },
+            // Enterprise B assessments
+            {
+                id: 'asmt-004',
+                enterpriseId: 'enterprise-b',
+                userName: 'Lisa Anderson',
+                userEmail: 'lisa.a@enterpriseb.com',
+                userRole: 'CTO',
+                date: '2024-12-05',
+                overallScore: 88,
+                categoryScores: {
+                    prereq: 92,
+                    creative: 85,
+                    comm: 90,
+                    ai: 88,
+                    github: 85,
+                    markdown: 90,
+                    advanced: 82,
+                    delivery: 92
+                },
+                readinessLevel: 'Expert Facilitator',
+                completionTime: 35
+            },
+            {
+                id: 'asmt-005',
+                enterpriseId: 'enterprise-b',
+                userName: 'David Park',
+                userEmail: 'dpark@enterpriseb.com',
+                userRole: 'Data Scientist',
+                date: '2024-11-30',
+                overallScore: 72,
+                categoryScores: {
+                    prereq: 78,
+                    creative: 65,
+                    comm: 70,
+                    ai: 80,
+                    github: 75,
+                    markdown: 68,
+                    advanced: 72,
+                    delivery: 68
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 40
+            },
+            // Acme Corp assessments
+            {
+                id: 'asmt-006',
+                enterpriseId: 'acme-corp',
+                userName: 'Emily Roberts',
+                userEmail: 'eroberts@acme.com',
+                userRole: 'Innovation Director',
+                date: '2024-12-03',
+                overallScore: 70,
+                categoryScores: {
+                    prereq: 75,
+                    creative: 72,
+                    comm: 68,
+                    ai: 70,
+                    github: 65,
+                    markdown: 70,
+                    advanced: 62,
+                    delivery: 78
+                },
+                readinessLevel: 'Intermediate Track',
+                completionTime: 43
+            },
+            {
+                id: 'asmt-007',
+                enterpriseId: 'acme-corp',
+                userName: 'James Wilson',
+                userEmail: 'jwilson@acme.com',
+                userRole: 'Senior Developer',
+                date: '2024-11-27',
+                overallScore: 85,
+                categoryScores: {
+                    prereq: 88,
+                    creative: 80,
+                    comm: 82,
+                    ai: 90,
+                    github: 92,
+                    markdown: 85,
+                    advanced: 78,
+                    delivery: 85
+                },
+                readinessLevel: 'Expert Facilitator',
+                completionTime: 36
+            }
+        ];
+        
+        // Get assessments for current user's enterprise
+        const userAssessments = allAssessments.filter(a => a.enterpriseId === currentUser.id);
+        
+        // Update user name
+        document.getElementById('userName').textContent = currentUser.name;
+        
+        // Calculate stats
+        const totalAssessments = userAssessments.length;
+        const avgScore = totalAssessments > 0 
+            ? Math.round(userAssessments.reduce((sum, a) => sum + a.overallScore, 0) / totalAssessments)
+            : 0;
+        const latestAssessment = userAssessments.length > 0 
+            ? userAssessments.sort((a, b) => new Date(b.date) - new Date(a.date))[0]
+            : null;
+        const teamMembers = new Set(userAssessments.map(a => a.userEmail)).size;
+        
+        // Update stats display
+        document.getElementById('totalAssessments').textContent = totalAssessments;
+        document.getElementById('averageScore').textContent = `${avgScore}%`;
+        document.getElementById('latestDate').textContent = latestAssessment 
+            ? new Date(latestAssessment.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+            : '-';
+        document.getElementById('teamMembers').textContent = teamMembers;
+        
+        // Function to get score badge class
+        function getScoreBadge(score) {
+            if (score >= 75) return 'excellent';
+            if (score >= 60) return 'good';
+            if (score >= 40) return 'fair';
+            return 'poor';
+        }
+        
+        // Function to render assessments
+        function renderAssessments(assessments) {
+            const listContainer = document.getElementById('assessmentList');
+            
+            if (assessments.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📋</div>
+                        <h3>No assessments found</h3>
+                        <p>Start by taking your first AI maturity assessment</p>
+                        <a href="assesment.html" class="new-assessment-btn">Take Assessment</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            listContainer.innerHTML = assessments.map(assessment => `
+                <div class="assessment-card">
+                    <div class="assessment-header">
+                        <div class="assessment-info">
+                            <h3>${assessment.userName}</h3>
+                            <div class="assessment-meta">
+                                ${assessment.userRole} • ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            </div>
+                        </div>
+                        <div class="assessment-score">
+                            <div class="score-badge ${getScoreBadge(assessment.overallScore)}">
+                                ${assessment.readinessLevel}
+                            </div>
+                            <div class="score-value">${assessment.overallScore}%</div>
+                        </div>
+                    </div>
+                    <div class="assessment-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <div class="detail-label">Email</div>
+                                <div class="detail-value">${assessment.userEmail}</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⏱️</span>
+                            <div>
+                                <div class="detail-label">Completion Time</div>
+                                <div class="detail-value">${assessment.completionTime} min</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🎯</span>
+                            <div>
+                                <div class="detail-label">Top Category</div>
+                                <div class="detail-value">${Object.entries(assessment.categoryScores)
+                                    .sort((a, b) => b[1] - a[1])[0][0].toUpperCase()}</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📊</span>
+                            <div>
+                                <div class="detail-label">Categories</div>
+                                <div class="detail-value">${Object.keys(assessment.categoryScores).length}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Initial render
+        renderAssessments(userAssessments);
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter assessments
+                const filter = btn.dataset.filter;
+                let filtered = [...userAssessments];
+                
+                if (filter === 'recent') {
+                    filtered = filtered.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+                } else if (filter === 'high') {
+                    filtered = filtered.filter(a => a.overallScore >= 75);
+                }
+                
+                renderAssessments(filtered);
+            });
+        });
+        
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            sessionStorage.removeItem('currentUser');
+            window.location.href = 'signin.html';
+        });
+    </script>
+</body>
+</html>

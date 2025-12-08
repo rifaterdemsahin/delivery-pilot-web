@@ -10,6 +10,7 @@ const translations = {
             about: "About",
             founder: "Founder",
             partners: "Partners",
+            signIn: "Sign In",
             getStarted: "Get Started"
         },
         hero: {
@@ -180,6 +181,7 @@ const translations = {
             about: "Hakkımızda",
             founder: "Kurucu",
             partners: "Ortaklar",
+            signIn: "Giriş Yap",
             getStarted: "Başlayın"
         },
         hero: {
