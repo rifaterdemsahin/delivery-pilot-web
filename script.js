@@ -8,6 +8,7 @@ const translations = {
             howItWorks: "How It Works",
             useCases: "Use Cases",
             about: "About",
+            founder: "Founder",
             getStarted: "Get Started"
         },
         hero: {
@@ -132,6 +133,7 @@ const translations = {
             company: {
                 title: "Company",
                 about: "About",
+                founder: "Founder",
                 careers: "Careers",
                 contact: "Contact"
             },
@@ -152,6 +154,7 @@ const translations = {
             howItWorks: "Nasıl Çalışır",
             useCases: "Kullanım Alanları",
             about: "Hakkımızda",
+            founder: "Kurucu",
             getStarted: "Başlayın"
         },
         hero: {
@@ -276,6 +279,7 @@ const translations = {
             company: {
                 title: "Şirket",
                 about: "Hakkımızda",
+                founder: "Kurucu",
                 careers: "Kariyer",
                 contact: "İletişim"
             },

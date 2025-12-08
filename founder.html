@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Rifat Erdem Sahin - Founder of Delivery Pilot">
+    <title>Founder - Rifat Erdem Sahin | Delivery Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .founder-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .founder-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .founder-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .founder-content {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .profile-section {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .profile-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-section p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .expertise-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            color: var(--text-dark);
+            font-size: 1.125rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .expertise-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .expertise-list li strong {
+            color: var(--text-dark);
+        }
+
+        .accomplishments {
+            margin-top: 2rem;
+        }
+
+        .accomplishment-item {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .accomplishment-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .accomplishment-item .year {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.125rem;
+            margin-right: 0.5rem;
+        }
+
+        .accomplishment-item .company {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .accomplishment-item p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1rem;
+        }
+
+        .clearance-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0 0.5rem 0.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .founder-hero h1 {
+                font-size: 2rem;
+            }
+
+            .founder-hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .profile-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .profile-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .profile-section h3 {
+                font-size: 1.25rem;
+            }
+
+            .profile-section p,
+            .expertise-list li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>Delivery Pilot</h2>
+            </div>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="tr">TR</button>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="onboarding.html">Onboarding</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#use-cases">Use Cases</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="founder.html" class="active">Founder</a></li>
+                    <li><a href="https://deliverypilot.net/assesment.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Founder Hero Section -->
+    <section class="founder-hero">
+        <div class="container">
+            <h1>Meet Our Founder</h1>
+            <p class="subtitle">Rifat Erdem Sahin - Visionary Leader in AI & DevOps</p>
+        </div>
+    </section>
+
+    <!-- Founder Content Section -->
+    <section class="founder-content">
+        <div class="container">
+            <div class="profile-section">
+                <h2>PROFESSIONAL PROFILE</h2>
+                <p>An experienced engineer with deep expertise in CI/CD, DevOps, and AI-based architectures. I have a proven track record in optimizing and automating enterprise systems with a focus on automation, scalability, and security.</p>
+                <div>
+                    <span class="clearance-badge">UK SC Cleared</span>
+                    <span class="clearance-badge">NATO Cleared</span>
+                </div>
+
+                <h3>KEY EXPERTISE</h3>
+                <ul class="expertise-list">
+                    <li><strong>Generative AI & RAG:</strong> Building/deploying GenAI solutions and Vector databases.</li>
+                    <li><strong>AI Security:</strong> Prompt injection prevention and secure model deployment.</li>
+                    <li><strong>DevOps/SRE:</strong> CI/CD, Infrastructure as Code, Kubernetes, Docker.</li>
+                    <li><strong>Cloud:</strong> Azure, AWS, GCP, Terraform, Ansible.</li>
+                </ul>
+
+                <h3>RECENT ACCOMPLISHMENTS</h3>
+                <div class="accomplishments">
+                    <div class="accomplishment-item">
+                        <div>
+                            <span class="year">🏆 2024</span>
+                            <span class="company">(Goldman Sachs):</span>
+                        </div>
+                        <p>Developed AI-driven CI/CD framework, increasing deployment frequency by 300%.</p>
+                    </div>
+
+                    <div class="accomplishment-item">
+                        <div>
+                            <span class="year">🏆 2023</span>
+                            <span class="company">(Ypsomed):</span>
+                        </div>
+                        <p>Migrated IoT systems, reducing versioning conflicts by 40%.</p>
+                    </div>
+
+                    <div class="accomplishment-item">
+                        <div>
+                            <span class="year">🏆 2022</span>
+                            <span class="company">(Cushman & Wakefield):</span>
+                        </div>
+                        <p>Automated ETL processes, increasing speed by 50%.</p>
+                    </div>
+
+                    <div class="accomplishment-item">
+                        <div>
+                            <span class="year">🏆 2021</span>
+                            <span class="company">(Emerson):</span>
+                        </div>
+                        <p>Improved computational efficiency by 45% using GPU-based containers.</p>
+                    </div>
+
+                    <div class="accomplishment-item">
+                        <div>
+                            <span class="year">🏆 2016</span>
+                            <span class="company">(Microsoft):</span>
+                        </div>
+                        <p>Increased technology utilization by 50% as Enterprise Transformation Architect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delivery Pilot</h3>
+                    <p>Enterprise AI Transformation Platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#use-cases">Use Cases</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="founder.html">Founder</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="https://deliverypilot.net/assesment.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delivery Pilot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
