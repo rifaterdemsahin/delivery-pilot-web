@@ -3,6 +3,7 @@ const translations = {
     en: {
         nav: {
             home: "Home",
+            onboarding: "Onboarding",
             features: "Features",
             howItWorks: "How It Works",
             useCases: "Use Cases",
@@ -146,6 +147,7 @@ const translations = {
     tr: {
         nav: {
             home: "Ana Sayfa",
+            onboarding: "Katılım",
             features: "Özellikler",
             howItWorks: "Nasıl Çalışır",
             useCases: "Kullanım Alanları",
