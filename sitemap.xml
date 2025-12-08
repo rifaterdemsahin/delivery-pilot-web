@@ -27,5 +27,21 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+    
+    <!-- Founder Page -->
+    <url>
+        <loc>https://deliverypilot.net/founder.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Previous Customers Page -->
+    <url>
+        <loc>https://deliverypilot.net/previous-customers.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
 </urlset>
