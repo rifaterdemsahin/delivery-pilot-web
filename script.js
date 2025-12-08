@@ -338,6 +338,339 @@ const translations = {
                 support: "Destek"
             },
             copyright: "© 2024 Delivery Pilot. Tüm hakları saklıdır."
+        },
+        onboarding: {
+            hero: {
+                badge: "Kurumsal Yapay Zeka Dönüşümü",
+                title: "Delivery Pilot 🚀",
+                subtitle: "RAISE Çözümü: Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor 📈",
+                description: "Kurumsal dönüşümün yeni çağına hoş geldiniz! ✨ Geleneksel mühendislik ile Vibe Programlamanın yeni dünyası arasında köprü kuruyoruz. Geliştiricilerin ve geliştiriciolmayanların sürekli öğrenme döngüsünde birleştiği devrime katılın.",
+                process: "Değerlendirme 🕵️‍♂️ → Eğitim 🎓 → Uygulama 🚀",
+                startAssessment: "🚀 Değerlendirmenizi Başlatın",
+                exploreVibe: "✨ Vibe'ı Keşfedin",
+                author: "Delivery Pilot<br>Rifat Erdem Sahin tarafından"
+            },
+            transformation: {
+                title: "Dönüşümün 3 Aşaması",
+                subtitle: "Yapay zeka çağı için sürekli öğrenme ve uygulama döngüsü.",
+                stage1: {
+                    icon: "🔍",
+                    number: "1. Değerlendirme",
+                    title: "Üç Ayda Bir 1-1 Özel Toplantılar.",
+                    description: "Rolünüze özel gizli değerlendirmeler.",
+                    feature1: "🔒 Özel ve Güvenli: 1-1 oturumlar kesinlikle gizlidir.",
+                    feature2: "💻 Geliştiriciler: Git depolarınızı paylaşın (genel veya özel).",
+                    feature3: "✍️ Geliştirici Olmayanlar: Promptlarınızı ve iş akışlarınızı paylaşın.",
+                    feature4: "📄 Sonuç: Herkes, yapay zeka kursları için özel bir eğitim yol haritası içeren benzersiz bir olgunluk değerlendirme raporu alır."
+                },
+                stage2: {
+                    icon: "🎓",
+                    number: "2. Atölyeler",
+                    title: "En İyi 10 Yapay Zeka konusunda bire-çok uygulamalı uygulama.",
+                    description: "Değerlendirmeden sonra bilgi indirmesi gelir. Herkesi aynı dalga boyuna getirmek için En İyi 10 Yapay Zeka Kursunu ders tarzında kapsıyoruz.",
+                    curriculumTitle: "📚 Müfredat İçeriği:",
+                    curriculum1: "✨ Vibe Programlama",
+                    curriculum2: "🤖 RAF ve Xazi Çerçeveleri",
+                    curriculum3: "🧠 Model Eğitimi ve Güvenlik",
+                    curriculum4: "🔄 Hibrit Yapay Zeka Modelleme"
+                },
+                stage3: {
+                    icon: "⚙️",
+                    number: "3. Express",
+                    title: "Uygulama ile Dünyaları Birleştirme.",
+                    description: "Sihir burada gerçekleşir. Geliştiriciler ve geliştirici olmayanlar, deterministik ve deterministik olmayan dünyalar arasındaki boşluğu kapatmak için bir araya gelir.",
+                    feature1: "🎨 Özünde Yaratıcılık: Zorlu gereksinimleri yerine getirmek için gereklidir.",
+                    feature2: "🚀 Evrim: Paydaşlar I-şekilli becerilerden M-şekilli ve X-şekilli becerilere evrilir.",
+                    feature3: "🤝 Kurumsal Çapta İşbirliği: RAISE'yi birlikte çözmek."
+                }
+            },
+            framework: {
+                title: "Vibe Programlama Aracı Çerçeveleriyle Buluşuyor 🤝",
+                subtitle: "Uygulama stratejimizin arkasındaki detaylı metodoloji.",
+                real: {
+                    icon: "🌍",
+                    title: "Gerçek - Hedef ve Anahtar Sonuçlarla Başlayan İş",
+                    description: "Hedefleri ve amaçları belirler, görevleri ölçülebilir sonuçlarla hizalar.",
+                    action: "Aksiyon: Hedefle > Hedefler"
+                },
+                journey: {
+                    icon: "✈️",
+                    title: "Yolculuk - Adımlarla Açıklanan Görsel Hikaye",
+                    description: "Görsel hikaye anlatımında yeni başlayandan yetenekliye kendi kendine öğrenme rehberi.",
+                    action: "Aksiyon: Hisset > Deneyim"
+                },
+                environments: {
+                    icon: "🌳",
+                    title: "Ortamlar - Yol Haritası ve Kullanım Durumları",
+                    description: "Öğrenme modülleri ve yeni becerileri uygulamak için gerçek dünya kullanım durumları ile bir yol haritası.",
+                    action: "Aksiyon: Oluştur > Çalışma Zamanları"
+                },
+                imaginary: {
+                    icon: "🌌",
+                    title: "Hayali - Yolda Öğrendikleriniz",
+                    description: "Edinilen kavramları, teorileri ve becerileri izler, sürekli büyümeyi teşvik eder.",
+                    action: "Aksiyon: Yakala > Ekran Görüntüleri"
+                },
+                formulas: {
+                    icon: "📐",
+                    title: "Formüller - Bahsedilen Rehberler",
+                    description: "Proje zorluklarını anlamak ve çözmek için temel kılavuzlar ve formüller.",
+                    action: "Aksiyon: GPT > Ondan öğren"
+                },
+                symbols: {
+                    icon: "🔣",
+                    title: "Semboller - Uygulanan Kod",
+                    description: "Her konsepti pratik olarak göstermek için kod parçacıkları ve örnekler içerir.",
+                    action: "Aksiyon: Çalıştır > Kod"
+                },
+                semblance: {
+                    icon: "🌀",
+                    title: "Benzerlik - Süreçte Bulunan Hatalar",
+                    description: "Hataları ve çözümleri belgeler, hataları değerli öğrenme fırsatları haline getirir.",
+                    action: "Aksiyon: Düzelt > Hatalar"
+                }
+            },
+            courses: {
+                title: "En İyi 10 Yapay Zeka Kursu 🚀",
+                subtitle: "Küratörlüğünü yaptığımız müfredatla mesleğin araçlarında ustalaşın."
+            },
+            supportPlans: {
+                title: "Destek Planları",
+                subtitle: "Öğrenme ve uygulama ihtiyaçlarınıza uygun destek planını seçin",
+                prosumer: {
+                    name: "Prosumer",
+                    subtitle: "1'e 1 Değerlendirme",
+                    price: "$50",
+                    period: "oturum başına",
+                    bookButton: "📅 Değerlendirme Rezervasyonu"
+                },
+                workshops: {
+                    name: "Atölyeler",
+                    subtitle: "Yerinde İngiltere ve Küresel Oturumlar",
+                    price: "£500",
+                    period: "danışman/gün başına",
+                    scheduleButton: "📅 Görüşme Planla"
+                },
+                enterprise: {
+                    badge: "En Popüler",
+                    name: "Profesyonel ve Kurumsal",
+                    subtitle: "Ekip Kurumsal Çapta Yapay Zeka Adaptasyonu",
+                    price: "Teklif İsteyin",
+                    period: "özel fiyatlandırma",
+                    scheduleButton: "📅 Görüşme Planla"
+                },
+                assessmentCta: {
+                    title: "🔍 Ücretsiz Değerlendirme Görüşmesi Planlayın",
+                    description: "Buradan başlayın: Belirli beceri boşluklarını belirlemek ve öğrenmenize nerede odaklanmanız gerektiği konusunda kişiselleştirilmiş geri bildirim almak için kodunuzu yapay zeka tarafından değerlendirin",
+                    button: "🚀 Değerlendirmenizi Başlatın"
+                }
+            },
+            cta: {
+                title: "Her Zaman Öğrenen Organizasyonlar Oluşturmaya Hazır mısınız?",
+                description: "İşletmenizi her zaman öğrenen bir organizasyona dönüştürün! Delivery Pilot'un juniorlardan vibe kodlayıcılarla ve seniorlardan aracı çerçevelerle tanışmanıza yardımcı olmasına izin verin. Beceri boşluklarının sizi geri tutmasına izin vermeyin - boşluklarınızı belirleyin ve kendinizde ve ekiplerinizde bugün kendi kendine öğrenmeyi başlatın.",
+                scheduleButton: "📅 Görüşme Planla",
+                linkedinButton: "LinkedIn'de Bağlantı Kurun"
+            },
+            resources: {
+                title: "📄 Kaynakları İndirin",
+                subtitle: "Delivery Pilot dokümantasyonunu PDF formatında alın",
+                downloadEnglish: "📥 PDF İndir (İngilizce)",
+                downloadTurkish: "📥 PDF İndir (Türkçe)"
+            },
+            contact: {
+                title: "Delivery Pilot ile Başlayın",
+                subtitle: "İşletmenizi dönüştürmeye hazır mısınız? Yapay zeka dönüşüm yolculuğunuza başlamak için ekibimizle iletişime geçin.",
+                namePlaceholder: "Adınız",
+                emailPlaceholder: "E-postanız",
+                companyPlaceholder: "Şirket Adı",
+                messagePlaceholder: "Yapay zeka dönüşüm hedefleriniz hakkında bize bilgi verin",
+                submitButton: "Danışmanlık Talep Edin"
+            }
+        },
+        founder: {
+            hero: {
+                title: "Kurucumuzu Tanıyın",
+                subtitle: "Rifat Erdem Sahin - Yapay Zeka ve DevOps'ta Vizyoner Lider"
+            },
+            profile: {
+                title: "PROFESYONEL PROFİL",
+                description: "CI/CD, DevOps ve yapay zeka tabanlı mimarilerde derin uzmanlığa sahip deneyimli bir mühendis. Otomasyon, ölçeklenebilirlik ve güvenliğe odaklanarak kurumsal sistemleri optimize etme ve otomatikleştirme konusunda kanıtlanmış bir geçmişe sahibim.",
+                clearanceUK: "İngiltere SC Onaylı",
+                clearanceNATO: "NATO Onaylı"
+            },
+            expertise: {
+                title: "TEMEL UZMANLIK",
+                genai: "Üretken Yapay Zeka ve RAG: GenAI çözümleri ve Vektör veritabanları oluşturma/dağıtma.",
+                security: "Yapay Zeka Güvenliği: Prompt enjeksiyon önleme ve güvenli model dağıtımı.",
+                devops: "DevOps/SRE: CI/CD, Kod Olarak Altyapı, Kubernetes, Docker.",
+                cloud: "Bulut: Azure, AWS, GCP, Terraform, Ansible."
+            },
+            accomplishments: {
+                title: "SON BAŞARILAR",
+                goldman2024: "🏆 2024 (Goldman Sachs): Yapay zeka destekli CI/CD çerçevesi geliştirdi, dağıtım sıklığını %300 artırdı.",
+                ypsomed2023: "🏆 2023 (Ypsomed): IoT sistemlerini taşıdı, sürüm çakışmalarını %40 azalttı.",
+                cushman2022: "🏆 2022 (Cushman & Wakefield): ETL süreçlerini otomatikleştirdi, hızı %50 artırdı.",
+                emerson2021: "🏆 2021 (Emerson): GPU tabanlı konteynerler kullanarak hesaplama verimliliğini %45 artırdı.",
+                microsoft2016: "🏆 2016 (Microsoft): Kurumsal Dönüşüm Mimarı olarak teknoloji kullanımını %50 artırdı."
+            },
+            social: {
+                title: "Rifat Erdem Sahin ile Bağlantı Kurun",
+                linkedin: "LinkedIn Profili",
+                youtube: "YouTube Kanalı"
+            }
+        },
+        agile: {
+            hero: {
+                title: "Tükenmişlikten Atılıma: Yapay Zeka Çevik Vaadini Nasıl Tamamlıyor",
+                subtitle: "Yapay zeka dönüşümü neden Çevik'in beklediği evrimdir."
+            },
+            evolution: {
+                title: "Dijital Dönüşümün Evrimi",
+                description1: "Çevik dönüşüm, çalışma şeklimizde devrim yarattı, daha hızlı teslimat ve uyarlanabilirlik için çerçeveler sundu. Ancak, organizasyonlar ölçeklendikçe, Çevik sürtünmeyle karşılaştı: istemeden kurumsal siloları güçlendirdi ve yüksek performanslı ekipleri tükenmişliğe sürükledi.",
+                quote: "Yapay Zeka Dönüşümü Çevik'i değiştirmez; onu düzeltir.",
+                description2: "Çevik hız için yapıyı sağlarken, yapay zeka sürdürülebilirlik için kapasiteyi sağlar. İzole sprint yapan özel ekipler yerine, yapay zeka yetenekleri demokratikleştirir ve Çevik çerçevenin nihayet kapsayıcı, sürdürülebilir yenilik vaadine kavuşmasını sağlar."
+            },
+            comparison: {
+                title: "⚡ Sadece Çevik vs. 🤖 Çevik + Yapay Zeka",
+                subtitle: "Yapay zeka mevcut Çevik yapılarınız için nasıl güç çarpanı görevi görür.",
+                aspects: {
+                    teamStructure: {
+                        aspect: "Ekip Yapısı",
+                        traditional: "Genellikle özel, izole silolar oluşturur (DevOps, QA, Tasarım).",
+                        evolution: "Fonksiyonlar arası anlayış ve katkıyı mümkün kılarak siloları yıkar."
+                    },
+                    knowledge: {
+                        aspect: "Bilgi Erişimi",
+                        traditional: "Uzmanlık önemli uzmanlar arasında yoğunlaşır (\"Otobüs Faktörü\").",
+                        evolution: "Erişimi demokratikleştirir, herkese anında \"kıdemli seviyede\" bağlam ve rehberlik verir."
+                    },
+                    workload: {
+                        aspect: "İş Yükü Etkisi",
+                        traditional: "Sürekli sprint baskısı \"her zaman açık\" aciliyet kültürü yaratır.",
+                        evolution: "Tekrarlayan görevleri devrederek bilişsel yükü azaltır, tempoyu sürdürülebilir kılar."
+                    },
+                    contribution: {
+                        aspect: "Katkı Modeli",
+                        traditional: "Sadece teknik uzmanlar teknik kararlara etki edebilir.",
+                        evolution: "Kapsayıcı katkı; teknik olmayan roller yapay zeka yardımıyla prototip yapabilir ve oluşturabilir."
+                    },
+                    innovation: {
+                        aspect: "Yenilik",
+                        traditional: "Ar-Ge ekipleriyle veya belirli \"Yenilik Sprintleri\" ile sınırlı.",
+                        evolution: "Herhangi bir ekip üyesinin hızlı bir şekilde bir fikir prototipini yapabileceği sürekli yenilik."
+                    }
+                }
+            },
+            friction: {
+                title: "🔴 Çevik'in Sürtünme Noktaları",
+                subtitle: "Çevik hız için tasarlandı, ancak yapay zeka olmadan bu hız genellikle yüksek bir insani maliyetle gelir.",
+                silos: {
+                    title: "Organizasyonel Silolar",
+                    description: "Çevik ekipler genellikle kendi hızları için optimize olurlar, ekipler arası işbirliğini engelleyen sınırlar yaratırlar."
+                },
+                burnout: {
+                    title: "Tükenmişlik Tuzağı",
+                    description: "Planlama, yürütme ve gözden geçirmenin amansız döngüsü sürdürülemez baskı yaratır. Destek olmadan, \"sürdürülebilir bir tempoda çalışmak\" bir efsaneye dönüşür."
+                },
+                dependency: {
+                    title: "Uzman Bağımlılığı",
+                    description: "Bilgi birkaç uzmanın kafasında kilitli olduğunda, bu uzmanlar müsait olmadığı anda iş akışları durur."
+                },
+                ceremony: {
+                    title: "Tören Aşırı Yükü",
+                    description: "Standuplar, retrospektifler ve iyileştirme oturumları muazzam miktarda zaman tüketir—değer yaratmak için harcanmayan zaman."
+                }
+            },
+            unlock: {
+                title: "🟢 Yapay Zeka Çevik İdeali Nasıl Açar",
+                universal: {
+                    icon: "🌐",
+                    title: "1. Silolardan Evrensel Katkıya",
+                    description: "Yapay zeka evrensel bir çevirmen ve asistan görevi görür. Bir pazarlama profesyoneli artık teknik dokümantasyona katkıda bulunabilir; bir geliştirici yüksek kaliteli tasarım varlıkları üretebilir. Görevler için giriş engelini düşürerek, yapay zeka tüm organizasyonun ürün vizyonuna katkıda bulunmasını sağlar."
+                },
+                sustainable: {
+                    icon: "⚖️",
+                    title: "2. Sürdürülebilir Bir Tempoyu Geri Getirme",
+                    description: "Yapay zeka denklemi temelden \"daha çok çalış\"tan \"artırma ile çalış\"a değiştirir. Tekrarlayan, yıpratıcı görevleri (kod üretimi, veri temizleme veya toplantı özetleme gibi) ele alarak, yapay zeka insanları yaratıcı strateji, empati ve karmaşık problem çözmeye odaklanmaları için özgür kılar."
+                },
+                democratization: {
+                    icon: "📚",
+                    title: "3. Bilgi Demokratikleşmesi",
+                    description: "Junior ve senior ekip üyeleri arasındaki boşluk daralır. Yapay zeka talep üzerine mentorluk ve teknik rehberlik sağlar, ekiplerin gerçek zamanlı olarak yeteneklerini geliştirmelerine ve kıdemli personel üzerindeki darboğazı azaltmasına olanak tanır."
+                },
+                innovation: {
+                    icon: "💡",
+                    title: "4. Sınırsız Yenilik",
+                    description: "Teknik karmaşıklık yapay zeka tarafından ele alındığında, yenilik artık azınlığın alanı değildir. En iyi fikirler organizasyondaki herkes tarafından hızlı bir şekilde prototiplenebilir ve test edilebilir, gerçek bir kapsayıcılık kültürünü teşvik eder."
+                }
+            },
+            quote: {
+                text: "Çevik bize nasıl daha hızlı yineleme yapacağımızı öğretti. Yapay zeka bize bu yinelemeye herkesi dahil etme kapasitesini veriyor. Gelecek, izolasyonda hızla hareket eden özel ekiplerle ilgili değil—sınırlar olmadan işbirliği yapan güçlendirilmiş bireylerle ilgili.",
+                author: "— Rifat Erdem Sahin"
+            },
+            pathForward: {
+                title: "İleriye Giden Yol: M-Şekilli Çalışan Çağı",
+                description: "Çevik, T-şekilli beceri setini (bir alanda derin uzmanlık, diğerlerinde geniş bilgi) savundu. Yapay zeka dönüşümü, M-şekilli becerilere—yapay zeka destekli öğrenme ile elde edilen birden fazla derin yetkinlik alanı—evrimini hızlandırır.",
+                collaboration: {
+                    icon: "🤝",
+                    title: "Karmaşıklık Üzerinden İşbirliği",
+                    description: "Yapay zeka teknik \"nasıl\"ı ele aldığında, ekipler \"neden\"e odaklanır."
+                },
+                humanCentric: {
+                    icon: "❤️",
+                    title: "İnsan Merkezli Değer",
+                    description: "İdari yüklerden kurtulan ekipler empati, ilişki kurma ve stratejik düşünceye odaklanabilir."
+                },
+                sustainableGrowth: {
+                    icon: "🌱",
+                    title: "Sürdürülebilir Büyüme",
+                    description: "Yenilik, yorucu sprintlerin bir sonucu değil, güçlendirilmiş çalışanların doğal bir yan ürünü haline gelir."
+                }
+            },
+            cta: {
+                title: "Kapsayıcı Bir Dönüşüme Hazır mısınız?",
+                description: "Sprintin ötesine geçin. Organizasyonunuzdaki herkesi oluşturma, yaratma ve yenilik yapma yetenekleriyle güçlendirin.",
+                pilotTitle: "🚀 Delivery Pilot",
+                pilotDescription: "Odaklanmış bir pilot ile yapay zeka dönüşüm yolculuğunuza başlayın.",
+                pilotButton: "Başlayın",
+                maturityTitle: "🏢 Kurumsal Yapay Zeka Olgunluğu",
+                maturityDescription: "Organizasyonunuzun yapay zeka artırma hazırlığını değerlendirin.",
+                maturityButton: "Daha Fazla Bilgi"
+            }
+        },
+        previousCustomers: {
+            hero: {
+                title: "Mükemmellik Mirasımız",
+                subtitle: "Yapay zeka dönüşümlerine güvenen 500+ kurumsal müşteriyle yolculuğumuzu kutluyoruz"
+            },
+            stats: {
+                clients: "Önceki Kurumsal Müşteri",
+                years: "Yıllık Hizmet",
+                countries: "Ülkeye Hizmet Verildi",
+                satisfaction: "Müşteri Memnuniyeti"
+            },
+            journey: {
+                title: "Kurumsal Müşterilerle Yolculuğumuz",
+                description1: "2009'dan 2024'e kadar Delivery Pilot, kurumsal yapay zeka dönüşümünün ön saflarında yer aldı ve dünya çapında 500'den fazla organizasyona hizmet verdi. Platformumuz yıllar içinde önemli ölçüde evrildi ve sürekli olarak kurumsal müşterilerin değişen ihtiyaçlarını karşılamak için uyum sağladı.",
+                description2: "İleriye doğru ilerlerken, daha derin ortaklıklar ve daha özelleştirilmiş yapay zeka dönüşüm yolculukları sağlayarak, seçkin bir 50+ kurumsal müşteri grubuna daha özel çözümler sunmaya odaklanıyoruz. Bu stratejik değişim, gelişmiş destek, özel kaynaklar ve anlamlı iş sonuçları sağlayan özelleştirilmiş çözümler sunmamızı sağlıyor.",
+                description3: "Yolculuğumuzun bir parçası olan tüm önceki müşterilerimize minnettarız. Güvenleri ve geri bildirimleri Delivery Pilot'u bugün sahip olduğu sağlam platforma dönüştürdü."
+            },
+            industries: {
+                title: "Hizmet Verdiğimiz Endüstriler",
+                financial: "🏦 Finansal Hizmetler",
+                healthcare: "🏥 Sağlık",
+                manufacturing: "🏭 Üretim",
+                retail: "🛒 Perakende ve E-ticaret",
+                automotive: "🚗 Otomotiv",
+                transportation: "✈️ Ulaşım",
+                telecom: "📱 Telekomünikasyon",
+                energy: "⚡ Enerji ve Kamu Hizmetleri",
+                education: "🎓 Eğitim",
+                government: "🏛️ Devlet",
+                media: "🎮 Medya ve Eğlence",
+                hospitality: "🏨 Konaklama"
+            },
+            backToHome: "← Ana Sayfaya Dön"
         }
     }
 };
