@@ -8,6 +8,7 @@ const translations = {
             howItWorks: "How It Works",
             useCases: "Use Cases",
             about: "About",
+            founder: "Founder",
             getStarted: "Get Started"
         },
         hero: {
@@ -103,7 +104,7 @@ const translations = {
             description1: "Delivery Pilot is a cutting-edge Platform as a Service (PaaS) designed specifically for enterprises embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've built a platform that simplifies every step of the process.",
             description2: "Our mission is to democratize AI for enterprises of all sizes, providing the tools, infrastructure, and expertise needed to successfully implement AI solutions that drive real business value.",
             stats: {
-                clients: "Enterprise Clients",
+                customers: "Enterprise Customers",
                 uptime: "Uptime SLA",
                 deployment: "Faster Deployment"
             }
@@ -132,6 +133,7 @@ const translations = {
             company: {
                 title: "Company",
                 about: "About",
+                founder: "Founder",
                 careers: "Careers",
                 contact: "Contact"
             },
@@ -152,6 +154,7 @@ const translations = {
             howItWorks: "Nasıl Çalışır",
             useCases: "Kullanım Alanları",
             about: "Hakkımızda",
+            founder: "Kurucu",
             getStarted: "Başlayın"
         },
         hero: {
@@ -247,7 +250,7 @@ const translations = {
             description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Hizmet Olarak Platform (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
             description2: "Misyonumuz, gerçek iş değeri sağlayan yapay zeka çözümlerini başarıyla uygulamak için gereken araçları, altyapıyı ve uzmanlığı sağlayarak her büyüklükteki işletme için yapay zekayı demokratikleştirmektir.",
             stats: {
-                clients: "Kurumsal Müşteri",
+                customers: "Kurumsal Müşteri",
                 uptime: "Çalışma Süresi SLA",
                 deployment: "Daha Hızlı Dağıtım"
             }
@@ -276,6 +279,7 @@ const translations = {
             company: {
                 title: "Şirket",
                 about: "Hakkımızda",
+                founder: "Kurucu",
                 careers: "Kariyer",
                 contact: "İletişim"
             },
