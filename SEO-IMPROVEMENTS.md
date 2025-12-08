@@ -51,15 +51,28 @@ The website has been optimized for search engines with comprehensive meta tags, 
 - **Description**: Emphasizes vibe programming, 3-stage process, and AI courses
 - **Keywords**: AI onboarding, vibe programming, AI workshops, AI implementation
 
+#### Founder Page (founder.html)
+- **Title**: "Rifat Erdem Sahin - Founder & AI Transformation Expert | Delivery Pilot"
+- **Description**: Introduces founder's expertise in AI transformation, vibe programming, and 15+ years experience
+- **Keywords**: Rifat Erdem Sahin, Delivery Pilot founder, AI transformation expert
+
+#### Previous Customers Page (previous-customers.html)
+- **Title**: "500+ Enterprise Clients & Success Stories | Delivery Pilot"
+- **Description**: Showcases 500+ enterprise clients, 99.9% uptime SLA, and proven success
+- **Keywords**: enterprise clients, AI transformation customers, success stories
+
 ## 2. Sitemap (sitemap.xml)
 
 Created a comprehensive XML sitemap with:
 - Homepage (priority 1.0)
 - Onboarding page (priority 0.9)
 - Assessment page (priority 0.9)
-- Weekly change frequency for all pages
+- Founder page (priority 0.7)
+- Previous Customers page (priority 0.7)
+- Weekly change frequency for main pages, monthly for info pages
 - Last modified date: 2024-12-08
 - Proper XML schema validation
+- Total: 5 pages indexed
 
 ## 3. Robots.txt
 
@@ -106,6 +119,26 @@ Implemented JSON-LD structured data for rich search results:
 
 2. **BreadcrumbList Schema**
    - Home → Assessment navigation
+
+### Founder Page
+1. **Person Schema**
+   - Founder's name and job title
+   - Organization affiliation
+   - Social media links (LinkedIn)
+   - Areas of expertise
+   - Professional description
+
+2. **BreadcrumbList Schema**
+   - Home → Founder navigation
+
+### Previous Customers Page
+1. **Organization Schema**
+   - Aggregate ratings (4.8/5 from 500 reviews)
+   - Number of employees
+   - Company slogan
+
+2. **BreadcrumbList Schema**
+   - Home → Previous Customers navigation
 
 ## 5. Technical SEO Best Practices
 
