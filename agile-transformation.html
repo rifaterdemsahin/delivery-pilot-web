@@ -202,11 +202,15 @@
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn" data-lang="tr">TR</button>
                 </div>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="tr">TR</button>
+                </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="onboarding.html">Onboarding</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="onboarding.html" data-i18n="nav.onboarding">Onboarding</a></li>
                     <li><a href="agile-transformation.html" class="active">Agile Transformation</a></li>
-                    <li><a href="assesment.html" class="cta-button">Get Started</a></li>
+                    <li><a href="assesment.html" class="cta-button" data-i18n="nav.getStarted">Get Started</a></li>
                 </ul>
             </div>
         </div>
@@ -215,23 +219,23 @@
     <!-- Hero Section -->
     <section class="agile-hero">
         <div class="container">
-            <h1>From Burnout to Breakthrough: How AI Completes the Agile Promise</h1>
-            <p class="subtitle">Why AI transformation is the evolution Agile has been waiting for.</p>
+            <h1 data-i18n="agile.hero.title">From Burnout to Breakthrough: How AI Completes the Agile Promise</h1>
+            <p class="subtitle" data-i18n="agile.hero.subtitle">Why AI transformation is the evolution Agile has been waiting for.</p>
         </div>
     </section>
 
     <!-- Evolution Section -->
     <section class="evolution-section">
         <div class="container">
-            <h2 class="section-title">The Evolution of Digital Transformation</h2>
+            <h2 class="section-title" data-i18n="agile.evolution.title">The Evolution of Digital Transformation</h2>
             <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
-                <p style="margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 1.5rem;" data-i18n="agile.evolution.description1">
                     Agile transformation revolutionized the way we work, introducing frameworks for faster delivery and adaptability. However, as organizations scaled, Agile encountered friction: unintentionally reinforcing <strong>organizational silos</strong> and driving high-performance teams toward <strong>burnout</strong>.
                 </p>
-                <p style="margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 600; color: var(--primary-color);">
+                <p style="margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 600; color: var(--primary-color);" data-i18n="agile.evolution.quote">
                     AI Transformation does not replace Agile; it fixes it.
                 </p>
-                <p>
+                <p data-i18n="agile.evolution.description2">
                     Where Agile provided the <em>structure</em> for speed, AI provides the <em>capacity</em> for sustainability. Instead of specialized teams sprinting in isolation, AI democratizes capabilities, allowing the Agile framework to finally live up to its promise of inclusive, sustainable innovation.
                 </p>
             </div>
@@ -344,8 +348,8 @@
     <section class="quote-section">
         <div class="container">
             <div class="quote-box">
-                <p>"Agile taught us <strong>how</strong> to iterate faster. AI gives us the <strong>capacity</strong> to include everyone in that iteration. The future isn't about specialized teams moving fast in isolation—it's about empowered individuals collaborating without boundaries."</p>
-                <p class="quote-author">— Rifat Erdem Sahin</p>
+                <p data-i18n="agile.quote.text">"Agile taught us <strong>how</strong> to iterate faster. AI gives us the <strong>capacity</strong> to include everyone in that iteration. The future isn't about specialized teams moving fast in isolation—it's about empowered individuals collaborating without boundaries."</p>
+                <p class="quote-author" data-i18n="agile.quote.author">— Rifat Erdem Sahin</p>
             </div>
         </div>
     </section>
@@ -383,21 +387,21 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready for an Inclusive Transformation?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;" data-i18n="agile.cta.title">Ready for an Inclusive Transformation?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;" data-i18n="agile.cta.description">
                 Move beyond the sprint. Empower everyone in your organization with the capabilities to build, create, and innovate.
             </p>
             
             <div class="cta-buttons">
                 <div class="cta-card">
-                    <h3>🚀 Delivery Pilot</h3>
-                    <p style="margin-bottom: 1rem;">Start your AI transformation journey with a focused pilot.</p>
-                    <a href="assesment.html" class="btn btn-primary">Get Started</a>
+                    <h3 data-i18n="agile.cta.pilotTitle">🚀 Delivery Pilot</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="agile.cta.pilotDescription">Start your AI transformation journey with a focused pilot.</p>
+                    <a href="assesment.html" class="btn btn-primary" data-i18n="agile.cta.pilotButton">Get Started</a>
                 </div>
                 <div class="cta-card">
-                    <h3>🏢 Enterprise AI Maturity</h3>
-                    <p style="margin-bottom: 1rem;">Assess your organization's readiness for AI augmentation.</p>
-                    <a href="onboarding.html" class="btn btn-primary">Learn More</a>
+                    <h3 data-i18n="agile.cta.maturityTitle">🏢 Enterprise AI Maturity</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="agile.cta.maturityDescription">Assess your organization's readiness for AI augmentation.</p>
+                    <a href="onboarding.html" class="btn btn-primary" data-i18n="agile.cta.maturityButton">Learn More</a>
                 </div>
             </div>
         </div>
