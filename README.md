@@ -14,6 +14,7 @@ Delivery Pilot is a comprehensive PaaS solution that enables enterprises to depl
 - **Auto-Scaling**: Intelligent resource optimization
 - **Easy Integration**: Seamless integration with existing tools and workflows
 - **Expert Support**: 24/7 support from AI transformation experts
+- **Bilingual Support**: Full Turkish and English language support with easy toggle switching
 
 ## Getting Started
 
@@ -73,6 +74,29 @@ The website is fully optimized for search engines with the following features:
 2. **Meta tags**: Update meta descriptions and titles in each HTML file's `<head>` section
 3. **Structured data**: Modify the JSON-LD scripts at the bottom of each page to reflect content changes
 
+## Internationalization (i18n)
+
+The website supports both English and Turkish languages:
+
+- **Language Toggle**: EN/TR buttons in the navigation bar allow users to switch languages
+- **Persistent Preference**: Language choice is saved in browser localStorage
+- **Comprehensive Coverage**: All pages support bilingual content including navigation, hero sections, features, and footers
+- **Easy Maintenance**: Translations are managed in `script.js` using a structured JSON format
+
+### How It Works
+
+The translation system uses `data-i18n` attributes on HTML elements:
+
+```html
+<h1 data-i18n="hero.title">Transform Your Enterprise with AI</h1>
+```
+
+When users switch languages, JavaScript updates the content from the translations object in `script.js`:
+
+```javascript
+translations.tr.hero.title = "İşletmenizi Yapay Zeka ile Dönüştürün"
+```
+
 ## Technologies Used
 
 - HTML5
@@ -82,6 +106,7 @@ The website is fully optimized for search engines with the following features:
 - Responsive Design
 - Schema.org Structured Data
 - Open Graph Protocol
+- i18n (Internationalization) with Turkish/English support
 
 ## Browser Support
 
