@@ -1,0 +1,519 @@
+/* Onboarding Specific Styles */
+
+/* Hero Section */
+.onboarding-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.hero-process {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.author {
+    margin-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Transformation Stages */
+.transformation-stages {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stage-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stage-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.stage-number {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stage-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.stage-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.stage-features {
+    list-style: none;
+    padding: 0;
+}
+
+.stage-features li {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.stage-curriculum {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.stage-curriculum h5 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.stage-curriculum ul {
+    list-style: none;
+    padding: 0;
+}
+
+.stage-curriculum li {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+/* Framework Section */
+.framework-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.framework-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.framework-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.framework-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.framework-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.framework-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.framework-action {
+    background: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-top: 1rem;
+}
+
+.framework-action strong {
+    color: var(--primary-color);
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.course-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-card li {
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Support Plans */
+.support-plans {
+    padding: 5rem 0;
+    background: white;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.plan-card {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.featured-plan {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.plan-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.plan-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+}
+
+.period {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.plan-features li {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding-left: 0.5rem;
+}
+
+.btn-plan {
+    width: 100%;
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.btn-plan:hover {
+    background: var(--secondary-color);
+}
+
+.assessment-cta {
+    margin-top: 4rem;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.cta-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.final-cta .btn {
+    margin: 0.5rem;
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 4rem 0;
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.resources-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-download {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Onboarding */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-process {
+        font-size: 1rem;
+    }
+
+    .stages-grid,
+    .framework-grid,
+    .courses-grid,
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stage-card,
+    .framework-card,
+    .course-card,
+    .plan-card {
+        padding: 1.5rem;
+    }
+
+    .final-cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .final-cta p {
+        font-size: 1rem;
+    }
+
+    .resources-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .onboarding-hero {
+        padding: 3rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .stage-icon,
+    .framework-icon,
+    .course-icon {
+        font-size: 2.5rem;
+    }
+
+    .plan-name {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+}
