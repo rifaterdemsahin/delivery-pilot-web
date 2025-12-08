@@ -281,24 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-    // Form submission handler
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            
-            // Show success message based on current language
-            const successMessage = getNestedTranslation(translations[currentLang], 'contact.form.successMessage');
-            alert(successMessage);
-            
-            // Reset form
-            this.reset();
-        });
-    }
 });
 
 // Add active class to navigation on scroll
