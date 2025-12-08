@@ -45,6 +45,40 @@ body {
     padding: 1rem 20px;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.language-toggle {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-light);
+    padding: 0.25rem;
+    border-radius: 6px;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: var(--bg-white);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
 .logo h2 {
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -362,6 +396,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-right {
+        gap: 1rem;
+    }
+
     .nav-menu {
         gap: 1rem;
     }
@@ -389,9 +427,25 @@ body {
 }
 
 @media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
     .nav-menu {
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .language-toggle {
+        justify-content: center;
     }
 
     .hero {
