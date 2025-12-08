@@ -403,13 +403,15 @@
                     <button class="lang-btn" data-lang="tr">TR</button>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="onboarding.html">Onboarding</a></li>
-                    <li><a href="partners.html" class="active">Partners</a></li>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="founder.html">Founder</a></li>
-                    <li><a href="https://deliverypilot.net/assesment.html" class="cta-button">Get Started</a></li>
+                    <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="onboarding.html" data-i18n="nav.onboarding">Onboarding</a></li>
+                    <li><a href="index.html#features" data-i18n="nav.features">Features</a></li>
+                    <li><a href="index.html#how-it-works" data-i18n="nav.howItWorks">How It Works</a></li>
+                    <li><a href="index.html#use-cases" data-i18n="nav.useCases">Use Cases</a></li>
+                    <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="founder.html" data-i18n="nav.founder">Founder</a></li>
+                    <li><a href="partners.html" class="active" data-i18n="nav.partners">Partners</a></li>
+                    <li><a href="https://deliverypilot.net/assesment.html" class="cta-button" data-i18n="nav.getStarted">Get Started</a></li>
                 </ul>
             </div>
         </div>
@@ -418,6 +420,46 @@
     <!-- Hero Section -->
     <section class="partners-hero">
         <div class="container">
+            <h1 data-i18n="partners.title">Our Global Partners</h1>
+            <p data-i18n="partners.subtitle">Working with leading organizations worldwide to deliver exceptional AI transformation services</p>
+        </div>
+    </section>
+
+    <!-- Partners Content Section -->
+    <section class="partners-content">
+        <div class="container">
+            <!-- Turkey Partners -->
+            <div class="country-section">
+                <h2>
+                    <span>🇹🇷</span>
+                    <span data-i18n="partners.turkey.title">Turkey</span>
+                </h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <h3>Academy Peak</h3>
+                        <p data-i18n="partners.turkey.academyPeak.description">Academy Peak is a leading training and development organization in Turkey, specializing in professional development and enterprise training solutions. They help organizations build skilled teams through comprehensive training programs.</p>
+                        <p><strong data-i18n="partners.turkey.academyPeak.focus">Focus:</strong> <span data-i18n="partners.turkey.academyPeak.focusAreas">Professional Training, Enterprise Development, Skills Enhancement</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- United Kingdom Partners -->
+            <div class="country-section">
+                <h2>
+                    <span>🇬🇧</span>
+                    <span data-i18n="partners.uk.title">United Kingdom</span>
+                </h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <h3>Pexabo</h3>
+                        <p data-i18n="partners.uk.pexabo.description">Pexabo is a technology consulting firm based in the United Kingdom, providing innovative solutions for digital transformation and enterprise technology implementation. They work with organizations to modernize their technology infrastructure and processes.</p>
+                        <p><strong data-i18n="partners.uk.pexabo.focus">Focus:</strong> <span data-i18n="partners.uk.pexabo.focusAreas">Digital Transformation, Technology Consulting, Enterprise Solutions</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-button" data-i18n="partners.backToHome">← Back to Home</a>
             <h1>Partner with Delivery Pilot</h1>
             <p class="subtitle">Collaborate on customer onboarding, assessments, and AI transformation workshops. We work together to prepare audiences and deliver customized roadmaps for both prosumer and enterprise customers.</p>
         </div>
@@ -712,7 +754,8 @@
                     <ul>
                         <li><a href="index.html#about" data-i18n="footer.company.about">About</a></li>
                         <li><a href="founder.html" data-i18n="footer.company.founder">Founder</a></li>
-                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="partners.html" data-i18n="footer.company.partners">Partners</a></li>
+                        <li><a href="previous-customers.html" data-i18n="footer.company.previousCustomers">Previous Customers</a></li>
                         <li><a href="#" data-i18n="footer.company.careers">Careers</a></li>
                         <li><a href="https://deliverypilot.net/assesment.html" data-i18n="footer.company.contact">Contact</a></li>
                     </ul>

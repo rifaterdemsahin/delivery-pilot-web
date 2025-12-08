@@ -9,6 +9,7 @@ const translations = {
             useCases: "Use Cases",
             about: "About",
             founder: "Founder",
+            partners: "Partners",
             getStarted: "Get Started"
         },
         hero: {
@@ -121,6 +122,27 @@ const translations = {
                 successMessage: "Thank you for your interest! Our team will contact you shortly to discuss your AI transformation journey."
             }
         },
+        partners: {
+            title: "Our Global Partners",
+            subtitle: "Working with leading organizations worldwide to deliver exceptional AI transformation services",
+            turkey: {
+                title: "Turkey",
+                academyPeak: {
+                    description: "Academy Peak is a leading training and development organization in Turkey, specializing in professional development and enterprise training solutions. They help organizations build skilled teams through comprehensive training programs.",
+                    focus: "Focus:",
+                    focusAreas: "Professional Training, Enterprise Development, Skills Enhancement"
+                }
+            },
+            uk: {
+                title: "United Kingdom",
+                pexabo: {
+                    description: "Pexabo is a technology consulting firm based in the United Kingdom, providing innovative solutions for digital transformation and enterprise technology implementation. They work with organizations to modernize their technology infrastructure and processes.",
+                    focus: "Focus:",
+                    focusAreas: "Digital Transformation, Technology Consulting, Enterprise Solutions"
+                }
+            },
+            backToHome: "← Back to Home"
+        },
         footer: {
             tagline: "Enterprise AI Transformation Platform",
             platform: {
@@ -134,6 +156,8 @@ const translations = {
                 title: "Company",
                 about: "About",
                 founder: "Founder",
+                partners: "Partners",
+                previousCustomers: "Previous Customers",
                 careers: "Careers",
                 contact: "Contact"
             },
@@ -155,6 +179,7 @@ const translations = {
             useCases: "Kullanım Alanları",
             about: "Hakkımızda",
             founder: "Kurucu",
+            partners: "Ortaklar",
             getStarted: "Başlayın"
         },
         hero: {
@@ -267,6 +292,27 @@ const translations = {
                 successMessage: "İlginiz için teşekkür ederiz! Ekibimiz, yapay zeka dönüşüm yolculuğunuzu görüşmek için yakında sizinle iletişime geçecek."
             }
         },
+        partners: {
+            title: "Küresel Ortaklarımız",
+            subtitle: "Olağanüstü yapay zeka dönüşüm hizmetleri sunmak için dünya çapında önde gelen kuruluşlarla çalışıyoruz",
+            turkey: {
+                title: "Türkiye",
+                academyPeak: {
+                    description: "Academy Peak, profesyonel gelişim ve kurumsal eğitim çözümlerinde uzmanlaşmış, Türkiye'nin önde gelen eğitim ve geliştirme kuruluşudur. Kapsamlı eğitim programları aracılığıyla kuruluşların yetenekli ekipler oluşturmasına yardımcı olurlar.",
+                    focus: "Odak:",
+                    focusAreas: "Profesyonel Eğitim, Kurumsal Gelişim, Beceri Geliştirme"
+                }
+            },
+            uk: {
+                title: "Birleşik Krallık",
+                pexabo: {
+                    description: "Pexabo, Birleşik Krallık merkezli bir teknoloji danışmanlık firmasıdır ve dijital dönüşüm ve kurumsal teknoloji uygulaması için yenilikçi çözümler sunmaktadır. Kuruluşların teknoloji altyapısını ve süreçlerini modernize etmelerine yardımcı olurlar.",
+                    focus: "Odak:",
+                    focusAreas: "Dijital Dönüşüm, Teknoloji Danışmanlığı, Kurumsal Çözümler"
+                }
+            },
+            backToHome: "← Ana Sayfaya Dön"
+        },
         footer: {
             tagline: "Kurumsal Yapay Zeka Dönüşüm Platformu",
             platform: {
@@ -280,6 +326,8 @@ const translations = {
                 title: "Şirket",
                 about: "Hakkımızda",
                 founder: "Kurucu",
+                partners: "Ortaklar",
+                previousCustomers: "Önceki Müşteriler",
                 careers: "Kariyer",
                 contact: "İletişim"
             },
