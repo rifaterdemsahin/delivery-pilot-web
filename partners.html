@@ -3,108 +3,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Delivery Pilot - Our Global Partners">
+    <meta name="description" content="Delivery Pilot Partners - Collaborate on Customer Onboarding and AI Transformation">
     <title>Partners - Delivery Pilot</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .partners-hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 60px 0;
+            padding: 6rem 0 4rem;
             text-align: center;
         }
 
         .partners-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .partners-hero .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .collaboration-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .process-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .process-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .process-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .process-card ul li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .process-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .customer-types {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .customer-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 3px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .customer-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+        }
+
+        .customer-card .badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .customer-card h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .customer-card .description {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-list .content h4 {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-list .content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .collaboration-flow {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .flow-timeline {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+
+        .flow-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .timeline-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content .details {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--bg-light);
+        }
+
+        .timeline-content .details h4 {
+            font-size: 1.125rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-content .details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-content .details ul li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .timeline-content .details ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .partners-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
         }
 
-        .partners-content {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-
-        .country-section {
-            margin-bottom: 60px;
-        }
-
-        .country-section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--primary-color);
+        .cta-buttons {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .partner-card {
-            background: white;
-            padding: 30px;
+        .btn {
+            padding: 1rem 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .partner-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .partner-card h3 {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-
-        .partner-card p {
-            font-size: 1rem;
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .partner-link {
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
             display: inline-block;
-            margin-top: 15px;
+        }
+
+        .btn-primary {
+            background: white;
             color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
         }
 
-        .partner-link:hover {
-            color: var(--secondary-color);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
-        .back-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--primary-color);
+        .btn-secondary {
+            background: transparent;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            margin-top: 30px;
+            border: 2px solid white;
         }
 
-        .back-button:hover {
-            background: var(--secondary-color);
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .partners-hero h1 {
+                font-size: 2rem;
+            }
+
+            .partners-hero .subtitle {
+                font-size: 1.125rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-item::before {
+                width: 40px;
+                height: 40px;
+                font-size: 1.125rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -178,6 +460,274 @@
 
             <div style="text-align: center;">
                 <a href="index.html" class="back-button" data-i18n="partners.backToHome">← Back to Home</a>
+            <h1>Partner with Delivery Pilot</h1>
+            <p class="subtitle">Collaborate on customer onboarding, assessments, and AI transformation workshops. We work together to prepare audiences and deliver customized roadmaps for both prosumer and enterprise customers.</p>
+        </div>
+    </section>
+
+    <!-- Collaboration Approach -->
+    <section class="collaboration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Collaboration Approach</h2>
+                <p>We believe in partnership-driven success. Here's how we work together to deliver exceptional AI transformation experiences.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <span class="icon">🤝</span>
+                    <h3>Joint Customer Onboarding</h3>
+                    <p>We collaborate closely with partners during the customer onboarding phase to ensure a seamless experience:</p>
+                    <ul>
+                        <li>Co-develop onboarding materials and documentation</li>
+                        <li>Joint discovery sessions to understand customer needs</li>
+                        <li>Shared responsibility for customer success metrics</li>
+                        <li>Regular sync meetings to align on approach</li>
+                        <li>Collaborative goal setting and milestone planning</li>
+                    </ul>
+                </div>
+
+                <div class="process-card">
+                    <span class="icon">🔍</span>
+                    <h3>Assessment Process Collaboration</h3>
+                    <p>Partners work alongside our experts to conduct comprehensive assessments:</p>
+                    <ul>
+                        <li>Joint assessment framework development</li>
+                        <li>Co-facilitation of assessment sessions</li>
+                        <li>Shared analysis of technical readiness</li>
+                        <li>Collaborative gap identification</li>
+                        <li>Joint recommendations and action planning</li>
+                    </ul>
+                </div>
+
+                <div class="process-card">
+                    <span class="icon">🎓</span>
+                    <h3>Workshop Preparation</h3>
+                    <p>Together, we prepare audiences for successful workshop experiences:</p>
+                    <ul>
+                        <li>Pre-workshop readiness assessments</li>
+                        <li>Audience segmentation and customization</li>
+                        <li>Co-creation of workshop materials</li>
+                        <li>Joint facilitator training sessions</li>
+                        <li>Preparation of hands-on exercises and examples</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Flow -->
+    <section class="collaboration-flow">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Collaboration Timeline</h2>
+                <p>A structured approach to ensure successful customer outcomes through every stage.</p>
+            </div>
+
+            <div class="flow-timeline">
+                <div class="timeline-item" data-step="1">
+                    <div class="timeline-content">
+                        <h3>Initial Partner Engagement</h3>
+                        <p>We begin with a comprehensive partner alignment session to understand your customers, expertise, and collaboration preferences.</p>
+                        <div class="details">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Partner onboarding and capability assessment</li>
+                                <li>Customer profile sharing and analysis</li>
+                                <li>Co-creation of engagement strategy</li>
+                                <li>Definition of roles and responsibilities</li>
+                                <li>Agreement on success metrics and KPIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-content">
+                        <h3>Customer Discovery & Assessment</h3>
+                        <p>Partners and Delivery Pilot experts conduct joint discovery sessions and assessments to understand customer needs and readiness.</p>
+                        <div class="details">
+                            <h4>Collaborative Activities:</h4>
+                            <ul>
+                                <li>Joint customer interviews and workshops</li>
+                                <li>Technical environment assessment</li>
+                                <li>Skills gap analysis (individual and team)</li>
+                                <li>AI maturity evaluation</li>
+                                <li>Infrastructure and security review</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-content">
+                        <h3>Audience Preparation & Segmentation</h3>
+                        <p>We work together to prepare and segment audiences based on their roles, experience levels, and learning objectives.</p>
+                        <div class="details">
+                            <h4>Preparation Steps:</h4>
+                            <ul>
+                                <li>Audience profiling and segmentation (prosumer vs enterprise)</li>
+                                <li>Pre-workshop skill assessments</li>
+                                <li>Customized learning path creation</li>
+                                <li>Prerequisites communication and support</li>
+                                <li>Team formation for enterprise customers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-content">
+                        <h3>Workshop Design & Delivery</h3>
+                        <p>Partners collaborate on designing and delivering workshops tailored to customer needs and audience segments.</p>
+                        <div class="details">
+                            <h4>Joint Delivery:</h4>
+                            <ul>
+                                <li>Co-facilitation of workshop sessions</li>
+                                <li>Real-time adaptation based on audience feedback</li>
+                                <li>Hands-on practice with partner support</li>
+                                <li>Q&A and troubleshooting assistance</li>
+                                <li>Collection of feedback and insights</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="5">
+                    <div class="timeline-content">
+                        <h3>Roadmap Development & Follow-up</h3>
+                        <p>We conclude with joint roadmap creation and ongoing support planning to ensure continued customer success.</p>
+                        <div class="details">
+                            <h4>Post-Workshop Activities:</h4>
+                            <ul>
+                                <li>Collaborative roadmap creation (individual or team-based)</li>
+                                <li>Priority setting and milestone definition</li>
+                                <li>Resource allocation planning</li>
+                                <li>Follow-up support structure agreement</li>
+                                <li>Continuous improvement feedback loop</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Types -->
+    <section class="customer-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prosumer vs Enterprise Customers</h2>
+                <p>We tailor our approach based on customer type, ensuring appropriate assessment methods and roadmap development.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="customer-card">
+                    <span class="badge">Individual Focus</span>
+                    <h3>🎯 Prosumer Customers</h3>
+                    <p class="description">Individual professionals and small teams seeking to enhance their AI skills and capabilities through personalized learning paths.</p>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon">📋</span>
+                            <div class="content">
+                                <h4>Individual Assessment</h4>
+                                <p>1-on-1 evaluation of current AI skills, tools proficiency, and learning objectives</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🗺️</span>
+                            <div class="content">
+                                <h4>Personal Roadmap</h4>
+                                <p>Customized learning path based on individual assessment results and career goals</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">💡</span>
+                            <div class="content">
+                                <h4>Flexible Workshops</h4>
+                                <p>Attendance at scheduled workshops with mixed audience or 1-on-1 coaching sessions</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">⚡</span>
+                            <div class="content">
+                                <h4>Self-Paced Learning</h4>
+                                <p>Access to resources and materials for independent study and practice</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📈</span>
+                            <div class="content">
+                                <h4>Progress Tracking</h4>
+                                <p>Individual progress monitoring with periodic check-ins and milestone celebrations</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="customer-card">
+                    <span class="badge">Team Transformation</span>
+                    <h3>🏢 Enterprise Customers</h3>
+                    <p class="description">Organizations implementing AI transformation at scale with dedicated teams requiring coordinated assessment and strategic roadmaps.</p>
+                    
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon">👥</span>
+                            <div class="content">
+                                <h4>Team-Based Assessment</h4>
+                                <p>Comprehensive evaluation of team capabilities, collaboration patterns, and organizational readiness</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🎯</span>
+                            <div class="content">
+                                <h4>Strategic Roadmap</h4>
+                                <p>Enterprise-wide transformation roadmap aligned with business objectives and timelines</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🔄</span>
+                            <div class="content">
+                                <h4>Cohort-Based Workshops</h4>
+                                <p>Dedicated workshop sessions for intact teams with focus on collaboration and knowledge sharing</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🏗️</span>
+                            <div class="content">
+                                <h4>Integration Planning</h4>
+                                <p>Detailed planning for AI integration with existing systems, processes, and workflows</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📊</span>
+                            <div class="content">
+                                <h4>Executive Reporting</h4>
+                                <p>Regular progress reports, ROI tracking, and strategic recommendations for leadership</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🤝</span>
+                            <div class="content">
+                                <h4>Change Management</h4>
+                                <p>Support for organizational change including stakeholder engagement and adoption strategies</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Partner with Us?</h2>
+            <p>Join our partner network and deliver exceptional AI transformation experiences to your customers.</p>
+            <div class="cta-buttons">
+                <a href="https://deliverypilot.net/assesment.html" class="btn btn-primary">Become a Partner</a>
+                <a href="onboarding.html" class="btn btn-secondary">Learn More About Our Process</a>
             </div>
         </div>
     </section>
