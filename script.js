@@ -727,11 +727,12 @@ function updateContent(lang) {
 function updateCopyrightYear() {
     const currentYear = new Date().getFullYear();
     
-    // Update all copyright elements that contain "2024 Delivery Pilot"
-    document.querySelectorAll('p, span, div').forEach(element => {
-        if (element.textContent.includes('2024 Delivery Pilot. All rights reserved.') ||
-            element.textContent.includes('2024 Delivery Pilot. Tüm hakları saklıdır.')) {
-            element.textContent = element.textContent.replace('2024', currentYear);
+    // Update all copyright elements using a regex to match copyright text patterns
+    document.querySelectorAll('.footer-bottom p, footer p, [data-i18n="footer.copyright"]').forEach(element => {
+        // Match copyright text with 4-digit year and replace with current year
+        const copyrightPattern = /©\s*(\d{4})\s+Delivery Pilot/;
+        if (copyrightPattern.test(element.textContent)) {
+            element.textContent = element.textContent.replace(copyrightPattern, `© ${currentYear} Delivery Pilot`);
         }
     });
 }
