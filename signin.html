@@ -192,6 +192,11 @@
     
     <script>
         // Demo users database
+        // WARNING: This is for DEMO purposes only. In production:
+        // - Never store passwords in client-side code
+        // - Implement server-side authentication with proper password hashing
+        // - Use secure session management (JWT, OAuth, etc.)
+        // - Implement rate limiting and account lockout
         const demoUsers = [
             { email: 'enterpriseA@example.com', password: 'demo123', name: 'Enterprise A', id: 'enterprise-a' },
             { email: 'enterpriseB@example.com', password: 'demo123', name: 'Enterprise B', id: 'enterprise-b' },
