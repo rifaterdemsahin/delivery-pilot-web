@@ -221,10 +221,97 @@ body {
     line-height: 1.7;
 }
 
+/* How It Works Section */
+.how-it-works {
+    padding: 5rem 0;
+    background: var(--bg-white);
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step-card {
+    display: flex;
+    gap: 2rem;
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.step-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.step-details {
+    list-style: none;
+    padding: 0;
+}
+
+.step-details li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    color: var(--text-light);
+    position: relative;
+}
+
+.step-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
 /* Use Cases Section */
 .use-cases {
     padding: 5rem 0;
-    background: var(--bg-white);
+    background: var(--bg-light);
 }
 
 .use-cases-grid {
@@ -419,6 +506,17 @@ body {
     .features-grid,
     .use-cases-grid {
         grid-template-columns: 1fr;
+    }
+
+    .step-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 
     .stats {

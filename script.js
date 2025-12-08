@@ -4,6 +4,7 @@ const translations = {
         nav: {
             home: "Home",
             features: "Features",
+            howItWorks: "How It Works",
             useCases: "Use Cases",
             about: "About",
             getStarted: "Get Started"
@@ -39,6 +40,42 @@ const translations = {
             support: {
                 title: "Expert Support",
                 description: "24/7 support from AI transformation experts. Get guidance from strategy to implementation and beyond."
+            }
+        },
+        howItWorks: {
+            title: "How It Works",
+            description: "Our platform simplifies your AI transformation journey through a streamlined, four-step process designed for enterprise success.",
+            step1: {
+                title: "Assess Your Needs",
+                description: "We start by understanding your business objectives, current infrastructure, and AI readiness. Our experts conduct a comprehensive assessment to identify opportunities and challenges.",
+                detail1: "Business requirements analysis",
+                detail2: "Current infrastructure evaluation",
+                detail3: "AI readiness assessment",
+                detail4: "ROI projection and timeline planning"
+            },
+            step2: {
+                title: "Design & Plan",
+                description: "Based on the assessment, we create a customized AI transformation roadmap tailored to your enterprise needs, complete with architecture design and implementation strategy.",
+                detail1: "Custom architecture design",
+                detail2: "Technology stack selection",
+                detail3: "Integration planning",
+                detail4: "Risk mitigation strategies"
+            },
+            step3: {
+                title: "Deploy & Integrate",
+                description: "Our platform enables rapid deployment of AI models and applications. We ensure seamless integration with your existing systems and provide comprehensive training for your team.",
+                detail1: "One-click model deployment",
+                detail2: "API and system integration",
+                detail3: "Team training and onboarding",
+                detail4: "Performance testing and validation"
+            },
+            step4: {
+                title: "Monitor & Optimize",
+                description: "Continuous monitoring and optimization ensure your AI applications deliver maximum value. Our analytics dashboard provides real-time insights and performance metrics.",
+                detail1: "Real-time performance monitoring",
+                detail2: "Automated scaling and optimization",
+                detail3: "Regular performance reviews",
+                detail4: "Continuous improvement recommendations"
             }
         },
         useCases: {
@@ -87,6 +124,7 @@ const translations = {
             platform: {
                 title: "Platform",
                 features: "Features",
+                howItWorks: "How It Works",
                 useCases: "Use Cases",
                 pricing: "Pricing"
             },
@@ -109,6 +147,7 @@ const translations = {
         nav: {
             home: "Ana Sayfa",
             features: "Özellikler",
+            howItWorks: "Nasıl Çalışır",
             useCases: "Kullanım Alanları",
             about: "Hakkımızda",
             getStarted: "Başlayın"
@@ -144,6 +183,42 @@ const translations = {
             support: {
                 title: "Uzman Desteği",
                 description: "Yapay zeka dönüşüm uzmanlarından 7/24 destek. Stratejiden uygulamaya ve ötesine kadar rehberlik alın."
+            }
+        },
+        howItWorks: {
+            title: "Nasıl Çalışır",
+            description: "Platformumuz, kurumsal başarı için tasarlanmış kolaylaştırılmış, dört adımlı bir süreç aracılığıyla yapay zeka dönüşüm yolculuğunuzu basitleştirir.",
+            step1: {
+                title: "İhtiyaçlarınızı Değerlendirin",
+                description: "İş hedeflerinizi, mevcut altyapınızı ve yapay zeka hazırlığınızı anlayarak başlıyoruz. Uzmanlarımız, fırsatları ve zorlukları belirlemek için kapsamlı bir değerlendirme yapar.",
+                detail1: "İş gereksinimleri analizi",
+                detail2: "Mevcut altyapı değerlendirmesi",
+                detail3: "Yapay zeka hazırlık değerlendirmesi",
+                detail4: "Yatırım getirisi projeksiyonu ve zaman çizelgesi planlaması"
+            },
+            step2: {
+                title: "Tasarlayın ve Planlayın",
+                description: "Değerlendirmeye dayanarak, mimari tasarım ve uygulama stratejisiyle birlikte kurumsal ihtiyaçlarınıza özel özelleştirilmiş bir yapay zeka dönüşüm yol haritası oluşturuyoruz.",
+                detail1: "Özel mimari tasarım",
+                detail2: "Teknoloji yığını seçimi",
+                detail3: "Entegrasyon planlaması",
+                detail4: "Risk azaltma stratejileri"
+            },
+            step3: {
+                title: "Dağıtın ve Entegre Edin",
+                description: "Platformumuz, yapay zeka modellerinin ve uygulamalarının hızlı dağıtımını sağlar. Mevcut sistemlerinizle sorunsuz entegrasyon sağlıyor ve ekibiniz için kapsamlı eğitim sunuyoruz.",
+                detail1: "Tek tıkla model dağıtımı",
+                detail2: "API ve sistem entegrasyonu",
+                detail3: "Ekip eğitimi ve işe alıştırma",
+                detail4: "Performans testi ve doğrulama"
+            },
+            step4: {
+                title: "İzleyin ve Optimize Edin",
+                description: "Sürekli izleme ve optimizasyon, yapay zeka uygulamalarınızın maksimum değer sağlamasını garanti eder. Analitik panosumuz gerçek zamanlı içgörüler ve performans metrikleri sağlar.",
+                detail1: "Gerçek zamanlı performans izleme",
+                detail2: "Otomatik ölçeklendirme ve optimizasyon",
+                detail3: "Düzenli performans incelemeleri",
+                detail4: "Sürekli iyileştirme önerileri"
             }
         },
         useCases: {
@@ -192,6 +267,7 @@ const translations = {
             platform: {
                 title: "Platform",
                 features: "Özellikler",
+                howItWorks: "Nasıl Çalışır",
                 useCases: "Kullanım Alanları",
                 pricing: "Fiyatlandırma"
             },
@@ -341,7 +417,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animations
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.feature-card, .use-case-card, .stat');
+    const animatedElements = document.querySelectorAll('.feature-card, .use-case-card, .stat, .step-card');
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';
