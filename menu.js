@@ -13,21 +13,40 @@
 /**
  * Navigation menu configuration
  * Customize menu items here - changes will reflect across all pages
+ * Now supports nested dropdown menus for better organization
  */
 const navigationConfig = {
     logoText: 'Delivery Pilot',
     logoLink: 'index.html',
     menuItems: [
         { href: 'index.html#home', textKey: 'nav.home', text: 'Home' },
-        { href: 'onboarding.html', textKey: 'nav.onboarding', text: 'Onboarding' },
-        { href: 'partners.html', textKey: 'nav.partners', text: 'Partners' },
-        { href: 'agile-transformation.html', text: 'Agile Transformation' },
+        { 
+            text: 'Platform', 
+            textKey: 'nav.platform',
+            submenu: [
+                { href: 'index.html#features', textKey: 'nav.features', text: 'Features' },
+                { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: 'How It Works' },
+                { href: 'index.html#use-cases', textKey: 'nav.useCases', text: 'Use Cases' }
+            ]
+        },
+        { 
+            text: 'Services', 
+            textKey: 'nav.services',
+            submenu: [
+                { href: 'onboarding.html', textKey: 'nav.onboarding', text: 'Onboarding' },
+                { href: 'agile-transformation.html', text: 'Agile Transformation' }
+            ]
+        },
         { href: 'pricing.html', text: 'Pricing' },
-        { href: 'index.html#features', textKey: 'nav.features', text: 'Features' },
-        { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: 'How It Works' },
-        { href: 'index.html#use-cases', textKey: 'nav.useCases', text: 'Use Cases' },
-        { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
-        { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
+        { 
+            text: 'Company', 
+            textKey: 'nav.company',
+            submenu: [
+                { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
+                { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
+                { href: 'partners.html', textKey: 'nav.partners', text: 'Partners' }
+            ]
+        },
         { href: 'contact.html', textKey: 'nav.contact', text: 'Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: 'Sign In' },
         { href: 'https://deliverypilot.net/assesment.html', textKey: 'nav.getStarted', text: 'Get Started', class: 'cta-button' }
@@ -88,13 +107,30 @@ const footerConfig = {
 };
 
 /**
- * Generate navigation HTML
+ * Generate navigation HTML with support for nested dropdown menus
  */
 function generateNavigation() {
     const menuItemsHTML = navigationConfig.menuItems.map(item => {
         const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
         const itemClass = item.class ? ` class="${item.class}"` : '';
-        return `<li><a href="${item.href}"${dataI18n}${itemClass}>${item.text}</a></li>`;
+        
+        // Check if item has submenu (dropdown)
+        if (item.submenu && item.submenu.length > 0) {
+            const submenuHTML = item.submenu.map(subItem => {
+                const subDataI18n = subItem.textKey ? ` data-i18n="${subItem.textKey}"` : '';
+                return `<li><a href="${subItem.href}"${subDataI18n}>${subItem.text}</a></li>`;
+            }).join('\n                            ');
+            
+            return `<li class="dropdown">
+                            <span class="dropdown-toggle"${dataI18n}>${item.text} <span class="dropdown-arrow">▼</span></span>
+                            <ul class="dropdown-menu">
+                                ${submenuHTML}
+                            </ul>
+                        </li>`;
+        } else {
+            // Regular menu item without submenu
+            return `<li><a href="${item.href}"${dataI18n}${itemClass}>${item.text}</a></li>`;
+        }
     }).join('\n                    ');
 
     return `
