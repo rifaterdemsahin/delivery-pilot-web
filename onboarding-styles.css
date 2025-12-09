@@ -264,6 +264,21 @@
     font-size: 0.95rem;
 }
 
+/* Pricing CTA Section */
+.pricing-cta-section {
+    padding: 5rem 0;
+    background: white;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
 /* Support Plans */
 .support-plans {
     padding: 5rem 0;
