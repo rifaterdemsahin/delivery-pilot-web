@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Test Page - Delivery Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .test-content {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .test-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .test-content p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .success-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Test Content -->
+    <section class="test-content">
+        <h1>✅ Menu System Test</h1>
+        <p>This page demonstrates the reusable menu system. The navigation above and footer below are dynamically generated from menu.js.</p>
+        <span class="success-badge">If you can see the menu, it works!</span>
+        <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+            Try switching languages using the EN/TR buttons in the navigation. The menus should update automatically.
+        </p>
+    </section>
+    
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

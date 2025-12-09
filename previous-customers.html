@@ -129,26 +129,8 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h2><a href="index.html">Delivery Pilot</a></h2>
-            </div>
-            <div class="nav-right">
-                <div class="language-toggle">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="tr">TR</button>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                    <li><a href="onboarding.html" data-i18n="nav.onboarding">Onboarding</a></li>
-                    <li><a href="partners.html" data-i18n="nav.partners">Partners</a></li>
-                    <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="legacy-hero">
@@ -223,36 +205,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Delivery Pilot</h3>
-                    <p>Enterprise AI Transformation Platform</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#use-cases">Use Cases</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="previous-customers.html">Previous Customers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Delivery Pilot. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
     
     <!-- Structured Data (Schema.org) for SEO -->
     <script type="application/ld+json">
@@ -297,6 +251,7 @@
     }
     </script>
     
+    <script src="menu.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
