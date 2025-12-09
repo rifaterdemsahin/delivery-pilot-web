@@ -22,7 +22,7 @@ const navigationConfig = {
         { href: 'onboarding.html', textKey: 'nav.onboarding', text: 'Onboarding' },
         { href: 'partners.html', textKey: 'nav.partners', text: 'Partners' },
         { href: 'agile-transformation.html', text: 'Agile Transformation' },
-        { href: 'pricing.html', textKey: 'nav.pricing', text: 'Pricing' },
+        { href: 'pricing.html', text: 'Pricing' },
         { href: 'index.html#features', textKey: 'nav.features', text: 'Features' },
         { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: 'How It Works' },
         { href: 'index.html#use-cases', textKey: 'nav.useCases', text: 'Use Cases' },
