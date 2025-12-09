@@ -168,7 +168,7 @@ const translations = {
                 blog: "Blog",
                 support: "Support"
             },
-            copyright: "© 2024 Delivery Pilot. All rights reserved."
+            copyright: "© {year} Delivery Pilot. All rights reserved."
         }
     },
     tr: {
@@ -339,7 +339,7 @@ const translations = {
                 blog: "Blog",
                 support: "Destek"
             },
-            copyright: "© 2024 Delivery Pilot. Tüm hakları saklıdır."
+            copyright: "© {year} Delivery Pilot. Tüm hakları saklıdır."
         },
         onboarding: {
             hero: {
@@ -689,12 +689,16 @@ function getNestedTranslation(obj, path) {
 function updateContent(lang) {
     currentLang = lang;
     
+    // Get current year
+    const currentYear = new Date().getFullYear();
+    
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
         if (translation) {
-            element.textContent = translation;
+            // Replace {year} placeholder with current year
+            element.textContent = translation.replace('{year}', currentYear);
         }
     });
     
@@ -719,11 +723,35 @@ function updateContent(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
+// Function to update copyright year in elements without data-i18n
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    
+    // Update copyright elements that don't use the translation system
+    // Only target elements without data-i18n attribute to avoid conflicts
+    document.querySelectorAll('.footer-bottom p, footer p').forEach(element => {
+        // Skip elements that use the translation system
+        if (element.hasAttribute('data-i18n')) {
+            return;
+        }
+        
+        // Match copyright text with 4-digit year and replace with current year
+        const copyrightPattern = /©\s*(\d{4})\s+Delivery Pilot/;
+        if (copyrightPattern.test(element.textContent)) {
+            element.textContent = element.textContent.replace(copyrightPattern, `© ${currentYear} Delivery Pilot`);
+        }
+    });
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize language from localStorage or default to English
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     updateContent(savedLang);
+    
+    // Update copyright year for pages that don't use the translation system
+    // This runs after updateContent() to avoid conflicts
+    updateCopyrightYear();
     
     // Add click event listeners to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
