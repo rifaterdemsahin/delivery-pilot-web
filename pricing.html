@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot Pricing - AI Workshop Assessments, Remote Sessions, and Enterprise Solutions">
+    <title>Pricing - Delivery Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pricing-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .pricing-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.popular {
+            border: 3px solid var(--primary-color);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .plan-name {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-subtext {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .features-list li::before {
+            content: attr(data-icon);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pricing-cta:hover {
+            background: var(--secondary-color);
+            transform: scale(1.02);
+        }
+
+        .pricing-cta.secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .pricing-cta.secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2><a href="index.html">Delivery Pilot</a></h2>
+            </div>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="tr">TR</button>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="onboarding.html">Onboarding</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="agile-transformation.html">Agile Transformation</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="founder.html">Founder</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="https://deliverypilot.net/assesment.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>Pricing Plans</h1>
+            <p class="subtitle">Choose the perfect plan for your AI transformation journey</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <!-- Prosumer Plan -->
+            <div class="pricing-card">
+                <h3>Prosumer</h3>
+                <p class="plan-name">1-on-1 Assessment For AI Workshop Readiness</p>
+                <div class="price">$50</div>
+                <p class="price-subtext">per session</p>
+                <ul class="features-list">
+                    <li data-icon="🎯">Individual AI maturity assessment</li>
+                    <li data-icon="📊">Personalized skills gap analysis</li>
+                    <li data-icon="🗺️">Custom AI learning roadmap</li>
+                    <li data-icon="💡">Career transformation strategy</li>
+                    <li data-icon="📋">Actionable next steps</li>
+                    <li data-icon="⏰">60-minute 1-on-1 session</li>
+                    <li data-icon="📄">Written assessment report</li>
+                    <li data-icon="🔄">Follow-up recommendations</li>
+                </ul>
+                <a href="https://deliverypilot.net/assesment.html" class="pricing-cta">📅 Book Assessment</a>
+            </div>
+
+            <!-- Workshops Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Workshops</h3>
+                <p class="plan-name">Remote Sessions</p>
+                <div class="price">£500</div>
+                <p class="price-subtext">per consultant/day</p>
+                <ul class="features-list">
+                    <li data-icon="🌍">Global live top 10 AI training sessions</li>
+                    <li data-icon="👥">Face-to-face interaction</li>
+                    <li data-icon="🏭">Enterprise-wide implementation</li>
+                    <li data-icon="🎯">Multiple technology areas</li>
+                    <li data-icon="🚀">Post-implementation support</li>
+                    <li data-icon="🏨">Hotel & travel billed separately</li>
+                </ul>
+                <a href="https://deliverypilot.net/assesment.html" class="pricing-cta">📅 Schedule Interview</a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="plan-name">Team Enterprise-wise AI Adaptation Assessment</p>
+                <div class="price" style="font-size: 2rem;">Request Quote</div>
+                <p class="price-subtext">custom pricing</p>
+                <ul class="features-list">
+                    <li data-icon="🤖">Enterprise data source integration</li>
+                    <li data-icon="👥">Team assessment included</li>
+                    <li data-icon="📊">Production-ready solution from workshops</li>
+                    <li data-icon="📚">Complete documentation</li>
+                    <li data-icon="⚡">Priority support</li>
+                    <li data-icon="🔄">Integration guidance</li>
+                    <li data-icon="📞">Direct access to expert</li>
+                </ul>
+                <a href="https://deliverypilot.net/assesment.html" class="pricing-cta">📅 Schedule Interview</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delivery Pilot</h3>
+                    <p>Enterprise AI Transformation Platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="onboarding.html">Onboarding</a></li>
+                        <li><a href="agile-transformation.html">Agile Transformation</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#use-cases">Use Cases</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="founder.html">Founder</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="previous-customers.html">Previous Customers</a></li>
+                        <li><a href="https://deliverypilot.net/assesment.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delivery Pilot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
