@@ -10,6 +10,7 @@ const translations = {
             about: "About",
             founder: "Founder",
             partners: "Partners",
+            pricing: "Pricing",
             signIn: "Sign In",
             getStarted: "Get Started"
         },
@@ -181,6 +182,7 @@ const translations = {
             about: "Hakkımızda",
             founder: "Kurucu",
             partners: "Ortaklar",
+            pricing: "Fiyatlandırma",
             signIn: "Giriş Yap",
             getStarted: "Başlayın"
         },
