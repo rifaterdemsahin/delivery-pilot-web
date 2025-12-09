@@ -25,6 +25,7 @@
             opacity: 0.95;
             max-width: 800px;
             margin: 0 auto 2rem;
+            line-height: 1.6;
         }
 
         .collaboration-section {
@@ -52,7 +53,7 @@
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -115,7 +116,7 @@
 
         .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -342,26 +343,284 @@
             color: var(--primary-color);
         }
 
+        .partner-benefits {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+        }
+
+        .benefit-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-highlight {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .back-button {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .partners-content {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .country-section {
+            margin-bottom: 3rem;
+        }
+
+        .country-section h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .country-section h2 span:first-child {
+            font-size: 2.5rem;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-card h3 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .partner-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .partner-card strong {
+            color: var(--text-dark);
+        }
+
         /* Responsive Design */
+        @media (max-width: 992px) {
+            .process-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
+            .partners-hero {
+                padding: 4rem 0 3rem;
+            }
+
             .partners-hero h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
 
             .partners-hero .subtitle {
                 font-size: 1.125rem;
+                padding: 0 1rem;
             }
 
             .section-header h2 {
                 font-size: 2rem;
             }
 
+            .section-header p {
+                font-size: 1.125rem;
+                padding: 0 1rem;
+            }
+
+            .process-grid,
+            .benefits-grid,
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .comparison-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .country-section h2 {
+                font-size: 1.75rem;
+                padding: 0 1rem;
+            }
+
+            .partner-card,
+            .process-card,
+            .benefit-card {
+                padding: 1.5rem;
             }
 
             .flow-timeline::before {
                 left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 70px;
+            }
+
+            .timeline-item::before {
+                width: 45px;
+                height: 45px;
+                font-size: 1.125rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+                padding: 0 1rem;
+            }
+
+            .cta-section p {
+                font-size: 1.125rem;
+                padding: 0 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .customer-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .partners-hero {
+                padding: 3rem 0 2rem;
+            }
+
+            .partners-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .partners-hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .process-card .icon,
+            .benefit-card .icon {
+                font-size: 2.5rem;
+            }
+
+            .process-card h3,
+            .benefit-card h3,
+            .partner-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .country-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .partner-card,
+            .process-card,
+            .benefit-card {
+                padding: 1.25rem;
             }
 
             .timeline-item {
@@ -371,21 +630,28 @@
             .timeline-item::before {
                 width: 40px;
                 height: 40px;
-                font-size: 1.125rem;
+                font-size: 1rem;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.25rem;
+            }
+
+            .customer-card h3 {
+                font-size: 1.5rem;
             }
 
             .cta-section h2 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .cta-section p {
+                font-size: 1rem;
             }
 
             .btn {
-                width: 100%;
-                max-width: 300px;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -397,8 +663,8 @@
     <!-- Hero Section -->
     <section class="partners-hero">
         <div class="container">
-            <h1 data-i18n="partners.title">Our Global Partners</h1>
-            <p data-i18n="partners.subtitle">Working with leading organizations worldwide to deliver exceptional AI transformation services</p>
+            <h1 data-i18n="partners.title">Become a Delivery Pilot Partner</h1>
+            <p class="subtitle" data-i18n="partners.subtitle">Join our global network of consultants completing sales, facilitating assessments and workshops, and coordinating enterprise transformation calendars</p>
         </div>
     </section>
 
@@ -435,10 +701,86 @@
                 </div>
             </div>
 
-            <div style="text-align: center;">
+            <div style="text-align: center; margin-top: 2rem;">
                 <a href="index.html" class="back-button" data-i18n="partners.backToHome">← Back to Home</a>
-            <h1>Partner with Delivery Pilot</h1>
-            <p class="subtitle">Collaborate on customer onboarding, assessments, and AI transformation workshops. We work together to prepare audiences and deliver customized roadmaps for both prosumer and enterprise customers.</p>
+        </div>
+    </section>
+
+    <!-- Partner Benefits Section -->
+    <section class="partner-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's in It for You as a Partner?</h2>
+                <p>As a Delivery Pilot partner, you'll gain access to proven methodologies, expanded business opportunities, and continuous support to grow your consulting practice.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="icon">💼</span>
+                    <h3>Sales Completion Support</h3>
+                    <p>We provide you with comprehensive sales enablement tools, proven pitch decks, and customer case studies to help you close more deals effectively.</p>
+                    <div class="benefit-highlight">
+                        ✓ Pre-qualified leads and referrals<br>
+                        ✓ Co-branded marketing materials<br>
+                        ✓ Sales training and methodologies
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">🔍</span>
+                    <h3>Assessment & Workshop Facilitation</h3>
+                    <p>Deliver high-value assessments and workshops using our proven frameworks, gaining expertise while generating revenue for your practice.</p>
+                    <div class="benefit-highlight">
+                        ✓ Ready-to-use assessment templates<br>
+                        ✓ Workshop facilitation guides<br>
+                        ✓ Certification and training programs
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">📅</span>
+                    <h3>Enterprise Calendar Coordination</h3>
+                    <p>Streamline your engagement process with our calendar management tools designed specifically for coordinating complex enterprise transformation projects.</p>
+                    <div class="benefit-highlight">
+                        ✓ Automated scheduling systems<br>
+                        ✓ Multi-stakeholder coordination<br>
+                        ✓ Timeline and milestone tracking
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">💰</span>
+                    <h3>Revenue Opportunities</h3>
+                    <p>Expand your revenue streams through multiple engagement models including assessment delivery, workshop facilitation, and ongoing transformation support.</p>
+                    <div class="benefit-highlight">
+                        ✓ Competitive revenue sharing model<br>
+                        ✓ Recurring revenue from long-term engagements<br>
+                        ✓ Upsell opportunities
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">🎓</span>
+                    <h3>Training & Certification</h3>
+                    <p>Access comprehensive partner training programs to enhance your skills in AI transformation, assessment methodologies, and enterprise consulting.</p>
+                    <div class="benefit-highlight">
+                        ✓ Partner certification program<br>
+                        ✓ Continuous learning resources<br>
+                        ✓ Expert mentorship and support
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">🌐</span>
+                    <h3>Global Network Access</h3>
+                    <p>Join a community of experienced consultants worldwide, sharing best practices, resources, and collaboration opportunities.</p>
+                    <div class="benefit-highlight">
+                        ✓ Partner community forum<br>
+                        ✓ Knowledge sharing sessions<br>
+                        ✓ Cross-border collaboration
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -446,47 +788,47 @@
     <section class="collaboration-section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Collaboration Approach</h2>
-                <p>We believe in partnership-driven success. Here's how we work together to deliver exceptional AI transformation experiences.</p>
+                <h2>How You'll Work with Customers</h2>
+                <p>As a partner, you'll lead customer engagements across key areas: sales, assessments, and workshops. Here's your role in each phase.</p>
             </div>
 
             <div class="process-grid">
                 <div class="process-card">
-                    <span class="icon">🤝</span>
-                    <h3>Joint Customer Onboarding</h3>
-                    <p>We collaborate closely with partners during the customer onboarding phase to ensure a seamless experience:</p>
+                    <span class="icon">💼</span>
+                    <h3>Complete the Sale</h3>
+                    <p>You'll drive customer acquisition and close deals using our proven sales methodology:</p>
                     <ul>
-                        <li>Co-develop onboarding materials and documentation</li>
-                        <li>Joint discovery sessions to understand customer needs</li>
-                        <li>Shared responsibility for customer success metrics</li>
-                        <li>Regular sync meetings to align on approach</li>
-                        <li>Collaborative goal setting and milestone planning</li>
+                        <li>Present Delivery Pilot solutions to prospects</li>
+                        <li>Conduct initial discovery and needs assessment</li>
+                        <li>Develop customized proposals and pricing</li>
+                        <li>Negotiate and close enterprise deals</li>
+                        <li>Establish success criteria and expectations</li>
                     </ul>
                 </div>
 
                 <div class="process-card">
                     <span class="icon">🔍</span>
-                    <h3>Assessment Process Collaboration</h3>
-                    <p>Partners work alongside our experts to conduct comprehensive assessments:</p>
+                    <h3>Deliver Assessments</h3>
+                    <p>You'll lead comprehensive AI readiness assessments for customer organizations:</p>
                     <ul>
-                        <li>Joint assessment framework development</li>
-                        <li>Co-facilitation of assessment sessions</li>
-                        <li>Shared analysis of technical readiness</li>
-                        <li>Collaborative gap identification</li>
-                        <li>Joint recommendations and action planning</li>
+                        <li>Conduct skills gap and maturity assessments</li>
+                        <li>Evaluate technical infrastructure and tools</li>
+                        <li>Analyze team capabilities and readiness</li>
+                        <li>Identify transformation opportunities</li>
+                        <li>Present findings and recommendations</li>
                     </ul>
                 </div>
 
                 <div class="process-card">
                     <span class="icon">🎓</span>
-                    <h3>Workshop Preparation</h3>
-                    <p>Together, we prepare audiences for successful workshop experiences:</p>
+                    <h3>Facilitate Workshops</h3>
+                    <p>You'll deliver engaging AI transformation workshops tailored to customer needs:</p>
                     <ul>
-                        <li>Pre-workshop readiness assessments</li>
-                        <li>Audience segmentation and customization</li>
-                        <li>Co-creation of workshop materials</li>
-                        <li>Joint facilitator training sessions</li>
-                        <li>Preparation of hands-on exercises and examples</li>
+                        <li>Lead hands-on training sessions</li>
+                        <li>Facilitate group exercises and discussions</li>
+                        <li>Provide expert guidance and coaching</li>
+                        <li>Address specific customer challenges</li>
+                        <li>Create actionable transformation roadmaps</li>
                     </ul>
                 </div>
             </div>
@@ -497,23 +839,23 @@
     <section class="collaboration-flow">
         <div class="container">
             <div class="section-header">
-                <h2>Partner Collaboration Timeline</h2>
-                <p>A structured approach to ensure successful customer outcomes through every stage.</p>
+                <h2>Your Partner Engagement Journey</h2>
+                <p>A clear roadmap showing how you'll engage with customers and coordinate calendars from initial contact through transformation delivery.</p>
             </div>
 
             <div class="flow-timeline">
                 <div class="timeline-item" data-step="1">
                     <div class="timeline-content">
-                        <h3>Initial Partner Engagement</h3>
-                        <p>We begin with a comprehensive partner alignment session to understand your customers, expertise, and collaboration preferences.</p>
+                        <h3>Partner Onboarding & Enablement</h3>
+                        <p>You'll receive comprehensive training and access to all the tools you need to succeed as a Delivery Pilot partner.</p>
                         <div class="details">
-                            <h4>Key Activities:</h4>
+                            <h4>What You'll Receive:</h4>
                             <ul>
-                                <li>Partner onboarding and capability assessment</li>
-                                <li>Customer profile sharing and analysis</li>
-                                <li>Co-creation of engagement strategy</li>
-                                <li>Definition of roles and responsibilities</li>
-                                <li>Agreement on success metrics and KPIs</li>
+                                <li>Partner certification and training program</li>
+                                <li>Sales enablement materials and tools</li>
+                                <li>Access to assessment frameworks and templates</li>
+                                <li>Workshop facilitation guides and materials</li>
+                                <li>Calendar coordination and scheduling tools</li>
                             </ul>
                         </div>
                     </div>
@@ -521,16 +863,16 @@
 
                 <div class="timeline-item" data-step="2">
                     <div class="timeline-content">
-                        <h3>Customer Discovery & Assessment</h3>
-                        <p>Partners and Delivery Pilot experts conduct joint discovery sessions and assessments to understand customer needs and readiness.</p>
+                        <h3>Sales & Customer Acquisition</h3>
+                        <p>You'll identify opportunities, engage prospects, and close deals using our proven sales methodology and support.</p>
                         <div class="details">
-                            <h4>Collaborative Activities:</h4>
+                            <h4>Your Sales Activities:</h4>
                             <ul>
-                                <li>Joint customer interviews and workshops</li>
-                                <li>Technical environment assessment</li>
-                                <li>Skills gap analysis (individual and team)</li>
-                                <li>AI maturity evaluation</li>
-                                <li>Infrastructure and security review</li>
+                                <li>Lead generation and prospecting</li>
+                                <li>Initial customer discovery meetings</li>
+                                <li>Solution presentation and demonstration</li>
+                                <li>Proposal development and negotiation</li>
+                                <li>Contract closing and handoff to delivery</li>
                             </ul>
                         </div>
                     </div>
@@ -538,16 +880,16 @@
 
                 <div class="timeline-item" data-step="3">
                     <div class="timeline-content">
-                        <h3>Audience Preparation & Segmentation</h3>
-                        <p>We work together to prepare and segment audiences based on their roles, experience levels, and learning objectives.</p>
+                        <h3>Assessment Delivery & Calendar Coordination</h3>
+                        <p>You'll schedule and conduct comprehensive assessments, coordinating calendars across enterprise stakeholders.</p>
                         <div class="details">
-                            <h4>Preparation Steps:</h4>
+                            <h4>Coordination Activities:</h4>
                             <ul>
-                                <li>Audience profiling and segmentation (prosumer vs enterprise)</li>
-                                <li>Pre-workshop skill assessments</li>
-                                <li>Customized learning path creation</li>
-                                <li>Prerequisites communication and support</li>
-                                <li>Team formation for enterprise customers</li>
+                                <li>Schedule assessment sessions with key stakeholders</li>
+                                <li>Conduct skills gap and readiness evaluations</li>
+                                <li>Coordinate multi-day assessment activities</li>
+                                <li>Manage enterprise calendar commitments</li>
+                                <li>Prepare assessment findings and recommendations</li>
                             </ul>
                         </div>
                     </div>
@@ -555,16 +897,16 @@
 
                 <div class="timeline-item" data-step="4">
                     <div class="timeline-content">
-                        <h3>Workshop Design & Delivery</h3>
-                        <p>Partners collaborate on designing and delivering workshops tailored to customer needs and audience segments.</p>
+                        <h3>Workshop Planning & Scheduling</h3>
+                        <p>You'll coordinate workshop calendars with enterprise customers, ensuring all stakeholders are aligned and prepared.</p>
                         <div class="details">
-                            <h4>Joint Delivery:</h4>
+                            <h4>Calendar Management:</h4>
                             <ul>
-                                <li>Co-facilitation of workshop sessions</li>
-                                <li>Real-time adaptation based on audience feedback</li>
-                                <li>Hands-on practice with partner support</li>
-                                <li>Q&A and troubleshooting assistance</li>
-                                <li>Collection of feedback and insights</li>
+                                <li>Schedule workshop dates with enterprise teams</li>
+                                <li>Coordinate across multiple time zones</li>
+                                <li>Manage pre-workshop preparation activities</li>
+                                <li>Send reminders and preparatory materials</li>
+                                <li>Ensure participant availability and readiness</li>
                             </ul>
                         </div>
                     </div>
@@ -572,16 +914,16 @@
 
                 <div class="timeline-item" data-step="5">
                     <div class="timeline-content">
-                        <h3>Roadmap Development & Follow-up</h3>
-                        <p>We conclude with joint roadmap creation and ongoing support planning to ensure continued customer success.</p>
+                        <h3>Workshop Facilitation & Follow-up</h3>
+                        <p>You'll deliver engaging workshops and coordinate post-workshop activities, maintaining the transformation momentum.</p>
                         <div class="details">
-                            <h4>Post-Workshop Activities:</h4>
+                            <h4>Delivery & Follow-up:</h4>
                             <ul>
-                                <li>Collaborative roadmap creation (individual or team-based)</li>
-                                <li>Priority setting and milestone definition</li>
-                                <li>Resource allocation planning</li>
-                                <li>Follow-up support structure agreement</li>
-                                <li>Continuous improvement feedback loop</li>
+                                <li>Facilitate multi-day workshop sessions</li>
+                                <li>Create customized transformation roadmaps</li>
+                                <li>Schedule follow-up coaching sessions</li>
+                                <li>Coordinate ongoing support activities</li>
+                                <li>Identify upsell and expansion opportunities</li>
                             </ul>
                         </div>
                     </div>
@@ -700,11 +1042,11 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Partner with Us?</h2>
-            <p>Join our partner network and deliver exceptional AI transformation experiences to your customers.</p>
+            <h2>Ready to Grow Your Consulting Practice?</h2>
+            <p>Join our partner network today and start delivering high-value sales, assessments, and workshops to enterprise customers.</p>
             <div class="cta-buttons">
-                <a href="https://deliverypilot.net/assesment.html" class="btn btn-primary">Become a Partner</a>
-                <a href="onboarding.html" class="btn btn-secondary">Learn More About Our Process</a>
+                <a href="https://deliverypilot.net/assesment.html" class="btn btn-primary">Apply to Become a Partner</a>
+                <a href="contact.html" class="btn btn-secondary">Schedule a Partner Discussion</a>
             </div>
         </div>
     </section>
