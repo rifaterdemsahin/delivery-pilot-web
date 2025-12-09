@@ -28,6 +28,7 @@ const navigationConfig = {
         { href: 'index.html#use-cases', textKey: 'nav.useCases', text: 'Use Cases' },
         { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
         { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
+        { href: 'contact.html', textKey: 'nav.contact', text: 'Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: 'Sign In' },
         { href: 'https://deliverypilot.net/assesment.html', textKey: 'nav.getStarted', text: 'Get Started', class: 'cta-button' }
     ]
@@ -67,7 +68,7 @@ const footerConfig = {
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'previous-customers.html', textKey: 'footer.company.previousCustomers', text: 'Previous Customers' },
                 { type: 'link', href: '#', textKey: 'footer.company.careers', text: 'Careers' },
-                { type: 'link', href: 'https://deliverypilot.net/assesment.html', textKey: 'footer.company.contact', text: 'Contact' }
+                { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
             ]
         },
         {

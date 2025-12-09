@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Delivery Pilot. Contact us for AI solutions, training, and consulting projects. Available for new projects and collaborations.">
+    <meta name="keywords" content="contact Delivery Pilot, AI solutions, AI training, DevOps consulting, Cambridge UK, enterprise AI contact">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/contact.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us | Delivery Pilot">
+    <meta property="og:description" content="Ready to collaborate or discuss your next project? Contact Delivery Pilot for AI solutions and consulting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/contact.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Delivery Pilot">
+    <meta name="twitter:description" content="Ready to collaborate or discuss your next project? Contact Delivery Pilot for AI solutions and consulting.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Contact Us - Get In Touch | Delivery Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .availability-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .availability-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .availability-section p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .availability-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .address-details {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .meeting-section {
+            text-align: center;
+            max-width: 700px;
+            margin: 4rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .meeting-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .meeting-section p {
+            color: white;
+            opacity: 0.95;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .meeting-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .meeting-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .contact-hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .availability-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .availability-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .meeting-section h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p class="subtitle">Ready to collaborate or discuss your next project? I'd love to hear from you. Let's connect and explore opportunities together.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="container">
+            <!-- Availability Section -->
+            <div class="availability-section">
+                <h2>Currently Available for Projects</h2>
+                <p>I'm open to discussing new opportunities, collaborations, and consulting projects.</p>
+                <span class="availability-badge">✓ Available for new projects</span>
+            </div>
+
+            <!-- Contact Information Grid -->
+            <div class="contact-info-grid">
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@rifaterdemsahin.com">contact@rifaterdemsahin.com</a></p>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+447848024173">07848 024 173</a></p>
+                </div>
+
+                <!-- WhatsApp Business -->
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp Business</h3>
+                    <p><a href="https://wa.me/447848024173" target="_blank" rel="noopener noreferrer">+44 7848 024 173</a></p>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Address</h3>
+                    <div class="address-details">
+                        <p>23 King Street</p>
+                        <p>CB1 1AH</p>
+                        <p>Cambridgeshire, UK</p>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>Services</h3>
+                    <p>AI Solutions, Training<br>(Former DevOps Engineer)</p>
+                </div>
+
+                <!-- Response Time -->
+                <div class="contact-card">
+                    <div class="contact-icon">⏰</div>
+                    <h3>Response Time</h3>
+                    <p>Usually within 24 hours</p>
+                </div>
+            </div>
+
+            <!-- Schedule a Meeting Section -->
+            <div class="meeting-section">
+                <h2>📅 Schedule a Meeting</h2>
+                <p>Book a consultation call at your convenience</p>
+                <a href="https://calendly.com/rifaterdemsahin" target="_blank" rel="noopener noreferrer" class="meeting-btn">Book a consultation call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Delivery Pilot",
+      "url": "https://deliverypilot.net/contact.html",
+      "description": "Contact Delivery Pilot for AI solutions, training, and consulting projects.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-7848-024-173",
+          "contactType": "Customer Service",
+          "email": "contact@rifaterdemsahin.com",
+          "availableLanguage": ["English", "Turkish"],
+          "areaServed": "GB"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "23 King Street",
+          "addressLocality": "Cambridge",
+          "postalCode": "CB1 1AH",
+          "addressRegion": "Cambridgeshire",
+          "addressCountry": "GB"
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://deliverypilot.net/contact.html"
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
