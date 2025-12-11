@@ -912,7 +912,7 @@ function updateContent(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
-        if (translation) {
+        if (translation && typeof translation === 'string') {
             // Replace {year} placeholder with current year
             element.textContent = translation.replace('{year}', currentYear);
         }
