@@ -44,6 +44,14 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Success Stories Page -->
+    <url>
+        <loc>https://deliverypilot.net/success-stories.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Pricing Page -->
     <url>
         <loc>https://deliverypilot.net/pricing.html</loc>

@@ -43,6 +43,7 @@ const navigationConfig = {
             textKey: 'nav.company',
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
+                { href: 'success-stories.html', textKey: 'nav.successStories', text: 'Success Stories' },
                 { href: 'faq.html', textKey: 'nav.faq', text: 'FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
                 { href: 'transformations.html', textKey: 'nav.transformations', text: 'Transformations' },
@@ -85,6 +86,7 @@ const footerConfig = {
             titleKey: 'footer.company.title',
             content: [
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
+                { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
                 { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },

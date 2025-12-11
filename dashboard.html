@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Dashboard - Delivery Pilot</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         .dashboard-container {
             min-height: 100vh;
@@ -280,6 +281,40 @@
         .new-assessment-btn:hover {
             transform: translateY(-2px);
         }
+        
+        .assessment-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f3f4f6;
+        }
+        
+        .download-pdf-btn {
+            flex: 1;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .download-pdf-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .download-pdf-btn:active {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -531,6 +566,305 @@
             return 'poor';
         }
         
+        // Category names mapping
+        const categoryNames = {
+            prereq: 'Prerequisites & Setup',
+            creative: 'Creative Tools (Canva)',
+            comm: 'Communication (Teams)',
+            ai: 'AI Tools Usage',
+            github: 'GitHub & Codespaces',
+            markdown: 'Markdown & Documentation',
+            advanced: 'Advanced AI & Models',
+            delivery: 'Project Delivery Pilot'
+        };
+        
+        // Function to generate PDF for skills gap report
+        function generateSkillsGapPDF(assessment) {
+            // Check if jsPDF is loaded
+            if (!window.jspdf) {
+                // Fallback: Open a printable version in a new window
+                openPrintableReport(assessment);
+                return;
+            }
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Title
+            doc.setFontSize(20);
+            doc.setTextColor(102, 126, 234);
+            doc.text('AI Transformation Skills Gap Report', 105, 20, { align: 'center' });
+            
+            // Subtitle
+            doc.setFontSize(12);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Delivery Pilot Assessment', 105, 28, { align: 'center' });
+            
+            // User Information
+            let yPos = 45;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Assessment Overview', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            doc.text(`Name: ${assessment.userName}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Role: ${assessment.userRole}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Email: ${assessment.userEmail}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Assessment Date: ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Completion Time: ${assessment.completionTime} minutes`, 20, yPos);
+            
+            // Overall Score
+            yPos += 15;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Overall Readiness', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(24);
+            doc.setTextColor(102, 126, 234);
+            doc.text(`${assessment.overallScore}%`, 20, yPos);
+            
+            doc.setFontSize(12);
+            doc.setTextColor(60, 60, 60);
+            doc.text(`Level: ${assessment.readinessLevel}`, 50, yPos);
+            
+            // Category Scores
+            yPos += 15;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Category Scores', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            Object.entries(assessment.categoryScores).forEach(([category, score]) => {
+                const categoryName = categoryNames[category] || category;
+                doc.setTextColor(60, 60, 60);
+                doc.text(`${categoryName}:`, 20, yPos);
+                
+                // Score color based on performance
+                if (score >= 75) doc.setTextColor(16, 185, 129); // green
+                else if (score >= 60) doc.setTextColor(59, 130, 246); // blue
+                else if (score >= 40) doc.setTextColor(251, 191, 36); // yellow
+                else doc.setTextColor(239, 68, 68); // red
+                
+                doc.text(`${score}%`, 170, yPos);
+                
+                yPos += 6;
+                if (yPos > 270) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+            });
+            
+            // Skills Gap Analysis
+            yPos += 10;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Skills Gap Analysis', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            
+            const gaps = Object.entries(assessment.categoryScores)
+                .filter(([_, score]) => score < 60)
+                .sort((a, b) => a[1] - b[1]);
+            
+            if (gaps.length > 0) {
+                doc.text('Areas requiring improvement (scored below 60%):', 20, yPos);
+                yPos += 8;
+                
+                gaps.forEach(([category, score]) => {
+                    const categoryName = categoryNames[category] || category;
+                    if (score < 40) doc.setTextColor(239, 68, 68); // red for critical
+                    else if (score < 60) doc.setTextColor(251, 191, 36); // yellow for moderate
+                    
+                    doc.text(`• ${categoryName}: ${score}% - ${score < 40 ? 'Critical Priority' : 'High Priority'}`, 25, yPos);
+                    yPos += 6;
+                    
+                    if (yPos > 270) {
+                        doc.addPage();
+                        yPos = 20;
+                    }
+                });
+            } else {
+                doc.setTextColor(16, 185, 129);
+                doc.text('No significant skills gaps identified. All categories scored above 60%.', 20, yPos);
+            }
+            
+            // Recommendations
+            if (gaps.length > 0) {
+                yPos += 10;
+                if (yPos > 250) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                
+                doc.setFontSize(14);
+                doc.setTextColor(0, 0, 0);
+                doc.text('Recommended Actions', 20, yPos);
+                
+                yPos += 10;
+                doc.setFontSize(10);
+                doc.setTextColor(60, 60, 60);
+                doc.text('Based on your assessment, we recommend focusing on:', 20, yPos);
+                yPos += 8;
+                
+                doc.text('1. Prioritize training in critical gap areas (scored below 40%)', 25, yPos);
+                yPos += 6;
+                doc.text('2. Schedule workshops for high-priority areas (scored 40-60%)', 25, yPos);
+                yPos += 6;
+                doc.text('3. Practice hands-on implementations to reinforce learning', 25, yPos);
+                yPos += 6;
+                doc.text('4. Review and reassess in 3 months to track improvement', 25, yPos);
+            }
+            
+            // Footer
+            doc.setFontSize(8);
+            doc.setTextColor(150, 150, 150);
+            doc.text('Generated by Delivery Pilot - AI Transformation Platform', 105, 285, { align: 'center' });
+            doc.text(new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }), 105, 290, { align: 'center' });
+            
+            // Save the PDF
+            const fileName = `AI-Skills-Gap-${assessment.userName.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`;
+            doc.save(fileName);
+        }
+        
+        // Fallback function: Open printable HTML report
+        function openPrintableReport(assessment) {
+            const gaps = Object.entries(assessment.categoryScores)
+                .filter(([_, score]) => score < 60)
+                .sort((a, b) => a[1] - b[1]);
+            
+            const reportHTML = `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Transformation Skills Gap Report - ${assessment.userName}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
+        .header { text-align: center; margin-bottom: 40px; border-bottom: 3px solid #667eea; padding-bottom: 20px; }
+        .header h1 { color: #667eea; margin: 0; font-size: 28px; }
+        .header p { color: #666; margin: 5px 0; }
+        .section { margin: 30px 0; }
+        .section h2 { color: #667eea; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 20px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .info-item { background: #f9fafb; padding: 15px; border-radius: 8px; }
+        .info-item strong { color: #374151; display: block; margin-bottom: 5px; }
+        .score-large { font-size: 48px; font-weight: bold; color: #667eea; text-align: center; margin: 20px 0; }
+        .category-score { display: flex; justify-content: space-between; padding: 10px; margin: 5px 0; border-radius: 4px; background: #f9fafb; }
+        .category-score.excellent { background: #d1fae5; color: #065f46; }
+        .category-score.good { background: #dbeafe; color: #1e40af; }
+        .category-score.fair { background: #fef3c7; color: #92400e; }
+        .category-score.poor { background: #fee2e2; color: #991b1b; }
+        .gap-item { padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid; }
+        .gap-item.critical { background: #fee2e2; border-color: #ef4444; }
+        .gap-item.high { background: #fef3c7; border-color: #f59e0b; }
+        .recommendations { background: #eff6ff; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .recommendations li { margin: 10px 0; }
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e7eb; color: #9ca3af; font-size: 12px; }
+        @media print {
+            body { margin: 20px; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Transformation Skills Gap Report</h1>
+        <p>Delivery Pilot Assessment</p>
+        <p style="margin-top: 10px;">Generated on ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+    </div>
+    
+    <div class="section">
+        <h2>Assessment Overview</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Name:</strong> ${assessment.userName}</div>
+            <div class="info-item"><strong>Role:</strong> ${assessment.userRole}</div>
+            <div class="info-item"><strong>Email:</strong> ${assessment.userEmail}</div>
+            <div class="info-item"><strong>Assessment Date:</strong> ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+            <div class="info-item"><strong>Completion Time:</strong> ${assessment.completionTime} minutes</div>
+            <div class="info-item"><strong>Readiness Level:</strong> ${assessment.readinessLevel}</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Overall Readiness</h2>
+        <div class="score-large">${assessment.overallScore}%</div>
+        <p style="text-align: center; color: #666; font-size: 18px;">${assessment.readinessLevel}</p>
+    </div>
+    
+    <div class="section">
+        <h2>Category Scores</h2>
+        ${Object.entries(assessment.categoryScores).map(([category, score]) => {
+            const categoryName = categoryNames[category] || category;
+            const scoreClass = score >= 75 ? 'excellent' : score >= 60 ? 'good' : score >= 40 ? 'fair' : 'poor';
+            return `<div class="category-score ${scoreClass}">
+                <span>${categoryName}</span>
+                <strong>${score}%</strong>
+            </div>`;
+        }).join('')}
+    </div>
+    
+    <div class="section">
+        <h2>Skills Gap Analysis</h2>
+        ${gaps.length > 0 ? `
+            <p>The following areas require improvement (scored below 60%):</p>
+            ${gaps.map(([category, score]) => {
+                const categoryName = categoryNames[category] || category;
+                const gapClass = score < 40 ? 'critical' : 'high';
+                const priority = score < 40 ? 'Critical Priority' : 'High Priority';
+                return `<div class="gap-item ${gapClass}">
+                    <strong>${categoryName}: ${score}%</strong>
+                    <p>${priority} - Immediate attention required</p>
+                </div>`;
+            }).join('')}
+        ` : '<p style="color: #10b981; font-weight: bold;">✓ No significant skills gaps identified. All categories scored above 60%.</p>'}
+    </div>
+    
+    ${gaps.length > 0 ? `
+    <div class="section">
+        <h2>Recommended Actions</h2>
+        <div class="recommendations">
+            <p><strong>Based on your assessment, we recommend focusing on:</strong></p>
+            <ol>
+                <li>Prioritize training in critical gap areas (scored below 40%)</li>
+                <li>Schedule workshops for high-priority areas (scored 40-60%)</li>
+                <li>Practice hands-on implementations to reinforce learning</li>
+                <li>Review and reassess in 3 months to track improvement</li>
+            </ol>
+        </div>
+    </div>
+    ` : ''}
+    
+    <div class="footer">
+        <p>Generated by Delivery Pilot - AI Transformation Platform</p>
+        <p>For more information, visit deliverypilot.net</p>
+    </div>
+    
+    <div class="no-print" style="text-align: center; margin: 30px 0;">
+        <button onclick="window.print()" style="padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
+            Print or Save as PDF
+        </button>
+        <button onclick="window.close()" style="padding: 12px 24px; background: #6b7280; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; margin-left: 10px;">
+            Close
+        </button>
+    </div>
+</body>
+</html>`;
+            
+            const printWindow = window.open('', '_blank', 'width=800,height=900');
+            printWindow.document.write(reportHTML);
+            printWindow.document.close();
+        }
+        
         // Function to render assessments
         function renderAssessments(assessments) {
             const listContainer = document.getElementById('assessmentList');
@@ -593,6 +927,11 @@
                                 <div class="detail-value">${Object.keys(assessment.categoryScores).length}</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="assessment-actions">
+                        <button class="download-pdf-btn" onclick='generateSkillsGapPDF(${JSON.stringify(assessment).replace(/'/g, "&apos;")})'>
+                            📥 Download Skills Gap PDF
+                        </button>
                     </div>
                 </div>
             `).join('');
