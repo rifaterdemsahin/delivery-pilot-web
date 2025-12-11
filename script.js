@@ -8,6 +8,7 @@ const translations = {
             howItWorks: "How It Works",
             useCases: "Use Cases",
             about: "About",
+            successStories: "Success Stories",
             founder: "Founder",
             partners: "Partners",
             signIn: "Sign In",
@@ -175,6 +176,7 @@ const translations = {
             company: {
                 title: "Company",
                 about: "About",
+                successStories: "Success Stories",
                 founder: "Founder",
                 partners: "Partners",
                 previousCustomers: "Previous Customers",
@@ -189,6 +191,91 @@ const translations = {
             },
             copyright: "© {year} Delivery Pilot. All rights reserved."
         },
+        successStories: {
+            hero: {
+                title: "Success Stories",
+                subtitle: "Discover how leading enterprises transformed their operations with Delivery Pilot. Real implementations, measurable results, and proven ROI across diverse industries."
+            },
+            insurance: {
+                name: "Insurance SBM",
+                solution: "🚀 Kubernetes Implementation & Container Orchestration",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "Insurance SBM, a leading financial services provider, was struggling with legacy monolithic applications that couldn't scale during peak periods. Their infrastructure was costly to maintain, deployments took weeks, and system reliability was a constant concern affecting customer satisfaction."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot partnered with Insurance SBM to implement a comprehensive Kubernetes-based container orchestration platform. We migrated their critical applications to microservices architecture, implemented automated CI/CD pipelines, and established robust monitoring and auto-scaling capabilities. The transformation included training their teams on Kubernetes best practices and DevOps methodologies."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    deployment: "Faster Deployment",
+                    cost: "Cost Reduction",
+                    uptime: "System Uptime",
+                    scaling: "Improved Scaling"
+                },
+                testimonial: {
+                    text: "Delivery Pilot transformed our entire infrastructure. The Kubernetes implementation not only solved our scalability issues but also dramatically reduced our operational costs. Our deployment time went from weeks to minutes, and our team now has the skills to manage a modern cloud-native platform.",
+                    author: "— Chief Technology Officer, Insurance SBM"
+                }
+            },
+            goldman: {
+                name: "Goldman Sachs",
+                solution: "⚡ Azure Logic Apps Implementation & Integration Platform",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "Goldman Sachs needed to streamline complex business workflows across multiple legacy systems. Data silos were preventing efficient operations, manual processes were error-prone, and integration between different departments took months to implement. They required a scalable, secure, and compliant solution that could handle sensitive financial data."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot designed and implemented an enterprise-grade integration platform using Azure Logic Apps. We automated critical workflows, connected disparate systems through secure APIs, and established real-time data synchronization across the organization. The solution included custom connectors, comprehensive error handling, and detailed audit logging to meet stringent regulatory requirements."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    automation: "Process Automation",
+                    errors: "Error Reduction",
+                    integrations: "System Integrations",
+                    time: "Time Savings"
+                },
+                testimonial: {
+                    text: "The Azure Logic Apps implementation by Delivery Pilot revolutionized our operations. We now have seamless integration across all our systems, automated workflows that previously took days to complete, and complete visibility into our processes. The team's expertise in financial services compliance was invaluable.",
+                    author: "— VP of Technology Operations, Goldman Sachs"
+                }
+            },
+            ibm: {
+                name: "IBM",
+                solution: "🔧 OpenShift Implementation & Hybrid Cloud Platform",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "IBM's enterprise division needed a robust hybrid cloud platform that could run consistently across on-premises data centers and multiple cloud providers. They required advanced security features, developer-friendly tools, and the ability to modernize legacy applications while maintaining operational stability for mission-critical workloads."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot implemented Red Hat OpenShift as IBM's enterprise container platform, creating a unified hybrid cloud environment. We established multi-cluster management, implemented GitOps workflows, integrated enterprise security policies, and built a self-service developer portal. The solution included comprehensive training programs and established centers of excellence across multiple regions."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    applications: "Applications Migrated",
+                    velocity: "Developer Velocity",
+                    cost: "Infrastructure Cost Savings",
+                    availability: "Platform Availability"
+                },
+                testimonial: {
+                    text: "Delivery Pilot's OpenShift implementation exceeded our expectations. We now have a world-class hybrid cloud platform that gives us the flexibility to run workloads anywhere while maintaining consistent security and operational practices. The transformation has accelerated our innovation cycle and enabled us to deliver value to our customers faster than ever.",
+                    author: "— Senior Director, Cloud Platform Engineering, IBM"
+                }
+            },
+            cta: {
+                title: "Ready to Write Your Success Story?",
+                description: "Join these industry leaders and transform your enterprise with Delivery Pilot. Let's discuss how we can help you achieve similar results.",
+                getStarted: "Get Started Today",
+                contactUs: "Contact Our Team"
         onboarding: {
             hero: {
                 badge: "🚀 Enterprise AI Transformation",
@@ -435,6 +522,7 @@ const translations = {
             howItWorks: "Nasıl Çalışır",
             useCases: "Kullanım Alanları",
             about: "Hakkımızda",
+            successStories: "Başarı Hikayeleri",
             founder: "Kurucu",
             partners: "Ortaklar",
             signIn: "Giriş Yap",
@@ -602,6 +690,7 @@ const translations = {
             company: {
                 title: "Şirket",
                 about: "Hakkımızda",
+                successStories: "Başarı Hikayeleri",
                 founder: "Kurucu",
                 partners: "Ortaklar",
                 previousCustomers: "Önceki Müşteriler",
@@ -956,6 +1045,93 @@ const translations = {
                 hospitality: "🏨 Konaklama"
             },
             backToHome: "← Ana Sayfaya Dön"
+        },
+        successStories: {
+            hero: {
+                title: "Başarı Hikayeleri",
+                subtitle: "Önde gelen işletmelerin Delivery Pilot ile operasyonlarını nasıl dönüştürdüğünü keşfedin. Gerçek uygulamalar, ölçülebilir sonuçlar ve çeşitli sektörlerde kanıtlanmış yatırım getirisi."
+            },
+            insurance: {
+                name: "Insurance SBM",
+                solution: "🚀 Kubernetes Uygulaması ve Konteyner Orkestrasyonu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "Önde gelen bir finansal hizmetler sağlayıcısı olan Insurance SBM, yoğun dönemlerde ölçeklenemeyen eski monolitik uygulamalarla mücadele ediyordu. Altyapılarının bakımı maliyetliydi, dağıtımlar haftalarca sürüyor ve sistem güvenilirliği müşteri memnuniyetini etkileyen sürekli bir endişe kaynağıydı."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, Insurance SBM ile ortaklık kurarak kapsamlı Kubernetes tabanlı konteyner orkestrasyon platformu uyguladı. Kritik uygulamalarını mikroservis mimarisine taşıdık, otomatik CI/CD hattı kurduk ve sağlam izleme ve otomatik ölçeklendirme yetenekleri oluşturduk. Dönüşüm, ekiplerinin Kubernetes en iyi uygulamaları ve DevOps metodolojileri konusunda eğitimini de içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    deployment: "Daha Hızlı Dağıtım",
+                    cost: "Maliyet Azaltımı",
+                    uptime: "Sistem Çalışma Süresi",
+                    scaling: "İyileştirilmiş Ölçeklendirme"
+                },
+                testimonial: {
+                    text: "Delivery Pilot altyapımızı tamamen dönüştürdü. Kubernetes uygulaması ölçeklenebilirlik sorunlarımızı çözmekle kalmadı, operasyonel maliyetlerimizi de önemli ölçüde azalttı. Dağıtım süremiz haftalarca sürerken dakikalara indi ve ekibimiz artık modern bulut-yerel bir platformu yönetebilecek becerilere sahip.",
+                    author: "— Baş Teknoloji Sorumlusu, Insurance SBM"
+                }
+            },
+            goldman: {
+                name: "Goldman Sachs",
+                solution: "⚡ Azure Logic Apps Uygulaması ve Entegrasyon Platformu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "Goldman Sachs, birden fazla eski sistem arasında karmaşık iş akışlarını düzenlemeye ihtiyaç duyuyordu. Veri siloları verimli operasyonları engelliyordu, manuel süreçler hataya açıktı ve farklı departmanlar arasındaki entegrasyon uygulaması aylar alıyordu. Hassas finansal verileri işleyebilecek ölçeklenebilir, güvenli ve uyumlu bir çözüme ihtiyaçları vardı."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, Azure Logic Apps kullanarak kurumsal düzeyde entegrasyon platformu tasarladı ve uyguladı. Kritik iş akışlarını otomatikleştirdik, farklı sistemleri güvenli API'ler aracılığıyla bağladık ve organizasyon genelinde gerçek zamanlı veri senkronizasyonu sağladık. Çözüm, özel bağlayıcılar, kapsamlı hata yönetimi ve sıkı düzenleyici gereksinimleri karşılamak için detaylı denetim kaydı içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    automation: "Süreç Otomasyonu",
+                    errors: "Hata Azaltımı",
+                    integrations: "Sistem Entegrasyonları",
+                    time: "Zaman Tasarrufu"
+                },
+                testimonial: {
+                    text: "Delivery Pilot'ın Azure Logic Apps uygulaması operasyonlarımızda devrim yarattı. Artık tüm sistemlerimiz arasında sorunsuz entegrasyonumuz, önceden günler süren ve şimdi otomatikleştirilmiş iş akışlarımız ve süreçlerimize tam görünürlüğümüz var. Ekibin finansal hizmetler uyumluluğu konusundaki uzmanlığı paha biçilmezdi.",
+                    author: "— Teknoloji Operasyonları Başkan Yardımcısı, Goldman Sachs"
+                }
+            },
+            ibm: {
+                name: "IBM",
+                solution: "🔧 OpenShift Uygulaması ve Hibrit Bulut Platformu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "IBM'in kurumsal bölümü, şirket içi veri merkezleri ve birden fazla bulut sağlayıcısı arasında tutarlı çalışabilen sağlam bir hibrit bulut platformuna ihtiyaç duyuyordu. Gelişmiş güvenlik özellikleri, geliştirici dostu araçlar ve görev açısından kritik iş yükleri için operasyonel istikrarı korurken eski uygulamaları modernize etme yeteneği gerekliydi."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, IBM'in kurumsal konteyner platformu olarak Red Hat OpenShift'i uygulayarak birleşik bir hibrit bulut ortamı oluşturdu. Çoklu küme yönetimi kurduk, GitOps iş akışlarını uyguladık, kurumsal güvenlik politikalarını entegre ettik ve self-servis geliştirici portalı oluşturduk. Çözüm, kapsamlı eğitim programları ve birden fazla bölgede mükemmeliyet merkezleri kurulmasını içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    applications: "Taşınan Uygulamalar",
+                    velocity: "Geliştirici Hızı",
+                    cost: "Altyapı Maliyet Tasarrufu",
+                    availability: "Platform Kullanılabilirliği"
+                },
+                testimonial: {
+                    text: "Delivery Pilot'ın OpenShift uygulaması beklentilerimizi aştı. Artık iş yüklerini herhangi bir yerde çalıştırma esnekliği sağlayan ve tutarlı güvenlik ve operasyonel uygulamaları sürdüren dünya standartlarında bir hibrit bulut platformumuz var. Dönüşüm, yenilik döngümüzü hızlandırdı ve müşterilerimize her zamankinden daha hızlı değer sunmamızı sağladı.",
+                    author: "— Kıdemli Müdür, Bulut Platform Mühendisliği, IBM"
+                }
+            },
+            cta: {
+                title: "Başarı Hikayenizi Yazmaya Hazır mısınız?",
+                description: "Bu sektör liderlerine katılın ve işletmenizi Delivery Pilot ile dönüştürün. Benzer sonuçlara nasıl ulaşabileceğinizi birlikte görüşelim.",
+                getStarted: "Bugün Başlayın",
+                contactUs: "Ekibimizle İletişime Geçin"
+            }
         }
     }
 };
@@ -979,7 +1155,7 @@ function updateContent(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
-        if (translation) {
+        if (translation && typeof translation === 'string') {
             // Replace {year} placeholder with current year
             element.textContent = translation.replace('{year}', currentYear);
         }
