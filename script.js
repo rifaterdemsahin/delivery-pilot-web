@@ -328,57 +328,72 @@ const translations = {
             comparison: {
                 title: "⚡ Agile Alone vs. 🤖 Agile + AI",
                 subtitle: "How AI acts as the force multiplier for your existing Agile structures.",
-                aspectsTitle: "Aspect",
-                traditionalTitle: "⚡ Agile Transformation (Traditional)",
-                evolutionTitle: "🚀 Agile + AI Transformation (Evolution)",
-                teamStructure: {
-                    aspect: "Team Structure",
-                    traditional: "Often creates specialized, isolated silos (DevOps, QA, Design).",
-                    evolution: "Breaks down silos by enabling cross-functional understanding and contribution."
-                },
-                knowledgeAccess: {
-                    aspect: "Knowledge Access",
-                    traditional: "Expertise is concentrated in key specialists (the \"Bus Factor\").",
-                    evolution: "Democratizes access, giving everyone instant \"senior-level\" context and guidance."
-                },
-                workloadImpact: {
-                    aspect: "Workload Impact",
-                    traditional: "Constant sprint pressure creates a culture of \"always-on\" urgency.",
-                    evolution: "Reduces cognitive load by offloading repetitive tasks, making the pace sustainable."
-                },
-                contributionModel: {
-                    aspect: "Contribution Model",
-                    traditional: "Only technical specialists can influence technical decisions.",
-                    evolution: "Inclusive contribution; non-tech roles can prototype and build with AI assistance."
-                },
-                innovation: {
-                    aspect: "Innovation",
-                    traditional: "Limited to R&D teams or specific \"Innovation Sprints.\"",
-                    evolution: "Continuous innovation where any team member can rapidly prototype an idea."
+                aspects: {
+                    teamStructure: {
+                        aspect: "Team Structure",
+                        traditional: "Often creates specialized, isolated silos (DevOps, QA, Design).",
+                        evolution: "Breaks down silos by enabling cross-functional understanding and contribution."
+                    },
+                    knowledge: {
+                        aspect: "Knowledge Access",
+                        traditional: "Expertise is concentrated in key specialists (the \"Bus Factor\").",
+                        evolution: "Democratizes access, giving everyone instant \"senior-level\" context and guidance."
+                    },
+                    workload: {
+                        aspect: "Workload Impact",
+                        traditional: "Constant sprint pressure creates a culture of \"always-on\" urgency.",
+                        evolution: "Reduces cognitive load by offloading repetitive tasks, making the pace sustainable."
+                    },
+                    contribution: {
+                        aspect: "Contribution Model",
+                        traditional: "Only technical specialists can influence technical decisions.",
+                        evolution: "Inclusive contribution; non-tech roles can prototype and build with AI assistance."
+                    },
+                    innovation: {
+                        aspect: "Innovation",
+                        traditional: "Limited to R&D teams or specific \"Innovation Sprints.\"",
+                        evolution: "Continuous innovation where any team member can rapidly prototype an idea."
+                    }
                 }
             },
             friction: {
                 title: "🔴 The Friction Points of Agile",
                 subtitle: "Agile was designed for speed, but without AI, that speed often comes at a high human cost.",
-                silosTitle: "Organizational Silos",
-                silosDescription: "Agile teams often optimize for their own velocity, creating boundaries that hinder cross-team collaboration.",
-                burnoutTitle: "The Burnout Trap",
-                burnoutDescription: "The relentless cycle of planning, executing, and reviewing creates unsustainable pressure. Without support, \"working at a sustainable pace\" becomes a myth.",
-                dependencyTitle: "Specialist Dependency",
-                dependencyDescription: "When knowledge is locked inside the heads of a few experts, workflows stall the moment those specialists are unavailable.",
-                ceremonyTitle: "Ceremony Overload",
-                ceremonyDescription: "Standups, retrospectives, and refinement sessions consume vast amounts of time—time that isn't spent creating value."
+                silos: {
+                    title: "Organizational Silos",
+                    description: "Agile teams often optimize for their own velocity, creating boundaries that hinder cross-team collaboration."
+                },
+                burnout: {
+                    title: "The Burnout Trap",
+                    description: "The relentless cycle of planning, executing, and reviewing creates unsustainable pressure. Without support, \"working at a sustainable pace\" becomes a myth."
+                },
+                dependency: {
+                    title: "Specialist Dependency",
+                    description: "When knowledge is locked inside the heads of a few experts, workflows stall the moment those specialists are unavailable."
+                },
+                ceremony: {
+                    title: "Ceremony Overload",
+                    description: "Standups, retrospectives, and refinement sessions consume vast amounts of time—time that isn't spent creating value."
+                }
             },
             unlock: {
                 title: "🟢 How AI Unlocks the Agile Ideal",
-                universalTitle: "1. From Silos to Universal Contribution",
-                universalDescription: "AI acts as a universal translator and assistant. A marketing professional can now contribute to technical documentation; a developer can generate high-quality design assets. By lowering the barrier to entry for tasks, AI allows the entire organization to contribute to the product vision.",
-                sustainableTitle: "2. Restoring a Sustainable Pace",
-                sustainableDescription: "AI fundamentally changes the equation from \"work harder\" to \"work with augmentation.\" By handling the repetitive, draining tasks (like code generation, data cleaning, or meeting summarization), AI frees humans to focus on creative strategy, empathy, and complex problem-solving.",
-                democratizationTitle: "3. Knowledge Democratization",
-                democratizationDescription: "The gap between junior and senior team members narrows. AI provides on-demand mentorship and technical guidance, allowing teams to upskill in real-time and reducing the bottleneck on senior staff.",
-                innovationTitle: "4. Innovation Without Boundaries",
-                innovationDescription: "When technical complexity is handled by AI, innovation is no longer the domain of the few. The best ideas can be rapidly prototyped and tested by anyone in the organization, fostering a culture of true inclusivity."
+                universal: {
+                    title: "1. From Silos to Universal Contribution",
+                    description: "AI acts as a universal translator and assistant. A marketing professional can now contribute to technical documentation; a developer can generate high-quality design assets. By lowering the barrier to entry for tasks, AI allows the entire organization to contribute to the product vision."
+                },
+                sustainable: {
+                    title: "2. Restoring a Sustainable Pace",
+                    description: "AI fundamentally changes the equation from \"work harder\" to \"work with augmentation.\" By handling the repetitive, draining tasks (like code generation, data cleaning, or meeting summarization), AI frees humans to focus on creative strategy, empathy, and complex problem-solving."
+                },
+                democratization: {
+                    title: "3. Knowledge Democratization",
+                    description: "The gap between junior and senior team members narrows. AI provides on-demand mentorship and technical guidance, allowing teams to upskill in real-time and reducing the bottleneck on senior staff."
+                },
+                innovation: {
+                    title: "4. Innovation Without Boundaries",
+                    description: "When technical complexity is handled by AI, innovation is no longer the domain of the few. The best ideas can be rapidly prototyped and tested by anyone in the organization, fostering a culture of true inclusivity."
+                }
             },
             quote: {
                 text: "Agile taught us how to iterate faster. AI gives us the capacity to include everyone in that iteration. The future isn't about specialized teams moving fast in isolation—it's about empowered individuals collaborating without boundaries.",
@@ -387,12 +402,18 @@ const translations = {
             pathForward: {
                 title: "The Path Forward: The Era of the M-Shaped Employee",
                 description: "Agile championed the T-shaped skill set (deep expertise in one area, broad knowledge of others). AI transformation accelerates the evolution into M-shaped skills—multiple areas of deep competence achieved through AI-augmented learning.",
-                collaborationTitle: "Collaboration Over Complexity",
-                collaborationDescription: "When AI handles the technical \"how,\" teams focus on the \"why.\"",
-                humanCentricTitle: "Human-Centric Value",
-                humanCentricDescription: "Freed from administrative burdens, teams can focus on empathy, relationship building, and strategic thinking.",
-                sustainableGrowthTitle: "Sustainable Growth",
-                sustainableGrowthDescription: "Innovation becomes a natural byproduct of empowered workers, not a result of exhausting sprints."
+                collaboration: {
+                    title: "Collaboration Over Complexity",
+                    description: "When AI handles the technical \"how,\" teams focus on the \"why.\""
+                },
+                humanCentric: {
+                    title: "Human-Centric Value",
+                    description: "Freed from administrative burdens, teams can focus on empathy, relationship building, and strategic thinking."
+                },
+                sustainableGrowth: {
+                    title: "Sustainable Growth",
+                    description: "Innovation becomes a natural byproduct of empowered workers, not a result of exhausting sprints."
+                }
             },
             cta: {
                 title: "Ready for an Inclusive Transformation?",
