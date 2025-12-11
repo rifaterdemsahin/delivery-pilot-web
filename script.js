@@ -276,6 +276,8 @@ const translations = {
                 description: "Join these industry leaders and transform your enterprise with Delivery Pilot. Let's discuss how we can help you achieve similar results.",
                 getStarted: "Get Started Today",
                 contactUs: "Contact Our Team"
+            }
+        },
         onboarding: {
             hero: {
                 badge: "🚀 Enterprise AI Transformation",
