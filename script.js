@@ -101,6 +101,25 @@ const translations = {
                 description: "Implement AI-driven quality control systems that detect defects and ensure product excellence."
             }
         },
+        raise: {
+            title: "Solving the RAISE Challenge",
+            subtitle: "Rapid AI Increases Skills Expectations - The Critical Challenge Facing Modern Enterprises",
+            problem: {
+                title: "The Problem",
+                description: "AI technology is evolving at an unprecedented pace, creating a widening gap between required skills and current capabilities. Professionals struggle to keep up with rapidly changing tools, frameworks, and best practices, while enterprises face delivery gaps that threaten their competitive advantage."
+            },
+            solution: {
+                title: "Our Solution",
+                description: "Delivery Pilot bridges this gap through a systematic approach designed specifically for professionals and enterprises:",
+                assessment: "📊 Assessments: Identify your current AI maturity level and pinpoint specific delivery gaps",
+                workshops: "🎓 Workshops: Hands-on training on the Top 10 AI topics to rapidly upskill your team",
+                gitBased: "💻 Git-Based Product Outputs: Real project deliverables that demonstrate practical skills and close the execution gap"
+            },
+            cta: {
+                assess: "Identify Your Delivery Gaps",
+                learn: "Learn About Our Process"
+            }
+        },
         about: {
             title: "About Delivery Pilot",
             description1: "Delivery Pilot is a cutting-edge Platform as a Service (PaaS) designed specifically for enterprises embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've built a platform that simplifies every step of the process.",
@@ -270,6 +289,25 @@ const translations = {
             quality: {
                 title: "Kalite Güvencesi",
                 description: "Kusurları tespit eden ve ürün mükemmelliğini sağlayan yapay zeka odaklı kalite kontrol sistemleri uygulayın."
+            }
+        },
+        raise: {
+            title: "RAISE Zorluğunu Çözmek",
+            subtitle: "Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor - Modern İşletmelerin Karşılaştığı Kritik Zorluk",
+            problem: {
+                title: "Sorun",
+                description: "Yapay zeka teknolojisi benzeri görülmemiş bir hızla gelişiyor ve gerekli beceriler ile mevcut yetenekler arasında genişleyen bir boşluk yaratıyor. Profesyoneller hızla değişen araçlara, çerçevelere ve en iyi uygulamalara ayak uydurmakta zorlanırken, işletmeler rekabet avantajlarını tehdit eden teslimat boşluklarıyla karşı karşıya kalıyor."
+            },
+            solution: {
+                title: "Çözümümüz",
+                description: "Delivery Pilot, profesyoneller ve işletmeler için özel olarak tasarlanmış sistematik bir yaklaşımla bu boşluğu kapatır:",
+                assessment: "📊 Değerlendirmeler: Mevcut yapay zeka olgunluk seviyenizi belirleyin ve spesifik teslimat boşluklarını tespit edin",
+                workshops: "🎓 Atölyeler: Ekibinizi hızla geliştirmek için En İyi 10 Yapay Zeka konusunda uygulamalı eğitim",
+                gitBased: "💻 Git Tabanlı Ürün Çıktıları: Pratik becerileri gösteren ve yürütme boşluğunu kapatan gerçek proje teslimatları"
+            },
+            cta: {
+                assess: "Teslimat Boşluklarınızı Belirleyin",
+                learn: "Sürecimiz Hakkında Bilgi Edinin"
             }
         },
         about: {

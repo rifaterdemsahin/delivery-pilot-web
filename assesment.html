@@ -44,6 +44,8 @@
         title: "AI Tools Workshop Maturity Assessment",
         subtitle: "48 questions • 45 minutes • Personalized learning roadmap",
         tagline: "⚡ Know your AI readiness • Team up effectively • Get your custom roadmap",
+        raiseTitle: "Solving RAISE: Rapid AI Increases Skills Expectations",
+        raiseDescription: "This assessment helps identify your delivery gaps and creates a personalized roadmap to bridge the skills gap between where you are and where AI demands you to be.",
         prereqTitle: "Workshop Prerequisites",
         prereqItems: [
           "✅ Stable internet connection (check speed & latency)",
@@ -92,6 +94,8 @@
         title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
         subtitle: "48 soru • 45 dakika • Kişiselleştirilmiş öğrenme yol haritası",
         tagline: "⚡ Yapay zeka hazırlığınızı öğrenin • Etkili ekip çalışması • Özel yol haritanızı alın",
+        raiseTitle: "RAISE Çözümü: Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor",
+        raiseDescription: "Bu değerlendirme, teslimat boşluklarınızı belirlemenize yardımcı olur ve bulunduğunuz yer ile yapay zekanın sizi olmanızı istediği yer arasındaki beceri boşluğunu kapatmak için kişiselleştirilmiş bir yol haritası oluşturur.",
         prereqTitle: "Atölye Ön Koşulları",
         prereqItems: [
           "✅ Kararlı internet bağlantısı (hız ve gecikmeyi kontrol edin)",
@@ -469,6 +473,15 @@
                 <h1 className="text-3xl font-bold mb-2">{t.title}</h1>
                 <p className="text-gray-300 text-sm">{t.subtitle}</p>
                 <p className="text-yellow-300 text-xs mt-2">{t.tagline}</p>
+              </div>
+
+              <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg p-4 mb-4">
+                <h2 className="font-bold text-purple-200 mb-2 flex items-center gap-2">
+                  <span>⚡</span> {t.raiseTitle}
+                </h2>
+                <p className="text-sm text-purple-100">
+                  {t.raiseDescription}
+                </p>
               </div>
 
               <div className="bg-blue-500/20 border border-blue-400/30 rounded-lg p-4 mb-6">
