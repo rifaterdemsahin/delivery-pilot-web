@@ -19,39 +19,39 @@ const navigationConfig = {
     logoText: 'Delivery Pilot',
     logoLink: 'index.html',
     menuItems: [
-        { href: 'index.html#home', textKey: 'nav.home', text: 'Home' },
+        { href: 'index.html#home', textKey: 'nav.home', text: '🏠 Home' },
         { 
-            text: 'Platform', 
+            text: '💻 Platform', 
             textKey: 'nav.platform',
             submenu: [
-                { href: 'index.html#features', textKey: 'nav.features', text: 'Features' },
-                { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: 'How It Works' },
-                { href: 'index.html#use-cases', textKey: 'nav.useCases', text: 'Use Cases' }
+                { href: 'index.html#features', textKey: 'nav.features', text: '✨ Features' },
+                { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: '⚙️ How It Works' },
+                { href: 'index.html#use-cases', textKey: 'nav.useCases', text: '💼 Use Cases' }
             ]
         },
         { 
-            text: 'Services', 
+            text: '🛠️ Services', 
             textKey: 'nav.services',
             submenu: [
-                { href: 'onboarding.html', textKey: 'nav.onboarding', text: 'Onboarding' },
-                { href: 'agile-transformation.html', text: 'Agile Transformation' }
+                { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
+                { href: 'agile-transformation.html', text: '📈 Agile Transformation' }
             ]
         },
-        { href: 'pricing.html', text: 'Pricing' },
+        { href: 'pricing.html', text: '💰 Pricing' },
         { 
-            text: 'Company', 
+            text: '🏢 Company', 
             textKey: 'nav.company',
             submenu: [
-                { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
-                { href: 'faq.html', textKey: 'nav.faq', text: 'FAQ' },
-                { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
-                { href: 'transformations.html', textKey: 'nav.transformations', text: 'Transformations' },
-                { href: 'partners.html', textKey: 'nav.partners', text: 'Partners' }
+                { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
+                { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
+                { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
+                { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
+                { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' }
             ]
         },
-        { href: 'contact.html', textKey: 'nav.contact', text: 'Contact' },
-        { href: 'signin.html', textKey: 'nav.signIn', text: 'Sign In' },
-        { href: 'https://deliverypilot.net/assesment.html', textKey: 'nav.getStarted', text: 'Get Started', class: 'cta-button' }
+        { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
+        { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
+        { href: 'https://deliverypilot.net/assesment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
     ]
 };
 
