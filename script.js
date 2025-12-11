@@ -9,6 +9,7 @@ const translations = {
             contact: "📧 Contact",
             faq: "❓ FAQ",
             transformations: "🔄 Transformations",
+            successStories: "⭐ Success Stories",
             onboarding: "🚀 Onboarding",
             features: "✨ Features",
             howItWorks: "⚙️ How It Works",
@@ -128,8 +129,8 @@ const translations = {
         },
         about: {
             title: "About Delivery Pilot",
-            description1: "Delivery Pilot is a cutting-edge Platform as a Service (PaaS) designed specifically for enterprises embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've built a platform that simplifies every step of the process.",
-            description2: "Our mission is to democratize AI for enterprises of all sizes, providing the tools, infrastructure, and expertise needed to successfully implement AI solutions that drive real business value.",
+            description1: "Delivery Pilot is a state-of-the-art Platform-as-a-Service (PaaS) solution specifically designed for businesses embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've created a platform that simplifies every step of the process.",
+            description2: "Our goal is to make powerful AI tools, infrastructure, and expertise accessible to everyone, helping businesses of all sizes rapidly implement AI solutions that create real business value.",
             stats: {
                 customers: "Enterprise Customers",
                 github: "in GitHub with +200 repos",
@@ -169,6 +170,57 @@ const translations = {
             },
             backToHome: "← Back to Home"
         },
+        pricing: {
+            hero: {
+                title: "Pricing Plans",
+                subtitle: "Choose the perfect plan for your AI transformation journey"
+            },
+            prosumer: {
+                title: "Prosumer",
+                subtitle: "1-on-1 Assessment For AI Workshop Readiness",
+                priceText: "per session",
+                feature1: "Individual AI maturity assessment",
+                feature2: "Personalized skills gap analysis",
+                feature3: "Custom AI learning roadmap",
+                feature4: "Career transformation strategy",
+                feature5: "Actionable next steps",
+                feature6: "60-minute 1-on-1 session",
+                feature7: "Written assessment report",
+                feature8: "Follow-up recommendations",
+                cta: "📅 Book Assessment"
+            },
+            workshops: {
+                badge: "Most Popular",
+                title: "Workshops",
+                subtitle: "Remote Sessions",
+                priceText: "per consultant/day",
+                feature1: "Global live top 10 AI training sessions",
+                feature2: "Face-to-face interaction",
+                feature3: "Enterprise-wide implementation",
+                feature4: "Multiple technology areas",
+                feature5: "Post-implementation support",
+                feature6: "Hotel & travel billed separately",
+                cta: "📅 Schedule Interview"
+            },
+            enterprise: {
+                title: "Enterprise",
+                subtitle: "Team Enterprise-wise AI Adaptation Assessment",
+                price: "Request Quote",
+                priceText: "custom pricing",
+                feature1: "Enterprise data source integration",
+                feature2: "Team assessment included",
+                feature3: "Production-ready solution from workshops",
+                feature4: "10-workshop roadmap: Complete AI-enabled delivery transformation",
+                feature5: "Journey from vibe programming to agentic framework implementation",
+                feature6: "Git repositories ready and running on GitHub Codespaces",
+                feature7: "Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation",
+                feature8: "Complete documentation",
+                feature9: "Priority support",
+                feature10: "Integration guidance",
+                feature11: "Direct access to expert",
+                cta: "📅 Schedule Interview"
+            }
+        },
         footer: {
             tagline: "Enterprise AI Transformation Platform",
             platform: {
@@ -181,6 +233,7 @@ const translations = {
             company: {
                 title: "Company",
                 about: "About",
+                successStories: "Success Stories",
                 founder: "Founder",
                 partners: "Partners",
                 previousCustomers: "Previous Customers",
@@ -194,6 +247,330 @@ const translations = {
                 support: "Support"
             },
             copyright: "© {year} Delivery Pilot. All rights reserved."
+        },
+        successStories: {
+            hero: {
+                title: "Success Stories",
+                subtitle: "Discover how leading enterprises transformed their operations with Delivery Pilot. Real implementations, measurable results, and proven ROI across diverse industries."
+            },
+            insurance: {
+                name: "Insurance SBM",
+                solution: "🚀 Kubernetes Implementation & Container Orchestration",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "Insurance SBM, a leading financial services provider, was struggling with legacy monolithic applications that couldn't scale during peak periods. Their infrastructure was costly to maintain, deployments took weeks, and system reliability was a constant concern affecting customer satisfaction."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot partnered with Insurance SBM to implement a comprehensive Kubernetes-based container orchestration platform. We migrated their critical applications to microservices architecture, implemented automated CI/CD pipelines, and established robust monitoring and auto-scaling capabilities. The transformation included training their teams on Kubernetes best practices and DevOps methodologies."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    deployment: "Faster Deployment",
+                    cost: "Cost Reduction",
+                    uptime: "System Uptime",
+                    scaling: "Improved Scaling"
+                },
+                testimonial: {
+                    text: "Delivery Pilot transformed our entire infrastructure. The Kubernetes implementation not only solved our scalability issues but also dramatically reduced our operational costs. Our deployment time went from weeks to minutes, and our team now has the skills to manage a modern cloud-native platform.",
+                    author: "— Chief Technology Officer, Insurance SBM"
+                }
+            },
+            goldman: {
+                name: "Goldman Sachs",
+                solution: "⚡ Azure Logic Apps Implementation & Integration Platform",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "Goldman Sachs needed to streamline complex business workflows across multiple legacy systems. Data silos were preventing efficient operations, manual processes were error-prone, and integration between different departments took months to implement. They required a scalable, secure, and compliant solution that could handle sensitive financial data."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot designed and implemented an enterprise-grade integration platform using Azure Logic Apps. We automated critical workflows, connected disparate systems through secure APIs, and established real-time data synchronization across the organization. The solution included custom connectors, comprehensive error handling, and detailed audit logging to meet stringent regulatory requirements."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    automation: "Process Automation",
+                    errors: "Error Reduction",
+                    integrations: "System Integrations",
+                    time: "Time Savings"
+                },
+                testimonial: {
+                    text: "The Azure Logic Apps implementation by Delivery Pilot revolutionized our operations. We now have seamless integration across all our systems, automated workflows that previously took days to complete, and complete visibility into our processes. The team's expertise in financial services compliance was invaluable.",
+                    author: "— VP of Technology Operations, Goldman Sachs"
+                }
+            },
+            ibm: {
+                name: "IBM",
+                solution: "🔧 OpenShift Implementation & Hybrid Cloud Platform",
+                challenge: {
+                    title: "📋 The Challenge",
+                    description: "IBM's enterprise division needed a robust hybrid cloud platform that could run consistently across on-premises data centers and multiple cloud providers. They required advanced security features, developer-friendly tools, and the ability to modernize legacy applications while maintaining operational stability for mission-critical workloads."
+                },
+                solution: {
+                    title: "💡 The Solution",
+                    description: "Delivery Pilot implemented Red Hat OpenShift as IBM's enterprise container platform, creating a unified hybrid cloud environment. We established multi-cluster management, implemented GitOps workflows, integrated enterprise security policies, and built a self-service developer portal. The solution included comprehensive training programs and established centers of excellence across multiple regions."
+                },
+                results: {
+                    title: "📊 The Results"
+                },
+                metrics: {
+                    applications: "Applications Migrated",
+                    velocity: "Developer Velocity",
+                    cost: "Infrastructure Cost Savings",
+                    availability: "Platform Availability"
+                },
+                testimonial: {
+                    text: "Delivery Pilot's OpenShift implementation exceeded our expectations. We now have a world-class hybrid cloud platform that gives us the flexibility to run workloads anywhere while maintaining consistent security and operational practices. The transformation has accelerated our innovation cycle and enabled us to deliver value to our customers faster than ever.",
+                    author: "— Senior Director, Cloud Platform Engineering, IBM"
+                }
+            },
+            cta: {
+                title: "Ready to Write Your Success Story?",
+                description: "Join these industry leaders and transform your enterprise with Delivery Pilot. Let's discuss how we can help you achieve similar results.",
+                getStarted: "Get Started Today",
+                contactUs: "Contact Our Team"
+            }
+        },
+        onboarding: {
+            hero: {
+                badge: "🚀 Enterprise AI Transformation",
+                title: "Delivery Pilot 🚀",
+                subtitle: "Solving RAISE: Rapid AI Increases Skills Expectations 📈",
+                description: "Welcome to the new era of enterprise transformation! ✨ We bridge the gap between traditional engineering and the new world of Vibe Programming. Join the revolution where developers and non-developers unite in a continuous learning cycle.",
+                process: "Assessment 🕵️‍♂️ → Training 🎓 → Implementation 🚀",
+                startAssessment: "🚀 Start Your Assessment",
+                exploreVibe: "✨ Explore the Vibe",
+                author: "Delivery Pilot<br>by Rifat Erdem Sahin"
+            },
+            transformation: {
+                title: "The 3 Stages of Transformation",
+                subtitle: "A continuous cycle of learning and implementation for the AI era.",
+                stage1: {
+                    icon: "🔍",
+                    number: "1. Assessment",
+                    title: "Quarterly 1-1 Private Meetings.",
+                    description: "Confidential assessments tailored to your role.",
+                    feature1: "🔒 Private & Secure: 1-1 sessions are strictly confidential.",
+                    feature2: "💻 Developers: Share your Git repositories (public or private).",
+                    feature3: "✍️ Non-Developers: Share your prompts and workflows.",
+                    feature4: "🎯 Identify Delivery Gaps: Pinpoint specific skill gaps and delivery bottlenecks.",
+                    feature5: "📄 Outcome: Everyone receives a unique maturity assessment report containing a tailored training roadmap for the AI courses."
+                },
+                stage2: {
+                    icon: "🎓",
+                    number: "2. Workshops",
+                    title: "One-to-Many hands-on implementation on top 10 AI topics.",
+                    description: "After assessment comes the knowledge download. We cover the Top 10 AI Courses in a lecture style to get everyone on the same wavelength.",
+                    curriculumTitle: "📚 Curriculum Includes:",
+                    curriculum1: "✨ Vibe Programming",
+                    curriculum2: "🤖 RAF & Xazi Frameworks",
+                    curriculum3: "🧠 Model Training & Security",
+                    curriculum4: "🔄 Hybrid AI Modeling"
+                },
+                stage3: {
+                    icon: "⚙️",
+                    number: "3. Express",
+                    title: "Merging Worlds with Implementation.",
+                    description: "This is where the magic happens. Developers and non-developers team up to bridge the gap between the deterministic and non-deterministic worlds.",
+                    feature1: "🎨 Creativity at the Core: Essential for fulfilling demanding requirements.",
+                    feature2: "💻 Git-Based Product Outputs: Real deliverables demonstrating practical skills and closing execution gaps.",
+                    feature3: "🚀 Evolution: Stakeholders evolve from I-shaped to M-shaped and X-shaped skills.",
+                    feature4: "🤝 Enterprise-Wide Collaboration: Solving RAISE together through continuous learning."
+                }
+            },
+            framework: {
+                title: "Where Vibe Programming meets Agentic Frameworks 🤝",
+                subtitle: "The detailed methodology behind our implementation strategy.",
+                real: {
+                    icon: "🌍",
+                    title: "Real - The Job That Starts with Objective and Key Results",
+                    description: "Sets goals and objectives, aligning tasks with measurable results.",
+                    action: "Action: Aim > Goals"
+                },
+                journey: {
+                    icon: "✈️",
+                    title: "Journey - Visual Story Explained with Steps",
+                    description: "A self-learning guide from beginner to skilled in visual storytelling.",
+                    action: "Action: Feel > Experience"
+                },
+                environments: {
+                    icon: "🌳",
+                    title: "Environments - The Roadmap and Use Cases",
+                    description: "A roadmap with learning modules and real-world use cases to apply new skills.",
+                    action: "Action: Create > Runtimes"
+                },
+                imaginary: {
+                    icon: "🌌",
+                    title: "Imaginary - What You Learn on the Road",
+                    description: "Tracks concepts, theories, and skills acquired, promoting continuous growth.",
+                    action: "Action: Capture > Screenshots"
+                },
+                formulas: {
+                    icon: "📐",
+                    title: "Formulas - The Guides That Are Mentioned",
+                    description: "Essential guides and formulas for understanding and solving project challenges.",
+                    action: "Action: GPT > Learn from it"
+                },
+                symbols: {
+                    icon: "🔣",
+                    title: "Symbols - Code That Is Implemented",
+                    description: "Includes code snippets and examples to demonstrate each concept practically.",
+                    action: "Action: Execute > Code"
+                },
+                semblance: {
+                    icon: "🌀",
+                    title: "Semblance - Errors Found in the Process",
+                    description: "Documents mistakes and solutions, making errors valuable learning opportunities.",
+                    action: "Action: Fix > Errors"
+                }
+            },
+            courses: {
+                title: "Top 10 AI Courses 🚀",
+                subtitle: "Master the tools of the trade with our curated curriculum."
+            },
+            pricingCta: {
+                title: "Ready to Get Started?",
+                subtitle: "Explore our flexible pricing plans designed to meet your needs",
+                viewPricing: "💰 View Pricing Plans",
+                startAssessment: "🚀 Start Free Assessment"
+            },
+            cta: {
+                title: "Ready to Build Always Learning Organizations?",
+                description: "Transform your enterprise into an always learning organization! Let Delivery Pilot help you meet the vibe coders from juniors and the agentic frameworks from seniors. Stop letting skills gaps hold you back - identify your gaps and initiate self-learning in yourself and your teams today.",
+                scheduleButton: "📅 Schedule Interview",
+                linkedinButton: "Connect on LinkedIn"
+            },
+            resources: {
+                title: "📄 Download Resources",
+                subtitle: "Get the Delivery Pilot documentation in PDF format",
+                downloadEnglish: "📥 Download PDF (English)",
+                downloadTurkish: "📥 Download PDF (Turkish)"
+            },
+            contact: {
+                title: "Get Started with Delivery Pilot",
+                subtitle: "Ready to transform your enterprise? Get in touch with our team to start your AI transformation journey.",
+                namePlaceholder: "Your Name",
+                emailPlaceholder: "Your Email",
+                companyPlaceholder: "Company Name",
+                messagePlaceholder: "Tell us about your AI transformation goals",
+                submitButton: "Request Consultation"
+            }
+        },
+        agile: {
+            hero: {
+                title: "From Burnout to Breakthrough: How AI Completes the Agile Promise",
+                subtitle: "Why AI transformation is the evolution Agile has been waiting for."
+            },
+            evolution: {
+                title: "The Evolution of Digital Transformation",
+                description1: "Agile transformation revolutionized the way we work, introducing frameworks for faster delivery and adaptability. However, as organizations scaled, Agile encountered friction: unintentionally reinforcing organizational silos and driving high-performance teams toward burnout.",
+                quote: "AI Transformation does not replace Agile; it fixes it.",
+                description2: "Where Agile provided the structure for speed, AI provides the capacity for sustainability. Instead of specialized teams sprinting in isolation, AI democratizes capabilities, allowing the Agile framework to finally live up to its promise of inclusive, sustainable innovation."
+            },
+            comparison: {
+                title: "⚡ Agile Alone vs. 🤖 Agile + AI",
+                subtitle: "How AI acts as the force multiplier for your existing Agile structures.",
+                aspects: {
+                    teamStructure: {
+                        aspect: "Team Structure",
+                        traditional: "Often creates specialized, isolated silos (DevOps, QA, Design).",
+                        evolution: "Breaks down silos by enabling cross-functional understanding and contribution."
+                    },
+                    knowledge: {
+                        aspect: "Knowledge Access",
+                        traditional: "Expertise is concentrated in key specialists (the \"Bus Factor\").",
+                        evolution: "Democratizes access, giving everyone instant \"senior-level\" context and guidance."
+                    },
+                    workload: {
+                        aspect: "Workload Impact",
+                        traditional: "Constant sprint pressure creates a culture of \"always-on\" urgency.",
+                        evolution: "Reduces cognitive load by offloading repetitive tasks, making the pace sustainable."
+                    },
+                    contribution: {
+                        aspect: "Contribution Model",
+                        traditional: "Only technical specialists can influence technical decisions.",
+                        evolution: "Inclusive contribution; non-tech roles can prototype and build with AI assistance."
+                    },
+                    innovation: {
+                        aspect: "Innovation",
+                        traditional: "Limited to R&D teams or specific \"Innovation Sprints.\"",
+                        evolution: "Continuous innovation where any team member can rapidly prototype an idea."
+                    }
+                }
+            },
+            friction: {
+                title: "🔴 The Friction Points of Agile",
+                subtitle: "Agile was designed for speed, but without AI, that speed often comes at a high human cost.",
+                silos: {
+                    title: "Organizational Silos",
+                    description: "Agile teams often optimize for their own velocity, creating boundaries that hinder cross-team collaboration."
+                },
+                burnout: {
+                    title: "The Burnout Trap",
+                    description: "The relentless cycle of planning, executing, and reviewing creates unsustainable pressure. Without support, \"working at a sustainable pace\" becomes a myth."
+                },
+                dependency: {
+                    title: "Specialist Dependency",
+                    description: "When knowledge is locked inside the heads of a few experts, workflows stall the moment those specialists are unavailable."
+                },
+                ceremony: {
+                    title: "Ceremony Overload",
+                    description: "Standups, retrospectives, and refinement sessions consume vast amounts of time—time that isn't spent creating value."
+                }
+            },
+            unlock: {
+                title: "🟢 How AI Unlocks the Agile Ideal",
+                universal: {
+                    title: "1. From Silos to Universal Contribution",
+                    description: "AI acts as a universal translator and assistant. A marketing professional can now contribute to technical documentation; a developer can generate high-quality design assets. By lowering the barrier to entry for tasks, AI allows the entire organization to contribute to the product vision."
+                },
+                sustainable: {
+                    title: "2. Restoring a Sustainable Pace",
+                    description: "AI fundamentally changes the equation from \"work harder\" to \"work with augmentation.\" By handling the repetitive, draining tasks (like code generation, data cleaning, or meeting summarization), AI frees humans to focus on creative strategy, empathy, and complex problem-solving."
+                },
+                democratization: {
+                    title: "3. Knowledge Democratization",
+                    description: "The gap between junior and senior team members narrows. AI provides on-demand mentorship and technical guidance, allowing teams to upskill in real-time and reducing the bottleneck on senior staff."
+                },
+                innovation: {
+                    title: "4. Innovation Without Boundaries",
+                    description: "When technical complexity is handled by AI, innovation is no longer the domain of the few. The best ideas can be rapidly prototyped and tested by anyone in the organization, fostering a culture of true inclusivity."
+                }
+            },
+            quote: {
+                text: "Agile taught us how to iterate faster. AI gives us the capacity to include everyone in that iteration. The future isn't about specialized teams moving fast in isolation—it's about empowered individuals collaborating without boundaries.",
+                author: "— Rifat Erdem Sahin"
+            },
+            pathForward: {
+                title: "The Path Forward: The Era of the M-Shaped Employee",
+                description: "Agile championed the T-shaped skill set (deep expertise in one area, broad knowledge of others). AI transformation accelerates the evolution into M-shaped skills—multiple areas of deep competence achieved through AI-augmented learning.",
+                collaboration: {
+                    title: "Collaboration Over Complexity",
+                    description: "When AI handles the technical \"how,\" teams focus on the \"why.\""
+                },
+                humanCentric: {
+                    title: "Human-Centric Value",
+                    description: "Freed from administrative burdens, teams can focus on empathy, relationship building, and strategic thinking."
+                },
+                sustainableGrowth: {
+                    title: "Sustainable Growth",
+                    description: "Innovation becomes a natural byproduct of empowered workers, not a result of exhausting sprints."
+                }
+            },
+            cta: {
+                title: "Ready for an Inclusive Transformation?",
+                description: "Move beyond the sprint. Empower everyone in your organization with the capabilities to build, create, and innovate.",
+                pilotTitle: "🚀 Delivery Pilot",
+                pilotDescription: "Start your AI transformation journey with a focused pilot.",
+                pilotButton: "Get Started",
+                maturityTitle: "🏢 Enterprise AI Maturity",
+                maturityDescription: "Assess your organization's readiness for AI augmentation.",
+                maturityButton: "Learn More"
+            }
         }
     },
     tr: {
@@ -205,6 +582,7 @@ const translations = {
             contact: "📧 İletişim",
             faq: "❓ SSS",
             transformations: "🔄 Dönüşümler",
+            successStories: "⭐ Başarı Hikayeleri",
             onboarding: "🚀 Katılım",
             features: "✨ Özellikler",
             howItWorks: "⚙️ Nasıl Çalışır",
@@ -324,8 +702,8 @@ const translations = {
         },
         about: {
             title: "Delivery Pilot Hakkında",
-            description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Hizmet Olarak Platform (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
-            description2: "Misyonumuz, gerçek iş değeri sağlayan yapay zeka çözümlerini başarıyla uygulamak için gereken araçları, altyapıyı ve uzmanlığı sağlayarak her büyüklükteki işletme için yapay zekayı demokratikleştirmektir.",
+            description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Platform-as-a-Service (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
+            description2: "Amacımız; güçlü yapay zeka araçlarını, altyapıyı ve uzmanlığı herkes için erişilebilir hale getirerek her ölçekteki işletmenin gerçek iş değeri yaratan yapay zeka çözümlerini hızla hayata geçirmesine yardımcı olmaktır.",
             stats: {
                 customers: "Kurumsal Müşteri",
                 github: "GitHub'da +200 repo",
@@ -365,6 +743,57 @@ const translations = {
             },
             backToHome: "← Ana Sayfaya Dön"
         },
+        pricing: {
+            hero: {
+                title: "Fiyatlandırma Planları",
+                subtitle: "Yapay zeka dönüşüm yolculuğunuz için mükemmel planı seçin"
+            },
+            prosumer: {
+                title: "Prosumer",
+                subtitle: "Yapay Zeka Atölyesi Hazırlığı için Bire Bir Değerlendirme",
+                priceText: "oturum başına",
+                feature1: "Bireysel yapay zeka olgunluk değerlendirmesi",
+                feature2: "Kişiselleştirilmiş beceri boşluğu analizi",
+                feature3: "Özel yapay zeka öğrenim yol haritası",
+                feature4: "Kariyer dönüşüm stratejisi",
+                feature5: "Uygulanabilir sonraki adımlar",
+                feature6: "60 dakikalık bire bir oturum",
+                feature7: "Yazılı değerlendirme raporu",
+                feature8: "Takip tavsiyeleri",
+                cta: "📅 Değerlendirme Rezervasyonu Yap"
+            },
+            workshops: {
+                badge: "En Popüler",
+                title: "Atölyeler",
+                subtitle: "Uzaktan Oturumlar",
+                priceText: "danışman/gün başına",
+                feature1: "Canlı en iyi 10 yapay zeka eğitim oturumu",
+                feature2: "Yüz yüze etkileşim",
+                feature3: "Kuruluş çapında uygulama",
+                feature4: "Çoklu teknoloji alanları",
+                feature5: "Uygulama sonrası destek",
+                feature6: "Otel ve seyahat ayrı faturalandırılır",
+                cta: "📅 Görüşme Planla"
+            },
+            enterprise: {
+                title: "Kurumsal",
+                subtitle: "Ekip Bazında Kurumsal Yapay Zeka Uyarlama Değerlendirmesi",
+                price: "Teklif İsteyin",
+                priceText: "özel fiyatlandırma",
+                feature1: "Kurumsal veri kaynağı entegrasyonu",
+                feature2: "Ekip değerlendirmesi dahil",
+                feature3: "Atölyelerden üretime hazır çözüm",
+                feature4: "10 atölye yol haritası: Yapay zeka destekli tam teslimat dönüşümü",
+                feature5: "Vibe programlamadan agentic framework uygulamasına yolculuk",
+                feature6: "GitHub Codespaces'te hazır ve çalışır durumda git repoları",
+                feature7: "Kurumsal yol haritası: Değerlendirme → Teslimat → Beceri Boşluğu Belirleme → Yapay Zeka Dönüşümü",
+                feature8: "Eksiksiz dokümantasyon",
+                feature9: "Öncelikli destek",
+                feature10: "Entegrasyon rehberliği",
+                feature11: "Uzmana doğrudan erişim",
+                cta: "📅 Görüşme Planla"
+            }
+        },
         footer: {
             tagline: "Kurumsal Yapay Zeka Dönüşüm Platformu",
             platform: {
@@ -377,6 +806,7 @@ const translations = {
             company: {
                 title: "Şirket",
                 about: "Hakkımızda",
+                successStories: "Başarı Hikayeleri",
                 founder: "Kurucu",
                 partners: "Ortaklar",
                 previousCustomers: "Önceki Müşteriler",
@@ -413,7 +843,8 @@ const translations = {
                     feature1: "🔒 Özel ve Güvenli: 1-1 oturumlar kesinlikle gizlidir.",
                     feature2: "💻 Geliştiriciler: Git depolarınızı paylaşın (genel veya özel).",
                     feature3: "✍️ Geliştirici Olmayanlar: Promptlarınızı ve iş akışlarınızı paylaşın.",
-                    feature4: "📄 Sonuç: Herkes, yapay zeka kursları için özel bir eğitim yol haritası içeren benzersiz bir olgunluk değerlendirme raporu alır."
+                    feature4: "🎯 Teslimat Boşluklarını Belirleyin: Spesifik beceri boşluklarını ve teslimat darboğazlarını tespit edin.",
+                    feature5: "📄 Sonuç: Herkes, yapay zeka kursları için özel bir eğitim yol haritası içeren benzersiz bir olgunluk değerlendirme raporu alır."
                 },
                 stage2: {
                     icon: "🎓",
@@ -432,8 +863,9 @@ const translations = {
                     title: "Uygulama ile Dünyaları Birleştirme.",
                     description: "Sihir burada gerçekleşir. Geliştiriciler ve geliştirici olmayanlar, deterministik ve deterministik olmayan dünyalar arasındaki boşluğu kapatmak için bir araya gelir.",
                     feature1: "🎨 Özünde Yaratıcılık: Zorlu gereksinimleri yerine getirmek için gereklidir.",
-                    feature2: "🚀 Evrim: Paydaşlar I-şekilli becerilerden M-şekilli ve X-şekilli becerilere evrilir.",
-                    feature3: "🤝 Kurumsal Çapta İşbirliği: RAISE'yi birlikte çözmek."
+                    feature2: "💻 Git Tabanlı Ürün Çıktıları: Pratik becerileri gösteren ve yürütme boşluğunu kapatan gerçek teslimatlar.",
+                    feature3: "🚀 Evrim: Paydaşlar I-şekilli becerilerden M-şekilli ve X-şekilli becerilere evrilir.",
+                    feature4: "🤝 Kurumsal Çapta İşbirliği: RAISE'yi birlikte çözmek."
                 }
             },
             framework: {
@@ -485,6 +917,12 @@ const translations = {
             courses: {
                 title: "En İyi 10 Yapay Zeka Kursu 🚀",
                 subtitle: "Küratörlüğünü yaptığımız müfredatla mesleğin araçlarında ustalaşın."
+            },
+            pricingCta: {
+                title: "Başlamaya Hazır mısınız?",
+                subtitle: "İhtiyaçlarınıza göre tasarlanmış esnek fiyatlandırma planlarımızı keşfedin",
+                viewPricing: "💰 Fiyatlandırma Planlarını Görüntüle",
+                startAssessment: "🚀 Ücretsiz Değerlendirme Başlat"
             },
             supportPlans: {
                 title: "Destek Planları",
@@ -723,6 +1161,93 @@ const translations = {
                 hospitality: "🏨 Konaklama"
             },
             backToHome: "← Ana Sayfaya Dön"
+        },
+        successStories: {
+            hero: {
+                title: "Başarı Hikayeleri",
+                subtitle: "Önde gelen işletmelerin Delivery Pilot ile operasyonlarını nasıl dönüştürdüğünü keşfedin. Gerçek uygulamalar, ölçülebilir sonuçlar ve çeşitli sektörlerde kanıtlanmış yatırım getirisi."
+            },
+            insurance: {
+                name: "Insurance SBM",
+                solution: "🚀 Kubernetes Uygulaması ve Konteyner Orkestrasyonu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "Önde gelen bir finansal hizmetler sağlayıcısı olan Insurance SBM, yoğun dönemlerde ölçeklenemeyen eski monolitik uygulamalarla mücadele ediyordu. Altyapılarının bakımı maliyetliydi, dağıtımlar haftalarca sürüyor ve sistem güvenilirliği müşteri memnuniyetini etkileyen sürekli bir endişe kaynağıydı."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, Insurance SBM ile ortaklık kurarak kapsamlı Kubernetes tabanlı konteyner orkestrasyon platformu uyguladı. Kritik uygulamalarını mikroservis mimarisine taşıdık, otomatik CI/CD hattı kurduk ve sağlam izleme ve otomatik ölçeklendirme yetenekleri oluşturduk. Dönüşüm, ekiplerinin Kubernetes en iyi uygulamaları ve DevOps metodolojileri konusunda eğitimini de içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    deployment: "Daha Hızlı Dağıtım",
+                    cost: "Maliyet Azaltımı",
+                    uptime: "Sistem Çalışma Süresi",
+                    scaling: "İyileştirilmiş Ölçeklendirme"
+                },
+                testimonial: {
+                    text: "Delivery Pilot altyapımızı tamamen dönüştürdü. Kubernetes uygulaması ölçeklenebilirlik sorunlarımızı çözmekle kalmadı, operasyonel maliyetlerimizi de önemli ölçüde azalttı. Dağıtım süremiz haftalarca sürerken dakikalara indi ve ekibimiz artık modern bulut-yerel bir platformu yönetebilecek becerilere sahip.",
+                    author: "— Baş Teknoloji Sorumlusu, Insurance SBM"
+                }
+            },
+            goldman: {
+                name: "Goldman Sachs",
+                solution: "⚡ Azure Logic Apps Uygulaması ve Entegrasyon Platformu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "Goldman Sachs, birden fazla eski sistem arasında karmaşık iş akışlarını düzenlemeye ihtiyaç duyuyordu. Veri siloları verimli operasyonları engelliyordu, manuel süreçler hataya açıktı ve farklı departmanlar arasındaki entegrasyon uygulaması aylar alıyordu. Hassas finansal verileri işleyebilecek ölçeklenebilir, güvenli ve uyumlu bir çözüme ihtiyaçları vardı."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, Azure Logic Apps kullanarak kurumsal düzeyde entegrasyon platformu tasarladı ve uyguladı. Kritik iş akışlarını otomatikleştirdik, farklı sistemleri güvenli API'ler aracılığıyla bağladık ve organizasyon genelinde gerçek zamanlı veri senkronizasyonu sağladık. Çözüm, özel bağlayıcılar, kapsamlı hata yönetimi ve sıkı düzenleyici gereksinimleri karşılamak için detaylı denetim kaydı içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    automation: "Süreç Otomasyonu",
+                    errors: "Hata Azaltımı",
+                    integrations: "Sistem Entegrasyonları",
+                    time: "Zaman Tasarrufu"
+                },
+                testimonial: {
+                    text: "Delivery Pilot'ın Azure Logic Apps uygulaması operasyonlarımızda devrim yarattı. Artık tüm sistemlerimiz arasında sorunsuz entegrasyonumuz, önceden günler süren ve şimdi otomatikleştirilmiş iş akışlarımız ve süreçlerimize tam görünürlüğümüz var. Ekibin finansal hizmetler uyumluluğu konusundaki uzmanlığı paha biçilmezdi.",
+                    author: "— Teknoloji Operasyonları Başkan Yardımcısı, Goldman Sachs"
+                }
+            },
+            ibm: {
+                name: "IBM",
+                solution: "🔧 OpenShift Uygulaması ve Hibrit Bulut Platformu",
+                challenge: {
+                    title: "📋 Zorluk",
+                    description: "IBM'in kurumsal bölümü, şirket içi veri merkezleri ve birden fazla bulut sağlayıcısı arasında tutarlı çalışabilen sağlam bir hibrit bulut platformuna ihtiyaç duyuyordu. Gelişmiş güvenlik özellikleri, geliştirici dostu araçlar ve görev açısından kritik iş yükleri için operasyonel istikrarı korurken eski uygulamaları modernize etme yeteneği gerekliydi."
+                },
+                solution: {
+                    title: "💡 Çözüm",
+                    description: "Delivery Pilot, IBM'in kurumsal konteyner platformu olarak Red Hat OpenShift'i uygulayarak birleşik bir hibrit bulut ortamı oluşturdu. Çoklu küme yönetimi kurduk, GitOps iş akışlarını uyguladık, kurumsal güvenlik politikalarını entegre ettik ve self-servis geliştirici portalı oluşturduk. Çözüm, kapsamlı eğitim programları ve birden fazla bölgede mükemmeliyet merkezleri kurulmasını içeriyordu."
+                },
+                results: {
+                    title: "📊 Sonuçlar"
+                },
+                metrics: {
+                    applications: "Taşınan Uygulamalar",
+                    velocity: "Geliştirici Hızı",
+                    cost: "Altyapı Maliyet Tasarrufu",
+                    availability: "Platform Kullanılabilirliği"
+                },
+                testimonial: {
+                    text: "Delivery Pilot'ın OpenShift uygulaması beklentilerimizi aştı. Artık iş yüklerini herhangi bir yerde çalıştırma esnekliği sağlayan ve tutarlı güvenlik ve operasyonel uygulamaları sürdüren dünya standartlarında bir hibrit bulut platformumuz var. Dönüşüm, yenilik döngümüzü hızlandırdı ve müşterilerimize her zamankinden daha hızlı değer sunmamızı sağladı.",
+                    author: "— Kıdemli Müdür, Bulut Platform Mühendisliği, IBM"
+                }
+            },
+            cta: {
+                title: "Başarı Hikayenizi Yazmaya Hazır mısınız?",
+                description: "Bu sektör liderlerine katılın ve işletmenizi Delivery Pilot ile dönüştürün. Benzer sonuçlara nasıl ulaşabileceğinizi birlikte görüşelim.",
+                getStarted: "Bugün Başlayın",
+                contactUs: "Ekibimizle İletişime Geçin"
+            }
         }
     }
 };
@@ -746,7 +1271,7 @@ function updateContent(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
-        if (translation) {
+        if (translation && typeof translation === 'string') {
             // Replace {year} placeholder with current year
             element.textContent = translation.replace('{year}', currentYear);
         }
