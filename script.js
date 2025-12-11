@@ -188,6 +188,243 @@ const translations = {
                 support: "Support"
             },
             copyright: "© {year} Delivery Pilot. All rights reserved."
+        },
+        onboarding: {
+            hero: {
+                badge: "🚀 Enterprise AI Transformation",
+                title: "Delivery Pilot 🚀",
+                subtitle: "Solving RAISE: Rapid AI Increases Skills Expectations 📈",
+                description: "Welcome to the new era of enterprise transformation! ✨ We bridge the gap between traditional engineering and the new world of Vibe Programming. Join the revolution where developers and non-developers unite in a continuous learning cycle.",
+                process: "Assessment 🕵️‍♂️ → Training 🎓 → Implementation 🚀",
+                startAssessment: "🚀 Start Your Assessment",
+                exploreVibe: "✨ Explore the Vibe",
+                author: "Delivery Pilot<br>by Rifat Erdem Sahin"
+            },
+            transformation: {
+                title: "The 3 Stages of Transformation",
+                subtitle: "A continuous cycle of learning and implementation for the AI era.",
+                stage1: {
+                    icon: "🔍",
+                    number: "1. Assessment",
+                    title: "Quarterly 1-1 Private Meetings.",
+                    description: "Confidential assessments tailored to your role.",
+                    feature1: "🔒 Private & Secure: 1-1 sessions are strictly confidential.",
+                    feature2: "💻 Developers: Share your Git repositories (public or private).",
+                    feature3: "✍️ Non-Developers: Share your prompts and workflows.",
+                    feature4: "🎯 Identify Delivery Gaps: Pinpoint specific skill gaps and delivery bottlenecks.",
+                    feature5: "📄 Outcome: Everyone receives a unique maturity assessment report containing a tailored training roadmap for the AI courses."
+                },
+                stage2: {
+                    icon: "🎓",
+                    number: "2. Workshops",
+                    title: "One-to-Many hands-on implementation on top 10 AI topics.",
+                    description: "After assessment comes the knowledge download. We cover the Top 10 AI Courses in a lecture style to get everyone on the same wavelength.",
+                    curriculumTitle: "📚 Curriculum Includes:",
+                    curriculum1: "✨ Vibe Programming",
+                    curriculum2: "🤖 RAF & Xazi Frameworks",
+                    curriculum3: "🧠 Model Training & Security",
+                    curriculum4: "🔄 Hybrid AI Modeling"
+                },
+                stage3: {
+                    icon: "⚙️",
+                    number: "3. Express",
+                    title: "Merging Worlds with Implementation.",
+                    description: "This is where the magic happens. Developers and non-developers team up to bridge the gap between the deterministic and non-deterministic worlds.",
+                    feature1: "🎨 Creativity at the Core: Essential for fulfilling demanding requirements.",
+                    feature2: "💻 Git-Based Product Outputs: Real deliverables demonstrating practical skills and closing execution gaps.",
+                    feature3: "🚀 Evolution: Stakeholders evolve from I-shaped to M-shaped and X-shaped skills.",
+                    feature4: "🤝 Enterprise-Wide Collaboration: Solving RAISE together through continuous learning."
+                }
+            },
+            framework: {
+                title: "Where Vibe Programming meets Agentic Frameworks 🤝",
+                subtitle: "The detailed methodology behind our implementation strategy.",
+                real: {
+                    icon: "🌍",
+                    title: "Real - The Job That Starts with Objective and Key Results",
+                    description: "Sets goals and objectives, aligning tasks with measurable results.",
+                    action: "Action: Aim > Goals"
+                },
+                journey: {
+                    icon: "✈️",
+                    title: "Journey - Visual Story Explained with Steps",
+                    description: "A self-learning guide from beginner to skilled in visual storytelling.",
+                    action: "Action: Feel > Experience"
+                },
+                environments: {
+                    icon: "🌳",
+                    title: "Environments - The Roadmap and Use Cases",
+                    description: "A roadmap with learning modules and real-world use cases to apply new skills.",
+                    action: "Action: Create > Runtimes"
+                },
+                imaginary: {
+                    icon: "🌌",
+                    title: "Imaginary - What You Learn on the Road",
+                    description: "Tracks concepts, theories, and skills acquired, promoting continuous growth.",
+                    action: "Action: Capture > Screenshots"
+                },
+                formulas: {
+                    icon: "📐",
+                    title: "Formulas - The Guides That Are Mentioned",
+                    description: "Essential guides and formulas for understanding and solving project challenges.",
+                    action: "Action: GPT > Learn from it"
+                },
+                symbols: {
+                    icon: "🔣",
+                    title: "Symbols - Code That Is Implemented",
+                    description: "Includes code snippets and examples to demonstrate each concept practically.",
+                    action: "Action: Execute > Code"
+                },
+                semblance: {
+                    icon: "🌀",
+                    title: "Semblance - Errors Found in the Process",
+                    description: "Documents mistakes and solutions, making errors valuable learning opportunities.",
+                    action: "Action: Fix > Errors"
+                }
+            },
+            courses: {
+                title: "Top 10 AI Courses 🚀",
+                subtitle: "Master the tools of the trade with our curated curriculum."
+            },
+            pricingCta: {
+                title: "Ready to Get Started?",
+                subtitle: "Explore our flexible pricing plans designed to meet your needs",
+                viewPricing: "💰 View Pricing Plans",
+                startAssessment: "🚀 Start Free Assessment"
+            },
+            cta: {
+                title: "Ready to Build Always Learning Organizations?",
+                description: "Transform your enterprise into an always learning organization! Let Delivery Pilot help you meet the vibe coders from juniors and the agentic frameworks from seniors. Stop letting skills gaps hold you back - identify your gaps and initiate self-learning in yourself and your teams today.",
+                scheduleButton: "📅 Schedule Interview",
+                linkedinButton: "Connect on LinkedIn"
+            },
+            resources: {
+                title: "📄 Download Resources",
+                subtitle: "Get the Delivery Pilot documentation in PDF format",
+                downloadEnglish: "📥 Download PDF (English)",
+                downloadTurkish: "📥 Download PDF (Turkish)"
+            },
+            contact: {
+                title: "Get Started with Delivery Pilot",
+                subtitle: "Ready to transform your enterprise? Get in touch with our team to start your AI transformation journey.",
+                namePlaceholder: "Your Name",
+                emailPlaceholder: "Your Email",
+                companyPlaceholder: "Company Name",
+                messagePlaceholder: "Tell us about your AI transformation goals",
+                submitButton: "Request Consultation"
+            }
+        },
+        agile: {
+            hero: {
+                title: "From Burnout to Breakthrough: How AI Completes the Agile Promise",
+                subtitle: "Why AI transformation is the evolution Agile has been waiting for."
+            },
+            evolution: {
+                title: "The Evolution of Digital Transformation",
+                description1: "Agile transformation revolutionized the way we work, introducing frameworks for faster delivery and adaptability. However, as organizations scaled, Agile encountered friction: unintentionally reinforcing organizational silos and driving high-performance teams toward burnout.",
+                quote: "AI Transformation does not replace Agile; it fixes it.",
+                description2: "Where Agile provided the structure for speed, AI provides the capacity for sustainability. Instead of specialized teams sprinting in isolation, AI democratizes capabilities, allowing the Agile framework to finally live up to its promise of inclusive, sustainable innovation."
+            },
+            comparison: {
+                title: "⚡ Agile Alone vs. 🤖 Agile + AI",
+                subtitle: "How AI acts as the force multiplier for your existing Agile structures.",
+                aspects: {
+                    teamStructure: {
+                        aspect: "Team Structure",
+                        traditional: "Often creates specialized, isolated silos (DevOps, QA, Design).",
+                        evolution: "Breaks down silos by enabling cross-functional understanding and contribution."
+                    },
+                    knowledge: {
+                        aspect: "Knowledge Access",
+                        traditional: "Expertise is concentrated in key specialists (the \"Bus Factor\").",
+                        evolution: "Democratizes access, giving everyone instant \"senior-level\" context and guidance."
+                    },
+                    workload: {
+                        aspect: "Workload Impact",
+                        traditional: "Constant sprint pressure creates a culture of \"always-on\" urgency.",
+                        evolution: "Reduces cognitive load by offloading repetitive tasks, making the pace sustainable."
+                    },
+                    contribution: {
+                        aspect: "Contribution Model",
+                        traditional: "Only technical specialists can influence technical decisions.",
+                        evolution: "Inclusive contribution; non-tech roles can prototype and build with AI assistance."
+                    },
+                    innovation: {
+                        aspect: "Innovation",
+                        traditional: "Limited to R&D teams or specific \"Innovation Sprints.\"",
+                        evolution: "Continuous innovation where any team member can rapidly prototype an idea."
+                    }
+                }
+            },
+            friction: {
+                title: "🔴 The Friction Points of Agile",
+                subtitle: "Agile was designed for speed, but without AI, that speed often comes at a high human cost.",
+                silos: {
+                    title: "Organizational Silos",
+                    description: "Agile teams often optimize for their own velocity, creating boundaries that hinder cross-team collaboration."
+                },
+                burnout: {
+                    title: "The Burnout Trap",
+                    description: "The relentless cycle of planning, executing, and reviewing creates unsustainable pressure. Without support, \"working at a sustainable pace\" becomes a myth."
+                },
+                dependency: {
+                    title: "Specialist Dependency",
+                    description: "When knowledge is locked inside the heads of a few experts, workflows stall the moment those specialists are unavailable."
+                },
+                ceremony: {
+                    title: "Ceremony Overload",
+                    description: "Standups, retrospectives, and refinement sessions consume vast amounts of time—time that isn't spent creating value."
+                }
+            },
+            unlock: {
+                title: "🟢 How AI Unlocks the Agile Ideal",
+                universal: {
+                    title: "1. From Silos to Universal Contribution",
+                    description: "AI acts as a universal translator and assistant. A marketing professional can now contribute to technical documentation; a developer can generate high-quality design assets. By lowering the barrier to entry for tasks, AI allows the entire organization to contribute to the product vision."
+                },
+                sustainable: {
+                    title: "2. Restoring a Sustainable Pace",
+                    description: "AI fundamentally changes the equation from \"work harder\" to \"work with augmentation.\" By handling the repetitive, draining tasks (like code generation, data cleaning, or meeting summarization), AI frees humans to focus on creative strategy, empathy, and complex problem-solving."
+                },
+                democratization: {
+                    title: "3. Knowledge Democratization",
+                    description: "The gap between junior and senior team members narrows. AI provides on-demand mentorship and technical guidance, allowing teams to upskill in real-time and reducing the bottleneck on senior staff."
+                },
+                innovation: {
+                    title: "4. Innovation Without Boundaries",
+                    description: "When technical complexity is handled by AI, innovation is no longer the domain of the few. The best ideas can be rapidly prototyped and tested by anyone in the organization, fostering a culture of true inclusivity."
+                }
+            },
+            quote: {
+                text: "Agile taught us how to iterate faster. AI gives us the capacity to include everyone in that iteration. The future isn't about specialized teams moving fast in isolation—it's about empowered individuals collaborating without boundaries.",
+                author: "— Rifat Erdem Sahin"
+            },
+            pathForward: {
+                title: "The Path Forward: The Era of the M-Shaped Employee",
+                description: "Agile championed the T-shaped skill set (deep expertise in one area, broad knowledge of others). AI transformation accelerates the evolution into M-shaped skills—multiple areas of deep competence achieved through AI-augmented learning.",
+                collaboration: {
+                    title: "Collaboration Over Complexity",
+                    description: "When AI handles the technical \"how,\" teams focus on the \"why.\""
+                },
+                humanCentric: {
+                    title: "Human-Centric Value",
+                    description: "Freed from administrative burdens, teams can focus on empathy, relationship building, and strategic thinking."
+                },
+                sustainableGrowth: {
+                    title: "Sustainable Growth",
+                    description: "Innovation becomes a natural byproduct of empowered workers, not a result of exhausting sprints."
+                }
+            },
+            cta: {
+                title: "Ready for an Inclusive Transformation?",
+                description: "Move beyond the sprint. Empower everyone in your organization with the capabilities to build, create, and innovate.",
+                pilotTitle: "🚀 Delivery Pilot",
+                pilotDescription: "Start your AI transformation journey with a focused pilot.",
+                pilotButton: "Get Started",
+                maturityTitle: "🏢 Enterprise AI Maturity",
+                maturityDescription: "Assess your organization's readiness for AI augmentation.",
+                maturityButton: "Learn More"
+            }
         }
     },
     tr: {
@@ -401,7 +638,8 @@ const translations = {
                     feature1: "🔒 Özel ve Güvenli: 1-1 oturumlar kesinlikle gizlidir.",
                     feature2: "💻 Geliştiriciler: Git depolarınızı paylaşın (genel veya özel).",
                     feature3: "✍️ Geliştirici Olmayanlar: Promptlarınızı ve iş akışlarınızı paylaşın.",
-                    feature4: "📄 Sonuç: Herkes, yapay zeka kursları için özel bir eğitim yol haritası içeren benzersiz bir olgunluk değerlendirme raporu alır."
+                    feature4: "🎯 Teslimat Boşluklarını Belirleyin: Spesifik beceri boşluklarını ve teslimat darboğazlarını tespit edin.",
+                    feature5: "📄 Sonuç: Herkes, yapay zeka kursları için özel bir eğitim yol haritası içeren benzersiz bir olgunluk değerlendirme raporu alır."
                 },
                 stage2: {
                     icon: "🎓",
@@ -420,8 +658,9 @@ const translations = {
                     title: "Uygulama ile Dünyaları Birleştirme.",
                     description: "Sihir burada gerçekleşir. Geliştiriciler ve geliştirici olmayanlar, deterministik ve deterministik olmayan dünyalar arasındaki boşluğu kapatmak için bir araya gelir.",
                     feature1: "🎨 Özünde Yaratıcılık: Zorlu gereksinimleri yerine getirmek için gereklidir.",
-                    feature2: "🚀 Evrim: Paydaşlar I-şekilli becerilerden M-şekilli ve X-şekilli becerilere evrilir.",
-                    feature3: "🤝 Kurumsal Çapta İşbirliği: RAISE'yi birlikte çözmek."
+                    feature2: "💻 Git Tabanlı Ürün Çıktıları: Pratik becerileri gösteren ve yürütme boşluğunu kapatan gerçek teslimatlar.",
+                    feature3: "🚀 Evrim: Paydaşlar I-şekilli becerilerden M-şekilli ve X-şekilli becerilere evrilir.",
+                    feature4: "🤝 Kurumsal Çapta İşbirliği: RAISE'yi birlikte çözmek."
                 }
             },
             framework: {
@@ -473,6 +712,12 @@ const translations = {
             courses: {
                 title: "En İyi 10 Yapay Zeka Kursu 🚀",
                 subtitle: "Küratörlüğünü yaptığımız müfredatla mesleğin araçlarında ustalaşın."
+            },
+            pricingCta: {
+                title: "Başlamaya Hazır mısınız?",
+                subtitle: "İhtiyaçlarınıza göre tasarlanmış esnek fiyatlandırma planlarımızı keşfedin",
+                viewPricing: "💰 Fiyatlandırma Planlarını Görüntüle",
+                startAssessment: "🚀 Ücretsiz Değerlendirme Başlat"
             },
             supportPlans: {
                 title: "Destek Planları",
