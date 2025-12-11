@@ -278,7 +278,7 @@ const translations = {
             description2: "Misyonumuz, gerçek iş değeri sağlayan yapay zeka çözümlerini başarıyla uygulamak için gereken araçları, altyapıyı ve uzmanlığı sağlayarak her büyüklükteki işletme için yapay zekayı demokratikleştirmektir.",
             stats: {
                 customers: "Kurumsal Müşteri",
-                github: "GitHub'da +200 repo ile >%1",
+                github: "GitHub'da +200 repo",
                 deployment: "Daha Hızlı Dağıtım"
             }
         },
