@@ -122,8 +122,8 @@ const translations = {
         },
         about: {
             title: "About Delivery Pilot",
-            description1: "Delivery Pilot is a cutting-edge Platform as a Service (PaaS) designed specifically for enterprises embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've built a platform that simplifies every step of the process.",
-            description2: "Our mission is to democratize AI for enterprises of all sizes, providing the tools, infrastructure, and expertise needed to successfully implement AI solutions that drive real business value.",
+            description1: "Delivery Pilot is a state-of-the-art Platform-as-a-Service (PaaS) solution specifically designed for businesses embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've created a platform that simplifies every step of the process.",
+            description2: "Our goal is to make powerful AI tools, infrastructure, and expertise accessible to everyone, helping businesses of all sizes rapidly implement AI solutions that create real business value.",
             stats: {
                 customers: "Enterprise Customers",
                 github: "in GitHub with +200 repos",
@@ -312,8 +312,8 @@ const translations = {
         },
         about: {
             title: "Delivery Pilot Hakkında",
-            description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Hizmet Olarak Platform (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
-            description2: "Misyonumuz, gerçek iş değeri sağlayan yapay zeka çözümlerini başarıyla uygulamak için gereken araçları, altyapıyı ve uzmanlığı sağlayarak her büyüklükteki işletme için yapay zekayı demokratikleştirmektir.",
+            description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Platform-as-a-Service (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
+            description2: "Amacımız; güçlü yapay zeka araçlarını, altyapıyı ve uzmanlığı herkes için erişilebilir hale getirerek her ölçekteki işletmenin gerçek iş değeri yaratan yapay zeka çözümlerini hızla hayata geçirmesine yardımcı olmaktır.",
             stats: {
                 customers: "Kurumsal Müşteri",
                 github: "GitHub'da +200 repo",
