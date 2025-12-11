@@ -55,9 +55,49 @@
     <!-- Pricing Page -->
     <url>
         <loc>https://deliverypilot.net/pricing.html</loc>
-        <lastmod>2024-12-09</lastmod>
+        <lastmod>2024-12-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://deliverypilot.net/contact.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- FAQ Page -->
+    <url>
+        <loc>https://deliverypilot.net/faq.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Partners Page -->
+    <url>
+        <loc>https://deliverypilot.net/partners.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Transformations Page -->
+    <url>
+        <loc>https://deliverypilot.net/transformations.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Agile Transformation Page -->
+    <url>
+        <loc>https://deliverypilot.net/agile-transformation.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>
