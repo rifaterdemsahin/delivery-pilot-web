@@ -107,7 +107,7 @@ const translations = {
             description2: "Our mission is to democratize AI for enterprises of all sizes, providing the tools, infrastructure, and expertise needed to successfully implement AI solutions that drive real business value.",
             stats: {
                 customers: "Enterprise Customers",
-                uptime: "Uptime SLA",
+                github: "in GitHub with +200 repos",
                 deployment: "Faster Deployment"
             }
         },
@@ -278,7 +278,7 @@ const translations = {
             description2: "Misyonumuz, gerçek iş değeri sağlayan yapay zeka çözümlerini başarıyla uygulamak için gereken araçları, altyapıyı ve uzmanlığı sağlayarak her büyüklükteki işletme için yapay zekayı demokratikleştirmektir.",
             stats: {
                 customers: "Kurumsal Müşteri",
-                uptime: "Çalışma Süresi SLA",
+                github: "GitHub'da +200 repo ile >%1",
                 deployment: "Daha Hızlı Dağıtım"
             }
         },
