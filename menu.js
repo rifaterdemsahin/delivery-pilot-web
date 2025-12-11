@@ -44,6 +44,7 @@ const navigationConfig = {
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'About' },
                 { href: 'founder.html', textKey: 'nav.founder', text: 'Founder' },
+                { href: 'transformations.html', textKey: 'nav.transformations', text: 'Transformations' },
                 { href: 'partners.html', textKey: 'nav.partners', text: 'Partners' }
             ]
         },
@@ -84,6 +85,7 @@ const footerConfig = {
             content: [
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
                 { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
+                { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'previous-customers.html', textKey: 'footer.company.previousCustomers', text: 'Previous Customers' },
                 { type: 'link', href: '#', textKey: 'footer.company.careers', text: 'Careers' },
