@@ -215,6 +215,38 @@
             font-size: 1.5rem;
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.2500%;
+            padding-bottom: 0;
+            box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+            margin-top: 1.6em;
+            margin-bottom: 0.9em;
+            overflow: hidden;
+            border-radius: 8px;
+            will-change: transform;
+        }
+
+        .video-iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .video-attribution {
+            display: block;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .founder-hero h1 {
@@ -329,15 +361,13 @@
                     </div>
                 </div>
 
-                <h3>Paradox of AI</h3>
-                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-                    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                <h3 data-i18n="founder.paradoxai.title">Paradox of AI</h3>
+                <div class="video-container">
+                    <iframe loading="lazy" class="video-iframe"
                         src="https://www.canva.com/design/DAG7PZlpEU4/qiawKabb6OeMkOCnrgFpEw/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
                     </iframe>
                 </div>
-                <a href="https://www.canva.com/design/DAG7PZlpEU4/qiawKabb6OeMkOCnrgFpEw/watch?utm_content=DAG7PZlpEU4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Paradox of AI</a> by Rifat Erdem Sahin
+                <a href="https://www.canva.com/design/DAG7PZlpEU4/qiawKabb6OeMkOCnrgFpEw/watch?utm_content=DAG7PZlpEU4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="video-attribution" data-i18n="founder.paradoxai.attribution">Paradox of AI by Rifat Erdem Sahin</a>
 
                 <div class="social-links">
                     <h3 data-i18n="founder.social.title">Connect with Rifat Erdem Sahin</h3>
