@@ -163,6 +163,57 @@ const translations = {
             },
             backToHome: "← Back to Home"
         },
+        pricing: {
+            hero: {
+                title: "Pricing Plans",
+                subtitle: "Choose the perfect plan for your AI transformation journey"
+            },
+            prosumer: {
+                title: "Prosumer",
+                subtitle: "1-on-1 Assessment For AI Workshop Readiness",
+                priceText: "per session",
+                feature1: "Individual AI maturity assessment",
+                feature2: "Personalized skills gap analysis",
+                feature3: "Custom AI learning roadmap",
+                feature4: "Career transformation strategy",
+                feature5: "Actionable next steps",
+                feature6: "60-minute 1-on-1 session",
+                feature7: "Written assessment report",
+                feature8: "Follow-up recommendations",
+                cta: "📅 Book Assessment"
+            },
+            workshops: {
+                badge: "Most Popular",
+                title: "Workshops",
+                subtitle: "Remote Sessions",
+                priceText: "per consultant/day",
+                feature1: "Global live top 10 AI training sessions",
+                feature2: "Face-to-face interaction",
+                feature3: "Enterprise-wide implementation",
+                feature4: "Multiple technology areas",
+                feature5: "Post-implementation support",
+                feature6: "Hotel & travel billed separately",
+                cta: "📅 Schedule Interview"
+            },
+            enterprise: {
+                title: "Enterprise",
+                subtitle: "Team Enterprise-wise AI Adaptation Assessment",
+                price: "Request Quote",
+                priceText: "custom pricing",
+                feature1: "Enterprise data source integration",
+                feature2: "Team assessment included",
+                feature3: "Production-ready solution from workshops",
+                feature4: "10-workshop roadmap: Complete AI-enabled delivery transformation",
+                feature5: "Journey from vibe programming to agentic framework implementation",
+                feature6: "Git repositories ready and running on GitHub Codespaces",
+                feature7: "Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation",
+                feature8: "Complete documentation",
+                feature9: "Priority support",
+                feature10: "Integration guidance",
+                feature11: "Direct access to expert",
+                cta: "📅 Schedule Interview"
+            }
+        },
         footer: {
             tagline: "Enterprise AI Transformation Platform",
             platform: {
@@ -352,6 +403,57 @@ const translations = {
                 }
             },
             backToHome: "← Ana Sayfaya Dön"
+        },
+        pricing: {
+            hero: {
+                title: "Fiyatlandırma Planları",
+                subtitle: "Yapay zeka dönüşüm yolculuğunuz için mükemmel planı seçin"
+            },
+            prosumer: {
+                title: "Prosumer",
+                subtitle: "Yapay Zeka Atölyesi Hazırlığı için Bire Bir Değerlendirme",
+                priceText: "oturum başına",
+                feature1: "Bireysel yapay zeka olgunluk değerlendirmesi",
+                feature2: "Kişiselleştirilmiş beceri boşluğu analizi",
+                feature3: "Özel yapay zeka öğrenim yol haritası",
+                feature4: "Kariyer dönüşüm stratejisi",
+                feature5: "Uygulanabilir sonraki adımlar",
+                feature6: "60 dakikalık bire bir oturum",
+                feature7: "Yazılı değerlendirme raporu",
+                feature8: "Takip tavsiyeleri",
+                cta: "📅 Değerlendirme Rezervasyonu Yap"
+            },
+            workshops: {
+                badge: "En Popüler",
+                title: "Atölyeler",
+                subtitle: "Uzaktan Oturumlar",
+                priceText: "danışman/gün başına",
+                feature1: "Canlı en iyi 10 yapay zeka eğitim oturumu",
+                feature2: "Yüz yüze etkileşim",
+                feature3: "Kuruluş çapında uygulama",
+                feature4: "Çoklu teknoloji alanları",
+                feature5: "Uygulama sonrası destek",
+                feature6: "Otel ve seyahat ayrı faturalandırılır",
+                cta: "📅 Görüşme Planla"
+            },
+            enterprise: {
+                title: "Kurumsal",
+                subtitle: "Ekip Bazında Kurumsal Yapay Zeka Uyarlama Değerlendirmesi",
+                price: "Teklif İsteyin",
+                priceText: "özel fiyatlandırma",
+                feature1: "Kurumsal veri kaynağı entegrasyonu",
+                feature2: "Ekip değerlendirmesi dahil",
+                feature3: "Atölyelerden üretime hazır çözüm",
+                feature4: "10 atölye yol haritası: Yapay zeka destekli tam teslimat dönüşümü",
+                feature5: "Vibe programlamadan agentic framework uygulamasına yolculuk",
+                feature6: "GitHub Codespaces'te hazır ve çalışır durumda git repoları",
+                feature7: "Kurumsal yol haritası: Değerlendirme → Teslimat → Beceri Boşluğu Belirleme → Yapay Zeka Dönüşümü",
+                feature8: "Eksiksiz dokümantasyon",
+                feature9: "Öncelikli destek",
+                feature10: "Entegrasyon rehberliği",
+                feature11: "Uzmana doğrudan erişim",
+                cta: "📅 Görüşme Planla"
+            }
         },
         footer: {
             tagline: "Kurumsal Yapay Zeka Dönüşüm Platformu",
