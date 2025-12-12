@@ -51,7 +51,7 @@ Updated 7 HTML files to use the new system:
 The following pages intentionally kept their custom structure:
 - **dashboard.html** - Has custom dashboard header
 - **signin.html** - Minimal page without standard navigation
-- **assesment.html** - Standalone assessment form page
+- **assessment.html** - Standalone assessment form page
 
 ## Results
 

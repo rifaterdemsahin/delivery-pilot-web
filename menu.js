@@ -52,7 +52,7 @@ const navigationConfig = {
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
-        { href: 'https://deliverypilot.net/assesment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
+        { href: 'https://deliverypilot.net/assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
     ]
 };
 
