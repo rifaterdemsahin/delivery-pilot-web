@@ -10,13 +10,60 @@
     <div id="navbar-placeholder"></div>
 
     <div class="container">
-        <h1>Assessment</h1>
-        <p>This is the assessment page. The content is under construction.</p>
+        <h1>AI Readiness Assessment</h1>
+        <p>Answer the following questions to assess your organization's AI readiness.</p>
+        
+        <form id="assessment-form">
+            <div class="form-group">
+                <label for="q1">1. How would you rate your organization's understanding of AI and its potential applications?</label>
+                <select id="q1" name="q1">
+                    <option value="1">1 - Very Low</option>
+                    <option value="2">2 - Low</option>
+                    <option value="3">3 - Moderate</option>
+                    <option value="4">4 - High</option>
+                    <option value="5">5 - Very High</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="q2">2. How mature is your organization's data infrastructure and analytics capabilities?</label>
+                <select id="q2" name="q2">
+                    <option value="1">1 - Not mature at all</option>
+                    <option value="2">2 - Somewhat mature</option>
+                    <option value="3">3 - Moderately mature</option>
+                    <option value="4">4 - Very mature</option>
+                    <option value="5">5 - Fully mature and optimized</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="q3">3. Does your organization have a clear strategy and vision for AI adoption?</label>
+                <select id="q3" name="q3">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                    <option value="in_progress">In Progress</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit Assessment</button>
+        </form>
+        
+        <div id="assessment-result" style="display: none; margin-top: 20px;">
+            <h2>Assessment Complete!</h2>
+            <p>Thank you for completing the assessment. Our team will review your responses and contact you shortly.</p>
+        </div>
     </div>
 
     <div id="footer-placeholder"></div>
 
     <script src="menu.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('assessment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('assessment-form').style.display = 'none';
+            document.getElementById('assessment-result').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
