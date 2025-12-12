@@ -352,7 +352,7 @@ const translations = {
                 stage1: {
                     icon: "🔍",
                     number: "1. Assessment",
-                    title: "Quarterly 1-1 Private Meetings.",
+                    title: "Per Product/Program Requirement 1-1 Private Meetings.",
                     description: "Confidential assessments tailored to your role.",
                     feature1: "🔒 Private & Secure: 1-1 sessions are strictly confidential.",
                     feature2: "💻 Developers: Share your Git repositories (public or private).",
@@ -838,7 +838,7 @@ const translations = {
                 stage1: {
                     icon: "🔍",
                     number: "1. Değerlendirme",
-                    title: "Üç Ayda Bir 1-1 Özel Toplantılar.",
+                    title: "Ürün/Program Gereksinimlerine Göre 1-1 Özel Toplantılar.",
                     description: "Rolünüze özel gizli değerlendirmeler.",
                     feature1: "🔒 Özel ve Güvenli: 1-1 oturumlar kesinlikle gizlidir.",
                     feature2: "💻 Geliştiriciler: Git depolarınızı paylaşın (genel veya özel).",
