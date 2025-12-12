@@ -200,6 +200,7 @@ const translations = {
                 feature4: "Multiple technology areas",
                 feature5: "Post-implementation support",
                 feature6: "Hotel & travel billed separately",
+                feature7: "One-to-many format: multiple consultants for bigger groups",
                 cta: "📅 Schedule Interview"
             },
             enterprise: {
@@ -365,6 +366,7 @@ const translations = {
                     number: "2. Workshops",
                     title: "One-to-Many hands-on implementation on top 10 AI topics.",
                     description: "After assessment comes the knowledge download. We cover the Top 10 AI Courses in a lecture style to get everyone on the same wavelength.",
+                    note: "⚠️ Note: One-to-many format can include multiple consultants for bigger groups.",
                     curriculumTitle: "📚 Curriculum Includes:",
                     curriculum1: "✨ Vibe Programming",
                     curriculum2: "🤖 RAF & Xazi Frameworks",
@@ -773,6 +775,7 @@ const translations = {
                 feature4: "Çoklu teknoloji alanları",
                 feature5: "Uygulama sonrası destek",
                 feature6: "Otel ve seyahat ayrı faturalandırılır",
+                feature7: "Bire-çok format: daha büyük gruplar için çoklu danışmanlar",
                 cta: "📅 Görüşme Planla"
             },
             enterprise: {
@@ -851,6 +854,7 @@ const translations = {
                     number: "2. Atölyeler",
                     title: "En İyi 10 Yapay Zeka konusunda bire-çok uygulamalı uygulama.",
                     description: "Değerlendirmeden sonra bilgi indirmesi gelir. Herkesi aynı dalga boyuna getirmek için En İyi 10 Yapay Zeka Kursunu ders tarzında kapsıyoruz.",
+                    note: "⚠️ Not: Bire-çok formatı daha büyük gruplar için çoklu danışmanlar içerebilir.",
                     curriculumTitle: "📚 Müfredat İçeriği:",
                     curriculum1: "✨ Vibe Programlama",
                     curriculum2: "🤖 RAF ve Xazi Çerçeveleri",
