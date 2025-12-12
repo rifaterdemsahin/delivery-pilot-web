@@ -119,7 +119,7 @@ done
 
 # Check for inline styles (maintainability issue)
 echo "Checking for inline styles..."
-INLINE_STYLES=$(grep -c 'style=' *.html 2>/dev/null | awk -F: '{sum+=$2} END {print sum}')
+INLINE_STYLES=$(grep -c 'style=' *.html 2>/dev/null | awk -F: '{sum+=$2} END {print sum+0}')
 if [ $INLINE_STYLES -gt 10 ]; then
     print_warning "Found $INLINE_STYLES inline style attributes (consider moving to CSS)"
 elif [ $INLINE_STYLES -gt 0 ]; then
@@ -136,7 +136,7 @@ echo "Total JavaScript files: $JS_COUNT"
 
 # Check for console.log statements
 echo "Checking for console statements..."
-CONSOLE_COUNT=$(grep -c "console\." *.js 2>/dev/null | awk -F: '{sum+=$2} END {print sum}')
+CONSOLE_COUNT=$(grep -c "console\." *.js 2>/dev/null | awk -F: '{sum+=$2} END {print sum+0}')
 if [ $CONSOLE_COUNT -gt 0 ]; then
     print_warning "Found $CONSOLE_COUNT console statements (should be removed in production)"
 else
@@ -154,7 +154,7 @@ fi
 
 # Check for undefined variables
 echo "Checking for potential undefined variables..."
-UNDEFINED_COUNT=$(grep -n "undefined" *.js 2>/dev/null | wc -l)
+UNDEFINED_COUNT=$(grep -n "undefined" *.js 2>/dev/null | wc -l | awk '{print $1+0}')
 if [ $UNDEFINED_COUNT -gt 0 ]; then
     echo "Found $UNDEFINED_COUNT references to 'undefined'"
 fi
@@ -280,9 +280,13 @@ echo "Total lines of code: $TOTAL_LINES"
 
 # Check for large files
 echo "Checking for large files..."
-find . -maxdepth 1 -type f -size +100k -exec ls -lh {} \; | awk '{print $9 ": " $5}' | while read line; do
-    print_warning "Large file detected: $line"
-done
+LARGE_FILES=$(find . -maxdepth 1 -type f -size +100k -exec basename {} \;)
+if [ -n "$LARGE_FILES" ]; then
+    echo "$LARGE_FILES" | while read file; do
+        SIZE=$(ls -lh "$file" 2>/dev/null | awk '{print $5}')
+        print_warning "Large file detected: $file ($SIZE)"
+    done
+fi
 
 echo ""
 echo "9. LINK VALIDATION"
@@ -291,7 +295,7 @@ echo "=========================================="
 # Check for potential broken internal links
 echo "Checking internal links..."
 BROKEN_LINKS=0
-grep -oh 'href="[^"]*\.html[^"]*"' *.html | sed 's/href="//;s/"$//' | sed 's/#.*//' | sort -u | while read link; do
+while IFS= read -r link; do
     # Skip external URLs
     if [[ $link == http* ]]; then
         continue
@@ -300,7 +304,7 @@ grep -oh 'href="[^"]*\.html[^"]*"' *.html | sed 's/href="//;s/"$//' | sed 's/#.*
         print_warning "Potential broken link: $link"
         ((BROKEN_LINKS++))
     fi
-done
+done < <(grep -oh 'href="[^"]*\.html[^"]*"' *.html 2>/dev/null | sed 's/href="//;s/"$//' | sed 's/#.*//' | sort -u)
 
 echo ""
 echo "10. FILENAME CHECKS"
