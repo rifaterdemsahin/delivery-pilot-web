@@ -123,31 +123,54 @@
             text-decoration: underline;
         }
         
-        .demo-credentials {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
+        .demo-button {
+            width: 100%;
+            padding: 14px;
+            background: #10b981;
+            color: white;
+            border: none;
             border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 12px;
         }
         
-        .demo-credentials h3 {
-            font-size: 14px;
-            color: #0c4a6e;
-            margin-bottom: 8px;
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);
+            background: #059669;
         }
         
-        .demo-credentials p {
-            font-size: 13px;
-            color: #075985;
-            margin: 4px 0;
+        .demo-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
         
-        .demo-credentials code {
+        .divider {
+            text-align: center;
+            margin: 24px 0;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e5e7eb;
+        }
+        
+        .divider span {
             background: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
+            padding: 0 16px;
+            color: #6b7280;
+            font-size: 14px;
+            position: relative;
         }
     </style>
 </head>
@@ -159,11 +182,12 @@
                 <p>Access your AI transformation dashboard</p>
             </div>
             
-            <div class="demo-credentials">
-                <h3>Demo Credentials:</h3>
-                <p><strong>Enterprise A:</strong> <code>enterpriseA@example.com</code> / <code>demo123</code></p>
-                <p><strong>Enterprise B:</strong> <code>enterpriseB@example.com</code> / <code>demo123</code></p>
-                <p><strong>Acme Corp:</strong> <code>acme@example.com</code> / <code>demo123</code></p>
+            <button type="button" class="demo-button" id="demoButton">
+                🚀 Try Demo Login
+            </button>
+            
+            <div class="divider">
+                <span>or sign in with your account</span>
             </div>
             
             <div class="error-message" id="errorMessage"></div>
@@ -206,6 +230,43 @@
         const form = document.getElementById('signinForm');
         const errorMessage = document.getElementById('errorMessage');
         const signinButton = document.getElementById('signinButton');
+        const demoButton = document.getElementById('demoButton');
+        
+        // Demo login handler
+        demoButton.addEventListener('click', async () => {
+            try {
+                // Hide error message
+                errorMessage.classList.remove('show');
+                errorMessage.textContent = '';
+                
+                // Disable button during processing
+                demoButton.disabled = true;
+                demoButton.textContent = 'Loading demo...';
+                
+                // Simulate API call delay
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Use the first demo user (Enterprise A)
+                const user = demoUsers[0];
+                
+                // Store session
+                sessionStorage.setItem('currentUser', JSON.stringify({
+                    email: user.email,
+                    name: user.name,
+                    id: user.id,
+                    loginTime: new Date().toISOString()
+                }));
+                
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                // Show error and restore button
+                errorMessage.textContent = 'Demo login failed. Please try again.';
+                errorMessage.classList.add('show');
+                demoButton.disabled = false;
+                demoButton.textContent = '🚀 Try Demo Login';
+            }
+        });
         
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
