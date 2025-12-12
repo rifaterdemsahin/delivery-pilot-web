@@ -531,6 +531,63 @@
 
         .revenue-benefit h3 {
             font-size: 1.5rem;
+        .founder-training {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .training-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .founder-training-card,
+        .community-card,
+        .post-workshop-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .training-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .founder-training-card h3,
+        .community-card h3,
+        .post-workshop-card h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .founder-training-card p,
+        .community-card p,
+        .post-workshop-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .training-details,
+        .community-channels,
+        .support-details {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .training-details h4,
+        .community-channels h4,
+        .support-details h4 {
+            font-size: 1.25rem;
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
@@ -655,6 +712,128 @@
             color: var(--text-dark);
             line-height: 1.8;
             margin: 0;
+        .training-details ul,
+        .support-details ul,
+        .community-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .training-details ul li,
+        .support-details ul li,
+        .community-benefits ul li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .training-details ul li::before,
+        .support-details ul li::before,
+        .community-benefits ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .training-details ul li strong,
+        .support-details ul li strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .channel-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .channel-btn {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-white);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .channel-btn:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .channel-btn.youtube-btn {
+            border-left: 4px solid #ff0000;
+        }
+
+        .channel-btn.youtube-btn:hover {
+            background: #fff5f5;
+        }
+
+        .channel-btn.linkedin-btn {
+            border-left: 4px solid #0077b5;
+        }
+
+        .channel-btn.linkedin-btn:hover {
+            background: #f0f8ff;
+        }
+
+        .channel-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .channel-info {
+            flex: 1;
+        }
+
+        .channel-info strong {
+            display: block;
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .channel-info p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .community-benefits {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .support-highlight {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .support-highlight p {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .support-highlight strong {
+            color: var(--primary-color);
         }
 
         .back-button {
@@ -755,6 +934,26 @@
         }
 
         @media (max-width: 768px) {
+            .founder-training-card,
+            .community-card,
+            .post-workshop-card {
+                padding: 2rem;
+            }
+
+            .channel-btn {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.25rem;
+            }
+
+            .channel-btn:hover {
+                transform: translateY(-5px);
+            }
+
+            .channel-icon {
+                font-size: 2rem;
+            }
+
             .partners-hero {
                 padding: 4rem 0 3rem;
             }
@@ -853,6 +1052,32 @@
         }
 
         @media (max-width: 480px) {
+            .founder-training-card,
+            .community-card,
+            .post-workshop-card {
+                padding: 1.5rem;
+            }
+
+            .training-icon {
+                font-size: 2.5rem;
+            }
+
+            .founder-training-card h3,
+            .community-card h3,
+            .post-workshop-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .training-details h4,
+            .community-channels h4,
+            .support-details h4 {
+                font-size: 1.125rem;
+            }
+
+            .channel-info strong {
+                font-size: 1.125rem;
+            }
+
             .partners-hero {
                 padding: 3rem 0 2rem;
             }
@@ -1105,7 +1330,64 @@
     </section>
 
     <!-- Partner Benefits Section -->
+    <!-- Marketing Strategy Section -->
     <section class="partner-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Marketing Strategy: Scalability Through Partner Networks</h2>
+                <p>Delivery Pilot's growth strategy leverages a scalable partner network model for enterprise sales. Rather than building a large internal sales force, we empower trusted partners to deliver assessments, workshops, and transformation services. This approach enables rapid market expansion while maintaining quality and personal relationships with enterprise customers.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="icon">🌐</span>
+                    <h3>Geographic Scalability</h3>
+                    <p>Our partner network enables enterprise sales expansion across multiple geographies without the overhead of establishing regional offices. Partners bring local market knowledge, language capabilities, and cultural understanding.</p>
+                    <div class="benefit-highlight">
+                        ✓ Expand to new markets quickly<br>
+                        ✓ Local expertise and relationships<br>
+                        ✓ Reduced market entry costs
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">📈</span>
+                    <h3>Capacity Scalability</h3>
+                    <p>Partners extend our delivery capacity, allowing us to serve more enterprise customers simultaneously without compromising quality. Each partner can deliver assessments and workshops to multiple clients.</p>
+                    <div class="benefit-highlight">
+                        ✓ Serve more customers concurrently<br>
+                        ✓ Faster response to demand<br>
+                        ✓ Flexible resource allocation
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">🤝</span>
+                    <h3>Relationship Scalability</h3>
+                    <p>Partners leverage existing enterprise relationships, reducing sales cycles and increasing conversion rates. This relationship-based approach is particularly effective in enterprise B2B sales.</p>
+                    <div class="benefit-highlight">
+                        ✓ Warm introductions to enterprises<br>
+                        ✓ Built-in trust and credibility<br>
+                        ✓ Higher close rates
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">💼</span>
+                    <h3>Enterprise Sales Efficiency</h3>
+                    <p>Partners handle enterprise sales complexities including lengthy procurement processes, multiple stakeholder coordination, and customized proposals - activities that don't scale well centrally.</p>
+                    <div class="benefit-highlight">
+                        ✓ Dedicated account management<br>
+                        ✓ Local negotiation and closing<br>
+                        ✓ Ongoing relationship stewardship
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Benefits Section -->
+    <section class="partner-benefits" style="background: var(--bg-white);">
         <div class="container">
             <div class="section-header">
                 <h2>What's in It for You as a Partner?</h2>
@@ -1137,10 +1419,11 @@
 
                 <div class="benefit-card">
                     <span class="icon">📅</span>
-                    <h3>Enterprise Calendar Coordination</h3>
-                    <p>Streamline your engagement process with our calendar management tools designed specifically for coordinating complex enterprise transformation projects.</p>
+                    <h3>Booking/Scheduling System</h3>
+                    <p>Partners run their own booking/scheduling systems to coordinate training programs. These systems streamline engagement processes for complex enterprise transformation projects.</p>
                     <div class="benefit-highlight">
-                        ✓ Automated scheduling systems<br>
+                        ✓ Partners manage their own scheduling systems<br>
+                        ✓ Coordinate training program calendars<br>
                         ✓ Multi-stakeholder coordination<br>
                         ✓ Timeline and milestone tracking
                     </div>
@@ -1159,9 +1442,10 @@
 
                 <div class="benefit-card">
                     <span class="icon">🎓</span>
-                    <h3>Training & Certification</h3>
-                    <p>Access comprehensive partner training programs to enhance your skills in AI transformation, assessment methodologies, and enterprise consulting.</p>
+                    <h3>Training Program Coordination</h3>
+                    <p>Partners coordinate training programs and access comprehensive resources to enhance their skills in AI transformation, assessment methodologies, and enterprise consulting.</p>
                     <div class="benefit-highlight">
+                        ✓ Partners coordinate all training programs<br>
                         ✓ Partner certification program<br>
                         ✓ Continuous learning resources<br>
                         ✓ Expert mentorship and support
@@ -1176,6 +1460,102 @@
                         ✓ Partner community forum<br>
                         ✓ Knowledge sharing sessions<br>
                         ✓ Cross-border collaboration
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="icon">📊</span>
+                    <h3>Automated Reporting for Enterprise</h3>
+                    <p>Enterprise customers receive automated reporting for assessments on their product repositories, providing continuous insights and executive-ready analytics.</p>
+                    <div class="benefit-highlight">
+                        ✓ Automated assessment reports (Enterprise only)<br>
+                        ✓ Product repository analytics<br>
+                        ✓ Real-time progress tracking<br>
+                        ✓ Executive-ready dashboards
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Training Section -->
+    <section class="founder-training">
+        <div class="container">
+            <div class="section-header">
+                <h2>Training from Our Founder</h2>
+                <p>Learn directly from Rifat Erdem Sahin, our founder, who personally trains all partners to deliver exceptional consulting services and workshops.</p>
+            </div>
+
+            <div class="training-content">
+                <div class="founder-training-card">
+                    <div class="training-icon">🎓</div>
+                    <h3>Expert-Led Partner Training</h3>
+                    <p>As a Delivery Pilot partner, you'll receive direct training from Rifat Erdem Sahin, the founder with 15+ years of experience in enterprise AI transformation, DevOps, and consulting. This comprehensive training program prepares you to deliver high-quality workshops and consulting services to enterprise customers.</p>
+                    
+                    <div class="training-details">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li><strong>Workshop Facilitation:</strong> Master the art of delivering engaging, impactful AI transformation workshops</li>
+                            <li><strong>Consulting Methodologies:</strong> Learn proven techniques for enterprise consulting and customer engagement</li>
+                            <li><strong>Assessment Frameworks:</strong> Understand how to conduct comprehensive AI readiness assessments</li>
+                            <li><strong>Best Practices:</strong> Gain insights from real-world transformations and case studies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="training-icon">🌐</div>
+                    <h3>Community Building & Peer Learning</h3>
+                    <p>Join our vibrant partner community and stay connected through ongoing learning and collaboration opportunities. We believe in the power of community-driven knowledge sharing.</p>
+                    
+                    <div class="community-channels">
+                        <h4>Stay Connected Through:</h4>
+                        <div class="channel-links">
+                            <a href="https://www.youtube.com/@RifatErdemSahin" target="_blank" rel="noopener noreferrer" class="channel-btn youtube-btn">
+                                <span class="channel-icon">🎥</span>
+                                <div class="channel-info">
+                                    <strong>YouTube Channel</strong>
+                                    <p>Access training videos, workshop demos, and AI transformation insights</p>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rifaterdemsahin/" target="_blank" rel="noopener noreferrer" class="channel-btn linkedin-btn">
+                                <span class="channel-icon">💼</span>
+                                <div class="channel-info">
+                                    <strong>LinkedIn Network</strong>
+                                    <p>Join discussions, share experiences, and connect with fellow partners</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="community-benefits">
+                            <ul>
+                                <li>Regular partner webinars and Q&A sessions</li>
+                                <li>Exclusive content and early access to new materials</li>
+                                <li>Peer learning opportunities with experienced consultants</li>
+                                <li>Community forum for sharing best practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-workshop-card">
+                    <div class="training-icon">🤝</div>
+                    <h3>Post-Workshop Support & Relations</h3>
+                    <p>Building lasting relationships doesn't end when the workshop concludes. We support you in maintaining strong connections with customers and fostering ongoing transformation success.</p>
+                    
+                    <div class="support-details">
+                        <h4>Ongoing Support Includes:</h4>
+                        <ul>
+                            <li><strong>Follow-up Framework:</strong> Structured approach for post-workshop customer engagement and check-ins</li>
+                            <li><strong>Relationship Management:</strong> Tools and templates for maintaining long-term customer relationships</li>
+                            <li><strong>Community Introductions:</strong> Connect your customers to our broader community for peer support</li>
+                            <li><strong>Continuous Learning:</strong> Help customers stay engaged through YouTube content and LinkedIn discussions</li>
+                            <li><strong>Success Tracking:</strong> Monitor customer progress and identify opportunities for additional support</li>
+                            <li><strong>Partner Support:</strong> Access to the founder and partner community for guidance on customer challenges</li>
+                        </ul>
+                    </div>
+
+                    <div class="support-highlight">
+                        <p><strong>📢 Encourage Your Customers:</strong> Guide workshop participants to follow our YouTube channel and LinkedIn for ongoing learning resources, community discussions, and to stay connected with the broader Delivery Pilot ecosystem.</p>
                     </div>
                 </div>
             </div>
@@ -1420,8 +1800,8 @@
                         <li>
                             <span class="icon">📊</span>
                             <div class="content">
-                                <h4>Executive Reporting</h4>
-                                <p>Regular progress reports, ROI tracking, and strategic recommendations for leadership</p>
+                                <h4>Automated Assessment Reporting</h4>
+                                <p>Automated reporting for assessments on product repositories, including regular progress reports, ROI tracking, and strategic recommendations for leadership</p>
                             </div>
                         </li>
                         <li>

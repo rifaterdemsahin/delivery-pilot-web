@@ -16,6 +16,28 @@ Delivery Pilot is a comprehensive PaaS solution that enables enterprises to depl
 - **Expert Support**: 24/7 support from AI transformation experts
 - **Bilingual Support**: Full Turkish and English language support with easy toggle switching
 
+## Marketing Strategy
+
+Delivery Pilot's growth strategy is built on two key pillars:
+
+### Personal Brand Building on YouTube
+The founder, Rifat Erdem Sahin, builds trust and credibility through consistent YouTube content creation, sharing AI transformation insights, DevOps tutorials, and enterprise technology demonstrations. This content-first marketing approach:
+- Establishes thought leadership in AI transformation
+- Generates inbound leads through educational content
+- Reduces sales cycles by building trust before sales conversations
+- Creates authentic connections with potential enterprise clients
+
+Learn more on the [Founder page](founder.html).
+
+### Scalable Partner Network for Enterprise Sales
+Rather than building a large internal sales force, Delivery Pilot leverages a scalable partner network model:
+- **Geographic Scalability**: Partners enable expansion across multiple markets without regional offices
+- **Capacity Scalability**: Multiple partners can serve enterprise customers simultaneously
+- **Relationship Scalability**: Partners leverage existing enterprise relationships for faster sales cycles
+- **Enterprise Sales Efficiency**: Partners handle complex procurement processes and stakeholder coordination
+
+Learn more on the [Partners page](partners.html).
+
 ## Getting Started
 
 Simply open `index.html` in a web browser to view the website locally.
