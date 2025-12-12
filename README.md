@@ -29,20 +29,101 @@ To host this website:
 3. **Vercel**: Import your repository and deploy
 4. **Traditional Hosting**: Upload files to any web server
 
+## Site Structure and Page Links
+
+All pages are hosted on the **deliverpilot.net** domain. Below is the complete site structure organized by category:
+
+### 🏠 Core Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **Homepage** | https://deliverpilot.net/ | Main landing page showcasing the AI transformation platform with hero section, features, and use cases |
+| **Assessment** | https://deliverpilot.net/assesment.html | Interactive AI readiness assessment tool for enterprises |
+| **Dashboard** | https://deliverpilot.net/dashboard.html | User dashboard to view and manage AI transformation assessments |
+| **Sign In** | https://deliverpilot.net/signin.html | User authentication page for accessing the dashboard |
+
+### 💻 Platform & Services
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **Onboarding** | https://deliverpilot.net/onboarding.html | Step-by-step guide for getting started with the platform |
+| **Agile Transformation** | https://deliverpilot.net/agile-transformation.html | Agile methodology and transformation services |
+| **Pricing** | https://deliverpilot.net/pricing.html | Pricing plans and packages for the platform |
+
+### 🏢 Company Information
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **Founder** | https://deliverpilot.net/founder.html | Information about the company founder and vision |
+| **Success Stories** | https://deliverpilot.net/success-stories.html | Case studies and client success stories |
+| **Transformations** | https://deliverpilot.net/transformations.html | Examples of successful AI transformations |
+| **Partners** | https://deliverpilot.net/partners.html | Strategic partners and integrations |
+| **Previous Customers** | https://deliverpilot.net/previous-customers.html | Showcase of previous clients and testimonials |
+
+### 📚 Resources & Support
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **FAQ** | https://deliverpilot.net/faq.html | Frequently asked questions about the platform |
+| **Contact** | https://deliverpilot.net/contact.html | Contact form and information for getting in touch |
+
+### 🧪 Development & Testing
+
+| Page | Description |
+|------|-------------|
+| **test-menu.html** | Testing page for navigation menu components (not in production) |
+
 ## Project Structure
 
 ```
 delivery-pilot-web/
-├── index.html              # Main HTML file (homepage)
-├── onboarding.html         # Onboarding page
-├── assesment.html          # Assessment page
+├── index.html              # Main homepage with hero section and features
+├── assesment.html          # AI readiness assessment tool
+├── onboarding.html         # Platform onboarding guide
+├── agile-transformation.html # Agile transformation services
+├── dashboard.html          # User dashboard for assessments
+├── signin.html             # User authentication page
+├── pricing.html            # Pricing plans and packages
+├── founder.html            # Founder information and vision
+├── success-stories.html    # Client success stories and case studies
+├── transformations.html    # AI transformation examples
+├── partners.html           # Strategic partners showcase
+├── previous-customers.html # Previous clients testimonials
+├── faq.html                # Frequently asked questions
+├── contact.html            # Contact form and information
+├── test-menu.html          # Menu testing page (development only)
 ├── styles.css              # Main stylesheet
-├── onboarding-styles.css   # Onboarding page styles
-├── script.js               # JavaScript for interactivity
+├── onboarding-styles.css   # Onboarding page specific styles
+├── script.js               # Main JavaScript for interactivity and i18n
+├── menu.js                 # Reusable navigation and footer components
 ├── sitemap.xml             # XML sitemap for search engines
 ├── robots.txt              # Robots.txt for crawler directives
 └── README.md               # Documentation
 ```
+
+### Navigation Structure
+
+The site uses a hierarchical navigation menu defined in `menu.js`:
+
+- **Home** → Main landing page
+- **Platform** (dropdown)
+  - Features → Platform capabilities and features
+  - How It Works → Process and methodology
+  - Use Cases → Industry-specific applications
+- **Services** (dropdown)
+  - Onboarding → Getting started guide
+  - Agile Transformation → Agile services
+- **Pricing** → Plans and pricing
+- **Company** (dropdown)
+  - About → Company information
+  - Success Stories → Case studies
+  - FAQ → Common questions
+  - Founder → Founder profile
+  - Transformations → Transformation examples
+  - Partners → Partner ecosystem
+- **Contact** → Get in touch
+- **Sign In** → User authentication
+- **Get Started** → Begin assessment (CTA button)
 
 ## SEO Features
 
