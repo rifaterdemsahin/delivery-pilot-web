@@ -46,26 +46,26 @@ All pages are hosted on the **deliverpilot.net** domain. Below is the complete s
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Onboarding** | https://deliverpilot.net/onboarding.html | Step-by-step guide for getting started with the platform |
-| **Agile Transformation** | https://deliverpilot.net/agile-transformation.html | Agile methodology and transformation services |
-| **Pricing** | https://deliverpilot.net/pricing.html | Pricing plans and packages for the platform |
+| **Onboarding** | https://deliverypilot.net/onboarding.html | Step-by-step guide for getting started with the platform |
+| **Agile Transformation** | https://deliverypilot.net/agile-transformation.html | Agile methodology and transformation services |
+| **Pricing** | https://deliverypilot.net/pricing.html | Pricing plans and packages for the platform |
 
 ### 🏢 Company Information
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Founder** | https://deliverpilot.net/founder.html | Information about the company founder and vision |
-| **Success Stories** | https://deliverpilot.net/success-stories.html | Case studies and client success stories |
-| **Transformations** | https://deliverpilot.net/transformations.html | Examples of successful AI transformations |
-| **Partners** | https://deliverpilot.net/partners.html | Strategic partners and integrations |
-| **Previous Customers** | https://deliverpilot.net/previous-customers.html | Showcase of previous clients and testimonials |
+| **Founder** | https://deliverypilot.net/founder.html | Information about the company founder and vision |
+| **Success Stories** | https://deliverypilot.net/success-stories.html | Case studies and client success stories |
+| **Transformations** | https://deliverypilot.net/transformations.html | Examples of successful AI transformations |
+| **Partners** | https://deliverypilot.net/partners.html | Strategic partners and integrations |
+| **Previous Customers** | https://deliverypilot.net/previous-customers.html | Showcase of previous clients and testimonials |
 
 ### 📚 Resources & Support
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **FAQ** | https://deliverpilot.net/faq.html | Frequently asked questions about the platform |
-| **Contact** | https://deliverpilot.net/contact.html | Contact form and information for getting in touch |
+| **FAQ** | https://deliverypilot.net/faq.html | Frequently asked questions about the platform |
+| **Contact** | https://deliverypilot.net/contact.html | Contact form and information for getting in touch |
 
 ### 🧪 Development & Testing
 
