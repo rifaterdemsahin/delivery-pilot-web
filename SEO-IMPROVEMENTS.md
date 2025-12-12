@@ -41,7 +41,7 @@ The website has been optimized for search engines with comprehensive meta tags, 
 - **Description**: Focuses on PaaS, AI transformation, deployment, and security
 - **Keywords**: AI transformation, enterprise AI, PaaS, AI platform, AI deployment
 
-#### Assessment Page (assesment.html)
+#### Assessment Page (assessment.html)
 - **Title**: "AI Tools Workshop Maturity Assessment | Delivery Pilot"
 - **Description**: Highlights 48 questions, personalized roadmap, and workshop readiness
 - **Keywords**: AI assessment, AI maturity, workshop assessment, AI tools evaluation

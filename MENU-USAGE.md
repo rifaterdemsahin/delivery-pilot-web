@@ -143,7 +143,7 @@ The following pages now use the reusable menu system:
 **Note:** The following pages intentionally do NOT use the standard navigation:
 - `dashboard.html` - Has custom dashboard header
 - `signin.html` - Minimal page with no standard navigation
-- `assesment.html` - Standalone assessment page
+- `assessment.html` - Standalone assessment page
 
 ## Troubleshooting
 
