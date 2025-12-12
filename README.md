@@ -196,9 +196,20 @@ translations.tr.hero.title = "İşletmenizi Yapay Zeka ile Dönüştürün"
 - Safari (latest)
 - Edge (latest)
 
+## Best Practices
+
+For comprehensive coding standards and best practices, see [copilot.md](copilot.md). This guide covers:
+- HTML, CSS, and JavaScript best practices
+- SEO optimization techniques
+- Security guidelines
+- Performance optimization
+- Accessibility standards
+- Development workflow
+- Quality assurance checklist
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please read [copilot.md](copilot.md) for our coding standards and best practices before submitting a Pull Request.
 
 ## License
 
