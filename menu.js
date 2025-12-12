@@ -52,7 +52,7 @@ const navigationConfig = {
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
-        { href: 'https://deliverypilot.net/assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
+        { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
     ]
 };
 
@@ -91,8 +91,6 @@ const footerConfig = {
                 { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
-                { type: 'link', href: 'previous-customers.html', textKey: 'footer.company.previousCustomers', text: 'Previous Customers' },
-                { type: 'link', href: '#', textKey: 'footer.company.careers', text: 'Careers' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
             ]
         },
@@ -100,9 +98,6 @@ const footerConfig = {
             title: 'Resources',
             titleKey: 'footer.resources.title',
             content: [
-                { type: 'link', href: '#', textKey: 'footer.resources.documentation', text: 'Documentation' },
-                { type: 'link', href: '#', textKey: 'footer.resources.blog', text: 'Blog' },
-                { type: 'link', href: '#', textKey: 'footer.resources.support', text: 'Support' }
             ]
         }
     ],
