@@ -24,3 +24,5 @@
 - [ ] **Create Vision Page** (Missing from root, needed for nav)
 - [ ] **Refine Dashboard Page** (Enhance UI/UX)
 - [ ] **Complete "Formula" Migration** (Move guides to `4_formula`)
+- [ ] Get started form Get Started with Delivery Pilot
+- [ ] 

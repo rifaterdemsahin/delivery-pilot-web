@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Redirecting...</title>
+    <script>
+        // Smart Redirect for GitHub Pages
+        // This script checks if the requested page exists in the 5_Symbols directory
+        (function() {
+            var currentPath = window.location.pathname;
+            
+            // Remove leading slash if present for easier processing
+            var pathSegment = currentPath.startsWith('/') ? currentPath.slice(1) : currentPath;
+            
+            // If path is empty, it's the root, redirect to 5_Symbols/index.html
+            // (Note: The root index.html should handle this, but just in case)
+            if (!pathSegment || pathSegment === 'index.html') {
+                window.location.replace('/5_Symbols/index.html');
+                return;
+            }
+
+            // If the path already starts with 5_Symbols, do nothing (true 404)
+            if (pathSegment.startsWith('5_Symbols/')) {
+                return;
+            }
+
+            // Detailed redirect mapping for specific known pages if names changed
+            // Currently names are the same, just moved.
+            
+            // Default behavior: try to find the file in 5_Symbols
+            // e.g., /about.html -> /5_Symbols/about.html
+            // e.g., /pages/about.html -> /5_Symbols/about.html (stripping 'pages/')
+            
+            var newPath = '5_Symbols/';
+            
+            if (pathSegment.startsWith('pages/')) {
+                 newPath += pathSegment.replace('pages/', '');
+            } else {
+                 newPath += pathSegment;
+            }
+            
+            // Redirect
+            window.location.replace('/' + newPath + window.location.search + window.location.hash);
+        })();
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h1 { margin-bottom: 0.5rem; color: #333; }
+        p { color: #666; }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Redirecting...</h1>
+        <p>We've moved our files to a new structure. Sending you to the right place.</p>
+        <p><small>If you are not redirected automatically, <a href="/5_Symbols/index.html">click here</a>.</small></p>
+    </div>
+</body>
+</html>
