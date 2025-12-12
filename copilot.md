@@ -17,7 +17,7 @@ This document outlines the best practices implemented in the Delivery Pilot Web 
 - **HTML Files**: Use kebab-case (`agile-transformation.html`, `success-stories.html`)
 - **JavaScript Files**: Use kebab-case (`script.js`, `menu.js`)
 - **CSS Files**: Use kebab-case (`styles.css`, `onboarding-styles.css`)
-- **Documentation**: Use UPPERCASE with hyphens (`README.md`, `SEO-IMPROVEMENTS.md`)
+- **Documentation**: Use UPPERCASE words with hyphens between words (`README.md`, `SEO-IMPROVEMENTS.md`, `MENU-USAGE.md`)
 
 ---
 
@@ -86,7 +86,7 @@ Use CSS custom properties for consistent theming:
 
 ### Responsive Design
 - **Mobile-First Approach**: Base styles for mobile, then add media queries
-- **Media Queries**: Use breakpoints at 768px and 480px
+- **Media Queries**: Use breakpoints at 480px (mobile), 768px (tablet), and 1024px (desktop)
 - **Flexible Layouts**: Use CSS Grid and Flexbox
 - **Responsive Units**: Use rem, em, and percentages over fixed pixels
 
@@ -706,11 +706,12 @@ Run `./sanity-check.sh` to verify:
 ## 20. Continuous Improvement
 
 ### Regular Maintenance Tasks
-- **Monthly**: Review and update dependencies
+- **Monthly**: Review and apply security updates to dependencies
 - **Monthly**: Check for broken links
 - **Quarterly**: Review analytics and performance metrics
 - **Quarterly**: Update documentation
-- **Annually**: Major dependency updates
+- **Quarterly**: Review and update non-security dependencies
+- **Annually**: Major version dependency updates
 - **Annually**: Accessibility audit
 
 ### Staying Current
@@ -775,7 +776,13 @@ Use defined CSS variables:
 
 ### Typography
 - Base font size: 16px (1rem)
-- Heading scale: h1 (3rem), h2 (2.5rem), h3 (1.5rem)
+- Heading scale: 
+  - h1: 3rem (48px)
+  - h2: 2.5rem (40px)
+  - h3: 1.5rem (24px)
+  - h4: 1.25rem (20px)
+  - h5: 1.125rem (18px)
+  - h6: 1rem (16px)
 - Line height: 1.6 for body text, 1.2 for headings
 
 ---
