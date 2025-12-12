@@ -234,30 +234,38 @@
         
         // Demo login handler
         demoButton.addEventListener('click', async () => {
-            // Hide error message
-            errorMessage.classList.remove('show');
-            errorMessage.textContent = '';
-            
-            // Disable button during processing
-            demoButton.disabled = true;
-            demoButton.textContent = 'Loading demo...';
-            
-            // Simulate API call delay
-            await new Promise(resolve => setTimeout(resolve, 500));
-            
-            // Use the first demo user (Enterprise A)
-            const user = demoUsers[0];
-            
-            // Store session
-            sessionStorage.setItem('currentUser', JSON.stringify({
-                email: user.email,
-                name: user.name,
-                id: user.id,
-                loginTime: new Date().toISOString()
-            }));
-            
-            // Redirect to dashboard
-            window.location.href = 'dashboard.html';
+            try {
+                // Hide error message
+                errorMessage.classList.remove('show');
+                errorMessage.textContent = '';
+                
+                // Disable button during processing
+                demoButton.disabled = true;
+                demoButton.textContent = 'Loading demo...';
+                
+                // Simulate API call delay
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Use the first demo user (Enterprise A)
+                const user = demoUsers[0];
+                
+                // Store session
+                sessionStorage.setItem('currentUser', JSON.stringify({
+                    email: user.email,
+                    name: user.name,
+                    id: user.id,
+                    loginTime: new Date().toISOString()
+                }));
+                
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                // Show error and restore button
+                errorMessage.textContent = 'Demo login failed. Please try again.';
+                errorMessage.classList.add('show');
+                demoButton.disabled = false;
+                demoButton.textContent = '🚀 Try Demo Login';
+            }
         });
         
         form.addEventListener('submit', async (e) => {
