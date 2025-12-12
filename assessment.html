@@ -73,22 +73,8 @@
         answered: "answered",
         complete: "complete",
         category: "Category",
-        exportButton: "📥 Export Results (JSON)",
-        resultsTitle: "Assessment Complete!",
-        resultsSubtitle: "Your personalized workshop readiness report",
-        overallReadiness: "Overall Readiness",
-        categoryScores: "Category Scores",
-        priorityFocusAreas: "Priority Focus Areas",
-        learningRoadmap: "Your Learning Roadmap",
-        startNewAssessment: "Start New Assessment",
-        priorityLabels: {
-          Critical: "Critical",
-          High: "High"
-        },
-        priority: "Priority",
-        score: "Score",
-        focus: "Focus",
-        phase: "Phase"
+        printButton: "📄 Print Results",
+        workshopMessage: "The report will be sent to your email. This assessment will be used in the workshops."
       },
       tr: {
         title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
@@ -98,10 +84,10 @@
         raiseDescription: "Bu değerlendirme, teslimat boşluklarınızı belirlemenize yardımcı olur ve bulunduğunuz yer ile yapay zekanın sizi olmanızı istediği yer arasındaki beceri boşluğunu kapatmak için kişiselleştirilmiş bir yol haritası oluşturur.",
         prereqTitle: "Atölye Ön Koşulları",
         prereqItems: [
-          "✅ Kararlı internet bağlantısı (hız ve gecikmeyi kontrol edin)",
-          "🖥️ Çoklu ekran kurulumu önerilir",
-          "🎧 Çalışan ses sistemi",
-          "⏱️ Unutmayın: Her saat 5 dakika mola + 1 saat öğle yemeği"
+          "✅ Stable internet connection (check speed & latency)",
+          "🖥️ Multi-screen setup recommended",
+          "🎧 Working audio setup",
+          "⏱️ Remember: 5-minute breaks every hour + 1-hour lunch"
         ],
         namePlaceholder: "👤 Adınız",
         orgPlaceholder: "🏢 Organizasyon",
@@ -123,7 +109,6 @@
         answered: "cevaplandı",
         complete: "tamamlandı",
         category: "Kategori",
-        exportButton: "📥 Sonuçları Dışa Aktar (JSON)",
         resultsTitle: "Değerlendirme Tamamlandı!",
         resultsSubtitle: "Kişiselleştirilmiş atölye hazırlık raporunuz",
         overallReadiness: "Genel Hazırlık",
@@ -138,7 +123,9 @@
         priority: "Öncelik",
         score: "Puan",
         focus: "Odak",
-        phase: "Faz"
+        phase: "Faz",
+        printButton: "📄 Sonuçları Yazdır",
+        workshopMessage: "Rapor e-postanıza gönderilecektir. Bu değerlendirme atölyelerde kullanılacaktır."
       }
     };
 
@@ -423,14 +410,8 @@
         }
       };
 
-      const exportData = () => {
-        const data = prepareAssessmentData();
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `workshop-assessment-${userInfo.name.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.json`;
-        a.click();
+      const printResults = () => {
+        window.print();
       };
 
       React.useEffect(() => {
@@ -690,9 +671,13 @@
                     </div>
                   </div>
 
+                  <div className="text-center p-4 bg-gray-100 rounded-lg mb-6">
+                    <p className="text-sm text-gray-700">{t.workshopMessage}</p>
+                  </div>
+
                   <div className="flex gap-4">
-                    <button onClick={exportData} className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold hover:opacity-90 transition">
-                      {t.exportButton}
+                    <button onClick={printResults} className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold hover:opacity-90 transition">
+                      {t.printButton}
                     </button>
                     <button onClick={resetAssessment} className="flex-1 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg font-bold hover:opacity-90 transition">
                       🔄 {t.startNewAssessment}
