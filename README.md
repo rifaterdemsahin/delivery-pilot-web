@@ -59,10 +59,10 @@ All pages are hosted on the **deliverpilot.net** domain. Below is the complete s
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Homepage** | https://deliverpilot.net/ | Main landing page showcasing the AI transformation platform with hero section, features, and use cases |
-| **Assessment** | https://deliverpilot.net/assessment.html | Interactive AI readiness assessment tool for enterprises |
-| **Dashboard** | https://deliverpilot.net/dashboard.html | User dashboard to view and manage AI transformation assessments |
-| **Sign In** | https://deliverpilot.net/signin.html | User authentication page for accessing the dashboard |
+| **Homepage** | https://deliverypilot.net/ | Main landing page showcasing the AI transformation platform with hero section, features, and use cases |
+| **Assessment** | https://deliverypilot.net/assessment.html | Interactive AI readiness assessment tool for enterprises |
+| **Dashboard** | https://deliverypilot.net/dashboard.html | User dashboard to view and manage AI transformation assessments |
+| **Sign In** | https://deliverypilot.net/signin.html | User authentication page for accessing the dashboard |
 
 ### 💻 Platform & Services
 
