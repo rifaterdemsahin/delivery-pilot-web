@@ -113,6 +113,11 @@
           printButton: "📄 Print Results",
           workshopMessage:
             "The report will be sent to your email. This assessment will be used in the workshops.",
+          loadingTitle: "Processing Your Assessment...",
+          loadingMessage: "Please wait while we save your results and generate your personalized report.",
+          loadingSubmitting: "Submitting your assessment",
+          loadingGenerating: "Generating your report",
+          loadingAlmostDone: "Almost done...",
         },
         tr: {
           title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
@@ -169,6 +174,11 @@
           printButton: "📄 Sonuçları Yazdır",
           workshopMessage:
             "Rapor e-postanıza gönderilecektir. Bu değerlendirme atölyelerde kullanılacaktır.",
+          loadingTitle: "Değerlendirmeniz İşleniyor...",
+          loadingMessage: "Sonuçlarınızı kaydederken ve kişiselleştirilmiş raporunuzu oluştururken lütfen bekleyin.",
+          loadingSubmitting: "Değerlendirmeniz gönderiliyor",
+          loadingGenerating: "Raporunuz oluşturuluyor",
+          loadingAlmostDone: "Neredeyse tamamlandı...",
         },
       };
 
@@ -1398,6 +1408,7 @@
         const [currentQ, setCurrentQ] = useState(0);
         const [language, setLanguage] = useState("en");
         const [submitted, setSubmitted] = useState(false);
+        const [loadingStep, setLoadingStep] = useState(0);
 
         const t = translations[language];
         const categories = categoriesData[language];
@@ -1655,14 +1666,42 @@
         };
 
         React.useEffect(() => {
-          if (step === "results" && !submitted) {
-            const data = prepareAssessmentData();
-            submitToN8n(data).catch((err) =>
-              console.error("Auto-submit failed:", err)
-            );
-            setSubmitted(true);
+          if (step === "loading" && !submitted) {
+            const submitData = async () => {
+              try {
+                // Step 1: Show submitting message
+                setLoadingStep(1);
+                const data = prepareAssessmentData();
+                
+                // Step 2: Submit to n8n
+                await new Promise(resolve => setTimeout(resolve, 800)); // Brief delay for UX
+                const success = await submitToN8n(data);
+                
+                // Step 3: Show generating message
+                setLoadingStep(2);
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
+                // Step 4: Show almost done message
+                setLoadingStep(3);
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                setSubmitted(true);
+                
+                // Step 5: Move to results
+                setTimeout(() => {
+                  setStep("results");
+                }, 300);
+              } catch (err) {
+                console.error("Submission failed:", err);
+                // Still show results even if submission fails
+                setSubmitted(true);
+                setStep("results");
+              }
+            };
+            
+            submitData();
           }
-        }, [step, submitted, userInfo, answers, language]);
+        }, [step, submitted]);
 
         React.useEffect(() => {
           const navWrapper = document.getElementById("nav-wrapper");
@@ -1918,13 +1957,59 @@
                       </button>
                     ) : (
                       <button
-                        onClick={() => setStep("results")}
+                        onClick={() => setStep("loading")}
                         className="flex-1 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition"
                       >
                         {t.finishButton}
                       </button>
                     )}
                   </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (step === "loading") {
+          const loadingMessages = [
+            t.loadingSubmitting,
+            t.loadingGenerating,
+            t.loadingAlmostDone
+          ];
+
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
+              <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-white text-center">
+                <div className="mb-6">
+                  <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mb-4"></div>
+                  <h2 className="text-2xl font-bold mb-2">{t.loadingTitle}</h2>
+                  <p className="text-purple-200 text-sm">{t.loadingMessage}</p>
+                </div>
+                
+                <div className="space-y-3">
+                  {loadingMessages.map((msg, idx) => (
+                    <div 
+                      key={idx}
+                      className={`flex items-center gap-3 p-3 rounded-lg transition-all ${
+                        loadingStep > idx 
+                          ? "bg-green-500/30 border-2 border-green-400" 
+                          : loadingStep === idx + 1
+                          ? "bg-purple-500/30 border-2 border-purple-400 animate-pulse"
+                          : "bg-white/5 border-2 border-white/10"
+                      }`}
+                    >
+                      {loadingStep > idx ? (
+                        <span className="text-2xl">✅</span>
+                      ) : loadingStep === idx + 1 ? (
+                        <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>
+                      ) : (
+                        <span className="text-2xl opacity-30">⏳</span>
+                      )}
+                      <span className={`text-sm ${loadingStep >= idx + 1 ? "font-semibold" : "opacity-50"}`}>
+                        {msg}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
