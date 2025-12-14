@@ -247,21 +247,22 @@
             <!-- Enterprise Plan -->
             <div class="pricing-card">
                 <h3 data-i18n="pricing.enterprise.title">Enterprise</h3>
-                <p class="plan-name" data-i18n="pricing.enterprise.subtitle">Team Enterprise-wise AI Adaptation Assessment</p>
-                <div class="price" style="font-size: 2rem;" data-i18n="pricing.enterprise.price">Request Quote</div>
-                <p class="price-subtext" data-i18n="pricing.enterprise.priceText">custom pricing</p>
+                <p class="plan-name" data-i18n="pricing.enterprise.subtitle">Monthly Subscription for AI Code Transformation</p>
+                <div class="price">€30</div>
+                <p class="price-subtext" data-i18n="pricing.enterprise.priceText">per month for 100k LOC</p>
                 <ul class="features-list">
-                    <li data-icon="🤖" data-i18n="pricing.enterprise.feature1">Enterprise data source integration</li>
-                    <li data-icon="👥" data-i18n="pricing.enterprise.feature2">Team assessment included</li>
-                    <li data-icon="📊" data-i18n="pricing.enterprise.feature3">Production-ready solution from workshops</li>
-                    <li data-icon="🎯" data-i18n="pricing.enterprise.feature4">10-workshop roadmap: Complete AI-enabled delivery transformation</li>
-                    <li data-icon="🚀" data-i18n="pricing.enterprise.feature5">Journey from vibe programming to agentic framework implementation</li>
-                    <li data-icon="💻" data-i18n="pricing.enterprise.feature6">Git repositories ready and running on GitHub Codespaces</li>
-                    <li data-icon="🗺️" data-i18n="pricing.enterprise.feature7">Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation</li>
-                    <li data-icon="📚" data-i18n="pricing.enterprise.feature8">Complete documentation</li>
-                    <li data-icon="⚡" data-i18n="pricing.enterprise.feature9">Priority support</li>
-                    <li data-icon="🔄" data-i18n="pricing.enterprise.feature10">Integration guidance</li>
-                    <li data-icon="📞" data-i18n="pricing.enterprise.feature11">Direct access to expert</li>
+                    <li data-icon="💰" data-i18n="pricing.enterprise.feature0"><strong>Revenue Model:</strong> Monthly subscription</li>
+                    <li data-icon="🆓" data-i18n="pricing.enterprise.feature1">Free for public (open source) projects < 100MB</li>
+                    <li data-icon="📏" data-i18n="pricing.enterprise.feature2">Tiered pricing based on lines of code analyzed</li>
+                    <li data-icon="🤖" data-i18n="pricing.enterprise.feature3">Enterprise data source integration</li>
+                    <li data-icon="👥" data-i18n="pricing.enterprise.feature4">Team assessment included</li>
+                    <li data-icon="📊" data-i18n="pricing.enterprise.feature5">Production-ready solution from workshops</li>
+                    <li data-icon="🎯" data-i18n="pricing.enterprise.feature6">10-workshop roadmap: Complete AI-enabled delivery transformation</li>
+                    <li data-icon="🚀" data-i18n="pricing.enterprise.feature7">Journey from vibe programming to agentic framework implementation</li>
+                    <li data-icon="💻" data-i18n="pricing.enterprise.feature8">Git repositories ready and running on GitHub Codespaces</li>
+                    <li data-icon="🗺️" data-i18n="pricing.enterprise.feature9">Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation</li>
+                    <li data-icon="📚" data-i18n="pricing.enterprise.feature10">Complete documentation</li>
+                    <li data-icon="⚡" data-i18n="pricing.enterprise.feature11">Priority support</li>
                 </ul>
                 <a href="https://deliverypilot.net/assessment.html" class="pricing-cta" data-i18n="pricing.enterprise.cta">📅 Schedule Interview</a>
             </div>
@@ -315,8 +316,20 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Enterprise - Custom Solutions",
-              "description": "Enterprise data source integration with team assessment and production-ready solutions"
+              "name": "Enterprise - Monthly Subscription",
+              "description": "Monthly subscription for AI code transformation. Free for public (open source) projects smaller than 100MB. Tiered pricing based on lines of code analyzed for private projects."
+            },
+            "price": "30",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "30",
+              "priceCurrency": "EUR",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "100000",
+                "unitText": "lines of code"
+              }
             },
             "availability": "https://schema.org/InStock"
           }
