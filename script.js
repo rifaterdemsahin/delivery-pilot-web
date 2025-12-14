@@ -202,6 +202,9 @@ const translations = {
                 feature5: "Post-implementation support",
                 feature6: "Hotel & travel billed separately",
                 feature7: "One-to-many format: multiple consultants for bigger groups",
+                feature8: "Production-ready solution from workshops",
+                feature9: "10-workshop roadmap: Complete AI-enabled delivery transformation",
+                feature10: "Journey from vibe programming to agentic framework implementation",
                 cta: "📅 Schedule Interview"
             },
             enterprise: {
@@ -214,13 +217,10 @@ const translations = {
                 feature2: "Tiered pricing based on lines of code analyzed",
                 feature3: "Enterprise data source integration",
                 feature4: "Team assessment included",
-                feature5: "Production-ready solution from workshops",
-                feature6: "10-workshop roadmap: Complete AI-enabled delivery transformation",
-                feature7: "Journey from vibe programming to agentic framework implementation",
-                feature8: "Git repositories ready and running on GitHub Codespaces",
-                feature9: "Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation",
-                feature10: "Complete documentation",
-                feature11: "Priority support",
+                feature5: "Git repositories ready and running on GitHub Codespaces",
+                feature6: "Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation",
+                feature7: "Complete documentation",
+                feature8: "Priority support",
                 cta: "📅 Schedule Interview"
             }
         },
@@ -916,6 +916,9 @@ const translations = {
                 feature5: "Uygulama sonrası destek",
                 feature6: "Otel ve seyahat ayrı faturalandırılır",
                 feature7: "Bire-çok format: daha büyük gruplar için çoklu danışmanlar",
+                feature8: "Atölyelerden üretime hazır çözüm",
+                feature9: "10 atölye yol haritası: Yapay zeka destekli tam teslimat dönüşümü",
+                feature10: "Vibe programlamadan agentic framework uygulamasına yolculuk",
                 cta: "📅 Görüşme Planla"
             },
             enterprise: {
@@ -928,13 +931,10 @@ const translations = {
                 feature2: "Analiz edilen kod satırlarına göre kademeli fiyatlandırma",
                 feature3: "Kurumsal veri kaynağı entegrasyonu",
                 feature4: "Ekip değerlendirmesi dahil",
-                feature5: "Atölyelerden üretime hazır çözüm",
-                feature6: "10 atölye yol haritası: Yapay zeka destekli tam teslimat dönüşümü",
-                feature7: "Vibe programlamadan agentic framework uygulamasına yolculuk",
-                feature8: "GitHub Codespaces'te hazır ve çalışır durumda git repoları",
-                feature9: "Kurumsal yol haritası: Değerlendirme → Teslimat → Beceri Boşluğu Belirleme → Yapay Zeka Dönüşümü",
-                feature10: "Eksiksiz dokümantasyon",
-                feature11: "Öncelikli destek",
+                feature5: "GitHub Codespaces'te hazır ve çalışır durumda git repoları",
+                feature6: "Kurumsal yol haritası: Değerlendirme → Teslimat → Beceri Boşluğu Belirleme → Yapay Zeka Dönüşümü",
+                feature7: "Eksiksiz dokümantasyon",
+                feature8: "Öncelikli destek",
                 cta: "📅 Görüşme Planla"
             }
         },
