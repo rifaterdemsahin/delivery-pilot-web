@@ -117,7 +117,7 @@ Delivery Pilot's go-to-market strategy focuses on establishing market leadership
    - Open-source contributions to AI tools
    - Code samples and templates for common use cases
 
-4. **Content Topics** (Top 10 AI Courses):
+4. **Content Topics** (Top 10 AI Focus Areas):
    - Vibe Programming and non-deterministic development
    - Explainable AI (XAI)
    - AGI and ASI fundamentals
@@ -328,7 +328,7 @@ Delivery Pilot's go-to-market strategy focuses on establishing market leadership
 |------|-------|--------|-----------|
 | **Prosumer** | $50/assessment | Individuals | Lead generation, funnel entry |
 | **Workshops** | £500/consultant/day | Teams | Core revenue, mid-market |
-| **Enterprise** | Custom | Large orgs | Strategic partnerships, high-value |
+| **Enterprise** | Quote required (typically £25,000+) | Large orgs | Strategic partnerships, high-value |
 
 ### 5.2 Pricing Considerations
 
