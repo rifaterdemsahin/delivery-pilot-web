@@ -70,7 +70,7 @@ Delivery Pilot's go-to-market strategy focuses on establishing market leadership
 
 ### 2.2 Competitive Differentiation
 
-| Feature | Delivery Pilot | Traditional Training (Coursera, Udemy) | Consulting Firms (Big 4) |
+| Feature | Delivery Pilot | Traditional Training Platforms | Consulting Firms (Big 4) |
 |---------|----------------|----------------------------------------|--------------------------|
 | **Implementation Focus** | ✅ Git-based outputs | ❌ Theory only | ⚠️ Varies |
 | **3-Stage Journey** | ✅ Assess → Train → Implement | ❌ Training only | ⚠️ Custom |

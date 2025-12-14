@@ -124,7 +124,7 @@ The 3-stage transformation model:
 **Critical Evaluation**:
 - ✅ **STRONG**: Focus on practical outputs (Git repos) vs. just theory
 - ✅ **DIFFERENTIATING**: "Vibe Programming" concept is unique
-- ⚠️ **UNCLEAR**: How is this different from Coursera, Udemy, or LinkedIn Learning + consulting?
+- ⚠️ **UNCLEAR**: How is this different from traditional online learning platforms + consulting?
 - ⚠️ **ASSUMPTION**: Assumes "vibe programming" terminology will resonate with buyers
 
 **Value Proposition Grade**: B+ (Strong but needs clearer differentiation from competitors)
@@ -296,7 +296,7 @@ The 3-stage transformation model:
 
 #### Premise 2: "Organizations will pay for AI upskilling at these price points"
 **Analysis**:
-- **Prosumer ($50)**: Comparable to Udemy courses, LinkedIn Premium
+- **Prosumer ($50)**: Comparable to online courses, LinkedIn Premium
 - **Workshops (£500/day)**: Below typical consulting rates (£1000-2000/day)
 - **Enterprise (Custom)**: Market-standard for transformation programs
 - **Verdict**: ✅ Pricing is competitive but may be undervalued
