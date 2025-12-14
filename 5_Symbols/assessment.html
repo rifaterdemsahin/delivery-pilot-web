@@ -113,6 +113,11 @@
           printButton: "📄 Print Results",
           workshopMessage:
             "The report will be sent to your email. This assessment will be used in the workshops.",
+          loadingTitle: "Processing Your Assessment...",
+          loadingMessage: "Please wait while we save your results and generate your personalized report.",
+          loadingSubmitting: "Submitting your assessment",
+          loadingGenerating: "Generating your report",
+          loadingAlmostDone: "Almost done...",
         },
         tr: {
           title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
@@ -169,6 +174,11 @@
           printButton: "📄 Sonuçları Yazdır",
           workshopMessage:
             "Rapor e-postanıza gönderilecektir. Bu değerlendirme atölyelerde kullanılacaktır.",
+          loadingTitle: "Değerlendirmeniz İşleniyor...",
+          loadingMessage: "Sonuçlarınızı kaydederken ve kişiselleştirilmiş raporunuzu oluştururken lütfen bekleyin.",
+          loadingSubmitting: "Değerlendirmeniz gönderiliyor",
+          loadingGenerating: "Raporunuz oluşturuluyor",
+          loadingAlmostDone: "Neredeyse tamamlandı...",
         },
       };
 
@@ -1386,6 +1396,12 @@
       };
 
       function WorkshopAssessment() {
+        // Loading animation timing constants (in milliseconds)
+        const LOADING_STAGE_1_DELAY = 800;
+        const LOADING_STAGE_2_DELAY = 800;
+        const LOADING_STAGE_3_DELAY = 500;
+        const LOADING_FINAL_DELAY = 300;
+
         const [step, setStep] = useState("intro");
         const [userInfo, setUserInfo] = useState({
           name: "",
@@ -1398,6 +1414,7 @@
         const [currentQ, setCurrentQ] = useState(0);
         const [language, setLanguage] = useState("en");
         const [submitted, setSubmitted] = useState(false);
+        const [loadingStep, setLoadingStep] = useState(0);
 
         const t = translations[language];
         const categories = categoriesData[language];
@@ -1655,14 +1672,46 @@
         };
 
         React.useEffect(() => {
-          if (step === "results" && !submitted) {
-            const data = prepareAssessmentData();
-            submitToN8n(data).catch((err) =>
-              console.error("Auto-submit failed:", err)
-            );
-            setSubmitted(true);
+          if (step === "loading" && !submitted) {
+            const submitData = async () => {
+              try {
+                // Step 1: Show submitting message
+                setLoadingStep(1);
+                // Capture assessment data at submission time
+                const data = prepareAssessmentData();
+                
+                // Step 2: Submit to n8n with brief UX delay
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_1_DELAY));
+                await submitToN8n(data);
+                
+                // Step 3: Show generating message
+                setLoadingStep(2);
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_2_DELAY));
+                
+                // Step 4: Show almost done message
+                setLoadingStep(3);
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_3_DELAY));
+                
+                setSubmitted(true);
+                
+                // Step 5: Move to results
+                setTimeout(() => {
+                  setStep("results");
+                }, LOADING_FINAL_DELAY);
+              } catch (err) {
+                console.error("Submission failed:", err);
+                // Still show results even if submission fails
+                setSubmitted(true);
+                setStep("results");
+              }
+            };
+            
+            submitData();
           }
-        }, [step, submitted, userInfo, answers, language]);
+          // Note: Dependencies are intentionally limited to step and submitted
+          // Data (userInfo, answers, language) is captured when loading starts
+          // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [step, submitted]);
 
         React.useEffect(() => {
           const navWrapper = document.getElementById("nav-wrapper");
@@ -1680,6 +1729,7 @@
           setAnswers({});
           setCurrentQ(0);
           setSubmitted(false);
+          setLoadingStep(0);
         };
 
         if (step === "intro") {
@@ -1918,13 +1968,76 @@
                       </button>
                     ) : (
                       <button
-                        onClick={() => setStep("results")}
+                        onClick={() => setStep("loading")}
                         className="flex-1 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition"
                       >
                         {t.finishButton}
                       </button>
                     )}
                   </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (step === "loading") {
+          const loadingMessages = [
+            t.loadingSubmitting,
+            t.loadingGenerating,
+            t.loadingAlmostDone
+          ];
+
+          // Helper function to get CSS classes based on loading step state
+          // stepNumber: 1-3, loadingStep: 0-3 (0=not started, 1-3=active stages)
+          const getStepClasses = (stepNumber) => {
+            if (loadingStep > stepNumber) {
+              // Step completed
+              return "bg-green-500/30 border-2 border-green-400";
+            } else if (loadingStep === stepNumber) {
+              // Step currently active
+              return "bg-purple-500/30 border-2 border-purple-400 animate-pulse";
+            } else {
+              // Step not yet started
+              return "bg-white/5 border-2 border-white/10";
+            }
+          };
+
+          // Helper function to render step icon based on state
+          const renderStepIcon = (stepNumber) => {
+            if (loadingStep > stepNumber) {
+              return <span className="text-2xl">✅</span>;
+            } else if (loadingStep === stepNumber) {
+              return <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>;
+            } else {
+              return <span className="text-2xl opacity-30">⏳</span>;
+            }
+          };
+
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
+              <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-white text-center">
+                <div className="mb-6">
+                  <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mb-4"></div>
+                  <h2 className="text-2xl font-bold mb-2">{t.loadingTitle}</h2>
+                  <p className="text-purple-200 text-sm">{t.loadingMessage}</p>
+                </div>
+                
+                <div className="space-y-3">
+                  {loadingMessages.map((msg, idx) => {
+                    const stepNumber = idx + 1; // Convert 0-based index to 1-based step number
+                    return (
+                      <div 
+                        key={`loading-step-${stepNumber}`}
+                        className={`flex items-center gap-3 p-3 rounded-lg transition-all ${getStepClasses(stepNumber)}`}
+                      >
+                        {renderStepIcon(stepNumber)}
+                        <span className={`text-sm ${loadingStep >= stepNumber ? "font-semibold" : "opacity-50"}`}>
+                          {msg}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
