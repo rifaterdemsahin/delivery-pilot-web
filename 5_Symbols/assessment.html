@@ -1396,6 +1396,12 @@
       };
 
       function WorkshopAssessment() {
+        // Loading animation timing constants (in milliseconds)
+        const LOADING_STAGE_1_DELAY = 800;
+        const LOADING_STAGE_2_DELAY = 800;
+        const LOADING_STAGE_3_DELAY = 500;
+        const LOADING_FINAL_DELAY = 300;
+
         const [step, setStep] = useState("intro");
         const [userInfo, setUserInfo] = useState({
           name: "",
@@ -1673,24 +1679,24 @@
                 setLoadingStep(1);
                 const data = prepareAssessmentData();
                 
-                // Step 2: Submit to n8n
-                await new Promise(resolve => setTimeout(resolve, 800)); // Brief delay for UX
-                const success = await submitToN8n(data);
+                // Step 2: Submit to n8n with brief UX delay
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_1_DELAY));
+                await submitToN8n(data);
                 
                 // Step 3: Show generating message
                 setLoadingStep(2);
-                await new Promise(resolve => setTimeout(resolve, 800));
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_2_DELAY));
                 
                 // Step 4: Show almost done message
                 setLoadingStep(3);
-                await new Promise(resolve => setTimeout(resolve, 500));
+                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_3_DELAY));
                 
                 setSubmitted(true);
                 
                 // Step 5: Move to results
                 setTimeout(() => {
                   setStep("results");
-                }, 300);
+                }, LOADING_FINAL_DELAY);
               } catch (err) {
                 console.error("Submission failed:", err);
                 // Still show results even if submission fails
@@ -1978,6 +1984,28 @@
             t.loadingAlmostDone
           ];
 
+          // Helper function to get CSS classes based on loading step state
+          const getStepClasses = (stepIndex) => {
+            if (loadingStep > stepIndex) {
+              return "bg-green-500/30 border-2 border-green-400";
+            } else if (loadingStep === stepIndex + 1) {
+              return "bg-purple-500/30 border-2 border-purple-400 animate-pulse";
+            } else {
+              return "bg-white/5 border-2 border-white/10";
+            }
+          };
+
+          // Helper function to render step icon based on state
+          const renderStepIcon = (stepIndex) => {
+            if (loadingStep > stepIndex) {
+              return <span className="text-2xl">✅</span>;
+            } else if (loadingStep === stepIndex + 1) {
+              return <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>;
+            } else {
+              return <span className="text-2xl opacity-30">⏳</span>;
+            }
+          };
+
           return (
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
               <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-white text-center">
@@ -1991,21 +2019,9 @@
                   {loadingMessages.map((msg, idx) => (
                     <div 
                       key={idx}
-                      className={`flex items-center gap-3 p-3 rounded-lg transition-all ${
-                        loadingStep > idx 
-                          ? "bg-green-500/30 border-2 border-green-400" 
-                          : loadingStep === idx + 1
-                          ? "bg-purple-500/30 border-2 border-purple-400 animate-pulse"
-                          : "bg-white/5 border-2 border-white/10"
-                      }`}
+                      className={`flex items-center gap-3 p-3 rounded-lg transition-all ${getStepClasses(idx)}`}
                     >
-                      {loadingStep > idx ? (
-                        <span className="text-2xl">✅</span>
-                      ) : loadingStep === idx + 1 ? (
-                        <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>
-                      ) : (
-                        <span className="text-2xl opacity-30">⏳</span>
-                      )}
+                      {renderStepIcon(idx)}
                       <span className={`text-sm ${loadingStep >= idx + 1 ? "font-semibold" : "opacity-50"}`}>
                         {msg}
                       </span>
