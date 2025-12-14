@@ -188,6 +188,8 @@ const translations = {
                 feature6: "60-minute 1-on-1 session",
                 feature7: "Written assessment report",
                 feature8: "Follow-up recommendations",
+                feature9: "Aftercare support to ensure success",
+                feature10: "Prerequisites validation for workshops and enterprise solutions",
                 cta: "📅 Book Assessment"
             },
             workshops: {
@@ -903,6 +905,8 @@ const translations = {
                 feature6: "60 dakikalık bire bir oturum",
                 feature7: "Yazılı değerlendirme raporu",
                 feature8: "Takip tavsiyeleri",
+                feature9: "Başarıyı sağlamak için sonraki bakım desteği",
+                feature10: "Atölyeler ve kurumsal çözümler için ön koşul doğrulaması",
                 cta: "📅 Değerlendirme Rezervasyonu Yap"
             },
             workshops: {
