@@ -89,6 +89,7 @@ All pages are hosted on the **deliverpilot.net** domain. Below is the complete s
 |------|-----|-------------|
 | **FAQ** | https://deliverypilot.net/faq.html | Frequently asked questions about the platform |
 | **Contact** | https://deliverypilot.net/contact.html | Contact form and information for getting in touch |
+| **GTM Strategy** | [resources/gtm-strategy.md](resources/gtm-strategy.md) | Comprehensive go-to-market strategy and planning documentation |
 
 ### 🧪 Development & Testing
 
@@ -122,6 +123,9 @@ delivery-pilot-web/
 ├── menu.js                 # Reusable navigation and footer components
 ├── sitemap.xml             # XML sitemap for search engines
 ├── robots.txt              # Robots.txt for crawler directives
+├── resources/              # Strategic planning and GTM documentation
+│   ├── README.md           # Resources directory overview
+│   └── gtm-strategy.md     # Comprehensive go-to-market strategy
 └── README.md               # Documentation
 ```
 
