@@ -88,16 +88,16 @@ const footerConfig = {
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
                 { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
-                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
-                { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
-                { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
-                { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
+                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' }
             ]
         },
         {
             title: 'Resources',
             titleKey: 'footer.resources.title',
             content: [
+                { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
+                { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
+                { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
             ]
         }
     ],
