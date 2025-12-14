@@ -34,6 +34,7 @@ const navigationConfig = {
             textKey: 'nav.services',
             submenu: [
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
+                { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
                 { href: 'agile-transformation.html', text: '📈 Agile Transformation' }
             ]
         },
@@ -74,6 +75,7 @@ const footerConfig = {
             titleKey: 'footer.platform.title',
             content: [
                 { type: 'link', href: 'onboarding.html', text: 'Onboarding' },
+                { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', text: 'Agile Transformation' },
                 { type: 'link', href: 'index.html#features', textKey: 'footer.platform.features', text: 'Features' },
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },

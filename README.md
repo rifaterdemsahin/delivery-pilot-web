@@ -69,6 +69,7 @@ All pages are hosted on the **deliverpilot.net** domain. Below is the complete s
 | Page | URL | Description |
 |------|-----|-------------|
 | **Onboarding** | https://deliverypilot.net/onboarding.html | Step-by-step guide for getting started with the platform |
+| **Workshops** | https://deliverypilot.net/workshops.html | 10-step AI workshop process for building secure, explainable AI products |
 | **Agile Transformation** | https://deliverypilot.net/agile-transformation.html | Agile methodology and transformation services |
 | **Pricing** | https://deliverypilot.net/pricing.html | Pricing plans and packages for the platform |
 
@@ -102,6 +103,7 @@ delivery-pilot-web/
 ├── index.html              # Main homepage with hero section and features
 ├── assessment.html         # AI readiness assessment tool
 ├── onboarding.html         # Platform onboarding guide
+├── workshops.html          # 10-step AI workshop process
 ├── agile-transformation.html # Agile transformation services
 ├── dashboard.html          # User dashboard for assessments
 ├── signin.html             # User authentication page
@@ -134,6 +136,7 @@ The site uses a hierarchical navigation menu defined in `menu.js`:
   - Use Cases → Industry-specific applications
 - **Services** (dropdown)
   - Onboarding → Getting started guide
+  - Workshops → 10-step AI workshop process
   - Agile Transformation → Agile services
 - **Pricing** → Plans and pricing
 - **Company** (dropdown)

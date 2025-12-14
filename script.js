@@ -11,6 +11,7 @@ const translations = {
             transformations: "🔄 Transformations",
             successStories: "⭐ Success Stories",
             onboarding: "🚀 Onboarding",
+            workshops: "🎓 Workshops",
             features: "✨ Features",
             howItWorks: "⚙️ How It Works",
             useCases: "💼 Use Cases",
@@ -229,7 +230,8 @@ const translations = {
                 features: "Features",
                 howItWorks: "How It Works",
                 useCases: "Use Cases",
-                pricing: "Pricing"
+                pricing: "Pricing",
+                workshops: "Workshops"
             },
             company: {
                 title: "Company",
@@ -573,6 +575,142 @@ const translations = {
                 maturityDescription: "Assess your organization's readiness for AI augmentation.",
                 maturityButton: "Learn More"
             }
+        },
+        workshops: {
+            hero: {
+                title: "10-Step AI Workshop Process 🎓",
+                subtitle: "A Comprehensive Journey to Building Secure, Explainable AI Products for Enterprise as a Team Delivery",
+                description: "Our structured workshop approach transforms your team from AI beginners to confident practitioners, delivering production-ready, secure, and explainable AI solutions."
+            },
+            overview: {
+                title: "The 10-Step Workshop Journey",
+                subtitle: "Each workshop builds upon the previous, creating a comprehensive learning path that takes your team from foundational concepts to advanced implementation, culminating in a secure, explainable AI product."
+            },
+            step1: {
+                title: "Vibe Programming",
+                description: "Start with the non-deterministic approach. Learn to embrace uncertainty and collaborate with AI systems as creative partners.",
+                topic1: "Understanding non-deterministic systems",
+                topic2: "Self-learning during implementation",
+                topic3: "Enterprise team collaboration patterns"
+            },
+            step2: {
+                title: "Explainable AI (XAI)",
+                description: "Build trust through transparency. Master techniques to make AI decisions understandable and accountable.",
+                topic1: "IBM AI Explainability 360",
+                topic2: "Model interpretability techniques",
+                topic3: "Stakeholder communication strategies"
+            },
+            step3: {
+                title: "AGI & ASI",
+                description: "Understand the future of AI. Prepare for advanced AI systems with safety-first thinking.",
+                topic1: "AGI Safety Fundamentals",
+                topic2: "Risk assessment and mitigation",
+                topic3: "Future-proofing your AI strategy"
+            },
+            step4: {
+                title: "ChatGPT & Gemini",
+                description: "Master leading AI platforms. Learn to leverage generative AI effectively in your workflows.",
+                topic1: "Platform-specific best practices",
+                topic2: "Enterprise integration patterns",
+                topic3: "Cost optimization strategies"
+            },
+            step5: {
+                title: "Prompt Engineering",
+                description: "Craft effective AI interactions. Learn systematic approaches to getting consistent, high-quality results.",
+                topic1: "Prompt design patterns",
+                topic2: "Chain-of-thought reasoning",
+                topic3: "Testing and iteration strategies"
+            },
+            step6: {
+                title: "Vector Databases",
+                description: "Store and retrieve AI knowledge. Master embedding-based search and similarity matching.",
+                topic1: "Embedding generation and storage",
+                topic2: "Semantic search implementation",
+                topic3: "Performance optimization"
+            },
+            step7: {
+                title: "RAG",
+                description: "Ground AI in your data. Build systems that combine retrieval with generation for accurate, context-aware responses.",
+                topic1: "RAG architecture patterns",
+                topic2: "LangChain and LlamaIndex",
+                topic3: "Hybrid search strategies"
+            },
+            step8: {
+                title: "Fine-Tuning",
+                description: "Customize AI for your needs. Learn to adapt models to your specific domain and use cases.",
+                topic1: "Transfer learning techniques",
+                topic2: "Dataset preparation and quality",
+                topic3: "Model evaluation and validation"
+            },
+            step9: {
+                title: "AI & Cyber Security",
+                description: "Secure your AI systems. Protect against adversarial attacks, data poisoning, and model theft.",
+                topic1: "Threat modeling for AI systems",
+                topic2: "Adversarial robustness testing",
+                topic3: "Secure deployment practices"
+            },
+            step10: {
+                title: "AI Ethics & GDPR",
+                description: "Build responsibly and compliantly. Ensure your AI products meet ethical standards and regulatory requirements.",
+                topic1: "Bias detection and mitigation",
+                topic2: "GDPR compliance for AI",
+                topic3: "Ethical AI frameworks"
+            },
+            journey: {
+                title: "Your Team's Transformation Journey",
+                subtitle: "From assessment to delivery, each phase builds your team's capability to deliver secure, explainable AI products.",
+                phase1: {
+                    title: "Phase 1: Assessment",
+                    description: "Individual maturity assessments identify each team member's starting point and create personalized learning roadmaps aligned with the 10-step workshop process."
+                },
+                phase2: {
+                    title: "Phase 2: Workshops",
+                    description: "Progress through all 10 workshops in sequence. Each hands-on session builds practical skills with real-world examples, ensuring your team masters each concept before moving forward."
+                },
+                phase3: {
+                    title: "Phase 3: Express Implementation",
+                    description: "Apply all 10 workshop learnings to your real project. Developers and non-developers collaborate to deliver a secure, explainable AI product with proper documentation and compliance."
+                },
+                phase4: {
+                    title: "Phase 4: Delivery",
+                    description: "Your team delivers a production-ready AI product that is secure (Workshop 9), explainable (Workshop 2), ethically sound (Workshop 10), and built with enterprise-grade practices."
+                }
+            },
+            benefits: {
+                title: "Why Our 10-Step Process Works",
+                subtitle: "A proven methodology that delivers results for enterprise teams.",
+                structured: {
+                    title: "Structured Progression",
+                    description: "Each step builds on the previous, ensuring a solid foundation before advancing to complex topics."
+                },
+                security: {
+                    title: "Security by Design",
+                    description: "Security and compliance are integrated from the start, not added as an afterthought."
+                },
+                explainable: {
+                    title: "Explainability First",
+                    description: "Build AI systems that stakeholders can understand, trust, and confidently deploy."
+                },
+                team: {
+                    title: "Team Delivery",
+                    description: "Developers and non-developers work together, bridging the gap between technical and business perspectives."
+                },
+                enterprise: {
+                    title: "Enterprise Ready",
+                    description: "Deliver production-ready solutions that meet enterprise standards for security, compliance, and scalability."
+                },
+                measurable: {
+                    title: "Measurable Progress",
+                    description: "Track your team's growth from assessment through to final delivery with clear milestones."
+                }
+            },
+            cta: {
+                title: "Ready to Transform Your Team?",
+                description: "Start with an assessment to understand your team's current AI maturity and build a customized workshop roadmap.",
+                startAssessment: "🚀 Start Your Assessment",
+                learnMore: "📚 Learn About Our Process",
+                contact: "💬 Contact Us"
+            }
         }
     },
     tr: {
@@ -586,6 +724,7 @@ const translations = {
             transformations: "🔄 Dönüşümler",
             successStories: "⭐ Başarı Hikayeleri",
             onboarding: "🚀 Katılım",
+            workshops: "🎓 Atölyeler",
             features: "✨ Özellikler",
             howItWorks: "⚙️ Nasıl Çalışır",
             useCases: "💼 Kullanım Alanları",
@@ -804,7 +943,8 @@ const translations = {
                 features: "Özellikler",
                 howItWorks: "Nasıl Çalışır",
                 useCases: "Kullanım Alanları",
-                pricing: "Fiyatlandırma"
+                pricing: "Fiyatlandırma",
+                workshops: "Atölyeler"
             },
             company: {
                 title: "Şirket",
@@ -1251,6 +1391,142 @@ const translations = {
                 description: "Bu sektör liderlerine katılın ve işletmenizi Delivery Pilot ile dönüştürün. Benzer sonuçlara nasıl ulaşabileceğinizi birlikte görüşelim.",
                 getStarted: "Bugün Başlayın",
                 contactUs: "Ekibimizle İletişime Geçin"
+            }
+        },
+        workshops: {
+            hero: {
+                title: "10 Adımlık Yapay Zeka Atölye Süreci 🎓",
+                subtitle: "Kurumsal Ekip Teslimatı için Güvenli, Açıklanabilir Yapay Zeka Ürünleri Oluşturmaya Yönelik Kapsamlı Bir Yolculuk",
+                description: "Yapılandırılmış atölye yaklaşımımız, ekibinizi yapay zeka yeni başlayanlardan kendinden emin uygulayıcılara dönüştürür, üretime hazır, güvenli ve açıklanabilir yapay zeka çözümleri sunar."
+            },
+            overview: {
+                title: "10 Adımlık Atölye Yolculuğu",
+                subtitle: "Her atölye bir öncekinin üzerine inşa edilir, ekibinizi temel kavramlardan gelişmiş uygulamaya götüren kapsamlı bir öğrenme yolu oluşturur ve güvenli, açıklanabilir bir yapay zeka ürününde sonuçlanır."
+            },
+            step1: {
+                title: "Vibe Programlama",
+                description: "Deterministik olmayan yaklaşımla başlayın. Belirsizliği kucaklamayı ve yapay zeka sistemleriyle yaratıcı ortaklar olarak işbirliği yapmayı öğrenin.",
+                topic1: "Deterministik olmayan sistemleri anlama",
+                topic2: "Uygulama sırasında kendi kendine öğrenme",
+                topic3: "Kurumsal ekip işbirliği kalıpları"
+            },
+            step2: {
+                title: "Açıklanabilir Yapay Zeka (XAI)",
+                description: "Şeffaflık yoluyla güven oluşturun. Yapay zeka kararlarını anlaşılır ve hesap verebilir hale getirmek için tekniklerde ustalaşın.",
+                topic1: "IBM Yapay Zeka Açıklanabilirliği 360",
+                topic2: "Model yorumlanabilirlik teknikleri",
+                topic3: "Paydaş iletişim stratejileri"
+            },
+            step3: {
+                title: "AGI ve ASI",
+                description: "Yapay zekanın geleceğini anlayın. Güvenlik öncelikli düşünceyle gelişmiş yapay zeka sistemlerine hazırlanın.",
+                topic1: "AGI Güvenlik Temelleri",
+                topic2: "Risk değerlendirmesi ve azaltma",
+                topic3: "Yapay zeka stratejinizi geleceğe hazırlama"
+            },
+            step4: {
+                title: "ChatGPT ve Gemini",
+                description: "Önde gelen yapay zeka platformlarında ustalaşın. İş akışlarınızda üretken yapay zekadan etkili bir şekilde yararlanmayı öğrenin.",
+                topic1: "Platforma özgü en iyi uygulamalar",
+                topic2: "Kurumsal entegrasyon kalıpları",
+                topic3: "Maliyet optimizasyon stratejileri"
+            },
+            step5: {
+                title: "Prompt Mühendisliği",
+                description: "Etkili yapay zeka etkileşimleri oluşturun. Tutarlı, yüksek kaliteli sonuçlar elde etmek için sistematik yaklaşımları öğrenin.",
+                topic1: "Prompt tasarım kalıpları",
+                topic2: "Düşünce zinciri muhakemesi",
+                topic3: "Test ve yineleme stratejileri"
+            },
+            step6: {
+                title: "Vektör Veritabanları",
+                description: "Yapay zeka bilgisini depolayın ve alın. Gömme tabanlı arama ve benzerlik eşleştirmede ustalaşın.",
+                topic1: "Gömme oluşturma ve depolama",
+                topic2: "Anlamsal arama uygulaması",
+                topic3: "Performans optimizasyonu"
+            },
+            step7: {
+                title: "RAG",
+                description: "Yapay zekayı verilerinize dayandırın. Doğru, bağlama duyarlı yanıtlar için almayı üretimle birleştiren sistemler oluşturun.",
+                topic1: "RAG mimari kalıpları",
+                topic2: "LangChain ve LlamaIndex",
+                topic3: "Hibrit arama stratejileri"
+            },
+            step8: {
+                title: "İnce Ayar",
+                description: "Yapay zekayı ihtiyaçlarınıza göre özelleştirin. Modelleri belirli alanınıza ve kullanım durumlarınıza uyarlamayı öğrenin.",
+                topic1: "Transfer öğrenme teknikleri",
+                topic2: "Veri kümesi hazırlama ve kalite",
+                topic3: "Model değerlendirme ve doğrulama"
+            },
+            step9: {
+                title: "Yapay Zeka ve Siber Güvenlik",
+                description: "Yapay zeka sistemlerinizi güvence altına alın. Düşmanca saldırılara, veri zehirlenmesine ve model hırsızlığına karşı koruyun.",
+                topic1: "Yapay zeka sistemleri için tehdit modelleme",
+                topic2: "Düşmanca sağlamlık testi",
+                topic3: "Güvenli dağıtım uygulamaları"
+            },
+            step10: {
+                title: "Yapay Zeka Etiği ve GDPR",
+                description: "Sorumlu ve uyumlu bir şekilde oluşturun. Yapay zeka ürünlerinizin etik standartları ve düzenleyici gereksinimleri karşıladığından emin olun.",
+                topic1: "Önyargı tespiti ve azaltma",
+                topic2: "Yapay zeka için GDPR uyumluluğu",
+                topic3: "Etik yapay zeka çerçeveleri"
+            },
+            journey: {
+                title: "Ekibinizin Dönüşüm Yolculuğu",
+                subtitle: "Değerlendirmeden teslimata kadar her aşama, ekibinizin güvenli, açıklanabilir yapay zeka ürünleri sunma yeteneğini geliştirir.",
+                phase1: {
+                    title: "Aşama 1: Değerlendirme",
+                    description: "Bireysel olgunluk değerlendirmeleri, her ekip üyesinin başlangıç noktasını belirler ve 10 adımlı atölye süreciyle uyumlu kişiselleştirilmiş öğrenme yol haritaları oluşturur."
+                },
+                phase2: {
+                    title: "Aşama 2: Atölyeler",
+                    description: "Tüm 10 atölyeden sırayla ilerleyin. Her uygulamalı oturum, gerçek dünya örnekleriyle pratik beceriler oluşturur ve ekibinizin ilerlemeden önce her konseptte ustalaşmasını sağlar."
+                },
+                phase3: {
+                    title: "Aşama 3: Ekspres Uygulama",
+                    description: "Tüm 10 atölye öğrenmelerini gerçek projenize uygulayın. Geliştiriciler ve geliştirici olmayanlar, uygun dokümantasyon ve uyumlulukla güvenli, açıklanabilir bir yapay zeka ürünü sunmak için işbirliği yapar."
+                },
+                phase4: {
+                    title: "Aşama 4: Teslimat",
+                    description: "Ekibiniz, güvenli (Atölye 9), açıklanabilir (Atölye 2), etik açıdan sağlam (Atölye 10) ve kurumsal düzeyde uygulamalarla oluşturulmuş üretime hazır bir yapay zeka ürünü sunar."
+                }
+            },
+            benefits: {
+                title: "10 Adımlı Sürecimiz Neden İşe Yarar",
+                subtitle: "Kurumsal ekipler için sonuç veren kanıtlanmış bir metodoloji.",
+                structured: {
+                    title: "Yapılandırılmış İlerleme",
+                    description: "Her adım bir öncekinin üzerine inşa edilir, karmaşık konulara geçmeden önce sağlam bir temel sağlar."
+                },
+                security: {
+                    title: "Tasarımda Güvenlik",
+                    description: "Güvenlik ve uyumluluk baştan entegre edilir, sonradan eklenmez."
+                },
+                explainable: {
+                    title: "Önce Açıklanabilirlik",
+                    description: "Paydaşların anlayabileceği, güvenebileceği ve güvenle dağıtabileceği yapay zeka sistemleri oluşturun."
+                },
+                team: {
+                    title: "Ekip Teslimatı",
+                    description: "Geliştiriciler ve geliştirici olmayanlar birlikte çalışır, teknik ve iş perspektifleri arasındaki boşluğu kapatır."
+                },
+                enterprise: {
+                    title: "Kurumsal Hazır",
+                    description: "Güvenlik, uyumluluk ve ölçeklenebilirlik için kurumsal standartları karşılayan üretime hazır çözümler sunun."
+                },
+                measurable: {
+                    title: "Ölçülebilir İlerleme",
+                    description: "Ekibinizin büyümesini değerlendirmeden nihai teslimata kadar net kilometre taşlarıyla takip edin."
+                }
+            },
+            cta: {
+                title: "Ekibinizi Dönüştürmeye Hazır mısınız?",
+                description: "Ekibinizin mevcut yapay zeka olgunluğunu anlamak ve özelleştirilmiş bir atölye yol haritası oluşturmak için bir değerlendirme ile başlayın.",
+                startAssessment: "🚀 Değerlendirmenize Başlayın",
+                learnMore: "📚 Sürecimiz Hakkında Bilgi Edinin",
+                contact: "💬 Bize Ulaşın"
             }
         }
     }
