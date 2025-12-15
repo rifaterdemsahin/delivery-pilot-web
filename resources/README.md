@@ -18,6 +18,22 @@ This directory contains strategic planning documents, go-to-market materials, an
   - Risk management and contingency plans
   - Cross-references to all related pages and documentation
 
+### Knowledge Transfer Resources
+
+- **[Knowledge Transfer in Agile Environments](../5_Symbols/resources-knowledge-transfer.html)** - English version
+  - Challenges of knowledge transfer in agile environments
+  - How organizational silos form despite regular collaboration
+  - Story point focus vs. strategic thinking
+  - AI transformation as a solution to agile gaps
+  - How Delivery Pilot enables enterprise-wide intelligence sharing
+  
+- **[Çevik Ortamlarda Bilgi Transferi](../5_Symbols/resources-knowledge-transfer-tr.html)** - Turkish version
+  - Çevik ortamlarda bilgi transferi zorlukları
+  - Düzenli iş birliğine rağmen organizasyonel siloların oluşumu
+  - Story point odağı vs. stratejik düşünme
+  - Çevik boşlukların çözümü olarak AI dönüşümü
+  - Delivery Pilot'un kurumsal çapta zeka paylaşımını nasıl sağladığı
+
 ## Related Documentation
 
 ### Business Strategy
