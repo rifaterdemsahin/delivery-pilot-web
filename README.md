@@ -418,11 +418,13 @@ Contributions are welcome! Please read [copilot.md](copilot.md) for our coding s
 
 **Current Status**: 🟢 Active Development
 
-**Quality Metrics** (from latest sanity check):
+**Quality Metrics** (from [latest sanity check report](4_formula/SANITY-CHECK-REPORT.md)):
 - Overall Health Score: 85/100 (Good)
 - Critical Issues: 0
 - Warnings: Minor (manageable)
 - Test Coverage: Comprehensive
+
+To run your own sanity check: `./sanity-check.sh`
 
 **Key Features Status**:
 - ✅ SEO Optimization: Complete
@@ -454,7 +456,7 @@ This project is available for use in enterprise AI transformation initiatives.
 
 **Website**: [deliverypilot.net](https://deliverypilot.net)
 
-**Last Major Update**: December 2025
+**Last Major Update**: December 2024
 
 **Technology Stack**: HTML5, CSS3, Vanilla JavaScript, React (assessment tool)
 
