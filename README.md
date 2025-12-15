@@ -77,7 +77,7 @@ To host this website:
 
 ## Site Structure and Page Links
 
-All pages are hosted on the **deliverpilot.net** domain. Below is the complete site structure organized by category.
+All pages are hosted on the **deliverypilot.net** domain. Below is the complete site structure organized by category.
 
 **Note**: The root directory contains the primary `index.html` for production. The `5_Symbols/` directory contains a complete set of HTML pages used in the production build. Both sets are maintained for different deployment scenarios and testing purposes.
 
