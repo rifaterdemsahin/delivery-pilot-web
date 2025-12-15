@@ -99,5 +99,21 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    
+    <!-- Resources: Knowledge Transfer (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-knowledge-transfer.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Knowledge Transfer (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-knowledge-transfer-tr.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
