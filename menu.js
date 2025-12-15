@@ -51,6 +51,14 @@ const navigationConfig = {
                 { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' }
             ]
         },
+        { 
+            text: '📚 Resources', 
+            textKey: 'nav.resources',
+            submenu: [
+                { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
+                { href: 'resources-knowledge-transfer-tr.html', textKey: 'nav.knowledgeTransferTR', text: '🇹🇷 Bilgi Transferi' }
+            ]
+        },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
         { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
@@ -97,6 +105,7 @@ const footerConfig = {
             title: 'Resources',
             titleKey: 'footer.resources.title',
             content: [
+                { type: 'link', href: 'resources-knowledge-transfer.html', textKey: 'footer.resources.knowledgeTransfer', text: 'Knowledge Transfer' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
