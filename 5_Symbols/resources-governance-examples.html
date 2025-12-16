@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open source governance implementation examples using the Delivery Pilot framework. Explore real-world GitHub repositories demonstrating DevOps automation, AI transformation, and enterprise delivery patterns.">
+    <meta name="keywords" content="governance implementation, delivery pilot framework, open source examples, DevOps automation, AI transformation, enterprise delivery, GitHub governance">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-governance-examples.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Governance Implementation Examples | Delivery Pilot">
+    <meta property="og:description" content="Open source governance examples built with the Delivery Pilot framework.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-governance-examples.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Governance Implementation Examples">
+    <meta name="twitter:description" content="Explore open source governance examples built with Delivery Pilot framework.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Governance Implementation Examples | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .example-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .example-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .example-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .example-card .description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .example-card .repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .example-card .repo-link:hover {
+            background: #5568d3;
+        }
+
+        .framework-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .framework-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .framework-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .framework-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .framework-feature .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .framework-feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.25rem;
+            font-weight: 600;
+        }
+
+        .tags-container {
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🏛️ Governance Implementation Examples</h1>
+            <p class="subtitle">Open source examples demonstrating the Delivery Pilot framework in action</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary-color);">Real-World Implementations</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                Explore open source governance implementations built using the Delivery Pilot framework. These repositories 
+                demonstrate practical approaches to DevOps automation, AI transformation, and enterprise delivery patterns. 
+                Each example provides reusable templates, structured workflows, and best practices that you can adapt for your own projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Examples Grid -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">Open Source Examples</h2>
+            
+            <div class="examples-grid">
+                <!-- Example 1: Delivery Pilot Web -->
+                <div class="example-card">
+                    <span class="icon">🌐</span>
+                    <h3>Delivery Pilot Web</h3>
+                    <div class="tags-container">
+                        <span class="tag">PaaS Platform</span>
+                        <span class="tag">AI Transformation</span>
+                        <span class="tag">Enterprise</span>
+                    </div>
+                    <p class="description">
+                        A comprehensive Platform as a Service (PaaS) for deploying and managing AI applications. 
+                        Demonstrates enterprise-grade governance with scalable deployments, structured AI management, 
+                        and best practices for production environments.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/delivery-pilot-web" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> View Repository
+                    </a>
+                </div>
+
+                <!-- Example 2: DeliveryPilot DevAIOps -->
+                <div class="example-card">
+                    <span class="icon">🤖</span>
+                    <h3>DeliveryPilot DevAIOps</h3>
+                    <div class="tags-container">
+                        <span class="tag">DevOps Automation</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Workflow Management</span>
+                    </div>
+                    <p class="description">
+                        Automates DevOps for enterprises with comprehensive CI/CD controls and workflow management. 
+                        Showcases governance structures for enforcing code quality, security policies, and deployment standards 
+                        across development teams.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/deliverypilot" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> View Repository
+                    </a>
+                </div>
+
+                <!-- Example 3: AI vs Freelancer -->
+                <div class="example-card">
+                    <span class="icon">📁</span>
+                    <h3>AI vs Freelancer</h3>
+                    <div class="tags-container">
+                        <span class="tag">Project Structure</span>
+                        <span class="tag">Development Framework</span>
+                        <span class="tag">Best Practices</span>
+                    </div>
+                    <p class="description">
+                        Features a seven-folder development structure mirroring governance frameworks: objectives, roadmaps, 
+                        knowledge bases, best practices, implementation code, error logs, and testing artifacts. Provides a 
+                        clear, repeatable template for structuring enterprise projects.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/ai-vs-freelancer" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Features Section -->
+    <section class="framework-section">
+        <div class="container">
+            <h2>Built with Delivery Pilot Framework</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                All examples leverage the Delivery Pilot framework's core principles
+            </p>
+            
+            <div class="framework-features">
+                <div class="framework-feature">
+                    <span class="icon">📊</span>
+                    <h3>Structured Approach</h3>
+                    <p>Organized folders and clear separation of concerns for maintainability</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">🔒</span>
+                    <h3>Security First</h3>
+                    <p>Built-in security practices and compliance considerations</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">⚡</span>
+                    <h3>Automation Ready</h3>
+                    <p>CI/CD pipelines and automated workflows for rapid delivery</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">📈</span>
+                    <h3>Scalable Design</h3>
+                    <p>Patterns that grow with your organization's needs</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">📚</span>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive documentation and knowledge artifacts</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">🔄</span>
+                    <h3>Reusable Templates</h3>
+                    <p>Adapt and customize for your specific requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Best Practices Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">Governance Best Practices</h2>
+            
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">🎯 Code Governance</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Branch Protection:</strong> Required pull requests, status checks, and signed commits</li>
+                    <li><strong>Access Control:</strong> Role-based permissions and repository usage rules</li>
+                    <li><strong>Code Review:</strong> Mandatory review processes and quality gates</li>
+                    <li><strong>Compliance:</strong> Automated compliance checks and audit logs</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">🔄 Workflow Management</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>CI/CD Pipelines:</strong> Automated build, test, and deployment workflows</li>
+                    <li><strong>Quality Gates:</strong> Automated testing and security scanning</li>
+                    <li><strong>Deployment Controls:</strong> Staged rollouts and approval processes</li>
+                    <li><strong>Monitoring:</strong> Real-time insights and alerting systems</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">📋 Documentation Standards</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Architecture Decisions:</strong> Document key technical decisions and rationale</li>
+                    <li><strong>API Documentation:</strong> Clear interface specifications and examples</li>
+                    <li><strong>Runbooks:</strong> Operational procedures and troubleshooting guides</li>
+                    <li><strong>Knowledge Transfer:</strong> Onboarding materials and training resources</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">How to Use These Examples</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">1️⃣ Explore the Repository</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Browse the repository structure, examine the folder organization, and review the README files 
+                        to understand the governance patterns implemented.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2️⃣ Identify Patterns</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Look for reusable patterns such as CI/CD configurations, testing frameworks, documentation structures, 
+                        and deployment strategies that align with your needs.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3️⃣ Adapt for Your Project</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Fork or clone the repository, customize the patterns to fit your organization's requirements, 
+                        and integrate them into your existing workflows.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">4️⃣ Contribute Back</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Share your improvements and learnings with the community. Open source thrives on collaboration 
+                        and continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Delivery?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #555;">
+                Start your AI transformation journey with proven frameworks and best practices
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Start Assessment</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Learn More</a>
+                <a href="https://github.com/rifaterdemsahin" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">💻 View All Repos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Governance Implementation Examples",
+      "description": "Open source governance implementation examples using the Delivery Pilot framework",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-16",
+      "dateModified": "2024-12-16",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-governance-examples.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["governance implementation", "delivery pilot framework", "open source examples", "DevOps automation", "AI transformation"]
+    }
+    </script>
+</body>
+</html>

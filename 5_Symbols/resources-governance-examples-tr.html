@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot çerçevesi kullanılarak oluşturulmuş açık kaynak yönetişim uygulama örnekleri. DevOps otomasyonu, AI dönüşümü ve kurumsal teslimat modellerini gösteren gerçek GitHub depolarını keşfedin.">
+    <meta name="keywords" content="yönetişim uygulaması, delivery pilot çerçevesi, açık kaynak örnekleri, DevOps otomasyonu, AI dönüşümü, kurumsal teslimat, GitHub yönetişimi">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-governance-examples-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yönetişim Uygulama Örnekleri | Delivery Pilot">
+    <meta property="og:description" content="Delivery Pilot çerçevesi ile oluşturulmuş açık kaynak yönetişim örnekleri.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-governance-examples-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yönetişim Uygulama Örnekleri">
+    <meta name="twitter:description" content="Delivery Pilot çerçevesi ile oluşturulmuş açık kaynak yönetişim örneklerini keşfedin.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Yönetişim Uygulama Örnekleri | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .example-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .example-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .example-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .example-card .description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .example-card .repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .example-card .repo-link:hover {
+            background: #5568d3;
+        }
+
+        .framework-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .framework-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .framework-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .framework-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .framework-feature .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .framework-feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.25rem;
+            font-weight: 600;
+        }
+
+        .tags-container {
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🏛️ Yönetişim Uygulama Örnekleri</h1>
+            <p class="subtitle">Delivery Pilot çerçevesinin uygulamada gösterildiği açık kaynak örnekleri</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary-color);">Gerçek Dünya Uygulamaları</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                Delivery Pilot çerçevesi kullanılarak oluşturulmuş açık kaynak yönetişim uygulamalarını keşfedin. 
+                Bu depolar, DevOps otomasyonu, AI dönüşümü ve kurumsal teslimat modellerine pratik yaklaşımları 
+                göstermektedir. Her örnek, kendi projeleriniz için uyarlayabileceğiniz yeniden kullanılabilir 
+                şablonlar, yapılandırılmış iş akışları ve en iyi uygulamalar sağlar.
+            </p>
+        </div>
+    </section>
+
+    <!-- Examples Grid -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">Açık Kaynak Örnekleri</h2>
+            
+            <div class="examples-grid">
+                <!-- Example 1: Delivery Pilot Web -->
+                <div class="example-card">
+                    <span class="icon">🌐</span>
+                    <h3>Delivery Pilot Web</h3>
+                    <div class="tags-container">
+                        <span class="tag">PaaS Platform</span>
+                        <span class="tag">AI Dönüşümü</span>
+                        <span class="tag">Kurumsal</span>
+                    </div>
+                    <p class="description">
+                        AI uygulamalarını dağıtmak ve yönetmek için kapsamlı bir Hizmet Olarak Platform (PaaS). 
+                        Ölçeklenebilir dağıtımlar, yapılandırılmış AI yönetimi ve üretim ortamları için en iyi 
+                        uygulamalarla kurumsal düzeyde yönetişimi gösterir.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/delivery-pilot-web" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> Depoyu Görüntüle
+                    </a>
+                </div>
+
+                <!-- Example 2: DeliveryPilot DevAIOps -->
+                <div class="example-card">
+                    <span class="icon">🤖</span>
+                    <h3>DeliveryPilot DevAIOps</h3>
+                    <div class="tags-container">
+                        <span class="tag">DevOps Otomasyonu</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">İş Akışı Yönetimi</span>
+                    </div>
+                    <p class="description">
+                        Kapsamlı CI/CD kontrolleri ve iş akışı yönetimiyle kurumlar için DevOps'u otomatikleştirir. 
+                        Geliştirme ekipleri genelinde kod kalitesi, güvenlik politikaları ve dağıtım standartlarını 
+                        uygulamak için yönetişim yapılarını sergiler.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/deliverypilot" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> Depoyu Görüntüle
+                    </a>
+                </div>
+
+                <!-- Example 3: AI vs Freelancer -->
+                <div class="example-card">
+                    <span class="icon">📁</span>
+                    <h3>AI vs Freelancer</h3>
+                    <div class="tags-container">
+                        <span class="tag">Proje Yapısı</span>
+                        <span class="tag">Geliştirme Çerçevesi</span>
+                        <span class="tag">En İyi Uygulamalar</span>
+                    </div>
+                    <p class="description">
+                        Yönetişim çerçevelerini yansıtan yedi klasörlü bir geliştirme yapısı içerir: hedefler, yol 
+                        haritaları, bilgi tabanları, en iyi uygulamalar, uygulama kodu, hata günlükleri ve test 
+                        artefaktları. Kurumsal projeleri yapılandırmak için net, tekrarlanabilir bir şablon sağlar.
+                    </p>
+                    <a href="https://github.com/rifaterdemsahin/ai-vs-freelancer" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <span>📦</span> Depoyu Görüntüle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Features Section -->
+    <section class="framework-section">
+        <div class="container">
+            <h2>Delivery Pilot Çerçevesi ile Oluşturuldu</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Tüm örnekler Delivery Pilot çerçevesinin temel ilkelerinden yararlanır
+            </p>
+            
+            <div class="framework-features">
+                <div class="framework-feature">
+                    <span class="icon">📊</span>
+                    <h3>Yapılandırılmış Yaklaşım</h3>
+                    <p>Sürdürülebilirlik için düzenli klasörler ve net sorumluluk ayrımı</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">🔒</span>
+                    <h3>Güvenlik Öncelikli</h3>
+                    <p>Yerleşik güvenlik uygulamaları ve uyumluluk değerlendirmeleri</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">⚡</span>
+                    <h3>Otomasyon Hazır</h3>
+                    <p>Hızlı teslimat için CI/CD hatları ve otomatik iş akışları</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">📈</span>
+                    <h3>Ölçeklenebilir Tasarım</h3>
+                    <p>Organizasyonunuzun ihtiyaçlarıyla büyüyen desenler</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">📚</span>
+                    <h3>Dokümantasyon</h3>
+                    <p>Kapsamlı belgeler ve bilgi artefaktları</p>
+                </div>
+                
+                <div class="framework-feature">
+                    <span class="icon">🔄</span>
+                    <h3>Yeniden Kullanılabilir Şablonlar</h3>
+                    <p>Özel gereksinimleriniz için uyarlayın ve özelleştirin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Best Practices Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">Yönetişim En İyi Uygulamaları</h2>
+            
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">🎯 Kod Yönetişimi</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Dal Koruması:</strong> Gerekli pull request'ler, durum kontrolleri ve imzalı commit'ler</li>
+                    <li><strong>Erişim Kontrolü:</strong> Rol tabanlı izinler ve depo kullanım kuralları</li>
+                    <li><strong>Kod İncelemesi:</strong> Zorunlu inceleme süreçleri ve kalite kapıları</li>
+                    <li><strong>Uyumluluk:</strong> Otomatik uyumluluk kontrolleri ve denetim günlükleri</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">🔄 İş Akışı Yönetimi</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>CI/CD Hatları:</strong> Otomatik derleme, test ve dağıtım iş akışları</li>
+                    <li><strong>Kalite Kapıları:</strong> Otomatik test ve güvenlik taraması</li>
+                    <li><strong>Dağıtım Kontrolleri:</strong> Aşamalı dağıtımlar ve onay süreçleri</li>
+                    <li><strong>İzleme:</strong> Gerçek zamanlı içgörüler ve uyarı sistemleri</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color);">📋 Dokümantasyon Standartları</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Mimari Kararlar:</strong> Önemli teknik kararları ve gerekçelerini belgeleyin</li>
+                    <li><strong>API Dokümantasyonu:</strong> Net arayüz spesifikasyonları ve örnekler</li>
+                    <li><strong>Çalışma Kılavuzları:</strong> Operasyonel prosedürler ve sorun giderme rehberleri</li>
+                    <li><strong>Bilgi Transferi:</strong> İşe alım materyalleri ve eğitim kaynakları</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color);">Bu Örnekleri Nasıl Kullanılır</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">1️⃣ Depoyu Keşfedin</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Depo yapısına göz atın, klasör organizasyonunu inceleyin ve uygulanan yönetişim modellerini 
+                        anlamak için README dosyalarını gözden geçirin.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2️⃣ Desenleri Belirleyin</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        CI/CD konfigürasyonları, test çerçeveleri, dokümantasyon yapıları ve dağıtım stratejileri 
+                        gibi ihtiyaçlarınıza uygun yeniden kullanılabilir desenleri arayın.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3️⃣ Projeniz İçin Uyarlayın</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        Depoyu fork edin veya klonlayın, desenleri organizasyonunuzun gereksinimlerine uyacak şekilde 
+                        özelleştirin ve mevcut iş akışlarınıza entegre edin.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">4️⃣ Geri Katkıda Bulunun</h3>
+                    <p style="color: #555; line-height: 1.8;">
+                        İyileştirmelerinizi ve öğrendiklerinizi toplulukla paylaşın. Açık kaynak, işbirliği ve 
+                        sürekli iyileştirme ile gelişir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Teslimatınızı Dönüştürmeye Hazır mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #555;">
+                Kanıtlanmış çerçeveler ve en iyi uygulamalarla AI dönüşüm yolculuğunuza başlayın
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Değerlendirmeyi Başlat</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Daha Fazla Bilgi</a>
+                <a href="https://github.com/rifaterdemsahin" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">💻 Tüm Depoları Görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Yönetişim Uygulama Örnekleri",
+      "description": "Delivery Pilot çerçevesi kullanılarak oluşturulmuş açık kaynak yönetişim uygulama örnekleri",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-16",
+      "dateModified": "2024-12-16",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-governance-examples-tr.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["yönetişim uygulaması", "delivery pilot çerçevesi", "açık kaynak örnekleri", "DevOps otomasyonu", "AI dönüşümü"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>
