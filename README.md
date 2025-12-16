@@ -97,6 +97,7 @@ All pages are hosted on the **deliverypilot.net** domain. Below is the complete 
 | **Onboarding** | https://deliverypilot.net/onboarding.html | Step-by-step guide for getting started with the platform |
 | **Workshops** | https://deliverypilot.net/workshops.html | 10-step AI workshop process for building secure, explainable AI products |
 | **Agile Transformation** | https://deliverypilot.net/agile-transformation.html | Agile methodology and transformation services |
+| **Enterprise Agent** | https://deliverypilot.net/enterprise-agent.html | Enterprise agent implementation framework with 10-milestone deployment process |
 | **Pricing** | https://deliverypilot.net/pricing.html | Pricing plans and packages for the platform |
 
 ### 🏢 Company Information
@@ -172,6 +173,7 @@ delivery-pilot-web/
 │   ├── onboarding.html     # Platform onboarding guide
 │   ├── workshops.html      # 10-step AI workshop process
 │   ├── agile-transformation.html # Agile transformation services
+│   ├── enterprise-agent.html    # Enterprise agent implementation guide
 │   ├── dashboard.html      # User dashboard for assessments
 │   ├── signin.html         # User authentication page
 │   ├── pricing.html        # Pricing plans and packages

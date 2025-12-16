@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise Agent Implementation - Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.">
+    <meta name="keywords" content="enterprise agent, AI agent, datasource integration, agent configuration, enterprise AI, agent deployment, business use cases, delivery operations">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/enterprise-agent.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Enterprise Agent Implementation | Delivery Pilot">
+    <meta property="og:description" content="Deploy an enterprise-ready AI agent integrated with your company datasources to support delivery operations and business use cases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/enterprise-agent.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enterprise Agent Implementation">
+    <meta name="twitter:description" content="Deploy enterprise-ready AI agents with integrated company datasources.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Enterprise Agent Implementation | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Hero section styles */
+        .enterprise-hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .enterprise-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .enterprise-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .enterprise-hero .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        /* Overview section */
+        .overview-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .overview-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .overview-box h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .overview-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .overview-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .overview-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .overview-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Milestones section */
+        .milestones-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .milestone-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .milestone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .milestone-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .milestone-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .milestone-description {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Deliverable section */
+        .deliverable-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .deliverable-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .deliverable-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .deliverable-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .deliverable-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Focus area highlight */
+        .focus-highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 2rem 0;
+        }
+
+        .focus-highlight h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .focus-highlight p {
+            color: #78350f;
+            margin: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .enterprise-hero h1 {
+                font-size: 2rem;
+            }
+
+            .enterprise-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .milestones-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="enterprise-hero">
+        <div class="container">
+            <h1 data-i18n="enterpriseAgent.hero.title">Enterprise Agent Implementation</h1>
+            <p class="subtitle" data-i18n="enterpriseAgent.hero.subtitle">Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.</p>
+            <p class="tagline" data-i18n="enterpriseAgent.hero.tagline">A systematic approach to delivering fully operational AI agents</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-box">
+                    <h3 data-i18n="enterpriseAgent.overview.objective">🎯 Objective</h3>
+                    <p data-i18n="enterpriseAgent.overview.objectiveText">Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.</p>
+                </div>
+
+                <div class="overview-box">
+                    <h3 data-i18n="enterpriseAgent.overview.clarifications">🔍 Key Clarifications</h3>
+                    <ul class="overview-list">
+                        <li data-i18n="enterpriseAgent.overview.focusArea"><strong>Focus Area:</strong> Agent software updates and configuration</li>
+                        <li data-i18n="enterpriseAgent.overview.outcome"><strong>Expected Outcome:</strong> A fully deployed agent integrated with enterprise datasources, ready to serve the requested use cases</li>
+                    </ul>
+                </div>
+
+                <div class="focus-highlight">
+                    <h4 data-i18n="enterpriseAgent.overview.whyMatters">Why This Matters</h4>
+                    <p data-i18n="enterpriseAgent.overview.whyMattersText">Enterprise agents bridge the gap between AI capabilities and real business value by seamlessly connecting to your company's data ecosystem, enabling intelligent automation and decision support for delivery operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section class="milestones-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="enterpriseAgent.milestones.title">Implementation Framework: 10 Milestones</h2>
+            <p class="section-description" data-i18n="enterpriseAgent.milestones.description">A structured approach to deploying enterprise agents, ensuring thorough planning, seamless integration, and measurable results.</p>
+
+            <div class="milestones-grid">
+                <!-- Milestone 1 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">1</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone1.title">Requirements Gathering & Use Case Definition</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone1.description">Identify specific business use cases for delivery operations, document requirements, and establish success criteria. This foundational phase ensures alignment between technical implementation and business objectives.</p>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">2</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone2.title">Datasource Mapping & Access Configuration</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone2.description">Map all relevant enterprise datasources, configure secure access permissions, and establish data governance protocols. Ensures the agent can safely and efficiently access required information.</p>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">3</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone3.title">Agent Capability Assessment & Gap Analysis</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone3.description">Evaluate current agent capabilities against requirements, identify gaps, and develop a roadmap for necessary enhancements or customizations.</p>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">4</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone4.title">Initial Agent Configuration & Testing</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone4.description">Configure the agent with baseline settings, implement core functionalities, and conduct initial testing in a controlled environment to validate basic operations.</p>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">5</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone5.title">Datasource Integration (Phase 1)</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone5.description">Integrate priority datasources into the agent system, establish data pipelines, and implement data transformation logic as needed for initial use cases.</p>
+                </div>
+
+                <!-- Milestone 6 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">6</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone6.title">Use Case Implementation (Phase 1)</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone6.description">Implement high-priority use cases, configure agent behaviors, and fine-tune responses based on business requirements and user feedback.</p>
+                </div>
+
+                <!-- Milestone 7 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">7</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone7.title">Datasource Integration (Phase 2)</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone7.description">Expand datasource integration to include additional systems, implement advanced data processing capabilities, and optimize data access patterns.</p>
+                </div>
+
+                <!-- Milestone 8 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">8</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone8.title">Use Case Implementation (Phase 2)</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone8.description">Deploy remaining use cases, enhance agent intelligence with additional capabilities, and implement advanced features based on Phase 1 learnings.</p>
+                </div>
+
+                <!-- Milestone 9 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">9</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone9.title">Testing, Validation & Optimization</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone9.description">Conduct comprehensive testing including performance, security, and user acceptance testing. Optimize agent performance, refine responses, and ensure reliability.</p>
+                </div>
+
+                <!-- Milestone 10 -->
+                <div class="milestone-card">
+                    <div class="milestone-number">10</div>
+                    <h3 class="milestone-title" data-i18n="enterpriseAgent.milestone10.title">Production Deployment & Handover</h3>
+                    <p class="milestone-description" data-i18n="enterpriseAgent.milestone10.description">Deploy to production environment, provide comprehensive documentation, train end users and administrators, and establish ongoing support procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverable Section -->
+    <section class="deliverable-section">
+        <div class="container">
+            <div class="deliverable-box">
+                <div class="deliverable-icon">🎁</div>
+                <h2 data-i18n="enterpriseAgent.deliverable.title">Final Deliverable</h2>
+                <p data-i18n="enterpriseAgent.deliverable.description">An operational enterprise agent that seamlessly accesses and utilizes enterprise datasources to fulfill the defined delivery use cases. The agent will be fully integrated, thoroughly tested, and ready to deliver immediate business value through intelligent automation and decision support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="enterpriseAgent.cta.title">Ready to Deploy Your Enterprise Agent?</h2>
+            <p data-i18n="enterpriseAgent.cta.description">Let's discuss how our proven implementation framework can help you deploy AI agents that transform your delivery operations.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary" data-i18n="enterpriseAgent.cta.contact">Contact Us</a>
+                <a href="assessment.html" class="btn btn-secondary" data-i18n="enterpriseAgent.cta.assess">Start Assessment</a>
+                <a href="pricing.html" class="btn btn-secondary" data-i18n="enterpriseAgent.cta.pricing">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Enterprise Agent Implementation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "description": "Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.",
+      "serviceType": "Enterprise AI Agent Implementation",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Enterprise Agent Implementation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Requirements Gathering & Use Case Definition"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Datasource Integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agent Configuration & Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Production Deployment & Handover"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Enterprise Agent Implementation",
+          "item": "https://deliverypilot.net/enterprise-agent.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Enterprise Agent Implementation Process",
+      "description": "A 10-milestone framework for deploying enterprise-ready AI agents",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Requirements Gathering & Use Case Definition",
+          "text": "Identify specific business use cases for delivery operations, document requirements, and establish success criteria."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Datasource Mapping & Access Configuration",
+          "text": "Map all relevant enterprise datasources, configure secure access permissions, and establish data governance protocols."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Agent Capability Assessment & Gap Analysis",
+          "text": "Evaluate current agent capabilities against requirements and identify gaps."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Initial Agent Configuration & Testing",
+          "text": "Configure the agent with baseline settings and conduct initial testing."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Datasource Integration (Phase 1)",
+          "text": "Integrate priority datasources into the agent system."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Use Case Implementation (Phase 1)",
+          "text": "Implement high-priority use cases and configure agent behaviors."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Datasource Integration (Phase 2)",
+          "text": "Expand datasource integration to include additional systems."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Use Case Implementation (Phase 2)",
+          "text": "Deploy remaining use cases and enhance agent intelligence."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Testing, Validation & Optimization",
+          "text": "Conduct comprehensive testing and optimize agent performance."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Production Deployment & Handover",
+          "text": "Deploy to production and provide comprehensive documentation."
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
