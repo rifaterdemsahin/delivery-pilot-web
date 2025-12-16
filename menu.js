@@ -153,6 +153,11 @@ function generateNavigation() {
             <div class="logo">
                 <h2><a href="${navigationConfig.logoLink}">${navigationConfig.logoText}</a></h2>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <div class="nav-right">
                 <div class="language-toggle">
                     <button class="lang-btn active" data-lang="en">EN</button>

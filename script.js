@@ -1671,6 +1671,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navRight = document.querySelector('.nav-right');
+    const body = document.body;
+    
+    if (mobileMenuToggle && navRight) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navRight.classList.toggle('active');
+            body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar') && navRight.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navRight.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        navRight.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navRight.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+        
+        // Handle dropdown menus in mobile view
+        document.querySelectorAll('.nav-menu .dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                // Only handle as dropdown on mobile
+                if (window.innerWidth <= 968) {
+                    e.preventDefault();
+                    const dropdown = toggle.closest('.dropdown');
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+    }
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
