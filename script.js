@@ -1543,6 +1543,18 @@ const translations = {
 // Current language
 let currentLang = 'en';
 
+// Pages with separate language files (not using i18n system)
+const separateLanguagePages = {
+    'resources-knowledge-transfer.html': {
+        en: 'resources-knowledge-transfer.html',
+        tr: 'resources-knowledge-transfer-tr.html'
+    },
+    'resources-knowledge-transfer-tr.html': {
+        en: 'resources-knowledge-transfer.html',
+        tr: 'resources-knowledge-transfer-tr.html'
+    }
+};
+
 // Function to get nested translation value
 function getNestedTranslation(obj, path) {
     return path.split('.').reduce((current, key) => current?.[key], obj);
@@ -1624,13 +1636,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Handle pages with separate language files
             const currentPage = window.location.pathname.split('/').pop();
             
-            // Check if this is a page with separate EN/TR versions
-            if (currentPage === 'resources-knowledge-transfer.html' || currentPage === 'resources-knowledge-transfer-tr.html') {
-                if (lang === 'tr' && currentPage === 'resources-knowledge-transfer.html') {
-                    window.location.href = 'resources-knowledge-transfer-tr.html';
-                    return;
-                } else if (lang === 'en' && currentPage === 'resources-knowledge-transfer-tr.html') {
-                    window.location.href = 'resources-knowledge-transfer.html';
+            // Check if this is a page with separate language versions
+            if (separateLanguagePages[currentPage]) {
+                const targetPage = separateLanguagePages[currentPage][lang];
+                if (targetPage && targetPage !== currentPage) {
+                    window.location.href = targetPage;
                     return;
                 }
             }
