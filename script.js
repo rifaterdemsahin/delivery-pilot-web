@@ -1544,16 +1544,20 @@ const translations = {
 let currentLang = 'en';
 
 // Pages with separate language files (not using i18n system)
+// Maps base filename to language-specific versions
 const separateLanguagePages = {
-    'resources-knowledge-transfer.html': {
-        en: 'resources-knowledge-transfer.html',
-        tr: 'resources-knowledge-transfer-tr.html'
-    },
-    'resources-knowledge-transfer-tr.html': {
+    'resources-knowledge-transfer': {
         en: 'resources-knowledge-transfer.html',
         tr: 'resources-knowledge-transfer-tr.html'
     }
 };
+
+// Helper to get language page mapping for current page
+function getLanguageMapping(filename) {
+    // Remove .html extension and language suffix (-tr) to get base name
+    const baseName = filename.replace(/(-tr)?\.html$/, '');
+    return separateLanguagePages[baseName];
+}
 
 // Function to get nested translation value
 function getNestedTranslation(obj, path) {
@@ -1638,8 +1642,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentPage = pathname.split('/').pop();
             
             // Check if this is a page with separate language versions
-            if (separateLanguagePages[currentPage]) {
-                const targetPage = separateLanguagePages[currentPage][lang];
+            const languageMapping = getLanguageMapping(currentPage);
+            if (languageMapping) {
+                const targetPage = languageMapping[lang];
                 if (targetPage && targetPage !== currentPage) {
                     // Preserve the directory path
                     const basePath = pathname.substring(0, pathname.lastIndexOf('/') + 1);
