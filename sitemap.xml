@@ -123,5 +123,21 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Governance Examples (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-governance-examples.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Governance Examples (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-governance-examples-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
