@@ -207,12 +207,13 @@ const translations = {
                 feature8: "Production-ready solution from workshops",
                 feature9: "10-workshop roadmap: Complete AI-enabled delivery transformation",
                 feature10: "Journey from vibe programming to agentic framework implementation",
+                feature11: "We are building agents to accelerate your AI transformation",
                 cta: "📅 Schedule Interview"
             },
             enterprise: {
                 title: "Enterprise",
                 subtitle: "Monthly Subscription for AI Code Transformation",
-                price: "€10",
+                price: "$10",
                 priceText: "per month per GB processed",
                 feature0: "Revenue Model: Monthly subscription",
                 feature1: "Free for public (open source) projects < 100MB",
@@ -229,6 +230,7 @@ const translations = {
                 feature12: "Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation",
                 feature13: "Complete documentation",
                 feature14: "Priority support",
+                feature15: "We maintain the infrastructure and agent software for your enterprise",
                 cta: "📅 Schedule Interview"
             }
         },
@@ -929,12 +931,13 @@ const translations = {
                 feature8: "Atölyelerden üretime hazır çözüm",
                 feature9: "10 atölye yol haritası: Yapay zeka destekli tam teslimat dönüşümü",
                 feature10: "Vibe programlamadan agentic framework uygulamasına yolculuk",
+                feature11: "Yapay zeka dönüşümünüzü hızlandırmak için ajanlar oluşturuyoruz",
                 cta: "📅 Görüşme Planla"
             },
             enterprise: {
                 title: "Kurumsal",
                 subtitle: "Yapay Zeka Kod Dönüşümü için Aylık Abonelik",
-                price: "€10",
+                price: "$10",
                 priceText: "işlenen GB başına aylık",
                 feature0: "Gelir Modeli: Aylık abonelik",
                 feature1: "< 100MB genel (açık kaynak) projeler için ücretsiz",
@@ -951,6 +954,7 @@ const translations = {
                 feature12: "Kurumsal yol haritası: Değerlendirme → Teslimat → Beceri Boşluğu Belirleme → Yapay Zeka Dönüşümü",
                 feature13: "Eksiksiz dokümantasyon",
                 feature14: "Öncelikli destek",
+                feature15: "Kurumsal altyapınızı ve ajan yazılımınızı biz koruyoruz",
                 cta: "📅 Görüşme Planla"
             }
         },
