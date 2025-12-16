@@ -289,8 +289,7 @@
             </p>
             
             <div class="mermaid-container" style="background: var(--bg-light); padding: 2rem; border-radius: 16px; overflow-x: auto;">
-                <div class="mermaid">
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e3f2fd','primaryTextColor':'#000','primaryBorderColor':'#1565c0','lineColor':'#2563eb','secondaryColor':'#fff3e0','tertiaryColor':'#f3e5f5'}}}%%
+                <pre class="mermaid">
 graph LR
     N1["🎨 1. Vibe Programming<br/>💡 Ideation, Un-deterministic start<br/>📚 Self learn while implementation<br/>🤝 Collaborate with enterprise teams"]
     N2["🤖 2. ChatGPT & Gemini<br/>📖 LLM basics Udemy<br/>🎓 Google Generative AI<br/>✍️ Prompt Engineering"]
@@ -318,7 +317,7 @@ graph LR
     
     class N1,N2,N3,N4,N5,N6,N7,N8,N9 stage
     class N_Agent finalAgent
-                </div>
+                </pre>
             </div>
             
             <div style="margin-top: 3rem; text-align: center;">
@@ -339,20 +338,23 @@ graph LR
     <script src="../menu.js"></script>
     <script src="../script.js"></script>
     <!-- Mermaid.js CDN -->
-    <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof mermaid !== 'undefined') {
-                mermaid.initialize({ 
-                    startOnLoad: false,
-                    theme: 'default',
-                    flowchart: {
-                        useMaxWidth: true,
-                        htmlLabels: true,
-                        curve: 'basis'
-                    }
-                });
-                mermaid.run();
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#e3f2fd',
+                primaryTextColor: '#000',
+                primaryBorderColor: '#1565c0',
+                lineColor: '#2563eb',
+                secondaryColor: '#fff3e0',
+                tertiaryColor: '#f3e5f5'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
             }
         });
     </script>
