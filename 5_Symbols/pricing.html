@@ -282,7 +282,7 @@
         <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
             <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem;">Continuous Assessment Roadmap</h2>
             <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto 3rem;">
-                Start with continuous assessment and progress through our structured 10-step journey. 
+                Start with continuous assessment and progress through 9 learning stages. 
                 The end goal of our workshops and agents is to create an Intelligent Agile SDLC Agent that transforms your organization.
             </p>
             
@@ -346,7 +346,7 @@ graph LR
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof mermaid !== 'undefined') {
                 mermaid.initialize({ 
-                    startOnLoad: true,
+                    startOnLoad: false,
                     theme: 'default',
                     flowchart: {
                         useMaxWidth: true,
@@ -354,6 +354,7 @@ graph LR
                         curve: 'basis'
                     }
                 });
+                mermaid.run();
             }
         });
     </script>
