@@ -35,7 +35,8 @@ const navigationConfig = {
             submenu: [
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
                 { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
-                { href: 'agile-transformation.html', text: '📈 Agile Transformation' }
+                { href: 'agile-transformation.html', text: '📈 Agile Transformation' },
+                { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' }
             ]
         },
         { href: 'pricing.html', text: '💰 Pricing' },
@@ -85,6 +86,7 @@ const footerConfig = {
                 { type: 'link', href: 'onboarding.html', text: 'Onboarding' },
                 { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', text: 'Agile Transformation' },
+                { type: 'link', href: 'enterprise-agent.html', textKey: 'footer.platform.enterpriseAgent', text: 'Enterprise Agent' },
                 { type: 'link', href: 'index.html#features', textKey: 'footer.platform.features', text: 'Features' },
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },
                 { type: 'link', href: 'index.html#use-cases', textKey: 'footer.platform.useCases', text: 'Use Cases' },

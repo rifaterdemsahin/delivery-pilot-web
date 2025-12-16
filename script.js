@@ -12,6 +12,7 @@ const translations = {
             successStories: "⭐ Success Stories",
             onboarding: "🚀 Onboarding",
             workshops: "🎓 Workshops",
+            enterpriseAgent: "🤖 Enterprise Agent",
             features: "✨ Features",
             howItWorks: "⚙️ How It Works",
             useCases: "💼 Use Cases",
@@ -19,7 +20,10 @@ const translations = {
             founder: "👤 Founder",
             partners: "🤝 Partners",
             signIn: "🔑 Sign In",
-            getStarted: "🚀 Get Started"
+            getStarted: "🚀 Get Started",
+            resources: "📚 Resources",
+            knowledgeTransfer: "🧠 Knowledge Transfer",
+            workVsRobots: "🤖 Work vs Robots"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -242,7 +246,8 @@ const translations = {
                 howItWorks: "How It Works",
                 useCases: "Use Cases",
                 pricing: "Pricing",
-                workshops: "Workshops"
+                workshops: "Workshops",
+                enterpriseAgent: "Enterprise Agent"
             },
             company: {
                 title: "Company",
@@ -722,6 +727,77 @@ const translations = {
                 learnMore: "📚 Learn About Our Process",
                 contact: "💬 Contact Us"
             }
+        },
+        enterpriseAgent: {
+            hero: {
+                title: "Enterprise Agent Implementation",
+                subtitle: "Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.",
+                tagline: "A systematic approach to delivering fully operational AI agents"
+            },
+            overview: {
+                objective: "🎯 Objective",
+                objectiveText: "Deploy an enterprise-ready AI agent capable of utilizing company datasources to support specific business use cases for delivery operations.",
+                clarifications: "🔍 Key Clarifications",
+                focusArea: "Focus Area: Agent software updates and configuration",
+                outcome: "Expected Outcome: A fully deployed agent integrated with enterprise datasources, ready to serve the requested use cases",
+                whyMatters: "Why This Matters",
+                whyMattersText: "Enterprise agents bridge the gap between AI capabilities and real business value by seamlessly connecting to your company's data ecosystem, enabling intelligent automation and decision support for delivery operations."
+            },
+            milestones: {
+                title: "Implementation Framework: 10 Milestones",
+                description: "A structured approach to deploying enterprise agents, ensuring thorough planning, seamless integration, and measurable results."
+            },
+            milestone1: {
+                title: "Requirements Gathering & Use Case Definition",
+                description: "Identify specific business use cases for delivery operations, document requirements, and establish success criteria. This foundational phase ensures alignment between technical implementation and business objectives."
+            },
+            milestone2: {
+                title: "Datasource Mapping & Access Configuration",
+                description: "Map all relevant enterprise datasources, configure secure access permissions, and establish data governance protocols. Ensures the agent can safely and efficiently access required information."
+            },
+            milestone3: {
+                title: "Agent Capability Assessment & Gap Analysis",
+                description: "Evaluate current agent capabilities against requirements, identify gaps, and develop a roadmap for necessary enhancements or customizations."
+            },
+            milestone4: {
+                title: "Initial Agent Configuration & Testing",
+                description: "Configure the agent with baseline settings, implement core functionalities, and conduct initial testing in a controlled environment to validate basic operations."
+            },
+            milestone5: {
+                title: "Datasource Integration (Phase 1)",
+                description: "Integrate priority datasources into the agent system, establish data pipelines, and implement data transformation logic as needed for initial use cases."
+            },
+            milestone6: {
+                title: "Use Case Implementation (Phase 1)",
+                description: "Implement high-priority use cases, configure agent behaviors, and fine-tune responses based on business requirements and user feedback."
+            },
+            milestone7: {
+                title: "Datasource Integration (Phase 2)",
+                description: "Expand datasource integration to include additional systems, implement advanced data processing capabilities, and optimize data access patterns."
+            },
+            milestone8: {
+                title: "Use Case Implementation (Phase 2)",
+                description: "Deploy remaining use cases, enhance agent intelligence with additional capabilities, and implement advanced features based on Phase 1 learnings."
+            },
+            milestone9: {
+                title: "Testing, Validation & Optimization",
+                description: "Conduct comprehensive testing including performance, security, and user acceptance testing. Optimize agent performance, refine responses, and ensure reliability."
+            },
+            milestone10: {
+                title: "Production Deployment & Handover",
+                description: "Deploy to production environment, provide comprehensive documentation, train end users and administrators, and establish ongoing support procedures."
+            },
+            deliverable: {
+                title: "Final Deliverable",
+                description: "An operational enterprise agent that seamlessly accesses and utilizes enterprise datasources to fulfill the defined delivery use cases. The agent will be fully integrated, thoroughly tested, and ready to deliver immediate business value through intelligent automation and decision support."
+            },
+            cta: {
+                title: "Ready to Deploy Your Enterprise Agent?",
+                description: "Let's discuss how our proven implementation framework can help you deploy AI agents that transform your delivery operations.",
+                contact: "Contact Us",
+                assess: "Start Assessment",
+                pricing: "View Pricing"
+            }
         }
     },
     tr: {
@@ -736,6 +812,7 @@ const translations = {
             successStories: "⭐ Başarı Hikayeleri",
             onboarding: "🚀 Katılım",
             workshops: "🎓 Atölyeler",
+            enterpriseAgent: "🤖 Kurumsal Ajan",
             features: "✨ Özellikler",
             howItWorks: "⚙️ Nasıl Çalışır",
             useCases: "💼 Kullanım Alanları",
@@ -743,7 +820,10 @@ const translations = {
             founder: "👤 Kurucu",
             partners: "🤝 Ortaklar",
             signIn: "🔑 Giriş Yap",
-            getStarted: "🚀 Başlayın"
+            getStarted: "🚀 Başlayın",
+            resources: "📚 Kaynaklar",
+            knowledgeTransfer: "🧠 Bilgi Transferi",
+            workVsRobots: "🤖 İş vs Robotlar"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
@@ -966,7 +1046,8 @@ const translations = {
                 howItWorks: "Nasıl Çalışır",
                 useCases: "Kullanım Alanları",
                 pricing: "Fiyatlandırma",
-                workshops: "Atölyeler"
+                workshops: "Atölyeler",
+                enterpriseAgent: "Kurumsal Ajan"
             },
             company: {
                 title: "Şirket",
@@ -1549,6 +1630,77 @@ const translations = {
                 startAssessment: "🚀 Değerlendirmenize Başlayın",
                 learnMore: "📚 Sürecimiz Hakkında Bilgi Edinin",
                 contact: "💬 Bize Ulaşın"
+            }
+        },
+        enterpriseAgent: {
+            hero: {
+                title: "Kurumsal Ajan Uygulaması",
+                subtitle: "Teslimat operasyonları için belirli iş kullanım durumlarını desteklemek üzere şirket veri kaynaklarını kullanabilen kurumsal düzeyde bir yapay zeka ajanı dağıtın.",
+                tagline: "Tamamen operasyonel yapay zeka ajanları sunmak için sistematik bir yaklaşım"
+            },
+            overview: {
+                objective: "🎯 Hedef",
+                objectiveText: "Teslimat operasyonları için belirli iş kullanım durumlarını desteklemek üzere şirket veri kaynaklarını kullanabilen kurumsal düzeyde bir yapay zeka ajanı dağıtın.",
+                clarifications: "🔍 Temel Açıklamalar",
+                focusArea: "Odak Alanı: Ajan yazılım güncellemeleri ve yapılandırması",
+                outcome: "Beklenen Sonuç: Kurumsal veri kaynaklarıyla entegre edilmiş, talep edilen kullanım durumlarına hizmet etmeye hazır, tam olarak dağıtılmış bir ajan",
+                whyMatters: "Bu Neden Önemli",
+                whyMattersText: "Kurumsal ajanlar, şirketinizin veri ekosistemine sorunsuz bir şekilde bağlanarak yapay zeka yetenekleri ile gerçek iş değeri arasındaki boşluğu doldurur ve teslimat operasyonları için akıllı otomasyon ve karar desteği sağlar."
+            },
+            milestones: {
+                title: "Uygulama Çerçevesi: 10 Kilometre Taşı",
+                description: "Kurumsal ajanları dağıtmak için yapılandırılmış bir yaklaşım, kapsamlı planlama, sorunsuz entegrasyon ve ölçülebilir sonuçlar sağlar."
+            },
+            milestone1: {
+                title: "Gereksinim Toplama ve Kullanım Durumu Tanımı",
+                description: "Teslimat operasyonları için belirli iş kullanım durumlarını belirleyin, gereksinimleri belgeleyin ve başarı kriterlerini oluşturun. Bu temel aşama, teknik uygulama ile iş hedefleri arasında uyum sağlar."
+            },
+            milestone2: {
+                title: "Veri Kaynağı Haritalama ve Erişim Yapılandırması",
+                description: "İlgili tüm kurumsal veri kaynaklarını haritalayın, güvenli erişim izinlerini yapılandırın ve veri yönetişim protokollerini oluşturun. Ajanın gerekli bilgilere güvenli ve verimli bir şekilde erişebilmesini sağlar."
+            },
+            milestone3: {
+                title: "Ajan Yetenek Değerlendirmesi ve Boşluk Analizi",
+                description: "Mevcut ajan yeteneklerini gereksinimlere göre değerlendirin, boşlukları belirleyin ve gerekli iyileştirmeler veya özelleştirmeler için bir yol haritası geliştirin."
+            },
+            milestone4: {
+                title: "İlk Ajan Yapılandırması ve Test",
+                description: "Ajanı temel ayarlarla yapılandırın, temel işlevleri uygulayın ve temel operasyonları doğrulamak için kontrollü bir ortamda ilk test yapın."
+            },
+            milestone5: {
+                title: "Veri Kaynağı Entegrasyonu (Aşama 1)",
+                description: "Öncelikli veri kaynaklarını ajan sistemine entegre edin, veri boru hatları oluşturun ve başlangıç kullanım durumları için gerektiğinde veri dönüştürme mantığını uygulayın."
+            },
+            milestone6: {
+                title: "Kullanım Durumu Uygulaması (Aşama 1)",
+                description: "Yüksek öncelikli kullanım durumlarını uygulayın, ajan davranışlarını yapılandırın ve iş gereksinimleri ve kullanıcı geri bildirimlerine göre yanıtları ince ayarlayın."
+            },
+            milestone7: {
+                title: "Veri Kaynağı Entegrasyonu (Aşama 2)",
+                description: "Veri kaynağı entegrasyonunu ek sistemleri içerecek şekilde genişletin, gelişmiş veri işleme yeteneklerini uygulayın ve veri erişim modellerini optimize edin."
+            },
+            milestone8: {
+                title: "Kullanım Durumu Uygulaması (Aşama 2)",
+                description: "Kalan kullanım durumlarını dağıtın, ek yeteneklerle ajan zekasını geliştirin ve Aşama 1 öğrenimlerine dayalı gelişmiş özellikleri uygulayın."
+            },
+            milestone9: {
+                title: "Test, Doğrulama ve Optimizasyon",
+                description: "Performans, güvenlik ve kullanıcı kabul testi dahil olmak üzere kapsamlı test yapın. Ajan performansını optimize edin, yanıtları iyileştirin ve güvenilirliği sağlayın."
+            },
+            milestone10: {
+                title: "Üretim Dağıtımı ve Devir",
+                description: "Üretim ortamına dağıtın, kapsamlı dokümantasyon sağlayın, son kullanıcıları ve yöneticileri eğitin ve devam eden destek prosedürlerini oluşturun."
+            },
+            deliverable: {
+                title: "Nihai Teslimat",
+                description: "Tanımlanan teslimat kullanım durumlarını yerine getirmek için kurumsal veri kaynaklarına sorunsuz bir şekilde erişen ve bunları kullanan operasyonel bir kurumsal ajan. Ajan tamamen entegre, kapsamlı bir şekilde test edilmiş ve akıllı otomasyon ve karar desteği yoluyla anında iş değeri sunmaya hazır olacaktır."
+            },
+            cta: {
+                title: "Kurumsal Ajanınızı Dağıtmaya Hazır mısınız?",
+                description: "Kanıtlanmış uygulama çerçevemizin teslimat operasyonlarınızı dönüştüren yapay zeka ajanlarını dağıtmanıza nasıl yardımcı olabileceğini tartışalım.",
+                contact: "Bize Ulaşın",
+                assess: "Değerlendirmeye Başlayın",
+                pricing: "Fiyatlandırmayı Görüntüle"
             }
         }
     }
