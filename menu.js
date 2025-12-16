@@ -56,7 +56,6 @@ const navigationConfig = {
             textKey: 'nav.resources',
             submenu: [
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
-                { href: 'resources-knowledge-transfer-tr.html', textKey: 'nav.knowledgeTransferTR', text: '🇹🇷 Bilgi Transferi' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' }
             ]
         },
