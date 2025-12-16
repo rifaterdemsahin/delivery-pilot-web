@@ -1620,6 +1620,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
+            
+            // Handle pages with separate language files
+            const currentPage = window.location.pathname.split('/').pop();
+            
+            // Check if this is a page with separate EN/TR versions
+            if (currentPage === 'resources-knowledge-transfer.html' || currentPage === 'resources-knowledge-transfer-tr.html') {
+                if (lang === 'tr' && currentPage === 'resources-knowledge-transfer.html') {
+                    window.location.href = 'resources-knowledge-transfer-tr.html';
+                    return;
+                } else if (lang === 'en' && currentPage === 'resources-knowledge-transfer-tr.html') {
+                    window.location.href = 'resources-knowledge-transfer.html';
+                    return;
+                }
+            }
+            
             updateContent(lang);
         });
     });
