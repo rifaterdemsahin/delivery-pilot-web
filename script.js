@@ -1634,13 +1634,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const lang = btn.getAttribute('data-lang');
             
             // Handle pages with separate language files
-            const currentPage = window.location.pathname.split('/').pop();
+            const pathname = window.location.pathname;
+            const currentPage = pathname.split('/').pop();
             
             // Check if this is a page with separate language versions
             if (separateLanguagePages[currentPage]) {
                 const targetPage = separateLanguagePages[currentPage][lang];
                 if (targetPage && targetPage !== currentPage) {
-                    window.location.href = targetPage;
+                    // Preserve the directory path
+                    const basePath = pathname.substring(0, pathname.lastIndexOf('/') + 1);
+                    window.location.href = basePath + targetPage;
                     return;
                 }
             }
