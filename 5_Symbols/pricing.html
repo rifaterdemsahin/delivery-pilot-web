@@ -277,11 +277,86 @@
         </div>
     </section>
 
+    <!-- Continuous Assessment Section -->
+    <section class="continuous-assessment-section" style="padding: 5rem 0; background: white;">
+        <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem;">Continuous Assessment Roadmap</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto 3rem;">
+                Start with continuous assessment and progress through our structured 10-step journey. 
+                The end goal of our workshops and agents is to create an Intelligent Agile SDLC Agent that transforms your organization.
+            </p>
+            
+            <div class="mermaid-container" style="background: var(--bg-light); padding: 2rem; border-radius: 16px; overflow-x: auto;">
+                <div class="mermaid">
+graph LR
+    %% Define Nodes based on the image content
+    N1[1. Vibe Programming<br/>- Ideation, Un-deterministic start<br/>- Self learn while implementation<br/>- Collaborate with enterprise teams]
+    N2[2. ChatGPT & Gemini<br/>- LLM basics (Udemy)<br/>- Google's Generative AI for Beginners<br/>- Prompt Engineering (Vanderbilt)]
+    N3[3. Prompt Engineering<br/>- Specialization (deeplearning.ai)<br/>- Complete Bootcamp (Udemy)<br/>- Intro to Prompt Engineering]
+    N4[4. Vector Databases<br/>(Data retrieval)<br/>- From Embeddings to Apps (Pinecone)<br/>- Complete Bootcamp (Udemy)<br/>- Building Semantic Search (Udemy)]
+    N5[5. RAG<br/>(Retrieval-augmented generation)<br/>- ChatGPT Masterclass (Udemy)<br/>- Google's Generative AI<br/>- Prompt Engineering (Vanderbilt)]
+    N6[6. Fine-Tuning<br/>(Customization)<br/>- Fine-Tuning LLMs (deeplearning.ai)<br/>- GenAI with LLMs (AWS)<br/>- Intro to Pruning Tuning]
+    N7[7. Explainable AI (XAI)<br/>- AI Explainability 360 (IBM)<br/>- Explainable AI (deeplearning.ai)<br/>- Interpretable Machine Learning]
+    N8[8. AGI & ASI<br/>- AGI Safety Fundamentals<br/>- Superintelligence: Risks & Strategies<br/>- Intro to AGI (SingularityNET)]
+    N9[9. AI & Cyber Security<br/>(Secure deployment)<br/>- AI for Cybersecurity (Udemy)<br/>- Secure Deployed AI<br/>- Cybersecurity and AI (IBM)]
+    
+    %% Define the new final state node based on your request
+    N_Agent[Final Goal: Intelligent Agile SDLC Agent<br/>- **Fixes & Optimizes SDLC**<br/>- **Helps with Agile Practices**<br/>- **Removes Organizational Silos**<br/>- **Creates Continuous Intelligence**]
+
+    %% Define Connections representing the roadmap flow
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N4 --> N5
+    N5 --> N6
+    N6 --> N7
+    N7 --> N8
+    N8 --> N9
+    N9 --> N_Agent
+
+    %% Styling to highlight the path and the final agent
+    classDef stage fill:#e3f2fd,stroke:#1565c0,stroke-width:1px,color:#000;
+    classDef finalAgent fill:#fff3e0,stroke:#ff6f00,stroke-width:3px,color:#000,font-weight:bold;
+    
+    class N1,N2,N3,N4,N5,N6,N7,N8,N9 stage;
+    class N_Agent finalAgent;
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+                    Each workshop builds upon the previous one, culminating in an AI-powered agent that revolutionizes 
+                    your software delivery lifecycle, breaks down silos, and enables continuous improvement.
+                </p>
+                <a href="https://deliverypilot.net/assessment.html" class="pricing-cta" style="display: inline-block; max-width: 300px;">
+                    🚀 Start Your Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer - Loaded from menu.js -->
     <div id="footer-placeholder"></div>
 
     <script src="../menu.js"></script>
     <script src="../script.js"></script>
+    <!-- Mermaid.js CDN -->
+    <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({ 
+                    startOnLoad: true,
+                    theme: 'default',
+                    flowchart: {
+                        useMaxWidth: true,
+                        htmlLabels: true,
+                        curve: 'basis'
+                    }
+                });
+            }
+        });
+    </script>
     
     <!-- Structured Data (Schema.org) for SEO -->
     <script type="application/ld+json">
