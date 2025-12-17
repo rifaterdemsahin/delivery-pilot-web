@@ -76,7 +76,8 @@ const navigationConfig = {
                 { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' }
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
-                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' }
+                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
+                { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },

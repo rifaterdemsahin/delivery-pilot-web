@@ -156,6 +156,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Agent Security Benefits -->
+    <url>
+        <loc>https://deliverypilot.net/agent-security-benefits.html</loc>
     <!-- Resources: Why Build Agents (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-why-build-agents.html</loc>
