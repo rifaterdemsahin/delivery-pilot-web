@@ -61,6 +61,8 @@ const navigationConfig = {
                 { href: 'resources-agent-automation.html', textKey: 'nav.agentAutomation', text: '🔗 Agent Automation' },
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
+                { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' }
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' }
             ]

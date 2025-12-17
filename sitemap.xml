@@ -140,6 +140,25 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Work vs Robots (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Humans vs Agents (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-humans-vs-agents.html</loc>
     <!-- Resources: Root Cause Analysis (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-root-cause-analysis.html</loc>
@@ -168,6 +187,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Humans vs Agents (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-humans-vs-agents-tr.html</loc>
     <!-- Resources: Agent Automation (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-agent-automation-tr.html</loc>
