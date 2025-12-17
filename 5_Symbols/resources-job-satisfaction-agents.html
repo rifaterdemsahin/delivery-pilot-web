@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Understanding how manual repetitive tasks lead to low job satisfaction in engineering teams. Learn how automation agents restore motivation and enable engineers to focus on design, implementation, and innovation.">
+    <meta name="keywords" content="job satisfaction, engineer motivation, automation agents, manual tasks, SRE automation, DevOps, task automation, engineering productivity, delivery pilot">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-job-satisfaction-agents.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Low Job Satisfaction: Manual Tasks vs Automation Agents | Delivery Pilot">
+    <meta property="og:description" content="How automation agents transform engineer job satisfaction by eliminating manual repetitive work.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-job-satisfaction-agents.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Low Job Satisfaction: Manual Tasks vs Automation Agents">
+    <meta name="twitter:description" content="Transform engineer motivation by shifting from manual tasks to building automation agents.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Job Satisfaction: Manual Tasks vs Automation Agents | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .demotivation-cards,
+        .motivation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.manual {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.automated {
+            border-left: 4px solid #10b981;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .example-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .workflow-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .workflow-steps li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .workflow-steps li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>Low Job Satisfaction: Manual Tasks vs Automation Agents</h1>
+            <p class="subtitle">Why Engineers Should Design, Implement, and Operate Agents Instead of Doing Manual Work</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Job Satisfaction Crisis in Engineering Teams</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Imagine being a skilled Site Reliability Engineer (SRE) who spent years mastering distributed systems, observability, and automation. Now imagine spending your days manually generating and sending the same daily status report, clicking through dashboards, copying metrics into spreadsheets, and emailing summaries to stakeholders.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    This is not a hypothetical scenario—it's the daily reality for thousands of engineers across enterprises worldwide. The result? <strong>Low job satisfaction, burnout, and high turnover</strong>. Engineers didn't train for years to become glorified data entry specialists.
+                </p>
+                <p>
+                    The solution isn't to hire more engineers to do these manual tasks. The solution is to <strong>empower engineers to design, implement, and operate automation agents</strong> that handle these repetitive tasks in the background, freeing engineers to focus on innovation, architecture, and solving complex problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">😞 The Demotivation of Manual Repetitive Work</h2>
+            <p class="section-subtitle">How manual tasks drain engineer motivation and create organizational inefficiency</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    When engineers are stuck doing manual, repetitive tasks, the impact goes far beyond lost productivity. It affects morale, retention, innovation, and ultimately, business outcomes.
+                </p>
+            </div>
+
+            <div class="demotivation-cards">
+                <div class="card">
+                    <span class="icon">😓</span>
+                    <h3>Wasted Expertise</h3>
+                    <p>Highly skilled engineers spend hours on tasks that could be automated. A senior SRE manually generating daily reports is like using a Ferrari to deliver pizzas—it works, but it's a terrible use of resources.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Endless Repetition</h3>
+                    <p>Same task, different day. When engineers repeat the same manual process day after day, week after week, it becomes soul-crushing. There's no learning, no growth, no challenge—just mindless repetition.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚪</span>
+                    <h3>High Turnover</h3>
+                    <p>Talented engineers leave for opportunities where they can actually engineer. When your best people spend their time on manual tasks, they start updating their resumes. The cost of replacing a senior engineer far exceeds the cost of automation.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⏰</span>
+                    <h3>Time-Intensive Burden</h3>
+                    <p>Manual tasks consume significant time that could be spent on strategic work. Generating a daily report might take 30 minutes to an hour—that's 5-10% of the workday, every day, forever.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">❌</span>
+                    <h3>Human Error Risk</h3>
+                    <p>Humans make mistakes when doing repetitive tasks. A missed metric, a copy-paste error, a forgotten email—these mistakes create rework and erode trust in the process.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚫</span>
+                    <h3>Innovation Starvation</h3>
+                    <p>When engineers are buried in manual work, there's no time for innovation. New ideas, process improvements, and technical debt reduction all take a back seat to "getting the report out."</p>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 3rem;">
+                <h3>📊 Real-World Example: The Daily SRE Report</h3>
+                <p style="margin-bottom: 1rem;">Consider a typical manual workflow for generating a daily SRE status report:</p>
+                <ul class="workflow-steps">
+                    <li>Log into monitoring dashboard (Datadog, Prometheus, etc.)</li>
+                    <li>Manually check key metrics: uptime, error rates, latency, traffic</li>
+                    <li>Open spreadsheet template</li>
+                    <li>Copy-paste metrics into spreadsheet</li>
+                    <li>Check incident log for any issues</li>
+                    <li>Write summary of previous day's incidents</li>
+                    <li>Check on-call rotation and escalations</li>
+                    <li>Format the report for readability</li>
+                    <li>Send email to stakeholders with attachments</li>
+                    <li>Repeat tomorrow, and the next day, and the next...</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: #666;">
+                    <strong>Time Investment:</strong> 30-60 minutes daily = 2.5-5 hours weekly = 130-260 hours yearly per engineer
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">😊 The Motivation of Building Automation Agents</h2>
+            <p class="section-subtitle">How designing, implementing, and operating agents restores engineer satisfaction and drives innovation</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    When engineers shift from doing manual tasks to <strong>building automation agents</strong>, everything changes. They're no longer operators—they become architects, designers, and innovators. The agent does the work in the background while engineers focus on what they love: <strong>designing systems, implementing solutions, and operating at scale</strong>.
+                </p>
+            </div>
+
+            <div class="motivation-cards">
+                <div class="card">
+                    <span class="icon">🎨</span>
+                    <h3>Design Excellence</h3>
+                    <p>Engineers design intelligent agents that understand context, handle edge cases, and improve over time. This is real engineering work—architecting solutions that scale and evolve.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🛠️</span>
+                    <h3>Implementation Challenge</h3>
+                    <p>Building an automation agent requires real technical skill: API integrations, data processing, error handling, monitoring. Engineers use their full skill set and continue learning new technologies.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⚙️</span>
+                    <h3>Operational Mastery</h3>
+                    <p>Operating an agent at scale teaches engineers about reliability, observability, and incident response. They become experts in running production systems, not just manual tasks.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚀</span>
+                    <h3>Productivity Multiplier</h3>
+                    <p>One well-designed agent can do the work of multiple people, 24/7, without breaks. Engineers see their impact multiply exponentially rather than being limited by their personal capacity.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Continuous Learning</h3>
+                    <p>Building agents involves learning new technologies, patterns, and best practices. Engineers grow their skills constantly rather than stagnating in repetitive work.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Career Growth</h3>
+                    <p>Engineers who build automation agents develop valuable skills in AI/ML, automation, and system design. These skills are highly sought after and accelerate career progression.</p>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 3rem;">
+                <h3>🤖 Real-World Solution: Automated SRE Report Agent</h3>
+                <p style="margin-bottom: 1rem;">The same daily SRE report, now handled by an automation agent:</p>
+                <ul class="workflow-steps">
+                    <li>Agent runs automatically at scheduled time (e.g., 8 AM daily)</li>
+                    <li>Queries monitoring APIs programmatically (Datadog, Prometheus, etc.)</li>
+                    <li>Collects metrics: uptime, error rates, latency, traffic</li>
+                    <li>Analyzes trends and compares to historical baselines</li>
+                    <li>Queries incident management system for recent issues</li>
+                    <li>Generates natural language summary using AI</li>
+                    <li>Formats report with charts and visualizations</li>
+                    <li>Sends email/Slack notification with report</li>
+                    <li>Logs execution for audit trail</li>
+                    <li>Continues running indefinitely without human intervention</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: #10b981;">
+                    <strong>Engineer Time Investment:</strong> 40-80 hours to design and implement initially, then 1-2 hours monthly for maintenance. ROI achieved in 2-3 months.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🔄 The Transformation: Before and After</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card manual">
+                    <h3 style="color: #ef4444; margin-bottom: 1.5rem;">❌ Manual Approach</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>👤 Engineer does the work daily</li>
+                        <li>⏰ 30-60 minutes per day</li>
+                        <li>😓 Low job satisfaction</li>
+                        <li>❌ Error-prone and inconsistent</li>
+                        <li>🚪 High turnover risk</li>
+                        <li>🚫 No time for innovation</li>
+                        <li>📉 Linear capacity scaling</li>
+                        <li>💰 High ongoing cost</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card automated">
+                    <h3 style="color: #10b981; margin-bottom: 1.5rem;">✅ Automation Agent Approach</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>🤖 Agent does the work automatically</li>
+                        <li>⚡ Runs in seconds, 24/7</li>
+                        <li>😊 High job satisfaction</li>
+                        <li>✅ Consistent and reliable</li>
+                        <li>🎯 Improved retention</li>
+                        <li>🚀 Time for innovation</li>
+                        <li>📈 Exponential scaling</li>
+                        <li>💡 Low ongoing cost</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Journey Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">🛤️ The Journey: From Manual Tasks to Automation Agents</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Phase 1: Recognition (Week 1)</h3>
+                    <p>Identify repetitive manual tasks that drain engineer time and motivation. Document the current process, time spent, and pain points. Get leadership buy-in on the automation initiative.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Phase 2: Design (Weeks 2-3)</h3>
+                    <p>Engineers design the automation agent architecture. Define requirements, choose technologies, design data flows, and plan for error handling and monitoring. This is engaging work that uses engineering skills.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Phase 3: Implementation (Weeks 4-7)</h3>
+                    <p>Build the agent using modern tools and frameworks. Implement integrations, add intelligent features, create dashboards. Engineers learn new skills and see their vision come to life.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Phase 4: Operation (Week 8+)</h3>
+                    <p>Deploy the agent to production and monitor its performance. Engineers operate a sophisticated system rather than doing manual tasks. They handle incidents, optimize performance, and add new features based on feedback.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Phase 5: Evolution (Ongoing)</h3>
+                    <p>Continuously improve the agent based on usage patterns and new requirements. Engineers become product owners of their automation, driving innovation and expanding capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Insight Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>💡 The Core Insight</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Engineers didn't study computer science, earn certifications, and develop expertise to do manual tasks. They trained to <strong>design systems, implement solutions, and operate infrastructure at scale</strong>.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    When you ask engineers to manually send daily reports, you're not just wasting their time—you're telling them their skills don't matter. You're saying "I need a typist, not an engineer."
+                </p>
+                <p>
+                    When you empower engineers to <strong>build automation agents</strong>, you're saying "I trust your expertise, I value your innovation, and I want you to multiply your impact." That's how you retain top talent and drive transformation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Summary Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">📊 The Business Case for Automation Agents</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">85%</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Time Saved</div>
+                        <div style="color: #666;">Engineers reclaim time for strategic work</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">3x</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Productivity Gain</div>
+                        <div style="color: #666;">More output with same team size</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">50%</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Turnover Reduction</div>
+                        <div style="color: #666;">Retain talented engineers longer</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">24/7</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Always Available</div>
+                        <div style="color: #666;">Agents work around the clock</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Transform Your Engineers' Job Satisfaction?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Stop wasting talent on manual tasks. Empower your engineers to design, implement, and operate automation agents.</p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Start Your Assessment</a>
+                <a href="enterprise-agent.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🤖 Learn About Enterprise Agents</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Get Started</a>
+                <a href="resources-job-satisfaction-agents-tr.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇹🇷 Türkçe Okuyun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Low Job Satisfaction: Manual Tasks vs Automation Agents",
+      "description": "Understanding how manual repetitive tasks lead to low job satisfaction and how automation agents restore engineer motivation",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-job-satisfaction-agents.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["job satisfaction", "engineer motivation", "automation agents", "manual tasks", "SRE automation", "DevOps", "task automation"]
+    }
+    </script>
+</body>
+</html>
