@@ -274,13 +274,24 @@ const translations = {
                 partners: "Partners",
                 previousCustomers: "Previous Customers",
                 careers: "Careers",
-                contact: "Contact"
+                contact: "Contact",
+                transformations: "Transformations",
+                faq: "FAQ",
+                security: "Security"
             },
             resources: {
                 title: "Resources",
                 documentation: "Documentation",
                 blog: "Blog",
-                support: "Support"
+                support: "Support",
+                knowledgeTransfer: "Knowledge Transfer",
+                taskHandover: "Task Handover Challenge",
+                workVsRobots: "Work vs Robots",
+                jobSatisfaction: "Job Satisfaction",
+                governanceExamples: "Governance Examples",
+                acronymPressure: "Acronym Overload",
+                accessSecuritySilos: "Access & Security Silos",
+                employeeOverload: "Employee Overload"
             },
             copyright: "© {year} Delivery Pilot. All rights reserved."
         },
@@ -1174,13 +1185,24 @@ const translations = {
                 partners: "Ortaklar",
                 previousCustomers: "Önceki Müşteriler",
                 careers: "Kariyer",
-                contact: "İletişim"
+                contact: "İletişim",
+                transformations: "Dönüşümler",
+                faq: "SSS",
+                security: "Güvenlik"
             },
             resources: {
                 title: "Kaynaklar",
                 documentation: "Dokümantasyon",
                 blog: "Blog",
-                support: "Destek"
+                support: "Destek",
+                knowledgeTransfer: "Bilgi Transferi",
+                taskHandover: "Görev Devri Zorluğu",
+                workVsRobots: "İş vs Robotlar",
+                jobSatisfaction: "İş Memnuniyeti",
+                governanceExamples: "Yönetişim Örnekleri",
+                acronymPressure: "Kısaltma Baskısı",
+                accessSecuritySilos: "Erişim ve Güvenlik Siloları",
+                employeeOverload: "Çalışan Aşırı Yükü"
             },
             copyright: "© {year} Delivery Pilot. Tüm hakları saklıdır."
         },
