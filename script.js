@@ -26,10 +26,21 @@ const translations = {
             knowledgeTransfer: "🧠 Knowledge Transfer",
             taskHandover: "🔄 Task Handover Challenge",
             workVsRobots: "🤖 Work vs Robots",
-            governanceExamples: "🏛️ Governance Examples"
-            workVsRobots: "🤖 Work vs Robots",
             governanceExamples: "🏛️ Governance Examples",
-            paradigmShift: "⚡ Paradigm Shift"
+            paradigmShift: "⚡ Paradigm Shift",
+            rootCauseAnalysis: "🔍 Root Cause Analysis",
+            agentAutomation: "🔗 Agent Automation",
+            documentationEfficiency: "📄 Documentation Efficiency",
+            whyBuildAgents: "🏗️ Why Build Agents",
+            workshopsAsSimulations: "🎮 Workshops as Simulations",
+            agenticVsAutomation: "🤖 Agentic vs Automation",
+            acronymPressure: "🔤 Acronym Overload",
+            accessSecuritySilos: "🔐 Access & Security Silos",
+            jobSatisfaction: "😊 Job Satisfaction",
+            employeeOverload: "⚡ Employee Overload",
+            humansVsAgents: "👥 Humans vs Agents",
+            agentSecurity: "🔒 Agent Security Benefits",
+            security: "🔒 Security"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -135,6 +146,7 @@ const translations = {
             },
             cta: {
                 assess: "Identify Your Delivery Gaps",
+                workshops: "View 10-Step Workshop Process",
                 learn: "Learn About Our Process"
             }
         },
@@ -263,13 +275,24 @@ const translations = {
                 partners: "Partners",
                 previousCustomers: "Previous Customers",
                 careers: "Careers",
-                contact: "Contact"
+                contact: "Contact",
+                transformations: "Transformations",
+                faq: "FAQ",
+                security: "Security"
             },
             resources: {
                 title: "Resources",
                 documentation: "Documentation",
                 blog: "Blog",
-                support: "Support"
+                support: "Support",
+                knowledgeTransfer: "Knowledge Transfer",
+                taskHandover: "Task Handover Challenge",
+                workVsRobots: "Work vs Robots",
+                jobSatisfaction: "Job Satisfaction",
+                governanceExamples: "Governance Examples",
+                acronymPressure: "Acronym Overload",
+                accessSecuritySilos: "Access & Security Silos",
+                employeeOverload: "Employee Overload"
             },
             copyright: "© {year} Delivery Pilot. All rights reserved."
         },
@@ -915,10 +938,21 @@ const translations = {
             knowledgeTransfer: "🧠 Bilgi Transferi",
             taskHandover: "🔄 Görev Devri Zorluğu",
             workVsRobots: "🤖 İş vs Robotlar",
-            governanceExamples: "🏛️ Yönetişim Örnekleri"
-            workVsRobots: "🤖 İş vs Robotlar",
             governanceExamples: "🏛️ Yönetişim Örnekleri",
-            paradigmShift: "⚡ Paradigma Değişimi"
+            paradigmShift: "⚡ Paradigma Değişimi",
+            rootCauseAnalysis: "🔍 Kök Neden Analizi",
+            agentAutomation: "🔗 Ajan Otomasyonu",
+            documentationEfficiency: "📄 Dokümantasyon Verimliliği",
+            whyBuildAgents: "🏗️ Neden Ajan Oluşturmalı",
+            workshopsAsSimulations: "🎮 Simülasyon Olarak Atölyeler",
+            agenticVsAutomation: "🤖 Ajantik vs Otomasyon",
+            acronymPressure: "🔤 Kısaltma Baskısı",
+            accessSecuritySilos: "🔐 Erişim ve Güvenlik Siloları",
+            jobSatisfaction: "😊 İş Memnuniyeti",
+            employeeOverload: "⚡ Çalışan Aşırı Yükü",
+            humansVsAgents: "👥 İnsanlar vs Ajanlar",
+            agentSecurity: "🔒 Ajan Güvenlik Avantajları",
+            security: "🔒 Güvenlik"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
@@ -1024,6 +1058,7 @@ const translations = {
             },
             cta: {
                 assess: "Teslimat Boşluklarınızı Belirleyin",
+                workshops: "10 Adımlık Atölye Sürecini Görüntüleyin",
                 learn: "Sürecimiz Hakkında Bilgi Edinin"
             }
         },
@@ -1152,13 +1187,24 @@ const translations = {
                 partners: "Ortaklar",
                 previousCustomers: "Önceki Müşteriler",
                 careers: "Kariyer",
-                contact: "İletişim"
+                contact: "İletişim",
+                transformations: "Dönüşümler",
+                faq: "SSS",
+                security: "Güvenlik"
             },
             resources: {
                 title: "Kaynaklar",
                 documentation: "Dokümantasyon",
                 blog: "Blog",
-                support: "Destek"
+                support: "Destek",
+                knowledgeTransfer: "Bilgi Transferi",
+                taskHandover: "Görev Devri Zorluğu",
+                workVsRobots: "İş vs Robotlar",
+                jobSatisfaction: "İş Memnuniyeti",
+                governanceExamples: "Yönetişim Örnekleri",
+                acronymPressure: "Kısaltma Baskısı",
+                accessSecuritySilos: "Erişim ve Güvenlik Siloları",
+                employeeOverload: "Çalışan Aşırı Yükü"
             },
             copyright: "© {year} Delivery Pilot. Tüm hakları saklıdır."
         },

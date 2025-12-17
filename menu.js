@@ -68,17 +68,13 @@ const navigationConfig = {
                 { href: 'resources-why-build-agents.html', textKey: 'nav.whyBuildAgents', text: '🏗️ Why Build Agents' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
-                { href: 'resources-workshops-as-simulations.html', textKey: 'nav.workshopsAsSimulations', text: '🎮 Workshops as Simulations' }
-                { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' }
-                { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' }
-                { href: 'resources-access-security-silos.html', textKey: 'nav.accessSecuritySilos', text: '🔐 Access & Security Silos' }
+                { href: 'resources-workshops-as-simulations.html', textKey: 'nav.workshopsAsSimulations', text: '🎮 Workshops as Simulations' },
+                { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' },
+                { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' },
+                { href: 'resources-access-security-silos.html', textKey: 'nav.accessSecuritySilos', text: '🔐 Access & Security Silos' },
                 { href: 'resources-job-satisfaction-agents.html', textKey: 'nav.jobSatisfaction', text: '😊 Job Satisfaction' },
-                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
-                { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' }
+                { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' },
                 { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
-                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' }
-                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
-                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
             ]
         },
