@@ -139,5 +139,13 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Employee Overload Awareness Page -->
+    <url>
+        <loc>https://deliverypilot.net/employee-overload.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
