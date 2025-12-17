@@ -140,6 +140,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Access & Security Silos (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-access-security-silos.html</loc>
     <!-- Employee Overload Awareness Page -->
     <url>
         <loc>https://deliverypilot.net/employee-overload.html</loc>
@@ -192,6 +195,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Access & Security Silos (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-access-security-silos-tr.html</loc>
     <!-- Resources: Humans vs Agents (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-humans-vs-agents-tr.html</loc>
