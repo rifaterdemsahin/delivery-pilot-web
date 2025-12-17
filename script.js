@@ -146,6 +146,7 @@ const translations = {
             },
             cta: {
                 assess: "Identify Your Delivery Gaps",
+                workshops: "View 10-Step Workshop Process",
                 learn: "Learn About Our Process"
             }
         },
@@ -1057,6 +1058,7 @@ const translations = {
             },
             cta: {
                 assess: "Teslimat Boşluklarınızı Belirleyin",
+                workshops: "10 Adımlık Atölye Sürecini Görüntüleyin",
                 learn: "Sürecimiz Hakkında Bilgi Edinin"
             }
         },
