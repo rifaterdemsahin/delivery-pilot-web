@@ -139,5 +139,37 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Work vs Robots (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Agentic vs Automation (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-agentic-vs-automation.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Agentic vs Automation (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-agentic-vs-automation-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
