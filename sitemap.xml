@@ -156,6 +156,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Paradigm Shift (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-paradigm-shift.html</loc>
     <!-- Resources: Agent Security Benefits -->
     <url>
         <loc>https://deliverypilot.net/agent-security-benefits.html</loc>
@@ -199,6 +202,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
     <!-- Resources: Work vs Robots (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
@@ -209,6 +215,20 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Workshops as Simulations -->
+    <url>
+        <loc>https://deliverypilot.net/resources-workshops-as-simulations.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Workshops Page -->
+    <url>
+        <loc>https://deliverypilot.net/workshops.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     <!-- Resources: Agentic vs Automation (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-agentic-vs-automation.html</loc>

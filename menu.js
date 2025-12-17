@@ -67,6 +67,8 @@ const navigationConfig = {
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
                 { href: 'resources-why-build-agents.html', textKey: 'nav.whyBuildAgents', text: '🏗️ Why Build Agents' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
+                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
+                { href: 'resources-workshops-as-simulations.html', textKey: 'nav.workshopsAsSimulations', text: '🎮 Workshops as Simulations' }
                 { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' }
                 { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' }
                 { href: 'resources-access-security-silos.html', textKey: 'nav.accessSecuritySilos', text: '🔐 Access & Security Silos' }
