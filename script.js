@@ -26,10 +26,21 @@ const translations = {
             knowledgeTransfer: "🧠 Knowledge Transfer",
             taskHandover: "🔄 Task Handover Challenge",
             workVsRobots: "🤖 Work vs Robots",
-            governanceExamples: "🏛️ Governance Examples"
-            workVsRobots: "🤖 Work vs Robots",
             governanceExamples: "🏛️ Governance Examples",
-            paradigmShift: "⚡ Paradigm Shift"
+            paradigmShift: "⚡ Paradigm Shift",
+            rootCauseAnalysis: "🔍 Root Cause Analysis",
+            agentAutomation: "🔗 Agent Automation",
+            documentationEfficiency: "📄 Documentation Efficiency",
+            whyBuildAgents: "🏗️ Why Build Agents",
+            workshopsAsSimulations: "🎮 Workshops as Simulations",
+            agenticVsAutomation: "🤖 Agentic vs Automation",
+            acronymPressure: "🔤 Acronym Overload",
+            accessSecuritySilos: "🔐 Access & Security Silos",
+            jobSatisfaction: "😊 Job Satisfaction",
+            employeeOverload: "⚡ Employee Overload",
+            humansVsAgents: "👥 Humans vs Agents",
+            agentSecurity: "🔒 Agent Security Benefits",
+            security: "🔒 Security"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -915,10 +926,21 @@ const translations = {
             knowledgeTransfer: "🧠 Bilgi Transferi",
             taskHandover: "🔄 Görev Devri Zorluğu",
             workVsRobots: "🤖 İş vs Robotlar",
-            governanceExamples: "🏛️ Yönetişim Örnekleri"
-            workVsRobots: "🤖 İş vs Robotlar",
             governanceExamples: "🏛️ Yönetişim Örnekleri",
-            paradigmShift: "⚡ Paradigma Değişimi"
+            paradigmShift: "⚡ Paradigma Değişimi",
+            rootCauseAnalysis: "🔍 Kök Neden Analizi",
+            agentAutomation: "🔗 Ajan Otomasyonu",
+            documentationEfficiency: "📄 Dokümantasyon Verimliliği",
+            whyBuildAgents: "🏗️ Neden Ajan Oluşturmalı",
+            workshopsAsSimulations: "🎮 Simülasyon Olarak Atölyeler",
+            agenticVsAutomation: "🤖 Ajantik vs Otomasyon",
+            acronymPressure: "🔤 Kısaltma Baskısı",
+            accessSecuritySilos: "🔐 Erişim ve Güvenlik Siloları",
+            jobSatisfaction: "😊 İş Memnuniyeti",
+            employeeOverload: "⚡ Çalışan Aşırı Yükü",
+            humansVsAgents: "👥 İnsanlar vs Ajanlar",
+            agentSecurity: "🔒 Ajan Güvenlik Avantajları",
+            security: "🔒 Güvenlik"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
