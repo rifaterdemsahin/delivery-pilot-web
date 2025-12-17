@@ -156,6 +156,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Why Build Agents (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents.html</loc>
     <!-- Resources: Work vs Robots (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
@@ -243,6 +246,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Why Build Agents (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents-tr.html</loc>
     <!-- Resources: Agentic vs Automation (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-agentic-vs-automation-tr.html</loc>

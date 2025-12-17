@@ -65,6 +65,7 @@ const navigationConfig = {
                 { href: 'resources-task-handover-challenge.html', textKey: 'nav.taskHandover', text: '🔄 Task Handover Challenge' },
                 { href: 'resources-documentation-efficiency.html', textKey: 'nav.documentationEfficiency', text: '📄 Documentation Efficiency' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
+                { href: 'resources-why-build-agents.html', textKey: 'nav.whyBuildAgents', text: '🏗️ Why Build Agents' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' }
                 { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' }
