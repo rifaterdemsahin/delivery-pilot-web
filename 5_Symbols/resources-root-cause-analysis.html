@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Root Cause Analysis: The Missing Glue Between Knowledge and Action. Understand why engineers make repetitive errors in complex agile environments and how AI bridges this critical gap.">
+    <meta name="keywords" content="root cause analysis, knowledge to action gap, agile errors, cognitive load, microservices complexity, vault management, AI automation, enterprise intelligence">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-root-cause-analysis.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Root Cause: The Missing Glue Between Knowledge and Action | Delivery Pilot">
+    <meta property="og:description" content="Why engineers make repetitive mechanical errors in complex environments and how AI provides the missing connection.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-root-cause-analysis.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Root Cause: The Missing Glue Between Knowledge and Action">
+    <meta name="twitter:description" content="Understanding and solving the knowledge-to-action gap in agile environments.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Root Cause Analysis: The Missing Glue | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .root-cause-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .examples-section {
+            padding: 4rem 0;
+            background: #fef3c7;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .problem-cards,
+        .example-cards,
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .card.error-card {
+            border-left: 4px solid #dc2626;
+        }
+
+        .card.example-card {
+            border-left: 4px solid #f59e0b;
+        }
+
+        .card.solution-card {
+            border-left: 4px solid #10b981;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .scenario-box {
+            background: #fef3c7;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .scenario-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #92400e;
+        }
+
+        .scenario-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #78350f;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+        }
+
+        .impact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #dc2626;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🔍 Root Cause Analysis</h1>
+            <p class="subtitle">The Missing Glue Between Knowledge and Hands-On Action in Agile Environments</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Core Problem</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    In modern agile environments, there's a critical disconnect that leads to countless errors, delays, and frustration: 
+                    <strong>the glue between knowledge and hands-on execution is missing</strong>.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Engineers know what they need to do. Documentation exists. Procedures are written. Yet, they constantly find themselves:
+                </p>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+                    <li>Forgetting which namespace contains the vault keys</li>
+                    <li>Not knowing which microservices have pending changes</li>
+                    <li>Searching Slack or emails for deployment procedures</li>
+                    <li>Asking colleagues "Where is that config file again?"</li>
+                    <li>Making the same mistakes repeatedly despite knowing better</li>
+                </ul>
+                <p>
+                    This isn't a people problem or a documentation problem. <strong>It's a structural problem with how knowledge connects to action in complex, fast-paced environments.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Root Cause Section -->
+    <section class="root-cause-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Why This Happens: The Root Causes</h2>
+            <p class="section-subtitle">Understanding the fundamental disconnect between knowledge and execution</p>
+            
+            <div class="problem-cards">
+                <div class="card error-card">
+                    <span class="icon">🧠</span>
+                    <h3>Cognitive Overload</h3>
+                    <p>Engineers must keep hundreds of details in their heads: API endpoints, database schemas, deployment procedures, environment variables, vault paths, service dependencies, and more. The human brain simply cannot hold all this context while also solving complex technical problems.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">⚡</span>
+                    <h3>Context Switching Tax</h3>
+                    <p>In agile sprints, engineers switch between multiple tasks, microservices, and environments throughout the day. Each context switch requires rebuilding mental models, and critical details are lost in the transition. The cost compounds with system complexity.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">📚</span>
+                    <h3>Knowledge Fragmentation</h3>
+                    <p>Information is scattered across wikis, README files, Slack threads, email chains, Jira tickets, and tribal knowledge. Finding the right information at the right moment requires detective work, not engineering work.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">🏃</span>
+                    <h3>Speed Over Precision</h3>
+                    <p>Agile velocity metrics incentivize moving fast, but they don't account for the time spent searching for information or recovering from preventable errors. Teams optimize for speed of execution, not quality of execution.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">🔄</span>
+                    <h3>Living System Complexity</h3>
+                    <p>Microservices architectures, cloud infrastructure, and continuous deployment mean systems are constantly evolving. Yesterday's knowledge becomes today's outdated information. Static documentation cannot keep pace with living systems.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">👥</span>
+                    <h3>Expert Dependency</h3>
+                    <p>Critical knowledge often resides in the heads of senior engineers. When they're unavailable, in meetings, or on vacation, the entire team slows down. This creates bottlenecks and single points of failure in human form.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Quote -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>The Fundamental Problem</h2>
+                <p>"Humans are being forced to do mechanical, repetitive cognitive tasks in increasingly complex environments. We've automated the servers but not the connection between what engineers know and what they need to do in the moment."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Examples Section -->
+    <section class="examples-section">
+        <div class="container">
+            <h2 class="section-title">💡 Real-World Scenarios</h2>
+            <p class="section-subtitle">Common situations where the knowledge-to-action gap causes errors</p>
+            
+            <div class="example-cards">
+                <div class="card example-card">
+                    <span class="icon">🔐</span>
+                    <h3>The Vault Keys Mystery</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>An engineer needs to deploy a service that requires database credentials from HashiCorp Vault. They know the credentials exist, but which namespace? dev/secrets? prod/db-creds? common/postgres?</p>
+                    </div>
+                    <p><strong>Impact:</strong> 15 minutes searching documentation, asking in Slack, or guessing. Multiply by dozens of deployments per week across multiple engineers.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🔄</span>
+                    <h3>The Microservices Maze</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>Before deploying their service, an engineer should know if any dependent microservices have pending changes that might cause compatibility issues. There are 47 microservices in the ecosystem.</p>
+                    </div>
+                    <p><strong>Impact:</strong> Either they don't check (risking breaking changes) or they manually check multiple repos, CI pipelines, and team channels (wasting valuable time).</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🌍</span>
+                    <h3>The Environment Variable Hunt</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>A service fails in staging but works locally. The issue is an environment variable that differs between environments. Which one? Where is it documented? Who knows the correct value?</p>
+                    </div>
+                    <p><strong>Impact:</strong> Hours of debugging, comparing environment configs, and eventually asking the one person who set it up months ago.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">📋</span>
+                    <h3>The Deployment Checklist</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>Deploying to production requires following a specific sequence: database migration, cache clear, feature flag update, service restart. The checklist exists in a wiki page last updated 6 months ago.</p>
+                    </div>
+                    <p><strong>Impact:</strong> Steps are missed, performed in wrong order, or based on outdated procedures. Rollbacks and incident calls follow.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🔗</span>
+                    <h3>The API Version Confusion</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>Service A needs to call Service B's API. But which version is currently deployed in each environment? v2.1? v2.3? Is the deprecated endpoint still working?</p>
+                    </div>
+                    <p><strong>Impact:</strong> Integration failures, compatibility issues, and time spent tracking down API version matrices across environments.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">⚠️</span>
+                    <h3>The On-Call Nightmare</h3>
+                    <div class="scenario-box">
+                        <h4>Scenario</h4>
+                        <p>At 2 AM, an alert fires. The on-call engineer needs to know: What's the runbook? Where are the dashboards? Who owns the dependent services? What changed recently?</p>
+                    </div>
+                    <p><strong>Impact:</strong> Extended outages while the engineer frantically searches for information instead of solving the problem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">📊 The Cumulative Impact</h2>
+            <p class="section-subtitle" style="margin-bottom: 2rem;">How the knowledge-to-action gap affects your organization</p>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>⏰ Time Waste</h4>
+                    <p>Engineers spend 20-30% of their time searching for information, asking questions, and context switching instead of coding.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🐛 Preventable Errors</h4>
+                    <p>70% of production incidents stem from preventable human errors caused by missing context or forgotten procedures.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>😰 Developer Burnout</h4>
+                    <p>Constant cognitive load and mechanical repetitive tasks drain mental energy, leading to fatigue and decreased job satisfaction.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🐌 Slower Onboarding</h4>
+                    <p>New team members take 3-6 months to become productive because they must internalize scattered tribal knowledge.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>💰 Hidden Costs</h4>
+                    <p>Incident recovery, rollbacks, hotfixes, and technical debt accumulation compound the direct time costs.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🚧 Innovation Blocked</h4>
+                    <p>Teams spend so much time on mechanical tasks and error recovery that strategic thinking and innovation suffer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">✅ The Solution: AI as the Missing Glue</h2>
+            <p class="section-subtitle">How AI agents bridge the gap between knowledge and hands-on action</p>
+            
+            <div class="solution-cards">
+                <div class="card solution-card">
+                    <span class="icon">🤖</span>
+                    <h3>Context-Aware AI Agents</h3>
+                    <p>AI agents that understand your infrastructure, services, and procedures provide instant, context-specific answers. No more searching wikis or asking Slack for the vault namespace—the AI knows and tells you exactly when you need it.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">📍</span>
+                    <h3>Just-In-Time Information</h3>
+                    <p>Information appears at the point of action, not stored in a repository somewhere. Deploying a service? The AI presents the current deployment checklist, environment-specific variables, and recent changes—all automatically.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🔄</span>
+                    <h3>Living Knowledge Base</h3>
+                    <p>AI agents continuously learn from your codebase, infrastructure changes, and team communications. Knowledge updates automatically as your systems evolve, eliminating the problem of outdated documentation.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🎯</span>
+                    <h3>Automated Mechanical Tasks</h3>
+                    <p>Why should engineers remember 47 microservices' status? AI monitors everything and alerts only when human judgment is needed. Mechanical cognitive tasks become automated, freeing engineers for creative problem-solving.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🧠</span>
+                    <h3>Cognitive Load Reduction</h3>
+                    <p>AI handles the mental burden of remembering procedures, tracking dependencies, and maintaining context across systems. Engineers can focus their cognitive capacity on the actual engineering challenges.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🚀</span>
+                    <h3>Faster, Safer Execution</h3>
+                    <p>With AI providing the right information at the right time, engineers move faster without sacrificing safety. No more choosing between speed and precision—you get both.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Delivery Pilot Helps -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🎯 How Delivery Pilot Addresses This Root Cause</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Delivery Pilot doesn't just provide another knowledge management tool. We create <strong>AI agents that actively bridge the gap between what your engineers know and what they need to do</strong>.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-color);">Our Approach:</h3>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 1rem;"><strong>Train enterprise-specific AI agents</strong> that understand your infrastructure, services, and procedures</li>
+                    <li style="margin-bottom: 1rem;"><strong>Embed intelligence at action points</strong> in your CI/CD pipelines, terminals, and development tools</li>
+                    <li style="margin-bottom: 1rem;"><strong>Automate mechanical cognitive tasks</strong> like checking microservices status, finding vault keys, and verifying procedures</li>
+                    <li style="margin-bottom: 1rem;"><strong>Provide just-in-time guidance</strong> that appears exactly when and where engineers need it</li>
+                    <li style="margin-bottom: 1rem;"><strong>Continuously learn and adapt</strong> as your systems evolve, keeping knowledge current without manual updates</li>
+                </ul>
+                
+                <p style="margin-top: 2rem;">
+                    The result? Engineers spend less time searching, remembering, and context-switching—and more time building, innovating, and solving real problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Bridge the Gap?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                See how AI agents can eliminate repetitive cognitive tasks and connect knowledge to action in your organization.
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🚀 Start Assessment
+                </a>
+                <a href="enterprise-agent.html" class="btn btn-secondary" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🤖 Learn About AI Agents
+                </a>
+                <a href="contact.html" class="btn btn-secondary" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    📧 Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../script.js"></script>
+    <script src="../menu.js"></script>
+</body>
+</html>

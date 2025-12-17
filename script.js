@@ -17,13 +17,16 @@ const translations = {
             howItWorks: "⚙️ How It Works",
             useCases: "💼 Use Cases",
             about: "ℹ️ About",
+            deliveryPilotConcept: "✈️ Delivery Pilot Concept",
             founder: "👤 Founder",
             partners: "🤝 Partners",
             signIn: "🔑 Sign In",
             getStarted: "🚀 Get Started",
             resources: "📚 Resources",
             knowledgeTransfer: "🧠 Knowledge Transfer",
-            workVsRobots: "🤖 Work vs Robots"
+            workVsRobots: "🤖 Work vs Robots",
+            governanceExamples: "🏛️ Governance Examples",
+            paradigmShift: "⚡ Paradigm Shift"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -798,6 +801,89 @@ const translations = {
                 assess: "Start Assessment",
                 pricing: "View Pricing"
             }
+        },
+        deliveryPilotConcept: {
+            hero: {
+                title: "Agents as Heads-Up Displays",
+                subtitle: "In the new world of enterprise operations, we call this \"Delivery Pilot\" because agents serve as your heads-up display—just like jet plane instrumentation—allowing you to assess situations easier on the field.",
+                tagline: "Navigate complexity with clarity. Make decisions with confidence."
+            },
+            analogy: {
+                title: "The Jet Plane Analogy",
+                description: "Just as fighter pilots rely on heads-up displays to navigate complex airspace, modern enterprises need AI agents to navigate the complexity of digital transformation.",
+                jetPilot: {
+                    title: "Jet Pilot Operations",
+                    description: "Pilots fly at high speeds through complex environments. Their heads-up display (HUD) presents critical information—altitude, speed, navigation, threats—directly in their line of sight. This allows them to maintain situational awareness without looking away from their mission."
+                },
+                aiAgents: {
+                    title: "AI Agents as HUDs",
+                    description: "In enterprise operations, AI agents function as your heads-up display. They process massive amounts of data, identify patterns, highlight risks and opportunities, and present actionable insights—all in real-time. You stay focused on strategic decisions while agents handle the complexity."
+                },
+                modernWorld: {
+                    title: "Why We Need This Now",
+                    description: "We cannot operate in this new world of jet-speed business transformation without these intelligent displays. The pace of change, volume of data, and complexity of systems demand AI-powered situational awareness. Delivery Pilot makes this possible."
+                }
+            },
+            concept: {
+                title: "The Delivery Pilot Concept",
+                description: "Understanding how AI agents transform enterprise operations through enhanced situational awareness.",
+                whatIsIt: {
+                    title: "🎯 What is Delivery Pilot?",
+                    text1: "Delivery Pilot is our name for an AI transformation platform where agents act as heads-up displays for your enterprise operations. Just as a pilot's HUD integrates multiple data sources into a single, actionable view, our AI agents synthesize information from across your organization.",
+                    text2: "The term \"Delivery Pilot\" captures two essential aspects: the delivery of business value through AI, and the pilot metaphor of navigating complex operations with enhanced instrumentation."
+                },
+                howItWorks: {
+                    title: "⚙️ How It Works",
+                    text1: "Our AI agents continuously monitor your enterprise environment, processing data from multiple sources simultaneously. They provide you with:",
+                    item1: "Real-time Intelligence: Instant access to critical business metrics and KPIs, presented clearly and contextually",
+                    item2: "Predictive Insights: Early warning systems for potential issues, similar to how a HUD alerts pilots to changing conditions",
+                    item3: "Decision Support: Actionable recommendations based on comprehensive data analysis and pattern recognition",
+                    item4: "Simplified Complexity: Complex data distilled into clear, visual dashboards that enable quick comprehension"
+                },
+                whyNow: {
+                    title: "🚀 Why Now?",
+                    text1: "The business environment has reached \"jet plane\" speed. Organizations face:",
+                    item1: "Information Overload: Too much data to process manually",
+                    item2: "Rapid Change: Market conditions shift faster than traditional decision-making cycles",
+                    item3: "Complex Systems: Interconnected technologies and processes that are difficult to monitor holistically",
+                    item4: "Competitive Pressure: Organizations that can't assess situations quickly fall behind",
+                    text2: "Without AI agents as heads-up displays, we cannot operate effectively in this environment. Delivery Pilot provides the instrumentation modern enterprises need."
+                }
+            },
+            benefits: {
+                title: "Key Benefits",
+                description: "How agents as heads-up displays transform your enterprise operations.",
+                visibility: {
+                    title: "Enhanced Visibility",
+                    description: "See the complete picture across your enterprise, with critical information surfaced automatically."
+                },
+                speed: {
+                    title: "Faster Decisions",
+                    description: "Make informed decisions quickly with AI-powered insights presented in real-time."
+                },
+                accuracy: {
+                    title: "Improved Accuracy",
+                    description: "Reduce errors with AI agents that detect patterns and anomalies humans might miss."
+                },
+                navigation: {
+                    title: "Strategic Navigation",
+                    description: "Navigate complex transformations with confidence, guided by intelligent instrumentation."
+                },
+                risk: {
+                    title: "Risk Mitigation",
+                    description: "Identify and address risks early, similar to how a pilot's HUD warns of potential hazards."
+                },
+                performance: {
+                    title: "Performance Optimization",
+                    description: "Continuously optimize operations based on real-time performance data and insights."
+                }
+            },
+            cta: {
+                title: "Ready to Navigate with Clarity?",
+                description: "Experience how Delivery Pilot's AI agents can serve as your enterprise heads-up display.",
+                assess: "Start Your Assessment",
+                learnMore: "Learn About Enterprise Agents"
+            }
         }
     },
     tr: {
@@ -817,13 +903,16 @@ const translations = {
             howItWorks: "⚙️ Nasıl Çalışır",
             useCases: "💼 Kullanım Alanları",
             about: "ℹ️ Hakkımızda",
+            deliveryPilotConcept: "✈️ Teslimat Pilotu Konsepti",
             founder: "👤 Kurucu",
             partners: "🤝 Ortaklar",
             signIn: "🔑 Giriş Yap",
             getStarted: "🚀 Başlayın",
             resources: "📚 Kaynaklar",
             knowledgeTransfer: "🧠 Bilgi Transferi",
-            workVsRobots: "🤖 İş vs Robotlar"
+            workVsRobots: "🤖 İş vs Robotlar",
+            governanceExamples: "🏛️ Yönetişim Örnekleri",
+            paradigmShift: "⚡ Paradigma Değişimi"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
@@ -1701,6 +1790,89 @@ const translations = {
                 contact: "Bize Ulaşın",
                 assess: "Değerlendirmeye Başlayın",
                 pricing: "Fiyatlandırmayı Görüntüle"
+            }
+        },
+        deliveryPilotConcept: {
+            hero: {
+                title: "Başucu Ekranlar Olarak Ajanlar",
+                subtitle: "Kurumsal operasyonların yeni dünyasında, buna \"Teslimat Pilotu\" diyoruz çünkü ajanlar, uçak jet enstrümantasyonu gibi başucu ekranınız olarak hizmet vererek sahada durumu daha kolay değerlendirmenizi sağlar.",
+                tagline: "Karmaşıklığı netlikle yönlendirin. Güvenle karar verin."
+            },
+            analogy: {
+                title: "Jet Uçağı Benzetmesi",
+                description: "Savaş pilotları karmaşık hava sahasında gezinmek için başucu ekranlarına güvendiği gibi, modern işletmelerin dijital dönüşümün karmaşıklığında gezinmek için yapay zeka ajanlarına ihtiyacı vardır.",
+                jetPilot: {
+                    title: "Jet Pilot Operasyonları",
+                    description: "Pilotlar karmaşık ortamlarda yüksek hızda uçar. Başucu ekranları (HUD), kritik bilgileri—irtifa, hız, navigasyon, tehditler—doğrudan görüş alanlarına sunar. Bu, görevlerinden bakmadan durumsal farkındalıklarını sürdürmelerini sağlar."
+                },
+                aiAgents: {
+                    title: "Başucu Ekranlar Olarak Yapay Zeka Ajanları",
+                    description: "Kurumsal operasyonlarda, yapay zeka ajanları başucu ekranınız olarak çalışır. Büyük miktarda veriyi işler, kalıpları tanımlar, riskleri ve fırsatları vurgular ve eyleme geçirilebilir içgörüler sunar—hepsi gerçek zamanlı olarak. Ajanlar karmaşıklığı ele alırken siz stratejik kararlara odaklanırsınız."
+                },
+                modernWorld: {
+                    title: "Neden Şimdi Buna İhtiyacımız Var",
+                    description: "Bu akıllı ekranlar olmadan jet hızındaki iş dönüşümünün bu yeni dünyasında çalışamayız. Değişim hızı, veri hacmi ve sistemlerin karmaşıklığı, yapay zeka destekli durumsal farkındalık gerektirir. Teslimat Pilotu bunu mümkün kılar."
+                }
+            },
+            concept: {
+                title: "Teslimat Pilotu Konsepti",
+                description: "Yapay zeka ajanlarının gelişmiş durumsal farkındalık yoluyla kurumsal operasyonları nasıl dönüştürdüğünü anlamak.",
+                whatIsIt: {
+                    title: "🎯 Teslimat Pilotu Nedir?",
+                    text1: "Teslimat Pilotu, ajanların kurumsal operasyonlarınız için başucu ekranlar olarak hareket ettiği bir yapay zeka dönüşüm platformumuzun adıdır. Bir pilotun HUD'u birden fazla veri kaynağını tek, eyleme geçirilebilir bir görünüme entegre ettiği gibi, yapay zeka ajanlarımız kuruluşunuzdan gelen bilgileri sentezler.",
+                    text2: "\"Teslimat Pilotu\" terimi iki temel yönü yakalar: yapay zeka yoluyla iş değerinin teslimatı ve gelişmiş enstrümantasyonla karmaşık operasyonları yönlendirme pilot metaforu."
+                },
+                howItWorks: {
+                    title: "⚙️ Nasıl Çalışır",
+                    text1: "Yapay zeka ajanlarımız kurumsal ortamınızı sürekli izler, birden fazla kaynaktan gelen verileri aynı anda işler. Size şunları sağlar:",
+                    item1: "Gerçek Zamanlı İstihbarat: Kritik iş metriklerine ve KPI'lara anında erişim, açık ve bağlamsal olarak sunulur",
+                    item2: "Öngörücü İçgörüler: Potansiyel sorunlar için erken uyarı sistemleri, HUD'un değişen koşullar konusunda pilotları uyardığı gibi",
+                    item3: "Karar Desteği: Kapsamlı veri analizi ve kalıp tanımaya dayalı eyleme geçirilebilir öneriler",
+                    item4: "Basitleştirilmiş Karmaşıklık: Hızlı kavramayı sağlayan net, görsel panolara damıtılmış karmaşık veriler"
+                },
+                whyNow: {
+                    title: "🚀 Neden Şimdi?",
+                    text1: "İş ortamı \"jet uçağı\" hızına ulaştı. Kuruluşlar şunlarla karşı karşıya:",
+                    item1: "Bilgi Aşırı Yükü: Manuel olarak işlenemeyecek kadar fazla veri",
+                    item2: "Hızlı Değişim: Geleneksel karar verme döngülerinden daha hızlı değişen piyasa koşulları",
+                    item3: "Karmaşık Sistemler: Bütünsel olarak izlenmesi zor birbirine bağlı teknolojiler ve süreçler",
+                    item4: "Rekabet Baskısı: Durumları hızlı değerlendiremeyen kuruluşlar geride kalır",
+                    text2: "Başucu ekranlar olarak yapay zeka ajanları olmadan bu ortamda etkili bir şekilde çalışamayız. Teslimat Pilotu, modern işletmelerin ihtiyaç duyduğu enstrümantasyonu sağlar."
+                }
+            },
+            benefits: {
+                title: "Temel Faydalar",
+                description: "Başucu ekranlar olarak ajanların kurumsal operasyonlarınızı nasıl dönüştürdüğü.",
+                visibility: {
+                    title: "Gelişmiş Görünürlük",
+                    description: "Kritik bilgilerin otomatik olarak öne çıkarılmasıyla işletmeniz genelinde tam resmi görün."
+                },
+                speed: {
+                    title: "Daha Hızlı Kararlar",
+                    description: "Gerçek zamanlı sunulan yapay zeka destekli içgörülerle hızlı bilinçli kararlar verin."
+                },
+                accuracy: {
+                    title: "Gelişmiş Doğruluk",
+                    description: "İnsanların kaçırabileceği kalıpları ve anormallikleri tespit eden yapay zeka ajanlarıyla hataları azaltın."
+                },
+                navigation: {
+                    title: "Stratejik Navigasyon",
+                    description: "Akıllı enstrümantasyon tarafından yönlendirilerek karmaşık dönüşümleri güvenle yönlendirin."
+                },
+                risk: {
+                    title: "Risk Azaltma",
+                    description: "Bir pilotun HUD'unun potansiyel tehlikeler konusunda uyardığı gibi, riskleri erken tespit edin ve ele alın."
+                },
+                performance: {
+                    title: "Performans Optimizasyonu",
+                    description: "Gerçek zamanlı performans verilerine ve içgörülere dayalı olarak operasyonları sürekli optimize edin."
+                }
+            },
+            cta: {
+                title: "Netlikle Gezinmeye Hazır mısınız?",
+                description: "Teslimat Pilotu'nun yapay zeka ajanlarının kurumsal başucu ekranınız olarak nasıl hizmet edebileceğini deneyimleyin.",
+                assess: "Değerlendirmenize Başlayın",
+                learnMore: "Kurumsal Ajanlar Hakkında Bilgi Edinin"
             }
         }
     }
