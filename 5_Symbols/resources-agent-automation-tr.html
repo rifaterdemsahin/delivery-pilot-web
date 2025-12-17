@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Operasyonel prosedürler ile otomasyon sistemleri arasındaki boşluğu akıllı ajanlarla kapatmak. Yapay zeka ajanlarının çoklu veri kaynaklarından veri toplayarak görevleri asistan olarak nasıl yürüttüğünü öğrenin.">
+    <meta name="keywords" content="akıllı ajanlar, otomasyon sistemleri, operasyonel prosedürler, veri toplama, çevik ekipler, teslimat operasyonları, yapay zeka asistanı, kurumsal otomasyon">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-agent-automation-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ajanlar: Operasyonel Prosedürler ve Otomasyon Köprüsü | Delivery Pilot">
+    <meta property="og:description" content="Akıllı ajanların manuel prosedürler ile otomatik sistemler arasındaki boşluğu veri toplayarak ve asistan olarak görev yürüterek nasıl kapattığını keşfedin.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-agent-automation-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ajanlar: Operasyonel Prosedürler ve Otomasyon Köprüsü">
+    <meta name="twitter:description" content="Akıllı ajanların manuel prosedürler ile otomatik sistemler arasındaki boşluğu nasıl kapattığını öğrenin.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Ajanlar: Operasyonel Prosedürler ve Otomasyon Köprüsü | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .gap-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .agent-solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.negative {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.positive {
+            border-left: 4px solid #10b981;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .benefit-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .process-step .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+        }
+
+        .process-arrow {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .process-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🤖 Ajanlar: Boşluğu Kapatmak</h1>
+            <p class="subtitle">
+                Akıllı Ajanlar Operasyonel Prosedürleri Otomasyon Sistemleriyle Nasıl Bağlar
+            </p>
+        </div>
+    </section>
+
+    <!-- The Gap Explained -->
+    <section class="gap-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">
+                Boşluğu Anlamak
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto 3rem;">
+                Organizasyonlar kritik bir zorlukla karşı karşıya: operasyonel prosedürler manuel kalırken otomasyon sistemleri izole bir şekilde var oluyor. Bu durum verimsizlik, gecikmeler ve kaçırılan fırsatlar yaratıyor.
+            </p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card negative">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">❌ Manuel Prosedürler</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📋 Sürekli insan gözetimi gerektirir</li>
+                        <li style="padding: 0.5rem 0;">⏰ Zaman alıcı ve tekrarlayan</li>
+                        <li style="padding: 0.5rem 0;">🔍 Ekipler arası ölçekleme zorluğu</li>
+                        <li style="padding: 0.5rem 0;">📊 Sınırlı veri görünürlüğü</li>
+                        <li style="padding: 0.5rem 0;">🔄 Tutarsız yürütme</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card negative">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">⚙️ İzole Otomasyon</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🔒 Katı ve esnek olmayan</li>
+                        <li style="padding: 0.5rem 0;">🛠️ Kapsamlı yönetim gerektirir</li>
+                        <li style="padding: 0.5rem 0;">📉 Değişikliklere uyum sağlayamaz</li>
+                        <li style="padding: 0.5rem 0;">🚧 Prosedürler evrildiğinde bozulur</li>
+                        <li style="padding: 0.5rem 0;">💸 Yüksek bakım maliyetleri</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="background: #fee2e2; color: #7f1d1d; margin-top: 3rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">⚠️ Gerçek Problem</h3>
+                <p style="font-size: 1.1rem;">
+                    Geleneksel otomasyon sürekli insan müdahalesi gerektirir ve prosedürler değiştiğinde bozulur. Ekipler iş değeri üretmekten çok otomasyonu yönetmek için zaman harcarlar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Solution -->
+    <section class="agent-solution-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">
+                Ajan Çözümü
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto 3rem;">
+                Akıllı ajanlar, birden fazla kaynaktan veri toplayan ve görevleri akıllıca yürüten uyarlanabilir asistanlar olarak hareket ederek boşluğu kapatır ve yapılandırıldıktan sonra minimum yönetim gerektirir.
+            </p>
+
+            <div class="highlight-box" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">✨ Ajan Avantajı</h3>
+                <p style="font-size: 1.1rem;">
+                    Ajanlar, bağlamı anlayan, değişikliklere uyum sağlayan ve tam görünürlük ve kontrol sağlarken görevleri özerk bir şekilde yürüten kendi kendini yöneten sistemlerdir.
+                </p>
+            </div>
+
+            <div class="feature-cards">
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Veri Toplama</h3>
+                    <p>Ajanlar otomatik olarak birden fazla kaynaktan - veritabanları, API'ler, dosyalar ve gerçek zamanlı akışlar - veri toplayarak operasyonların birleşik bir görünümünü oluşturur.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Akıllı Yürütme</h3>
+                    <p>Asistan olarak hareket eden ajanlar, bağlamı anlar ve iş kurallarına göre görevleri yeniden programlamaya gerek kalmadan değişikliklere uyum sağlayarak yürütür.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🤝</span>
+                    <h3>Çevik Ekip Desteği</h3>
+                    <p>Ajanlar çevik iş akışlarına sorunsuz bir şekilde entegre olur, ekiplere gerçek zamanlı içgörüler sağlar ve tekrarlayan teslimat görevlerini otomatikleştirir.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔐</span>
+                    <h3>Güvenlik ve Uyumluluk</h3>
+                    <p>Bir kez yapılandırıldıktan sonra, ajanlar güvenlik protokollerini otomatik olarak sürdürür, insan hatasını azaltır ve tutarlı uyumluluğu sağlar.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">⚡</span>
+                    <h3>Minimum Yönetim</h3>
+                    <p>Sürekli gözetim gerektiren geleneksel otomasyonun aksine, ajanlar kendi kendini yönetir - kapsamlı insan denetimine gerek yoktur.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🚀</span>
+                    <h3>Teslimat Odağı</h3>
+                    <p>Ajanlar teslimat operasyonlarına öncelik verir, ilerlemeyi takip eder, darboğazları tanımlar ve teslimat hatlarını verimli bir şekilde yürütür.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Agents Work -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">
+                Ajanlar Boşluğu Nasıl Kapatır
+            </h2>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Veri Kaynaklarını Bağla</h4>
+                    <p style="color: var(--text-light);">Ajan mevcut sistemler, veritabanları ve API'lerle entegre olur</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Prosedürleri Öğren</h4>
+                    <p style="color: var(--text-light);">Ajan operasyonel iş akışlarını ve iş kurallarını anlar</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Akıllıca Yürüt</h4>
+                    <p style="color: var(--text-light);">Ajan asistan olarak görevleri yürütür ve değişikliklere uyum sağlar</p>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Sürekli İyileştirme</h4>
+                    <p style="color: var(--text-light);">Ajan desenlerden öğrenir ve zamanla optimize eder</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">🎯 Sonuç</h3>
+                <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    Ekipler, stratejik çalışmalara odaklanırken rutin operasyonları yöneten güvenilir bir asistan kazanır. Ajan, yönetilecek başka bir araç değil, ekibin ayrılmaz bir parçası haline gelir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Delivery Teams -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">
+                Teslimat Operasyonları İçin Faydalar
+            </h2>
+
+            <div class="comparison-grid">
+                <div class="comparison-card positive">
+                    <h3 style="color: #10b981; margin-bottom: 1rem;">🚀 Teslimat Ekipleri İçin</h3>
+                    <ul class="benefit-list">
+                        <li>Teslimat hatlarına gerçek zamanlı görünürlük</li>
+                        <li>Otomatik durum güncellemeleri ve raporlama</li>
+                        <li>Proaktif sorun tespiti ve uyarılar</li>
+                        <li>Azaltılmış manuel takip ve koordinasyon</li>
+                        <li>Daha hızlı teslimat döngüleri</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card positive">
+                    <h3 style="color: #10b981; margin-bottom: 1rem;">💼 Organizasyonlar İçin</h3>
+                    <ul class="benefit-list">
+                        <li>Daha düşük operasyonel yük</li>
+                        <li>Orantılı personel olmadan ölçeklenebilir</li>
+                        <li>Tutarlı süreç yürütme</li>
+                        <li>Daha iyi uyumluluk ve denetlenebilirlik</li>
+                        <li>Geliştirilmiş ekip verimliliği</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 3rem; border-radius: 12px; margin-top: 3rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: var(--primary-color); text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">
+                    🎯 Ana Avantaj: Kapsamlı Yönetim Gerektirmez
+                </h3>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                    Gelip giden, işe alım, eğitim ve yönetim gerektiren insan ekip üyelerinin aksine, ajanlar tutarlı bir şekilde kullanılabilir durumda kalır. Bir kez yapılandırıldıktan ve güvence altına alındıktan sonra, insan kaynağı yönetimi yükü olmadan çevik ekipleri destekleyerek özerk bir şekilde çalışırlar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Application -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 2rem;">
+                Gerçek Dünya Uygulaması
+            </h2>
+
+            <div class="feature-cards">
+                <div class="card">
+                    <span class="icon">📦</span>
+                    <h3>Teslimat Hattı Yönetimi</h3>
+                    <p>Ajan, ortamlar arasında yapıları, testleri ve dağıtımları izler, otomatik olarak metrikleri toplar ve sonuçlara göre eylemleri tetikler.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔍</span>
+                    <h3>Kalite Güvencesi</h3>
+                    <p>Ajan test sonuçlarını, kod kalite metriklerini ve güvenlik tarama verilerini toplayarak ekibe kapsamlı kalite raporları sağlar.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>Performans İzleme</h3>
+                    <p>Ajan üretim sistemlerinden performans verilerini toplar, anormallikleri tanımlar ve kullanıcıları etkilemeden önce potansiyel sorunları ekiplere bildirir.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🤖</span>
+                    <h3>Süreç Orkestrasyonu</h3>
+                    <p>Ajan, ekipler ve sistemler arasında karmaşık iş akışlarını koordine eder, görevlerin doğru bağımlılıklarla doğru sırada yürütülmesini sağlar.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Veri Toplama</h3>
+                    <p>Ajan Jira, GitHub, izleme araçları ve veritabanlarından veri çekerek paydaşlar için birleşik kontrol panoları oluşturur.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔔</span>
+                    <h3>Akıllı Bildirimler</h3>
+                    <p>Ajan, doğru kişilere doğru zamanda bağlama duyarlı uyarılar göndererek gürültüyü azaltır ve yanıt sürelerini iyileştirir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Ajan Odaklı Operasyonlara Yolculuğunuz</h2>
+                <p style="margin-bottom: 1rem;">
+                    Manuel prosedürlerden ajan odaklı otomasyona geçiş stratejik bir yolculuktur:
+                </p>
+                <div style="text-align: left; max-width: 600px; margin: 2rem auto; font-size: 1.1rem;">
+                    <p style="margin-bottom: 1rem;">✅ <strong>Belirleyin</strong> mevcut operasyonel prosedürlerinizdeki boşlukları</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Haritalayın</strong> veri kaynaklarınızı ve entegrasyon noktalarınızı</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Tanımlayın</strong> ajan rollerini ve sorumluluklarını</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Yapılandırın</strong> güvenlik ve uyumluluk gereksinimlerini</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Dağıtın</strong> çevik ekipleri desteklemek için ajanları</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>İzleyin</strong> ve ajan performansını optimize edin</p>
+                </div>
+                <p style="margin-top: 2rem;">
+                    Delivery Pilot, kurumsal ajanları başarıyla uygulamak için çerçeve, araçlar ve uzmanlık sağlar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Boşluğu Kapatmaya Hazır Mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Operasyonel prosedürlerinizi otomasyon sistemleriyle birleştiren akıllı ajanlar dağıtın. Minimum yönetim yükü ile çevik ekiplerinizi destekleyin.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary">🚀 Değerlendirmenizi Başlatın</a>
+                <a href="enterprise-agent.html" class="btn btn-primary">🤖 Kurumsal Ajan Kılavuzu</a>
+                <a href="onboarding.html" class="btn btn-primary">📚 Daha Fazla Bilgi</a>
+                <a href="resources-agent-automation.html" class="btn btn-primary">🇬🇧 Read in English</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ajanlar: Operasyonel Prosedürler ve Otomasyon Sistemleri Arasındaki Boşluğu Kapatmak",
+      "description": "Akıllı ajanların manuel operasyonel prosedürler ile otomasyon sistemleri arasındaki boşluğu birden fazla kaynaktan veri toplayarak ve görevleri asistan olarak yürüterek nasıl kapattığı",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-agent-automation-tr.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["akıllı ajanlar", "otomasyon sistemleri", "operasyonel prosedürler", "veri toplama", "çevik ekipler", "teslimat operasyonları", "yapay zeka asistanı", "kurumsal otomasyon"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>

@@ -154,6 +154,26 @@
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+    <!-- Delivery Pilot Methodology Page -->
+    <url>
+        <loc>https://deliverypilot.net/delivery-pilot-methodology.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    <!-- Resources: Agent Automation (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-agent-automation.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Agent Automation (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-agent-automation-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>

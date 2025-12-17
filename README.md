@@ -141,6 +141,7 @@ delivery-pilot-web/
 ├── gemini.md               # Additional AI agent guidelines
 ├── MARKET-VALIDATION-STRATEGY.md           # Market validation approach
 ├── SANITY-CHECK-BUSINESS-MODEL-2025-12-14.md # Business model analysis
+├── SANITY-CHECK-PRODUCT-VALIDATION-REPORT.md # Product-market fit validation with critical sanity checks
 │
 ├── 1_real/                 # Business objectives and planning
 │   ├── objectives.md       # OKRs and strategic objectives
@@ -386,6 +387,7 @@ This project includes comprehensive strategic documentation:
 - **[Project Status](1_real/todo.md)**: Kanban board tracking progress
 - **[Business Analysis](4_formula/business-analysis.md)**: Deep dive into business model and customer development
 - **[Market Validation Strategy](MARKET-VALIDATION-STRATEGY.md)**: Go-to-market approach
+- **[Product Validation Report](SANITY-CHECK-PRODUCT-VALIDATION-REPORT.md)**: Critical sanity checks for enterprise AI agent product
 - **[GTM Strategy](resources/gtm-strategy.md)**: Comprehensive go-to-market strategy
 
 ### Strategic Objectives
