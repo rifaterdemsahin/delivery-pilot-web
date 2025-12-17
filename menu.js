@@ -36,7 +36,8 @@ const navigationConfig = {
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
                 { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
                 { href: 'agile-transformation.html', text: '📈 Agile Transformation' },
-                { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' }
+                { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
+                { href: 'delivery-pilot-methodology.html', text: '📖 Methodology' }
             ]
         },
         { href: 'pricing.html', text: '💰 Pricing' },
@@ -45,19 +46,35 @@ const navigationConfig = {
             textKey: 'nav.company',
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
+                { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },
                 { href: 'success-stories.html', textKey: 'nav.successStories', text: '⭐ Success Stories' },
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
                 { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
-                { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' }
+                { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
+                { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
         },
         { 
             text: '📚 Resources', 
             textKey: 'nav.resources',
             submenu: [
+                { href: 'resources-root-cause-analysis.html', textKey: 'nav.rootCauseAnalysis', text: '🔍 Root Cause Analysis' },
+                { href: 'resources-agent-automation.html', textKey: 'nav.agentAutomation', text: '🔗 Agent Automation' },
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
+                { href: 'resources-task-handover-challenge.html', textKey: 'nav.taskHandover', text: '🔄 Task Handover Challenge' },
+                { href: 'resources-documentation-efficiency.html', textKey: 'nav.documentationEfficiency', text: '📄 Documentation Efficiency' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
+                { href: 'resources-why-build-agents.html', textKey: 'nav.whyBuildAgents', text: '🏗️ Why Build Agents' },
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
+                { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' }
+                { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' }
+                { href: 'resources-access-security-silos.html', textKey: 'nav.accessSecuritySilos', text: '🔐 Access & Security Silos' }
+                { href: 'resources-job-satisfaction-agents.html', textKey: 'nav.jobSatisfaction', text: '😊 Job Satisfaction' },
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
+                { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' }
+                { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' }
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
@@ -65,7 +82,7 @@ const navigationConfig = {
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
-        { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
+        { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Start', class: 'cta-button' }
     ]
 };
 
@@ -90,6 +107,7 @@ const footerConfig = {
                 { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', text: 'Agile Transformation' },
                 { type: 'link', href: 'enterprise-agent.html', textKey: 'footer.platform.enterpriseAgent', text: 'Enterprise Agent' },
+                { type: 'link', href: 'delivery-pilot-methodology.html', text: 'Methodology' },
                 { type: 'link', href: 'index.html#features', textKey: 'footer.platform.features', text: 'Features' },
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },
                 { type: 'link', href: 'index.html#use-cases', textKey: 'footer.platform.useCases', text: 'Use Cases' },
@@ -103,7 +121,8 @@ const footerConfig = {
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
                 { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
-                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' }
+                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
+                { type: 'link', href: 'security.html', textKey: 'footer.company.security', text: 'Security' }
             ]
         },
         {
@@ -111,8 +130,13 @@ const footerConfig = {
             titleKey: 'footer.resources.title',
             content: [
                 { type: 'link', href: 'resources-knowledge-transfer.html', textKey: 'footer.resources.knowledgeTransfer', text: 'Knowledge Transfer' },
+                { type: 'link', href: 'resources-task-handover-challenge.html', textKey: 'footer.resources.taskHandover', text: 'Task Handover Challenge' },
                 { type: 'link', href: 'resources-work-vs-robots.html', textKey: 'footer.resources.workVsRobots', text: 'Work vs Robots' },
+                { type: 'link', href: 'resources-job-satisfaction-agents.html', textKey: 'footer.resources.jobSatisfaction', text: 'Job Satisfaction' },
                 { type: 'link', href: 'resources-governance-examples.html', textKey: 'footer.resources.governanceExamples', text: 'Governance Examples' },
+                { type: 'link', href: 'resources-acronym-pressure.html', textKey: 'footer.resources.acronymPressure', text: 'Acronym Overload' },
+                { type: 'link', href: 'resources-access-security-silos.html', textKey: 'footer.resources.accessSecuritySilos', text: 'Access & Security Silos' },
+                { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
