@@ -140,6 +140,10 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Documentation Efficiency (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-documentation-efficiency.html</loc>
+        <lastmod>2025-12-17</lastmod>
     <!-- Resources: Access & Security Silos (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-access-security-silos.html</loc>
@@ -195,6 +199,10 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Documentation Efficiency (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-documentation-efficiency-tr.html</loc>
+        <lastmod>2025-12-17</lastmod>
     <!-- Resources: Access & Security Silos (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-access-security-silos-tr.html</loc>
