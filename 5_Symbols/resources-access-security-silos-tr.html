@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erişim ve güvenlik kontrolleri kurumsal ortamlarda nasıl organizasyonel silolar oluşturur. Ajan tabanlı tasarımın tek hata noktalarını nasıl ortadan kaldırdığını öğrenin.">
+    <meta name="keywords" content="erişim güvenliği, organizasyonel silolar, tek hata noktası, ajan tabanlı tasarım, kurumsal güvenlik, bilgi dağıtımı, güvenlik otomasyonu">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-access-security-silos-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kurumda Erişim ve Güvenlik Siloları | Delivery Pilot">
+    <meta property="og:description" content="Ajan tabanlı tasarım ile erişim ve güvenlik silolarını kırarak tek hata noktalarını ortadan kaldırma.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-access-security-silos-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kurumda Erişim ve Güvenlik Siloları">
+    <meta name="twitter:description" content="Ajan tabanlı tasarımın karmaşık kurumsal yapılarda tek hata noktalarını nasıl ortadan kaldırdığı.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Kurumda Erişim ve Güvenlik Siloları | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.problem {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.solution {
+            border-left: 4px solid #10b981;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .resources-hero .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🔐 Erişim ve Güvenlik: Kurumsal Siloları Yıkmak</h1>
+            <p class="subtitle">Geleneksel erişim kontrolleri nasıl tek hata noktaları yaratır ve ajan tabanlı tasarım bu kritik kurumsal zorluğu nasıl çözer</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Güvenlik Kapı Bekçiliğinin Gizli Maliyeti</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Karmaşık kurumsal ortamlarda, <strong>erişim ve güvenlik kontrolleri</strong> esastır—ancak genellikle istenmeyen bir sonuçla gelirler: tek hata noktalarına yol açan organizasyonel silolar yaratırlar.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    Yalnızca belirli kişiler kritik sistemlere, bilgiye veya yeteneklere erişebildiğinde, tüm organizasyon bu insanlara bağımlı hale gelir. Tercih ederek değil, <em>tasarım gereği</em> kapı bekçisi olurlar.
+                </p>
+
+                <p style="margin-bottom: 1.5rem;">
+                    Kök sorun? <strong>Organizasyonlar erişim kontrollerini ajanlar yerine insanlar etrafında tasarlarlar.</strong> Bu temel tasarım kusuru, esnek olması gereken sistemlerde kırılganlık yaratır.
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Kritik Risk</h3>
+                <p style="line-height: 1.8; margin: 0;">
+                    Kilit ekip üyeleri müsait olmadığında—tatilde, hasta, şirketten ayrılmış veya sadece isteklerle bunalmış olduklarında—kritik işler durur. Dağıtımlar gecikir. Olaylar çözülmez. İş sürekliliği risk altındadır.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">🚨 Erişim ve Güvenlik Nasıl Silolar Yaratır</h2>
+            <p class="section-subtitle">Tek hata noktalarına yol açan yaygın desenler</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="icon">🔑</span>
+                    <h3>Özel Erişim Hakları</h3>
+                    <p>Üretim sistemleri, dağıtım hattı ve kritik altyapı yalnızca bir avuç kıdemli mühendis tarafından erişilebilir. Bunlar müsait olmadığında, tüm teslimat süreci durur.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Sözlü Aktarılan Bilgi</h3>
+                    <p>Güvenlik prosedürleri, kimlik bilgisi yönetimi ve erişim protokolleri yalnızca birkaç kişinin kafasında var. Yeni ekip üyeleri bilgi sistemleştirilmediği için etkili bir şekilde katkıda bulamazlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">👤</span>
+                    <h3>Kişiye Özel İzinler</h3>
+                    <p>Erişim, roller veya otomatik ajanlara değil, bireylere verilir. Bu, insan müsaitliği ile sistem yeteneği arasında sıkı bağlantı yaratır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚫</span>
+                    <h3>Manuel Onay Darboğazları</h3>
+                    <p>Her güvenlik hassas işlem manuel insan onayı gerektirir. Bu, kuyruklar, gecikmeler ve belirli kişilerin programlarına bağımlılıklar yaratır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📋</span>
+                    <h3>Dokümante Edilmemiş Süreçler</h3>
+                    <p>Güvenlik iş akışları gayri resmi ve dokümante edilmemiştir. Yalnızca deneyimli ekip üyeleri uyumluluk, denetim ve erişim yönetiminde nasıl gezinileceğini bilir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⏱️</span>
+                    <h3>Zaman Dilimi Bağımlılıkları</h3>
+                    <p>Küresel organizasyonlarda, yetkili personel farklı zaman dilimlerinde olduğu için kritik operasyonlar gecikir. İş saatleri operasyonel kısıtlamalar haline gelir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Impact -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Gerçek Dünya Etkisi</h2>
+                <p>Gece 2'de bir üretim kesintisi oluşur. Nöbetçi mühendis sorunu tespit eder ancak düzeltmeyi dağıtamaz çünkü yalnızca DevOps lideri üretim dağıtım erişimine sahiptir—ve o tatilde, sınırlı bağlantısı olan bir bölgede. Kesinti saatlerce devam eder, işletmeye dakikada binlerce dolara mal olur.</p>
+                <p style="margin-top: 1.5rem; font-style: italic;">
+                    Bu senaryo kurumlarda her gün yaşanır. Sorun insanlar değil—sistem tasarımıdır.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Agent-Driven Solution -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">🤖 Ajan Tabanlı Yaklaşım</h2>
+            <p class="section-subtitle">Güvenlik ve erişimi bireyler yerine akıllı ajanlar etrafında tasarlamak</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Çözüm, <strong>insan merkezli erişim kontrolünden ajan merkezli tasarıma geçiştir</strong>. Bu, yalnızca bireysel insanların değil, yapay zeka ajanlarının ve otomasyonun uygun erişime, denetim izlerine ve yönetime sahip olduğu sistemler inşa etmek anlamına gelir.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="icon">🤖</span>
+                    <h3>Ajan Tabanlı Erişim</h3>
+                    <p>Yalnızca insanlara değil, otomatik ajanlara ve sistemlere erişim verin. Yapay zeka ajanları, uygun yönetişim ve denetim izleri ile 7/24 kritik işlemleri yürütebilir, insan darboğazlarını ortadan kaldırır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Kodlanmış Bilgi</h3>
+                    <p>Güvenlik prosedürlerini, uyumluluk kontrollerini ve erişim iş akışlarını ajanlara gömün. Bilgi, sözlü aktarılan bilgelik yerine yürütülebilir kod haline gelir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔐</span>
+                    <h3>Politika Tabanlı Otomasyon</h3>
+                    <p>Ajanların otomatik olarak uyguladığı güvenlik politikaları tanımlayın. İnsanlar kuralları belirler, ajanlar tutarlı bir şekilde yürütür—istisna yok, unutma yok, yorgunluk yok.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Kapsamlı Denetim İzleri</h3>
+                    <p>Ajanlar mükemmel denetlenebilirlik sağlar. Her eylem kaydedilir, her karar izlenebilir, her değişiklik belgelenir—otomasyonu etkinleştirirken uyumluluk gereksinimlerini karşılar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🌐</span>
+                    <h3>Dağıtılmış Zeka</h3>
+                    <p>Birden fazla ajan bağımsız olarak işlem yapabilir, tek hata noktalarını ortadan kaldırır. Coğrafi ve zamansal kısıtlamalar kaybolur.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Kendini Belgeleyenn Sistemler</h3>
+                    <p>Ajan tabanlı sistemler doğası gereği dokümante edilmiştir. Kod, dokümantasyondur. Yeni ekip üyeleri, meşgul meslektaşlarına sormak yerine ajan yapılandırmalarını inceleyerek iş akışlarını anlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">İnsan Merkezli vs Ajan Merkezli Tasarım</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card problem">
+                    <h3>🔒 Geleneksel İnsan Merkezli Erişim</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">👤 Belirli kişilere bağlı erişim</li>
+                        <li style="margin-bottom: 1rem;">⏰ İnsan müsaitliği ile sınırlı operasyonlar</li>
+                        <li style="margin-bottom: 1rem;">🧠 İnsanların kafasında kilitli bilgi</li>
+                        <li style="margin-bottom: 1rem;">🚫 Her eylem için manuel onay</li>
+                        <li style="margin-bottom: 1rem;">⚠️ Her yerde tek hata noktaları</li>
+                        <li style="margin-bottom: 1rem;">📋 Gayri resmi, dokümante edilmemiş süreçler</li>
+                        <li style="margin-bottom: 1rem;">🌍 Zaman dilimi ve coğrafi kısıtlamalar</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card solution">
+                    <h3>🤖 Ajan Merkezli Erişim Tasarımı</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">🤖 Otomatik ajanlara verilen erişim</li>
+                        <li style="margin-bottom: 1rem;">⚡ 7/24/365 mevcut operasyonlar</li>
+                        <li style="margin-bottom: 1rem;">📚 Ajan mantığında kodlanmış bilgi</li>
+                        <li style="margin-bottom: 1rem;">✅ Politika tabanlı otomatik yürütme</li>
+                        <li style="margin-bottom: 1rem;">🔄 Dağıtılmış, yedekli yetenekler</li>
+                        <li style="margin-bottom: 1rem;">📊 Kendini belgeleyen, denetlenebilir sistemler</li>
+                        <li style="margin-bottom: 1rem;">🌐 Küresel, anlık erişilebilirlik</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Path -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Uygulama Stratejisi</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 2rem;">
+                    İnsan merkezli erişimden ajan merkezli erişime geçiş, düşünceli, aşamalı bir yaklaşım gerektirir:
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="icon">1️⃣</span>
+                    <h3>Kritik Siloları Belirleyin</h3>
+                    <p><strong>Mevcut kurulumunuzu denetleyin:</strong> Tek hata noktaları nerede var? Hangi işlemler belirli kişiler gerektirir? Tüm kişiye bağımlı süreçleri belgeleyin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">2️⃣</span>
+                    <h3>Güvenlik Politikalarını Tanımlayın</h3>
+                    <p><strong>Yönetişiminizi kodlayın:</strong> Gayri resmi güvenlik uygulamalarını ajanlar tarafından uygulanabilecek açık politikalara dönüştürün. Örtük olanı açık hale getirin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">3️⃣</span>
+                    <h3>Ajan Altyapısı Oluşturun</h3>
+                    <p><strong>Temeli yaratın:</strong> Uygun kimlik doğrulama ve yetkilendirme ile hizmet hesapları, otomasyon çerçeveleri ve ajan orkestrasyon sistemleri uygulayın.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">4️⃣</span>
+                    <h3>Denetim Sistemlerini Uygulayın</h3>
+                    <p><strong>Uyumluluğu etkinleştirin:</strong> Her ajan eyleminin kaydedildiğinden, izlenebildiğinden ve denetlenebildiğinden emin olun. Şeffaflık ve hesap verebilirlik yoluyla güven oluşturun.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">5️⃣</span>
+                    <h3>İşlemleri Kademeli Olarak Taşıyın</h3>
+                    <p><strong>Küçük başlayın, kademeli olarak ölçeklendirin:</strong> Düşük riskli işlemlerle başlayın. Modelin çalıştığını kanıtlayın. Güven oluşturun. Sonra daha kritik sistemlere genişletin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">6️⃣</span>
+                    <h3>Ekip Gözetimini Etkinleştirin</h3>
+                    <p><strong>İnsanlar politika belirler, ajanlar yürütür:</strong> İnsanlar kontrolde kalır ancak operatörler olmaktan orkestratörler ve politika yapıcılar olmaya geçer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Delivery Pilot Helps -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Delivery Pilot Ajan Merkezli Erişimi Nasıl Sağlar</h2>
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 2rem;">
+                    Delivery Pilot, <strong>ajan merkezli kurumsal operasyonlar için sıfırdan inşa edilmiştir</strong>. Erişim tabanlı siloları ortadan kaldırmak için altyapı, yönetişim ve en iyi uygulamalar sağlıyoruz.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="icon">🏗️</span>
+                    <h3>Ajan Öncelikli Mimari</h3>
+                    <p>Platformumuz, yerleşik sağlam kimlik doğrulama, yetkilendirme ve denetim yetenekleri ile birinci sınıf vatandaşlar olarak otomatik ajanlar için tasarlanmıştır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📋</span>
+                    <h3>Politika Motoru</h3>
+                    <p>Güvenlik ve erişim politikalarını bildirimsel olarak tanımlayın. Politika motorumuz, ajanların otomatik olarak yönetişim sınırları içinde çalışmasını sağlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Tam Gözlemlenebilirlik</h3>
+                    <p>Her ajan eylemi izlenir, kaydedilir ve görselleştirilir. Hızlı, otomatik operasyonları etkinleştirirken uyumluluk gereksinimlerini karşılayın.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔐</span>
+                    <h3>Kurumsal Güvenlik</h3>
+                    <p>GDPR, SOC 2, HIPAA desteği ile banka sınıfı güvenlik. Ajan otomasyonu, güvenlikten ödün vermek değil, onu tutarlı bir şekilde uygulamak demektir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎓</span>
+                    <h3>Dönüşüm Rehberliği</h3>
+                    <p>Organizasyonunuzun insan merkezli erişim tasarımından ajan merkezli erişim tasarımına geçmesine yardımcı olmak için oyun kitapları, eğitim ve destek sağlıyoruz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🤝</span>
+                    <h3>Kanıtlanmış Desenler</h3>
+                    <p>Erişim silolarını başarıyla ortadan kaldırmış kurumsal organizasyonlardan öğrenin. Savaş testinden geçmiş desenleri kendi özel bağlamınıza uygulayın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>İş Etkisi</h2>
+                <div style="text-align: left; max-width: 700px; margin: 2rem auto; font-size: 1.1rem;">
+                    <p style="margin-bottom: 1rem;">✅ Kritik operasyonlardaki <strong>tek hata noktalarını ortadan kaldırın</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ Nöbetçi insan gerektirmeden <strong>7/24 operasyonel yetenek</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ Otomatik iyileştirme ile <strong>daha hızlı olay yanıtı</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ Mükemmel denetim izleri ile <strong>geliştirilmiş uyumluluk</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ İnsan bağımlılıklarından kaynaklanan <strong>azaltılmış operasyonel risk</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ Yeni ekip üyelerinin <strong>hızlandırılmış işe alımı</strong></p>
+                    <p style="margin-bottom: 1rem;">✅ Coğrafi kısıtlamalar olmadan <strong>küresel ölçeklenebilirlik</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Erişim Silolarınızı Yıkmaya Hazır Mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                İnsan merkezli erişim kontrolünden ajan tabanlı tasarıma dönüşün. Tek hata noktalarını ortadan kaldırın ve esnek kurumsal sistemler oluşturun.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Organizasyonunuzu Değerlendirin</a>
+                <a href="enterprise-agent.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🤖 Kurumsal Ajanlar Hakkında Bilgi Edinin</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Başlayın</a>
+                <a href="resources-access-security-silos.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇬🇧 Read in English</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Erişim ve Güvenlik: Kurumsal Siloları Yıkmak",
+      "description": "Erişim ve güvenlik nasıl organizasyonel silolar yaratır ve ajan tabanlı tasarım karmaşık kurumsal ortamlarda tek hata noktalarını nasıl ortadan kaldırır",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-access-security-silos-tr.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["erişim güvenliği", "organizasyonel silolar", "tek hata noktası", "ajan tabanlı tasarım", "kurumsal güvenlik", "güvenlik otomasyonu", "erişim kontrolü"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>
