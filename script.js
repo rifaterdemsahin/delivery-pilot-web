@@ -20,7 +20,7 @@ const translations = {
             founder: "👤 Founder",
             partners: "🤝 Partners",
             signIn: "🔑 Sign In",
-            getStarted: "🚀 Get Started",
+            getStarted: "🚀 Start",
             resources: "📚 Resources",
             knowledgeTransfer: "🧠 Knowledge Transfer",
             workVsRobots: "🤖 Work vs Robots"
@@ -820,7 +820,7 @@ const translations = {
             founder: "👤 Kurucu",
             partners: "🤝 Ortaklar",
             signIn: "🔑 Giriş Yap",
-            getStarted: "🚀 Başlayın",
+            getStarted: "🚀 Başlat",
             resources: "📚 Kaynaklar",
             knowledgeTransfer: "🧠 Bilgi Transferi",
             workVsRobots: "🤖 İş vs Robotlar"
