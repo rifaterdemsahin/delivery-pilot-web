@@ -24,6 +24,9 @@ const translations = {
             getStarted: "🚀 Get Started",
             resources: "📚 Resources",
             knowledgeTransfer: "🧠 Knowledge Transfer",
+            taskHandover: "🔄 Task Handover Challenge",
+            workVsRobots: "🤖 Work vs Robots",
+            governanceExamples: "🏛️ Governance Examples"
             workVsRobots: "🤖 Work vs Robots",
             governanceExamples: "🏛️ Governance Examples",
             paradigmShift: "⚡ Paradigm Shift"
@@ -910,6 +913,9 @@ const translations = {
             getStarted: "🚀 Başlayın",
             resources: "📚 Kaynaklar",
             knowledgeTransfer: "🧠 Bilgi Transferi",
+            taskHandover: "🔄 Görev Devri Zorluğu",
+            workVsRobots: "🤖 İş vs Robotlar",
+            governanceExamples: "🏛️ Yönetişim Örnekleri"
             workVsRobots: "🤖 İş vs Robotlar",
             governanceExamples: "🏛️ Yönetişim Örnekleri",
             paradigmShift: "⚡ Paradigma Değişimi"
