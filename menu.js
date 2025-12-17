@@ -80,7 +80,7 @@ const navigationConfig = {
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
         { href: 'signin.html', textKey: 'nav.signIn', text: '🔑 Sign In' },
-        { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Get Started', class: 'cta-button' }
+        { href: 'assessment.html', textKey: 'nav.getStarted', text: '🚀 Start', class: 'cta-button' }
     ]
 };
 
