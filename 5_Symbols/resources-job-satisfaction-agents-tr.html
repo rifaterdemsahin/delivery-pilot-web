@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manuel tekrarlayan görevlerin mühendislik ekiplerinde düşük iş tatminine nasıl yol açtığını anlayın. Otomasyon ajanlarının motivasyonu nasıl geri getirdiğini ve mühendislerin tasarım, uygulama ve yeniliğe odaklanmalarını nasıl sağladığını öğrenin.">
+    <meta name="keywords" content="iş tatmini, mühendis motivasyonu, otomasyon ajanları, manuel görevler, SRE otomasyonu, DevOps, görev otomasyonu, mühendislik verimliliği, delivery pilot">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-job-satisfaction-agents-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Düşük İş Tatmini: Manuel Görevler vs Otomasyon Ajanları | Delivery Pilot">
+    <meta property="og:description" content="Otomasyon ajanları manuel tekrarlayan işleri ortadan kaldırarak mühendis iş tatminini nasıl dönüştürür.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-job-satisfaction-agents-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Düşük İş Tatmini: Manuel Görevler vs Otomasyon Ajanları">
+    <meta name="twitter:description" content="Manuel görevlerden otomasyon ajanları oluşturmaya geçerek mühendis motivasyonunu dönüştürün.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>İş Tatmini: Manuel Görevler vs Otomasyon Ajanları | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .demotivation-cards,
+        .motivation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.manual {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.automated {
+            border-left: 4px solid #10b981;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .example-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .workflow-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .workflow-steps li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .workflow-steps li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>Düşük İş Tatmini: Manuel Görevler vs Otomasyon Ajanları</h1>
+            <p class="subtitle">Mühendisler Neden Manuel İş Yapmak Yerine Ajanları Tasarlamalı, Uygulamalı ve İşletmeli</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Mühendislik Ekiplerinde İş Tatmini Krizi</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Dağıtık sistemleri, gözlemlenebilirliği ve otomasyonu öğrenmek için yıllar harcamış yetenekli bir Site Güvenilirlik Mühendisi (SRE) olduğunuzu hayal edin. Şimdi günlerinizi manuel olarak aynı günlük durum raporunu oluşturarak, gösterge panellerini tıklayarak, metrikleri elektronik tablolara kopyalayarak ve paydaşlara özetler e-postayla göndererek geçirdiğinizi hayal edin.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Bu varsayımsal bir senaryo değil—dünya çapındaki işletmelerde binlerce mühendis için günlük gerçeklik. Sonuç? <strong>Düşük iş tatmini, tükenmişlik ve yüksek personel devir hızı</strong>. Mühendisler yıllarca eğitim almadılar yüceltilmiş veri girişi uzmanları olmak için.
+                </p>
+                <p>
+                    Çözüm, bu manuel görevleri yapmak için daha fazla mühendis işe almak değil. Çözüm, <strong>mühendisleri bu tekrarlayan görevleri arka planda halleden otomasyon ajanları tasarlamaya, uygulamaya ve işletmeye güçlendirmektir</strong>, böylece mühendisler yenilik, mimari ve karmaşık problemleri çözmeye odaklanabilir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">😞 Manuel Tekrarlayan İşlerin Motivasyon Kaybı</h2>
+            <p class="section-subtitle">Manuel görevler mühendis motivasyonunu nasıl tüketir ve organizasyonel verimsizlik yaratır</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Mühendisler manuel, tekrarlayan görevlerde sıkışıp kaldığında, etki kaybedilen üretkenliğin çok ötesine geçer. Moral, elde tutma, yenilik ve nihayetinde iş sonuçlarını etkiler.
+                </p>
+            </div>
+
+            <div class="demotivation-cards">
+                <div class="card">
+                    <span class="icon">😓</span>
+                    <h3>Boşa Giden Uzmanlık</h3>
+                    <p>Yüksek nitelikli mühendisler otomatikleştirilebilecek görevler için saatler harcarlar. Günlük raporları manuel olarak oluşturan kıdemli bir SRE, pizza dağıtmak için Ferrari kullanmak gibidir—işe yarar, ancak kaynakların korkunç bir kullanımıdır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Sonsuz Tekrar</h3>
+                    <p>Aynı görev, farklı gün. Mühendisler gün be gün, hafta be hafta aynı manuel süreci tekrarladığında, ruh öğütücü hale gelir. Öğrenme, büyüme, meydan okuma yok—sadece akılsız tekrar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚪</span>
+                    <h3>Yüksek Personel Devri</h3>
+                    <p>Yetenekli mühendisler gerçekten mühendislik yapabilecekleri fırsatlar için ayrılırlar. En iyi insanlarınız zamanlarını manuel görevlere harcadığında, özgeçmişlerini güncellemeye başlarlar. Kıdemli bir mühendisi değiştirme maliyeti, otomasyon maliyetini çok aşar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⏰</span>
+                    <h3>Zaman Yoğun Yük</h3>
+                    <p>Manuel görevler stratejik işe harcanabilecek önemli zamanı tüketir. Günlük bir rapor oluşturmak 30 dakika ila bir saat sürebilir—bu, iş gününün %5-10'u, her gün, sonsuza kadar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">❌</span>
+                    <h3>İnsan Hatası Riski</h3>
+                    <p>İnsanlar tekrarlayan görevleri yaparken hata yaparlar. Gözden kaçan bir metrik, bir kopyala-yapıştır hatası, unutulan bir e-posta—bu hatalar yeniden iş yaratır ve süreçteki güveni aşındırır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚫</span>
+                    <h3>Yenilik Açlığı</h3>
+                    <p>Mühendisler manuel işlerle gömülü olduğunda, yenilik için zaman yoktur. Yeni fikirler, süreç iyileştirmeleri ve teknik borç azaltma, "raporu çıkarmak" için geri planda kalır.</p>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 3rem;">
+                <h3>📊 Gerçek Dünya Örneği: Günlük SRE Raporu</h3>
+                <p style="margin-bottom: 1rem;">Günlük SRE durum raporu oluşturma için tipik bir manuel iş akışını düşünün:</p>
+                <ul class="workflow-steps">
+                    <li>İzleme gösterge paneline giriş yapın (Datadog, Prometheus, vb.)</li>
+                    <li>Ana metrikleri manuel olarak kontrol edin: çalışma süresi, hata oranları, gecikme, trafik</li>
+                    <li>Elektronik tablo şablonunu açın</li>
+                    <li>Metrikleri elektronik tabloya kopyala-yapıştır</li>
+                    <li>Herhangi bir sorun için olay günlüğünü kontrol edin</li>
+                    <li>Önceki günün olaylarının özetini yazın</li>
+                    <li>Nöbet rotasyonunu ve eskalasyonları kontrol edin</li>
+                    <li>Raporu okunabilirlik için biçimlendirin</li>
+                    <li>Ekler ile paydaşlara e-posta gönderin</li>
+                    <li>Yarın, bir sonraki gün ve bir sonraki tekrarlayın...</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: #666;">
+                    <strong>Zaman Yatırımı:</strong> Günlük 30-60 dakika = Haftalık 2,5-5 saat = Mühendis başına yıllık 130-260 saat
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">😊 Otomasyon Ajanları Oluşturmanın Motivasyonu</h2>
+            <p class="section-subtitle">Ajanları tasarlamak, uygulamak ve işletmek mühendis tatminini nasıl geri getirir ve yeniliği nasıl teşvik eder</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Mühendisler manuel görevleri yapmaktan <strong>otomasyon ajanları oluşturmaya</strong> geçtiğinde, her şey değişir. Artık operatör değiller—mimar, tasarımcı ve yenilikçi oluyorlar. Ajan arka planda işi yaparken mühendisler sevdikleri şeye odaklanırlar: <strong>sistemleri tasarlamak, çözümleri uygulamak ve ölçekte işletmek</strong>.
+                </p>
+            </div>
+
+            <div class="motivation-cards">
+                <div class="card">
+                    <span class="icon">🎨</span>
+                    <h3>Tasarım Mükemmelliği</h3>
+                    <p>Mühendisler bağlamı anlayan, sınır durumlarını ele alan ve zaman içinde gelişen akıllı ajanlar tasarlar. Bu gerçek mühendislik işidir—ölçeklenen ve gelişen çözümler mimarisini oluşturmak.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🛠️</span>
+                    <h3>Uygulama Zorluğu</h3>
+                    <p>Bir otomasyon ajanı oluşturmak gerçek teknik beceri gerektirir: API entegrasyonları, veri işleme, hata yönetimi, izleme. Mühendisler tüm beceri setlerini kullanırlar ve yeni teknolojiler öğrenmeye devam ederler.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⚙️</span>
+                    <h3>İşletimsel Ustalık</h3>
+                    <p>Ölçekte bir ajanı işletmek, mühendislere güvenilirlik, gözlemlenebilirlik ve olay müdahalesi hakkında öğretir. Sadece manuel görevler değil, üretim sistemlerini çalıştırmada uzman olurlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🚀</span>
+                    <h3>Verimlilik Çarpanı</h3>
+                    <p>İyi tasarlanmış bir ajan, mola vermeden 7/24 birden fazla kişinin işini yapabilir. Mühendisler etkilerinin kişisel kapasiteleri ile sınırlı olmak yerine katlanarak çoğaldığını görürler.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Sürekli Öğrenme</h3>
+                    <p>Ajanlar oluşturmak yeni teknolojileri, kalıpları ve en iyi uygulamaları öğrenmeyi içerir. Mühendisler tekrarlayan işlerde durgunlaşmak yerine becerilerini sürekli geliştirirler.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Kariyer Büyümesi</h3>
+                    <p>Otomasyon ajanları oluşturan mühendisler AI/ML, otomasyon ve sistem tasarımında değerli beceriler geliştirir. Bu beceriler çok aranır ve kariyer ilerlemesini hızlandırır.</p>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 3rem;">
+                <h3>🤖 Gerçek Dünya Çözümü: Otomatik SRE Rapor Ajanı</h3>
+                <p style="margin-bottom: 1rem;">Aynı günlük SRE raporu, artık bir otomasyon ajanı tarafından hallediliyor:</p>
+                <ul class="workflow-steps">
+                    <li>Ajan planlanmış zamanda otomatik olarak çalışır (örn. günlük 08:00)</li>
+                    <li>İzleme API'lerini programatik olarak sorgular (Datadog, Prometheus, vb.)</li>
+                    <li>Metrikleri toplar: çalışma süresi, hata oranları, gecikme, trafik</li>
+                    <li>Trendleri analiz eder ve tarihsel temellerle karşılaştırır</li>
+                    <li>Son sorunlar için olay yönetim sistemini sorgular</li>
+                    <li>AI kullanarak doğal dil özeti oluşturur</li>
+                    <li>Grafikler ve görselleştirmeler ile rapor biçimlendirir</li>
+                    <li>Rapor ile e-posta/Slack bildirimi gönderir</li>
+                    <li>Denetim izi için yürütmeyi kaydeder</li>
+                    <li>İnsan müdahalesi olmadan süresiz olarak çalışmaya devam eder</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: #10b981;">
+                    <strong>Mühendis Zaman Yatırımı:</strong> Başlangıçta tasarlamak ve uygulamak için 40-80 saat, sonra bakım için aylık 1-2 saat. Yatırım getirisi 2-3 ayda elde edilir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🔄 Dönüşüm: Önce ve Sonra</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card manual">
+                    <h3 style="color: #ef4444; margin-bottom: 1.5rem;">❌ Manuel Yaklaşım</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>👤 Mühendis işi günlük yapar</li>
+                        <li>⏰ Günde 30-60 dakika</li>
+                        <li>😓 Düşük iş tatmini</li>
+                        <li>❌ Hataya açık ve tutarsız</li>
+                        <li>🚪 Yüksek devir hızı riski</li>
+                        <li>🚫 Yenilik için zaman yok</li>
+                        <li>📉 Doğrusal kapasite ölçeklendirme</li>
+                        <li>💰 Yüksek devam eden maliyet</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card automated">
+                    <h3 style="color: #10b981; margin-bottom: 1.5rem;">✅ Otomasyon Ajanı Yaklaşımı</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>🤖 Ajan işi otomatik yapar</li>
+                        <li>⚡ Saniyeler içinde çalışır, 7/24</li>
+                        <li>😊 Yüksek iş tatmini</li>
+                        <li>✅ Tutarlı ve güvenilir</li>
+                        <li>🎯 İyileştirilmiş elde tutma</li>
+                        <li>🚀 Yenilik için zaman</li>
+                        <li>📈 Üstel ölçeklendirme</li>
+                        <li>💡 Düşük devam eden maliyet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Journey Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">🛤️ Yolculuk: Manuel Görevlerden Otomasyon Ajanlarına</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Aşama 1: Tanıma (1. Hafta)</h3>
+                    <p>Mühendis zamanını ve motivasyonunu tüketen tekrarlayan manuel görevleri belirleyin. Mevcut süreci, harcanan zamanı ve sorun noktalarını belgeleyin. Otomasyon girişimi için liderlik onayı alın.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Aşama 2: Tasarım (2-3. Haftalar)</h3>
+                    <p>Mühendisler otomasyon ajanı mimarisini tasarlar. Gereksinimleri tanımlayın, teknolojileri seçin, veri akışlarını tasarlayın ve hata işleme ve izleme için planlayın. Bu, mühendislik becerilerini kullanan ilgi çekici bir iştir.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Aşama 3: Uygulama (4-7. Haftalar)</h3>
+                    <p>Modern araçlar ve çerçeveler kullanarak ajanı oluşturun. Entegrasyonları uygulayın, akıllı özellikler ekleyin, gösterge paneleri oluşturun. Mühendisler yeni beceriler öğrenir ve vizyonlarının hayata geçtiğini görürler.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Aşama 4: İşletme (8. Hafta+)</h3>
+                    <p>Ajanı üretime dağıtın ve performansını izleyin. Mühendisler manuel görevler yapmak yerine sofistike bir sistemi işletirler. Olayları yönetirler, performansı optimize ederler ve geri bildirimlere dayalı yeni özellikler eklerler.</p>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 12px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Aşama 5: Evrim (Devam Eden)</h3>
+                    <p>Kullanım kalıplarına ve yeni gereksinimlere göre ajanı sürekli iyileştirin. Mühendisler otomasyonlarının ürün sahipleri olurlar, yeniliği yönlendirirler ve yetenekleri genişletirler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Insight Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>💡 Temel İçgörü</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Mühendisler bilgisayar bilimi okumadılar, sertifikalar almadılar ve manuel görevleri yapmak için uzmanlık geliştirmediler. <strong>Sistemleri tasarlamak, çözümleri uygulamak ve altyapıyı ölçekte işletmek</strong> için eğitim aldılar.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Mühendislerden manuel olarak günlük raporlar göndermelerini istediğinizde, sadece zamanlarını boşa harcamıyorsunuz—onlara becerilerinin önemli olmadığını söylüyorsunuz. "Bir mühendis değil, bir daktilocu lazım" diyorsunuz.
+                </p>
+                <p>
+                    Mühendisleri <strong>otomasyon ajanları oluşturmaya</strong> güçlendirdiğinizde, "Uzmanlığınıza güveniyorum, yeniliğinizi değerli buluyorum ve etkilerinizi çoğaltmanızı istiyorum" diyorsunuz. En iyi yetenekleri elde tutmanın ve dönüşümü yönlendirmenin yolu budur.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Summary Section -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">📊 Otomasyon Ajanları için İş Durumu</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">%85</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Tasarruf Edilen Zaman</div>
+                        <div style="color: #666;">Mühendisler stratejik iş için zaman kazanır</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">3x</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Verimlilik Kazancı</div>
+                        <div style="color: #666;">Aynı ekip boyutuyla daha fazla çıktı</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">%50</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Devir Hızı Azalması</div>
+                        <div style="color: #666;">Yetenekli mühendisleri daha uzun elde tutun</div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem;">7/24</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Her Zaman Kullanılabilir</div>
+                        <div style="color: #666;">Ajanlar saat boyunca çalışır</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Mühendislerinizin İş Tatminini Dönüştürmeye Hazır mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Yeteneği manuel görevlerde boşa harcamayı bırakın. Mühendislerinizi otomasyon ajanları tasarlamaya, uygulamaya ve işletmeye güçlendirin.</p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Değerlendirmenizi Başlatın</a>
+                <a href="enterprise-agent.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🤖 Kurumsal Ajanlar Hakkında Bilgi Edinin</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Başlayın</a>
+                <a href="resources-job-satisfaction-agents.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇬🇧 Read in English</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Düşük İş Tatmini: Manuel Görevler vs Otomasyon Ajanları",
+      "description": "Manuel tekrarlayan görevlerin düşük iş tatminine nasıl yol açtığını ve otomasyon ajanlarının mühendis motivasyonunu nasıl geri getirdiğini anlama",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-job-satisfaction-agents-tr.html"
+      },
+      "articleSection": "Kaynaklar",
+      "keywords": ["iş tatmini", "mühendis motivasyonu", "otomasyon ajanları", "manuel görevler", "SRE otomasyonu", "DevOps", "görev otomasyonu"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>

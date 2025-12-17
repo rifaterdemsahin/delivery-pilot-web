@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kısaltma yükü ve DSL genişlemesinin profesyoneller üzerindeki baskısını anlama. Delivery Pilot'un modern teknolojideki üç harfli kısaltmalar ve alana özgü dillerdeki karmaşıklığı aşmanıza nasıl yardımcı olduğunu keşfedin.">
+    <meta name="keywords" content="kısaltma yükü, TLA, üç harfli kısaltmalar, DSL, alana özgü diller, teknik jargon, profesyonel baskı, öğrenme eğrisi, AI dönüşümü, delivery pilot">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-acronym-pressure-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kısaltma Yükü ve Profesyonel Baskı | Delivery Pilot">
+    <meta property="og:description" content="Teknik kısaltmaların ve DSL'lerin üssel büyümesini yönetirken aynı anda öğrenme ve yürütme.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-acronym-pressure-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kısaltma Yükü ve Profesyonel Baskı">
+    <meta name="twitter:description" content="Profesyoneller modern teknolojide genişleyen TLA ve DSL evreninde nasıl yol alıyor.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Kısaltma Yükü ve Profesyonel Baskı | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .challenge-cards,
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .acronym-examples {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .acronym-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .acronym-item {
+            background: var(--bg-light);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.negative {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.positive {
+            border-left: 4px solid #10b981;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .acronym-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>TLA Patlaması: Kısaltma Yükü ve Profesyonel Baskı</h1>
+            <p class="subtitle">Modern Teknolojide Üç Harfli Kısaltmaların ve Alana Özgü Dillerin Genişleyen Evreninde Yol Almak</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Profesyonel Gelişim Üzerindeki Gizli Vergi</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Günümüz teknoloji ortamında profesyoneller benzeri görülmemiş bir zorlukla karşı karşıya: <strong>üç harfli kısaltmaların (TLA)</strong>, alana özgü dillerin (DSL) ve teknik jargonun üssel büyümesi. Her gün, her biri acil ustalık gerektiren kendi kelime dağarcığına sahip yeni framework'ler, araçlar, metodolojiler ve kavramlar ortaya çıkıyor.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Baskı çok yoğun: <strong>aynı anda öğren ve uygula</strong>. Sadece öğrenmeye zaman ayırma lüksü yok. Profesyoneller yeni kavramları özümsemeli, yeni araçlarda uzmanlaşmalı ve aynı anda üretime hazır sonuçlar sunmalı. Bu durum sürekli bir bilişsel aşırı yüklenme ve profesyonel kaygı durumu yaratıyor.
+                </p>
+                <p>
+                    AI/ML'den (K8s, MLOps, LLM, RAG, BERT, GPT) DevOps'a (CI/CD, IaC, SRE, GitOps), Cloud'a (AWS, GCP, EKS, RDS, S3, IAM, VPC)—alfabe çorbası hiç bitmiyor. Ve her kısaltmanın arkasında etkili kullanım için derin anlayış gerektiren karmaşık bir ekosistem yatıyor.
+                </p>
+            </div>
+
+            <div class="acronym-examples">
+                <h3 style="text-align: center; margin-bottom: 1rem;">Günümüz Teknik Kelime Dağarcığından Sadece Bir Örnek</h3>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);">Bu, profesyonellerin karşılaştığı şeyin sadece küçük bir kısmı</p>
+                <div class="acronym-grid">
+                    <div class="acronym-item">API</div>
+                    <div class="acronym-item">AWS</div>
+                    <div class="acronym-item">CDN</div>
+                    <div class="acronym-item">CI/CD</div>
+                    <div class="acronym-item">CRM</div>
+                    <div class="acronym-item">CSS</div>
+                    <div class="acronym-item">DAG</div>
+                    <div class="acronym-item">DNS</div>
+                    <div class="acronym-item">DOM</div>
+                    <div class="acronym-item">DSL</div>
+                    <div class="acronym-item">ECS</div>
+                    <div class="acronym-item">EKS</div>
+                    <div class="acronym-item">ETL</div>
+                    <div class="acronym-item">GCP</div>
+                    <div class="acronym-item">GIT</div>
+                    <div class="acronym-item">GPT</div>
+                    <div class="acronym-item">GPU</div>
+                    <div class="acronym-item">GUI</div>
+                    <div class="acronym-item">IAM</div>
+                    <div class="acronym-item">IaC</div>
+                    <div class="acronym-item">IDE</div>
+                    <div class="acronym-item">JWT</div>
+                    <div class="acronym-item">K8s</div>
+                    <div class="acronym-item">LLM</div>
+                    <div class="acronym-item">MFA</div>
+                    <div class="acronym-item">NPM</div>
+                    <div class="acronym-item">ORM</div>
+                    <div class="acronym-item">RAG</div>
+                    <div class="acronym-item">RAM</div>
+                    <div class="acronym-item">RDS</div>
+                    <div class="acronym-item">REST</div>
+                    <div class="acronym-item">SDK</div>
+                    <div class="acronym-item">SEO</div>
+                    <div class="acronym-item">SPA</div>
+                    <div class="acronym-item">SQL</div>
+                    <div class="acronym-item">SRE</div>
+                    <div class="acronym-item">SSH</div>
+                    <div class="acronym-item">SSL</div>
+                    <div class="acronym-item">TLA</div>
+                    <div class="acronym-item">VPC</div>
+                    <div class="acronym-item">XSS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">🔴 Profesyonel Baskı Krizi</h2>
+            <p class="section-subtitle">Öğren-ve-aynı-anda-uygula modelinin neden sürdürülemez stres yarattığı</p>
+            
+            <div class="challenge-cards">
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Bilişsel Aşırı Yük</h3>
+                    <p>İnsan beyni çalışma hafızasında sadece 5-9 öğe tutabilir. Ancak profesyonellerden düzinelerce kısaltmayı, anlamlarını, ilişkilerini ve pratik uygulamalarını—karmaşık problemleri gerçek zamanlı çözerken—aynı anda yönetmeleri bekleniyor.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⏰</span>
+                    <h3>Düzgün Öğrenmeye Zaman Yok</h3>
+                    <p>Derin öğrenme odaklanmış, kesintisiz zaman gerektirir. Ancak üretim ortamlarında profesyoneller, teslim tarihlerini karşılarken anında öğrenmek zorunda. Bu, yüzeysel anlayışa ve teknik borç birikimine yol açıyor.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>Üssel Büyüme Hızı</h3>
+                    <p>Yeni kısaltmalar ve DSL'ler herkesin öğrenebileceğinden daha hızlı ortaya çıkıyor. Bir araç setinde ustalaşana kadar, endüstri bir sonraki nesle geçmiş oluyor. Öğrenme eğrisi artık bir öğrenme uçurumu.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎭</span>
+                    <h3>Sahtekar Sendromu</h3>
+                    <p>Etrafınızdaki herkes her kısaltmayı akıcı bir şekilde biliyor gibi göründüğünde, yetersiz hissetmek kolay. Gerçek mi? Çoğu profesyonel aynı zorluklarla mücadele ediyor ama sessizce acı çekiyor.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">💼</span>
+                    <h3>Kariyer Kaygısı</h3>
+                    <p>İş tanımları 20+ teknolojide uzmanlık talep ediyor. Eskimiş hale gelme korkusu profesyonelleri her şeyin yüzeysel bilgisini öğrenmeye zorluyor ama hiçbir şeyde uzmanlaşamıyorlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Bağlam Değiştirme Maliyetleri</h3>
+                    <p>Her yeni kısaltma veya DSL farklı bir zihinsel model temsil ediyor. Gün boyunca aralarında geçiş yapmak bilişsel kaynakları tüketiyor, üretkenliği azaltıyor ve hata oranlarını artırıyor.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Dokümantasyon Parçalanması</h3>
+                    <p>Her aracın kendi DSL'i, dokümantasyon stili ve kuralları var. Öğrenme sadece kavramlarla ilgili değil—düzinelerce farklı dokümantasyon ekosisteminde ve sözdizimlerde gezinmekle ilgili.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Çeviride Kaybolanlar</h3>
+                    <p>Kısaltmalar iletişim engelleri yaratıyor. Toplantılar problem çözmekten çok jargon çözme egzersizlerine dönüşüyor. "ML modelini EKS'ye CI/CD ile GitOps kullanarak IaC aracılığıyla Terraform'la LLM destekli RAG sistemimizle entegre ederek deploy edelim" odadaki yarısını kafası karışık bırakıyor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Quote -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Temel Gerçek</h2>
+                <p>"Modern profesyoneller sadece sürekli öğrenmek zorunda değil—kelime dağarcığının kendisi üssel olarak genişlerken AYNI ANDA öğrenmek VE uygulamak zorundalar. Bu bir beceri açığı değil; teknoloji endüstrisinde bilginin nasıl paketlendiği, aktarıldığı ve uygulandığıyla ilgili yapısal bir zorluk."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Geleneksel vs. Sürdürülebilir Öğrenme</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card negative">
+                    <h3>❌ Mevcut Sürdürülemez Model</h3>
+                    <ul style="line-height: 2;">
+                        <li>Her şeyi öğren, hiçbir şeyde ustalaş</li>
+                        <li>Sürekli bilişsel aşırı yük</li>
+                        <li>Yüzeysel anlayış</li>
+                        <li>Kaygı güdümlü öğrenme</li>
+                        <li>Destek olmadan izole mücadele</li>
+                        <li>Her yeni kısaltmaya reaktif</li>
+                        <li>Bağlam olmadan dokümantasyon dalışı</li>
+                        <li>"Bu ne demek?" diye sorma korkusu</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card positive">
+                    <h3>✅ Delivery Pilot Yaklaşımı</h3>
+                    <ul style="line-height: 2;">
+                        <li>Yapılandırılmış öğrenme yolları</li>
+                        <li>Ezberleme değil, anlama odağı</li>
+                        <li>Pratik uygulamalı atölyeler</li>
+                        <li>Topluluk destekli öğrenme</li>
+                        <li>Seçilmiş, ilgili bilgi</li>
+                        <li>Stratejik teknoloji seçimi</li>
+                        <li>Her kavram için net bağlam</li>
+                        <li>Soru sormak için güvenli ortam</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">✅ Delivery Pilot Bu Zorluğu Nasıl Çözüyor</h2>
+            <p class="section-subtitle">Teknik karmaşıklığı aşmak için sistematik bir yaklaşım</p>
+            
+            <div class="solution-cards">
+                <div class="card">
+                    <span class="icon">🗺️</span>
+                    <h3>Seçilmiş Öğrenme Yolları</h3>
+                    <p>Her şeyi öğrenmeye çalışmak yerine, rolünüz ve organizasyonunuz için en önemli <strong>İlk 10 AI konusunu</strong> belirliyoruz. Enerjinizi her yeni trendi kovalamak yerine gerçek değer yaratan şeylere odaklayın.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎓</span>
+                    <h3>Yapılandırılmış Atölyeler</h3>
+                    <p><strong>10 adımlı atölye sürecimiz</strong> karmaşık konuları sindirilebilir parçalara ayırıyor. Önce temel kavramları öğrenin, sonra uygulamalı egzersizlerle pratik becerileri aşamalı olarak geliştirin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">💻</span>
+                    <h3>Git Tabanlı Çıktılar</h3>
+                    <p>Her atölye Git depolarında <strong>gerçek proje çıktıları</strong> üretir. Sadece kavramları öğrenmiyorsunuz—pratik ustalığı gösteren çalışan örneklerden oluşan bir portföy oluşturuyorsunuz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Bağlam-Öncelikli Öğrenme</h3>
+                    <p>Her kısaltmanın ve DSL'nin <strong>neden</strong> var olduğunu, hangi problemi çözdüğünü ve ne zaman kullanılacağını açıklıyoruz. Bağlamı anlamak teknik detayların akılda kalmasını sağlıyor ve size gerçek ustalık kazandırıyor.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">👥</span>
+                    <h3>Topluluk Desteği</h3>
+                    <p>Aynı zorluklarla karşılaşan akranlarınızla birlikte öğrenin. Deneyimleri paylaşın, özgürce sorular sorun ve baskıyı anlayan profesyonellerden oluşan bir ağ kurun. Bu yolculukta yalnız değilsiniz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Değerlendirme Odaklı Fokus</h3>
+                    <p>Spesifik açıklarınızı belirlemek için bir <strong>AI hazırlık değerlendirmesi</strong> ile başlayın. Zaten bildiğiniz şeyler için zaman kaybetmeyin—öğrenme çabalarını maksimum etki yapacakları yere odaklayın.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>İlerleyici Ustalık</h3>
+                    <p>Temellerden ileri konulara sistematik olarak ilerleyin. Her atölye önceki öğrenmeyi pekiştirirken yeni kavramlar sunuyor, parçalanmış bilgi yerine sağlam bir temel oluşturuyor.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🛡️</span>
+                    <h3>Açıklanabilirlik Odağı</h3>
+                    <p>Teknolojileri sadece nasıl kullanacağınızı değil, başkalarına nasıl açıklayacağınızı öğrenin. Bu daha derin anlayış, organizasyonunuzda bir bilgi çarpanı olmanıza yardımcı olarak kolektif baskıyı azaltır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Impact Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Gerçek Etki: Bunalmıştan Kendinden Emine</h2>
+            
+            <div class="highlight-box" style="background: white; color: var(--text-dark); border: 2px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 2rem;">Öğrenme Eğrisinin Kontrolünü Elinize Aldığınızda Neler Değişir</h3>
+                
+                <div class="solution-cards">
+                    <div class="card">
+                        <h3>👨‍💻 Bireysel Profesyoneller İçin</h3>
+                        <ul style="line-height: 2;">
+                            <li>Azalmış kaygı ve sahtekar sendromu</li>
+                            <li>Yüzeysel ezberleme değil, derin anlayış</li>
+                            <li>Pratik proje çıktılarından oluşan portföy</li>
+                            <li>Yeni teknolojileri sistematik öğrenme özgüveni</li>
+                            <li>Sürekli yetişme olmadan daha iyi iş-yaşam dengesi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>👥 Ekipler İçin</h3>
+                        <ul style="line-height: 2;">
+                            <li>Paylaşılan kelime dağarcığı ve anlayış</li>
+                            <li>Yeni ekip üyelerinin daha hızlı adaptasyonu</li>
+                            <li>Daha iyi teknik iletişim</li>
+                            <li>Bireysel kahramanlar değil, kolektif uzmanlık</li>
+                            <li>Teknoloji benimseniminde sürdürülebilir tempo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🏢 Organizasyonlar İçin</h3>
+                        <ul style="line-height: 2;">
+                            <li>Ekip değişikliklerinde bile korunan bilgi</li>
+                            <li>Trend takibi değil, stratejik teknoloji seçimleri</li>
+                            <li>Kendinden emin ekiplerle hızlanmış AI dönüşümü</li>
+                            <li>Yüzeysel anlayıştan kaynaklanan teknik borç azalması</li>
+                            <li>Sürekli, sürdürülebilir öğrenme kültürü</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">İlgili Kaynaklar</h2>
+            <p class="section-subtitle">AI dönüşümünde profesyonel zorlukların üstesinden gelme hakkında daha fazlasını keşfedin</p>
+            
+            <div class="challenge-cards">
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Bilgi Transferi</h3>
+                    <p>Çevik ortamlarda siloları nasıl yıkacağınızı ve paylaşılan uzmanlık yoluyla bireysel baskıyı azaltarak işbirlikçi zekayı nasıl etkinleştireceğinizi öğrenin.</p>
+                    <a href="resources-knowledge-transfer-tr.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Devamını Oku →</a>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🤖</span>
+                    <h3>İş vs Robotlar</h3>
+                    <p>Tüm işi kendiniz yapmaktan bilişsel yükü azaltan ve sonuçları iyileştiren işbirlikçi AI sistemleri kurmaya geçişi anlayın.</p>
+                    <a href="resources-work-vs-robots-tr.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Devamını Oku →</a>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎓</span>
+                    <h3>10 Adımlı Atölye Süreci</h3>
+                    <p>Pratik çıktılarla temellerden güvenli, açıklanabilir AI ürünlerine kadar AI konularını öğrenmek için sistematik yaklaşımımızı keşfedin.</p>
+                    <a href="workshops.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Atölyeleri Görüntüle →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Kısaltma Yükünden Kurtulmaya Hazır mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Yapılandırılmış, destekleyici AI dönüşüm yaklaşımımızla bunalmıştan kendinden emine geçiş yolculuğunuza başlayın.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Değerlendirmeye Başla</a>
+                <a href="workshops.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🎓 Atölyeleri Görüntüle</a>
+                <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Sürecimizi Öğren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "TLA Patlaması: Kısaltma Yükü ve Profesyonel Baskı",
+      "description": "Modern teknoloji ortamlarında kısaltma yükü ve DSL genişlemesinin profesyoneller üzerindeki baskısını anlama",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-acronym-pressure-tr.html"
+      },
+      "articleSection": "Kaynaklar",
+      "keywords": ["kısaltma yükü", "TLA", "üç harfli kısaltmalar", "DSL", "alana özgü diller", "profesyonel baskı", "AI dönüşümü", "öğrenme eğrisi"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>
