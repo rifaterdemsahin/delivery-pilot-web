@@ -140,6 +140,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Delivery Pilot Concept Page -->
+    <url>
+        <loc>https://deliverypilot.net/delivery-pilot-concept.html</loc>
     <!-- Resources: Work vs Robots (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>

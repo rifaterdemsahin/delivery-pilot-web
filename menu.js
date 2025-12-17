@@ -46,6 +46,7 @@ const navigationConfig = {
             textKey: 'nav.company',
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
+                { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },
                 { href: 'success-stories.html', textKey: 'nav.successStories', text: '⭐ Success Stories' },
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
