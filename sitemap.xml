@@ -139,5 +139,21 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Why Build Agents (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Why Build Agents (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>

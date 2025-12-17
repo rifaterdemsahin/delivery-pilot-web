@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neden agent ve robot inşa etmemiz gerekiyor: İnsanca bir yaklaşım. Tekrarlayan görevleri yapay zeka agentlarına devrederek insanların öğrenmeye, yaratıcılığa ve makine öğrenmesi modelleri oluşturmaya odaklanmasını sağlayın.">
+    <meta name="keywords" content="yapay zeka agentları, robotlar, otomasyon, makine öğrenmesi, insan potansiyeli, tekrarlayan görevler, öz öğrenme, yaratıcılık, yapay zeka etiği">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-why-build-agents-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Neden Agent ve Robot İnşa Etmeliyiz | Delivery Pilot">
+    <meta property="og:description" content="İnsanca yaklaşım: Tekrarlayan görevleri yapay zeka agentlarına devredin, insanları yaratıcılık, öğrenme ve inovasyon için özgürleştirin.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-why-build-agents-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neden Agent ve Robot İnşa Etmeliyiz">
+    <meta name="twitter:description" content="Otomasyona insanca yaklaşım: İnsanları tekrarlayan işlerden kurtarıp yaratıcılık ve öğrenme için özgürleştirin.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Neden Agent ve Robot İnşa Etmeliyiz | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .humane-section {
+            padding: 4rem 0;
+            background: #f0f9ff;
+        }
+
+        .freedom-section {
+            padding: 4rem 0;
+            background: #fef3c7;
+        }
+
+        .innovation-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .approach-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>Neden Agent ve Robot İnşa Etmeliyiz</h1>
+            <p class="subtitle">İnsanca Yaklaşım: İnsanlığı Tekrarlayan İşlerden Kurtarmak</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temel Soru: Bizi İnsan Yapan Nedir?</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    İnsanlar benzersiz bir şekilde <strong>yaratıcılık, öğrenme, empati ve inovasyon</strong> yeteneğine sahiptir. Ancak onlarca yıldır kendimizi, makinelerin daha iyi yapabileceği tekrarlayan, sıradan görevlerin döngüsüne hapsetmişiz. Saatlerce veri girişi, rutin iletişimler, durum raporları ve idari işler yapıyoruz—bizi benzersiz bir şekilde insan yapan yeteneklerimizi kullanmayan aktiviteler.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Yapay zeka agentları ve robotlar inşa etmek, insanları değiştirmekle ilgili değil. <strong>İnsanları özgürleştirmekle</strong> ilgili, böylece en iyi yaptıkları şeyleri yapabilsinler: yaratıcı düşünmek, karmaşık problemleri çözmek, sürekli öğrenmek ve anlamlı inovasyonlar inşa etmek.
+                </p>
+                <p>
+                    Bu sadece teknolojik bir argüman değil—<strong>ahlaki ve insani bir argümandır</strong>. Kendimize ve gelecek nesillere, insan potansiyelini tekrarlayan işlerin zincirlerinden kurtarmayı borçluyuz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Humane Aspect -->
+    <section class="humane-section">
+        <div class="container">
+            <h2 class="section-title">🤲 İnsani Argüman: İnsan Potansiyeline Saygı</h2>
+            <p class="section-subtitle">Tekrarlayan görevleri robotlara devretmek neden etik bir seçimdir</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Şunu düşünün: Parlak bir sanatçıdan günlerini aynı şekli tekrar tekrar boyamasını ister misiniz? Yetenekli bir müzisyenden günde 8 saat aynı notayı çalmasını ister misiniz? Tabii ki hayır—bu savurganlık ve zalimlik olurdu.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Ancak rutin olarak zeki, yetenekli insanlardan hiçbir yaratıcılık, problem çözme veya öğrenme gerektirmeyen tekrarlayan görevleri yapmalarını istiyoruz—sadece mekanik tekrar. Bu sadece verimsiz değil; <strong>insan potansiyeline saygısızlıktır</strong>.
+                </p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <span class="icon">😔</span>
+                    <h3>Tekrarlayan İş İnsanları Küçültür</h3>
+                    <p>Çalışmalar, monoton, tekrarlayan işlerin tükenmişliğe, azalan iş memnuniyetine ve azalan bilişsel işleve yol açtığını gösteriyor. Robotların daha iyi, daha hızlı ve yorgunluk olmadan yapabileceği görevlerde insan potansiyelini kelimenin tam anlamıyla boşa harcıyoruz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎨</span>
+                    <h3>Yaratıcılık Özgürlük Gerektirir</h3>
+                    <p>İnovasyon, zihinlerin keşfetme, deneme ve bağlantılar kurma özgürlüğüne sahip olduğunda gerçekleşir. Zamanınızın %80'i rutin görevler tarafından tüketildiğinde, yaratıcı düşünme veya çığır açan fikirler için alan kalmaz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Öğrenme Zaman Gerektirir</h3>
+                    <p>Kendini geliştirme ve beceri geliştirme, özel zaman ve zihinsel enerji gerektirir. Tüm gününüz operasyonel görevler tarafından tüketilirse, ne zaman öğrenip, büyüyüp ve yeni yetenekler geliştirebilirsiniz?</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">💡</span>
+                    <h3>İnovasyon Benzersiz Bir Şekilde İnsanidir</h3>
+                    <p>Yeni makine öğrenmesi modelleri oluşturmak, daha iyi sistemler tasarlamak ve benzeri görülmemiş problemleri çözmek—bunlar insan yaratıcılığını gerektirir. Ancak rutin işlerde boğuluyorsanız inovasyon yapamazsınız.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Robots Should Do -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🤖 Robotlar Neyi Yapmalı</h2>
+            <p class="section-subtitle">Makinelerin insanlardan daha iyi yapabileceği görevler</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Görev Türü</th>
+                            <th style="width: 70%;">Robotlar Neden Daha İyi Yapar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>📊 Veri İşleme</strong></td>
+                            <td>Robotlar saniyeler içinde milyonlarca kaydı hatasız, yorgunluk veya sıkıntı olmadan işler. Mükemmel tutarlılığı koruyarak 7/24 çalışabilirler.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>📝 Durum Raporları</strong></td>
+                            <td>Yapay zeka agentları sistemleri izleyebilir, metrikleri toplayabilir ve kapsamlı durum raporlarını otomatik olarak oluşturabilir. Hiçbir insan, sistemin zaten sahip olduğu verileri derlemek için saatler harcamamalıdır.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🔄 Tekrarlayan İletişimler</strong></td>
+                            <td>Yaygın soruları yanıtlamak, rutin bildirimler göndermek, toplantılar planlamak—yapay zeka bunları mükemmel doğruluk ve anında yanıt süreleriyle yapabilir.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🔍 Desen Tanıma</strong></td>
+                            <td>Makine öğrenmesi modelleri, insanların kaçıracağı veya keşfetmek için aylar alacağı geniş veri kümelerindeki desenleri belirleme konusunda başarılıdır.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>⚙️ Sistem İzleme</strong></td>
+                            <td>7/24 teyakkuz, anında anomali tespiti ve öngörücü bakım—robotlar asla yorulmaz veya dikkati dağılmaz.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>📋 Uyumluluk Kontrolü</strong></td>
+                            <td>Süreçlerin kurallara, standartlara ve düzenlemelere uyduğunu doğrulamak—tutarlılık ve kapsamlı kontrol gerektiren, otomasyon için mükemmel görevler.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="max-width: 900px; margin: 3rem auto 0; font-size: 1.1rem; line-height: 1.8;">
+                <p style="font-weight: 600; color: var(--primary-color); text-align: center;">
+                    Bunlar "alınan işler" değil—insanların gerçekten önemli olana odaklanabilmesi için kaldırılan yüklerdir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Humans Should Do -->
+    <section class="freedom-section">
+        <div class="container">
+            <h2 class="section-title">🌟 İnsanlar Neye Odaklanmalı</h2>
+            <p class="section-subtitle">Bizi benzersiz bir şekilde değerli ve tatmin olmuş yapan iş</p>
+            
+            <div class="approach-cards">
+                <div class="card">
+                    <span class="icon">🎓</span>
+                    <h3>Öz-Öğrenme ve Büyüme</h3>
+                    <p>Robotlar rutin işleri hallederken, insanların yeni beceriler öğrenme, gelişen teknolojileri keşfetme ve yeteneklerini sürekli geliştirme zamanı vardır. Yaşam boyu öğrenme ulaşılabilir hale gelir, özlem değil.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔬</span>
+                    <h3>Makine Öğrenmesi Modelleri İnşa Etmek</h3>
+                    <p>Akıllı sistemler oluşturmak insan içgörüsünü gerektirir: iş bağlamını anlamak, hedefleri tanımlamak, algoritmalar tasarlamak ve etik sonuçları değerlendirmek. Bu, sadece insanların yapabileceği yaratıcı, entelektüel bir iştir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">💭</span>
+                    <h3>Stratejik Düşünme</h3>
+                    <p>Planlama, çözüm mimarileri tasarlama, eksik bilgilerle karmaşık kararlar verme, rekabet eden öncelikleri dengeleme—bunlar insan muhakemesi, deneyimi ve sezgisi gerektirir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🤝</span>
+                    <h3>Empati ve İlişkiler</h3>
+                    <p>İnsan ihtiyaçlarını anlama, güven oluşturma, başkalarına mentorluk yapma, karmaşık durumları müzakere etme—duygusal zeka benzersiz bir şekilde insani ve paha biçilmezdir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎨</span>
+                    <h3>Yaratıcı Problem Çözme</h3>
+                    <p>Eşi benzeri görülmemiş zorluklarla başa çıkmak, yenilikçi çözümler tasarlamak, farklı fikirleri birbirine bağlamak—yaratıcılık rutin kısıtlamalardan özgürleştiğinde gelişir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🌍</span>
+                    <h3>Etik Rehberlik</h3>
+                    <p>Yapay zeka sistemlerinin insan değerleriyle uyumlu olmasını sağlamak, ahlaki kararlar vermek, toplumsal etkiyi düşünmek—bunlar insan bilgeliği ve etik akıl yürütmeyi gerektirir.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 3rem auto 0; font-size: 1.1rem; line-height: 1.8;">
+                <p style="text-align: center; font-weight: 600; color: #b45309;">
+                    Bu, profesyonel yaşamlarımıza anlam katan iştir—bizi gurur duyan, tatmin olmuş ve sürekli büyüyen yapan iş.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The New Reality -->
+    <section class="innovation-section">
+        <div class="container">
+            <h2 class="section-title">🚀 Yeni Gerçeklik: Model İnşaatçısı Olarak İnsanlar</h2>
+            <p class="section-subtitle">Görev yürütücülerinden sistem mimarlarına</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Yapay zeka destekli işyerinde, insanlar <strong>görev yürütücülerinden</strong> <strong>akıllı sistem mimarlarına</strong> geçiş yapar. İşiniz veri işlemek değil—verileri akıllıca işleyen sistemler tasarlamaktır. Rolünüz rutin soruları yanıtlamak değil—manuel olarak verebileceğinizden daha iyi yanıtlar sağlayan yapay zeka agentları inşa etmektir.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Bu güçlendiricidir, tehdit edici değil. Bir doktor gelişmiş görüntüleme teknolojisi kullandığında, daha az değerli olmaz—daha yetenekli olur. Aynısı burada da geçerlidir.
+                </p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <span class="icon">🏗️</span>
+                    <h3>Yapay Zeka Agentları Tasarlayın</h3>
+                    <p>Hangi problemlerin çözülmesi gerektiğini, hangi verilerin kullanılacağını, hangi sonuçların optimize edileceğini tanımlayın. Bu, iş bağlamının derin bir şekilde anlaşılmasını gerektiren yaratıcı, stratejik bir iştir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Modelleri Eğitin ve Optimize Edin</h3>
+                    <p>Yapay zeka sistemlerine "iyi"nin ne olduğunu öğretmek, davranışlarını iyileştirmek, doğruluklarını geliştirmek—bu teknik becerileri alan uzmanlığıyla birleştirir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔬</span>
+                    <h3>Deneyin ve Yenilik Yapın</h3>
+                    <p>Yeni yaklaşımları test etmek, gelişen teknikleri keşfetmek, sınırları zorlamak—operasyonel işlerde boğulmadan deney yapma özgürlüğüne sahip olduğunuzda inovasyon gerçekleşir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>Ölçün ve İyileştirin</h3>
+                    <p>Sistem performansını analiz etmek, iyileştirme fırsatlarını belirlemek, geliştirmeleri uygulamak—odak noktanız yangınla mücadele değil, sürekli iyileştirme olur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Moral Imperative -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Ahlaki Zorunluluk: Bunu Yapmalıyız</h2>
+                <p style="margin-bottom: 1rem;">
+                    Tekrarlayan işleri yönetmek için yapay zeka agentları ve robotlar inşa etmek isteğe bağlı değil—ahlaki bir zorunluluktur. Kendimize, ekiplerimize ve gelecek nesillere bunu borçluyuz:
+                </p>
+                <div style="text-align: left; max-width: 700px; margin: 2rem auto; font-size: 1.1rem;">
+                    <p style="margin-bottom: 1rem;">✅ <strong>İnsan potansiyeline saygı gösterin</strong> insanları ruh ezici tekrarlayan işlerden kurtararak</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Sürekli öğrenmeyi etkinleştirin</strong> böylece herkes büyüyebilir ve yeni beceriler geliştirebilir</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Yaratıcılığı ve inovasyonu teşvik edin</strong> zihinlere keşfetme alanı vererek</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Tatmin edici iş yaratın</strong> benzersiz bir şekilde insan yeteneklerini kullanan</p>
+                    <p style="margin-bottom: 1rem;">✅ <strong>Daha iyi sistemler inşa edin</strong> insanlığa hizmet eden, ona rutin işlerle esaret etmeyen</p>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1.2rem; font-weight: 600;">
+                    Bu sadece verimlilikle ilgili değil—insan onuru ve potansiyeliyle ilgili.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Delivery Pilot Enables This -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Delivery Pilot Bunu Nasıl Mümkün Kılıyor</h2>
+            <div style="max-width: 900px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 2rem;">
+                    Delivery Pilot, organizasyonunuzu görev odaklıdan inovasyon odaklıya dönüştürmek için platform, araçlar ve rehberlik sağlar. Ekibinizi en iyi işlerini yapmak için özgürleştiren yapay zeka agentlarını ve robotları inşa etmenize yardımcı oluyoruz.
+                </p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <span class="icon">🛠️</span>
+                    <h3>Yapay Zeka Agent Geliştirme Platformu</h3>
+                    <p>Makine öğrenmesinde doktora derecesine ihtiyaç duymadan yapay zeka agentlarını inşa edin, eğitin ve dağıtın. Platformumuz, tüm ekibinizin akıllı otomasyon oluşturmasını erişilebilir hale getirir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Rehberli Dönüşüm</h3>
+                    <p>Ekibinizin görev yürütmeden sistem mimarisine geçişine yardımcı olmak için atölyeler, en iyi uygulamalar ve uygulamalı destek sağlıyoruz. Yaparak öğrenin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Yüksek Etkili Görevlerle Başlayın</h3>
+                    <p>En fazla zamanı tüketen tekrarlayan işleri belirleyin ve önce onu otomatikleştirin. Hızlı kazanımlar momentum oluşturur ve değeri hemen gösterir.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>İnsan Özgürlüğünü Ölçün</h3>
+                    <p>Sadece verimlilik kazanımlarını değil, öğrenme, inovasyon ve yaratıcı iş için özgürleşen zamanı da takip edin. İş memnuniyeti ve yetenek gelişimindeki artışı ölçün.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🤝</span>
+                    <h3>Kültür Dönüşümü Desteği</h3>
+                    <p>"İş yapmak"tan "robot inşa etmek"e geçiş kültürel değişim gerektirir. Çerçeveler, iletişim stratejileri ve değişim yönetimi desteği sağlıyoruz.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🌱</span>
+                    <h3>Sürekli Öğrenme Ortamı</h3>
+                    <p>Ekibiniz ML becerileri, yapay zeka mimarisi ve sistem düşüncesi öğrenir—her gün daha değerli hale gelen yetenekler. Öğrenmeyi işin ayrı bir parçası değil, bir parçası haline getiriyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ekibinizi Özgürleştirmeye Hazır Mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                İnsan potansiyelini tekrarlayan görevlerde boşa harcamayı bırakın. Ekibinizi yaratıcılık, öğrenme ve inovasyon için özgürleştiren yapay zeka agentları ve robotlar inşa etmeye başlayın.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀 Dönüşümünüze Başlayın</a>
+                <a href="workshops.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🎓 Daha Fazla Öğrenin</a>
+                <a href="resources-work-vs-robots-tr.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🤖 İş vs Robotlar</a>
+                <a href="resources-why-build-agents.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇬🇧 Read in English</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Neden Agent ve Robot İnşa Etmeliyiz",
+      "description": "İşe insanca yaklaşım: Tekrarlayan görevleri yapay zeka agentlarına ve robotlara devredin, insanları yaratıcılık, öz-öğrenme ve makine öğrenmesi modelleri inşa etme için özgürleştirin",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2024-12-17",
+      "dateModified": "2024-12-17",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-why-build-agents-tr.html"
+      },
+      "articleSection": "Kaynaklar",
+      "keywords": ["yapay zeka agentları", "robotlar", "otomasyon", "makine öğrenmesi", "insan potansiyeli", "öz öğrenme", "yaratıcılık", "tekrarlayan görevler"],
+      "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>
