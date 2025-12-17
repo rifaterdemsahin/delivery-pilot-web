@@ -116,6 +116,22 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Work vs Robots (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Enterprise Agent Implementation Page -->
     <url>
         <loc>https://deliverypilot.net/enterprise-agent.html</loc>
@@ -136,6 +152,22 @@
     <url>
         <loc>https://deliverypilot.net/resources-governance-examples-tr.html</loc>
         <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Task Handover Challenge (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-task-handover-challenge.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Task Handover Challenge (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-task-handover-challenge-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
