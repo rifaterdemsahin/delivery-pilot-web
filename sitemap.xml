@@ -140,6 +140,22 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Junior Engineer Training Page (English) -->
+    <url>
+        <loc>https://deliverypilot.net/junior-engineer-training.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Junior Engineer Training Page (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/junior-engineer-training-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Resources: Governance Examples (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-governance-examples.html</loc>

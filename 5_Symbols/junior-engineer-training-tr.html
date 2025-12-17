@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Junior mühendisleri makine öğrenimi ve yapay zeka ajan eğitimi ile özellik mühendislerine dönüştürün. Kurumsal veri kaynaklarını ve iş akışlarını kullanarak üretime hazır ajanlar oluşturmayı öğrenin.">
+    <meta name="keywords" content="junior mühendis eğitimi, ML eğitimi, ajan sistemleri, kurumsal yapay zeka, özellik mühendisliği, makine öğrenimi, yapay zeka ajanları, kurumsal veri kaynakları, iş akışı otomasyonu">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/junior-engineer-training-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Junior Mühendisten ML Ajan Uzmanına | Delivery Pilot">
+    <meta property="og:description" content="Junior mühendisleri ML ve yapay zeka ajan eğitimi ile özellik mühendislerine dönüştürün.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/junior-engineer-training-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Junior Mühendisten ML Ajan Uzmanına">
+    <meta name="twitter:description" content="Junior mühendisleri ML ve yapay zeka ajan sistemleri eğitimi ile özellik mühendislerine dönüştürün.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Junior Mühendisten ML Ajan Uzmanına | Delivery Pilot Eğitim</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Hero section styles */
+        .training-hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .training-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .training-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .training-hero .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Journey section */
+        .journey-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .journey-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .journey-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .journey-step .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .journey-step .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .journey-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .journey-step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ML Training section */
+        .ml-training-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .training-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .training-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .training-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .training-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .training-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .training-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .training-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Use Cases section */
+        .use-cases-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .use-case-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .use-case-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .use-case-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card .benefits {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .use-case-card .benefits strong {
+            color: var(--primary-color);
+        }
+
+        /* Enterprise Data section */
+        .enterprise-data-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .data-sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .data-source-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .data-source-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .data-source-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .data-source-card p {
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Workflow section */
+        .workflow-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .workflow-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .workflow-step .step-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .workflow-step .step-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .workflow-step .step-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Framework section */
+        .framework-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .framework-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .framework-box {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .framework-box .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .framework-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .framework-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .framework-box li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .framework-box li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-buttons .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-buttons .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .training-hero h1 {
+                font-size: 2rem;
+            }
+
+            .training-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .journey-path,
+            .training-grid,
+            .use-case-grid,
+            .data-sources-grid,
+            .framework-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="training-hero">
+        <div class="container">
+            <h1>Junior Mühendisleri Özellik Mühendislerine Dönüştürme</h1>
+            <p class="subtitle">Kurumsal iş akışları ve gerçek dünya kullanım senaryoları ile makine öğrenimi ve yapay zeka ajan sistemlerinde uzmanlaşın</p>
+            <p class="tagline">Bilinmeyenden Bilinene Yolculuk: Kurumsal Teslimat için Üretime Hazır Ajanlar Oluşturma</p>
+        </div>
+    </section>
+
+    <!-- Journey from Unknown to Known -->
+    <section class="journey-section">
+        <div class="container">
+            <h2 class="section-title">Yolculuk: Bilinmeyenden Bilinene</h2>
+            <p class="section-description">Junior mühendisleri kurumsal seviyede katkı sağlayabilecek kendinden emin ML ve ajan sistem uzmanlarına dönüştüren yapılandırılmış bir yol</p>
+            
+            <div class="journey-path">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <span class="icon">❓</span>
+                    <h3>Bilinmeyen</h3>
+                    <p>Başlangıç noktası: ML ve ajan sistemlerine sınırlı maruz kalma. Problem alanını anlama.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <span class="icon">🔍</span>
+                    <h3>Keşif</h3>
+                    <p>Temelleri öğrenme: ML kavramları, ajan mimarileri ve kurumsal veri kalıpları.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <span class="icon">🛠️</span>
+                    <h3>Uygulama</h3>
+                    <p>Uygulamalı eğitim: Kurumsal iş akışlarını ve veri kaynaklarını kullanarak ajanlar oluşturma.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <span class="icon">🎯</span>
+                    <h3>Tatbik</h3>
+                    <p>Gerçek kullanım senaryoları: Gerçek kurumsal teslimat senaryoları için ajanları uygulama.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">5</div>
+                    <span class="icon">✨</span>
+                    <h3>Bilinen</h3>
+                    <p>Uzman seviyesi: Üretim ajanları oluşturabilen katkıda bulunan özellik mühendisleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ML & Agent Systems Training -->
+    <section class="ml-training-section">
+        <div class="container">
+            <h2 class="section-title">Makine Öğrenimi ve Ajan Sistemleri Eğitimi</h2>
+            <p class="section-description">Pratik ML ve ajan geliştirme becerileri oluşturmak için tasarlanmış kapsamlı müfredat</p>
+            
+            <div class="training-grid">
+                <div class="training-card">
+                    <span class="icon">🧠</span>
+                    <h3>ML Temelleri</h3>
+                    <ul>
+                        <li>Denetimli ve denetimsiz öğrenme</li>
+                        <li>Sinir ağları ve derin öğrenme</li>
+                        <li>Model eğitimi ve değerlendirme</li>
+                        <li>Özellik mühendisliği teknikleri</li>
+                        <li>Veri ön işleme ve işlem hatları</li>
+                    </ul>
+                </div>
+                
+                <div class="training-card">
+                    <span class="icon">🤖</span>
+                    <h3>Ajan Sistemleri</h3>
+                    <ul>
+                        <li>Ajan mimari kalıpları</li>
+                        <li>Özerk karar verme</li>
+                        <li>Çok-ajanlı koordinasyon</li>
+                        <li>LLM entegrasyonu ve yönlendirme</li>
+                        <li>Ajan hafızası ve durum yönetimi</li>
+                    </ul>
+                </div>
+                
+                <div class="training-card">
+                    <span class="icon">⚙️</span>
+                    <h3>İş Akışı Entegrasyonu</h3>
+                    <ul>
+                        <li>ML modelleri için CI/CD</li>
+                        <li>Versiyon kontrolü ve MLOps</li>
+                        <li>Otomatik test ve doğrulama</li>
+                        <li>Dağıtım işlem hatları</li>
+                        <li>İzleme ve gözlemlenebilirlik</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Use Cases -->
+    <section class="use-cases-section">
+        <div class="container">
+            <h2 class="section-title">Kurumsal Kullanım Senaryoları</h2>
+            <p class="section-description">Junior mühendislerin üretime hazır ajan sistemleri oluşturduğu gerçek dünya senaryoları</p>
+            
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <span class="icon">📋</span>
+                    <h3>Otomatik Kod İnceleme Ajanı</h3>
+                    <p>Pull request'leri analiz eden, kod kalitesi sorunlarını belirleyen, iyileştirmeler öneren ve kurumsal kodlama standartlarından öğrenen ajanlar oluşturun.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>NLP, statik analiz, kalıp tanıma</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎫</span>
+                    <h3>Akıllı Bilet Triyajı</h3>
+                    <p>Geçmiş kurumsal verilere ve kalıplara dayanarak destek biletlerini otomatik olarak kategorize eden, önceliklendiren ve yönlendiren ML modelleri oluşturun.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>Sınıflandırma, kümeleme, duygu analizi</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">📚</span>
+                    <h3>Dokümantasyon Asistanı</h3>
+                    <p>Kod tabanı değişikliklerinden ve ekip etkileşimlerinden öğrenerek teknik dokümantasyon oluşturan, güncelleyen ve sürdüren ajanlar geliştirin.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>Metin üretimi, anlamsal arama, bilgi grafikleri</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🔍</span>
+                    <h3>Anomali Tespit Sistemi</h3>
+                    <p>Kurumsal operasyonel verileri kullanarak üretim sistemlerini izleyen, anomalileri tespit eden ve potansiyel arızaları tahmin eden ajanlar oluşturun.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>Zaman serisi analizi, aykırı değer tespiti, tahmine dayalı modeller</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">💬</span>
+                    <h3>Kurumsal Bilgi Chatbot'u</h3>
+                    <p>Dahili dokümantasyon, wiki'ler ve iletişim kanallarından öğrenerek çalışan sorularını yanıtlayan konuşma ajanları oluşturun.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>RAG sistemleri, konuşma yapay zekası, gömme</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎯</span>
+                    <h3>Akıllı Test Üretimi</h3>
+                    <p>Kod kalıplarını analiz ederek otomatik olarak test senaryoları üreten, uç durumları belirleyen ve test kapsamını iyileştiren ajanlar oluşturun.</p>
+                    <div class="benefits">
+                        <strong>Öğrenme çıktısı:</strong>
+                        <span>Kod analizi, sembolik yürütme, test otomasyonu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning from Enterprise Data Sources -->
+    <section class="enterprise-data-section">
+        <div class="container">
+            <h2 class="section-title">Kurumsal Veri Kaynaklarından Öğrenme</h2>
+            <p class="section-description">Anında iş değeri sunmak için gerçek kurumsal verileri kullanarak ajanları eğitin</p>
+            
+            <div class="data-sources-grid">
+                <div class="data-source-card">
+                    <span class="icon">💾</span>
+                    <h3>Kod Depoları</h3>
+                    <p>Kurumsal standartları anlamak için Git geçmişi, commit kalıpları, kod incelemeleri ve geliştirme uygulamalarından öğrenin.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">📊</span>
+                    <h3>Operasyonel Metrikler</h3>
+                    <p>Kalıpları belirlemek ve tahmine dayalı modeller oluşturmak için logları, performans verilerini ve sistem metriklerini analiz edin.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">📝</span>
+                    <h3>Dokümantasyon ve Wiki'ler</h3>
+                    <p>Dahili dokümanlardan, teknik spesifikasyonlardan ve kurumsal hafızadan bilgi çıkarın.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">🎫</span>
+                    <h3>Biletler ve Sorunlar</h3>
+                    <p>Problem-çözüm kalıpları ve eskalasyon iş akışları için JIRA, GitHub Issues ve destek sistemlerini inceleyin.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">💬</span>
+                    <h3>Ekip İletişimleri</h3>
+                    <p>Ekip dinamiklerini ve karar verme süreçlerini anlamak için Slack kanalları, e-posta dizileri ve toplantı notlarından öğrenin.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">🔄</span>
+                    <h3>CI/CD İşlem Hatları</h3>
+                    <p>Teslimat iş akışlarını optimize etmek için yapım hatalarını, dağıtım kalıplarını ve yayın süreçlerini inceleyin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discovering New Use Cases Through Simulations -->
+    <section class="use-cases-section">
+        <div class="container">
+            <h2 class="section-title">Simülasyonlar Aracılığıyla Yeni Kullanım Senaryolarını Keşfetme</h2>
+            <p class="section-description">Junior mühendisler sadece önceden tanımlanmış kullanım senaryolarını öğrenmez—gerçek dünya senaryolarını yansıtan uygulamalı atölye simülasyonları aracılığıyla yeni senaryoları keşfeder ve oluştururlar</p>
+            
+            <div class="intro-box" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2.5rem; border-radius: 12px; margin-bottom: 3rem; border-left: 5px solid var(--primary-color);">
+                <h3 style="color: var(--text-dark); font-size: 1.5rem; margin-bottom: 1rem;">🎮 Atölyeleri Neden "Simülasyonlar" Olarak Adlandırıyoruz</h3>
+                <p style="line-height: 1.8; color: var(--text-light); margin-bottom: 1rem;">
+                    <a href="workshops.html" style="color: var(--primary-color); text-decoration: underline;">10 adımlı yapay zeka atölyelerimiz</a>, junior mühendislerin üretim sistemleri gibi içeriği tarayan, analiz eden ve ilişkilendiren ajanları aktif olarak oluşturduğu sürükleyici simülasyonlar olarak işlev görür. Bu simülasyon tabanlı öğrenme yoluyla, kendi kurumsal bağlamlarına özgü kullanım senaryolarını doğal olarak keşfederler.
+                </p>
+                <p style="line-height: 1.8; color: var(--text-light);">
+                    <strong>Daha fazla bilgi:</strong> <a href="resources-workshops-as-simulations.html" style="color: var(--primary-color); text-decoration: underline;">Atölyeleri Neden "Simülasyonlar" Olarak Adlandırıyoruz</a>
+                </p>
+            </div>
+
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <span class="icon">🔬</span>
+                    <h3>Deney Ortamı</h3>
+                    <p>Simülasyonlar, junior mühendislerin farklı ajan mimarilerini deneyimledikleri, uç durumları keşfettikleri ve üretim sistemlerine risk olmadan otomasyon fırsatlarını belirledikleri güvenli bir sandbox sağlar.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Yinelemeli deney yoluyla gizli kullanım senaryolarını ortaya çıkarma</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">💡</span>
+                    <h3>Kalıp Tanıma</h3>
+                    <p>Junior mühendisler simülasyonlarda ajanlar oluştururken, mevcut süreçlerdeki tekrarlayan görevleri ve verimsizlikleri fark ederek doğal olarak yeni otomasyon fırsatlarını ve kullanım senaryolarını belirlerler.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Süreç iyileştirmelerini ve otomasyon adaylarını keşfetme</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎯</span>
+                    <h3>Bağlama Özgü İnovasyon</h3>
+                    <p>Simülasyonlarda gerçek kurumsal verilerle çalışmak, junior mühendislerin genel eğitimin kaçıracağı, organizasyonun benzersiz iş akışlarına, araçlarına ve zorluklarına özgü kullanım senaryolarını belirlemesine yardımcı olur.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Kurumsal ihtiyaçlara özel çözümler oluşturma</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🤝</span>
+                    <h3>İşbirlikçi Keşif</h3>
+                    <p>Ekip tabanlı simülasyonlar, junior mühendisleri gözlemlerini paylaşmaya ve birbirlerinin fikirlerini geliştirmeye teşvik eder, kolektif zeka aracılığıyla potansiyel kullanım senaryolarının keşfini çoğaltır.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Ekip işbirliği yoluyla çeşitli kullanım senaryoları üretme</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🔄</span>
+                    <h3>Yinelemeli İyileştirme</h3>
+                    <p>Birden fazla simülasyon döngüsü boyunca, junior mühendisler ilk kullanım senaryosu fikirlerini rafine eder, uç durumları keşfeder ve basit otomasyonu karmaşık sorunları çözen kapsamlı ajan sistemlerine dönüştürür.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Temel fikirleri üretime hazır çözümlere dönüştürme</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">📚</span>
+                    <h3>Yaparak Öğrenme</h3>
+                    <p>Simülasyonlarda ajanlar oluşturma eylemi, teorik öğrenmenin kaçırdığı gizli karmaşıklıkları ve fırsatları ortaya çıkarır, geliştirme sürecinin kendisi sırasında yeni kullanım senaryolarının keşfine yol açar.</p>
+                    <div class="benefits">
+                        <strong>Sonuç:</strong>
+                        <span>Uygulamalı geliştirme yoluyla kullanım senaryolarını keşfetme</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 2.5rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">🚀 Önceden Tanımlanmış'tan Kendi Keşfedilen Kullanım Senaryolarına</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.95; margin-bottom: 1.5rem;">
+                    Geleneksel eğitim sabit kullanım senaryolarını öğretir. Simülasyon yaklaşımımız, junior mühendisleri kullanım senaryosu kaşifleri haline getirir—gerçek kurumsal sistemler ve verilerle çalışırken aktif olarak çözümler belirler ve oluştururlar.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="workshops.html" class="btn" style="background: white; color: var(--primary-color); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Atölye Simülasyonlarını Keşfedin</a>
+                    <a href="resources-workshops-as-simulations.html" class="btn" style="background: transparent; color: white; border: 2px solid white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Yaklaşımımız Hakkında Bilgi Edinin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Box -->
+    <section>
+        <div class="container">
+            <div class="highlight-box">
+                <h2>🎯 Teoriden Üretime Haftalar İçinde, Yıllar Değil</h2>
+                <p>Yapılandırılmış yaklaşımımız, junior mühendisleri kurumsal ajan sistemleri oluşturabilen ve dağıtabilen üretken özellik mühendislerine dönüştürür. Gerçek iş akışlarına, gerçek kurumsal verilere ve kanıtlanmış kullanım senaryolarına odaklanarak, junior mühendisler organizasyonel başarıya anında katkıda bulunan pratik deneyim kazanırlar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Integration -->
+    <section class="workflow-section">
+        <div class="container">
+            <h2 class="section-title">İş Akışı Entegrasyonu</h2>
+            <p class="section-description">ML ve ajan eğitimini doğrudan geliştirme iş akışınıza gömmek</p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-icon">1️⃣</div>
+                    <div class="step-content">
+                        <h3>Değerlendirme ve Temel</h3>
+                        <p>Mevcut beceri seviyelerini değerlendirin ve bilgi boşluklarını belirleyin. Kurumsal ihtiyaçlara uygun net öğrenme hedefleri belirleyin ve ilerleme takibi için temel metrikler oluşturun.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">2️⃣</div>
+                    <div class="step-content">
+                        <h3>Yapılandırılmış Öğrenme Yolu</h3>
+                        <p>ML temellerinden ajan sistemlerine ilerleyen bir müfredat takip edin. Her modül teorik kavramları, pratik alıştırmaları ve kurumsal senaryolardan gerçek dünya örneklerini içerir.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">3️⃣</div>
+                    <div class="step-content">
+                        <h3>Uygulamalı Projeler</h3>
+                        <p>Gerçek kurumsal verileri kullanarak gerçek kullanım senaryoları için ajanlar oluşturun. Kod incelemeleri, test ve dağıtım işlem hatları ile versiyon kontrollü depolarda çalışın.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">4️⃣</div>
+                    <div class="step-content">
+                        <h3>Mentorluk ve İnceleme</h3>
+                        <p>Kıdemli mühendislerden düzenli kod incelemeleri, ikili programlama oturumları ve geri bildirim döngüleri sürekli iyileştirme ve en iyi uygulamalara bağlılığı sağlar.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">5️⃣</div>
+                    <div class="step-content">
+                        <h3>Üretim Dağıtımı</h3>
+                        <p>Uygun izleme, gözlemlenebilirlik ve olay müdahale prosedürleri ile üretim ortamlarına ajanları dağıtın. Gerçek dünya performansı ve kullanıcı geri bildirimlerinden öğrenin.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">6️⃣</div>
+                    <div class="step-content">
+                        <h3>Sürekli İyileştirme</h3>
+                        <p>Metrikler, geri bildirimler ve yeni gereksinimler temelinde iterasyon yapın. Üretim sistemlerini sürdürürken en son ML teknikleri ve ajan çerçeveleri ile güncel kalın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Framework for Building Agents -->
+    <section class="framework-section">
+        <div class="container">
+            <h2 class="section-title">Delivery Pilot Ajan Çerçevesi</h2>
+            <p class="section-description">Junior mühendisleri üretime hazır kurumsal ajanlar oluşturma konusunda yönlendirmek için kanıtlanmış bir çerçeve</p>
+            
+            <div class="framework-boxes">
+                <div class="framework-box">
+                    <span class="icon">🎯</span>
+                    <h3>Keşfet</h3>
+                    <ul>
+                        <li>İş problemini belirle</li>
+                        <li>Başarı metriklerini tanımla</li>
+                        <li>Veri mevcudiyetini değerlendir</li>
+                        <li>Fizibiliteyi belirle</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🏗️</span>
+                    <h3>Tasarla</h3>
+                    <ul>
+                        <li>Ajan mimarisini seç</li>
+                        <li>ML modelleri/tekniklerini belirle</li>
+                        <li>Veri işlem hattını tasarla</li>
+                        <li>Entegrasyon noktalarını planla</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">⚙️</span>
+                    <h3>Geliştir</h3>
+                    <ul>
+                        <li>Ajan mantığını uygula</li>
+                        <li>ML modellerini eğit</li>
+                        <li>Kapsamlı testler yaz</li>
+                        <li>Mimariyi belgele</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🚀</span>
+                    <h3>Dağıt</h3>
+                    <ul>
+                        <li>CI/CD işlem hattını kur</li>
+                        <li>İzlemeyi yapılandır</li>
+                        <li>Geri alma stratejisi uygula</li>
+                        <li>Üretime dağıt</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">📊</span>
+                    <h3>Ölç</h3>
+                    <ul>
+                        <li>Performans metriklerini takip et</li>
+                        <li>İş etkisini izle</li>
+                        <li>Kullanıcı geri bildirimi topla</li>
+                        <li>Kullanım kalıplarını analiz et</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🔄</span>
+                    <h3>İtere Et</h3>
+                    <ul>
+                        <li>Verilere dayalı iyileştir</li>
+                        <li>Modelleri yeniden eğit</li>
+                        <li>Yetenekleri geliştir</li>
+                        <li>Yeni kullanım senaryolarına ölçeklendir</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Junior Mühendislerinizi Dönüştürmeye Hazır mısınız?</h2>
+            <p>Üretime hazır ML ve ajan sistemleri sunabilen özellik mühendisleri ekibi oluşturmaya başlayın</p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary">Değerlendirmeye Başla</a>
+                <a href="workshops.html" class="btn btn-secondary">Atölyeleri Görüntüle</a>
+                <a href="enterprise-agent.html" class="btn btn-secondary">Kurumsal Ajanlar</a>
+                <a href="contact.html" class="btn btn-secondary">Bize Ulaşın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Junior Mühendisten ML Ajan Uzmanına Eğitim",
+        "description": "Junior mühendisleri kurumsal iş akışlarını ve veri kaynaklarını kullanarak makine öğrenimi ve yapay zeka ajan sistemleri eğitimi yoluyla özellik mühendislerine dönüştürün",
+        "provider": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "sameAs": "https://deliverypilot.net"
+        },
+        "courseMode": "blended",
+        "educationalLevel": "Intermediate",
+        "about": {
+            "@type": "Thing",
+            "name": "Makine Öğrenimi ve Yapay Zeka Ajan Sistemleri"
+        },
+        "teaches": [
+            "Makine Öğrenimi Temelleri",
+            "Ajan Sistem Mimarisi",
+            "Kurumsal Veri Entegrasyonu",
+            "İş Akışı Otomasyonu",
+            "Üretim Dağıtımı"
+        ],
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseWorkload": "PT40H",
+            "courseMode": "blended"
+        },
+        "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>

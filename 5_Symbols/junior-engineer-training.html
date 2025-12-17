@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform junior engineers into feature engineers through machine learning and AI agent training. Learn how to leverage enterprise data sources and workflows to build production-ready agents.">
+    <meta name="keywords" content="junior engineer training, ML training, agent systems, enterprise AI, feature engineering, machine learning, AI agents, enterprise data sources, workflow automation">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/junior-engineer-training.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Junior Engineer to ML Agent Expert | Delivery Pilot">
+    <meta property="og:description" content="Transform junior engineers into feature engineers through ML and AI agent training using enterprise data sources.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/junior-engineer-training.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Junior Engineer to ML Agent Expert">
+    <meta name="twitter:description" content="Transform juniors into feature engineers through ML and AI agent systems training.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Junior Engineer to ML Agent Expert | Delivery Pilot Training</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Hero section styles */
+        .training-hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .training-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .training-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .training-hero .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Journey section */
+        .journey-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .journey-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .journey-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .journey-step .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .journey-step .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .journey-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .journey-step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ML Training section */
+        .ml-training-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .training-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .training-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .training-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .training-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .training-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .training-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .training-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Use Cases section */
+        .use-cases-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .use-case-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .use-case-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .use-case-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card .benefits {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .use-case-card .benefits strong {
+            color: var(--primary-color);
+        }
+
+        /* Enterprise Data section */
+        .enterprise-data-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .data-sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .data-source-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .data-source-card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .data-source-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .data-source-card p {
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Workflow section */
+        .workflow-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .workflow-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .workflow-step .step-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .workflow-step .step-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .workflow-step .step-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Framework section */
+        .framework-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .framework-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .framework-box {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .framework-box .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .framework-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .framework-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .framework-box li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .framework-box li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-buttons .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-buttons .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .training-hero h1 {
+                font-size: 2rem;
+            }
+
+            .training-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .journey-path,
+            .training-grid,
+            .use-case-grid,
+            .data-sources-grid,
+            .framework-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="training-hero">
+        <div class="container">
+            <h1 data-i18n="juniorTraining.hero.title">Transforming Juniors into Feature Engineers</h1>
+            <p class="subtitle" data-i18n="juniorTraining.hero.subtitle">Master machine learning and AI agent systems through enterprise workflows and real-world use cases</p>
+            <p class="tagline" data-i18n="juniorTraining.hero.tagline">Journey from Unknown to Known: Building Production-Ready Agents for Enterprise Delivery</p>
+        </div>
+    </section>
+
+    <!-- Journey from Unknown to Known -->
+    <section class="journey-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.journey.title">The Journey: From Unknown to Known</h2>
+            <p class="section-description" data-i18n="juniorTraining.journey.description">A structured path that transforms junior engineers into confident ML and agent system experts capable of enterprise-level contributions</p>
+            
+            <div class="journey-path">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <span class="icon">❓</span>
+                    <h3 data-i18n="juniorTraining.journey.step1.title">Unknown</h3>
+                    <p data-i18n="juniorTraining.journey.step1.description">Starting point: Limited exposure to ML and agent systems. Understanding the problem space.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <span class="icon">🔍</span>
+                    <h3 data-i18n="juniorTraining.journey.step2.title">Discovery</h3>
+                    <p data-i18n="juniorTraining.journey.step2.description">Learning fundamentals: ML concepts, agent architectures, and enterprise data patterns.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <span class="icon">🛠️</span>
+                    <h3 data-i18n="juniorTraining.journey.step3.title">Practice</h3>
+                    <p data-i18n="juniorTraining.journey.step3.description">Hands-on training: Building agents using enterprise workflows and data sources.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <span class="icon">🎯</span>
+                    <h3 data-i18n="juniorTraining.journey.step4.title">Application</h3>
+                    <p data-i18n="juniorTraining.journey.step4.description">Real use cases: Implementing agents for actual enterprise delivery scenarios.</p>
+                </div>
+                
+                <div class="journey-step">
+                    <div class="step-number">5</div>
+                    <span class="icon">✨</span>
+                    <h3 data-i18n="juniorTraining.journey.step5.title">Known</h3>
+                    <p data-i18n="juniorTraining.journey.step5.description">Expert level: Contributing feature engineers capable of building production agents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ML & Agent Systems Training -->
+    <section class="ml-training-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.mlTraining.title">Machine Learning & Agent Systems Training</h2>
+            <p class="section-description" data-i18n="juniorTraining.mlTraining.description">Comprehensive curriculum designed to build practical ML and agent development skills</p>
+            
+            <div class="training-grid">
+                <div class="training-card">
+                    <span class="icon">🧠</span>
+                    <h3 data-i18n="juniorTraining.mlTraining.fundamentals.title">ML Fundamentals</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.mlTraining.fundamentals.item1">Supervised & unsupervised learning</li>
+                        <li data-i18n="juniorTraining.mlTraining.fundamentals.item2">Neural networks & deep learning</li>
+                        <li data-i18n="juniorTraining.mlTraining.fundamentals.item3">Model training & evaluation</li>
+                        <li data-i18n="juniorTraining.mlTraining.fundamentals.item4">Feature engineering techniques</li>
+                        <li data-i18n="juniorTraining.mlTraining.fundamentals.item5">Data preprocessing & pipelines</li>
+                    </ul>
+                </div>
+                
+                <div class="training-card">
+                    <span class="icon">🤖</span>
+                    <h3 data-i18n="juniorTraining.mlTraining.agents.title">Agent Systems</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.mlTraining.agents.item1">Agent architecture patterns</li>
+                        <li data-i18n="juniorTraining.mlTraining.agents.item2">Autonomous decision-making</li>
+                        <li data-i18n="juniorTraining.mlTraining.agents.item3">Multi-agent coordination</li>
+                        <li data-i18n="juniorTraining.mlTraining.agents.item4">LLM integration & prompting</li>
+                        <li data-i18n="juniorTraining.mlTraining.agents.item5">Agent memory & state management</li>
+                    </ul>
+                </div>
+                
+                <div class="training-card">
+                    <span class="icon">⚙️</span>
+                    <h3 data-i18n="juniorTraining.mlTraining.workflow.title">Workflow Integration</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.mlTraining.workflow.item1">CI/CD for ML models</li>
+                        <li data-i18n="juniorTraining.mlTraining.workflow.item2">Version control & MLOps</li>
+                        <li data-i18n="juniorTraining.mlTraining.workflow.item3">Automated testing & validation</li>
+                        <li data-i18n="juniorTraining.mlTraining.workflow.item4">Deployment pipelines</li>
+                        <li data-i18n="juniorTraining.mlTraining.workflow.item5">Monitoring & observability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Use Cases -->
+    <section class="use-cases-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.useCases.title">Enterprise Use Cases</h2>
+            <p class="section-description" data-i18n="juniorTraining.useCases.description">Real-world scenarios where junior engineers build production-ready agent systems</p>
+            
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <span class="icon">📋</span>
+                    <h3 data-i18n="juniorTraining.useCases.codeReview.title">Automated Code Review Agent</h3>
+                    <p data-i18n="juniorTraining.useCases.codeReview.description">Build agents that analyze pull requests, identify code quality issues, suggest improvements, and learn from enterprise coding standards.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.codeReview.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.codeReview.benefitDesc">NLP, static analysis, pattern recognition</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎫</span>
+                    <h3 data-i18n="juniorTraining.useCases.ticketTriage.title">Intelligent Ticket Triage</h3>
+                    <p data-i18n="juniorTraining.useCases.ticketTriage.description">Create ML models that automatically categorize, prioritize, and route support tickets based on historical enterprise data and patterns.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.ticketTriage.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.ticketTriage.benefitDesc">Classification, clustering, sentiment analysis</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">📚</span>
+                    <h3 data-i18n="juniorTraining.useCases.documentation.title">Documentation Assistant</h3>
+                    <p data-i18n="juniorTraining.useCases.documentation.description">Develop agents that generate, update, and maintain technical documentation by learning from codebase changes and team interactions.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.documentation.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.documentation.benefitDesc">Text generation, semantic search, knowledge graphs</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🔍</span>
+                    <h3 data-i18n="juniorTraining.useCases.anomaly.title">Anomaly Detection System</h3>
+                    <p data-i18n="juniorTraining.useCases.anomaly.description">Build agents that monitor production systems, detect anomalies, and predict potential failures using enterprise operational data.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.anomaly.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.anomaly.benefitDesc">Time series analysis, outlier detection, predictive models</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">💬</span>
+                    <h3 data-i18n="juniorTraining.useCases.chatbot.title">Enterprise Knowledge Chatbot</h3>
+                    <p data-i18n="juniorTraining.useCases.chatbot.description">Construct conversational agents that answer employee questions by learning from internal documentation, wikis, and communication channels.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.chatbot.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.chatbot.benefitDesc">RAG systems, conversational AI, embeddings</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎯</span>
+                    <h3 data-i18n="juniorTraining.useCases.testing.title">Intelligent Test Generation</h3>
+                    <p data-i18n="juniorTraining.useCases.testing.description">Create agents that automatically generate test cases, identify edge cases, and improve test coverage by analyzing code patterns.</p>
+                    <div class="benefits">
+                        <strong data-i18n="juniorTraining.useCases.testing.benefit">Learning outcome:</strong>
+                        <span data-i18n="juniorTraining.useCases.testing.benefitDesc">Code analysis, symbolic execution, test automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning from Enterprise Data Sources -->
+    <section class="enterprise-data-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.enterpriseData.title">Learning from Enterprise Data Sources</h2>
+            <p class="section-description" data-i18n="juniorTraining.enterpriseData.description">Train agents using real enterprise data to deliver immediate business value</p>
+            
+            <div class="data-sources-grid">
+                <div class="data-source-card">
+                    <span class="icon">💾</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.repositories.title">Code Repositories</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.repositories.description">Learn from Git history, commit patterns, code reviews, and development practices to understand enterprise standards.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">📊</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.metrics.title">Operational Metrics</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.metrics.description">Analyze logs, performance data, and system metrics to identify patterns and build predictive models.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">📝</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.documentation.title">Documentation & Wikis</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.documentation.description">Extract knowledge from internal docs, technical specifications, and institutional memory.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">🎫</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.tickets.title">Tickets & Issues</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.tickets.description">Mine JIRA, GitHub Issues, and support systems for problem-solution patterns and escalation workflows.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">💬</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.communications.title">Team Communications</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.communications.description">Learn from Slack channels, email threads, and meeting notes to understand team dynamics and decision-making.</p>
+                </div>
+                
+                <div class="data-source-card">
+                    <span class="icon">🔄</span>
+                    <h3 data-i18n="juniorTraining.enterpriseData.pipelines.title">CI/CD Pipelines</h3>
+                    <p data-i18n="juniorTraining.enterpriseData.pipelines.description">Study build failures, deployment patterns, and release processes to optimize delivery workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discovering New Use Cases Through Simulations -->
+    <section class="use-cases-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.simulations.title">Discovering New Use Cases Through Simulations</h2>
+            <p class="section-description" data-i18n="juniorTraining.simulations.description">Junior engineers don't just learn predefined use cases—they discover and create new ones through hands-on workshop simulations that mirror real-world scenarios</p>
+            
+            <div class="intro-box" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2.5rem; border-radius: 12px; margin-bottom: 3rem; border-left: 5px solid var(--primary-color);">
+                <h3 style="color: var(--text-dark); font-size: 1.5rem; margin-bottom: 1rem;">🎮 Why We Call Workshops "Simulations"</h3>
+                <p style="line-height: 1.8; color: var(--text-light); margin-bottom: 1rem;">
+                    Our <a href="workshops.html" style="color: var(--primary-color); text-decoration: underline;">10-step AI workshops</a> function as immersive simulations where junior engineers actively build agents that scan, analyze, and relate content—just like production systems. Through this simulation-based learning, they naturally discover use cases unique to their enterprise context.
+                </p>
+                <p style="line-height: 1.8; color: var(--text-light);">
+                    <strong>Learn more:</strong> <a href="resources-workshops-as-simulations.html" style="color: var(--primary-color); text-decoration: underline;">Why We Call Workshops "Simulations"</a>
+                </p>
+            </div>
+
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <span class="icon">🔬</span>
+                    <h3 data-i18n="juniorTraining.simulations.exploration.title">Experimentation Environment</h3>
+                    <p data-i18n="juniorTraining.simulations.exploration.description">Simulations provide a safe sandbox where juniors experiment with different agent architectures, discover edge cases, and identify automation opportunities without risk to production systems.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Uncover hidden use cases through iterative experimentation</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">💡</span>
+                    <h3 data-i18n="juniorTraining.simulations.pattern.title">Pattern Recognition</h3>
+                    <p data-i18n="juniorTraining.simulations.pattern.description">As juniors build agents in simulations, they recognize repetitive tasks and inefficiencies in current processes, naturally identifying new automation opportunities and use cases.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Discover process improvements and automation candidates</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🎯</span>
+                    <h3 data-i18n="juniorTraining.simulations.contextual.title">Context-Specific Innovation</h3>
+                    <p data-i18n="juniorTraining.simulations.contextual.description">Working with actual enterprise data in simulations helps juniors identify use cases specific to their organization's unique workflows, tools, and challenges that generic training would miss.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Create custom solutions tailored to enterprise needs</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🤝</span>
+                    <h3 data-i18n="juniorTraining.simulations.collaborative.title">Collaborative Discovery</h3>
+                    <p data-i18n="juniorTraining.simulations.collaborative.description">Team-based simulations encourage juniors to share observations and build on each other's ideas, multiplying the discovery of potential use cases through collective intelligence.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Generate diverse use cases through team collaboration</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">🔄</span>
+                    <h3 data-i18n="juniorTraining.simulations.iterative.title">Iterative Refinement</h3>
+                    <p data-i18n="juniorTraining.simulations.iterative.description">Through multiple simulation cycles, juniors refine initial use case ideas, discover edge cases, and evolve simple automation into comprehensive agent systems that solve complex problems.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Evolve basic ideas into production-ready solutions</span>
+                    </div>
+                </div>
+                
+                <div class="use-case-card">
+                    <span class="icon">📚</span>
+                    <h3 data-i18n="juniorTraining.simulations.learning.title">Learning by Building</h3>
+                    <p data-i18n="juniorTraining.simulations.learning.description">The act of building agents in simulations reveals hidden complexities and opportunities that theoretical learning misses, leading to discovery of novel use cases during the development process itself.</p>
+                    <div class="benefits">
+                        <strong>Outcome:</strong>
+                        <span>Discover use cases through hands-on development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 2.5rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">🚀 From Pre-Defined to Self-Discovered Use Cases</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.95; margin-bottom: 1.5rem;">
+                    Traditional training teaches fixed use cases. Our simulation approach empowers juniors to become use case discoverers—actively identifying and creating solutions as they work with real enterprise systems and data.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="workshops.html" class="btn" style="background: white; color: var(--primary-color); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Explore Workshop Simulations</a>
+                    <a href="resources-workshops-as-simulations.html" class="btn" style="background: transparent; color: white; border: 2px solid white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Learn About Our Approach</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Box -->
+    <section>
+        <div class="container">
+            <div class="highlight-box">
+                <h2 data-i18n="juniorTraining.highlight.title">🎯 From Theory to Production in Weeks, Not Years</h2>
+                <p data-i18n="juniorTraining.highlight.description">Our structured approach transforms junior engineers into productive feature engineers capable of building and deploying enterprise agent systems. By focusing on real workflows, actual enterprise data, and proven use cases, juniors gain practical experience that immediately contributes to organizational success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Integration -->
+    <section class="workflow-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.workflow.title">Workflow Integration</h2>
+            <p class="section-description" data-i18n="juniorTraining.workflow.description">Embed ML and agent training directly into your development workflow</p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-icon">1️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step1.title">Assessment & Baseline</h3>
+                        <p data-i18n="juniorTraining.workflow.step1.description">Evaluate current skill levels and identify knowledge gaps. Set clear learning objectives aligned with enterprise needs and establish baseline metrics for progress tracking.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">2️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step2.title">Structured Learning Path</h3>
+                        <p data-i18n="juniorTraining.workflow.step2.description">Follow a progressive curriculum from ML fundamentals to agent systems. Each module includes theoretical concepts, practical exercises, and real-world examples from enterprise scenarios.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">3️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step3.title">Hands-On Projects</h3>
+                        <p data-i18n="juniorTraining.workflow.step3.description">Build agents for actual use cases using real enterprise data. Work in version-controlled repositories with code reviews, testing, and deployment pipelines.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">4️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step4.title">Mentorship & Review</h3>
+                        <p data-i18n="juniorTraining.workflow.step4.description">Regular code reviews from senior engineers, pair programming sessions, and feedback loops ensure continuous improvement and adherence to best practices.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">5️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step5.title">Production Deployment</h3>
+                        <p data-i18n="juniorTraining.workflow.step5.description">Deploy agents to production environments with proper monitoring, observability, and incident response procedures. Learn from real-world performance and user feedback.</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-icon">6️⃣</div>
+                    <div class="step-content">
+                        <h3 data-i18n="juniorTraining.workflow.step6.title">Continuous Improvement</h3>
+                        <p data-i18n="juniorTraining.workflow.step6.description">Iterate based on metrics, feedback, and new requirements. Stay updated with latest ML techniques and agent frameworks while maintaining production systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Framework for Building Agents -->
+    <section class="framework-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="juniorTraining.framework.title">Delivery Pilot Agent Framework</h2>
+            <p class="section-description" data-i18n="juniorTraining.framework.description">A proven framework to guide junior engineers in building production-ready enterprise agents</p>
+            
+            <div class="framework-boxes">
+                <div class="framework-box">
+                    <span class="icon">🎯</span>
+                    <h3 data-i18n="juniorTraining.framework.discover.title">Discover</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.discover.item1">Identify business problem</li>
+                        <li data-i18n="juniorTraining.framework.discover.item2">Define success metrics</li>
+                        <li data-i18n="juniorTraining.framework.discover.item3">Assess data availability</li>
+                        <li data-i18n="juniorTraining.framework.discover.item4">Determine feasibility</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🏗️</span>
+                    <h3 data-i18n="juniorTraining.framework.design.title">Design</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.design.item1">Choose agent architecture</li>
+                        <li data-i18n="juniorTraining.framework.design.item2">Select ML models/techniques</li>
+                        <li data-i18n="juniorTraining.framework.design.item3">Design data pipeline</li>
+                        <li data-i18n="juniorTraining.framework.design.item4">Plan integration points</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">⚙️</span>
+                    <h3 data-i18n="juniorTraining.framework.develop.title">Develop</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.develop.item1">Implement agent logic</li>
+                        <li data-i18n="juniorTraining.framework.develop.item2">Train ML models</li>
+                        <li data-i18n="juniorTraining.framework.develop.item3">Write comprehensive tests</li>
+                        <li data-i18n="juniorTraining.framework.develop.item4">Document architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🚀</span>
+                    <h3 data-i18n="juniorTraining.framework.deploy.title">Deploy</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.deploy.item1">Set up CI/CD pipeline</li>
+                        <li data-i18n="juniorTraining.framework.deploy.item2">Configure monitoring</li>
+                        <li data-i18n="juniorTraining.framework.deploy.item3">Implement rollback strategy</li>
+                        <li data-i18n="juniorTraining.framework.deploy.item4">Deploy to production</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">📊</span>
+                    <h3 data-i18n="juniorTraining.framework.measure.title">Measure</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.measure.item1">Track performance metrics</li>
+                        <li data-i18n="juniorTraining.framework.measure.item2">Monitor business impact</li>
+                        <li data-i18n="juniorTraining.framework.measure.item3">Collect user feedback</li>
+                        <li data-i18n="juniorTraining.framework.measure.item4">Analyze usage patterns</li>
+                    </ul>
+                </div>
+                
+                <div class="framework-box">
+                    <span class="icon">🔄</span>
+                    <h3 data-i18n="juniorTraining.framework.iterate.title">Iterate</h3>
+                    <ul>
+                        <li data-i18n="juniorTraining.framework.iterate.item1">Refine based on data</li>
+                        <li data-i18n="juniorTraining.framework.iterate.item2">Retrain models</li>
+                        <li data-i18n="juniorTraining.framework.iterate.item3">Enhance capabilities</li>
+                        <li data-i18n="juniorTraining.framework.iterate.item4">Scale to new use cases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="juniorTraining.cta.title">Ready to Transform Your Junior Engineers?</h2>
+            <p data-i18n="juniorTraining.cta.description">Start building a team of feature engineers capable of delivering production-ready ML and agent systems</p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" data-i18n="juniorTraining.cta.assess">Start Assessment</a>
+                <a href="workshops.html" class="btn btn-secondary" data-i18n="juniorTraining.cta.workshops">View Workshops</a>
+                <a href="enterprise-agent.html" class="btn btn-secondary" data-i18n="juniorTraining.cta.enterprise">Enterprise Agents</a>
+                <a href="contact.html" class="btn btn-secondary" data-i18n="juniorTraining.cta.contact">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Junior Engineer to ML Agent Expert Training",
+        "description": "Transform junior engineers into feature engineers through machine learning and AI agent systems training using enterprise workflows and data sources",
+        "provider": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "sameAs": "https://deliverypilot.net"
+        },
+        "courseMode": "blended",
+        "educationalLevel": "Intermediate",
+        "about": {
+            "@type": "Thing",
+            "name": "Machine Learning and AI Agent Systems"
+        },
+        "teaches": [
+            "Machine Learning Fundamentals",
+            "Agent System Architecture",
+            "Enterprise Data Integration",
+            "Workflow Automation",
+            "Production Deployment"
+        ],
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseWorkload": "PT40H",
+            "courseMode": "blended"
+        },
+        "inLanguage": "en"
+    }
+    </script>
+</body>
+</html>

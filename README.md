@@ -98,6 +98,7 @@ All pages are hosted on the **deliverypilot.net** domain. Below is the complete 
 | **Workshops** | https://deliverypilot.net/workshops.html | 10-step AI workshop process for building secure, explainable AI products |
 | **Agile Transformation** | https://deliverypilot.net/agile-transformation.html | Agile methodology and transformation services |
 | **Enterprise Agent** | https://deliverypilot.net/enterprise-agent.html | Enterprise agent implementation framework with 10-milestone deployment process |
+| **Junior Engineer Training** | https://deliverypilot.net/junior-engineer-training.html | Transform junior engineers into ML agent experts through enterprise workflows and real-world use cases |
 | **Pricing** | https://deliverypilot.net/pricing.html | Pricing plans and packages for the platform |
 
 ### 🏢 Company Information
