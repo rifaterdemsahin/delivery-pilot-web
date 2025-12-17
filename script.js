@@ -23,7 +23,9 @@ const translations = {
             getStarted: "🚀 Get Started",
             resources: "📚 Resources",
             knowledgeTransfer: "🧠 Knowledge Transfer",
-            workVsRobots: "🤖 Work vs Robots"
+            workVsRobots: "🤖 Work vs Robots",
+            governanceExamples: "🏛️ Governance Examples",
+            paradigmShift: "⚡ Paradigm Shift"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -823,7 +825,9 @@ const translations = {
             getStarted: "🚀 Başlayın",
             resources: "📚 Kaynaklar",
             knowledgeTransfer: "🧠 Bilgi Transferi",
-            workVsRobots: "🤖 İş vs Robotlar"
+            workVsRobots: "🤖 İş vs Robotlar",
+            governanceExamples: "🏛️ Yönetişim Örnekleri",
+            paradigmShift: "⚡ Paradigma Değişimi"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
