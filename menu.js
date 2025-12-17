@@ -51,7 +51,8 @@ const navigationConfig = {
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
                 { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
-                { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' }
+                { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
+                { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
         },
         { 
@@ -116,7 +117,8 @@ const footerConfig = {
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
                 { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
-                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' }
+                { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
+                { type: 'link', href: 'security.html', textKey: 'footer.company.security', text: 'Security' }
             ]
         },
         {

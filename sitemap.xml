@@ -140,6 +140,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Security Page -->
+    <url>
+        <loc>https://deliverypilot.net/security.html</loc>
     <!-- Delivery Pilot Concept Page -->
     <url>
         <loc>https://deliverypilot.net/delivery-pilot-concept.html</loc>
