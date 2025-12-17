@@ -36,7 +36,8 @@ const navigationConfig = {
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
                 { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
                 { href: 'agile-transformation.html', text: '📈 Agile Transformation' },
-                { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' }
+                { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
+                { href: 'delivery-pilot-methodology.html', text: '📖 Methodology' }
             ]
         },
         { href: 'pricing.html', text: '💰 Pricing' },
@@ -56,10 +57,16 @@ const navigationConfig = {
             text: '📚 Resources', 
             textKey: 'nav.resources',
             submenu: [
+                { href: 'resources-root-cause-analysis.html', textKey: 'nav.rootCauseAnalysis', text: '🔍 Root Cause Analysis' },
+                { href: 'resources-agent-automation.html', textKey: 'nav.agentAutomation', text: '🔗 Agent Automation' },
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' }
+                { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' }
+                { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
+                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
@@ -89,6 +96,7 @@ const footerConfig = {
                 { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', text: 'Agile Transformation' },
                 { type: 'link', href: 'enterprise-agent.html', textKey: 'footer.platform.enterpriseAgent', text: 'Enterprise Agent' },
+                { type: 'link', href: 'delivery-pilot-methodology.html', text: 'Methodology' },
                 { type: 'link', href: 'index.html#features', textKey: 'footer.platform.features', text: 'Features' },
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },
                 { type: 'link', href: 'index.html#use-cases', textKey: 'footer.platform.useCases', text: 'Use Cases' },
