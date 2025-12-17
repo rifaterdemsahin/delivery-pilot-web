@@ -56,6 +56,7 @@ const navigationConfig = {
             text: '📚 Resources', 
             textKey: 'nav.resources',
             submenu: [
+                { href: 'resources-agent-automation.html', textKey: 'nav.agentAutomation', text: '🔗 Agent Automation' },
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
