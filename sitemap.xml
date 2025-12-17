@@ -139,5 +139,13 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Agent Security Benefits -->
+    <url>
+        <loc>https://deliverypilot.net/agent-security-benefits.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
