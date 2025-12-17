@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kök Neden Analizi: Bilgi ve Uygulama Arasındaki Eksik Bağ. Mühendislerin karmaşık çevik ortamlarda neden tekrarlayan hatalar yaptığını ve yapay zekanın bu kritik boşluğu nasıl doldurduğunu öğrenin.">
+    <meta name="keywords" content="kök neden analizi, bilgiden eyleme geçiş, çevik hatalar, bilişsel yük, mikroservis karmaşıklığı, vault yönetimi, yapay zeka otomasyonu, kurumsal zeka">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-root-cause-analysis-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kök Neden: Bilgi ve Eylem Arasındaki Eksik Bağ | Delivery Pilot">
+    <meta property="og:description" content="Mühendislerin karmaşık ortamlarda neden mekanik hatalar yaptığı ve yapay zekanın eksik bağlantıyı nasıl sağladığı.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-root-cause-analysis-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kök Neden: Bilgi ve Eylem Arasındaki Eksik Bağ">
+    <meta name="twitter:description" content="Çevik ortamlarda bilgiden eyleme geçiş boşluğunu anlama ve çözme.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Kök Neden Analizi: Eksik Bağ | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .root-cause-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .examples-section {
+            padding: 4rem 0;
+            background: #fef3c7;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .problem-cards,
+        .example-cards,
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .card.error-card {
+            border-left: 4px solid #dc2626;
+        }
+
+        .card.example-card {
+            border-left: 4px solid #f59e0b;
+        }
+
+        .card.solution-card {
+            border-left: 4px solid #10b981;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .scenario-box {
+            background: #fef3c7;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .scenario-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #92400e;
+        }
+
+        .scenario-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #78350f;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+        }
+
+        .impact-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #dc2626;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🔍 Kök Neden Analizi</h1>
+            <p class="subtitle">Çevik Ortamlarda Bilgi ve Uygulamalı Çalışma Arasındaki Eksik Bağ</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Temel Problem</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Modern çevik ortamlarda, sayısız hataya, gecikmeye ve hayal kırıklığına yol açan kritik bir kopukluk var: 
+                    <strong>bilgi ile uygulamalı çalışma arasındaki bağ eksik</strong>.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Mühendisler ne yapmaları gerektiğini biliyorlar. Dokümantasyon mevcut. Prosedürler yazılı. Ancak sürekli olarak kendilerini şu durumlarda buluyorlar:
+                </p>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+                    <li>Vault anahtarlarının hangi namespace'de olduğunu unutmak</li>
+                    <li>Hangi mikroservislerde bekleyen değişiklikler olduğunu bilmemek</li>
+                    <li>Deploy prosedürlerini Slack veya e-postalarda aramak</li>
+                    <li>Meslektaşlarına "O config dosyası neredeydi?" diye sormak</li>
+                    <li>Daha iyi bilmelerine rağmen aynı hataları tekrar tekrar yapmak</li>
+                </ul>
+                <p>
+                    Bu bir insan sorunu ya da dokümantasyon sorunu değil. <strong>Karmaşık, hızlı tempolu ortamlarda bilginin eyleme nasıl bağlandığıyla ilgili yapısal bir sorun.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Root Cause Section -->
+    <section class="root-cause-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Neden Oluyor: Kök Nedenler</h2>
+            <p class="section-subtitle">Bilgi ve uygulama arasındaki temel kopukluğu anlamak</p>
+            
+            <div class="problem-cards">
+                <div class="card error-card">
+                    <span class="icon">🧠</span>
+                    <h3>Bilişsel Aşırı Yüklenme</h3>
+                    <p>Mühendisler yüzlerce detayı akıllarında tutmalılar: API endpoint'leri, veritabanı şemaları, deploy prosedürleri, environment değişkenleri, vault yolları, servis bağımlılıkları ve daha fazlası. İnsan beyni, karmaşık teknik problemleri çözerken tüm bu bağlamı tutamaz.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">⚡</span>
+                    <h3>Bağlam Değiştirme Maliyeti</h3>
+                    <p>Çevik sprint'lerde mühendisler gün boyunca birden fazla görev, mikroservis ve ortam arasında geçiş yaparlar. Her bağlam değişimi zihinsel modelleri yeniden oluşturmayı gerektirir ve kritik detaylar geçişte kaybolur. Maliyet sistem karmaşıklığıyla katlanır.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">📚</span>
+                    <h3>Bilgi Parçalanması</h3>
+                    <p>Bilgi wiki'ler, README dosyaları, Slack mesajları, e-posta zincirleri, Jira ticket'ları ve kabile bilgisi arasında dağınık. Doğru anda doğru bilgiyi bulmak mühendislik işi değil, dedektiflik işi gerektirir.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">🏃</span>
+                    <h3>Hassasiyetten Çok Hız</h3>
+                    <p>Çevik hız metrikleri hızlı hareket etmeyi teşvik ediyor, ancak bilgi arama veya önlenebilir hatalardan kurtulma için harcanan zamanı hesaba katmıyor. Takımlar uygulama kalitesi değil, uygulama hızı için optimize oluyorlar.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">🔄</span>
+                    <h3>Canlı Sistem Karmaşıklığı</h3>
+                    <p>Mikroservis mimarileri, bulut altyapısı ve sürekli dağıtım, sistemlerin sürekli evrim geçirmesi anlamına gelir. Dünün bilgisi bugünün güncel olmayan bilgisi haline gelir. Statik dokümantasyon canlı sistemlere ayak uyduramaz.</p>
+                </div>
+                
+                <div class="card error-card">
+                    <span class="icon">👥</span>
+                    <h3>Uzman Bağımlılığı</h3>
+                    <p>Kritik bilgi genellikle kıdemli mühendislerin kafasında bulunur. Onlar müsait olmadığında, toplantıdayken veya tatildeyken tüm takım yavaşlar. Bu, insan formunda darboğazlar ve tek hata noktaları yaratır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Quote -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Temel Problem</h2>
+                <p>"İnsanlar giderek karmaşık ortamlarda mekanik, tekrarlayan bilişsel görevler yapmaya zorlanıyorlar. Sunucuları otomatikleştirdik ama mühendislerin bildikleri ile o anda yapmaları gerekenler arasındaki bağlantıyı otomatikleştirmedik."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Examples Section -->
+    <section class="examples-section">
+        <div class="container">
+            <h2 class="section-title">💡 Gerçek Dünya Senaryoları</h2>
+            <p class="section-subtitle">Bilgiden eyleme geçiş boşluğunun hatalara neden olduğu yaygın durumlar</p>
+            
+            <div class="example-cards">
+                <div class="card example-card">
+                    <span class="icon">🔐</span>
+                    <h3>Vault Anahtarları Gizemi</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Bir mühendis, HashiCorp Vault'tan veritabanı kimlik bilgileri gerektiren bir servisi deploy etmesi gerekiyor. Kimlik bilgilerinin var olduğunu biliyor ama hangi namespace'de? dev/secrets? prod/db-creds? common/postgres?</p>
+                    </div>
+                    <p><strong>Etki:</strong> Dokümantasyon arama, Slack'te sorma veya tahmin etme için 15 dakika. Bunu birden fazla mühendis arasında haftada onlarca deployment ile çarpın.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🔄</span>
+                    <h3>Mikroservis Labirenti</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Servisini deploy etmeden önce, bir mühendis bağımlı mikroservislerde uyumluluk sorunlarına neden olabilecek bekleyen değişiklikler olup olmadığını bilmelidir. Ekosistemde 47 mikroservis var.</p>
+                    </div>
+                    <p><strong>Etki:</strong> Ya kontrol etmiyorlar (breaking change riski) ya da manuel olarak birden fazla repo, CI pipeline ve takım kanalını kontrol ediyorlar (değerli zaman kaybı).</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🌍</span>
+                    <h3>Environment Değişkeni Avı</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Bir servis staging'de başarısız oluyor ama local'de çalışıyor. Sorun, ortamlar arasında farklılık gösteren bir environment değişkeni. Hangisi? Nerede dokümante edilmiş? Doğru değeri kim biliyor?</p>
+                    </div>
+                    <p><strong>Etki:</strong> Saatler süren debugging, environment config'leri karşılaştırma ve sonunda aylar önce kuran kişiye sorma.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">📋</span>
+                    <h3>Deployment Kontrol Listesi</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Production'a deploy belirli bir sıra izlemeyi gerektirir: veritabanı migrasyonu, cache temizleme, feature flag güncelleme, servis restart. Kontrol listesi 6 ay önce son güncellenen bir wiki sayfasında var.</p>
+                    </div>
+                    <p><strong>Etki:</strong> Adımlar atlanıyor, yanlış sırada yapılıyor veya güncel olmayan prosedürlere dayanıyor. Geri alma ve olay çağrıları takip ediyor.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">🔗</span>
+                    <h3>API Versiyon Karmaşası</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Servis A'nın Servis B'nin API'sini çağırması gerekiyor. Ama her ortamda şu anda hangi versiyon deploy edilmiş? v2.1? v2.3? Deprecated endpoint hala çalışıyor mu?</p>
+                    </div>
+                    <p><strong>Etki:</strong> Entegrasyon hataları, uyumluluk sorunları ve ortamlar arasında API versiyon matrislerini takip etmek için harcanan zaman.</p>
+                </div>
+                
+                <div class="card example-card">
+                    <span class="icon">⚠️</span>
+                    <h3>Nöbet Kabusu</h3>
+                    <div class="scenario-box">
+                        <h4>Senaryo</h4>
+                        <p>Sabah 2'de bir alarm çalıyor. Nöbetçi mühendis bilmesi gerekenleri bilmeli: Runbook nerede? Dashboard'lar nerede? Bağımlı servislerin sahipleri kim? Yakın zamanda ne değişti?</p>
+                    </div>
+                    <p><strong>Etki:</strong> Mühendis problemi çözmek yerine çılgınca bilgi ararken uzamış kesintiler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">📊 Kümülatif Etki</h2>
+            <p class="section-subtitle" style="margin-bottom: 2rem;">Bilgiden eyleme geçiş boşluğu organizasyonunuzu nasıl etkiler</p>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>⏰ Zaman Kaybı</h4>
+                    <p>Mühendisler zamanlarının %20-30'unu kod yazmak yerine bilgi arama, soru sorma ve bağlam değiştirme ile geçiriyorlar.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🐛 Önlenebilir Hatalar</h4>
+                    <p>Production olaylarının %70'i eksik bağlam veya unutulan prosedürlerden kaynaklanan önlenebilir insan hatalarından kaynaklanır.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>😰 Geliştirici Tükenmişliği</h4>
+                    <p>Sürekli bilişsel yük ve mekanik tekrarlayan görevler zihinsel enerjiyi tüketiyor, yorgunluk ve iş tatminsizliğine yol açıyor.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🐌 Yavaş Onboarding</h4>
+                    <p>Yeni takım üyeleri üretken olmak için 3-6 ay alıyor çünkü dağınık kabile bilgisini içselleştirmeleri gerekiyor.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>💰 Gizli Maliyetler</h4>
+                    <p>Olay kurtarma, geri alma, hotfix'ler ve teknik borç birikimi doğrudan zaman maliyetlerini katlar.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h4>🚧 İnovasyon Engellendi</h4>
+                    <p>Takımlar mekanik görevler ve hata kurtarma için o kadar çok zaman harcıyorlar ki stratejik düşünme ve inovasyon zarar görüyor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">✅ Çözüm: Eksik Bağ Olarak Yapay Zeka</h2>
+            <p class="section-subtitle">Yapay zeka ajanları bilgi ve uygulamalı eylem arasındaki boşluğu nasıl doldurur</p>
+            
+            <div class="solution-cards">
+                <div class="card solution-card">
+                    <span class="icon">🤖</span>
+                    <h3>Bağlam Duyarlı Yapay Zeka Ajanları</h3>
+                    <p>Altyapınızı, servislerinizi ve prosedürlerinizi anlayan yapay zeka ajanları anlık, bağlama özgü cevaplar sağlar. Artık vault namespace'i için wiki aramaya veya Slack'te soru sormaya gerek yok—yapay zeka biliyor ve tam ihtiyaç duyduğunuzda size söylüyor.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">📍</span>
+                    <h3>Tam Zamanında Bilgi</h3>
+                    <p>Bilgi bir depoda saklanmak yerine eylem noktasında görünür. Bir servis deploy mu ediyorsunuz? Yapay zeka mevcut deployment kontrol listesini, ortama özgü değişkenleri ve son değişiklikleri otomatik olarak sunar.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🔄</span>
+                    <h3>Canlı Bilgi Tabanı</h3>
+                    <p>Yapay zeka ajanları kod tabanınızdan, altyapı değişikliklerinizden ve takım iletişimlerinizden sürekli öğrenir. Sistemleriniz geliştikçe bilgi otomatik olarak güncellenir, güncel olmayan dokümantasyon sorununu ortadan kaldırır.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🎯</span>
+                    <h3>Otomatik Mekanik Görevler</h3>
+                    <p>Mühendisler neden 47 mikroservisin durumunu hatırlamalı? Yapay zeka her şeyi izliyor ve yalnızca insan muhakemesine ihtiyaç duyulduğunda uyarıyor. Mekanik bilişsel görevler otomatik hale geliyor, mühendisleri yaratıcı problem çözme için özgürleştiriyor.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🧠</span>
+                    <h3>Bilişsel Yük Azaltma</h3>
+                    <p>Yapay zeka prosedürleri hatırlama, bağımlılıkları takip etme ve sistemler arasında bağlam sürdürmenin zihinsel yükünü üstleniyor. Mühendisler bilişsel kapasitelerini gerçek mühendislik zorluklarına odaklayabiliyorlar.</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <span class="icon">🚀</span>
+                    <h3>Daha Hızlı, Daha Güvenli Uygulama</h3>
+                    <p>Yapay zeka doğru anda doğru bilgiyi sağlarken, mühendisler güvenlikten ödün vermeden daha hızlı hareket ederler. Artık hız ve hassasiyet arasında seçim yapmaya gerek yok—ikisine de sahip olursunuz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Delivery Pilot Helps -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Delivery Pilot Bu Kök Nedeni Nasıl Ele Alıyor</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Delivery Pilot sadece başka bir bilgi yönetim aracı sağlamıyor. <strong>Mühendislerinizin bildikleri ile yapmaları gerekenler arasındaki boşluğu aktif olarak dolduran yapay zeka ajanları yaratıyoruz</strong>.
+                </p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-color);">Yaklaşımımız:</h3>
+                <ul style="list-style-position: inside; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 1rem;"><strong>Kurumunuza özel yapay zeka ajanları eğitin</strong> - altyapınızı, servislerinizi ve prosedürlerinizi anlayan</li>
+                    <li style="margin-bottom: 1rem;"><strong>Zekayı eylem noktalarına yerleştirin</strong> - CI/CD pipeline'larınıza, terminallerinize ve geliştirme araçlarınıza</li>
+                    <li style="margin-bottom: 1rem;"><strong>Mekanik bilişsel görevleri otomatikleştirin</strong> - mikroservis durumu kontrolü, vault anahtarları bulma ve prosedürleri doğrulama gibi</li>
+                    <li style="margin-bottom: 1rem;"><strong>Tam zamanında rehberlik sağlayın</strong> - mühendislerin tam ihtiyaç duydukları yerde ve zamanda görünen</li>
+                    <li style="margin-bottom: 1rem;"><strong>Sürekli öğrenin ve adapte olun</strong> - sistemleriniz geliştikçe, manuel güncellemeler olmadan bilgiyi güncel tutun</li>
+                </ul>
+                
+                <p style="margin-top: 2rem;">
+                    Sonuç? Mühendisler daha az zaman arama, hatırlama ve bağlam değiştirmeye—ve daha fazla zaman inşa etme, inovasyon yapma ve gerçek problemleri çözmeye harcarlar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Boşluğu Doldurmaya Hazır Mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Yapay zeka ajanlarının organizasyonunuzda tekrarlayan bilişsel görevleri nasıl ortadan kaldırabileceğini ve bilgiyi eyleme nasıl bağlayabileceğini görün.
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🚀 Değerlendirmeye Başla
+                </a>
+                <a href="enterprise-agent.html" class="btn btn-secondary" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🤖 Yapay Zeka Ajanları Hakkında Bilgi Edinin
+                </a>
+                <a href="contact.html" class="btn btn-secondary" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    📧 Bize Ulaşın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../script.js"></script>
+    <script src="../menu.js"></script>
+</body>
+</html>
