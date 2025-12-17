@@ -139,5 +139,37 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Paradigm Shift (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-paradigm-shift.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Workshops as Simulations -->
+    <url>
+        <loc>https://deliverypilot.net/resources-workshops-as-simulations.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Workshops Page -->
+    <url>
+        <loc>https://deliverypilot.net/workshops.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
 </urlset>

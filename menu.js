@@ -59,7 +59,8 @@ const navigationConfig = {
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
-                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' }
+                { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
+                { href: 'resources-workshops-as-simulations.html', textKey: 'nav.workshopsAsSimulations', text: '🎮 Workshops as Simulations' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
