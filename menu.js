@@ -63,6 +63,7 @@ const navigationConfig = {
                 { href: 'resources-documentation-efficiency.html', textKey: 'nav.documentationEfficiency', text: '📄 Documentation Efficiency' },
                 { href: 'resources-work-vs-robots.html', textKey: 'nav.workVsRobots', text: '🤖 Work vs Robots' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
+                { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' }
                 { href: 'resources-access-security-silos.html', textKey: 'nav.accessSecuritySilos', text: '🔐 Access & Security Silos' }
                 { href: 'resources-job-satisfaction-agents.html', textKey: 'nav.jobSatisfaction', text: '😊 Job Satisfaction' },
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
@@ -125,6 +126,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-work-vs-robots.html', textKey: 'footer.resources.workVsRobots', text: 'Work vs Robots' },
                 { type: 'link', href: 'resources-job-satisfaction-agents.html', textKey: 'footer.resources.jobSatisfaction', text: 'Job Satisfaction' },
                 { type: 'link', href: 'resources-governance-examples.html', textKey: 'footer.resources.governanceExamples', text: 'Governance Examples' },
+                { type: 'link', href: 'resources-acronym-pressure.html', textKey: 'footer.resources.acronymPressure', text: 'Acronym Overload' },
                 { type: 'link', href: 'resources-access-security-silos.html', textKey: 'footer.resources.accessSecuritySilos', text: 'Access & Security Silos' },
                 { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },

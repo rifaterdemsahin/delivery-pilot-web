@@ -140,6 +140,10 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Work vs Robots (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-15</lastmod>
     <!-- Resources: Documentation Efficiency (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-documentation-efficiency.html</loc>
@@ -163,11 +167,15 @@
     <!-- Resources: Work vs Robots (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
+        <lastmod>2024-12-15</lastmod>
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Acronym Pressure (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-acronym-pressure.html</loc>
     <!-- Resources: Humans vs Agents (English) -->
     <url>
         <loc>https://deliverypilot.net/resources-humans-vs-agents.html</loc>
@@ -199,6 +207,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resources: Acronym Pressure (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-acronym-pressure-tr.html</loc>
     <!-- Resources: Documentation Efficiency (Turkish) -->
     <url>
         <loc>https://deliverypilot.net/resources-documentation-efficiency-tr.html</loc>
