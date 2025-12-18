@@ -26,7 +26,8 @@ const navigationConfig = {
             submenu: [
                 { href: 'index.html#features', textKey: 'nav.features', text: '✨ Features' },
                 { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: '⚙️ How It Works' },
-                { href: 'index.html#use-cases', textKey: 'nav.useCases', text: '💼 Use Cases' }
+                { href: 'index.html#use-cases', textKey: 'nav.useCases', text: '💼 Use Cases' },
+                { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' }
             ]
         },
         { 
