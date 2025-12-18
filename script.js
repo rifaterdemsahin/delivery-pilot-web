@@ -128,6 +128,10 @@ const translations = {
             quality: {
                 title: "Quality Assurance",
                 description: "Implement AI-driven quality control systems that detect defects and ensure product excellence."
+            },
+            certificateManagement: {
+                title: "Certificate Management & Automation",
+                description: "Eliminate production outages from expired certificates. AI agents proactively monitor, update certificates on time, and notify all stakeholders - continuously learning to improve the process while manual approaches, even with automation, remain prone to human oversight failures."
             }
         },
         raise: {
@@ -1040,6 +1044,10 @@ const translations = {
             quality: {
                 title: "Kalite Güvencesi",
                 description: "Kusurları tespit eden ve ürün mükemmelliğini sağlayan yapay zeka odaklı kalite kontrol sistemleri uygulayın."
+            },
+            certificateManagement: {
+                title: "Sertifika Yönetimi ve Otomasyonu",
+                description: "Süresi dolan sertifikalardan kaynaklanan üretim kesintilerini ortadan kaldırın. Yapay zeka ajanları sertifikaları proaktif olarak izler, zamanında günceller ve tüm paydaşları bilgilendirir - manuel yaklaşımlar otomasyonla bile insan hatalarına açık kalırken, sürekli öğrenerek süreci iyileştirir."
             }
         },
         raise: {
