@@ -131,7 +131,7 @@ const translations = {
             },
             certificateManagement: {
                 title: "Certificate Management & Automation",
-                description: "Eliminate production outages from expired certificates. AI agents proactively monitor, update certificates on time, and notify all stakeholders - continuously learning to improve the process while manual approaches, even with automation, remain prone to human oversight failures."
+                description: "Eliminate production outages from expired certificates. AI agents proactively monitor, update on time, and notify stakeholders—continuously learning and improving where manual processes fail."
             }
         },
         raise: {
@@ -1047,7 +1047,7 @@ const translations = {
             },
             certificateManagement: {
                 title: "Sertifika Yönetimi ve Otomasyonu",
-                description: "Süresi dolan sertifikalardan kaynaklanan üretim kesintilerini ortadan kaldırın. Yapay zeka ajanları sertifikaları proaktif olarak izler, zamanında günceller ve tüm paydaşları bilgilendirir - manuel yaklaşımlar otomasyonla bile insan hatalarına açık kalırken, sürekli öğrenerek süreci iyileştirir."
+                description: "Süresi dolan sertifikalardan kaynaklanan üretim kesintilerini ortadan kaldırın. Yapay zeka ajanları proaktif olarak izler, zamanında günceller ve paydaşları bilgilendirir—manuel süreçlerin başarısız olduğu yerde sürekli öğrenir ve gelişir."
             }
         },
         raise: {
