@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yapay zeka ajanları SRE mühendislerine yüksek stresli sürümlerde geri alma işlemlerini nasıl yönetmede yardımcı olur. Ajanlı destek ile stresi azaltın ve geri alma hatlarının güvenilir çalıştığından emin olun.">
+    <meta name="keywords" content="SRE, site güvenilirliği mühendisliği, rollback, geri alma, deployment, yapay zeka ajanları, sürüm yönetimi, pipeline otomasyonu, delivery pilot">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-sre-rollback-support-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yapay Zeka Ajanları ile SRE Geri Alma Desteği | Delivery Pilot">
+    <meta property="og:description" content="Büyük sürümlerde akıllı ajan destekli geri alma ile SRE stresini azaltma.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-sre-rollback-support-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yapay Zeka Ajanları ile SRE Geri Alma Desteği">
+    <meta name="twitter:description" content="Yapay zeka ajanları SRE mühendislerine kritik sürümlerde geri alma işlemlerini güvenle yönetmede nasıl yardımcı olur.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Yapay Zeka Ajanları ile SRE Geri Alma Desteği | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .challenge-cards,
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.negative {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.positive {
+            border-left: 4px solid #10b981;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .workflow-section {
+            padding: 4rem 0;
+            background: #fefce8;
+        }
+
+        .workflow-steps {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .workflow-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .workflow-step .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .workflow-step .step-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .related-links {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .related-links h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .related-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-links li {
+            margin-bottom: 1rem;
+        }
+
+        .related-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .related-links a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🚨 Yapay Zeka Ajanları ile SRE Geri Alma Desteği</h1>
+            <p class="subtitle">Akıllı Ajan Destekli Geri Alma Yönetimi ile Büyük Sürümlerdeki Stresi Ortadan Kaldırma</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Sürüm Yönetiminin Yüksek Riskli Zorluğu</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Büyük sürümler, bir SRE mühendisinin kariyerindeki en stresli anlar arasındadır. Baskı çok yoğundur: <strong>binlerce kullanıcı sistemin ayakta kalmasına bağlıdır</strong>, işletme yeni özelliklerin devreye girmesine güvenir ve tüm ekip değişiklikler production ortamına çıkarken endişeyle izler.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Bu kritik anlarda, SRE mühendisleri korkutucu bir soruyla karşı karşıya kalır: <strong>"Bir şeyler ters giderse, geri alma pipeline'ımız gerçekten çalışacak mı?"</strong> Çoğu zaman geri alma süreçleri nadiren test edilir, dokümantasyon güncel değildir ve bir deployment'ı güvenli bir şekilde geri almak için gereken adımlar belirsiz veya test edilmemiştir.
+                </p>
+                <p>
+                    Güvenilir ajan desteği olmadan, mühendisler manuel olarak geri alma işlemlerini koordine etmek, çaresizce runbook'larda aramak ve acil durum prosedürlerinin en çok ihtiyaç duyulduğunda çalışacağını ummak zorunda kalırlar. <strong>Bu değişmeli.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">🔴 Geri Alma Krizi</h2>
+            <p class="section-subtitle">SRE mühendisleri kritik sürümler sırasında neden gereksiz stres yaşar</p>
+            
+            <div class="challenge-cards">
+                <div class="card">
+                    <span class="icon">😰</span>
+                    <h3>Sürüm Kaygısı</h3>
+                    <p>Her büyük sürüm bunaltıcı stres getirir. Mühendisler, geri alma prosedürlerinin ihtiyaç duyulduğunda çalışıp çalışmayacağını merak ederek uyku kaybederler. Başarısız bir geri alma korkusu, genellikle başarısız bir deployment korkusundan daha kötüdür.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">❓</span>
+                    <h3>Test Edilmemiş Geri Alma Pipeline'ları</h3>
+                    <p>Geri alma pipeline'ları production benzeri koşullarda nadiren kullanılır. Acil bir durum ortaya çıktığında, mühendisler geri alma süreçlerinin dokümantasyonda belirtildiği gibi çalışmadığını—veya hiç çalışmadığını—keşfederler.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Güncel Olmayan Runbook'lar</h3>
+                    <p>Dokümantasyon hızla eskir. Bir kriz sırasında, mühendisler kullanımdan kaldırılmış araçlara referans veren, kritik adımları eksik olan veya mevcut altyapıyla artık çalışmayan prosedürler içeren runbook'lar bulurlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⏱️</span>
+                    <h3>Zamana Karşı Kararlar</h3>
+                    <p>Deployment sırasında bir sorun oluştuğunda, her saniye önemlidir. Mühendisler, kapsamlı analiz için zaman olmadan yüksek baskı altında kararlar vermek zorundadır ve bu, durumu daha da kötüleştirme riskini artırır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔧</span>
+                    <h3>Manuel Koordinasyon</h3>
+                    <p>Geri alma işlemleri birden fazla sistem, ekip ve sürecin koordine edilmesini gerektirir. Manuel koordinasyon hataya açıktır, yavaştır ve doğru kişilerin doğru zamanda müsait olmasına bağlıdır.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Durum Yönetimi Karmaşıklığı</h3>
+                    <p>Modern uygulamalar veritabanları, önbellekler, mesaj kuyrukları ve dağıtık sistemler arasında karmaşık durumlara sahiptir. Kodu geri almak sadece başlangıçtır—tutarlı durumu sağlamak gerçek zorluktur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Quote -->
+    <section class="content-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>Gerçeklik Kontrolü</h2>
+                <p>"Production'daki en tehlikeli an bir şey bozulduğunda değildir—geri alma yapmanız gerektiğinde ve geri alma sürecinizin kendisinin bozuk olduğunu keşfettiğinizde gelir. SRE mühendisleri yüksek stresli sürümler sırasında kritik altyapı ile kumar oynamamalıdır."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Geleneksel Geri Alma vs. Ajan Destekli Geri Alma</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card negative">
+                    <h3>❌ Geleneksel Yaklaşım</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">😰 Stres altında manuel geri alma prosedürleri</li>
+                        <li style="margin-bottom: 1rem;">❓ Geri alma pipeline'ının çalışıp çalışmayacağı belirsiz</li>
+                        <li style="margin-bottom: 1rem;">📋 Güncel olmayan veya eksik runbook'lar</li>
+                        <li style="margin-bottom: 1rem;">⏰ Prosedürleri ararken zaman kaybı</li>
+                        <li style="margin-bottom: 1rem;">🔧 Ekipler arasında manuel koordinasyon</li>
+                        <li style="margin-bottom: 1rem;">🎲 Acil durumda her şeyin çalışacağını ummak</li>
+                        <li style="margin-bottom: 1rem;">😱 Stresli ve uykusuz mühendisler</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card positive">
+                    <h3>✅ Ajan Destekli Yaklaşım</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">🤖 Yapay zeka ajanları geri alma sürecinde rehberlik eder</li>
+                        <li style="margin-bottom: 1rem;">✅ Sürekli doğrulanan geri alma pipeline'ları</li>
+                        <li style="margin-bottom: 1rem;">📊 Gerçek zamanlı geri alma hazırlık kontrolleri</li>
+                        <li style="margin-bottom: 1rem;">⚡ Doğrulanmış prosedürlere anında erişim</li>
+                        <li style="margin-bottom: 1rem;">🔄 Otomatik koordinasyon ve orkestrasyon</li>
+                        <li style="margin-bottom: 1rem;">🎯 Ajanlar proaktif olarak aşamaları hazırlar</li>
+                        <li style="margin-bottom: 1rem;">😌 Kendinden emin, dinlenmiş mühendisler</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">🟢 Yapay Zeka Ajanları SRE Geri Alma Desteğini Nasıl Dönüştürür</h2>
+            <p class="section-subtitle">Stresi azaltan ve güvenilir geri alma işlemlerini sağlayan akıllı yardım</p>
+            
+            <div class="solution-cards">
+                <div class="card">
+                    <span class="icon">🤖</span>
+                    <h3>Proaktif Geri Alma Doğrulaması</h3>
+                    <p>Yapay zeka ajanları geri alma prosedürlerini güvenli ortamlarda sürekli olarak test eder ve doğrular. İhtiyacınız olmadan önce geri alma pipeline'ınızın çalıştığından emin olurlar, değişiklikleri istediğiniz anda güvenle geri alabileceğiniz konusunda güven sağlarlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Otomatik Aşama Hazırlığı</h3>
+                    <p>Ajanlar geri alma aşamalarını otomatik olarak hazırlar, ortamları kurar, bağımlılıkları kontrol eder ve ön koşulları doğrular. Geri alma yapmanız gerektiğinde, her şey zaten hazır ve bekliyor.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📊</span>
+                    <h3>Gerçek Zamanlı Geri Alma Hazırlığı</h3>
+                    <p>Her deployment'tan önce, ajanlar kapsamlı bir geri alma hazırlık raporu sağlar. Geri alma yapmanız gerekirse ne olacağını, açık adımlar ve doğrulanmış prosedürlerle tam olarak bilin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Akıllı Orkestrasyon</h3>
+                    <p>Geri alma sırasında, ajanlar servisler, veritabanları ve altyapı genelinde tüm süreci orkestra eder. Karmaşık işlem dizilerini koordine ederler, bağımlılıkları yönetirler ve tutarlılığı sağlarlar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">💡</span>
+                    <h3>Rehberli Karar Desteği</h3>
+                    <p>Sorunlar ortaya çıktığında, ajanlar sistem durumu, geçmiş veriler ve en iyi uygulamalara dayalı akıllı öneriler sunar. Geri mi alınacağı, ileri mi gidileceği yoksa hotfix mi uygulanacağı konusunda net rehberlik alın.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Canlı Dokümantasyon</h3>
+                    <p>Ajanlar her deployment ve geri alma işleminden öğrenerek her zaman güncel geri alma prosedürlerini sürdürürler. Dokümantasyon otomatik olarak güncellenir, runbook'ların asla eskimemesini sağlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent-Assisted Workflow -->
+    <section class="workflow-section">
+        <div class="container">
+            <h2 class="section-title">🔄 Ajan Destekli Geri Alma İş Akışı</h2>
+            <p class="section-subtitle">Yapay zeka ajanları SRE mühendislerine tüm sürüm yaşam döngüsü boyunca nasıl destek olur</p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Sürüm Öncesi Doğrulama</h3>
+                        <p>Deployment'tan önce, ajanlar geri alma pipeline'ının işlevsel olduğunu doğrularlar. Tüm bağımlılıkları kontrol ederler, erişim izinlerini doğrularlar, staging ortamında geri alma prosedürlerini test ederler ve kapsamlı bir hazırlık raporu sağlarlar.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Sürekli İzleme</h3>
+                        <p>Deployment sırasında, ajanlar sistem sağlığını gerçek zamanlı olarak izlerler. Anahtar metrikleri takip ederler, anormallikleri tespit ederler ve kritik arızalara dönüşmeden önce mühendisleri potansiyel sorunlara karşı uyarırlar.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Geri Alma Karar Desteği</h3>
+                        <p>Sorunlar ortaya çıkarsa, ajanlar veri odaklı önerilerle karar desteği sağlarlar. Sistem durumunu analiz ederler, etkiyi tahmin ederler ve net seçenekler sunarlar: geri alma, ileri gitme veya hedefli düzeltmeler uygulama.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Otomatik Geri Alma Yürütme</h3>
+                        <p>Geri alma gerektiğinde, ajanlar tüm süreci orkestra ederler. Servisler arasında koordine ederler, durum tutarlılığını yönetirler, doğrulanmış prosedürleri yürütürler ve karmaşık bağımlılıkları otomatik olarak ele alırlar.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Geri Alma Sonrası Doğrulama</h3>
+                        <p>Geri alma sonrasında, ajanlar sistem sağlığını ve tutarlılığını doğrularlar. Tüm servislerin doğru şekilde çalıştığını kontrol ederler, veri bütünlüğünü doğrularlar ve sistemin kararlı bir duruma döndüğünü onaylarlar.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Öğrenme ve İyileştirme</h3>
+                        <p>Ajanlar her geri alma işleminden öğrenir, prosedürleri ve dokümantasyonu günceller. İyileştirme alanlarını belirlerler, önleyici tedbirler önerirler ve geri alma sürecini sürekli olarak geliştirirler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">💪 SRE Ekipleri İçin Faydalar</h2>
+            
+            <div class="solution-cards">
+                <div class="card">
+                    <span class="icon">😌</span>
+                    <h3>Azaltılmış Stres</h3>
+                    <p>Mühendisler, geri alma prosedürlerinin sürekli doğrulandığını ve kullanıma hazır olduğunu bilerek daha iyi uyurlar. Ajanlar hazırlığı sağladığında "geri alma yapmamız gerekirse ne olur?" kaygısı ortadan kalkar.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">⚡</span>
+                    <h3>Daha Hızlı Kurtarma</h3>
+                    <p>Otomatik ajan orkestralı geri alma işlemleri saatler yerine dakikalar içinde tamamlanır. Akıllı otomasyon ile ortalama kurtarma süresini (MTTR) önemli ölçüde azaltın.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">✅</span>
+                    <h3>Daha Yüksek Güvenilirlik</h3>
+                    <p>Sürekli doğrulanan geri alma prosedürleri olaylar sırasında daha yüksek güvenilirlik anlamına gelir. Güvenlik ağınızın gerektiğinde sizi yakalayacağını güvenle bilin.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>Gelişmiş Deployment Güveni</h3>
+                    <p>Ekipler geri alma süreçlerine güvendiğinde, daha güvenle ve sık sık deployment yaparlar. Bu, daha hızlı inovasyon ve daha iyi iş sonuçları sağlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="content-section">
+        <div class="container">
+            <div class="related-links">
+                <h3>🔗 İlgili Kaynaklar</h3>
+                <ul>
+                    <li>
+                        <a href="resources-agent-automation-tr.html">
+                            <span>🔗</span>
+                            <span>Ajan Otomasyonu - Akıllı otomasyon yeteneklerini anlama</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources-documentation-efficiency-tr.html">
+                            <span>📄</span>
+                            <span>Dokümantasyon Verimliliği - Ajanların canlı dokümantasyonu nasıl sürdürdüğü</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources-root-cause-analysis-tr.html">
+                            <span>🔍</span>
+                            <span>Kök Neden Analizi - Daha hızlı olay soruşturması için ajanları kullanma</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources-why-build-agents-tr.html">
+                            <span>🏗️</span>
+                            <span>Neden Ajan Oluşturmalı - Operasyonlar için yapay zeka ajanlarının değerini anlama</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="enterprise-agent.html">
+                            <span>🤖</span>
+                            <span>Kurumsal Ajan Uygulama - Ajan destekli operasyonlara başlayın</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="workshops.html">
+                            <span>🎓</span>
+                            <span>Yapay Zeka Atölyeleri - Kurumsal yapay zeka ajanları oluşturmayı ve dağıtmayı öğrenin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Geri Alma Stresini Ortadan Kaldırmaya Hazır mısınız?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                Güvenilir, stressiz geri almalar sağlayan yapay zeka ajanları ile SRE uygulamanızı dönüştürün
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color);">
+                    Yapay Zeka Dönüşümünüze Başlayın
+                </a>
+                <a href="enterprise-agent.html" class="btn btn-secondary" style="border: 2px solid white; color: white;">
+                    Kurumsal Ajanlar Hakkında Bilgi Edinin
+                </a>
+                <a href="contact.html" class="btn btn-secondary" style="border: 2px solid white; color: white;">
+                    Bir Uzmanla Görüşün
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Yapay Zeka Ajanları ile SRE Geri Alma Desteği",
+        "description": "Yapay zeka ajanları SRE mühendislerine yüksek stresli sürümler sırasında geri alma işlemlerini yönetmede nasıl yardımcı olur, güvenilir ve stressiz deployment süreçleri sağlar.",
+        "author": {
+            "@type": "Organization",
+            "name": "Delivery Pilot"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://deliverypilot.net/logo.png"
+            }
+        },
+        "datePublished": "2024-12-18",
+        "dateModified": "2024-12-18",
+        "inLanguage": "tr"
+    }
+    </script>
+</body>
+</html>
