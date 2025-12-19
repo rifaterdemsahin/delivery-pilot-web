@@ -47,6 +47,7 @@ const translations = {
             title: "Delivery Pilot Podcast",
             subtitle: "Insights on Enterprise AI Transformation, DevOps, and Agile Methodologies",
             description: "Welcome to the Delivery Pilot Podcast! Explore our presentation materials covering enterprise AI transformation, DevOps best practices, and innovative approaches to scaling technology in modern organizations.",
+            presentationTitle: "Presentation Materials",
             download: "📥 Download Presentation PDF"
         },
         hero: {
@@ -970,6 +971,7 @@ const translations = {
             title: "Delivery Pilot Podcast",
             subtitle: "Kurumsal Yapay Zeka Dönüşümü, DevOps ve Çevik Metodolojiler Üzerine İçgörüler",
             description: "Delivery Pilot Podcast'e hoş geldiniz! Kurumsal yapay zeka dönüşümü, DevOps en iyi uygulamaları ve modern organizasyonlarda teknoloji ölçeklendirmeye yönelik yenilikçi yaklaşımları kapsayan sunum materyallerimizi keşfedin.",
+            presentationTitle: "Sunum Materyalleri",
             download: "📥 Sunum PDF'ini İndir"
         },
         hero: {
