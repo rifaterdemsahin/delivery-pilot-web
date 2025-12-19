@@ -40,7 +40,15 @@ const translations = {
             employeeOverload: "⚡ Employee Overload",
             humansVsAgents: "👥 Humans vs Agents",
             agentSecurity: "🔒 Agent Security Benefits",
-            security: "🔒 Security"
+            security: "🔒 Security",
+            podcast: "🎙️ Podcast"
+        },
+        podcast: {
+            title: "Delivery Pilot Podcast",
+            subtitle: "Insights on Enterprise AI Transformation, DevOps, and Agile Methodologies",
+            description: "Welcome to the Delivery Pilot Podcast! Explore our presentation materials covering enterprise AI transformation, DevOps best practices, and innovative approaches to scaling technology in modern organizations.",
+            presentationTitle: "Presentation Materials",
+            download: "📥 Download Presentation PDF"
         },
         hero: {
             title: "Transform Your Enterprise with AI",
@@ -956,7 +964,15 @@ const translations = {
             employeeOverload: "⚡ Çalışan Aşırı Yükü",
             humansVsAgents: "👥 İnsanlar vs Ajanlar",
             agentSecurity: "🔒 Ajan Güvenlik Avantajları",
-            security: "🔒 Güvenlik"
+            security: "🔒 Güvenlik",
+            podcast: "🎙️ Podcast"
+        },
+        podcast: {
+            title: "Delivery Pilot Podcast",
+            subtitle: "Kurumsal Yapay Zeka Dönüşümü, DevOps ve Çevik Metodolojiler Üzerine İçgörüler",
+            description: "Delivery Pilot Podcast'e hoş geldiniz! Kurumsal yapay zeka dönüşümü, DevOps en iyi uygulamaları ve modern organizasyonlarda teknoloji ölçeklendirmeye yönelik yenilikçi yaklaşımları kapsayan sunum materyallerimizi keşfedin.",
+            presentationTitle: "Sunum Materyalleri",
+            download: "📥 Sunum PDF'ini İndir"
         },
         hero: {
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
