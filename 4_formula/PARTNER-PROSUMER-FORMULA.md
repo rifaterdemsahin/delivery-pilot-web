@@ -213,7 +213,7 @@ Primary targets:
 
 #### 2. **Organizations with Long Delivery Cycles**
 Example: Nuclear reactor projects
-> "It takes Royce Royce to create a small nuclear reactor one year to build and operate in the UK. It takes UK government 10 years to take it online. So no company will create a nuclear reactor in one year and wait for nine years to get paid."
+> "It takes Rolls-Royce to create a small nuclear reactor one year to build and operate in the UK. It takes the UK government 10 years to take it online. So no company will create a nuclear reactor in one year and wait for nine years to get paid."
 
 **These organizations need**:
 - Better delivery management
