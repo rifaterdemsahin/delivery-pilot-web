@@ -167,7 +167,9 @@ delivery-pilot-web/
 │   ├── SEO-IMPROVEMENTS.md         # SEO optimization guide
 │   ├── FIX_REPORT.md               # Bug fixes and resolutions
 │   ├── business-analysis.md        # Comprehensive business analysis
-│   └── customer_creation_stage.md  # Customer development stages
+│   ├── customer_creation_stage.md  # Customer development stages
+│   ├── PARTNER-PROSUMER-FORMULA.md # Partner ecosystem and free assessment strategy
+│   └── gtm-partner-meeting.md      # GTM partner meeting transcript
 │
 ├── 5_Symbols/              # Complete set of production HTML pages
 │   ├── index.html          # Alternative homepage
@@ -390,6 +392,7 @@ This project includes comprehensive strategic documentation:
 - **[Market Validation Strategy](MARKET-VALIDATION-STRATEGY.md)**: Go-to-market approach
 - **[Product Validation Report](SANITY-CHECK-PRODUCT-VALIDATION-REPORT.md)**: Critical sanity checks for enterprise AI agent product
 - **[GTM Strategy](resources/gtm-strategy.md)**: Comprehensive go-to-market strategy
+- **[Partner-Prosumer Formula](4_formula/PARTNER-PROSUMER-FORMULA.md)**: Why we give free assessments and how prosumers become partners
 
 ### Strategic Objectives
 
