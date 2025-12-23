@@ -192,6 +192,10 @@ function generateNavigation() {
                 <span class="hamburger-line"></span>
             </button>
             <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="site-search" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </div>
                 <div class="language-toggle">
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn" data-lang="tr">TR</button>
@@ -202,6 +206,92 @@ function generateNavigation() {
             </div>
         </div>
     </nav>`;
+}
+
+/**
+ * Perform search on site data
+ */
+async function searchSite(query) {
+    if (!query || query.length < 2) return [];
+
+    try {
+        if (!window.siteData) {
+            // Check if we are in root or 5_Symbols to determine path
+            const path = window.location.pathname.includes('5_Symbols') ? '../sitedata.json' : 'sitedata.json';
+            const response = await fetch(path);
+            window.siteData = await response.json();
+        }
+        
+        // Basic search implementation
+        const lowerQuery = query.toLowerCase();
+        return window.siteData.filter(page => {
+            return (page.title && page.title.toLowerCase().includes(lowerQuery)) || 
+                   (page.content && page.content.toLowerCase().includes(lowerQuery));
+        }).map(page => {
+             // Create a snippet
+             const contentIndex = page.content ? page.content.toLowerCase().indexOf(lowerQuery) : -1;
+             let snippet = '';
+             if (contentIndex > -1) {
+                 const start = Math.max(0, contentIndex - 40);
+                 const end = Math.min(page.content.length, contentIndex + 80);
+                 snippet = (start > 0 ? '...' : '') + page.content.substring(start, end) + (end < page.content.length ? '...' : '');
+             } else {
+                 snippet = page.content ? page.content.substring(0, 100) + '...' : '';
+             }
+             return { ...page, snippet };
+        }).slice(0, 5); // Limit results
+    } catch (e) {
+        console.error('Error searching site:', e);
+        return [];
+    }
+}
+
+/**
+ * Initialize search functionality
+ */
+function initSearch() {
+    const searchInput = document.getElementById('site-search');
+    const searchResults = document.getElementById('search-results');
+
+    if (searchInput && searchResults) {
+        let debounceTimer;
+        
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            const query = e.target.value;
+            
+            if (query.length === 0) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            debounceTimer = setTimeout(async () => {
+                const results = await searchSite(query);
+                
+                if (results.length > 0) {
+                    searchResults.innerHTML = results.map(result => `
+                        <div class="search-result-item">
+                            <a href="${result.url.replace('5_Symbols/', '')}">
+                                <h4>${result.title}</h4>
+                                <p>${result.snippet}</p>
+                            </a>
+                        </div>
+                    `).join('');
+                    searchResults.style.display = 'block';
+                } else {
+                    searchResults.innerHTML = '<div class="search-no-results">No results found</div>';
+                    searchResults.style.display = 'block';
+                }
+            }, 300);
+        });
+
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+    }
 }
 
 /**
@@ -275,9 +365,11 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
         insertNavigation();
         insertFooter();
+        initSearch();
     });
 } else {
     // DOM is already ready
     insertNavigation();
     insertFooter();
+    initSearch();
 }
