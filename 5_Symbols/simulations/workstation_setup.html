@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raise > Rapid AI Expectations | Delivery Pilot</title>
+    <title>Workstation & Flow Check | Delivery Pilot</title>
     <style>
-        /* Reusing consistent styles from environment_checks.html */
+        /* Shared Styles */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -24,7 +24,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 3rem 1rem;
-            background: linear-gradient(135deg, #059669 0%, #10b981 100%); /* Green theme for growth */
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%); /* Blue theme for tech/flow */
             color: white;
             border-radius: 0 0 20px 20px;
         }
@@ -48,7 +48,6 @@
             margin-bottom: 2rem;
         }
 
-        /* Login Form */
         .login-form {
             max-width: 400px;
             margin: 0 auto;
@@ -66,23 +65,18 @@
             font-weight: 500;
         }
 
-        .form-input, .form-textarea {
+        .form-input, .form-select {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid #e2e8f0;
             border-radius: 6px;
             font-size: 1rem;
             box-sizing: border-box;
-            font-family: inherit;
-        }
-
-        .form-textarea {
-            min-height: 100px;
-            resize: vertical;
+            background-color: white;
         }
 
         .btn {
-            background-color: #059669;
+            background-color: #0ea5e9;
             color: white;
             padding: 0.75rem 1.5rem;
             border: none;
@@ -95,7 +89,7 @@
         }
 
         .btn:hover {
-            background-color: #047857;
+            background-color: #0284c7;
         }
 
         .dashboard-header {
@@ -135,6 +129,24 @@
             color: #64748b;
             margin-bottom: 1rem;
         }
+
+        /* Radio group styling */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .radio-label input {
+            margin-right: 10px;
+        }
     </style>
     <!-- Importing Global Styles -->
     <link rel="stylesheet" href="../../styles.css">
@@ -143,8 +155,8 @@
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
-        <h1>Raise > Rapid AI Skill Expectations</h1>
-        <p>Reflect on the rapidly changing landscape of AI and your preparedness.</p>
+        <h1>Workstation & Flow Check</h1>
+        <p>Optimize your physical and mental environment for high-velocity delivery.</p>
     </div>
 
     <div class="simulation-container">
@@ -152,13 +164,13 @@
         <!-- Login View -->
         <div id="login-view" class="card login-form">
             <h2>Welcome, Pilot 🧑‍✈️</h2>
-            <p style="margin-bottom: 2rem; color: #64748b;">Please enter your email to participate.</p>
+            <p style="margin-bottom: 2rem; color: #64748b;">Please enter your email to start the check.</p>
             <form id="email-form">
                 <div class="form-group">
                     <label for="email" class="form-label">Email Address</label>
                     <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
                 </div>
-                <button type="submit" class="btn">Start Session</button>
+                <button type="submit" class="btn">Start Check</button>
             </form>
         </div>
 
@@ -166,43 +178,74 @@
         <div id="dashboard-view" class="hidden">
             <div class="card dashboard-header">
                 <div class="user-info">
-                    Session for: <span id="user-email-display" style="font-weight: bold; color: #059669;"></span>
+                    Session for: <span id="user-email-display" style="font-weight: bold; color: #0ea5e9;"></span>
                     <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
                 </div>
             </div>
 
             <div class="card">
-                <h2 style="margin-bottom: 1.5rem;">Skill Expectation Feedback 🚀</h2>
-                <p style="margin-bottom: 2rem; color: #64748b;">We want to hear your thoughts on how AI is reshaping skill requirements. Your feedback shapes the simulation.</p>
+                <h2 style="margin-bottom: 1.5rem;">Environment & Mindset Survey 🧠</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Honest answers help us tailor your simulation experience.</p>
 
                 <form id="feedback-form">
                     
+                    <!-- Q1: Hardware -->
                     <div class="question-block">
-                        <div class="question-title">1. Current Preparedness</div>
-                        <div class="question-desc">On a scale of 1-10, how prepared do you feel for the "AI-first" workforce shift?</div>
-                        <input type="number" id="q1-preparedness" class="form-input" min="1" max="10" placeholder="e.g. 7">
+                        <div class="question-title">1. Monitor Setup</div>
+                        <div class="question-desc">How many screens are you currently using?</div>
+                        <select id="q1-monitor" class="form-select">
+                            <option value="single">Single Laptop Screen (I like to focus)</option>
+                            <option value="dual">Dual Monitors (One for code, one for docs)</option>
+                            <option value="triple_plus">Triple+ / Command Center (I see everything)</option>
+                            <option value="mobile">Mobile/Tablet only (Emergency mode)</option>
+                        </select>
                     </div>
 
+                    <!-- Q2: Connectivity -->
                     <div class="question-block">
-                        <div class="question-title">2. Biggest Challenge</div>
-                        <div class="question-desc">What is the single biggest barrier you face in adopting AI tools rapidly?</div>
-                        <textarea id="q2-challenge" class="form-textarea" placeholder="e.g. Lack of time, overwhelming number of tools, company policy..."></textarea>
+                        <div class="question-title">2. Connectivity Confidence</div>
+                        <div class="question-desc">Can you maintain a stable video call + screen share + cloud tools simultaneously?</div>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="q2" value="high" required> Yes, fiber/high-speed is rock solid.</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="medium"> Usually, but video sometimes lags.</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="low"> It's a struggle, I might need to turn off video.</label>
+                        </div>
                     </div>
 
+                    <!-- Q3: Instructions -->
                     <div class="question-block">
-                        <div class="question-title">3. Skill Gap</div>
-                        <div class="question-desc">Which specific skill do you feel you need to upgrade immediately?</div>
-                        <input type="text" id="q3-skill" class="form-input" placeholder="e.g. Python coding, Prompt Engineering, Data Analysis...">
+                        <div class="question-title">3. Following Protocol</div>
+                        <div class="question-desc">In a simulation, if given a strict sequence of 10 steps, how likely are you to skip one?</div>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="q3" value="never" required> I follow every step precisely.</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="sometimes"> I might skip obvious ones to save time.</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="often"> I prefer to figure it out my own way.</label>
+                        </div>
                     </div>
 
+                    <!-- Q4: Creativity -->
                     <div class="question-block">
-                        <div class="question-title">4. Future Expectation</div>
-                        <div class="question-desc">Where do you see the biggest opportunity for AI to boost your career in the next 12 months?</div>
-                        <textarea id="q4-opportunity" class="form-textarea" placeholder="Share your vision..."></textarea>
+                        <div class="question-title">4. Creative Adaptation</div>
+                        <div class="question-desc">If a tool fails during a live demo, what is your immediate reaction?</div>
+                        <select id="q4-creativity" class="form-select">
+                            <option value="freeze">Pause and apologize.</option>
+                            <option value="debug">Immediately open console/logs to fix it.</option>
+                            <option value="pivot">Seamlessly switch to a backup/screenshot or 'theatre of the mind'.</option>
+                        </select>
+                    </div>
+
+                    <!-- Q5: Window Management -->
+                    <div class="question-block">
+                        <div class="question-title">5. Window Mastery</div>
+                        <div class="question-desc">How quickly can you switch from this browser to your terminal or code editor?</div>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="q5" value="instant" required> Instant (Alt-Tab / Swipe muscle memory).</label>
+                            <label class="radio-label"><input type="radio" name="q5" value="slow"> I have to look for the window.</label>
+                        </div>
                     </div>
 
                     <div style="text-align: center; margin-top: 2rem;">
-                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Feedback</button>
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Environment Check</button>
                         <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
                     </div>
 
@@ -215,9 +258,9 @@
     <div id="footer-placeholder"></div>
     <script src="../../menu.js"></script>
     <script>
-        // Logic for Raise Expectations Page
+        // Logic for Workstation Setup Page
         const STORAGE_KEY_EMAIL = 'dp_simulation_email';
-        // Same webhook as environment check, or change if a specific one is provided later
+        // Shared webhook - or specific one if provided
         const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
 
         // Elements
@@ -277,30 +320,31 @@
 
             // Gather Data
             const data = {
-                preparedness: document.getElementById('q1-preparedness').value,
-                challenge: document.getElementById('q2-challenge').value,
-                skill: document.getElementById('q3-skill').value,
-                opportunity: document.getElementById('q4-opportunity').value
+                monitor: document.getElementById('q1-monitor').value,
+                connectivity: document.querySelector('input[name="q2"]:checked')?.value,
+                instructions: document.querySelector('input[name="q3"]:checked')?.value,
+                creativity: document.getElementById('q4-creativity').value,
+                switching: document.querySelector('input[name="q5"]:checked')?.value
             };
 
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Analyzing...';
             statusMsg.textContent = '';
 
             try {
                 const payload = {
-                    type: 'raise_expectations_feedback',
+                    type: 'workstation_setup_check',
                     email: email,
                     timestamp: new Date().toISOString(),
-                    feedback: data,
-                    // Hidden context for n8n processing/emailing
+                    survey: data,
+                    // Hidden context for n8n processing/emailing guidance
                     hiddenContext: {
-                        guidance: "To match the 'Raise' in expectations, participants must shift from manual execution to AI orchestration. Build personal agents to handle repetitive tasks and focus on high-value cognitive work.",
-                        skillsCurriculum: [
-                            "Prompt Engineering & Vibe Programming",
-                            "Agentic Workflow Design (n8n/LangChain)",
-                            "API Integration & System Thinking",
-                            "AI Ethics & Compliance"
+                        hardwareAdvice: "For High-Velocity Delivery, 2 screens are minimum. If on laptop, use an iPad as Sidecar or cheap portable monitor. View documentation on one, code on the other.",
+                        mindsetAdvice: "Aim for 'Creative Compliance': Follow the core 10 steps precisely to ensure system integrity, but use your creativity to handle edge cases or unexpected API failures gracefully (The Pivot).",
+                        actionItems: [
+                            "Secure a second display if possible.",
+                            "Practice Alt-Tab switching speed.",
+                            "Prepare a 'failure pivot' story for demos."
                         ]
                     }
                 };
@@ -311,20 +355,20 @@
                     body: JSON.stringify(payload)
                 });
 
-                statusMsg.textContent = 'Thank you! Your feedback has been recorded. 🚀';
-                statusMsg.style.color = '#059669';
-                submitBtn.textContent = '✅ Sent';
+                statusMsg.textContent = 'Environment data logged. Recommendations sent to instructor. 🖥️';
+                statusMsg.style.color = '#0ea5e9';
+                submitBtn.textContent = '✅ Checked';
                 feedbackForm.reset();
 
             } catch (err) {
                 console.error('Submission error:', err);
-                statusMsg.textContent = 'Feedback saved locally (Network/CORS).';
+                statusMsg.textContent = 'Data saved locally (Network/CORS). Advice: Get a second screen!';
                 statusMsg.style.color = '#f59e0b';
             } finally {
                 setTimeout(() => {
                     submitBtn.disabled = false;
-                    if (submitBtn.textContent !== '✅ Sent') {
-                        submitBtn.textContent = 'Submit Feedback';
+                    if (submitBtn.textContent !== '✅ Checked') {
+                        submitBtn.textContent = 'Submit Environment Check';
                     }
                 }, 3000);
             }
