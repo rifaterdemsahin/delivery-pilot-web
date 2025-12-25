@@ -35,6 +35,26 @@ function extractTitle(html) {
   return match ? match[1] : "Untitled Page";
 }
 
+// Helper to recursively get all HTML files
+function getAllHtmlFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+
+  files.forEach((file) => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      getAllHtmlFiles(filePath, fileList);
+    } else {
+      if (path.extname(file) === ".html") {
+        fileList.push(filePath);
+      }
+    }
+  });
+
+  return fileList;
+}
+
 function generateSiteData() {
   const siteData = [];
 
@@ -43,27 +63,27 @@ function generateSiteData() {
     return;
   }
 
-  const files = fs.readdirSync(contentDir);
+  const files = getAllHtmlFiles(contentDir);
 
-  files.forEach((file) => {
-    if (path.extname(file) === ".html") {
-      const filePath = path.join(contentDir, file);
-      const content = fs.readFileSync(filePath, "utf8");
+  files.forEach((filePath) => {
+    const content = fs.readFileSync(filePath, "utf8");
 
-      const title = extractTitle(content);
-      const textContent = stripHtml(content); // Basic implementation
+    const title = extractTitle(content);
+    const textContent = stripHtml(content); // Basic implementation
 
-      // Only add if there's actual content
-      if (textContent.length > 0) {
-        siteData.push({
-          title: title
-            .replace("Delivery Pilot - ", "")
-            .replace(" | Delivery Pilot", ""), // Clean up title
-          url: `5_Symbols/${file}`,
-          content: textContent,
-          id: file, // Use filename as ID
-        });
-      }
+    // Calculate relative path for URL
+    const relativePath = path.relative(path.dirname(contentDir), filePath);
+
+    // Only add if there's actual content
+    if (textContent.length > 0) {
+      siteData.push({
+        title: title
+          .replace("Delivery Pilot - ", "")
+          .replace(" | Delivery Pilot", ""), // Clean up title
+        url: relativePath,
+        content: textContent,
+        id: relativePath, // Use relative path as ID
+      });
     }
   });
 
