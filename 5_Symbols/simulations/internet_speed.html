@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Speed & Reliability Check | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Green theme for speed */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #10b981;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #059669;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .question-block {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 1.5rem;
+        }
+        
+        .question-block:last-child {
+            border-bottom: none;
+        }
+
+        .question-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .question-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        /* Radio group styling */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: background-color 0.2s;
+        }
+
+        .radio-label:hover {
+            background-color: #f0fdf4;
+        }
+
+        .radio-label input {
+            margin-right: 10px;
+        }
+
+        /* Insight Box */
+        .insight-box {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f0fdf4; /* Light green bg */
+            border-left: 4px solid #10b981;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: none; /* Hidden by default */
+        }
+
+        .insight-box.warning {
+            background-color: #fffbeb;
+            border-left-color: #f59e0b;
+        }
+
+        .insight-box.danger {
+            background-color: #fef2f2;
+            border-left-color: #ef4444;
+        }
+
+        .insight-title {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+        
+        .fix-title {
+            font-weight: 700;
+            margin-top: 0.5rem;
+            display: block;
+            color: #047857;
+        }
+
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>Internet Speed & Reliability</h1>
+        <p>Ensure your connection can handle the heat of live simulations.</p>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Pilot Check-In 📡</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to begin diagnostics.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Start Diagnostics</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Survey View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Pilot: <span id="user-email-display" style="font-weight: bold; color: #10b981;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <!-- Pre-check Tool Link -->
+            <div class="card" style="text-align: center; border: 2px dashed #cbd5e1;">
+                <h3 style="margin-top: 0;">Step 1: Measurement</h3>
+                <p>Open a speed test in a new tab, run it, and keep the results open.</p>
+                <a href="https://fast.com" target="_blank" class="btn" style="display: inline-block; width: auto; text-decoration: none; background-color: #0f172a;">Run Fast.com</a>
+                <span style="margin: 0 1rem; color: #64748b;">or</span>
+                <a href="https://www.speedtest.net/" target="_blank" class="btn" style="display: inline-block; width: auto; text-decoration: none; background-color: #0f172a;">Run Speedtest.net</a>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem;">Step 2: Analysis & Report 📝</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Report your results below. We'll tell you what to expect.</p>
+
+                <form id="feedback-form">
+                    
+                    <!-- Q1: Download Speed -->
+                    <div class="question-block">
+                        <div class="question-title">1. Download Speed</div>
+                        <div class="question-desc">Simulations require pulling large container images and viewing HQ video streams.</div>
+                        <div class="radio-group" id="q1-group">
+                            <label class="radio-label"><input type="radio" name="q1" value=">100" data-insight="good"> > 100 Mbps (Flying)</label>
+                            <label class="radio-label"><input type="radio" name="q1" value="50-100" data-insight="ok"> 50 - 100 Mbps (Standard)</label>
+                            <label class="radio-label"><input type="radio" name="q1" value="<50" data-insight="bad"> < 50 Mbps (Lag risk)</label>
+                        </div>
+                        <div id="q1-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q2: Upload Speed -->
+                    <div class="question-block">
+                        <div class="question-title">2. Upload Speed</div>
+                        <div class="question-desc">Critical for screen sharing and pushing code.</div>
+                        <div class="radio-group" id="q2-group">
+                            <label class="radio-label"><input type="radio" name="q2" value=">20" data-insight="good"> > 20 Mbps (Crystal Clear)</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="10-20" data-insight="ok"> 10 - 20 Mbps (Manageable)</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="<10" data-insight="bad"> < 10 Mbps (Blurry Screen Share)</label>
+                        </div>
+                        <div id="q2-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q3: Connection Type -->
+                    <div class="question-block">
+                        <div class="question-title">3. Connection Type</div>
+                        <div class="question-desc">How are you physically connected?</div>
+                        <div class="radio-group" id="q3-group">
+                            <label class="radio-label"><input type="radio" name="q3" value="ethernet" data-insight="good"> Ethernet Cable (Direct)</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="wifi_near" data-insight="ok"> WiFi (Close to router)</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="wifi_far" data-insight="bad"> WiFi (Far room / multiple walls)</label>
+                        </div>
+                        <div id="q3-insight" class="insight-box"></div>
+                    </div>
+
+                     <!-- Q4: Ping / Latency -->
+                     <div class="question-block">
+                        <div class="question-title">4. Ping (Latency)</div>
+                        <div class="question-desc">The time it takes for data to travel. Lower is better for real-time terminal responsiveness.</div>
+                        <div class="radio-group" id="q4-group">
+                            <label class="radio-label"><input type="radio" name="q4" value="<20" data-insight="good"> < 20 ms (Real-time)</label>
+                            <label class="radio-label"><input type="radio" name="q4" value="20-50" data-insight="ok"> 20 - 50 ms (Acceptable)</label>
+                            <label class="radio-label"><input type="radio" name="q4" value=">50" data-insight="bad"> > 50 ms (Noticeable delay)</label>
+                        </div>
+                        <div id="q4-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q5: Stability / Jitter -->
+                    <div class="question-block">
+                        <div class="question-title">5. Stability Feeling</div>
+                        <div class="question-desc">Run the test twice. Did the numbers jump around wildly?</div>
+                        <div class="radio-group" id="q5-group">
+                            <label class="radio-label"><input type="radio" name="q5" value="stable" data-insight="good"> Very similar results (Stable)</label>
+                            <label class="radio-label"><input type="radio" name="q5" value="jittery" data-insight="bad"> Big swings (Jittery / Unstable)</label>
+                        </div>
+                        <div id="q5-insight" class="insight-box"></div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Diagnostics</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../../menu.js"></script>
+    <script>
+        // Logic for Internet Setup Page
+        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
+        // Shared webhook
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const feedbackForm = document.getElementById('feedback-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+
+        // Dynamic Feedback Data
+        const insights = {
+            q1: {
+                good: { title: "✅ High Bandwidth", text: "You can handle multiple video streams and large docker pulls simultaneously.", type: "good" },
+                ok: { title: "⚠️ Standard Bandwidth", text: "Good enough for most tasks. Close other tabs/streaming services during the simulation.", type: "warning" },
+                bad: { title: "🛑 Low Bandwidth", text: "You will experience lag. Video may freeze.", fix: "Fix: Ask family to pause streaming during your session. Use wired connection.", type: "danger" }
+            },
+            q2: {
+                good: { title: "✅ Clear Signals", text: "Your screen share will be crisp.", type: "good" },
+                ok: { title: "⚠️ Average Upload", text: "Avoid sharing full screen with high motion video.", type: "warning" },
+                bad: { title: "🛑 Upload Bottleneck", text: "Your voice may sound robotic and screen share will be blurry.", fix: "Fix: Decrease video quality in settings. Turn off camera if sharing screen.", type: "danger" }
+            },
+            q3: {
+                good: { title: "✅ Rock Solid", text: "Ethernet is the gold standard for simulations.", type: "good" },
+                ok: { title: "⚠️ Wireless Risk", text: "WiFi is susceptible to interference.", type: "warning" },
+                bad: { title: "🛑 Packet Loss Risk", text: "Distance kills signal. Expect dropouts.", fix: "Fix: Move closer to router or buy a long Ethernet cable ($10 investment).", type: "danger" }
+            },
+            q4: {
+                good: { title: "✅ Snappy", text: "Terminal commands will feel instant.", type: "good" },
+                ok: { title: "⚠️ Laggy", text: "Typing might feel slightly delayed.", type: "warning" },
+                bad: { title: "🛑 High Latency", text: "Typing will be frustrating. SSH sessions may disconnect.", fix: "Fix: Close background downloads. Check if others are gaming.", type: "danger" }
+            },
+            q5: {
+                good: { title: "✅ Consistent", text: "Reliability > Peak Speed.", type: "good" },
+                bad: { title: "🛑 Jitter Detected", text: "Unstable connections cause 'disconnecting...' popups.", fix: "Fix: Reset router before session. Use 4G/5G Hotspot as backup.", type: "danger" }
+            }
+        };
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+            setupInteractions();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Interactive Feedback Logic
+        function setupInteractions() {
+            // Attach change listeners to all radio inputs
+            document.querySelectorAll('input[type=radio]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    const groupName = e.target.name; // e.g., q1
+                    const insightKey = e.target.getAttribute('data-insight'); // good, ok, bad
+                    const container = document.getElementById(`${groupName}-insight`);
+                    
+                    if (container && insights[groupName] && insights[groupName][insightKey]) {
+                        const data = insights[groupName][insightKey];
+                        let html = `<span class="insight-title">${data.title}</span>${data.text}`;
+                        if (data.fix) {
+                            html += `<span class="fix-title">🔧 ${data.fix}</span>`;
+                        }
+                        
+                        container.innerHTML = html;
+                        container.className = `insight-box ${data.type}`; // good, warning, danger
+                        container.style.display = 'block';
+                    }
+                });
+            });
+        }
+
+        // Submit Feedback
+        feedbackForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Data
+            const data = {
+                download: document.querySelector('input[name="q1"]:checked')?.value,
+                upload: document.querySelector('input[name="q2"]:checked')?.value,
+                connection: document.querySelector('input[name="q3"]:checked')?.value,
+                ping: document.querySelector('input[name="q4"]:checked')?.value,
+                stability: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Transmitting...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'internet_speed_check',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    results: data,
+                    hiddenContext: {
+                        summary: "Speed Check completed. If 'bad' results found, user advised to use Ethernet.",
+                        alertInstructor: (data.connection === 'wifi_far' || data.download === '<50')
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'Diagnostics received. Network Profile updated. 🚀';
+                statusMsg.style.color = '#10b981';
+                submitBtn.textContent = '✅ Verified';
+                // Optional: Don't reset form so they can see their results
+                // feedbackForm.reset();
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Saved locally. Recommendation: Use Ethernet if possible!';
+                statusMsg.style.color = '#f59e0b';
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    if (submitBtn.textContent !== '✅ Verified') {
+                        submitBtn.textContent = 'Submit Diagnostics';
+                    }
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
