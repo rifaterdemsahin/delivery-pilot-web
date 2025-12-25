@@ -371,7 +371,31 @@
         const STORAGE_KEY_EMAIL = 'dp_simulation_email';
         const STORAGE_KEY_PROGRESS = 'dp_simulation_progress';
         // TODO: Update this URL with the actual n8n webhook endpoint
-        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/simulation-check'; 
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Checklist Configuration with Actionable Instructions
+        const CHECKLIST_ITEMS = {
+            'canva': {
+                title: 'Canva Setup',
+                action: 'Set up your Canva account (join Linki Teams or ensure correct naming format) to access design tools.'
+            },
+            'github': {
+                title: 'GitHub Configuration',
+                action: 'Create or update your GitHub account and verify you can clone/push repositories.'
+            },
+            'llm': {
+                title: 'LLM & AI Tools',
+                action: 'Install/Access required AI tools: LM Studio, Claude, Gemini, and X (Grok).'
+            },
+            'comm': {
+                title: 'Communication & Display',
+                action: 'Setup Ms Teams, ZoomIt, and ideally a multi-screen environment for the workshop.'
+            },
+            'sched': {
+                title: 'Schedule & Timer Alignment',
+                action: 'Review the workshop schedule (55/5 split) and ensure you are ready to follow the rhythm.'
+            }
+        };
         
         // Element References
         const loginView = document.getElementById('login-view');
@@ -481,7 +505,12 @@
                     timestamp: new Date().toISOString(),
                     checklist: progress,
                     // Count how many are done
-                    completedCount: Object.values(progress).filter(v => v === true).length
+                    completedCount: Object.values(progress).filter(v => v === true).length,
+                    // Identify what is pending
+                    pendingActions: Object.keys(CHECKLIST_ITEMS).filter(id => !progress[id]).map(id => ({
+                        item: CHECKLIST_ITEMS[id].title,
+                        action: CHECKLIST_ITEMS[id].action
+                    }))
                 };
 
                 // Using fetch locally might fail due to CORS if n8n not configured, 

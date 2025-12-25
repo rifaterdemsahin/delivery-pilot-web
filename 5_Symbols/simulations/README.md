@@ -1,0 +1,13 @@
+# Simulations Directory
+
+This directory contains the workshop simulations and environment check pages.
+
+## n8n Integration
+
+The simulations in this folder interact with our automation backend via n8n webhooks.
+
+**Endpoint:**
+`https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225`
+
+**Usage:**
+- **Environment Checks**: The `environment_checks.html` page sends the participant's email and checklist status to this webhook upon completion.
