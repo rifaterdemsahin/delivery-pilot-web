@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Simulation Environment | Delivery Pilot</title>
+    <title>Simulations Hub | Delivery Pilot</title>
     <style>
-        /* Basic reset and typography inheritance */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -14,440 +13,151 @@
             color: #1e293b;
         }
 
-        /* Container for the simulation content */
-        .simulation-container {
-            max-width: 800px;
+        .hub-container {
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             margin-bottom: 3rem;
-            padding: 3rem 1rem;
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
             color: white;
             border-radius: 0 0 20px 20px;
         }
 
         .hero h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+            font-size: 3rem;
             font-weight: 800;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Card Styles */
-        .card {
+        .simulation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .sim-card {
             background: white;
             border-radius: 12px;
             padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin-bottom: 2rem;
-        }
-
-        /* Login Form */
-        .login-form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 1rem;
-            box-sizing: border-box; /* Ensure padding doesn't affect width */
+            display: flex;
+            flex-direction: column;
         }
 
-        .btn {
+        .sim-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .sim-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sim-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .sim-desc {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .btn-link {
+            display: inline-block;
             background-color: #4f46e5;
             color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
+            text-align: center;
+            padding: 0.75rem 1rem;
             border-radius: 6px;
-            font-size: 1rem;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
             transition: background-color 0.2s;
-            width: 100%;
         }
 
-        .btn:hover {
+        .btn-link:hover {
             background-color: #4338ca;
         }
-
-        /* Dashboard Styles */
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .user-info {
-            font-weight: 500;
-        }
         
-        .tracker-badge {
-            background-color: #e0e7ff;
-            color: #4338ca;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Checklist Styles */
-        .checklist-item {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        .checklist-header {
-            padding: 1rem;
-            background-color: #f8fafc;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            justify-content: space-between;
-        }
-        
-        .checklist-header:hover {
+        /* New Coming Soon Card style */
+        .sim-card.coming-soon {
+            opacity: 0.7;
             background-color: #f1f5f9;
         }
-
-        .checklist-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
+        .sim-card.coming-soon .btn-link {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+            pointer-events: none;
         }
 
-        .checklist-content {
-            padding: 1rem;
-            border-top: 1px solid #e2e8f0;
-            display: none;
-        }
-
-        .checklist-content.active {
-            display: block;
-        }
-
-        .checkbox-custom {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #cbd5e1;
-            border-radius: 4px;
-            margin-right: 10px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-
-        .checklist-item.checked .checkbox-custom {
-            background-color: #10b981;
-            border-color: #10b981;
-            color: white;
-        }
-        
-        .checklist-item.checked .checklist-header {
-            background-color: #ecfdf5;
-        }
-
-        /* Utility */
-        .hidden {
-            display: none;
-        }
-        
-        .hint-box {
-            background-color: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 1rem;
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-            color: #92400e;
-        }
-
-        .setup-details {
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            color: #475569;
-        }
     </style>
     <!-- Importing Global Styles -->
     <link rel="stylesheet" href="../../styles.css">
+    <!-- Load menu components and i18n -->
+    <script src="../../menu.js"></script>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
-        <h1>Workshop Simulation Environment</h1>
-        <p>Set up your environment to start the delivery pilot sequence.</p>
+        <h1>Workshop Simulations</h1>
+        <p>Interactive environments and checklists for the Delivery Pilot workshop series.</p>
     </div>
 
-    <div class="simulation-container">
-        
-        <!-- Login View -->
-        <div id="login-view" class="card login-form">
-            <h2>Welcome, Pilot 🧑‍✈️</h2>
-            <p style="margin-bottom: 2rem; color: #64748b;">Please enter your email to begin tracking your simulation progress.</p>
-            <form id="email-form">
-                <div class="form-group">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+    <div class="hub-container">
+        <div class="simulation-grid">
+            
+            <!-- Environment Check -->
+            <div class="sim-card">
+                <div class="sim-icon">🛠️</div>
+                <div class="sim-title">Environment Setup</div>
+                <div class="sim-desc">
+                    Verify your systems, accounts, and tools are ready for the workshop. Includes Canva, GitHub, and AI tool checks.
                 </div>
-                <button type="submit" class="btn">Start Simulation Check</button>
-            </form>
-        </div>
-
-        <!-- Dashboard View -->
-        <div id="dashboard-view" class="hidden">
-            <div class="card dashboard-header">
-                <div class="user-info">
-                    Plotting for: <span id="user-email-display" style="font-weight: bold; color: #4f46e5;"></span>
-                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
-                </div>
-                <div class="tracker-badge">
-                    📸 Images: <span id="image-count">0</span>/300 Max
-                </div>
+                <a href="environment_checks.html" class="btn-link">Start Check</a>
             </div>
 
-            <h2 style="margin-bottom: 1.5rem;">Environment Setup Checklist 🛠️</h2>
-            <p style="margin-bottom: 2rem; color: #64748b;">Expand each item to see setup instructions and verify your environment.</p>
-
-            <div id="checklist-container">
-                <!-- Checklist Item 1: Canva -->
-                <div class="checklist-item" id="check-canva">
-                    <div class="checklist-header" onclick="toggleDetails('canva')">
-                        <div class="checklist-title">
-                            <div class="checkbox-custom" id="box-canva"></div>
-                            Canva Setup
-                        </div>
-                        <span style="font-size: 0.8rem; color: #94a3b8;">▼</span>
-                    </div>
-                    <div class="checklist-content" id="details-canva">
-                        <p>Ensure you have access to the design tools.</p>
-                        <div class="hint-box">
-                            <strong>Instructions:</strong>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                                <li>Join <strong>Linki Teams</strong> if applicable.</li>
-                                <li>If using a Personal Account, ensure name format: <strong>Rifat Erdem Sahin</strong> (First Last).</li>
-                            </ul>
-                        </div>
-                        <button class="btn" style="margin-top: 1rem; width: auto;" onclick="markComplete('canva')">Mark as Ready</button>
-                    </div>
+            <!-- Future Simulations Section (Placeholders) -->
+            <div class="sim-card coming-soon">
+                <div class="sim-icon">🤖</div>
+                <div class="sim-title">Agent Prompting</div>
+                <div class="sim-desc">
+                    Practice Vibe Programming and initial prompt engineering strategies.
                 </div>
-
-                <!-- Checklist Item 2: GitHub -->
-                <div class="checklist-item" id="check-github">
-                    <div class="checklist-header" onclick="toggleDetails('github')">
-                        <div class="checklist-title">
-                            <div class="checkbox-custom" id="box-github"></div>
-                            GitHub Configuration
-                        </div>
-                        <span style="font-size: 0.8rem; color: #94a3b8;">▼</span>
-                    </div>
-                    <div class="checklist-content" id="details-github">
-                        <p>Code repository and version control.</p>
-                        <div class="hint-box">
-                            <strong>Requirement:</strong>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                                <li>Have an active GitHub Account.</li>
-                                <li>Ensure you can clone/push repositories.</li>
-                            </ul>
-                        </div>
-                        <button class="btn" style="margin-top: 1rem; width: auto;" onclick="markComplete('github')">Mark as Ready</button>
-                    </div>
-                </div>
-
-                <!-- Checklist Item 3: LLM & AI Tools -->
-                <div class="checklist-item" id="check-llm">
-                    <div class="checklist-header" onclick="toggleDetails('llm')">
-                        <div class="checklist-title">
-                            <div class="checkbox-custom" id="box-llm"></div>
-                            LLM & AI Browse Tools
-                        </div>
-                        <span style="font-size: 0.8rem; color: #94a3b8;">▼</span>
-                    </div>
-                    <div class="checklist-content" id="details-llm">
-                        <p>Prepare your AI assistants.</p>
-                        <div class="hint-box">
-                            <strong>Tools to Install/Access:</strong>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                                <li><strong>LM Studio</strong> (Download)</li>
-                                <li><strong>Claude</strong> (Web/App)</li>
-                                <li><strong>Gemini</strong></li>
-                                <li><strong>X</strong> (Grok/Research)</li>
-                            </ul>
-                        </div>
-                        <button class="btn" style="margin-top: 1rem; width: auto;" onclick="markComplete('llm')">Mark as Ready</button>
-                    </div>
-                </div>
-
-                <!-- Checklist Item 4: Communication & Display -->
-                <div class="checklist-item" id="check-comm">
-                    <div class="checklist-header" onclick="toggleDetails('comm')">
-                        <div class="checklist-title">
-                            <div class="checkbox-custom" id="box-comm"></div>
-                            Communication & Display
-                        </div>
-                        <span style="font-size: 0.8rem; color: #94a3b8;">▼</span>
-                    </div>
-                    <div class="checklist-content" id="details-comm">
-                        <p>Setup your workspace for the workshop.</p>
-                        <div class="hint-box">
-                            <strong>Checklist:</strong>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                                <li><strong>Microsoft Teams</strong> (Meeting ID: 361 405 569 982 02)</li>
-                                <li><strong>ZoomIt</strong> (Screen magnification tool)</li>
-                                <li><strong>Multi-Screen</strong> Setup (Recommended for following along)</li>
-                            </ul>
-                        </div>
-                        <button class="btn" style="margin-top: 1rem; width: auto;" onclick="markComplete('comm')">Mark as Ready</button>
-                    </div>
-                </div>
-
-                 <!-- Checklist Item 5: Schedule & Timer -->
-                 <div class="checklist-item" id="check-sched">
-                    <div class="checklist-header" onclick="toggleDetails('sched')">
-                        <div class="checklist-title">
-                            <div class="checkbox-custom" id="box-sched"></div>
-                            Schedule & Timer Alignment
-                        </div>
-                        <span style="font-size: 0.8rem; color: #94a3b8;">▼</span>
-                    </div>
-                    <div class="checklist-content" id="details-sched">
-                        <p>Sync with the workshop cadence.</p>
-                        <div class="hint-box">
-                            <strong>Rhythm:</strong>
-                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                                <li><strong>55/5 Split</strong>: 55 min Session / 5 min Break.</li>
-                                <li><strong>Lunch</strong>: 12:00 (1 Hour).</li>
-                                <li><strong>End Time</strong>: 17:00.</li>
-                            </ul>
-                        </div>
-                        <button class="btn" style="margin-top: 1rem; width: auto;" onclick="markComplete('sched')">Mark as Ready</button>
-                    </div>
-                </div>
-
+                <span class="btn-link">Coming Soon</span>
             </div>
-        </div>
 
+            <div class="sim-card coming-soon">
+                <div class="sim-icon">⚖️</div>
+                <div class="sim-title">Ethics & Compliance</div>
+                <div class="sim-desc">
+                   Scenario-based training for GDPR and ethical AI decision making.
+                </div>
+                <span class="btn-link">Coming Soon</span>
+            </div>
+
+        </div>
     </div>
 
     <div id="footer-placeholder"></div>
-    <script src="../../menu.js"></script>
-    <script>
-        // Logic for Simulation Environment Check
-        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
-        const STORAGE_KEY_PROGRESS = 'dp_simulation_progress';
-        
-        // Element References
-        const loginView = document.getElementById('login-view');
-        const dashboardView = document.getElementById('dashboard-view');
-        const emailForm = document.getElementById('email-form');
-        const emailBox = document.getElementById('email');
-        const userEmailDisplay = document.getElementById('user-email-display');
-        const changeEmailBtn = document.getElementById('change-email');
-
-        // Init
-        document.addEventListener('DOMContentLoaded', () => {
-            checkLogin();
-            restoreProgress();
-        });
-
-        // Toggle Login vs Dashboard
-        function checkLogin() {
-            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
-            if (storedEmail) {
-                userEmailDisplay.textContent = storedEmail;
-                loginView.classList.add('hidden');
-                dashboardView.classList.remove('hidden');
-            } else {
-                loginView.classList.remove('hidden');
-                dashboardView.classList.add('hidden');
-            }
-        }
-
-        // Handle Email Submit
-        emailForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = emailBox.value;
-            if (email) {
-                localStorage.setItem(STORAGE_KEY_EMAIL, email);
-                // Also init empty progress if not exists
-                if (!localStorage.getItem(STORAGE_KEY_PROGRESS)) {
-                    localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify({}));
-                }
-                checkLogin();
-            }
-        });
-
-        // Handle Change Email
-        changeEmailBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            localStorage.removeItem(STORAGE_KEY_EMAIL);
-            checkLogin();
-        });
-
-        // UI Helpers
-        function toggleDetails(id) {
-            const content = document.getElementById(`details-${id}`);
-            content.classList.toggle('active');
-        }
-
-        function markComplete(id) {
-            // Visual Update
-            const item = document.getElementById(`check-${id}`);
-            item.classList.add('checked');
-            const box = document.getElementById(`box-${id}`);
-            box.innerText = '✓';
-            
-            // Close details
-            toggleDetails(id);
-
-            // Save Persistence
-            const progress = JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS) || '{}');
-            progress[id] = true;
-            localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(progress));
-        }
-
-        function restoreProgress() {
-            const progress = JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS) || '{}');
-            for (const [id, isComplete] of Object.entries(progress)) {
-                if (isComplete) {
-                    const item = document.getElementById(`check-${id}`);
-                    if (item) {
-                        item.classList.add('checked');
-                        const box = document.getElementById(`box-${id}`);
-                        box.innerText = '✓';
-                    }
-                }
-            }
-        }
-
-    </script>
 </body>
 </html>
