@@ -7,8 +7,8 @@ The Delivery Pilot website uses a file-based translation system supported by `me
 ## How It Works
 
 ### File Naming Convention
-- **English (Default)**: `filename.html` (e.g., `workshops.html`)
-- **Turkish**: `filename-tr.html` (e.g., `workshops-tr.html`)
+- **English (Base)**: `filename.html` (e.g., `workshops.html`). This is the **base source of truth** for all content.
+- **Turkish**: `filename-tr.html` (e.g., `workshops-tr.html`).
 
 ### Language Toggling
 The `script.js` file handles the language logic, utilizing the URL to determine the active language.
