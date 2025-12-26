@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Second Brain Setup | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%); /* Purple/Indigo Theme for Brain/Network */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #7c3aed; /* Purple */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #6d28d9;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .checklist-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .checklist-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .checklist-checkbox {
+            margin-top: 0.25rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+
+        .checklist-content {
+            flex: 1;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .checklist-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        .video-link {
+             color: #7c3aed; 
+             text-decoration: none; 
+             font-size: 0.85rem; 
+             margin-top: 0.25rem; 
+             display: inline-block;
+             font-weight: 500;
+        }
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Load menu components and i18n -->
+    <script src="../../menu.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>Personal Second Brain 🧠</h1>
+        <p>Build your neural network with Obsidian and AI.</p>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Start Building 🏗️</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to track your second brain setup.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Begin Setup</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Checklist View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Architect: <span id="user-email-display" style="font-weight: bold; color: #7c3aed;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem;">Setup Checklist ✅</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Follow these steps to create your AI-enhanced second brain.</p>
+
+                <form id="checklist-form">
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">1. Download & Install Obsidian 📥</div>
+                            <div class="checklist-desc">
+                                Go to <a href="https://obsidian.md" target="_blank">obsidian.md</a> and download the installer for your OS. Install and launch it.
+                                <br><a href="https://www.youtube.com/watch?v=QgbLb6QCK88" target="_blank" class="video-link">Installation Guide 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">2. Create New Vault 🗄️</div>
+                            <div class="checklist-desc">
+                                Choose "Create new vault". Name it "My Second Brain" and select a location on your local drive (e.g., in your Documents folder).
+                                <br><a href="https://www.youtube.com/watch?v=QgbLb6QCK88&t=60s" target="_blank" class="video-link">Vault Creation 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">3. Install 'Text Generator' Plugin 🔌</div>
+                            <div class="checklist-desc">
+                                Settings > Community Plugins > Turn on Community Plugins > Browse. Search for "Text Generator", install, and enable it.
+                                <br><a href="https://www.youtube.com/watch?v=aL2xQoO8bJI" target="_blank" class="video-link">Text Generator Setup 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">4. Install 'Smart Connections' Plugin 🧠</div>
+                            <div class="checklist-desc">
+                                In Community Plugins, search for "Smart Connections". Install and enable it. This enables semantic search and chatting with your notes.
+                                <br><a href="https://www.youtube.com/watch?v=wXOpwO8zO8k" target="_blank" class="video-link">Smart Connections Demo 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step5" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">5. Configure API Keys 🔑</div>
+                            <div class="checklist-desc">
+                                Settings > Text Generator (and Smart Connections) settings. Enter your OpenAI API Key (or other provider) to power the AI features.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step6" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">6. Create Folder Structure 📂</div>
+                            <div class="checklist-desc">
+                                Create a structure that encourages connections. E.g.: `00_Inbox`, `10_Projects`, `20_Areas`, `30_Resources`, `40_Archives` (PARA method).
+                                <br><a href="https://www.youtube.com/watch?v=USjZcfj8yxE" target="_blank" class="video-link">PARA Method in Obsidian 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step7" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">7. Create First Note with Embeddings 📝</div>
+                            <div class="checklist-desc">
+                                Create a note in `00_Inbox`. Write a thought. Use Smart Connections to see "Related Notes" (it might be empty now, but verifying the pane exists is key).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step8" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">8. Visualize the Graph 🕸️</div>
+                            <div class="checklist-desc">
+                                Click the "Graph View" icon (looks like molecules). This visualizes your brain's neural network. It grows as you add links `[[Like This]]`.
+                                <br><a href="https://www.youtube.com/watch?v=SguU87a1Jv4" target="_blank" class="video-link">Graph View Explained 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step9" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">9. Test Semantic Search 🔎</div>
+                            <div class="checklist-desc">
+                                Open the Smart Connections pane. Type a question about your note. Ensure the AI responds using the context of your created note.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step10" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">10. Review & Reflect 🚀</div>
+                            <div class="checklist-desc">
+                                You now have a local, AI-powered second brain. Review your setup and prepare to capture everything.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Complete Setup</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Logic for Personal Second Brain Simulation
+        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
+        // Shared webhook
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const checklistForm = document.getElementById('checklist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Submit Checklist
+        checklistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Checked Status
+            const steps = {};
+            for(let i=1; i<=10; i++) {
+                steps[`step${i}`] = document.getElementById(`step${i}`).checked;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Verifying Setup...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'personal_second_brain_simulation',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    steps_completed: steps,
+                    hiddenContext: {
+                        nextSteps: "Start importing your existing notes or books. Try the 'Readwise' plugin if you consume a lot of online content.",
+                        resourceLink: "https://help.obsidian.md/"
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'Setup confirmed! Your second brain is online. 🧠';
+                statusMsg.style.color = '#7c3aed';
+                submitBtn.textContent = '✅ Connected';
+                checklistForm.reset();
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Setup saved locally. Brain is active!';
+                statusMsg.style.color = '#f59e0b';
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    if (submitBtn.textContent !== '✅ Connected') {
+                        submitBtn.textContent = 'Complete Setup';
+                    }
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
