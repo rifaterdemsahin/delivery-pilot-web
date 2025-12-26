@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Signup Process | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #24292f 0%, #0d1117 100%); /* GitHub Dark Theme Colors */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #2ea44f; /* GitHub Green */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #2c974b;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .checklist-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .checklist-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .checklist-checkbox {
+            margin-top: 0.25rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+
+        .checklist-content {
+            flex: 1;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .checklist-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Load menu components and i18n -->
+    <script src="../../menu.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>GitHub Signup & Repo Pull</h1>
+        <p>Master the essential setup: Account creation to your first clone.</p>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Start Simulation 🐙</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to begin tracking your progress.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Begin Steps</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Checklist View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Pilot: <span id="user-email-display" style="font-weight: bold; color: #2ea44f;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem;">Process Checklist ✅</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Complete each step in order. Check the box when done.</p>
+
+                <form id="checklist-form">
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">1. Navigate to GitHub</div>
+                            <div class="checklist-desc">Open a new tab and go to <a href="https://github.com" target="_blank">github.com</a>.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">2. Click 'Sign up'</div>
+                            <div class="checklist-desc">Find the 'Sign up' button in the top right corner.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">3. Enter Email</div>
+                            <div class="checklist-desc">Enter your valid email address when prompted by the terminal-like UI.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">4. Create Password</div>
+                            <div class="checklist-desc">Create a strong password (keep it safe!).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step5" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">5. Choose Username</div>
+                            <div class="checklist-desc">Select a unique username. This will be your developer identity.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step6" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">6. Verify Account</div>
+                            <div class="checklist-desc">Solve the visual puzzle to prove you are human.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step7" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">7. Email Verification Code</div>
+                            <div class="checklist-desc">Check your email inbox for the launch code and enter it on GitHub.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step8" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">8. Navigate to Target Repo</div>
+                            <div class="checklist-desc">Go to the target repository URL provided by your instructor (or use <a href="#">this demo repo</a>).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step9" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">9. Copy Clone URL</div>
+                            <div class="checklist-desc">Click the green 'Code' button and copy the HTTPS URL.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step10" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">10. Clone in Terminal</div>
+                            <div class="checklist-desc">Open your terminal and run: `git clone [pasted-url]`</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Completion</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Logic for GitHub Signup Simulation
+        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
+        // Shared webhook - or specific one if provided
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const checklistForm = document.getElementById('checklist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Submit Checklist
+        checklistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Checked Status (Implicitly all true if submitted because of 'required' attribute, 
+            // but getting values anyway for payload completeness)
+            const steps = {};
+            for(let i=1; i<=10; i++) {
+                steps[`step${i}`] = document.getElementById(`step${i}`).checked;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Verifying...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'github_signup_simulation',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    steps_completed: steps,
+                    hiddenContext: {
+                        nextSteps: "Now that you have the repo, try making a small change (like adding your name to a file) and pushing it back.",
+                        resourceLink: "https://docs.github.com/en/get-started/quickstart/hello-world"
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'Great work! Process completion logged. 🚀';
+                statusMsg.style.color = '#2ea44f';
+                submitBtn.textContent = '✅ Completed';
+                checklistForm.reset();
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Progress saved locally. You are ready to code!';
+                statusMsg.style.color = '#f59e0b';
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    if (submitBtn.textContent !== '✅ Completed') {
+                        submitBtn.textContent = 'Submit Completion';
+                    }
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
