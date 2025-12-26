@@ -1957,20 +1957,24 @@ const translations = {
 // Current language
 let currentLang = 'en';
 
-// Pages with separate language files (not using i18n system)
-// Maps base filename to language-specific versions
-const separateLanguagePages = {
-    'resources-knowledge-transfer': {
-        en: 'resources-knowledge-transfer.html',
-        tr: 'resources-knowledge-transfer-tr.html'
-    }
-};
-
-// Helper to get language page mapping for current page
-function getLanguageMapping(filename) {
-    // Remove .html extension and language suffix (-tr) to get base name
+// Helper to get target URL for language switch based on convention
+function getTargetUrl(lang) {
+    const pathname = window.location.pathname;
+    const filename = pathname.split('/').pop() || 'index.html'; // Handle root as index.html
+    
+    // Remove .html and -tr suffix
     const baseName = filename.replace(/(-tr)?\.html$/, '');
-    return separateLanguagePages[baseName];
+    
+    // Construct new filename
+    const newFilename = lang === 'tr' ? `${baseName}-tr.html` : `${baseName}.html`;
+    
+    // Preserve path
+    const path = pathname.substring(0, pathname.lastIndexOf('/') + 1);
+    
+    // Handle special case for root path results (unlikely in this structure but good safety)
+    if (path === '/' && pathname !== '/') return '/' + newFilename;
+    
+    return path + newFilename;
 }
 
 // Function to get nested translation value
@@ -2037,10 +2041,17 @@ function updateCopyrightYear() {
 }
 
 // Initialize when DOM is ready
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize language from localStorage or default to English
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-    updateContent(savedLang);
+    // Initialize language from URL
+    const pathname = window.location.pathname;
+    let initialLang = 'en';
+    if (pathname.endsWith('-tr.html')) {
+        initialLang = 'tr';
+    }
+    
+    // Update content and active state based on URL
+    updateContent(initialLang);
     
     // Update copyright year for pages that don't use the translation system
     // This runs after updateContent() to avoid conflicts
@@ -2049,25 +2060,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add click event listeners to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
+            const targetLang = btn.getAttribute('data-lang');
             
-            // Handle pages with separate language files
-            const pathname = window.location.pathname;
-            const currentPage = pathname.split('/').pop();
+            // If clicking the language we are already on, do nothing
+            if (btn.classList.contains('active')) return;
+
+            // Generate target URL
+            const targetUrl = getTargetUrl(targetLang);
             
-            // Check if this is a page with separate language versions
-            const languageMapping = getLanguageMapping(currentPage);
-            if (languageMapping) {
-                const targetPage = languageMapping[lang];
-                if (targetPage && targetPage !== currentPage) {
-                    // Preserve the directory path
-                    const basePath = pathname.substring(0, pathname.lastIndexOf('/') + 1);
-                    window.location.href = basePath + targetPage;
-                    return;
-                }
-            }
-            
-            updateContent(lang);
+            // Navigate to the target page
+            window.location.href = targetUrl;
         });
     });
     

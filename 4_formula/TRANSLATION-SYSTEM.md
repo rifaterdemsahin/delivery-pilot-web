@@ -11,11 +11,13 @@ The Delivery Pilot website uses a file-based translation system supported by `me
 - **Turkish**: `filename-tr.html` (e.g., `workshops-tr.html`)
 
 ### Language Toggling
-The `menu.js` script handles the language toggle button in the navigation bar. 
-- When a user clicks "TR", the script checks if the current page is an English page.
-- If it is, it attempts to redirect the user to the corresponding `-tr.html` file.
-- If the user clicks "EN" on a Turkish page, it redirects to the base `.html` file.
-- `script.js` contains a dictionary of translations for dynamic elements like the navigation menu itself, ensuring the UI shell is translated even if the content is loaded dynamically.
+The `script.js` file handles the language logic, utilizing the URL to determine the active language.
+- **Initialization**: On page load, the script checks if the filename ends in `-tr.html`. If so, it sets the site language to Turkish (`tr`). Otherwise, it defaults to English (`en`).
+- **Switching**: 
+  - Clicking "TR" redirects to the `*-tr.html` version of the current page.
+  - Clicking "EN" redirects to the `.html` version.
+- **Persistence**: The language preference is stored in `localStorage` but the URL takes precedence for initialization to ensure the correct content is shown.
+- **Content Update**: The `updateContent()` function replaces text in elements with `data-i18n` attributes using the dictionary in `script.js`. This means the HTML files can contain English fallback text, which is automatically overwritten with Turkish text on load.
 
 ### Adding New Translations
 To add a Turkish translation for a new page:
