@@ -165,16 +165,27 @@ function generateNavigation() {
         pathPrefix = '../';
     }
 
+    // Check if current page is Turkish
+    const isTurkish = window.location.pathname.endsWith('-tr.html');
+
     const menuItemsHTML = navigationConfig.menuItems.map(item => {
         const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
         const itemClass = item.class ? ` class="${item.class}"` : '';
         
-        // Helper to fix paths
+        // Helper to fix paths and handle language
         const fixPath = (href) => {
             if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
                 return href;
             }
-            return pathPrefix + href;
+            
+            let finalHref = href;
+            if (isTurkish && finalHref.endsWith('.html') && !finalHref.endsWith('-tr.html')) {
+                finalHref = finalHref.replace('.html', '-tr.html');
+            } else if (isTurkish && finalHref.includes('.html#')) {
+                finalHref = finalHref.replace('.html', '-tr.html'); // replace first occurrence
+            }
+            
+            return pathPrefix + finalHref;
         };
 
         // Check if item has submenu (dropdown)
@@ -197,9 +208,13 @@ function generateNavigation() {
     }).join('\n                    ');
 
     // Fix logo link
-    const logoLink = window.location.pathname.includes('/simulations/') ? 
+    let logoLink = window.location.pathname.includes('/simulations/') ? 
         '../' + navigationConfig.logoLink : 
         navigationConfig.logoLink;
+    
+    if (isTurkish && logoLink.endsWith('index.html')) {
+        logoLink = logoLink.replace('index.html', 'index-tr.html');
+    }
 
     return `
     <!-- Navigation -->
@@ -344,12 +359,23 @@ function generateFooter() {
     const sectionsHTML = footerConfig.sections.map(section => {
         const titleDataI18n = section.titleKey ? ` data-i18n="${section.titleKey}"` : '';
         const contentHTML = section.content.map(item => {
-            // Helper to fix paths
+            // Check if current page is Turkish
+            const isTurkish = window.location.pathname.endsWith('-tr.html');
+
+            // Helper to fix paths and handle language
             const fixPath = (href) => {
                 if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
                     return href;
                 }
-                return pathPrefix + href;
+                
+                let finalHref = href;
+                if (isTurkish && finalHref.endsWith('.html') && !finalHref.endsWith('-tr.html')) {
+                    finalHref = finalHref.replace('.html', '-tr.html');
+                } else if (isTurkish && finalHref.includes('.html#')) {
+                    finalHref = finalHref.replace('.html', '-tr.html');
+                }
+                
+                return pathPrefix + finalHref;
             };
 
             if (item.type === 'text') {
