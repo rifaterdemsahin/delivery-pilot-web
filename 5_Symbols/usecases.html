@@ -67,41 +67,41 @@
         }
 
         .use-case-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .use-case-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 243, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.05);
         }
 
         .use-case-card h2 {
-            color: var(--accent-primary);
+            color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.8rem;
         }
 
         .use-case-card h3 {
-            color: #fff;
+            color: var(--text-dark);
             margin: 1.5rem 0 1rem;
             font-size: 1.4rem;
         }
 
         .use-case-card h4 {
-            color: var(--accent-secondary);
+            color: var(--secondary-color);
             margin: 1rem 0 0.5rem;
             font-size: 1.2rem;
         }
 
         .use-case-card p,
         .use-case-card li {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-light);
             line-height: 1.8;
             margin-bottom: 0.5rem;
         }
@@ -112,8 +112,8 @@
         }
 
         .use-case-card pre {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--glass-border);
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1rem;
             overflow-x: auto;
@@ -121,13 +121,13 @@
         }
 
         .use-case-card code {
-            color: var(--accent-primary);
+            color: var(--primary-color);
             font-family: 'Courier New', monospace;
         }
 
         .highlight-box {
-            background: rgba(189, 0, 255, 0.1);
-            border-left: 4px solid var(--accent-secondary);
+            background: rgba(37, 99, 235, 0.1);
+            border-left: 4px solid var(--secondary-color);
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 4px;
@@ -135,7 +135,7 @@
 
         .section-divider {
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
             margin: 3rem 0;
         }
 
@@ -152,20 +152,20 @@
         }
 
         .phase-item {
-            background: rgba(0, 243, 255, 0.05);
-            border: 1px solid var(--glass-border);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
         }
 
         .phase-item:hover {
-            background: rgba(0, 243, 255, 0.1);
-            border-color: var(--accent-primary);
+            background: var(--bg-light);
+            border-color: var(--primary-color);
         }
 
         .phase-item h4 {
-            color: var(--accent-primary);
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
 
@@ -177,16 +177,16 @@
         }
 
         .solution-card {
-            background: var(--card-bg);
-            border: 1px solid var(--glass-border);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
         }
 
         .solution-card:hover {
-            border-color: var(--accent-secondary);
-            box-shadow: 0 5px 20px rgba(189, 0, 255, 0.2);
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .solution-card h3 {
@@ -196,7 +196,7 @@
 
         .solution-card h4 {
             font-size: 1.1rem;
-            color: var(--accent-primary);
+            color: var(--primary-color);
             margin: 1rem 0 0.5rem;
         }
 
@@ -204,8 +204,8 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: var(--accent-primary);
-            color: var(--bg-color);
+            background: var(--primary-color);
+            color: white;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -223,7 +223,7 @@
         }
 
         .back-to-top:hover {
-            background: var(--accent-secondary);
+            background: var(--secondary-color);
         }
     </style>
 </head>
@@ -577,22 +577,22 @@ What do I need to know before making changes?</code></pre>
             <h2><span class="emoji-icon">🔗</span> Related Resources</h2>
             <p style="margin-bottom: 1.5rem;">Explore these related topics to deepen your understanding of AI agents in enterprise environments:</p>
             <ul>
-                <li><a href="resources-humans-vs-agents.html" style="color: var(--accent-primary);">👥 Humans Without Agents vs With Agents</a> - Compare overwhelmed teams reaching only 90% SLA with AI-empowered teams achieving excellence</li>
-                <li><a href="resources-knowledge-transfer.html" style="color: var(--accent-primary);">🧠 Knowledge Transfer</a> - How AI agents facilitate seamless knowledge sharing across teams</li>
-                <li><a href="resources-task-handover-challenge.html" style="color: var(--accent-primary);">🔄 Task Handover Challenge</a> - Solving the context loss problem in team handoffs</li>
-                <li><a href="resources-agent-automation.html" style="color: var(--accent-primary);">🔗 Agent Automation</a> - Understanding the difference between traditional automation and intelligent agents</li>
-                <li><a href="resources-root-cause-analysis.html" style="color: var(--accent-primary);">🔍 Root Cause Analysis</a> - How AI agents help identify and resolve systemic issues</li>
-                <li><a href="resources-documentation-efficiency.html" style="color: var(--accent-primary);">📄 Documentation Efficiency</a> - Automating documentation with AI agents</li>
-                <li><a href="resources-sre-rollback-support.html" style="color: var(--accent-primary);">🚨 SRE Rollback Support</a> - AI-powered incident response and rollback procedures</li>
-                <li><a href="resources-job-satisfaction-agents.html" style="color: var(--accent-primary);">😊 Job Satisfaction with AI Agents</a> - How agents improve work-life balance and job satisfaction</li>
-                <li><a href="employee-overload.html" style="color: var(--accent-primary);">⚡ Employee Overload</a> - Understanding and addressing cognitive overload in modern enterprises</li>
-                <li><a href="resources-paradigm-shift.html" style="color: var(--accent-primary);">⚡ Paradigm Shift</a> - The fundamental change in how we work with AI agents</li>
-                <li><a href="resources-workshops-as-simulations.html" style="color: var(--accent-primary);">🎮 Workshops as Simulations</a> - Learn through hands-on simulated scenarios</li>
-                <li><a href="resources-why-build-agents.html" style="color: var(--accent-primary);">🏗️ Why Build Agents</a> - The business case for implementing AI agents</li>
+                <li><a href="resources-humans-vs-agents.html" style="color: var(--primary-color);">👥 Humans Without Agents vs With Agents</a> - Compare overwhelmed teams reaching only 90% SLA with AI-empowered teams achieving excellence</li>
+                <li><a href="resources-knowledge-transfer.html" style="color: var(--primary-color);">🧠 Knowledge Transfer</a> - How AI agents facilitate seamless knowledge sharing across teams</li>
+                <li><a href="resources-task-handover-challenge.html" style="color: var(--primary-color);">🔄 Task Handover Challenge</a> - Solving the context loss problem in team handoffs</li>
+                <li><a href="resources-agent-automation.html" style="color: var(--primary-color);">🔗 Agent Automation</a> - Understanding the difference between traditional automation and intelligent agents</li>
+                <li><a href="resources-root-cause-analysis.html" style="color: var(--primary-color);">🔍 Root Cause Analysis</a> - How AI agents help identify and resolve systemic issues</li>
+                <li><a href="resources-documentation-efficiency.html" style="color: var(--primary-color);">📄 Documentation Efficiency</a> - Automating documentation with AI agents</li>
+                <li><a href="resources-sre-rollback-support.html" style="color: var(--primary-color);">🚨 SRE Rollback Support</a> - AI-powered incident response and rollback procedures</li>
+                <li><a href="resources-job-satisfaction-agents.html" style="color: var(--primary-color);">😊 Job Satisfaction with AI Agents</a> - How agents improve work-life balance and job satisfaction</li>
+                <li><a href="employee-overload.html" style="color: var(--primary-color);">⚡ Employee Overload</a> - Understanding and addressing cognitive overload in modern enterprises</li>
+                <li><a href="resources-paradigm-shift.html" style="color: var(--primary-color);">⚡ Paradigm Shift</a> - The fundamental change in how we work with AI agents</li>
+                <li><a href="resources-workshops-as-simulations.html" style="color: var(--primary-color);">🎮 Workshops as Simulations</a> - Learn through hands-on simulated scenarios</li>
+                <li><a href="resources-why-build-agents.html" style="color: var(--primary-color);">🏗️ Why Build Agents</a> - The business case for implementing AI agents</li>
             </ul>
             
             <div class="highlight-box" style="margin-top: 2rem;">
-                <p style="font-style: italic; text-align: center; color: var(--accent-primary);">
+                <p style="font-style: italic; text-align: center; color: var(--primary-color);">
                     <strong>In an ever-changing, complex world, AI agents are not a luxury—they are a necessity for maintaining human dignity, control, and effectiveness.</strong>
                 </p>
             </div>
