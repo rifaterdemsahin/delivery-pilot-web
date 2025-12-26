@@ -1,3 +1,10 @@
+# Goal
+- help the partitipants have the simulation and learn the skills gaps by asking and showing the answers
+- max 10 guestions
+- youtube links 
+- emojis
+- update the index.html file for linking
+
 # Simulations Directory
 
 This directory contains the workshop simulations and environment check pages.

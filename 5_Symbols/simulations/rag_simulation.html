@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Simulation | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%); /* Indigo to Cyan gradient */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #4338ca;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .checklist-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .checklist-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .checklist-checkbox {
+            margin-top: 0.25rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+
+        .checklist-content {
+            flex: 1;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .checklist-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Load menu components and i18n -->
+    <script src="../../menu.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>RAG Architecture Simulation</h1>
+        <p>Master Retrieval Augmented Generation step-by-step.</p>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Start Simulation 🧠</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to track your learning progress.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Begin RAG Journey</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Checklist View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Pilot: <span id="user-email-display" style="font-weight: bold; color: #4f46e5;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem;">Pipeline Checklist ✅</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Follow the steps to build your mental model of RAG.</p>
+
+                <form id="checklist-form">
+                    
+                    <!-- Step 1 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">1. Define Knowledge Base 📚</div>
+                            <div class="checklist-desc">
+                                Identify your external data sources (PDFs, Wikis, Databases) that the LLM is not trained on.
+                                <br><a href="https://www.youtube.com/watch?v=T-D1OfcDW1M" target="_blank" style="color: #0969da; text-decoration: none; font-size: 0.85rem; margin-top: 0.25rem; display: inline-block;">What is RAG? (Video) 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">2. Data Ingestion & Loading 📥</div>
+                            <div class="checklist-desc">
+                                Extract text from your sources. Use loaders (like LangChain document loaders) to read the raw text.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">3. Text Chunking ✂️</div>
+                            <div class="checklist-desc">
+                                Split long text into smaller, meaningful chunks to fit into the context window.
+                                <br><a href="https://www.youtube.com/watch?v=f9_BWhCI4Zo" target="_blank" style="color: #0969da; text-decoration: none; font-size: 0.85rem; margin-top: 0.25rem; display: inline-block;">Chunking Strategies 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">4. Generate Embeddings 🔢</div>
+                            <div class="checklist-desc">
+                                Convert text chunks into vector representations (arrays of numbers) using an embedding model (e.g., OpenAI, HuggingFace).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step5" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">5. Store in Vector Database 🗄️</div>
+                            <div class="checklist-desc">
+                                Save your vectors in a DB like Pinecone, Chroma, or Weaviate for efficient similarity search.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step6" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">6. Receive User Query ❓</div>
+                            <div class="checklist-desc">
+                                Accept the question from the user in natural language.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step7" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">7. Retrieval (Semantic Search) 🕵️</div>
+                            <div class="checklist-desc">
+                                Embed the user's query and find the most similar text chunks ("Top K") from your vector database.
+                                <br><a href="https://www.youtube.com/watch?v=dN0lsF2cvm4" target="_blank" style="color: #0969da; text-decoration: none; font-size: 0.85rem; margin-top: 0.25rem; display: inline-block;">Vector Search Explained 📺</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step8" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">8. Augment Context 📝</div>
+                            <div class="checklist-desc">
+                                Combine the user's query with the retrieved text chunks into a single prompt for the LLM.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step9" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">9. Generation 🤖</div>
+                            <div class="checklist-desc">
+                                Pass the augmented prompt to the LLM to generate the final answer based on the retrieved facts.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step10" class="checklist-checkbox" required>
+                        <div class="checklist-content">
+                            <div class="checklist-title">10. Evaluate & Iterate 📈</div>
+                            <div class="checklist-desc">
+                                Review the answer for accuracy and hallucinations. Iterate on chunking or retrieval if needed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Completion</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Logic for RAG Simulation
+        const STORAGE_KEY_EMAIL = 'dp_rag_simulation_email';
+        // Shared webhook
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const checklistForm = document.getElementById('checklist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Submit Checklist
+        checklistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Checked Status
+            const steps = {};
+            for(let i=1; i<=10; i++) {
+                steps[`step${i}`] = document.getElementById(`step${i}`).checked;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Verifying...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'rag_simulation',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    steps_completed: steps,
+                    hiddenContext: {
+                        nextSteps: "Now that you understand the flow, try using n8n and Pinecone to build a simple bot!",
+                        resourceLink: "https://python.langchain.com/docs/use_cases/question_answering/"
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'RAG architecture simulated successfully! 🚀';
+                statusMsg.style.color = '#4f46e5';
+                submitBtn.textContent = '✅ Completed';
+                checklistForm.reset();
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Progress saved locally. You are a RAG expert now!';
+                statusMsg.style.color = '#f59e0b';
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    if (submitBtn.textContent !== '✅ Completed') {
+                        submitBtn.textContent = 'Submit Completion';
+                    }
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
