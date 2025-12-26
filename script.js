@@ -283,7 +283,10 @@ const translations = {
                 useCases: "Use Cases",
                 pricing: "Pricing",
                 workshops: "Workshops",
-                enterpriseAgent: "Enterprise Agent"
+                enterpriseAgent: "Enterprise Agent",
+                onboarding: "Onboarding",
+                agileTransformation: "Agile Transformation",
+                methodology: "Methodology"
             },
             company: {
                 title: "Company",
@@ -1213,7 +1216,10 @@ const translations = {
                 useCases: "Kullanım Alanları",
                 pricing: "Fiyatlandırma",
                 workshops: "Atölyeler",
-                enterpriseAgent: "Kurumsal Ajan"
+                enterpriseAgent: "Kurumsal Ajan",
+                onboarding: "Katılım",
+                agileTransformation: "Çevik Dönüşüm",
+                methodology: "Metodoloji"
             },
             company: {
                 title: "Şirket",
