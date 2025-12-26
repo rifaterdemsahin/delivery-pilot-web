@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot Methodology - Learn about the four essential roles (Implementer, Designer, Planner, Operator) needed to build AI agents and enable enterprise AI transformation.">
+    <meta name="keywords" content="AI methodology, enterprise agents, AI roles, implementer, designer, planner, operator, AI transformation, agent building, enterprise AI">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/delivery-pilot-methodology.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Delivery Pilot Methodology | 4 Essential Roles for AI Agents">
+    <meta property="og:description" content="Discover the four key roles - Implementer, Designer, Planner, and Operator - required to build enterprise AI agents and enable AI transformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/delivery-pilot-methodology.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Delivery Pilot Methodology | 4 Essential Roles">
+    <meta name="twitter:description" content="Learn the four key roles for building enterprise AI agents and driving AI transformation.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Delivery Pilot Methodology | 4 Essential Roles for AI Agents</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Hero section styles */
+        .methodology-hero {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .methodology-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .methodology-hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .methodology-hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        /* Introduction section */
+        .intro-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .intro-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .intro-box h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .intro-box p {
+            color: var(--text-light);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sources section */
+        .sources-section {
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .source-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .source-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .source-card h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .source-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .source-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Roles section */
+        .roles-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .role-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .role-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .role-card:nth-child(1) { border-top-color: #3b82f6; }
+        .role-card:nth-child(2) { border-top-color: #8b5cf6; }
+        .role-card:nth-child(3) { border-top-color: #ec4899; }
+        .role-card:nth-child(4) { border-top-color: #f59e0b; }
+
+        .role-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .role-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .role-subtitle {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .role-description {
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .role-responsibilities {
+            margin-top: 2rem;
+        }
+
+        .role-responsibilities h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .role-responsibilities ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .role-responsibilities li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .role-responsibilities li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .role-impact {
+            margin-top: 2rem;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .role-impact h4 {
+            color: #92400e;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .role-impact p {
+            color: #78350f;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Synergy section */
+        .synergy-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .synergy-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .synergy-box {
+            background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+            padding: 3rem;
+            border-radius: 16px;
+            border-left: 6px solid #8b5cf6;
+            margin-bottom: 2rem;
+        }
+
+        .synergy-box h3 {
+            color: #5b21b6;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .synergy-box p {
+            color: #4c1d95;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .synergy-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .synergy-flow .role-badge {
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .synergy-flow .arrow {
+            font-size: 1.5rem;
+            color: #8b5cf6;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .methodology-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .methodology-hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .roles-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .synergy-flow {
+                flex-direction: column;
+            }
+
+            .synergy-flow .arrow {
+                transform: rotate(90deg);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="methodology-hero">
+        <div class="container">
+            <h1>Delivery Pilot Methodology</h1>
+            <p class="subtitle">The 4 Essential Roles for Building Enterprise AI Agents</p>
+            <p class="tagline">A comprehensive framework for enabling AI transformation through strategic role collaboration</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-box">
+                    <h2>🎯 Why These 4 Roles Matter</h2>
+                    <p>Building enterprise AI agents is not a one-person job. It requires a coordinated team effort with distinct expertise areas working in harmony. The Delivery Pilot Methodology identifies four critical roles - <strong>Implementer</strong>, <strong>Designer</strong>, <strong>Planner</strong>, and <strong>Operator</strong> - that form the foundation of successful AI agent delivery and enterprise transformation.</p>
+                    <p>Each role brings unique value, and together they create a synergistic ecosystem that transforms AI capabilities from concept to production, ensuring agents are not just built, but built <em>right</em> - secure, scalable, and aligned with business objectives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources Section -->
+    <section class="sources-section">
+        <div class="container">
+            <h2 class="section-title">📚 Methodology Sources & Framework</h2>
+            <p class="section-description">Our methodology is built upon proven frameworks and practices documented across our platform</p>
+            
+            <div class="sources-grid">
+                <div class="source-card">
+                    <h4>🤖 Enterprise Agent Implementation</h4>
+                    <p>10-milestone framework for deploying enterprise-ready AI agents with datasource integration</p>
+                    <a href="enterprise-agent.html">Learn More →</a>
+                </div>
+
+                <div class="source-card">
+                    <h4>🎓 10-Step Workshop Process</h4>
+                    <p>Comprehensive training covering vibe programming, RAG, fine-tuning, and secure AI development</p>
+                    <a href="workshops.html">Explore Workshops →</a>
+                </div>
+
+                <div class="source-card">
+                    <h4>🚀 Onboarding Framework</h4>
+                    <p>3-stage transformation process: Assessment, Workshops, and Express implementation</p>
+                    <a href="onboarding.html">View Process →</a>
+                </div>
+
+                <div class="source-card">
+                    <h4>📈 Agile Transformation</h4>
+                    <p>Proven methodologies for organizational change and continuous delivery practices</p>
+                    <a href="agile-transformation.html">Discover Agile →</a>
+                </div>
+
+                <div class="source-card">
+                    <h4>💼 Success Stories</h4>
+                    <p>Real-world examples of enterprise transformations and role collaborations in action</p>
+                    <a href="success-stories.html">Read Stories →</a>
+                </div>
+
+                <div class="source-card">
+                    <h4>❓ FAQ & Resources</h4>
+                    <p>In-depth answers about our methodology, processes, and best practices</p>
+                    <a href="faq.html">Browse FAQ →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 4 Roles Section -->
+    <section class="roles-section">
+        <div class="container">
+            <h2 class="section-title">The 4 Essential Roles</h2>
+            <p class="section-description">Each role plays a crucial part in delivering AI agents and enabling enterprise transformation. Together, they form a complete ecosystem for AI success.</p>
+
+            <div class="roles-grid">
+                <!-- Role 1: Implementer -->
+                <div class="role-card">
+                    <div class="role-icon">⚙️</div>
+                    <h3 class="role-title">Implementer</h3>
+                    <p class="role-subtitle">The Builder & Technical Executor</p>
+                    <p class="role-description">
+                        The Implementer transforms design specifications and plans into working AI agents. They are the hands-on technical experts who write code, configure systems, integrate datasources, and bring AI capabilities to life through practical implementation.
+                    </p>
+                    
+                    <div class="role-responsibilities">
+                        <h4>🔧 Key Responsibilities:</h4>
+                        <ul>
+                            <li>Write and deploy agent code using agentic frameworks</li>
+                            <li>Integrate enterprise datasources and APIs</li>
+                            <li>Implement security protocols and data governance</li>
+                            <li>Configure AI models, RAG systems, and fine-tuning pipelines</li>
+                            <li>Build CI/CD pipelines for agent deployment</li>
+                            <li>Debug and troubleshoot technical issues</li>
+                            <li>Optimize agent performance and resource utilization</li>
+                        </ul>
+                    </div>
+
+                    <div class="role-impact">
+                        <h4>💡 Impact on AI Transformation:</h4>
+                        <p>Implementers bridge the gap between theoretical AI capabilities and practical business value. They ensure agents are not just conceptually sound but technically robust, secure, and ready for enterprise-scale deployment. Their work directly translates ideas into functioning systems that users can interact with.</p>
+                    </div>
+                </div>
+
+                <!-- Role 2: Designer -->
+                <div class="role-card">
+                    <div class="role-icon">🎨</div>
+                    <h3 class="role-title">Designer</h3>
+                    <p class="role-subtitle">The Architect & Experience Craftsman</p>
+                    <p class="role-description">
+                        The Designer shapes how AI agents interact with users and integrate into business workflows. They define agent architecture, user experiences, conversation flows, and the overall structure that makes agents intuitive, effective, and aligned with human needs.
+                    </p>
+                    
+                    <div class="role-responsibilities">
+                        <h4>🎨 Key Responsibilities:</h4>
+                        <ul>
+                            <li>Design agent architecture and system interactions</li>
+                            <li>Create intuitive conversation flows and user interfaces</li>
+                            <li>Define agent capabilities and behavior patterns</li>
+                            <li>Design integration patterns with existing systems</li>
+                            <li>Craft prompt templates and response structures</li>
+                            <li>Ensure accessibility and inclusive design practices</li>
+                            <li>Design for scalability and future extensibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="role-impact">
+                        <h4>💡 Impact on AI Transformation:</h4>
+                        <p>Designers ensure AI agents are not just functional but delightful to use. They create the blueprint that guides implementation, ensuring agents seamlessly fit into user workflows and business processes. Good design accelerates adoption and maximizes the value users derive from AI capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Role 3: Planner -->
+                <div class="role-card">
+                    <div class="role-icon">📋</div>
+                    <h3 class="role-title">Planner</h3>
+                    <p class="role-subtitle">The Strategist & Roadmap Creator</p>
+                    <p class="role-description">
+                        The Planner orchestrates the entire agent delivery journey. They define requirements, establish timelines, prioritize features, manage resources, and ensure alignment between business objectives and technical execution. They are the strategic thinkers who keep the project on track.
+                    </p>
+                    
+                    <div class="role-responsibilities">
+                        <h4>📊 Key Responsibilities:</h4>
+                        <ul>
+                            <li>Define business requirements and success criteria</li>
+                            <li>Create project roadmaps and milestone timelines</li>
+                            <li>Prioritize features based on business value</li>
+                            <li>Coordinate between stakeholders and technical teams</li>
+                            <li>Conduct risk assessments and mitigation planning</li>
+                            <li>Manage budget and resource allocation</li>
+                            <li>Track progress and ensure delivery commitments are met</li>
+                        </ul>
+                    </div>
+
+                    <div class="role-impact">
+                        <h4>💡 Impact on AI Transformation:</h4>
+                        <p>Planners provide the strategic vision and structure that prevents projects from derailing. They ensure resources are used efficiently, timelines are realistic, and deliverables align with business needs. Their oversight turns AI ambitions into executable plans that deliver measurable business outcomes.</p>
+                    </div>
+                </div>
+
+                <!-- Role 4: Operator -->
+                <div class="role-card">
+                    <div class="role-icon">🔧</div>
+                    <h3 class="role-title">Operator</h3>
+                    <p class="role-subtitle">The Guardian & Performance Manager</p>
+                    <p class="role-description">
+                        The Operator keeps AI agents running smoothly in production. They monitor performance, respond to incidents, apply updates, manage infrastructure, and ensure continuous reliability. They are the guardians who maintain agent health and optimize operational efficiency.
+                    </p>
+                    
+                    <div class="role-responsibilities">
+                        <h4>🛡️ Key Responsibilities:</h4>
+                        <ul>
+                            <li>Monitor agent performance and system health 24/7</li>
+                            <li>Respond to incidents and troubleshoot production issues</li>
+                            <li>Apply updates, patches, and configuration changes</li>
+                            <li>Manage infrastructure and resource scaling</li>
+                            <li>Ensure security compliance and audit requirements</li>
+                            <li>Optimize costs and resource utilization</li>
+                            <li>Maintain documentation and runbooks</li>
+                        </ul>
+                    </div>
+
+                    <div class="role-impact">
+                        <h4>💡 Impact on AI Transformation:</h4>
+                        <p>Operators ensure that AI investments deliver sustained value over time. They maintain the reliability and performance that users depend on, preventing downtime and ensuring compliance. Their work transforms successful deployments into long-term business assets that continue to deliver value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Synergy Section -->
+    <section class="synergy-section">
+        <div class="container">
+            <div class="synergy-content">
+                <h2 class="section-title">🤝 How the Roles Work Together</h2>
+                <p class="section-description">The magic happens when these four roles collaborate seamlessly. Each role depends on and amplifies the others.</p>
+
+                <div class="synergy-box">
+                    <h3>The AI Agent Delivery Flow</h3>
+                    <p>
+                        The <strong>Planner</strong> defines what needs to be built and when. The <strong>Designer</strong> creates the blueprint for how it should work and feel. The <strong>Implementer</strong> brings it to life through code and configuration. The <strong>Operator</strong> ensures it continues to run reliably and evolves with changing needs.
+                    </p>
+                    
+                    <div class="synergy-flow">
+                        <span class="role-badge">📋 Planner</span>
+                        <span class="arrow">→</span>
+                        <span class="role-badge">🎨 Designer</span>
+                        <span class="arrow">→</span>
+                        <span class="role-badge">⚙️ Implementer</span>
+                        <span class="arrow">→</span>
+                        <span class="role-badge">🔧 Operator</span>
+                        <span class="arrow">↻</span>
+                    </div>
+
+                    <p>
+                        This isn't a waterfall - it's a continuous cycle. Operators provide feedback that informs Planners. Implementers collaborate with Designers in real-time. Everyone learns from production insights and iterates continuously.
+                    </p>
+                </div>
+
+                <div class="synergy-box">
+                    <h3>Enterprise Transformation Through Role Excellence</h3>
+                    <p>
+                        When all four roles operate at peak effectiveness, enterprises achieve true AI transformation. Projects move from concept to production faster. Agents are more reliable, more intuitive, and deliver greater business value. Teams work with clarity and purpose, each member understanding their contribution to the larger mission.
+                    </p>
+                    <p>
+                        This methodology isn't just about building agents - it's about building <strong>organizational capability</strong>. As teams internalize these roles and master their collaboration, the enterprise develops a sustainable competitive advantage in the AI era.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources Section -->
+    <section class="content-section" style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">📚 Related Implementation Guides</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <a href="enterprise-agent.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Enterprise Agent Implementation</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Deploy enterprise-ready AI agents with integrated datasources</p>
+                </a>
+                <a href="junior-engineer-training.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">👨‍🎓</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Junior Engineer Training</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Transform juniors into feature engineers with ML and agent skills</p>
+                </a>
+                <a href="onboarding.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Onboarding Process</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">The 3-stage transformation: Assessment, Workshops, and Express</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build Your AI Team?</h2>
+            <p>Start your AI transformation journey by assembling the right roles and capabilities. Let us help you identify gaps, train your team, and deliver enterprise-ready AI agents.</p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary">🚀 Start Assessment</a>
+                <a href="workshops.html" class="btn btn-secondary">🎓 Explore Workshops</a>
+                <a href="resources-human-in-the-loop.html" class="btn btn-secondary">👥 Human-in-the-Loop</a>
+                <a href="contact.html" class="btn btn-secondary">📧 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Delivery Pilot Methodology: 4 Essential Roles for Building Enterprise AI Agents",
+      "description": "Learn about the four critical roles - Implementer, Designer, Planner, and Operator - required to build enterprise AI agents and enable AI transformation.",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "articleSection": "AI Methodology",
+      "keywords": "AI methodology, enterprise agents, AI roles, implementer, designer, planner, operator, AI transformation"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Methodology",
+          "item": "https://deliverypilot.net/delivery-pilot-methodology.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Building Enterprise AI Agents with 4 Essential Roles",
+      "description": "A methodology for assembling and coordinating four key roles to build enterprise AI agents",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Planner defines requirements and roadmap",
+          "text": "The Planner defines business requirements, creates project roadmaps, and ensures alignment between business objectives and technical execution."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Designer creates architecture and experience",
+          "text": "The Designer shapes agent architecture, user experiences, conversation flows, and integration patterns."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implementer builds and deploys the agent",
+          "text": "The Implementer writes code, configures systems, integrates datasources, and brings the agent to life."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Operator maintains and optimizes",
+          "text": "The Operator monitors performance, responds to incidents, and ensures continuous reliability and optimization."
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

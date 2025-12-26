@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Security First - Human-driven security solutions for agile environments. Learn how Delivery Pilot prioritizes security while meeting tight deadlines in agile-driven development.">
+    <meta name="keywords" content="security first, human-driven security, agile security, tight deadlines, enterprise security, security best practices, DevSecOps">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/security.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Security First - Human-Driven Solutions | Delivery Pilot">
+    <meta property="og:description" content="Prioritizing security with human expertise in agile-driven environments. Meeting demands without compromising security standards.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/security.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Security First - Human-Driven Solutions | Delivery Pilot">
+    <meta name="twitter:description" content="Prioritizing security with human expertise in agile-driven environments.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Security First - Human-Driven Solutions | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .security-hero {
+            background: linear-gradient(135deg, #d63031 0%, #e17055 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .security-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .security-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .security-content {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .emphasis-section {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            background: #fff5f5;
+            padding: 3rem;
+            border-radius: 12px;
+            border-left: 6px solid #d63031;
+        }
+
+        .emphasis-section h2 {
+            font-size: 2.2rem;
+            color: #d63031;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .emphasis-section p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .security-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .principle-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #d63031;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .principle-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .principle-card h3 {
+            font-size: 1.5rem;
+            color: #d63031;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .principle-card p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .challenges-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            max-width: 1200px;
+            margin: 4rem auto;
+        }
+
+        .challenges-section h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .challenge-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #e17055;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .challenge-item h3 {
+            font-size: 1.4rem;
+            color: #d63031;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .challenge-item p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .solution-highlight {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 900px;
+            margin: 4rem auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .solution-highlight h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .solution-highlight p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .security-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 4rem auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: #d63031;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .security-hero h1 {
+                font-size: 2rem;
+            }
+
+            .security-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .emphasis-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .emphasis-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .security-principles {
+                grid-template-columns: 1fr;
+            }
+
+            .challenges-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .solution-highlight {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Security Hero Section -->
+    <section class="security-hero">
+        <div class="container">
+            <h1>🔒 Security Has to Be the First Thought</h1>
+            <p class="subtitle">In today's fast-paced agile environments, security cannot be an afterthought. We prioritize human-driven security solutions that meet tight deadlines without compromising protection.</p>
+        </div>
+    </section>
+
+    <!-- Security Content Section -->
+    <section class="security-content">
+        <div class="container">
+            <!-- Emphasis on Security First -->
+            <div class="emphasis-section">
+                <h2>Security Is Not Optional</h2>
+                <p>In agile-driven environments with tight deadlines, the pressure to deliver quickly can be immense. However, security must remain the foremost consideration in every decision, every sprint, and every deployment.</p>
+                <p>Our approach emphasizes human expertise and judgment over automated solutions alone. While tools are valuable, nothing replaces the insight and adaptability of experienced security professionals.</p>
+            </div>
+
+            <!-- Security Principles -->
+            <div class="security-principles">
+                <div class="principle-card">
+                    <span class="principle-icon">👥</span>
+                    <h3>Human-Driven Security</h3>
+                    <p>Experienced security professionals making informed decisions. No reliance on automated agents alone - human expertise is irreplaceable in identifying complex threats and understanding context.</p>
+                </div>
+
+                <div class="principle-card">
+                    <span class="principle-icon">⚡</span>
+                    <h3>Security at Speed</h3>
+                    <p>Meeting tight deadlines without cutting corners. We integrate security practices into every stage of development, ensuring protection doesn't slow down delivery.</p>
+                </div>
+
+                <div class="principle-card">
+                    <span class="principle-icon">🔄</span>
+                    <h3>Agile Security</h3>
+                    <p>Security practices that adapt to agile methodologies. Continuous assessment, rapid response, and iterative improvements that keep pace with development cycles.</p>
+                </div>
+
+                <div class="principle-card">
+                    <span class="principle-icon">🎯</span>
+                    <h3>Proactive Protection</h3>
+                    <p>Security considerations from day one. We don't wait for incidents - we anticipate threats and build defenses before vulnerabilities can be exploited.</p>
+                </div>
+            </div>
+
+            <!-- Challenges in Agile Environments -->
+            <div class="challenges-section">
+                <h2>Challenges in Agile-Driven Environments</h2>
+                
+                <div class="challenge-item">
+                    <h3>⏰ Tight Deadlines vs. Security Rigor</h3>
+                    <p>The constant pressure to deliver features quickly can create tension with thorough security reviews. Teams may feel forced to choose between speed and security - a false dichotomy that leads to vulnerabilities.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>📊 Meeting Stakeholder Demands</h3>
+                    <p>Business stakeholders often prioritize visible features over invisible security measures. Communicating the value of security investments requires expertise and evidence-based arguments.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>🔄 Continuous Integration Complexity</h3>
+                    <p>In agile environments with frequent releases, maintaining security across rapid iterations is challenging. Each deployment introduces potential vulnerabilities that must be assessed and addressed.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>👥 Human Resource Constraints</h3>
+                    <p>Security experts are in high demand, and teams often lack dedicated security professionals. Without human expertise guiding decisions, automated tools alone cannot provide adequate protection.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>📈 Technical Debt Accumulation</h3>
+                    <p>Under deadline pressure, security-related technical debt accumulates. What starts as "we'll fix it later" becomes a systemic vulnerability that's harder and more expensive to address over time.</p>
+                </div>
+            </div>
+
+            <!-- Solution Approach -->
+            <div class="solution-highlight">
+                <h2>Our Solution: Humans Delivering Secure Solutions</h2>
+                <p>We believe in empowering human security professionals with the right tools, processes, and support to deliver secure solutions even under tight deadlines. By combining human expertise with efficient workflows, we help teams meet demands without compromising security standards.</p>
+                <p>Security is not about choosing between speed and protection - it's about building both into your culture and processes from the start.</p>
+            </div>
+
+            <!-- Security Statistics -->
+            <div class="security-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Human-Verified Security</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Expert Support</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Zero</span>
+                    <span class="stat-label">Security Shortcuts</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Agile</span>
+                    <span class="stat-label">Security Integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources & CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, #d63031 0%, #e17055 100%); color: white; padding: 4rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">🔒 Learn More About AI Security</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Discover how AI agents enhance enterprise security while maintaining human oversight and control.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="agent-security-benefits.html" class="btn" style="background: white; color: #d63031; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🛡️ AI Security Benefits
+                </a>
+                <a href="enterprise-agent.html" class="btn" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🤖 Enterprise Agent Solutions
+                </a>
+                <a href="workshops.html" class="btn" style="background: transparent; color: white; border: 2px solid white; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;">
+                    🎓 Security Workshops
+                </a>
+            </div>
+            <p style="font-size: 1rem; opacity: 0.9; margin-top: 1.5rem;">
+                <a href="assessment.html" style="color: white; text-decoration: underline;">🚀 Start with a security assessment</a> to identify your security gaps and readiness.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Security First - Human-Driven Solutions",
+      "url": "https://deliverypilot.net/security.html",
+      "description": "Security as a first thought: Human-driven security solutions for agile environments with tight deadlines.",
+      "about": {
+        "@type": "Thing",
+        "name": "Enterprise Security",
+        "description": "Human-driven security solutions that meet demands in agile-driven environments without compromising protection standards."
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security",
+          "item": "https://deliverypilot.net/security.html"
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

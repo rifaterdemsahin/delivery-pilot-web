@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot pricing for AI transformation services. Free assessments, affordable workshop sessions starting at $500, and enterprise solutions. Transparent pricing with no hidden fees.">
+    <meta name="keywords" content="AI transformation pricing, workshop pricing, AI assessment cost, enterprise AI pricing, AI training costs, remote workshops, on-site training">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/pricing.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pricing - AI Transformation Services | Delivery Pilot">
+    <meta property="og:description" content="Transparent pricing for AI transformation. Free assessments, workshops from $500, and custom enterprise solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/pricing.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-pricing.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pricing - AI Transformation Services | Delivery Pilot">
+    <meta name="twitter:description" content="Transparent pricing for AI transformation. Free assessments, affordable workshops, and enterprise solutions.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-pricing.jpg">
+    
+    <title>Pricing - AI Transformation Services | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .pricing-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .pricing-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.popular {
+            border: 3px solid var(--primary-color);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .plan-name {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .price.hidden {
+            display: none;
+        }
+
+        .price-subtext {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .features-list li::before {
+            content: attr(data-icon);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pricing-cta:hover {
+            background: var(--secondary-color);
+            transform: scale(1.02);
+        }
+
+        .pricing-cta.secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .pricing-cta.secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1 data-i18n="pricing.hero.title">Pricing Plans</h1>
+            <p class="subtitle" data-i18n="pricing.hero.subtitle">Choose the perfect plan for your AI transformation journey</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <!-- Prosumer Plan -->
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.prosumer.title">Prosumer</h3>
+                <p class="plan-name" data-i18n="pricing.prosumer.subtitle">1-on-1 Assessment For AI Workshop Readiness</p>
+                <div class="price hidden">$50</div>
+                <p class="price-subtext" data-i18n="pricing.prosumer.priceText">per session</p>
+                <ul class="features-list">
+                    <li data-icon="🎯" data-i18n="pricing.prosumer.feature1">Individual AI maturity assessment</li>
+                    <li data-icon="📊" data-i18n="pricing.prosumer.feature2">Personalized skills gap analysis</li>
+                    <li data-icon="🗺️" data-i18n="pricing.prosumer.feature3">Custom AI learning roadmap</li>
+                    <li data-icon="💡" data-i18n="pricing.prosumer.feature4">Career transformation strategy</li>
+                    <li data-icon="📋" data-i18n="pricing.prosumer.feature5">Actionable next steps</li>
+                    <li data-icon="⏰" data-i18n="pricing.prosumer.feature6">60-minute 1-on-1 session</li>
+                    <li data-icon="📄" data-i18n="pricing.prosumer.feature7">Written assessment report</li>
+                    <li data-icon="🔄" data-i18n="pricing.prosumer.feature8">Follow-up recommendations</li>
+                    <li data-icon="🤝" data-i18n="pricing.prosumer.feature9">Aftercare support to ensure success</li>
+                    <li data-icon="✅" data-i18n="pricing.prosumer.feature10">Prerequisites validation for workshops and enterprise solutions</li>
+                </ul>
+                <a href="https://deliverypilot.net/contact.html" class="pricing-cta" data-i18n="pricing.prosumer.cta">📧 Contact Us</a>
+            </div>
+
+            <!-- Workshops Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge" data-i18n="pricing.workshops.badge">Most Popular</div>
+                <h3 data-i18n="pricing.workshops.title">Workshops</h3>
+                <p class="plan-name" data-i18n="pricing.workshops.subtitle">Remote Sessions</p>
+                <div class="price hidden">$500</div>
+                <p class="price-subtext" data-i18n="pricing.workshops.priceText">per consultant/day</p>
+                <ul class="features-list">
+                    <li data-icon="🌍" data-i18n="pricing.workshops.feature1">Global live top 10 AI training sessions</li>
+                    <li data-icon="👥" data-i18n="pricing.workshops.feature2">Face-to-face interaction</li>
+                    <li data-icon="🏭" data-i18n="pricing.workshops.feature3">Enterprise-wide implementation</li>
+                    <li data-icon="🎯" data-i18n="pricing.workshops.feature4">Multiple technology areas</li>
+                    <li data-icon="🚀" data-i18n="pricing.workshops.feature5">Post-implementation support</li>
+                    <li data-icon="🏨" data-i18n="pricing.workshops.feature6">Hotel & travel billed separately</li>
+                    <li data-icon="⚠️" data-i18n="pricing.workshops.feature7">One-to-many format: multiple consultants for bigger groups</li>
+                    <li data-icon="📊" data-i18n="pricing.workshops.feature8">Production-ready solution from workshops</li>
+                    <li data-icon="🎯" data-i18n="pricing.workshops.feature9">10-workshop roadmap: Complete AI-enabled delivery transformation</li>
+                    <li data-icon="🚀" data-i18n="pricing.workshops.feature10">Journey from vibe programming to agentic framework implementation</li>
+                    <li data-icon="🤖" data-i18n="pricing.workshops.feature11">We are building agents to accelerate your AI transformation</li>
+                    <li data-icon="✨" data-i18n="pricing.workshops.feature12"><strong>Participants build and leave with a working Proof of Concept (PoC) agent</strong></li>
+                </ul>
+                <a href="https://deliverypilot.net/contact.html" class="pricing-cta" data-i18n="pricing.workshops.cta">📧 Contact Us</a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.enterprise.title">Enterprise</h3>
+                <p class="plan-name" data-i18n="pricing.enterprise.subtitle">Monthly Subscription for AI Code Transformation</p>
+                <div class="price hidden" data-i18n="pricing.enterprise.price">$10</div>
+                <p class="price-subtext" data-i18n="pricing.enterprise.priceText">per month per GB processed</p>
+                <ul class="features-list">
+                    <li data-icon="💰"><strong data-i18n="pricing.enterprise.feature0">Revenue Model: Monthly subscription</strong></li>
+                    <li data-icon="🆓" data-i18n="pricing.enterprise.feature1">Free for public (open source) projects < 100MB</li>
+                    <li data-icon="💾" data-i18n="pricing.enterprise.feature2">Transparent usage-based pricing model</li>
+                    <li data-icon="🔌" data-i18n="pricing.enterprise.feature3">Integration for data sources priced per consultant</li>
+                    <li data-icon="🧠" data-i18n="pricing.enterprise.feature4">Scanned and machine learning costs based on current LLM provider model pricing</li>
+                    <li data-icon="🤖" data-i18n="pricing.enterprise.feature5">AI agents act as copilot engineers to fix issues and notify stakeholders</li>
+                    <li data-icon="📊" data-i18n="pricing.enterprise.feature6">Agents pull data from different sources to help collaboration</li>
+                    <li data-icon="🔗" data-i18n="pricing.enterprise.feature7">Create intelligence between departments while removing silos</li>
+                    <li data-icon="🎯" data-i18n="pricing.enterprise.feature8">Eliminate knowledge transfer risk with automated delivery support</li>
+                    <li data-icon="🏢" data-i18n="pricing.enterprise.feature9">For on-premise air-gapped environments, request a quote</li>
+                    <li data-icon="👥" data-i18n="pricing.enterprise.feature10">Team assessment included</li>
+                    <li data-icon="💻" data-i18n="pricing.enterprise.feature11">Git repositories ready and running on GitHub Codespaces</li>
+                    <li data-icon="🗺️" data-i18n="pricing.enterprise.feature12">Enterprise roadmap: Assessment → Delivery → Skills Gap Identification → AI Transformation</li>
+                    <li data-icon="📚" data-i18n="pricing.enterprise.feature13">Complete documentation</li>
+                    <li data-icon="⚡" data-i18n="pricing.enterprise.feature14">Priority support</li>
+                    <li data-icon="🏗️" data-i18n="pricing.enterprise.feature15">We check the infrastructure and agent software for your enterprise</li>
+                    <li data-icon="🛡️" data-i18n="pricing.enterprise.feature16">Assess enterprise agents for security, reliability, and continuous improvement (on-premise or cloud)</li>
+                    <li data-icon="📋" data-i18n="pricing.enterprise.feature17">Continuous assessment cycle for regulatory audit compliance</li>
+                    <li data-icon="✨" data-i18n="pricing.enterprise.feature18"><strong>Delivery of custom PoC working agents tailored to enterprise environment</strong></li>
+                </ul>
+                <a href="https://deliverypilot.net/contact.html" class="pricing-cta" data-i18n="pricing.enterprise.cta">📧 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continuous Assessment Section -->
+    <section class="continuous-assessment-section" style="padding: 5rem 0; background: white;">
+        <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem;">Continuous Assessment Roadmap</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto 3rem;">
+                Start with continuous assessment and progress through 9 learning stages. 
+                The end goal of our workshops and agents is to create an Intelligent Agile SDLC Agent that transforms your organization.
+            </p>
+            
+            <div class="mermaid-container" style="background: var(--bg-light); padding: 2rem; border-radius: 16px; overflow-x: auto;">
+                <div class="mermaid">
+graph TD
+    N1["🎨 1. Vibe Programming<br/>💡 Ideation, Un-deterministic start<br/>📚 Self learn while implementation<br/>🤝 Collaborate with enterprise teams"]
+    N2["🤖 2. ChatGPT & Gemini<br/>📖 LLM basics<br/>🎓 Google Generative AI<br/>✍️ Prompt Engineering"]
+    N3["✨ 3. Prompt Engineering<br/>🎯 Advanced techniques<br/>🚀 Complete Bootcamp<br/>📝 Intro to Prompt Engineering"]
+    N4["🔗 4. RAG<br/>🔄 Retrieval-augmented generation<br/>🎓 ChatGPT Masterclass<br/>🌟 Google Generative AI"]
+    N5["🗄️ 5. Vector Databases<br/>💾 Data retrieval<br/>📊 From Embeddings to Apps<br/>🔍 Building Semantic Search"]
+    N6["⚙️ 6. Fine-Tuning<br/>🎛️ Customization<br/>🔧 Fine-Tuning LLMs<br/>☁️ GenAI with LLMs AWS"]
+    N7["🧠 7. AGI & ASI<br/>🛡️ AGI Safety Fundamentals<br/>🔮 Superintelligence Risks<br/>🌌 Intro to AGI"]
+    N8["🔬 8. Explainable AI XAI<br/>📊 AI Explainability 360<br/>💡 Explainable AI<br/>📈 Interpretable ML"]
+    N9["🔐 9. AI & Cyber Security<br/>🛡️ Secure deployment<br/>🔒 AI for Cybersecurity<br/>🚨 Secure Deployed AI"]
+    N_Agent["🎯 Final Goal: Intelligent Agile SDLC Agent<br/>⚡ Fixes & Optimizes SDLC<br/>📋 Helps with Agile Practices<br/>🌉 Removes Organizational Silos<br/>🧠 Creates Continuous Intelligence"]
+
+    %% Row 1: 3 items
+    N1 -->|"Step 1"| N2
+    N2 -->|"Step 2"| N3
+    
+    %% Row 2: 3 items - S-Snake pattern continues
+    N3 -->|"Step 3"| N4
+    N4 -->|"Step 4"| N5
+    N5 -->|"Step 5"| N6
+    
+    %% Row 3: 3 items
+    N6 -->|"Step 6"| N7
+    N7 -->|"Step 7"| N8
+    N8 -->|"Step 8"| N9
+    
+    %% Final Goal
+    N9 -->|"Complete!"| N_Agent
+
+    classDef stage fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000
+    classDef finalAgent fill:#fff3e0,stroke:#ff6f00,stroke-width:4px,color:#000
+    
+    class N1,N2,N3,N4,N5,N6,N7,N8,N9 stage
+    class N_Agent finalAgent
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+                    Each workshop builds upon the previous one, culminating in an AI-powered agent that revolutionizes 
+                    your software delivery lifecycle, breaks down silos, and enables continuous improvement.
+                </p>
+                <a href="https://deliverypilot.net/contact.html" class="pricing-cta" style="display: inline-block; max-width: 300px;">
+                    📧 Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    <!-- Mermaid.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({ 
+                    startOnLoad: true,
+                    theme: 'base',
+                    themeVariables: {
+                        primaryColor: '#e3f2fd',
+                        primaryTextColor: '#000',
+                        primaryBorderColor: '#1565c0',
+                        lineColor: '#2563eb',
+                        secondaryColor: '#fff3e0',
+                        tertiaryColor: '#f3e5f5'
+                    },
+                    flowchart: {
+                        useMaxWidth: true,
+                        htmlLabels: true,
+                        curve: 'basis'
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Delivery Pilot AI Transformation Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "serviceType": "AI Transformation and Training",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Transformation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Prosumer - 1-on-1 Assessment",
+              "description": "Individual AI maturity assessment with personalized skills gap analysis and custom learning roadmap"
+            },
+            "price": "50",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workshops - Remote Sessions",
+              "description": "Global live AI training sessions with face-to-face interaction and enterprise-wide implementation"
+            },
+            "price": "500",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise - Monthly Subscription",
+              "description": "Enterprise AI transformation with transparent usage-based pricing at $10 per month per GB processed. AI agents act as copilot engineers, fixing issues and notifying stakeholders. Pull data from multiple sources to enable cross-department collaboration and eliminate knowledge transfer risk. Integration priced per consultant with ML costs based on LLM provider pricing. We maintain the infrastructure and agent software for your enterprise."
+            },
+            "price": "10",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "10",
+              "priceCurrency": "USD",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "1",
+                "unitText": "GB processed per month"
+              }
+            },
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://deliverypilot.net/pricing.html"
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

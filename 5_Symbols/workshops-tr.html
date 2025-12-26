@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="10-Step AI Workshop Process for Enterprise Teams. Learn our comprehensive approach to building secure, explainable AI products through hands-on workshops covering from Vibe Programming to AI Ethics & GDPR.">
+    <meta name="keywords" content="AI workshops, enterprise AI training, explainable AI, secure AI, AI product development, vibe programming, prompt engineering, RAG, fine-tuning, AI security, GDPR">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/workshops.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="10-Step AI Workshop Process | Delivery Pilot">
+    <meta property="og:description" content="Master AI product development through our comprehensive 10-step workshop process. Build secure, explainable AI solutions for your enterprise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/workshops.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-workshops.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="10-Step AI Workshop Process">
+    <meta name="twitter:description" content="Enterprise AI workshops for building secure, explainable AI products as a team.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-workshops.jpg">
+    
+    <title>10-Step AI Workshop Process | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Additional styles for workshops page */
+        .workshops-hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .workshops-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .workshops-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .process-overview {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .step-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .step-topics {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-topics li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .step-topics li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .journey-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .journey-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .journey-step {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .journey-icon {
+            font-size: 3rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .journey-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .journey-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .benefits-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-description {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .workshops-hero h1 {
+                font-size: 2rem;
+            }
+
+            .workshops-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .journey-step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="workshops-hero">
+        <div class="container">
+            <h1 data-i18n="workshops.hero.title">🤖 10-Step AI Workshop Process - Building Enterprise Agents 🎓</h1>
+            <p class="subtitle" data-i18n="workshops.hero.subtitle">
+                A Comprehensive Journey to Building, Assessing, and Maintaining AI Agents for Enterprise Teams
+            </p>
+            <p data-i18n="workshops.hero.description">
+                Our structured workshop approach transforms your team from AI beginners to confident AI agent builders. 
+                Learn to build secure, explainable AI agents, assess agent readiness, and establish enterprise-grade agent maintenance practices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section class="process-overview">
+        <div class="container">
+            <h2 class="section-title" data-i18n="workshops.overview.title">🚀 The 10-Step Workshop Journey for Building AI Agents</h2>
+            <p class="section-subtitle" data-i18n="workshops.overview.subtitle">
+                Each workshop builds upon the previous, creating a comprehensive learning path that takes your team 
+                from foundational concepts to advanced AI agent implementation. Learn to build, assess agent readiness, 
+                and establish enterprise maintenance practices for production AI agents.
+            </p>
+
+            <div class="process-steps">
+                <!-- Step 1: Vibe Programming -->
+                <div class="step-card">
+                    <div class="step-number">1️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step1.title">🎨 Vibe Programming</h3>
+                    <p class="step-description" data-i18n="workshops.step1.description">
+                        Start with the non-deterministic approach. Learn to embrace uncertainty and collaborate 
+                        with AI agents as creative partners in building intelligent systems.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step1.topic1">Understanding non-deterministic AI agent behavior</li>
+                        <li data-i18n="workshops.step1.topic2">Self-learning during agent implementation</li>
+                        <li data-i18n="workshops.step1.topic3">Enterprise team collaboration with AI agents</li>
+                    </ul>
+                </div>
+
+                <!-- Step 2: Explainable AI (XAI) -->
+                <div class="step-card">
+                    <div class="step-number">2️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step2.title">🔍 Explainable AI (XAI)</h3>
+                    <p class="step-description" data-i18n="workshops.step2.description">
+                        Build trust through transparency. Master techniques to make AI agent decisions understandable 
+                        and accountable for enterprise deployment.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step2.topic1">IBM AI Explainability 360 for agents</li>
+                        <li data-i18n="workshops.step2.topic2">Agent behavior interpretability techniques</li>
+                        <li data-i18n="workshops.step2.topic3">Stakeholder communication about agent decisions</li>
+                    </ul>
+                </div>
+
+                <!-- Step 3: AGI & ASI -->
+                <div class="step-card">
+                    <div class="step-number">3️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step3.title">🧠 AGI & ASI</h3>
+                    <p class="step-description" data-i18n="workshops.step3.description">
+                        Understand the future of AI agents. Prepare for advanced autonomous agent systems with safety-first thinking.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step3.topic1">AGI Safety Fundamentals for autonomous agents</li>
+                        <li data-i18n="workshops.step3.topic2">Agent risk assessment and mitigation</li>
+                        <li data-i18n="workshops.step3.topic3">Future-proofing your AI agent strategy</li>
+                    </ul>
+                </div>
+
+                <!-- Step 4: ChatGPT & Gemini -->
+                <div class="step-card">
+                    <div class="step-number">4️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step4.title">💬 ChatGPT & Gemini</h3>
+                    <p class="step-description" data-i18n="workshops.step4.description">
+                        Master leading AI platforms for building conversational agents. Learn to leverage generative AI effectively in agent workflows.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step4.topic1">Platform-specific best practices for agent building</li>
+                        <li data-i18n="workshops.step4.topic2">Enterprise agent integration patterns</li>
+                        <li data-i18n="workshops.step4.topic3">Cost optimization strategies for production agents</li>
+                    </ul>
+                </div>
+
+                <!-- Step 5: Prompt Engineering -->
+                <div class="step-card">
+                    <div class="step-number">5️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step5.title">✍️ Prompt Engineering</h3>
+                    <p class="step-description" data-i18n="workshops.step5.description">
+                        Craft effective AI agent interactions. Learn systematic approaches to getting consistent, 
+                        high-quality results from your agents.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step5.topic1">Agent prompt design patterns</li>
+                        <li data-i18n="workshops.step5.topic2">Chain-of-thought reasoning for agents</li>
+                        <li data-i18n="workshops.step5.topic3">Agent behavior testing and iteration strategies</li>
+                    </ul>
+                </div>
+
+                <!-- Step 6: Vector Databases -->
+                <div class="step-card">
+                    <div class="step-number">6️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step6.title">🗄️ Vector Databases</h3>
+                    <p class="step-description" data-i18n="workshops.step6.description">
+                        Store and retrieve AI agent knowledge. Master embedding-based search and similarity matching for agent memory.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step6.topic1">Embedding generation and storage for agents</li>
+                        <li data-i18n="workshops.step6.topic2">Semantic search implementation in agent systems</li>
+                        <li data-i18n="workshops.step6.topic3">Agent memory performance optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Step 7: RAG (Retrieval-Augmented Generation) -->
+                <div class="step-card">
+                    <div class="step-number">7️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step7.title">📚 RAG</h3>
+                    <p class="step-description" data-i18n="workshops.step7.description">
+                        Ground AI agents in your data. Build agent systems that combine retrieval with generation for accurate, 
+                        context-aware agent responses.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step7.topic1">RAG architecture patterns for agents</li>
+                        <li data-i18n="workshops.step7.topic2">LangChain and LlamaIndex for agent building</li>
+                        <li data-i18n="workshops.step7.topic3">Hybrid search strategies in agent systems</li>
+                    </ul>
+                </div>
+
+                <!-- Step 8: Fine-Tuning -->
+                <div class="step-card">
+                    <div class="step-number">8️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step8.title">⚙️ Fine-Tuning</h3>
+                    <p class="step-description" data-i18n="workshops.step8.description">
+                        Customize AI agents for your needs. Learn to adapt agent models to your specific domain and enterprise use cases.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step8.topic1">Transfer learning techniques for agents</li>
+                        <li data-i18n="workshops.step8.topic2">Agent training dataset preparation and quality</li>
+                        <li data-i18n="workshops.step8.topic3">Agent model evaluation and validation</li>
+                    </ul>
+                </div>
+
+                <!-- Step 9: AI & Cyber Security -->
+                <div class="step-card">
+                    <div class="step-number">9️⃣</div>
+                    <h3 class="step-title" data-i18n="workshops.step9.title">🔒 AI & Cyber Security</h3>
+                    <p class="step-description" data-i18n="workshops.step9.description">
+                        Secure your AI agent systems. Protect agents against adversarial attacks, data poisoning, and model theft.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step9.topic1">Threat modeling for AI agent systems</li>
+                        <li data-i18n="workshops.step9.topic2">Agent adversarial robustness testing</li>
+                        <li data-i18n="workshops.step9.topic3">Secure agent deployment practices</li>
+                    </ul>
+                </div>
+
+                <!-- Step 10: AI Ethics & GDPR -->
+                <div class="step-card">
+                    <div class="step-number">🔟</div>
+                    <h3 class="step-title" data-i18n="workshops.step10.title">⚖️ AI Ethics & GDPR</h3>
+                    <p class="step-description" data-i18n="workshops.step10.description">
+                        Build AI agents responsibly and compliantly. Ensure your agent products meet ethical standards and 
+                        regulatory requirements.
+                    </p>
+                    <ul class="step-topics">
+                        <li data-i18n="workshops.step10.topic1">Agent bias detection and mitigation</li>
+                        <li data-i18n="workshops.step10.topic2">GDPR compliance for AI agents</li>
+                        <li data-i18n="workshops.step10.topic3">Ethical AI agent frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Journey -->
+    <section class="journey-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="workshops.journey.title">🎯 Your Team's AI Agent Transformation Journey</h2>
+            <p class="section-subtitle" data-i18n="workshops.journey.subtitle">
+                From agent readiness assessment to delivery and maintenance, each phase builds your team's capability to build, 
+                deploy, and maintain secure, explainable AI agents in enterprise environments.
+            </p>
+
+            <div class="journey-flow">
+                <div class="journey-step">
+                    <div class="journey-icon">🔍</div>
+                    <div class="journey-content">
+                        <h3 data-i18n="workshops.journey.phase1.title">Phase 1: Agent Readiness Assessment</h3>
+                        <p data-i18n="workshops.journey.phase1.description">
+                            Individual AI agent readiness assessments identify each team member's starting point and create 
+                            personalized learning roadmaps aligned with the 10-step workshop process. We assess your team's 
+                            capability to build, deploy, and maintain AI agents in enterprise environments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-icon">🎓</div>
+                    <div class="journey-content">
+                        <h3 data-i18n="workshops.journey.phase2.title">Phase 2: AI Agent Building Workshops</h3>
+                        <p data-i18n="workshops.journey.phase2.description">
+                            Progress through all 10 workshops in sequence. Each hands-on session builds practical 
+                            AI agent development skills with real-world examples, ensuring your team masters agent building, 
+                            assessment, and maintenance concepts before moving forward.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-icon">🚀</div>
+                    <div class="journey-content">
+                        <h3 data-i18n="workshops.journey.phase3.title">Phase 3: Express Agent Implementation</h3>
+                        <p data-i18n="workshops.journey.phase3.description">
+                            Apply all 10 workshop learnings to build your real AI agents. Developers and non-developers 
+                            collaborate to deliver secure, explainable AI agents with proper documentation, compliance, and 
+                            maintenance procedures established from day one.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-icon">✅</div>
+                    <div class="journey-content">
+                        <h3 data-i18n="workshops.journey.phase4.title">Phase 4: Agent Delivery & Enterprise Maintenance</h3>
+                        <p data-i18n="workshops.journey.phase4.description">
+                            Your team delivers production-ready AI agents that are secure (Workshop 9), explainable (Workshop 2), 
+                            and ethically sound (Workshop 10). The enterprise maintains these agents through established monitoring, 
+                            updating, and continuous improvement processes to ensure long-term reliability and performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="workshops.benefits.title">✨ Why Our 10-Step AI Agent Process Works</h2>
+            <p class="section-subtitle" data-i18n="workshops.benefits.subtitle">
+                A proven methodology that delivers results for enterprise teams building and maintaining AI agents.
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.structured.title">Structured Agent Development</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.structured.description">
+                        Each step builds on the previous, ensuring a solid foundation in AI agent development before advancing to complex agent architectures.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.security.title">Secure Agent Design</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.security.description">
+                        Agent security and compliance are integrated from the start, ensuring your AI agents are protected against threats from day one.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.explainable.title">Explainable Agents First</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.explainable.description">
+                        Build AI agents that stakeholders can understand, trust, and confidently deploy with transparent decision-making processes.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.team.title">Collaborative Agent Building</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.team.description">
+                        Developers and non-developers work together building AI agents, bridging the gap between technical implementation and business needs.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.enterprise.title">Enterprise Agent Maintenance</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.enterprise.description">
+                        Deliver production-ready AI agents with comprehensive enterprise maintenance processes including monitoring, 
+                        updates, and continuous improvement for long-term reliability and performance.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3 class="benefit-title" data-i18n="workshops.benefits.measurable.title">Working PoC Agent Delivery</h3>
+                    <p class="benefit-description" data-i18n="workshops.benefits.measurable.description">
+                        We create a <strong>PoC proof of concept working agent</strong> for the enterprise. Participants leave with a functioning agent that demonstrates value in their specific environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Human-in-the-Loop Section -->
+    <section class="content-section" style="padding: 4rem 0; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+        <div class="container">
+            <h2 class="section-title" style="color: #78350f;">👥 Human-in-the-Loop: The Secret to Effective Learning</h2>
+            <p class="section-subtitle" style="color: #92400e; max-width: 900px; margin: 0 auto 2rem;">
+                Our workshop simulations leverage Human-in-the-Loop (HITL) methodology to enable self-learning, 
+                role discovery, and continuous agent evolution. Expert guidance at critical moments accelerates 
+                skill development while ensuring quality and safety.
+            </p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="resources-human-in-the-loop.html" class="btn btn-primary" style="background: #6366f1; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; transition: all 0.3s ease;">
+                    🔄 Discover Human-in-the-Loop Methodology
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="workshops.cta.title">🚀 Ready to Build Enterprise AI Agents?</h2>
+            <p data-i18n="workshops.cta.description">
+                Start with an agent readiness assessment to understand your team's current AI agent capabilities and build a customized workshop roadmap for building and maintaining production agents.
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" data-i18n="workshops.cta.startAssessment">🚀 Start Your Assessment</a>
+                <a href="onboarding.html" class="btn btn-secondary" data-i18n="workshops.cta.learnMore">📚 Learn About Our Process</a>
+                <a href="contact.html" class="btn btn-secondary" data-i18n="workshops.cta.contact">💬 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load menu components and i18n -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "10-Step AI Workshop Process for Enterprise Teams",
+        "description": "Comprehensive workshop series covering Vibe Programming, Explainable AI, AGI & ASI, ChatGPT & Gemini, Prompt Engineering, Vector Databases, RAG, Fine-Tuning, AI & Cyber Security, and AI Ethics & GDPR",
+        "provider": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "url": "https://deliverypilot.net"
+        },
+        "coursePrerequisites": "Basic understanding of software development or AI interest",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "blended",
+            "courseWorkload": "PT40H"
+        },
+        "teaches": [
+            "Vibe Programming",
+            "Explainable AI (XAI)",
+            "AGI & ASI",
+            "ChatGPT & Gemini",
+            "Prompt Engineering",
+            "Vector Databases",
+            "RAG (Retrieval-Augmented Generation)",
+            "Fine-Tuning",
+            "AI & Cyber Security",
+            "AI Ethics & GDPR"
+        ],
+        "educationalLevel": "Professional Development",
+        "audience": {
+            "@type": "EducationalAudience",
+            "audienceType": "Enterprise Teams"
+        }
+    }
+    </script>
+</body>
+</html>

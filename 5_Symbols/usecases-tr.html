@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how AI agents transform traditional enterprise workflows, eliminating blame culture and empowering professionals with intelligent automation and context-aware decision support.">
+    <meta name="keywords" content="AI agents, enterprise workflows, blame culture, AI empowerment, configuration management, incident response, AI transformation">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/usecases.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI-Enabled Empowerment Use Cases | Delivery Pilot">
+    <meta property="og:description" content="Transform from blame culture to AI-enabled empowerment in enterprise workflows.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/usecases.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-usecases.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI-Enabled Empowerment Use Cases">
+    <meta name="twitter:description" content="Transform enterprise workflows with AI agents.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-usecases.jpg">
+    
+    <title>Use Cases - AI-Enabled Empowerment | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #00f3ff 0%, #0066cc 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .use-case-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .use-case-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .use-case-card h3 {
+            color: var(--text-dark);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .use-case-card h4 {
+            color: var(--secondary-color);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .use-case-card p,
+        .use-case-card li {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .use-case-card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card pre {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .use-case-card code {
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight-box {
+            background: rgba(37, 99, 235, 0.1);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 3rem 0;
+        }
+
+        .emoji-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .phase-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .phase-item:hover {
+            background: var(--bg-light);
+            border-color: var(--primary-color);
+        }
+
+        .phase-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .solution-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .solution-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin: 1rem 0 0.5rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1><span class="emoji-icon">🤖</span> Use Cases: From Blame Culture to AI-Enabled Empowerment</h1>
+            <p class="subtitle">Transforming Enterprise Workflows with AI Agents</p>
+        </div>
+    </section>
+
+    <div class="content-section">
+        <div class="container">
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">📊</span> Overview</h2>
+            <p>This document explores real-world use cases that demonstrate the transformative shift from traditional non-agent enterprise workflows to AI-enabled agent-based systems. The focus is on how AI agents eliminate the blame and shame culture that arises when humans feel overwhelmed and unable to control complex, ever-changing systems.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">🚫</span> The Non-Agent World: Blame and Shame Culture</h2>
+            
+            <h3>The Problem</h3>
+            <p>In traditional enterprises without AI agent assistance, professionals face impossible expectations:</p>
+            <ul>
+                <li><strong>Information Overload</strong>: Teams receive hundreds of messages daily across multiple channels (Slack, Teams, Email, Jira, Confluence)</li>
+                <li><strong>Impossible Accountability</strong>: Individuals are expected to "stay on top" of all communications</li>
+                <li><strong>Configuration Paralysis</strong>: Making changes requires reading endless documentation and messages to understand dependencies</li>
+                <li><strong>Self-Blame Spiral</strong>: When things go wrong, people blame themselves for "not reading enough" or "missing that one message"</li>
+                <li><strong>Loss of Control</strong>: Professionals feel they're drowning in complexity with no lifeline</li>
+            </ul>
+
+            <h3>Real-World Scenario: The Configuration Change Nightmare</h3>
+            
+            <h4>The Situation:</h4>
+            <p>Sarah, a DevOps engineer, needs to update a Kubernetes configuration for a critical service. She knows she should check:</p>
+            <ul>
+                <li>The last 2 weeks of team Slack messages</li>
+                <li>Recent Jira tickets related to the service</li>
+                <li>Confluence documentation (which may be outdated)</li>
+                <li>Pull request comments from the past month</li>
+                <li>Any recent incident reports</li>
+            </ul>
+
+            <h4>The Reality:</h4>
+            <ul>
+                <li>Sarah spends 4 hours trying to catch up on messages</li>
+                <li>She still misses a critical discussion in a thread she didn't see</li>
+                <li>The configuration change breaks a dependency</li>
+                <li>She feels ashamed: "I should have read that message"</li>
+                <li>The team culture reinforces: "You need to stay on top of communications"</li>
+            </ul>
+
+            <h4>The Outcome:</h4>
+            <ul>
+                <li><strong>Personal toll</strong>: Stress, burnout, impostor syndrome</li>
+                <li><strong>Team impact</strong>: Blame culture, fear of making changes</li>
+                <li><strong>Business cost</strong>: Delayed releases, production incidents</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">✅</span> The Agent-Enabled World: Empowerment and Control</h2>
+            
+            <h3>The Solution</h3>
+            <p>AI agents transform the workflow by becoming intelligent intermediaries that:</p>
+            <ol>
+                <li><strong>Read and Process</strong>: Agents continuously monitor all communication channels</li>
+                <li><strong>Analyze and Contextualize</strong>: They understand relationships between messages, tickets, and documentation</li>
+                <li><strong>Prepare and Summarize</strong>: Agents create concise, actionable summaries for humans</li>
+                <li><strong>Enable Confident Action</strong>: Humans can make decisions with complete context</li>
+                <li><strong>Continuous Learning</strong>: Agents improve their understanding over time</li>
+            </ol>
+
+            <h3>Real-World Scenario: Configuration Management Made Simple</h3>
+            
+            <h4>The Situation:</h4>
+            <p>Sarah needs to update the same Kubernetes configuration, but now with AI agent assistance.</p>
+
+            <h4>The Agent-Enabled Process:</h4>
+            
+            <div class="highlight-box">
+                <strong>1. Sarah asks the Agent:</strong>
+                <pre><code>I need to update the payment-service K8s config. 
+What do I need to know before making changes?</code></pre>
+            </div>
+
+            <div class="highlight-box">
+                <strong>2. The Agent responds within 30 seconds:</strong>
+                <pre><code>📋 Configuration Change Summary for payment-service:
+
+⚠️ Critical Dependencies:
+- Database migration required first (see #infra-db thread)
+- New environment variables added last week (PR #1234)
+- Load balancer rules changed yesterday (Jira DEVOPS-567)
+
+✅ Safe to proceed if:
+- Database migration completed (check with @database-team)
+- Use the new env var format from deployment guide
+
+📝 Related Context:
+- 3 Slack threads analyzed
+- 2 recent PRs reviewed
+- 1 incident report from last week referenced
+
+🔗 Key Resources:
+- [Updated deployment guide](link)
+- [Database migration status](link)
+- [Incident postmortem](link)</code></pre>
+            </div>
+
+            <h4>3. Sarah makes the change confidently:</h4>
+            <ul>
+                <li>She has complete context in 30 seconds vs. 4 hours</li>
+                <li>No critical information missed</li>
+                <li>No self-blame if something unexpected happens</li>
+                <li>Clear understanding of dependencies</li>
+            </ul>
+
+            <h4>The Outcome:</h4>
+            <ul>
+                <li><strong>Personal toll</strong>: Reduced stress, increased confidence, no impostor syndrome</li>
+                <li><strong>Team impact</strong>: Empowerment culture, faster decision-making</li>
+                <li><strong>Business cost</strong>: Faster releases, fewer incidents, better documentation</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">🎯</span> Key Use Cases for AI Agents in Enterprises</h2>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3>1. Configuration Management</h3>
+                    <h4>Challenge</h4>
+                    <p>Making infrastructure or application changes requires understanding complex interdependencies.</p>
+                    <h4>Agent Solution</h4>
+                    <p>Agents read all relevant communications, tickets, and documentation to provide a complete context summary before any change.</p>
+                    <h4>Impact</h4>
+                    <ul>
+                        <li>Significant reduction in time spent on pre-change research</li>
+                        <li>Substantial reduction in configuration-related incidents</li>
+                        <li>Eliminates self-blame for "missing a message"</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>2. Onboarding New Team Members</h3>
+                    <h4>Challenge</h4>
+                    <p>New employees are overwhelmed trying to catch up on months of team history and tribal knowledge.</p>
+                    <h4>Agent Solution</h4>
+                    <p>Agents create personalized onboarding summaries based on team communication patterns, project history, key documentation, and current priorities.</p>
+                    <h4>Impact</h4>
+                    <ul>
+                        <li>Dramatically faster time to first meaningful contribution</li>
+                        <li>Reduced anxiety for new hires</li>
+                        <li>Better knowledge retention</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>3. Incident Response</h3>
+                    <h4>Challenge</h4>
+                    <p>During incidents, responders need to quickly understand recent changes, known issues, and team discussions.</p>
+                    <h4>Agent Solution</h4>
+                    <p>Agents provide instant incident context including recent deployments, similar past incidents, current system status, and key stakeholders to involve.</p>
+                    <h4>Impact</h4>
+                    <ul>
+                        <li>Faster mean time to resolution (MTTR)</li>
+                        <li>More confident incident response</li>
+                        <li>Better post-incident learning</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>4. Cross-Team Collaboration</h3>
+                    <h4>Challenge</h4>
+                    <p>Working with other teams requires understanding their context, priorities, and communication patterns.</p>
+                    <h4>Agent Solution</h4>
+                    <p>Agents bridge team silos by summarizing other teams' relevant discussions, identifying collaboration opportunities, and surfacing blocking issues early.</p>
+                    <h4>Impact</h4>
+                    <ul>
+                        <li>Substantial reduction in "I didn't know about that" situations</li>
+                        <li>Improved cross-team trust</li>
+                        <li>Faster project delivery</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>5. Technical Decision Making</h3>
+                    <h4>Challenge</h4>
+                    <p>Making architectural or technical decisions requires reviewing extensive discussions, RFCs, and prior art.</p>
+                    <h4>Agent Solution</h4>
+                    <p>Agents compile decision-making packages with previous related decisions, team opinions from discussions, external research, and trade-off analysis.</p>
+                    <h4>Impact</h4>
+                    <ul>
+                        <li>Dramatic reduction in decision research time</li>
+                        <li>Better-informed decisions</li>
+                        <li>Clear decision audit trails</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">🌍</span> Why Everyone Needs Agentic Access in a Complex World</h2>
+            
+            <h3>The Reality of Modern Enterprises</h3>
+            <p>Modern enterprises are characterized by:</p>
+            <ul>
+                <li><strong>Information Explosion</strong>: Data doubles every 12-18 months</li>
+                <li><strong>Distributed Teams</strong>: 10+ time zones, async communication</li>
+                <li><strong>Tool Sprawl</strong>: 15+ tools per team on average</li>
+                <li><strong>Rapid Change</strong>: Weekly or daily deployments</li>
+                <li><strong>Compliance Requirements</strong>: Everything must be documented</li>
+            </ul>
+
+            <h3>The Human Limitation</h3>
+            <p>Humans cannot:</p>
+            <ul>
+                <li>Read 500+ messages per day with full comprehension</li>
+                <li>Remember every detail from the past 6 months</li>
+                <li>Track dependencies across 20+ services</li>
+                <li>Stay updated on 5+ concurrent projects</li>
+                <li>Work 24/7 across all time zones</li>
+            </ul>
+
+            <h3>The Agent Advantage</h3>
+            <p>AI agents can:</p>
+            <ul>
+                <li>✅ Monitor communications 24/7 across all channels</li>
+                <li>✅ Maintain perfect memory of all past context</li>
+                <li>✅ Track complex dependency graphs</li>
+                <li>✅ Provide instant summaries on demand</li>
+                <li>✅ Learn from every interaction</li>
+            </ul>
+
+            <h3>The Cultural Shift</h3>
+            <div class="highlight-box">
+                <p><strong>From:</strong> "You should have read all the messages"</p>
+                <p><strong>To:</strong> "The agent will help you understand what matters"</p>
+            </div>
+            <div class="highlight-box">
+                <p><strong>From:</strong> "I can't keep up, it's my fault"</p>
+                <p><strong>To:</strong> "I have the context I need to succeed"</p>
+            </div>
+            <div class="highlight-box">
+                <p><strong>From:</strong> "I'm afraid to make changes"</p>
+                <p><strong>To:</strong> "I'm confident in my decisions"</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">🚀</span> Implementation Path</h2>
+            
+            <div class="phase-grid">
+                <div class="phase-item">
+                    <h4>Phase 1: Read-Only Agents</h4>
+                    <ul>
+                        <li>Agents monitor communications</li>
+                        <li>Provide summaries on demand</li>
+                        <li>No actions taken automatically</li>
+                    </ul>
+                </div>
+
+                <div class="phase-item">
+                    <h4>Phase 2: Recommendation Agents</h4>
+                    <ul>
+                        <li>Agents suggest actions</li>
+                        <li>Highlight important patterns</li>
+                        <li>Alert to potential issues</li>
+                    </ul>
+                </div>
+
+                <div class="phase-item">
+                    <h4>Phase 3: Action-Enabled Agents</h4>
+                    <ul>
+                        <li>Agents can perform routine tasks</li>
+                        <li>Humans approve significant changes</li>
+                        <li>Full audit trail maintained</li>
+                    </ul>
+                </div>
+
+                <div class="phase-item">
+                    <h4>Phase 4: Autonomous Agents</h4>
+                    <ul>
+                        <li>Agents handle complex workflows</li>
+                        <li>Humans provide strategic direction</li>
+                        <li>Continuous improvement loop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">📈</span> Success Metrics</h2>
+            
+            <h3>Individual Level</h3>
+            <ul>
+                <li><strong>Stress Reduction</strong>: Measured by employee surveys</li>
+                <li><strong>Confidence Increase</strong>: Self-reported decision confidence</li>
+                <li><strong>Time Savings</strong>: Hours saved on information gathering</li>
+            </ul>
+
+            <h3>Team Level</h3>
+            <ul>
+                <li><strong>Faster Delivery</strong>: Reduced cycle time for changes</li>
+                <li><strong>Fewer Incidents</strong>: Reduction in configuration errors</li>
+                <li><strong>Better Collaboration</strong>: Cross-team communication quality</li>
+            </ul>
+
+            <h3>Organization Level</h3>
+            <ul>
+                <li><strong>Cultural Transformation</strong>: From blame to empowerment</li>
+                <li><strong>Knowledge Retention</strong>: Reduced impact of employee turnover</li>
+                <li><strong>Innovation Capacity</strong>: More time for strategic work</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">💡</span> Key Takeaways</h2>
+            <ol>
+                <li><strong>Complexity is Real</strong>: Modern enterprises are too complex for humans to manage alone</li>
+                <li><strong>Blame is Counterproductive</strong>: Expecting humans to "read everything" creates toxic culture</li>
+                <li><strong>Agents are Empowering</strong>: AI agents give humans back control and confidence</li>
+                <li><strong>Everyone Benefits</strong>: From individual contributors to executives, agents reduce cognitive load</li>
+                <li><strong>Start Small</strong>: Begin with read-only agents and build trust over time</li>
+            </ol>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="use-case-card">
+            <h2><span class="emoji-icon">🔗</span> Related Resources</h2>
+            <p style="margin-bottom: 1.5rem;">Explore these related topics to deepen your understanding of AI agents in enterprise environments:</p>
+            <ul>
+                <li><a href="resources-humans-vs-agents.html" style="color: var(--primary-color);">👥 Humans Without Agents vs With Agents</a> - Compare overwhelmed teams reaching only 90% SLA with AI-empowered teams achieving excellence</li>
+                <li><a href="resources-knowledge-transfer.html" style="color: var(--primary-color);">🧠 Knowledge Transfer</a> - How AI agents facilitate seamless knowledge sharing across teams</li>
+                <li><a href="resources-task-handover-challenge.html" style="color: var(--primary-color);">🔄 Task Handover Challenge</a> - Solving the context loss problem in team handoffs</li>
+                <li><a href="resources-agent-automation.html" style="color: var(--primary-color);">🔗 Agent Automation</a> - Understanding the difference between traditional automation and intelligent agents</li>
+                <li><a href="resources-root-cause-analysis.html" style="color: var(--primary-color);">🔍 Root Cause Analysis</a> - How AI agents help identify and resolve systemic issues</li>
+                <li><a href="resources-documentation-efficiency.html" style="color: var(--primary-color);">📄 Documentation Efficiency</a> - Automating documentation with AI agents</li>
+                <li><a href="resources-sre-rollback-support.html" style="color: var(--primary-color);">🚨 SRE Rollback Support</a> - AI-powered incident response and rollback procedures</li>
+                <li><a href="resources-job-satisfaction-agents.html" style="color: var(--primary-color);">😊 Job Satisfaction with AI Agents</a> - How agents improve work-life balance and job satisfaction</li>
+                <li><a href="employee-overload.html" style="color: var(--primary-color);">⚡ Employee Overload</a> - Understanding and addressing cognitive overload in modern enterprises</li>
+                <li><a href="resources-paradigm-shift.html" style="color: var(--primary-color);">⚡ Paradigm Shift</a> - The fundamental change in how we work with AI agents</li>
+                <li><a href="resources-workshops-as-simulations.html" style="color: var(--primary-color);">🎮 Workshops as Simulations</a> - Learn through hands-on simulated scenarios</li>
+                <li><a href="resources-why-build-agents.html" style="color: var(--primary-color);">🏗️ Why Build Agents</a> - The business case for implementing AI agents</li>
+            </ul>
+            
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <p style="font-style: italic; text-align: center; color: var(--primary-color);">
+                    <strong>In an ever-changing, complex world, AI agents are not a luxury—they are a necessity for maintaining human dignity, control, and effectiveness.</strong>
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        // Back to top button functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

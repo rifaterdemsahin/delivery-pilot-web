@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot Podcast - Insights on enterprise AI transformation, DevOps practices, and agile methodologies. Learn from industry experts about scaling AI in your organization.">
+    <meta name="keywords" content="delivery pilot podcast, AI transformation podcast, DevOps podcast, enterprise AI, agile transformation, technology podcast">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/podcast.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Delivery Pilot Podcast | AI Transformation Insights">
+    <meta property="og:description" content="Listen to expert insights on enterprise AI transformation, DevOps, and agile methodologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/podcast.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Delivery Pilot Podcast | AI Transformation Insights">
+    <meta name="twitter:description" content="Listen to expert insights on enterprise AI transformation, DevOps, and agile methodologies.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card.jpg">
+    
+    <title>Delivery Pilot Podcast | AI Transformation Insights</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .podcast-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .podcast-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .podcast-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .podcast-content {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .pdf-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+        .section-divider {
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .section-divider h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .pdf-download {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-light);
+        }
+
+        .pdf-download a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .pdf-download a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .podcast-info {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .podcast-info p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .podcast-hero h1 {
+                font-size: 2rem;
+            }
+
+            .podcast-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .pdf-viewer {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="podcast-hero">
+        <div class="container">
+            <h1 data-i18n="podcast.title">Delivery Pilot Podcast</h1>
+            <p class="subtitle" data-i18n="podcast.subtitle">Insights on Enterprise AI Transformation, DevOps, and Agile Methodologies</p>
+        </div>
+    </section>
+
+    <!-- Podcast Content -->
+    <section class="podcast-content">
+        <div class="container">
+            <div class="podcast-info">
+                <p data-i18n="podcast.description">
+                    Welcome to the Delivery Pilot Podcast! Explore our presentation materials covering enterprise AI transformation, 
+                    DevOps best practices, and innovative approaches to scaling technology in modern organizations.
+                </p>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.canva.com/design/DAG78wOF0D0/watch?embed"
+                        title="PodCast December by Rifat Erdem Sahin"
+                        allowfullscreen
+                        allow="fullscreen">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="section-divider">
+                <h2 data-i18n="podcast.presentationTitle">Presentation Materials</h2>
+            </div>
+
+            <div class="pdf-container">
+                <iframe 
+                    class="pdf-viewer"
+                    src="../3_ui/delivery_pilot_present.pdf"
+                    title="Delivery Pilot Presentation"
+                    loading="lazy">
+                    <p>Your browser does not support PDFs. 
+                       <a href="../3_ui/delivery_pilot_present.pdf" download>Download the PDF</a> to view it.
+                    </p>
+                </iframe>
+            </div>
+
+            <div class="pdf-download">
+                <a href="../3_ui/delivery_pilot_present.pdf" download data-i18n="podcast.download">
+                    📥 Download Presentation PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Delivery Pilot Podcast",
+      "description": "Insights on enterprise AI transformation, DevOps practices, and agile methodologies from industry experts.",
+      "url": "https://deliverypilot.net/podcast.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://deliverypilot.net/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Podcast",
+            "item": "https://deliverypilot.net/podcast.html"
+          }
+        ]
+      }
+    }
+    </script>
+</body>
+</html>

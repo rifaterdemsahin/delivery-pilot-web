@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your AI transformation assessments">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard - Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        .dashboard-container {
+            min-height: 100vh;
+            background: #f3f4f6;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dashboard-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dashboard-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .dashboard-title h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .user-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .dashboard-content {
+            padding: 32px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .stat-card .stat-label {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+        
+        .assessments-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .section-header h2 {
+            font-size: 20px;
+            color: #1f2937;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            border: 1px solid #e5e7eb;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .assessment-list {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .assessment-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        
+        .assessment-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .assessment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+        
+        .assessment-info h3 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .assessment-meta {
+            font-size: 13px;
+            color: #6b7280;
+        }
+        
+        .assessment-score {
+            text-align: right;
+        }
+        
+        .score-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .score-badge.excellent {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .score-badge.good {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .score-badge.fair {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .score-badge.poor {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .score-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 4px;
+        }
+        
+        .assessment-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f3f4f6;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        
+        .detail-icon {
+            font-size: 16px;
+        }
+        
+        .detail-label {
+            color: #6b7280;
+        }
+        
+        .detail-value {
+            color: #1f2937;
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6b7280;
+        }
+        
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        
+        .empty-state p {
+            font-size: 14px;
+        }
+        
+        .new-assessment-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        
+        .new-assessment-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .assessment-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f3f4f6;
+        }
+        
+        .download-pdf-btn {
+            flex: 1;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .download-pdf-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .download-pdf-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span>📊</span>
+                    <h1>Assessment Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <div class="user-name" id="userName"></div>
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Assessments</h3>
+                        <div class="stat-value" id="totalAssessments">0</div>
+                        <div class="stat-label">All time</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Score</h3>
+                        <div class="stat-value" id="averageScore">0%</div>
+                        <div class="stat-label">Overall readiness</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Latest Assessment</h3>
+                        <div class="stat-value" id="latestDate">-</div>
+                        <div class="stat-label">Most recent</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Team Members</h3>
+                        <div class="stat-value" id="teamMembers">0</div>
+                        <div class="stat-label">Assessed users</div>
+                    </div>
+                </div>
+                
+                <div class="assessments-section">
+                    <div class="section-header">
+                        <h2>Assessment History</h2>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="recent">Recent</button>
+                            <button class="filter-btn" data-filter="high">High Score</button>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-list" id="assessmentList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Check if user is logged in
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (!currentUser) {
+            window.location.href = 'signin.html';
+        }
+        
+        // Mock assessment data for different enterprises
+        const allAssessments = [
+            // Enterprise A assessments
+            {
+                id: 'asmt-001',
+                enterpriseId: 'enterprise-a',
+                userName: 'John Smith',
+                userEmail: 'john.smith@enterprisea.com',
+                userRole: 'AI Lead',
+                date: '2024-12-01',
+                overallScore: 78,
+                categoryScores: {
+                    prereq: 85,
+                    creative: 72,
+                    comm: 80,
+                    ai: 75,
+                    github: 70,
+                    markdown: 82,
+                    advanced: 68,
+                    delivery: 92
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 42
+            },
+            {
+                id: 'asmt-002',
+                enterpriseId: 'enterprise-a',
+                userName: 'Sarah Johnson',
+                userEmail: 'sarah.j@enterprisea.com',
+                userRole: 'Product Manager',
+                date: '2024-11-28',
+                overallScore: 65,
+                categoryScores: {
+                    prereq: 70,
+                    creative: 68,
+                    comm: 75,
+                    ai: 60,
+                    github: 55,
+                    markdown: 62,
+                    advanced: 50,
+                    delivery: 80
+                },
+                readinessLevel: 'Intermediate Track',
+                completionTime: 45
+            },
+            {
+                id: 'asmt-003',
+                enterpriseId: 'enterprise-a',
+                userName: 'Michael Chen',
+                userEmail: 'mchen@enterprisea.com',
+                userRole: 'Developer',
+                date: '2024-11-25',
+                overallScore: 82,
+                categoryScores: {
+                    prereq: 90,
+                    creative: 75,
+                    comm: 78,
+                    ai: 85,
+                    github: 92,
+                    markdown: 88,
+                    advanced: 80,
+                    delivery: 68
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 38
+            },
+            // Enterprise B assessments
+            {
+                id: 'asmt-004',
+                enterpriseId: 'enterprise-b',
+                userName: 'Lisa Anderson',
+                userEmail: 'lisa.a@enterpriseb.com',
+                userRole: 'CTO',
+                date: '2024-12-05',
+                overallScore: 88,
+                categoryScores: {
+                    prereq: 92,
+                    creative: 85,
+                    comm: 90,
+                    ai: 88,
+                    github: 85,
+                    markdown: 90,
+                    advanced: 82,
+                    delivery: 92
+                },
+                readinessLevel: 'Expert Facilitator',
+                completionTime: 35
+            },
+            {
+                id: 'asmt-005',
+                enterpriseId: 'enterprise-b',
+                userName: 'David Park',
+                userEmail: 'dpark@enterpriseb.com',
+                userRole: 'Data Scientist',
+                date: '2024-11-30',
+                overallScore: 72,
+                categoryScores: {
+                    prereq: 78,
+                    creative: 65,
+                    comm: 70,
+                    ai: 80,
+                    github: 75,
+                    markdown: 68,
+                    advanced: 72,
+                    delivery: 68
+                },
+                readinessLevel: 'Advanced Track',
+                completionTime: 40
+            },
+            // Acme Corp assessments
+            {
+                id: 'asmt-006',
+                enterpriseId: 'acme-corp',
+                userName: 'Emily Roberts',
+                userEmail: 'eroberts@acme.com',
+                userRole: 'Innovation Director',
+                date: '2024-12-03',
+                overallScore: 70,
+                categoryScores: {
+                    prereq: 75,
+                    creative: 72,
+                    comm: 68,
+                    ai: 70,
+                    github: 65,
+                    markdown: 70,
+                    advanced: 62,
+                    delivery: 78
+                },
+                readinessLevel: 'Intermediate Track',
+                completionTime: 43
+            },
+            {
+                id: 'asmt-007',
+                enterpriseId: 'acme-corp',
+                userName: 'James Wilson',
+                userEmail: 'jwilson@acme.com',
+                userRole: 'Senior Developer',
+                date: '2024-11-27',
+                overallScore: 85,
+                categoryScores: {
+                    prereq: 88,
+                    creative: 80,
+                    comm: 82,
+                    ai: 90,
+                    github: 92,
+                    markdown: 85,
+                    advanced: 78,
+                    delivery: 85
+                },
+                readinessLevel: 'Expert Facilitator',
+                completionTime: 36
+            }
+        ];
+        
+        // Get assessments for current user's enterprise
+        const userAssessments = allAssessments.filter(a => a.enterpriseId === currentUser.id);
+        
+        // Update user name
+        document.getElementById('userName').textContent = currentUser.name;
+        
+        // Calculate stats
+        const totalAssessments = userAssessments.length;
+        const avgScore = totalAssessments > 0 
+            ? Math.round(userAssessments.reduce((sum, a) => sum + a.overallScore, 0) / totalAssessments)
+            : 0;
+        const latestAssessment = userAssessments.length > 0 
+            ? userAssessments.sort((a, b) => new Date(b.date) - new Date(a.date))[0]
+            : null;
+        const teamMembers = new Set(userAssessments.map(a => a.userEmail)).size;
+        
+        // Update stats display
+        document.getElementById('totalAssessments').textContent = totalAssessments;
+        document.getElementById('averageScore').textContent = `${avgScore}%`;
+        document.getElementById('latestDate').textContent = latestAssessment 
+            ? new Date(latestAssessment.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+            : '-';
+        document.getElementById('teamMembers').textContent = teamMembers;
+        
+        // Function to get score badge class
+        function getScoreBadge(score) {
+            if (score >= 75) return 'excellent';
+            if (score >= 60) return 'good';
+            if (score >= 40) return 'fair';
+            return 'poor';
+        }
+        
+        // Category names mapping
+        const categoryNames = {
+            prereq: 'Prerequisites & Setup',
+            creative: 'Creative Tools (Canva)',
+            comm: 'Communication (Teams)',
+            ai: 'AI Tools Usage',
+            github: 'GitHub & Codespaces',
+            markdown: 'Markdown & Documentation',
+            advanced: 'Advanced AI & Models',
+            delivery: 'Project Delivery Pilot'
+        };
+        
+        // Function to generate PDF for skills gap report
+        function generateSkillsGapPDF(assessment) {
+            // Check if jsPDF is loaded
+            if (!window.jspdf) {
+                // Fallback: Open a printable version in a new window
+                openPrintableReport(assessment);
+                return;
+            }
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Title
+            doc.setFontSize(20);
+            doc.setTextColor(102, 126, 234);
+            doc.text('AI Transformation Skills Gap Report', 105, 20, { align: 'center' });
+            
+            // Subtitle
+            doc.setFontSize(12);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Delivery Pilot Assessment', 105, 28, { align: 'center' });
+            
+            // User Information
+            let yPos = 45;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Assessment Overview', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            doc.text(`Name: ${assessment.userName}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Role: ${assessment.userRole}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Email: ${assessment.userEmail}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Assessment Date: ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, 20, yPos);
+            yPos += 6;
+            doc.text(`Completion Time: ${assessment.completionTime} minutes`, 20, yPos);
+            
+            // Overall Score
+            yPos += 15;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Overall Readiness', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(24);
+            doc.setTextColor(102, 126, 234);
+            doc.text(`${assessment.overallScore}%`, 20, yPos);
+            
+            doc.setFontSize(12);
+            doc.setTextColor(60, 60, 60);
+            doc.text(`Level: ${assessment.readinessLevel}`, 50, yPos);
+            
+            // Category Scores
+            yPos += 15;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Category Scores', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            Object.entries(assessment.categoryScores).forEach(([category, score]) => {
+                const categoryName = categoryNames[category] || category;
+                doc.setTextColor(60, 60, 60);
+                doc.text(`${categoryName}:`, 20, yPos);
+                
+                // Score color based on performance
+                if (score >= 75) doc.setTextColor(16, 185, 129); // green
+                else if (score >= 60) doc.setTextColor(59, 130, 246); // blue
+                else if (score >= 40) doc.setTextColor(251, 191, 36); // yellow
+                else doc.setTextColor(239, 68, 68); // red
+                
+                doc.text(`${score}%`, 170, yPos);
+                
+                yPos += 6;
+                if (yPos > 270) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+            });
+            
+            // Skills Gap Analysis
+            yPos += 10;
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.text('Skills Gap Analysis', 20, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            
+            const gaps = Object.entries(assessment.categoryScores)
+                .filter(([_, score]) => score < 60)
+                .sort((a, b) => a[1] - b[1]);
+            
+            if (gaps.length > 0) {
+                doc.text('Areas requiring improvement (scored below 60%):', 20, yPos);
+                yPos += 8;
+                
+                gaps.forEach(([category, score]) => {
+                    const categoryName = categoryNames[category] || category;
+                    if (score < 40) doc.setTextColor(239, 68, 68); // red for critical
+                    else if (score < 60) doc.setTextColor(251, 191, 36); // yellow for moderate
+                    
+                    doc.text(`• ${categoryName}: ${score}% - ${score < 40 ? 'Critical Priority' : 'High Priority'}`, 25, yPos);
+                    yPos += 6;
+                    
+                    if (yPos > 270) {
+                        doc.addPage();
+                        yPos = 20;
+                    }
+                });
+            } else {
+                doc.setTextColor(16, 185, 129);
+                doc.text('No significant skills gaps identified. All categories scored above 60%.', 20, yPos);
+            }
+            
+            // Recommendations
+            if (gaps.length > 0) {
+                yPos += 10;
+                if (yPos > 250) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                
+                doc.setFontSize(14);
+                doc.setTextColor(0, 0, 0);
+                doc.text('Recommended Actions', 20, yPos);
+                
+                yPos += 10;
+                doc.setFontSize(10);
+                doc.setTextColor(60, 60, 60);
+                doc.text('Based on your assessment, we recommend focusing on:', 20, yPos);
+                yPos += 8;
+                
+                doc.text('1. Prioritize training in critical gap areas (scored below 40%)', 25, yPos);
+                yPos += 6;
+                doc.text('2. Schedule workshops for high-priority areas (scored 40-60%)', 25, yPos);
+                yPos += 6;
+                doc.text('3. Practice hands-on implementations to reinforce learning', 25, yPos);
+                yPos += 6;
+                doc.text('4. Review and reassess in 3 months to track improvement', 25, yPos);
+            }
+            
+            // Footer
+            doc.setFontSize(8);
+            doc.setTextColor(150, 150, 150);
+            doc.text('Generated by Delivery Pilot - AI Transformation Platform', 105, 285, { align: 'center' });
+            doc.text(new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }), 105, 290, { align: 'center' });
+            
+            // Save the PDF
+            const fileName = `AI-Skills-Gap-${assessment.userName.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`;
+            doc.save(fileName);
+        }
+        
+        // Fallback function: Open printable HTML report
+        function openPrintableReport(assessment) {
+            const gaps = Object.entries(assessment.categoryScores)
+                .filter(([_, score]) => score < 60)
+                .sort((a, b) => a[1] - b[1]);
+            
+            const reportHTML = `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Transformation Skills Gap Report - ${assessment.userName}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
+        .header { text-align: center; margin-bottom: 40px; border-bottom: 3px solid #667eea; padding-bottom: 20px; }
+        .header h1 { color: #667eea; margin: 0; font-size: 28px; }
+        .header p { color: #666; margin: 5px 0; }
+        .section { margin: 30px 0; }
+        .section h2 { color: #667eea; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 20px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .info-item { background: #f9fafb; padding: 15px; border-radius: 8px; }
+        .info-item strong { color: #374151; display: block; margin-bottom: 5px; }
+        .score-large { font-size: 48px; font-weight: bold; color: #667eea; text-align: center; margin: 20px 0; }
+        .category-score { display: flex; justify-content: space-between; padding: 10px; margin: 5px 0; border-radius: 4px; background: #f9fafb; }
+        .category-score.excellent { background: #d1fae5; color: #065f46; }
+        .category-score.good { background: #dbeafe; color: #1e40af; }
+        .category-score.fair { background: #fef3c7; color: #92400e; }
+        .category-score.poor { background: #fee2e2; color: #991b1b; }
+        .gap-item { padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid; }
+        .gap-item.critical { background: #fee2e2; border-color: #ef4444; }
+        .gap-item.high { background: #fef3c7; border-color: #f59e0b; }
+        .recommendations { background: #eff6ff; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .recommendations li { margin: 10px 0; }
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e7eb; color: #9ca3af; font-size: 12px; }
+        @media print {
+            body { margin: 20px; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Transformation Skills Gap Report</h1>
+        <p>Delivery Pilot Assessment</p>
+        <p style="margin-top: 10px;">Generated on ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+    </div>
+    
+    <div class="section">
+        <h2>Assessment Overview</h2>
+        <div class="info-grid">
+            <div class="info-item"><strong>Name:</strong> ${assessment.userName}</div>
+            <div class="info-item"><strong>Role:</strong> ${assessment.userRole}</div>
+            <div class="info-item"><strong>Email:</strong> ${assessment.userEmail}</div>
+            <div class="info-item"><strong>Assessment Date:</strong> ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+            <div class="info-item"><strong>Completion Time:</strong> ${assessment.completionTime} minutes</div>
+            <div class="info-item"><strong>Readiness Level:</strong> ${assessment.readinessLevel}</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Overall Readiness</h2>
+        <div class="score-large">${assessment.overallScore}%</div>
+        <p style="text-align: center; color: #666; font-size: 18px;">${assessment.readinessLevel}</p>
+    </div>
+    
+    <div class="section">
+        <h2>Category Scores</h2>
+        ${Object.entries(assessment.categoryScores).map(([category, score]) => {
+            const categoryName = categoryNames[category] || category;
+            const scoreClass = score >= 75 ? 'excellent' : score >= 60 ? 'good' : score >= 40 ? 'fair' : 'poor';
+            return `<div class="category-score ${scoreClass}">
+                <span>${categoryName}</span>
+                <strong>${score}%</strong>
+            </div>`;
+        }).join('')}
+    </div>
+    
+    <div class="section">
+        <h2>Skills Gap Analysis</h2>
+        ${gaps.length > 0 ? `
+            <p>The following areas require improvement (scored below 60%):</p>
+            ${gaps.map(([category, score]) => {
+                const categoryName = categoryNames[category] || category;
+                const gapClass = score < 40 ? 'critical' : 'high';
+                const priority = score < 40 ? 'Critical Priority' : 'High Priority';
+                return `<div class="gap-item ${gapClass}">
+                    <strong>${categoryName}: ${score}%</strong>
+                    <p>${priority} - Immediate attention required</p>
+                </div>`;
+            }).join('')}
+        ` : '<p style="color: #10b981; font-weight: bold;">✓ No significant skills gaps identified. All categories scored above 60%.</p>'}
+    </div>
+    
+    ${gaps.length > 0 ? `
+    <div class="section">
+        <h2>Recommended Actions</h2>
+        <div class="recommendations">
+            <p><strong>Based on your assessment, we recommend focusing on:</strong></p>
+            <ol>
+                <li>Prioritize training in critical gap areas (scored below 40%)</li>
+                <li>Schedule workshops for high-priority areas (scored 40-60%)</li>
+                <li>Practice hands-on implementations to reinforce learning</li>
+                <li>Review and reassess in 3 months to track improvement</li>
+            </ol>
+        </div>
+    </div>
+    ` : ''}
+    
+    <div class="footer">
+        <p>Generated by Delivery Pilot - AI Transformation Platform</p>
+        <p>For more information, visit deliverypilot.net</p>
+    </div>
+    
+    <div class="no-print" style="text-align: center; margin: 30px 0;">
+        <button onclick="window.print()" style="padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
+            Print or Save as PDF
+        </button>
+        <button onclick="window.close()" style="padding: 12px 24px; background: #6b7280; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; margin-left: 10px;">
+            Close
+        </button>
+    </div>
+</body>
+</html>`;
+            
+            const printWindow = window.open('', '_blank', 'width=800,height=900');
+            printWindow.document.write(reportHTML);
+            printWindow.document.close();
+        }
+        
+        // Function to render assessments
+        function renderAssessments(assessments) {
+            const listContainer = document.getElementById('assessmentList');
+            
+            if (assessments.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📋</div>
+                        <h3>No assessments found</h3>
+                        <p>Start by taking your first AI maturity assessment</p>
+                        <a href="assessment.html" class="new-assessment-btn">Take Assessment</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            listContainer.innerHTML = assessments.map(assessment => `
+                <div class="assessment-card">
+                    <div class="assessment-header">
+                        <div class="assessment-info">
+                            <h3>${assessment.userName}</h3>
+                            <div class="assessment-meta">
+                                ${assessment.userRole} • ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            </div>
+                        </div>
+                        <div class="assessment-score">
+                            <div class="score-badge ${getScoreBadge(assessment.overallScore)}">
+                                ${assessment.readinessLevel}
+                            </div>
+                            <div class="score-value">${assessment.overallScore}%</div>
+                        </div>
+                    </div>
+                    <div class="assessment-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <div class="detail-label">Email</div>
+                                <div class="detail-value">${assessment.userEmail}</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⏱️</span>
+                            <div>
+                                <div class="detail-label">Completion Time</div>
+                                <div class="detail-value">${assessment.completionTime} min</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🎯</span>
+                            <div>
+                                <div class="detail-label">Top Category</div>
+                                <div class="detail-value">${Object.entries(assessment.categoryScores)
+                                    .sort((a, b) => b[1] - a[1])[0][0].toUpperCase()}</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📊</span>
+                            <div>
+                                <div class="detail-label">Categories</div>
+                                <div class="detail-value">${Object.keys(assessment.categoryScores).length}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="assessment-actions">
+                        <button class="download-pdf-btn" onclick='generateSkillsGapPDF(${JSON.stringify(assessment).replace(/'/g, "&apos;")})'>
+                            📥 Download Skills Gap PDF
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Initial render
+        renderAssessments(userAssessments);
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter assessments
+                const filter = btn.dataset.filter;
+                let filtered = [...userAssessments];
+                
+                if (filter === 'recent') {
+                    filtered = filtered.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+                } else if (filter === 'high') {
+                    filtered = filtered.filter(a => a.overallScore >= 75);
+                }
+                
+                renderAssessments(filtered);
+            });
+        });
+        
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            sessionStorage.removeItem('currentUser');
+            window.location.href = 'signin.html';
+        });
+    </script>
+</body>
+</html>
