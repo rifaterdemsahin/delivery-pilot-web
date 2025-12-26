@@ -37,13 +37,13 @@ const navigationConfig = {
             submenu: [
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
                 { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
-                { href: 'agile-transformation.html', text: '📈 Agile Transformation' },
+                { href: 'agile-transformation.html', textKey: 'nav.agileTransformation', text: '📈 Agile Transformation' },
                 { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
                 { href: 'junior-engineer-training.html', textKey: 'nav.juniorTraining', text: '👨‍🎓 Junior Engineer Training' },
-                { href: 'delivery-pilot-methodology.html', text: '📖 Methodology' }
+                { href: 'delivery-pilot-methodology.html', textKey: 'nav.methodology', text: '📖 Methodology' }
             ]
         },
-        { href: 'pricing.html', text: '💰 Pricing' },
+        { href: 'pricing.html', textKey: 'nav.pricing', text: '💰 Pricing' },
         { 
             text: '🏢 Company', 
             textKey: 'nav.company',

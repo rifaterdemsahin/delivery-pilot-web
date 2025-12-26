@@ -41,7 +41,13 @@ const translations = {
             humansVsAgents: "👥 Humans vs Agents",
             agentSecurity: "🔒 Agent Security Benefits",
             security: "🔒 Security",
-            podcast: "🎙️ Podcast"
+            podcast: "🎙️ Podcast",
+            juniorTraining: "👨‍🎓 Junior Engineer Training",
+            agileTransformation: "📈 Agile Transformation",
+            methodology: "📖 Methodology",
+            pricing: "💰 Pricing",
+            useCasesDetailed: "🤖 AI Agent Use Cases",
+            productionDelivery: "🚀 Production Delivery"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -965,7 +971,13 @@ const translations = {
             humansVsAgents: "👥 İnsanlar vs Ajanlar",
             agentSecurity: "🔒 Ajan Güvenlik Avantajları",
             security: "🔒 Güvenlik",
-            podcast: "🎙️ Podcast"
+            podcast: "🎙️ Podcast",
+            juniorTraining: "👨‍🎓 Junior Mühendis Eğitimi",
+            agileTransformation: "📈 Çevik Dönüşüm",
+            methodology: "📖 Metodoloji",
+            pricing: "💰 Fiyatlandırma",
+            useCasesDetailed: "🤖 Yapay Zeka Ajanı Kullanım Alanları",
+            productionDelivery: "🚀 Üretim Teslimatı"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
