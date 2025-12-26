@@ -155,16 +155,33 @@ const footerConfig = {
 /**
  * Generate navigation HTML with support for nested dropdown menus
  */
+/**
+ * Generate navigation HTML with support for nested dropdown menus
+ */
 function generateNavigation() {
+    // Determine path prefix based on current location
+    let pathPrefix = '';
+    if (window.location.pathname.includes('/simulations/')) {
+        pathPrefix = '../';
+    }
+
     const menuItemsHTML = navigationConfig.menuItems.map(item => {
         const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
         const itemClass = item.class ? ` class="${item.class}"` : '';
         
+        // Helper to fix paths
+        const fixPath = (href) => {
+            if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
+                return href;
+            }
+            return pathPrefix + href;
+        };
+
         // Check if item has submenu (dropdown)
         if (item.submenu && item.submenu.length > 0) {
             const submenuHTML = item.submenu.map(subItem => {
                 const subDataI18n = subItem.textKey ? ` data-i18n="${subItem.textKey}"` : '';
-                return `<li><a href="${subItem.href}"${subDataI18n}>${subItem.text}</a></li>`;
+                return `<li><a href="${fixPath(subItem.href)}"${subDataI18n}>${subItem.text}</a></li>`;
             }).join('\n                            ');
             
             return `<li class="dropdown">
@@ -175,16 +192,21 @@ function generateNavigation() {
                         </li>`;
         } else {
             // Regular menu item without submenu
-            return `<li><a href="${item.href}"${dataI18n}${itemClass}>${item.text}</a></li>`;
+            return `<li><a href="${fixPath(item.href)}"${dataI18n}${itemClass}>${item.text}</a></li>`;
         }
     }).join('\n                    ');
+
+    // Fix logo link
+    const logoLink = window.location.pathname.includes('/simulations/') ? 
+        '../' + navigationConfig.logoLink : 
+        navigationConfig.logoLink;
 
     return `
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h2><a href="${navigationConfig.logoLink}">${navigationConfig.logoText}</a></h2>
+                <h2><a href="${logoLink}">${navigationConfig.logoText}</a></h2>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span class="hamburger-line"></span>
@@ -216,8 +238,14 @@ async function searchSite(query) {
 
     try {
         if (!window.siteData) {
-            // Check if we are in root or 5_Symbols to determine path
-            const path = window.location.pathname.includes('5_Symbols') ? '../sitedata.json' : 'sitedata.json';
+            // Determine path to sitedata.json based on current location
+            let path = 'sitedata.json';
+            if (window.location.pathname.includes('/simulations/')) {
+                path = '../../sitedata.json';
+            } else if (window.location.pathname.includes('5_Symbols')) {
+                path = '../sitedata.json';
+            }
+            
             const response = await fetch(path);
             window.siteData = await response.json();
         }
@@ -269,14 +297,23 @@ function initSearch() {
                 const results = await searchSite(query);
                 
                 if (results.length > 0) {
-                    searchResults.innerHTML = results.map(result => `
+                    // Fix links in search results
+                    let pathPrefix = '';
+                    if (window.location.pathname.includes('/simulations/')) {
+                        pathPrefix = '../';
+                    }
+
+                    searchResults.innerHTML = results.map(result => {
+                         const rawUrl = result.url.replace('5_Symbols/', ''); 
+                         const finalUrl = pathPrefix + rawUrl;
+                         return `
                         <div class="search-result-item">
-                            <a href="${result.url.replace('5_Symbols/', '')}">
+                            <a href="${finalUrl}">
                                 <h4>${result.title}</h4>
                                 <p>${result.snippet}</p>
                             </a>
                         </div>
-                    `).join('');
+                    `}).join('');
                     searchResults.style.display = 'block';
                 } else {
                     searchResults.innerHTML = '<div class="search-no-results">No results found</div>';
@@ -298,15 +335,29 @@ function initSearch() {
  * Generate footer HTML
  */
 function generateFooter() {
+    // Determine path prefix based on current location
+    let pathPrefix = '';
+    if (window.location.pathname.includes('/simulations/')) {
+        pathPrefix = '../';
+    }
+
     const sectionsHTML = footerConfig.sections.map(section => {
         const titleDataI18n = section.titleKey ? ` data-i18n="${section.titleKey}"` : '';
         const contentHTML = section.content.map(item => {
+            // Helper to fix paths
+            const fixPath = (href) => {
+                if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
+                    return href;
+                }
+                return pathPrefix + href;
+            };
+
             if (item.type === 'text') {
                 const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
                 return `<p${dataI18n}>${item.text}</p>`;
             } else if (item.type === 'link') {
                 const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
-                return `<li><a href="${item.href}"${dataI18n}>${item.text}</a></li>`;
+                return `<li><a href="${fixPath(item.href)}"${dataI18n}>${item.text}</a></li>`;
             }
             return '';
         }).join('\n                        ');
