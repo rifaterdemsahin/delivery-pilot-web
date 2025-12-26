@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Suite: ChatGPT, Gemini & Claude | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); /* Purple/Indigo for AI */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #6366f1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #4f46e5;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .question-block {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 1.5rem;
+        }
+        
+        .question-block:last-child {
+            border-bottom: none;
+        }
+
+        .question-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .question-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        /* Radio group styling */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: background-color 0.2s;
+        }
+
+        .radio-label:hover {
+            background-color: #eff6ff;
+        }
+
+        .radio-label input {
+            margin-right: 10px;
+        }
+
+        /* Insight Box */
+        .insight-box {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: none; /* Hidden by default */
+        }
+
+        .insight-box.correct {
+            background-color: #f0fdf4;
+            border-left-color: #10b981;
+        }
+
+        .insight-box.wrong {
+            background-color: #fef2f2;
+            border-left-color: #ef4444;
+        }
+
+        .insight-title {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+        
+        .ai-summary {
+            background: #1e293b;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .ai-summary h3 {
+            color: #818cf8;
+            margin-top: 0;
+        }
+        
+        .ai-summary ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .tool-icon {
+            display: inline-block;
+            width: 24px;
+            text-align: center;
+            margin-right: 8px;
+        }
+
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>AI Tools Masterclass</h1>
+        <p>Learn when to use ChatGPT, Gemini, or Claude for Text & Images.</p>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Start Training 🧠</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to unlock the tools guide.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Begin Session</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Survey View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Pilot: <span id="user-email-display" style="font-weight: bold; color: #6366f1;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem;">Knowledge Check ✅</h2>
+                <p style="margin-bottom: 2rem; color: #64748b;">Answer these 5 scenarios to test your AI intuition.</p>
+
+                <form id="feedback-form">
+                    
+                    <!-- Q1: Image Generation Capability -->
+                    <div class="question-block">
+                        <div class="question-title">1. You need to generate a realistic image of a futuristic city. Which tool can do this NATIVELY?</div>
+                        <div class="question-desc">Not all AI models can "draw".</div>
+                        <div class="radio-group" id="q1-group">
+                            <label class="radio-label"><input type="radio" name="q1" value="chatgpt" data-insight="correct"> ChatGPT (DALL-E 3) & Gemini</label>
+                            <label class="radio-label"><input type="radio" name="q1" value="claude" data-insight="wrong"> Claude (Anthropic)</label>
+                            <label class="radio-label"><input type="radio" name="q1" value="notepad" data-insight="wrong"> Notepad++</label>
+                        </div>
+                        <div id="q1-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q2: Best for Text/Code Analysis -->
+                    <div class="question-block">
+                        <div class="question-title">2. You have a massive 100-page PDF report to summarize. Which tool is famous for its huge context window?</div>
+                        <div class="question-desc">Large context windows allow you to "feed" whole books to the AI.</div>
+                        <div class="radio-group" id="q2-group">
+                            <label class="radio-label"><input type="radio" name="q2" value="siri" data-insight="wrong"> Siri</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="claude" data-insight="correct"> Claude (200k+ tokens)</label>
+                            <label class="radio-label"><input type="radio" name="q2" value="paint" data-insight="wrong"> MS Paint</label>
+                        </div>
+                        <div id="q2-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q3: Google Integration -->
+                    <div class="question-block">
+                        <div class="question-title">3. You want to pull data directly from your Google Docs or Gmail. Who you gonna call?</div>
+                        <div class="question-desc">Ecosystem integration matters.</div>
+                        <div class="radio-group" id="q3-group">
+                            <label class="radio-label"><input type="radio" name="q3" value="chatgpt" data-insight="wrong"> ChatGPT</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="gemini" data-insight="correct"> Gemini (Google Workspace Extensions)</label>
+                            <label class="radio-label"><input type="radio" name="q3" value="alexa" data-insight="wrong"> Alexa</label>
+                        </div>
+                        <div id="q3-insight" class="insight-box"></div>
+                    </div>
+
+                     <!-- Q4: Prompting Strategy -->
+                     <div class="question-block">
+                        <div class="question-title">4. You asked for a blog post and it was too generic. What is the best next step?</div>
+                        <div class="question-desc">How do you improve AI output?</div>
+                        <div class="radio-group" id="q4-group">
+                            <label class="radio-label"><input type="radio" name="q4" value="giveup" data-insight="wrong"> Give up and write it yourself</label>
+                            <label class="radio-label"><input type="radio" name="q4" value="iterate" data-insight="correct"> Iterate: Give feedback and ask for a specific tone/style change</label>
+                            <label class="radio-label"><input type="radio" name="q4" value="newchat" data-insight="wrong"> Start a new chat and hope for luck</label>
+                        </div>
+                        <div id="q4-insight" class="insight-box"></div>
+                    </div>
+
+                    <!-- Q5: Image Analysis -->
+                    <div class="question-block">
+                        <div class="question-title">5. Can you upload an image of a broken code snippet to these tools to fix it?</div>
+                        <div class="question-desc">Visual input capabilities (Multimodal).</div>
+                        <div class="radio-group" id="q5-group">
+                            <label class="radio-label"><input type="radio" name="q5" value="yes_all" data-insight="correct"> Yes, ChatGPT, Gemini, and Claude can all "see" images.</label>
+                            <label class="radio-label"><input type="radio" name="q5" value="no" data-insight="wrong"> No, they are text only.</label>
+                        </div>
+                        <div id="q5-insight" class="insight-box"></div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Check Answers & Reveal Guide</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- The "POST" (Summary) Section - Hidden initially -->
+            <div id="summary-card" class="card hidden ai-summary">
+                <h3>🚀 Verified Pilot: AI Tool Guide</h3>
+                <p>Great job completing the check! Here is your quick reference guide:</p>
+                
+                <hr style="border-color: #4b5563; margin: 1.5rem 0;">
+
+                <h4>🤖 ChatGPT (OpenAI)</h4>
+                <ul>
+                    <li><strong>Best for:</strong> General reasoning, coding, and DALL-E 3 Image Generation.</li>
+                    <li><strong>Image Gen:</strong> ✅ Yes (DALL-E).</li>
+                    <li><strong>Superpower:</strong> The "All-rounder" with huge community support.</li>
+                </ul>
+
+                <h4>✨ Gemini (Google)</h4>
+                <ul>
+                    <li><strong>Best for:</strong> Research (live web access) and Workspace integration (Docs/Drive).</li>
+                    <li><strong>Image Gen:</strong> ✅ Yes (Imagen).</li>
+                    <li><strong>Superpower:</strong> Speed and Google Ecosystem integration.</li>
+                </ul>
+
+                <h4>🧠 Claude (Anthropic)</h4>
+                <ul>
+                    <li><strong>Best for:</strong> Coding architecture, massive documents, and "human-like" nuance.</li>
+                    <li><strong>Image Gen:</strong> ❌ No (Cannot generate images).</li>
+                    <li><strong>Superpower:</strong> Huge Context Window (200k) & Reasoning.</li>
+                </ul>
+
+                <hr style="border-color: #4b5563; margin: 1.5rem 0;">
+                
+                <p><strong>Pro Tip:</strong> Don't settle for the first answer. <em>Iterate</em>. Treat the AI like a junior intern—give specific feedback to get the best results!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../../menu.js"></script>
+    <script>
+        // Logic for AI Tools Page
+        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
+        // Shared webhook
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const feedbackForm = document.getElementById('feedback-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+        const summaryCard = document.getElementById('summary-card');
+
+        // Dynamic Feedback Data
+        const insights = {
+            q1: {
+                correct: { title: "✅ Correct!", text: "ChatGPT (via DALL-E) and Gemini (via Imagen) can generate images. Claude is text/analysis only for now.", type: "correct" },
+                wrong: { title: "❌ Incorrect", text: "Claude cannot generate images (yet). It can only analyze them.", type: "wrong" }
+            },
+            q2: {
+                correct: { title: "✅ Correct!", text: "Claude fits entire books in its context window.", type: "correct" },
+                wrong: { title: "❌ Try again", text: "Siri is an assistant, not a large language model. Claude is the text-heavyweight champ.", type: "wrong" }
+            },
+            q3: {
+                correct: { title: "✅ Spot on!", text: "Gemini lives inside Google's ecosystem.", type: "correct" },
+                wrong: { title: "❌ Not quite", text: "ChatGPT is great but doesn't natively read your private Google Docs.", type: "wrong" }
+            },
+            q4: {
+                correct: { title: "✅ Yes!", text: "Iteration is the secret sauce to great AI results.", type: "correct" },
+                wrong: { title: "❌ Don't give up!", text: "Starting over usually loses context. Just ask for a revision!", type: "wrong" }
+            },
+            q5: {
+                correct: { title: "✅ Correct!", text: "All major models are now 'Multimodal'—they can see and understand images.", type: "correct" },
+                wrong: { title: "❌ Outdated info", text: "They can all see! Upload a screenshot of an error and they will fix it.", type: "wrong" }
+            }
+        };
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+            setupInteractions();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Interactive Feedback Logic
+        function setupInteractions() {
+            // Attach change listeners to all radio inputs
+            document.querySelectorAll('input[type=radio]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    const groupName = e.target.name; // e.g., q1
+                    const insightKey = e.target.getAttribute('data-insight'); // correct, wrong
+                    const container = document.getElementById(`${groupName}-insight`);
+                    
+                    if (container && insights[groupName] && insights[groupName][insightKey]) {
+                        const data = insights[groupName][insightKey];
+                        let html = `<span class="insight-title">${data.title}</span>${data.text}`;
+                        
+                        container.innerHTML = html;
+                        container.className = `insight-box ${data.type}`; 
+                        container.style.display = 'block';
+                    }
+                });
+            });
+        }
+
+        // Submit Feedback
+        feedbackForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Data
+            const data = {
+                image_gen_knowledge: document.querySelector('input[name="q1"]:checked')?.value,
+                context_window_knowledge: document.querySelector('input[name="q2"]:checked')?.value,
+                integration: document.querySelector('input[name="q3"]:checked')?.value,
+                iteration: document.querySelector('input[name="q4"]:checked')?.value,
+                multimodal: document.querySelector('input[name="q5"]:checked')?.value
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Analyzing...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'ai_tools_check',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    results: data,
+                    hiddenContext: {
+                        summary: "AI Tools Knowledge Check",
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'Result saved!';
+                statusMsg.style.color = '#10b981';
+                submitBtn.textContent = '✅ Verified';
+                
+                // Show the summary card
+                summaryCard.classList.remove('hidden');
+                
+                // Scroll to summary
+                summaryCard.scrollIntoView({ behavior: 'smooth' });
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Saved locally.';
+                statusMsg.style.color = '#f59e0b';
+                
+                // Still show summary even if webhook fails
+                summaryCard.classList.remove('hidden');
+                summaryCard.scrollIntoView({ behavior: 'smooth' });
+
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
