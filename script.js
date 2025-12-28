@@ -47,7 +47,8 @@ const translations = {
             methodology: "📖 Methodology",
             pricing: "💰 Pricing",
             useCasesDetailed: "🤖 AI Agent Use Cases",
-            productionDelivery: "🚀 Production Delivery"
+            productionDelivery: "🚀 Production Delivery",
+            missionVision: "🎯 Mission & Vision"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -931,6 +932,28 @@ const translations = {
                 assess: "Start Your Assessment",
                 learnMore: "Learn About Enterprise Agents"
             }
+        },
+        mission: {
+            title: "Mission",
+            intro: "Our mission is to <strong>accelerate enterprise AI transformation</strong> by providing the methodology, platform, and expertise needed to build secure, explainable, and production-ready AI agents.",
+            subtitle: "We achieve this by:",
+            point1: "<strong>Democratizing AI Implementation</strong>: empowering diverse roles (Implementers, Designers, Planners, Operators) to collaborate effectively using our \"Vibe Programming\" methodology.",
+            point2: "<strong>Delivering Practical Outcomes</strong>: Moving beyond theory to deliver working, git-based repositories and deployed agents that solve real business problems.",
+            point3: "<strong>Closing the Skills Gap</strong>: Providing a structured \"Assessment > Workshop > Implementation\" journey that transforms junior engineers and non-technical staff into AI-capable professionals.",
+            point4: "<strong>Building Trust</strong>: operating with transparency, security (NATO/SC cleared foundation), and a focus on \"fixing what is already there\" rather than replacing systems.",
+            point5: "<strong>Acting as a Navigator</strong>: Serving as the trusted \"Delivery Pilot\" that guides enterprises through the turbulence of rapid technological change.",
+            imageAlt: "Delivery Pilot Mission"
+        },
+        vision: {
+            title: "Vision",
+            intro: "To become the definitive \"Heads-Up Display\" for enterprise operations in the AI era, empowering organizations to navigate the complexities of digital transformation with the same situational awareness as a jet pilot.",
+            subtitle: "We envision a future where:",
+            point1: "<strong>Enterprises are Always-Learning Organizations</strong>: continuously adapting to the \"jet plane\" speed of AI evolution.",
+            point2: "<strong>The Skills Gap is Bridged</strong>: The \"RAISE\" (Rapid AI Increases Skills Expectations) challenge is solved through practical, hands-on upskilling.",
+            point3: "<strong>Vibe Programming Meets Engineering</strong>: The gap between non-deterministic AI creativity and deterministic engineering rigor is closed.",
+            point4: "<strong>Human-Agent Collaboration is Seamless</strong>: Humans and AI agents work in perfect synergy, with agents handling complexity and humans focusing on strategy.",
+            outro: "Ultimately, we strive to be the Platform as a Service (PaaS) that allows any enterprise to deploy, manage, and scale AI applications with confidence, security, and measurable business value.",
+            imageAlt: "Delivery Pilot Vision"
         }
     },
     tr: {
@@ -980,7 +1003,8 @@ const translations = {
             methodology: "📖 Metodoloji",
             pricing: "💰 Fiyatlandırma",
             useCasesDetailed: "🤖 Yapay Zeka Ajanı Kullanım Alanları",
-            productionDelivery: "🚀 Üretim Teslimatı"
+            productionDelivery: "🚀 Üretim Teslimatı",
+            missionVision: "🎯 Misyon & Vizyon"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1968,6 +1992,28 @@ const translations = {
                 assess: "Değerlendirmenize Başlayın",
                 learnMore: "Kurumsal Ajanlar Hakkında Bilgi Edinin"
             }
+        },
+        mission: {
+            title: "Misyon",
+            intro: "Misyonumuz, güvenli, açıklanabilir ve üretime hazır AI ajanları oluşturmak için gereken metodoloji, platform ve uzmanlığı sağlayarak <strong>kurumsal AI dönüşümünü hızlandırmaktır</strong>.",
+            subtitle: "Bunu şu şekilde başarıyoruz:",
+            point1: "<strong>AI Uygulamasını Demokratikleştirerek</strong>: Farklı rollerin (Uygulayıcılar, Tasarımcılar, Planlamacılar, Operatörler) \"Vibe Programlama\" metodolojimizi kullanarak etkili bir şekilde işbirliği yapmasını sağlayarak.",
+            point2: "<strong>Pratik Sonuçlar Sunarak</strong>: Teorinin ötesine geçip, gerçek iş problemlerini çözen çalışan, git tabanlı depolar ve dağıtılmış ajanlar sunarak.",
+            point3: "<strong>Yetenek Açığını Kapatarak</strong>: Genç mühendisleri ve teknik olmayan personeli AI yetkinliğine sahip profesyonellere dönüştüren yapılandırılmış bir \"Değerlendirme > Atölye > Uygulama\" yolculuğu sağlayarak.",
+            point4: "<strong>Güven İnşa Ederek</strong>: Şeffaflıkla, güvenlikle (NATO/SC onaylı temel) ve sistemleri değiştirmek yerine \"zaten orada olanı düzeltme\" odaklı çalışarak.",
+            point5: "<strong>Bir Navigatör Olarak Hareket Ederek</strong>: Kurumlara hızlı teknolojik değişimin türbülansında rehberlik eden güvenilir \"Delivery Pilot\" (Teslimat Pilotu) olarak hizmet vererek.",
+            imageAlt: "Delivery Pilot Misyonu"
+        },
+        vision: {
+            title: "Vizyon",
+            intro: "AI çağında kurumsal operasyonlar için nihai \"Heads-Up Display\" (Sanal Gösterge Paneli) olmak, organizasyonların dijital dönüşümün karmaşıklığında bir jet pilotuyla aynı durumsal farkındalıkla gezinmesini sağlamak.",
+            subtitle: "Şöyle bir gelecek hayal ediyoruz:",
+            point1: "<strong>Kurumlar Sürekli Öğrenen Organizasyonlardır</strong>: AI evriminin \"jet uçağı\" hızına sürekli adapte olurlar.",
+            point2: "<strong>Yetenek Açığı Kapatılmıştır</strong>: \"RAISE\" (Hızlı AI Yetenek Beklentilerini Artırıyor) zorluğu, pratik ve uygulamalı beceri geliştirme ile çözülmüştür.",
+            point3: "<strong>Vibe Programlama Mühendislikle Buluşuyor</strong>: Deterministik olmayan AI yaratıcılığı ile deterministik mühendislik disiplini arasındaki boşluk kapanmıştır.",
+            point4: "<strong>İnsan-Ajan İşbirliği Kesintisizdir</strong>: İnsanlar ve AI ajanları mükemmel bir sinerji içinde çalışır; ajanlar karmaşıklığı yönetirken insanlar stratejiye odaklanır.",
+            outro: "Nihayetinde, herhangi bir kurumun AI uygulamalarını güven, emniyet ve ölçülebilir iş değeri ile dağıtmasını, yönetmesini ve ölçeklendirmesini sağlayan Hizmet Olarak Platform (PaaS) olmayı hedefliyoruz.",
+            imageAlt: "Delivery Pilot Vizyonu"
         }
     }
 };
