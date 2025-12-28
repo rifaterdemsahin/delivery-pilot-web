@@ -219,8 +219,8 @@ const translations = {
             },
             prosumer: {
                 title: "Prosumer",
-                subtitle: "1-on-1 Assessment For AI Workshop Readiness",
-                priceText: "per session",
+                subtitle: "1-on-1 Assessments For AI Workshop Readiness",
+                priceText: "per professional/per year",
                 feature1: "Individual AI maturity assessment",
                 feature2: "Personalized skills gap analysis",
                 feature3: "Custom AI learning roadmap",
@@ -1189,8 +1189,8 @@ const translations = {
             },
             prosumer: {
                 title: "Prosumer",
-                subtitle: "Yapay Zeka Atölyesi Hazırlığı için Bire Bir Değerlendirme",
-                priceText: "oturum başına",
+                subtitle: "Yapay Zeka Atölyesi Hazırlığı için Bire Bir Değerlendirmeler",
+                priceText: "profesyonel başına / yıllık",
                 feature1: "Bireysel yapay zeka olgunluk değerlendirmesi",
                 feature2: "Kişiselleştirilmiş beceri boşluğu analizi",
                 feature3: "Özel yapay zeka öğrenim yol haritası",
