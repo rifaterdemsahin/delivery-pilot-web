@@ -35,7 +35,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Generate Version File
-        run: echo "{\"version\":\"$(git rev-parse --short HEAD)\"}" > version.json
+        run: echo "{\"version\":\"$(git rev-parse --short HEAD)\", \"full_sha\":\"$(git rev-parse HEAD)\"}" > version.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

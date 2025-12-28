@@ -410,7 +410,9 @@ function generateFooter() {
             </div>
             <div class="footer-bottom">
                 <p${copyrightDataI18n}>${copyrightText}</p>
-                <p class="version-info" style="font-size: 0.8em; opacity: 0.7; margin-top: 5px;">v<span id="deploy-version">...</span></p>
+                <p class="version-info" style="font-size: 0.8em; opacity: 0.7; margin-top: 5px;">
+                    v<a id="deploy-version-link" href="#" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor;"><span id="deploy-version">...</span></a>
+                </p>
             </div>
         </div>
     </footer>`;
@@ -459,6 +461,8 @@ if (document.readyState === 'loading') {
  */
 async function displayVersion() {
     const versionElement = document.getElementById('deploy-version');
+    const versionLink = document.getElementById('deploy-version-link');
+    
     if (!versionElement) return;
 
     try {
@@ -473,9 +477,19 @@ async function displayVersion() {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Version file not found');
         const data = await response.json();
+        
         versionElement.textContent = data.version;
+        
+        if (versionLink && data.full_sha) {
+            versionLink.href = `https://github.com/rifaterdemsahin/delivery-pilot-web/commit/${data.full_sha}`;
+        }
     } catch (e) {
         // console.warn('Could not fetch version info:', e);
         versionElement.textContent = 'dev';
+        if (versionLink) {
+            versionLink.removeAttribute('href');
+            versionLink.style.textDecoration = 'none';
+            versionLink.style.borderBottom = 'none';
+        }
     }
 }
