@@ -483,6 +483,10 @@ async function displayVersion() {
         
         versionElement.textContent = data.version;
         
+        if (data.date) {
+             versionElement.title = data.date;
+        }
+
         if (versionLink && data.full_sha) {
             versionLink.href = `https://github.com/rifaterdemsahin/delivery-pilot-web/commit/${data.full_sha}`;
         }

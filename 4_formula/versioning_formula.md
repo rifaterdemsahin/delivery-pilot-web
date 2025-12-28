@@ -19,7 +19,7 @@ In the GitHub Actions workflow (`.github/workflows/static.yml`), a step is added
 
 ```yaml
 - name: Generate Version File
-  run: echo "{\"version\":\"$(git rev-parse --short HEAD)\", \"full_sha\":\"$(git rev-parse HEAD)\"}" > version.json
+  run: echo "{\"version\":\"$(git rev-parse --short HEAD)\", \"full_sha\":\"$(git rev-parse HEAD)\", \"date\":\"$(date -u +'%Y-%m-%d %H:%M:%S UTC')\"}" > version.json
 ```
 
 *   **Commands:**
@@ -29,7 +29,8 @@ In the GitHub Actions workflow (`.github/workflows/static.yml`), a step is added
     ```json
     {
       "version": "a1b2c3d",
-      "full_sha": "a1b2c3d..."
+      "full_sha": "a1b2c3d...",
+      "date": "2025-10-27 10:30:00 UTC"
     }
     ```
 *   **Location:** This file is created in the root of the site (and subdirectories depending on build context) and uploaded as part of the artifact.
@@ -51,8 +52,9 @@ The `menu.js` file handles the display logic within the `generateFooter` and `di
     1.  Determines the correct path to `version.json` based on the current page URL.
     2.  Fetches `version.json`.
     3.  Updates `span#deploy-version` with `data.version` (short SHA).
-    4.  Updates `a#deploy-version-link` href with `https://github.com/rifaterdemsahin/delivery-pilot-web/commit/` + `data.full_sha`.
-    5.  **Fallback:** If the fetch fails (e.g., running locally without the generated file), it defaults to displaying `vdev` and removes the link.
+    4.  Updates `span#deploy-version` title attribute with `data.date` (tooltip).
+    5.  Updates `a#deploy-version-link` href with `https://github.com/rifaterdemsahin/delivery-pilot-web/commit/` + `data.full_sha`.
+    6.  **Fallback:** If the fetch fails (e.g., running locally without the generated file), it defaults to displaying `vdev` and removes the link.
 
 ## Usage
 
