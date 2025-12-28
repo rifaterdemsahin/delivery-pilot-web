@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Reframing Quick Reference Card
 
 **Purpose:** Fast lookup for consistent messaging during content updates  

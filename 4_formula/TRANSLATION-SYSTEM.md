@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-26
+
 # Turkish-English Translation System
 
 ## Overview

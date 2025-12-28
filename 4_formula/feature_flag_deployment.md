@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # Feature Flag Deployment Formula
 
 This document outlines how to control the static site deployment using a GitHub repository variable.

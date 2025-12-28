@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # 🌍 GitHub Pages
 
 This project is hosted on GitHub Pages, which serves the static HTML/CSS/JS files directly from the repository.

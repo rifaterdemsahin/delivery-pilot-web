@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # 🎨 Canva for Workshops and Simulations
 
 This document outlines how we utilize Canva to facilitate interactive workshops and realistic simulations.

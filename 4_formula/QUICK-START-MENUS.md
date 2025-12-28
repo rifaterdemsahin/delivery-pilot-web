@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-12
+
 # Quick Start Guide - Reusable Menu System
 
 ## 🚀 What Changed?

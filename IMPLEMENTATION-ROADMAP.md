@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Implementation Roadmap: Reframing to AI-Powered Delivery Acceleration Platform
 
 **Date:** 2025-12-17  

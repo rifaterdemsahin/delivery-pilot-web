@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-12
+
 # Reusable Menu System Documentation
 
 ## Overview

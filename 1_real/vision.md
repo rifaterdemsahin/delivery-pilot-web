@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # Vision
 
 To become the definitive "Heads-Up Display" for enterprise operations in the AI era, empowering organizations to navigate the complexities of digital transformation with the same situational awareness as a jet pilot.

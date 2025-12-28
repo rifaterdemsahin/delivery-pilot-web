@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # Status Quo: The RAISE Context
 
 The current enterprise landscape is defined by a critical tension we call **RAISE: Rapid AI Increases Skills Expectations**.

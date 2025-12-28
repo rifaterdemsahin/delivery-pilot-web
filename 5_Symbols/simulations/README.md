@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-26
+
 # Workshop Simulations
 
 This directory contains the interactive simulation pages and environment checklist for the Delivery Pilot workshop series. These simulations are designed to help participants assess their readiness and learn new skills through active doing.

@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Reframing Documentation Index
 
 **Project:** Delivery Pilot Strategic Repositioning  

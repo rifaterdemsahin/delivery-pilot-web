@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Business Model Sanity Check Report
 
 **Date:** 2025-12-14  

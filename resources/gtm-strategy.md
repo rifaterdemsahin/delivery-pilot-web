@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Go-To-Market (GTM) Strategy - Delivery Pilot
 
 ## Executive Summary

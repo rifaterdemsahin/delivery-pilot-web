@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-12
+
 # Sanity Check - Quick Start Guide
 
 This directory contains a comprehensive sanity check system for the Delivery Pilot web project.

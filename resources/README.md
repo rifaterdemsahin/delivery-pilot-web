@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Resources Directory
 
 This directory contains strategic planning documents, go-to-market materials, and other resources for the Delivery Pilot platform.

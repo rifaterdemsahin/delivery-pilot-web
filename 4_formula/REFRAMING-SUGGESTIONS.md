@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # Reframing Suggestions: From Skills Training to AI-Powered Delivery Acceleration
 
 **Date:** 2025-12-17  

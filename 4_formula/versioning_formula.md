@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # Automated Versioning Formula
 
 This document outlines the system used to display the deployed version (Git Commit SHA) in the website footer.

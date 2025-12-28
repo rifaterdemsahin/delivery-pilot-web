@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-28
+
 # 15-Minute Podcast Presentation: Delivery Pilot
 ## Solving the RAISE Problem in Enterprise AI Transformation
 

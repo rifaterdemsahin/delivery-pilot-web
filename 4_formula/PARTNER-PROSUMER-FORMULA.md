@@ -1,3 +1,5 @@
+📅 Updated: 2025-12-23
+
 # The Partner-Prosumer Formula: Why Free Assessments Create Enterprise Value
 
 ## Executive Summary
