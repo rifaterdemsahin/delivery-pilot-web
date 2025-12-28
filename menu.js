@@ -410,6 +410,7 @@ function generateFooter() {
             </div>
             <div class="footer-bottom">
                 <p${copyrightDataI18n}>${copyrightText}</p>
+                <p class="version-info" style="font-size: 0.8em; opacity: 0.7; margin-top: 5px;">v<span id="deploy-version">...</span></p>
             </div>
         </div>
     </footer>`;
@@ -443,10 +444,38 @@ if (document.readyState === 'loading') {
         insertNavigation();
         insertFooter();
         initSearch();
+        displayVersion();
     });
 } else {
     // DOM is already ready
     insertNavigation();
     insertFooter();
     initSearch();
+    displayVersion();
+}
+
+/**
+ * Fetch and display deployment version
+ */
+async function displayVersion() {
+    const versionElement = document.getElementById('deploy-version');
+    if (!versionElement) return;
+
+    try {
+        // Determine path to version.json based on current location
+        let path = 'version.json';
+        if (window.location.pathname.includes('/simulations/')) {
+            path = '../../version.json';
+        } else if (window.location.pathname.includes('5_Symbols')) {
+            path = '../version.json';
+        }
+        
+        const response = await fetch(path);
+        if (!response.ok) throw new Error('Version file not found');
+        const data = await response.json();
+        versionElement.textContent = data.version;
+    } catch (e) {
+        // console.warn('Could not fetch version info:', e);
+        versionElement.textContent = 'dev';
+    }
 }
