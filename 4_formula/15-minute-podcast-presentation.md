@@ -3,7 +3,7 @@
 
 **Presenter**: Rifat Erdem Sahin, Founder & CEO, Delivery Pilot
 **Duration**: 15 minutes
-**Date**: December 2024
+**Date**: December 2025
 
 ---
 
