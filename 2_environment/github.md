@@ -2,6 +2,9 @@
 
 This project relies heavily on GitHub for source control, project management, and automation.
 
+Rationale
+Agent integrated code repositories used in the workshops
+
 ## Features Used
 
 ### 1. Repository

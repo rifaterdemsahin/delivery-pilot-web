@@ -2,6 +2,9 @@
 
 This guide explains how to set up the Delivery Pilot Web project on your local machine.
 
+Rational
+Local agents developed and deliver the participants.
+
 ## Prerequisites
 
 - **Operating System**: macOS, Windows, or Linux

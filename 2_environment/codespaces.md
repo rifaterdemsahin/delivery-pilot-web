@@ -2,6 +2,9 @@
 
 Delivery Pilot Web is configured to be fully editable directly in the cloud using GitHub Codespaces.
 
+Rationale
+to build freemium based proof of concepts in the workshops
+
 ## What is Codespaces?
 
 GitHub Codespaces provides a complete, configurable development environment in the cloud. You can start developing instantly without installing anything on your local machine.
