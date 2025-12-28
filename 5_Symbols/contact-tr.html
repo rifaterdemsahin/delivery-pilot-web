@@ -239,53 +239,94 @@
             </div>
 
             <!-- Contact Information Grid -->
-            <div class="contact-info-grid">
-                <!-- Email -->
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:contact@rifaterdemsahin.com">contact@rifaterdemsahin.com</a></p>
-                </div>
-
-                <!-- Phone -->
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+447848024173">07848 024 173</a></p>
-                </div>
-
-                <!-- WhatsApp Business -->
-                <div class="contact-card">
-                    <div class="contact-icon">💬</div>
-                    <h3>WhatsApp Business</h3>
-                    <p><a href="https://wa.me/447848024173" target="_blank" rel="noopener noreferrer">+44 7848 024 173</a></p>
-                </div>
-
-                <!-- Address -->
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Address</h3>
-                    <div class="address-details">
-                        <p>23 King Street</p>
-                        <p>CB1 1AH</p>
-                        <p>Cambridgeshire, UK</p>
+            <!-- Contact Form Section -->
+            <div class="contact-form-container" style="max-width: 600px; margin: 0 auto; background: var(--bg-light); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Bize Mesaj Gönderin</h2>
+                <form id="contactFormTr">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">İsim</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
                     </div>
-                </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">E-posta</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
 
-                <!-- Services -->
-                <div class="contact-card">
-                    <div class="contact-icon">💼</div>
-                    <h3>Services</h3>
-                    <p>AI Solutions, Training<br>(Former DevOps Engineer)</p>
-                </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="interest" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">İlgilendiğim konu...</label>
+                        <select id="interest" name="interest" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; background-color: white;">
+                            <option value="AI Solutions">Yapay Zeka Çözümleri</option>
+                            <option value="Training">Eğitim / Atölye Çalışmaları</option>
+                            <option value="Consulting">Danışmanlık</option>
+                            <option value="Other">Diğer</option>
+                        </select>
+                    </div>
 
-                <!-- Response Time -->
-                <div class="contact-card">
-                    <div class="contact-icon">⏰</div>
-                    <h3>Response Time</h3>
-                    <p>Usually within 24 hours</p>
-                </div>
+                    <div style="margin-bottom: 2rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Mesaj</label>
+                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" style="width: 100%; padding: 1rem; background: var(--primary-color); color: white; border: none; border-radius: 6px; font-size: 1.125rem; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">
+                        Mesaj Gönder
+                    </button>
+                    <p id="formStatus" style="text-align: center; margin-top: 1rem; display: none;"></p>
+                </form>
             </div>
+
+            <script>
+                document.getElementById('contactFormTr').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submitBtn');
+                    const statusMsg = document.getElementById('formStatus');
+                    const originalBtnText = submitBtn.innerText;
+                    
+                    // Disable button and show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = 'Gönderiliyor...';
+                    statusMsg.style.display = 'none';
+
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        interest: document.getElementById('interest').value,
+                        message: document.getElementById('message').value,
+                        source: 'contact_page_tr',
+                        timestamp: new Date().toISOString()
+                    };
+
+                    try {
+                        // Replace with your actual n8n webhook URL
+                        const webhookUrl = 'https://n8n.rifaterdemsahin.com/webhook/contact-form';
+                        
+                        const response = await fetch(webhookUrl, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            statusMsg.innerText = '✅ Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.';
+                            statusMsg.style.color = 'green';
+                            document.getElementById('contactFormTr').reset();
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        statusMsg.innerText = '❌ Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin veya doğrudan bize e-posta gönderin.';
+                        statusMsg.style.color = 'red';
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalBtnText;
+                        statusMsg.style.display = 'block';
+                    }
+                });
+            </script>
 
             <!-- Schedule a Meeting Section -->
             <div class="meeting-section">
