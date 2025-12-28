@@ -1,5 +1,4 @@
 📅 Updated: 2025-12-28
-
 # Mission
 
 Our mission is to **accelerate enterprise AI transformation** by providing the methodology, platform, and expertise needed to build secure, explainable, and production-ready AI agents.
