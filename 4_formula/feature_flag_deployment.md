@@ -57,5 +57,5 @@ To disable the deployment, you can change the value of the `FEATURE_FLAG_DEPLOY`
 2.  Edit `FEATURE_FLAG_DEPLOY` and set the value to `false`.
 3.  The next deployment will be skipped, as shown below:
 
-![Feature Flag Off Skipped](file:///Users/rifaterdemsahin/projects/delivery-pilot-web/3_ui/feature_flag_off_skipped.png)
+![Feature Flag Off Skipped](../3_ui/feature_flag_off_skipped.png)
 
