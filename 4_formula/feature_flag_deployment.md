@@ -48,3 +48,14 @@ jobs:
 
 *   **Deployment Skipped:** If the deployment job is greyed out or skipped, check that the `FEATURE_FLAG_DEPLOY` variable exists in the repository settings and is exactly `true`.
 *   **Variable Scope:** Ensure the variable is set at the Repository level (or Organization level if inherited), not just environment secrets/vars unless configured specifically. NOTE: The current implementation uses `vars.FEATURE_FLAG_DEPLOY` which typically refers to repository level variables available to all environments or specifically configured ones.
+
+## How to Turn Off Deployment
+
+To disable the deployment, you can change the value of the `FEATURE_FLAG_DEPLOY` variable.
+
+1.  Navigate to **Settings** > **Secrets and variables** > **Actions** > **Variables**.
+2.  Edit `FEATURE_FLAG_DEPLOY` and set the value to `false`.
+3.  The next deployment will be skipped, as shown below:
+
+![Feature Flag Off Skipped](file:///Users/rifaterdemsahin/projects/delivery-pilot-web/3_ui/feature_flag_off_skipped.png)
+
