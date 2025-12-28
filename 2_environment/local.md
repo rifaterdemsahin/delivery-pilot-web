@@ -1,18 +1,18 @@
-# Local Environment Setup
+# 💻 Local Environment Setup
 
 This guide explains how to set up the Delivery Pilot Web project on your local machine.
 
-Rational
-Local agents developed and deliver the participants.
+**Rationale:**
+Local agents developed to deliver value to the participants.
 
-## Prerequisites
+## 📋 Prerequisites
 
 - **Operating System**: macOS, Windows, or Linux
 - **Git**: For version control
 - **Visual Studio Code (VS Code)**: Recommended editor
 - **Browser**: Chrome, Firefox, Safari, or Edge
 
-## Installation
+## 🚀 Installation
 
 1.  **Clone the Repository**
     ```bash
@@ -25,7 +25,7 @@ Local agents developed and deliver the participants.
     code .
     ```
 
-## Development Tools
+## 🛠️ Development Tools
 
 ### Recommended Extensions
 We recommend the following VS Code extensions for this project:
@@ -43,7 +43,7 @@ Since this is a static website, you don't need a complex build server.
     open index.html
     ```
 
-## Workflow
+## 🔄 Workflow
 1.  **Pull changes**: `git pull`
 2.  **Create a branch**: `git checkout -b feature/your-feature`
 3.  **Make changes**: Edit files using VS Code.

@@ -1,20 +1,20 @@
-# GitHub Environment
+# 🐙 GitHub Environment
 
 This project relies heavily on GitHub for source control, project management, and automation.
 
-Rationale
-Agent integrated code repositories used in the workshops
+**Rationale:**
+Agent-integrated code repositories used in the workshops.
 
-## Features Used
+## ✨ Features Used
 
 ### 1. Repository
 The central `delivery-pilot-web` repository hosts all source code and documentation.
 
 ### 2. Issues & Projects
 We use GitHub Issues to track:
-- Bugs
-- Feature Requests
-- Documentation Tasks
+- 🐛 Bugs
+- 💡 Feature Requests
+- 📚 Documentation Tasks
 
 ### 3. Pull Requests
 All changes should go through a Pull Request (PR) workflow:
@@ -28,7 +28,7 @@ All changes should go through a Pull Request (PR) workflow:
 The `.github/workflows` directory contains automation scripts.
 - We currently have actions to automate testing or deployment steps (check `.github/workflows/` for details).
 
-## Branching Strategy
+## 🌿 Branching Strategy
 - **main**: The production-ready code. Protected branch.
 - **feature/*** : For new features.
 - **bugfix/*** : For bug fixes.

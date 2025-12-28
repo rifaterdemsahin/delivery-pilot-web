@@ -1,33 +1,33 @@
-# GitHub Codespaces
+# ☁️ GitHub Codespaces
 
 Delivery Pilot Web is configured to be fully editable directly in the cloud using GitHub Codespaces.
 
-Rationale
-to build freemium based proof of concepts in the workshops
+**Rationale:**
+To build freemium-based proof of concepts in the workshops.
 
-## What is Codespaces?
+## ❓ What is Codespaces?
 
 GitHub Codespaces provides a complete, configurable development environment in the cloud. You can start developing instantly without installing anything on your local machine.
 
-## How to use
+## 🚀 How to Use
 
 1.  Navigate to the repository on GitHub.
 2.  Click the **Code** button (green).
 3.  Select the **Codespaces** tab.
 4.  Click **Create codespace on main** (or your current branch).
 
-## Configuration
+## ⚙️ Configuration
 
 The environment is automatically configured based on the repository content.
 - **Root**: `/workspaces/delivery-pilot-web`
 - **Editor**: VS Code (web version)
 
-## Benefits
+## ✅ Benefits
 
 - **Consistency**: Everyone gets the same OS and tools.
 - **Speed**: No need to `clone` or `npm install` locally on slow networks.
-- **security**: Code stays in the cloud.
+- **Security**: Code stays in the cloud.
 
-## Lifecycle
+## ♻️ Lifecycle
 - **Stop**: Codespaces time out after a period of inactivity to save costs.
 - **Delete**: You can delete old codespaces from your GitHub dashboard.
