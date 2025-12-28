@@ -233,6 +233,20 @@ const translations = {
                 feature10: "Prerequisites validation for workshops and enterprise solutions",
                 cta: "📅 Book Assessment"
             },
+            certified: {
+                title: "Certified Professional",
+                subtitle: "Become a Delivery Pilot",
+                priceText: "one-time certification fee",
+                feature1: "Certified in Delivery Pilot Methodology",
+                feature2: "Build Secure Enterprise Agents",
+                feature3: "Drive Innovation with AI",
+                feature4: "Master the 4 Essential Roles",
+                feature5: "Access to exclusive resources",
+                feature6: "Verified Digital Badge",
+                feature7: "Listing in Certified Directory",
+                feature8: "Validate your X-shaped skills",
+                cta: "Start Certification"
+            },
             workshops: {
                 badge: "Most Popular",
                 title: "Workshops",
@@ -1188,6 +1202,20 @@ const translations = {
                 feature9: "Başarıyı sağlamak için sonraki bakım desteği",
                 feature10: "Atölyeler ve kurumsal çözümler için ön koşul doğrulaması",
                 cta: "📅 Değerlendirme Rezervasyonu Yap"
+            },
+            certified: {
+                title: "Sertifikalı Uzman",
+                subtitle: "Delivery Pilot Olun",
+                priceText: "tek seferlik sertifika ücreti",
+                feature1: "Delivery Pilot Metodolojisinde Sertifikalı",
+                feature2: "Güvenli Kurumsal Ajanlar İnşa Edin",
+                feature3: "Yapay Zeka ile İnovasyonu Yönetin",
+                feature4: "4 Temel Rolde Uzmanlaşın",
+                feature5: "Özel kaynaklara erişim",
+                feature6: "Doğrulanmış Dijital Rozet",
+                feature7: "Sertifikalı Dizinde Listelenme",
+                feature8: "X-şekilli yeteneklerinizi doğrulayın",
+                cta: "Sertifikasyonu Başlat"
             },
             workshops: {
                 badge: "En Popüler",
