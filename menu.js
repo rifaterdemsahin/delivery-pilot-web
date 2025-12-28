@@ -40,6 +40,8 @@ const navigationConfig = {
                 { href: 'agile-transformation.html', textKey: 'nav.agileTransformation', text: '📈 Agile Transformation' },
                 { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
                 { href: 'junior-engineer-training.html', textKey: 'nav.juniorTraining', text: '👨‍🎓 Junior Engineer Training' },
+                { href: 'upskilling_pathways.html', textKey: 'nav.upskillingPathways', text: '🎓 Upskilling Pathways' },
+                { href: 'comprehensive_analysis.html', textKey: 'nav.comprehensiveAnalysis', text: '📊 Comprehensive Analysis' },
                 { href: 'delivery-pilot-methodology.html', textKey: 'nav.methodology', text: '📖 Methodology' }
             ]
         },
