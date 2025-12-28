@@ -189,7 +189,7 @@ After customer creation > (SME to Mid-Market)
 |------|-------|-----------|-------------|--------|
 | Prosumer | $50/session | Per assessment | High (automated) | Low |
 | Workshops | $500/day/consultant | Per engagement | Medium (limited by consultants) | Medium-High |
-| Enterprise | $10 /10 GB | Per agent | Low (custom work) | High |
+| Enterprise | $15-$100+/agent/mo | Per agent subscription | Low (custom work) | High |
 
 **Revenue Model Premises**:
 1. **Premise**: Prosumers convert to workshop attendees (conversion rate unknown)
