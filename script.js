@@ -35,6 +35,7 @@ const translations = {
             workshopsAsSimulations: "🎮 Workshops as Simulations",
             agenticVsAutomation: "🤖 Agentic vs Automation",
             acronymPressure: "🔤 Acronym Overload",
+            airgappedChallenges: "🛑 Air-gapped Challenges",
             accessSecuritySilos: "🔐 Access & Security Silos",
             jobSatisfaction: "😊 Job Satisfaction",
             employeeOverload: "⚡ Employee Overload",
@@ -327,6 +328,7 @@ const translations = {
                 jobSatisfaction: "Job Satisfaction",
                 governanceExamples: "Governance Examples",
                 acronymPressure: "Acronym Overload",
+                airgappedChallenges: "Air-gapped Challenges",
                 accessSecuritySilos: "Access & Security Silos",
                 employeeOverload: "Employee Overload"
             },
@@ -1005,6 +1007,7 @@ const translations = {
             workshopsAsSimulations: "🎮 Simülasyon Olarak Atölyeler",
             agenticVsAutomation: "🤖 Ajantik vs Otomasyon",
             acronymPressure: "🔤 Kısaltma Baskısı",
+            airgappedChallenges: "🛑 Hava Boşluklu Ortam Zorlukları",
             accessSecuritySilos: "🔐 Erişim ve Güvenlik Siloları",
             jobSatisfaction: "😊 İş Memnuniyeti",
             employeeOverload: "⚡ Çalışan Aşırı Yükü",
@@ -1297,6 +1300,7 @@ const translations = {
                 jobSatisfaction: "İş Memnuniyeti",
                 governanceExamples: "Yönetişim Örnekleri",
                 acronymPressure: "Kısaltma Baskısı",
+                airgappedChallenges: "Hava Boşluklu Ortam Zorlukları",
                 accessSecuritySilos: "Erişim ve Güvenlik Siloları",
                 employeeOverload: "Çalışan Aşırı Yükü"
             },
