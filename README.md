@@ -6,7 +6,18 @@ A modern Platform as a Service (PaaS) website designed to help enterprises accel
 
 ## Overview
 
-Delivery Pilot is a comprehensive PaaS solution that enables enterprises to deploy, manage, and scale AI applications with confidence. Our platform simplifies the complexities of AI adoption, providing the tools and infrastructure needed for successful AI transformation.
+Delivery Pilot is a comprehensive program that empowers professionals to deliver AI agent-based solutions effectively. The program provides three core components:
+
+### 1. Skills Gap Assessments
+Delivery Pilot conducts thorough assessments to identify professionals' current capabilities and pinpoint areas for development in AI agent implementation.
+
+### 2. Collaborative Simulation Workshops
+Through hands-on simulation workshops, participants learn to build solutions with AI agents collaboratively, gaining practical experience in real-world scenarios.
+
+### 3. Pilot Certification
+The program certifies professionals as qualified pilots for delivering AI agent applications, with specific focus on critical metrics including:
+- Technical debt management
+- Security compliance and best practices
 
 ## Features
 
