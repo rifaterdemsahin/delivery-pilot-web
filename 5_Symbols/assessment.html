@@ -1,2254 +1,2226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Take our comprehensive AI Tools Workshop Maturity Assessment. 48 questions covering AI tools, GitHub, prompt engineering, and more. Get personalized learning roadmap and workshop readiness report."
-    />
-    <meta
-      name="keywords"
-      content="AI assessment, AI maturity, workshop assessment, AI tools evaluation, prompt engineering, GitHub skills, AI readiness, learning roadmap"
-    />
-    <meta name="author" content="Delivery Pilot" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://deliverypilot.net/assessment.html" />
 
-    <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="AI Tools Workshop Maturity Assessment | Delivery Pilot"
-    />
-    <meta
-      property="og:description"
-      content="Assess your AI readiness with our comprehensive 48-question maturity assessment. Get personalized learning roadmap and workshop recommendations."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://deliverypilot.net/assessment.html"
-    />
-    <meta
-      property="og:image"
-      content="https://deliverypilot.net/og-image-assessment.jpg"
-    />
-    <meta property="og:site_name" content="Delivery Pilot" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Take our comprehensive AI Tools Workshop Maturity Assessment. 48 questions covering AI tools, GitHub, prompt engineering, and more. Get personalized learning roadmap and workshop readiness report." />
+  <meta name="keywords"
+    content="AI assessment, AI maturity, workshop assessment, AI tools evaluation, prompt engineering, GitHub skills, AI readiness, learning roadmap" />
+  <meta name="author" content="Delivery Pilot" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://deliverypilot.net/assessment.html" />
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="AI Tools Workshop Maturity Assessment"
-    />
-    <meta
-      name="twitter:description"
-      content="Assess your AI readiness and get a personalized learning roadmap. 48 questions, 45 minutes."
-    />
-    <meta
-      name="twitter:image"
-      content="https://deliverypilot.net/twitter-card-assessment.jpg"
-    />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="AI Tools Workshop Maturity Assessment | Delivery Pilot" />
+  <meta property="og:description"
+    content="Assess your AI readiness with our comprehensive 48-question maturity assessment. Get personalized learning roadmap and workshop recommendations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deliverypilot.net/assessment.html" />
+  <meta property="og:image" content="https://deliverypilot.net/og-image-assessment.jpg" />
+  <meta property="og:site_name" content="Delivery Pilot" />
 
-    <title>AI Tools Workshop Maturity Assessment | Delivery Pilot</title>
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.production.min.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Tools Workshop Maturity Assessment" />
+  <meta name="twitter:description"
+    content="Assess your AI readiness and get a personalized learning roadmap. 48 questions, 45 minutes." />
+  <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-assessment.jpg" />
 
-  <body>
-    <div id="nav-wrapper" style="display: none">
-      <div id="navbar-placeholder"></div>
-    </div>
-    <div id="root"></div>
+  <title>AI Tools Workshop Maturity Assessment | Delivery Pilot</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
 
-    <script type="text/babel">
-      const { useState } = React;
+<body>
+  <div id="nav-wrapper" style="display: none">
+    <div id="navbar-placeholder"></div>
+  </div>
+  <div id="root"></div>
 
-      // Translation support
-      const translations = {
-        en: {
-          title: "AI Tools Workshop Maturity Assessment",
-          subtitle: "48 questions • 45 minutes • Personalized learning roadmap",
-          tagline:
-            "⚡ Know your AI readiness • Team up effectively • Get your custom roadmap",
-          raiseTitle: "Solving RAISE: Rapid AI Increases Skills Expectations",
-          raiseDescription:
-            "This assessment helps identify your delivery gaps and creates a personalized roadmap to bridge the skills gap between where you are and where AI demands you to be.",
-          prereqTitle: "Workshop Prerequisites",
-          prereqItems: [
-            "✅ Stable internet connection (check speed & latency)",
-            "🖥️ Multi-screen setup recommended",
-            "🎧 Working audio setup",
-            "⏱️ Remember: 5-minute breaks every hour + 1-hour lunch",
-          ],
-          namePlaceholder: "👤 Your Name",
-          orgPlaceholder: "🏢 Organization",
-          rolePlaceholder: "💼 Your Role",
-          emailPlaceholder: "📧 Email",
-          experienceLabel: "Select AI Experience Level...",
-          experienceOptions: [
-            "No AI tool experience",
-            "Beginner (< 3 months)",
-            "Intermediate (3-12 months)",
-            "Advanced (1+ years)",
-          ],
-          startButton: "🚀 Start Assessment",
-          backButton: "← Back",
-          nextButton: "Next →",
-          finishButton: "🎯 View Results",
-          questionOf: "Question",
-          of: "of",
-          answered: "answered",
-          complete: "complete",
-          category: "Category",
-          printButton: "📄 Print Results",
-          workshopMessage:
-            "The report will be sent to your email. This assessment will be used in the workshops.",
-          loadingTitle: "Processing Your Assessment...",
-          loadingMessage: "Please wait while we save your results and generate your personalized report.",
-          loadingSubmitting: "Submitting your assessment",
-          loadingGenerating: "Generating your report",
-          loadingAlmostDone: "Almost done...",
+  <script type="text/babel">
+    const { useState } = React;
+
+    // Translation support
+    const translations = {
+      en: {
+        title: "AI Tools Workshop Maturity Assessment",
+        subtitle: "48 questions • 45 minutes • Personalized learning roadmap",
+        tagline:
+          "⚡ Know your AI readiness • Team up effectively • Get your custom roadmap",
+        raiseTitle: "Solving RAISE: Rapid AI Increases Skills Expectations",
+        raiseDescription:
+          "This assessment helps identify your delivery gaps and creates a personalized roadmap to bridge the skills gap between where you are and where AI demands you to be.",
+        prereqTitle: "Workshop Prerequisites",
+        prereqItems: [
+          "✅ Stable internet connection (check speed & latency)",
+          "🖥️ Multi-screen setup recommended",
+          "🎧 Working audio setup",
+          "⏱️ Remember: 5-minute breaks every hour + 1-hour lunch",
+        ],
+        namePlaceholder: "👤 Your Name",
+        orgPlaceholder: "🏢 Organization",
+        rolePlaceholder: "💼 Your Role",
+        emailPlaceholder: "📧 Email",
+        experienceLabel: "Select AI Experience Level...",
+        experienceOptions: [
+          "No AI tool experience",
+          "Beginner (< 3 months)",
+          "Intermediate (3-12 months)",
+          "Advanced (1+ years)",
+        ],
+        startButton: "🚀 Start Assessment",
+        backButton: "← Back",
+        nextButton: "Next →",
+        finishButton: "🎯 View Results",
+        questionOf: "Question",
+        of: "of",
+        answered: "answered",
+        complete: "complete",
+        category: "Category",
+        printButton: "📄 Print Results",
+        workshopMessage:
+          "The report will be sent to your email. This assessment will be used in the workshops.",
+        loadingTitle: "Processing Your Assessment...",
+        loadingMessage: "Please wait while we save your results and generate your personalized report.",
+        loadingSubmitting: "Submitting your assessment",
+        loadingGenerating: "Generating your report",
+        loadingAlmostDone: "Almost done...",
+      },
+      tr: {
+        title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
+        subtitle:
+          "48 soru • 45 dakika • Kişiselleştirilmiş öğrenme yol haritası",
+        tagline:
+          "⚡ Yapay zeka hazırlığınızı öğrenin • Etkili ekip çalışması • Özel yol haritanızı alın",
+        raiseTitle:
+          "RAISE Çözümü: Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor",
+        raiseDescription:
+          "Bu değerlendirme, teslimat boşluklarınızı belirlemenize yardımcı olur ve bulunduğunuz yer ile yapay zekanın sizi olmanızı istediği yer arasındaki beceri boşluğunu kapatmak için kişiselleştirilmiş bir yol haritası oluşturur.",
+        prereqTitle: "Atölye Ön Koşulları",
+        prereqItems: [
+          "✅ Stable internet connection (check speed & latency)",
+          "🖥️ Multi-screen setup recommended",
+          "🎧 Working audio setup",
+          "⏱️ Remember: 5-minute breaks every hour + 1-hour lunch",
+        ],
+        namePlaceholder: "👤 Adınız",
+        orgPlaceholder: "🏢 Organizasyon",
+        rolePlaceholder: "💼 Rolünüz",
+        emailPlaceholder: "📧 E-posta",
+        experienceLabel: "Yapay Zeka Deneyim Seviyenizi Seçin...",
+        experienceOptions: [
+          "Yapay zeka aracı deneyimi yok",
+          "Başlangıç (< 3 ay)",
+          "Orta (3-12 ay)",
+          "İleri (1+ yıl)",
+        ],
+        startButton: "🚀 Değerlendirmeyi Başlat",
+        backButton: "← Geri",
+        nextButton: "İleri →",
+        finishButton: "🎯 Sonuçları Görüntüle",
+        questionOf: "Soru",
+        of: "/",
+        answered: "cevaplandı",
+        complete: "tamamlandı",
+        category: "Kategori",
+        resultsTitle: "Değerlendirme Tamamlandı!",
+        resultsSubtitle: "Kişiselleştirilmiş atölye hazırlık raporunuz",
+        overallReadiness: "Genel Hazırlık",
+        categoryScores: "Kategori Puanları",
+        priorityFocusAreas: "Öncelikli Odak Alanları",
+        learningRoadmap: "Öğrenme Yol Haritanız",
+        startNewAssessment: "Yeni Değerlendirme Başlat",
+        priorityLabels: {
+          Critical: "Kritik",
+          High: "Yüksek",
         },
-        tr: {
-          title: "Yapay Zeka Araçları Atölyesi Olgunluk Değerlendirmesi",
-          subtitle:
-            "48 soru • 45 dakika • Kişiselleştirilmiş öğrenme yol haritası",
-          tagline:
-            "⚡ Yapay zeka hazırlığınızı öğrenin • Etkili ekip çalışması • Özel yol haritanızı alın",
-          raiseTitle:
-            "RAISE Çözümü: Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor",
-          raiseDescription:
-            "Bu değerlendirme, teslimat boşluklarınızı belirlemenize yardımcı olur ve bulunduğunuz yer ile yapay zekanın sizi olmanızı istediği yer arasındaki beceri boşluğunu kapatmak için kişiselleştirilmiş bir yol haritası oluşturur.",
-          prereqTitle: "Atölye Ön Koşulları",
-          prereqItems: [
-            "✅ Stable internet connection (check speed & latency)",
-            "🖥️ Multi-screen setup recommended",
-            "🎧 Working audio setup",
-            "⏱️ Remember: 5-minute breaks every hour + 1-hour lunch",
-          ],
-          namePlaceholder: "👤 Adınız",
-          orgPlaceholder: "🏢 Organizasyon",
-          rolePlaceholder: "💼 Rolünüz",
-          emailPlaceholder: "📧 E-posta",
-          experienceLabel: "Yapay Zeka Deneyim Seviyenizi Seçin...",
-          experienceOptions: [
-            "Yapay zeka aracı deneyimi yok",
-            "Başlangıç (< 3 ay)",
-            "Orta (3-12 ay)",
-            "İleri (1+ yıl)",
-          ],
-          startButton: "🚀 Değerlendirmeyi Başlat",
-          backButton: "← Geri",
-          nextButton: "İleri →",
-          finishButton: "🎯 Sonuçları Görüntüle",
-          questionOf: "Soru",
-          of: "/",
-          answered: "cevaplandı",
-          complete: "tamamlandı",
-          category: "Kategori",
-          resultsTitle: "Değerlendirme Tamamlandı!",
-          resultsSubtitle: "Kişiselleştirilmiş atölye hazırlık raporunuz",
-          overallReadiness: "Genel Hazırlık",
-          categoryScores: "Kategori Puanları",
-          priorityFocusAreas: "Öncelikli Odak Alanları",
-          learningRoadmap: "Öğrenme Yol Haritanız",
-          startNewAssessment: "Yeni Değerlendirme Başlat",
-          priorityLabels: {
-            Critical: "Kritik",
-            High: "Yüksek",
-          },
-          priority: "Öncelik",
-          score: "Puan",
-          focus: "Odak",
-          phase: "Faz",
-          printButton: "📄 Sonuçları Yazdır",
-          workshopMessage:
-            "Rapor e-postanıza gönderilecektir. Bu değerlendirme atölyelerde kullanılacaktır.",
-          loadingTitle: "Değerlendirmeniz İşleniyor...",
-          loadingMessage: "Sonuçlarınızı kaydederken ve kişiselleştirilmiş raporunuzu oluştururken lütfen bekleyin.",
-          loadingSubmitting: "Değerlendirmeniz gönderiliyor",
-          loadingGenerating: "Raporunuz oluşturuluyor",
-          loadingAlmostDone: "Neredeyse tamamlandı...",
+        priority: "Öncelik",
+        score: "Puan",
+        focus: "Odak",
+        phase: "Faz",
+        printButton: "📄 Sonuçları Yazdır",
+        workshopMessage:
+          "Rapor e-postanıza gönderilecektir. Bu değerlendirme atölyelerde kullanılacaktır.",
+        loadingTitle: "Değerlendirmeniz İşleniyor...",
+        loadingMessage: "Sonuçlarınızı kaydederken ve kişiselleştirilmiş raporunuzu oluştururken lütfen bekleyin.",
+        loadingSubmitting: "Değerlendirmeniz gönderiliyor",
+        loadingGenerating: "Raporunuz oluşturuluyor",
+        loadingAlmostDone: "Neredeyse tamamlandı...",
+      },
+    };
+
+    const categoriesData = {
+      en: [
+        {
+          id: "prereq",
+          name: "Prerequisites & Setup",
+          emoji: "🔧",
+          color: "from-blue-500 to-blue-600",
         },
+        {
+          id: "creative",
+          name: "Creative Tools (Canva)",
+          emoji: "🎨",
+          color: "from-pink-500 to-pink-600",
+        },
+        {
+          id: "comm",
+          name: "Communication (Teams)",
+          emoji: "💬",
+          color: "from-green-500 to-green-600",
+        },
+        {
+          id: "ai",
+          name: "AI Tools Usage",
+          emoji: "🤖",
+          color: "from-purple-500 to-purple-600",
+        },
+        {
+          id: "github",
+          name: "GitHub & Codespaces",
+          emoji: "💻",
+          color: "from-gray-700 to-gray-800",
+        },
+        {
+          id: "markdown",
+          name: "Markdown & Documentation",
+          emoji: "📝",
+          color: "from-orange-500 to-orange-600",
+        },
+        {
+          id: "advanced",
+          name: "Advanced AI & Models",
+          emoji: "🚀",
+          color: "from-red-500 to-red-600",
+        },
+        {
+          id: "delivery",
+          name: "Project Delivery Pilot",
+          emoji: "🎯",
+          color: "from-teal-500 to-teal-600",
+        },
+      ],
+      tr: [
+        {
+          id: "prereq",
+          name: "Ön Koşullar ve Kurulum",
+          emoji: "🔧",
+          color: "from-blue-500 to-blue-600",
+        },
+        {
+          id: "creative",
+          name: "Yaratıcı Araçlar (Canva)",
+          emoji: "🎨",
+          color: "from-pink-500 to-pink-600",
+        },
+        {
+          id: "comm",
+          name: "İletişim (Teams)",
+          emoji: "💬",
+          color: "from-green-500 to-green-600",
+        },
+        {
+          id: "ai",
+          name: "Yapay Zeka Araçları Kullanımı",
+          emoji: "🤖",
+          color: "from-purple-500 to-purple-600",
+        },
+        {
+          id: "github",
+          name: "GitHub ve Codespaces",
+          emoji: "💻",
+          color: "from-gray-700 to-gray-800",
+        },
+        {
+          id: "markdown",
+          name: "Markdown ve Dokümantasyon",
+          emoji: "📝",
+          color: "from-orange-500 to-orange-600",
+        },
+        {
+          id: "advanced",
+          name: "Gelişmiş Yapay Zeka ve Modeller",
+          emoji: "🚀",
+          color: "from-red-500 to-red-600",
+        },
+        {
+          id: "delivery",
+          name: "Proje Teslimat Pilotu",
+          emoji: "🎯",
+          color: "from-teal-500 to-teal-600",
+        },
+      ],
+    };
+
+    const questionsData = {
+      en: [
+        // Prerequisites & Setup (6 questions)
+        {
+          id: 1,
+          cat: "prereq",
+          q: "🌐 How comfortable are you checking your internet connection (speed, latency, IP)?",
+          opts: [
+            "Cannot check at all",
+            "Can check speed only",
+            "Can check speed & latency",
+            "Can check all and troubleshoot with VPN",
+          ],
+        },
+        {
+          id: 2,
+          cat: "prereq",
+          q: "🖥️ What is your multi-screen setup capability?",
+          opts: [
+            "Single screen only",
+            "Dual screen but not optimized",
+            "Dual screen fully utilized",
+            "Multi-screen + multi-device in same call",
+          ],
+        },
+        {
+          id: 3,
+          cat: "prereq",
+          q: "🎧 How well can you manage audio setup in collaborative calls?",
+          opts: [
+            "Basic headphones only",
+            "Can mute/unmute",
+            "Can switch between devices",
+            "Professional multi-audio setup with backup",
+          ],
+        },
+        {
+          id: 4,
+          cat: "prereq",
+          q: "📸 How proficient are you with screenshots in Windows?",
+          opts: [
+            "Don't know how",
+            "Can take screenshots",
+            "Can take, paste & save efficiently",
+            "Can annotate and share instantly",
+          ],
+        },
+        {
+          id: 5,
+          cat: "prereq",
+          q: '🧠 Do you have a "second brain" system (notes, RAG, backups)?',
+          opts: [
+            "No organized system",
+            "Basic note-taking",
+            "Git + cloud backup setup",
+            "Full RAG system with AI integration",
+          ],
+        },
+        {
+          id: 6,
+          cat: "prereq",
+          q: "⏱️ How do you manage workshop timing and breaks?",
+          opts: [
+            "No time management",
+            "Aware of breaks",
+            "Use timers for breaks",
+            "Structured timing with 5-min breaks + 1hr lunch",
+          ],
+        },
+        // Creative Tools - Canva (6 questions)
+        {
+          id: 7,
+          cat: "creative",
+          q: "🎨 How experienced are you with Canva basics?",
+          opts: [
+            "Never used Canva",
+            "Can view templates",
+            "Can edit templates",
+            "Can create from scratch with all features",
+          ],
+        },
+        {
+          id: 8,
+          cat: "creative",
+          q: "📋 Can you use Canva's whiteboard features (stickies, lines, duplicating)?",
+          opts: [
+            "No experience",
+            "Can add basic shapes",
+            "Can add stickies & lines",
+            "Master all whiteboard tools + duplication",
+          ],
+        },
+        {
+          id: 9,
+          cat: "creative",
+          q: "👥 How comfortable are you with collaborative content creation in Canva?",
+          opts: [
+            "Work solo only",
+            "Can share links",
+            "Can collaborate in real-time",
+            "Can follow others, comment & color-code items",
+          ],
+        },
+        {
+          id: 10,
+          cat: "creative",
+          q: "🗺️ Can you navigate and organize items on a Canva timeline?",
+          opts: [
+            "Cannot organize",
+            "Basic placement",
+            "Can follow horizontal timelines",
+            "Can find anyone on screen & organize complex layouts",
+          ],
+        },
+        {
+          id: 11,
+          cat: "creative",
+          q: "💬 How well do you use commenting and feedback in Canva?",
+          opts: [
+            "No commenting",
+            "Can view comments",
+            "Can add comments",
+            "Active commenter with mentions & resolutions",
+          ],
+        },
+        {
+          id: 12,
+          cat: "creative",
+          q: "📸 Can you paste screenshots directly into Canva?",
+          opts: [
+            "Don't know how",
+            "Rarely do it",
+            "Regularly paste screenshots",
+            "Seamlessly integrate screenshots with annotations",
+          ],
+        },
+        // Communication - Teams (4 questions)
+        {
+          id: 13,
+          cat: "comm",
+          q: "💬 How proficient are you with Teams communication features?",
+          opts: [
+            "Basic chat only",
+            "Can post links & format",
+            "Can @mention & organize threads",
+            "Power user with channels, tags & integrations",
+          ],
+        },
+        {
+          id: 14,
+          cat: "comm",
+          q: "🖥️ How comfortable are you with screen sharing in Teams?",
+          opts: [
+            "Never shared screen",
+            "Can share full screen",
+            "Can share specific windows",
+            "Can share + annotate + control permissions",
+          ],
+        },
+        {
+          id: 15,
+          cat: "comm",
+          q: "📹 How do you use Teams meeting features?",
+          opts: [
+            "Join calls only",
+            "Camera & mic control",
+            "Record, raise hand & reactions",
+            "Full collaboration with breakout rooms",
+          ],
+        },
+        {
+          id: 16,
+          cat: "comm",
+          q: "🤝 How effectively do you collaborate with multi-team support?",
+          opts: [
+            "Work independently",
+            "Basic team communication",
+            "Active cross-team collaboration",
+            "Lead multi-team agentic systems",
+          ],
+        },
+        // AI Tools Usage (8 questions)
+        {
+          id: 17,
+          cat: "ai",
+          q: "🤖 Which AI tools have you actively used?",
+          opts: [
+            "None",
+            "1-2 tools occasionally",
+            "3-4 tools regularly",
+            "All major tools (Claude, GPT, Gemini, Grok)",
+          ],
+        },
+        {
+          id: 18,
+          cat: "ai",
+          q: "💭 How skilled are you at prompt engineering?",
+          opts: [
+            "Basic questions only",
+            "Can write clear prompts",
+            "Advanced prompts with examples",
+            "Master prompts + reverse engineering + negative prompts",
+          ],
+        },
+        {
+          id: 19,
+          cat: "ai",
+          q: "🖼️ Can you use AI for image generation and editing?",
+          opts: [
+            "No experience",
+            "Can generate basic images",
+            "Can edit prompts for better results",
+            "Can do image-to-text, text-to-image, image-to-video",
+          ],
+        },
+        {
+          id: 20,
+          cat: "ai",
+          q: "📊 How do you use AI for data analysis and tables?",
+          opts: [
+            "Don't use for data",
+            "Basic data questions",
+            "Can create tables & analysis",
+            "Advanced analysis with visualizations",
+          ],
+        },
+        {
+          id: 21,
+          cat: "ai",
+          q: "🎬 Can you create videos with AI tools?",
+          opts: [
+            "No video creation",
+            "Aware of tools",
+            "Can generate simple videos",
+            "Create complex videos with prompts",
+          ],
+        },
+        {
+          id: 22,
+          cat: "ai",
+          q: "📈 Do you understand token counts (input/output)?",
+          opts: [
+            "No knowledge",
+            "Heard of tokens",
+            "Understand token limits",
+            "Optimize prompts for token efficiency",
+          ],
+        },
+        {
+          id: 23,
+          cat: "ai",
+          q: "🔌 Have you used AI integrations (Gmail, Calendar, Drive)?",
+          opts: [
+            "No integrations",
+            "Basic tool usage",
+            "Some AI integrations",
+            "Full AI-powered workflow across all tools",
+          ],
+        },
+        {
+          id: 24,
+          cat: "ai",
+          q: "⚙️ Have you used no-code AI tools or online AI platforms?",
+          opts: [
+            "No experience",
+            "Explored a few tools",
+            "Use regularly for projects",
+            "Build complete solutions with no-code AI",
+          ],
+        },
+        // GitHub & Codespaces (8 questions)
+        {
+          id: 25,
+          cat: "github",
+          q: "💻 How experienced are you with GitHub basics?",
+          opts: [
+            "No GitHub experience",
+            "Can view repositories",
+            "Can clone & push",
+            "Can manage repos, branches, PRs & forks",
+          ],
+        },
+        {
+          id: 26,
+          cat: "github",
+          q: "🔀 How comfortable are you with Git branching and PRs?",
+          opts: [
+            "Don't know branches",
+            "Understand concept",
+            "Can create & merge branches",
+            "Can review PRs, resolve conflicts & approve",
+          ],
+        },
+        {
+          id: 27,
+          cat: "github",
+          q: "🤖 Have you used GitHub Copilot?",
+          opts: [
+            "Never used",
+            "Tried a few times",
+            "Use regularly",
+            "Optimized settings & workflows with Copilot",
+          ],
+        },
+        {
+          id: 28,
+          cat: "github",
+          q: "☁️ How familiar are you with GitHub Codespaces?",
+          opts: [
+            "Never used",
+            "Opened once or twice",
+            "Use for development",
+            "Power user with MCP, extensions & web apps",
+          ],
+        },
+        {
+          id: 29,
+          cat: "github",
+          q: "📁 Can you create and organize files/folders in GitHub?",
+          opts: [
+            "No experience",
+            "Can create files via UI",
+            "Can organize structure",
+            "Expert with README, docs & automation",
+          ],
+        },
+        {
+          id: 30,
+          cat: "github",
+          q: "🔧 Can you set up extensions and enable Copilot in Codespaces?",
+          opts: [
+            "No knowledge",
+            "Can install basic extensions",
+            "Can configure workspace",
+            "Full custom dev environment setup",
+          ],
+        },
+        {
+          id: 31,
+          cat: "github",
+          q: "🌐 Have you deployed web pages or apps from GitHub?",
+          opts: [
+            "No deployment experience",
+            "Know about GitHub Pages",
+            "Deployed static sites",
+            "Full CI/CD with automated deployments",
+          ],
+        },
+        {
+          id: 32,
+          cat: "github",
+          q: "💼 Do you use GitHub for your LinkedIn CV and project showcase?",
+          opts: [
+            "No professional GitHub presence",
+            "Basic profile",
+            "Some projects linked",
+            "Professional CV with pinned projects",
+          ],
+        },
+        // Markdown & Documentation (4 questions)
+        {
+          id: 33,
+          cat: "markdown",
+          q: "📝 How proficient are you with Markdown syntax?",
+          opts: [
+            "No Markdown knowledge",
+            "Basic formatting",
+            "Can use images & links",
+            "Expert with tables, code blocks & presentations",
+          ],
+        },
+        {
+          id: 34,
+          cat: "markdown",
+          q: "🔗 Can you create internal and external links in Markdown?",
+          opts: [
+            "Don't know how",
+            "Can create basic links",
+            "Can create anchor links",
+            "Master internal navigation & external references",
+          ],
+        },
+        {
+          id: 35,
+          cat: "markdown",
+          q: "👁️ Do you use Markdown preview effectively?",
+          opts: [
+            "No preview usage",
+            "Occasionally check preview",
+            "Always preview before committing",
+            "Live preview with split-screen workflow",
+          ],
+        },
+        {
+          id: 36,
+          cat: "markdown",
+          q: "🎤 Can you create Markdown presentations?",
+          opts: [
+            "No experience",
+            "Aware of tools",
+            "Created basic presentations",
+            "Create professional slide decks with Markdown",
+          ],
+        },
+        // Advanced AI & Models (6 questions)
+        {
+          id: 37,
+          cat: "advanced",
+          q: "🖥️ Have you used AI CLI tools?",
+          opts: [
+            "No CLI AI experience",
+            "Tried once",
+            "Use occasionally",
+            "Regular CLI AI user with Python libraries",
+          ],
+        },
+        {
+          id: 38,
+          cat: "advanced",
+          q: "🔌 Do you understand and use MCP (Model Context Protocol)?",
+          opts: [
+            "Never heard of it",
+            "Know what it is",
+            "Used MCP locally",
+            "Expert with MCP in Codespaces & local",
+          ],
+        },
+        {
+          id: 39,
+          cat: "advanced",
+          q: "🌐 Have you used OpenRouter or Hugging Face?",
+          opts: [
+            "No experience",
+            "Created account",
+            "Run models occasionally",
+            "Regular user with API integrations",
+          ],
+        },
+        {
+          id: 40,
+          cat: "advanced",
+          q: "💻 Have you run local AI models (LM Studio, Ollama)?",
+          opts: [
+            "No local models",
+            "Installed tools",
+            "Run models locally",
+            "Train and fine-tune local models",
+          ],
+        },
+        {
+          id: 41,
+          cat: "advanced",
+          q: "🐛 How do you handle errors in AI-assisted coding?",
+          opts: [
+            "Get stuck on errors",
+            "Google for solutions",
+            "Use AI to explain errors",
+            "AI-driven error resolution & PR completion",
+          ],
+        },
+        {
+          id: 42,
+          cat: "advanced",
+          q: "🧪 How do you approach testing with AI?",
+          opts: [
+            "No testing practice",
+            "Manual testing",
+            "Add test data with AI",
+            "Full AI-driven test generation & execution",
+          ],
+        },
+        // Project Delivery Pilot (6 questions)
+        {
+          id: 43,
+          cat: "delivery",
+          q: "🎯 Can you define clear project objectives and key results?",
+          opts: [
+            "Unclear objectives",
+            "Basic goal setting",
+            "SMART objectives defined",
+            "Clear OKRs with AI-generated success metrics",
+          ],
+        },
+        {
+          id: 44,
+          cat: "delivery",
+          q: "🏗️ How do you set up project environments?",
+          opts: [
+            "Struggle with setup",
+            "Follow instructions",
+            "Set up independently",
+            "Design & document custom environments",
+          ],
+        },
+        {
+          id: 45,
+          cat: "delivery",
+          q: "🎨 Can you create UI designs with AI assistance?",
+          opts: [
+            "No UI design skills",
+            "Use templates",
+            "Generate images & basic UI",
+            "Create complete UI with AI-generated assets",
+          ],
+        },
+        {
+          id: 46,
+          cat: "delivery",
+          q: "🧮 How comfortable are you creating formulas and logic with AI?",
+          opts: [
+            "No formula experience",
+            "Basic calculations",
+            "Complex formulas with AI",
+            "Build complete logic systems with GPT",
+          ],
+        },
+        {
+          id: 47,
+          cat: "delivery",
+          q: "💻 Can you integrate AI-generated code into projects?",
+          opts: [
+            "Cannot integrate code",
+            "Copy-paste code",
+            "Modify & integrate code",
+            "Full development cycle with AI assistance",
+          ],
+        },
+        {
+          id: 48,
+          cat: "delivery",
+          q: "🚀 Have you completed a full delivery pilot from idea to deployment?",
+          opts: [
+            "No complete projects",
+            "Started but not finished",
+            "Completed small projects",
+            "Multiple full-cycle AI-assisted projects delivered",
+          ],
+        },
+      ],
+      tr: [
+        // Ön Koşullar ve Kurulum (6 soru)
+        {
+          id: 1,
+          cat: "prereq",
+          q: "🌐 İnternet bağlantınızı (hız, gecikme, IP) kontrol etme konusunda ne kadar rahatsınız?",
+          opts: [
+            "Hiç kontrol edemiyorum",
+            "Sadece hızı kontrol edebiliyorum",
+            "Hız ve gecikmeyi kontrol edebiliyorum",
+            "Hepsini kontrol edebiliyor ve VPN ile sorun giderebiliyorum",
+          ],
+        },
+        {
+          id: 2,
+          cat: "prereq",
+          q: "🖥️ Çoklu ekran kurulum yeteneğiniz nedir?",
+          opts: [
+            "Sadece tek ekran",
+            "İki ekran ama optimize edilmemiş",
+            "İki ekran tamamen kullanılıyor",
+            "Çoklu ekran + aynı aramada çoklu cihaz",
+          ],
+        },
+        {
+          id: 3,
+          cat: "prereq",
+          q: "🎧 İşbirlikçi aramalarda ses kurulumunu ne kadar iyi yönetebiliyorsunuz?",
+          opts: [
+            "Sadece temel kulaklık",
+            "Sessize alıp açabiliyorum",
+            "Cihazlar arası geçiş yapabiliyorum",
+            "Yedekli profesyonel çoklu ses kurulumu",
+          ],
+        },
+        {
+          id: 4,
+          cat: "prereq",
+          q: "📸 Windows'ta ekran görüntüsü alma konusunda ne kadar yetkinsiniz?",
+          opts: [
+            "Nasıl yapılacağını bilmiyorum",
+            "Ekran görüntüsü alabiliyorum",
+            "Alıp, yapıştırıp verimli kaydedebiliyorum",
+            "Açıklama ekleyip anında paylaşabiliyorum",
+          ],
+        },
+        {
+          id: 5,
+          cat: "prereq",
+          q: '🧠 "İkinci beyin" sisteminiz var mı (notlar, RAG, yedekler)?',
+          opts: [
+            "Organize bir sistem yok",
+            "Temel not alma",
+            "Git + bulut yedekleme kurulumu",
+            "Yapay zeka entegrasyonlu tam RAG sistemi",
+          ],
+        },
+        {
+          id: 6,
+          cat: "prereq",
+          q: "⏱️ Atölye zamanlamasını ve molaları nasıl yönetiyorsunuz?",
+          opts: [
+            "Zaman yönetimi yok",
+            "Molalardan haberdarım",
+            "Molalar için zamanlayıcı kullanıyorum",
+            "5 dakika mola + 1 saat öğle yemeği ile yapılandırılmış zamanlama",
+          ],
+        },
+        // Yaratıcı Araçlar - Canva (6 soru)
+        {
+          id: 7,
+          cat: "creative",
+          q: "🎨 Canva temel özellikleri konusunda ne kadar deneyimlisiniz?",
+          opts: [
+            "Hiç Canva kullanmadım",
+            "Şablonları görüntüleyebiliyorum",
+            "Şablonları düzenleyebiliyorum",
+            "Tüm özelliklerle sıfırdan oluşturabiliyorum",
+          ],
+        },
+        {
+          id: 8,
+          cat: "creative",
+          q: "📋 Canva'nın beyaz tahta özelliklerini (yapışkan notlar, çizgiler, çoğaltma) kullanabiliyor musunuz?",
+          opts: [
+            "Deneyim yok",
+            "Temel şekiller ekleyebiliyorum",
+            "Yapışkan notlar ve çizgiler ekleyebiliyorum",
+            "Tüm beyaz tahta araçlarında uzman + çoğaltma",
+          ],
+        },
+        {
+          id: 9,
+          cat: "creative",
+          q: "👥 Canva'da işbirlikçi içerik oluşturma konusunda ne kadar rahatsınız?",
+          opts: [
+            "Sadece tek başına çalışıyorum",
+            "Link paylaşabiliyorum",
+            "Gerçek zamanlı işbirliği yapabiliyorum",
+            "Başkalarını takip edebiliyor, yorum yapıp öğeleri renkle kodlayabiliyorum",
+          ],
+        },
+        {
+          id: 10,
+          cat: "creative",
+          q: "🗺️ Canva zaman çizelgesinde öğeleri gezinip düzenleyebiliyor musunuz?",
+          opts: [
+            "Düzenleyemiyorum",
+            "Temel yerleştirme",
+            "Yatay zaman çizelgelerini takip edebiliyorum",
+            "Ekranda herkesi bulup karmaşık düzenler oluşturabiliyorum",
+          ],
+        },
+        {
+          id: 11,
+          cat: "creative",
+          q: "💬 Canva'da yorumlama ve geri bildirim özelliklerini ne kadar iyi kullanıyorsunuz?",
+          opts: [
+            "Yorum yapmıyorum",
+            "Yorumları görüntüleyebiliyorum",
+            "Yorum ekleyebiliyorum",
+            "Bahsetmeler ve çözümlerle aktif yorumcu",
+          ],
+        },
+        {
+          id: 12,
+          cat: "creative",
+          q: "📸 Ekran görüntülerini doğrudan Canva'ya yapıştırabiliyor musunuz?",
+          opts: [
+            "Nasıl yapılacağını bilmiyorum",
+            "Nadiren yapıyorum",
+            "Düzenli olarak ekran görüntüsü yapıştırıyorum",
+            "Açıklamalarla ekran görüntülerini sorunsuzca entegre ediyorum",
+          ],
+        },
+        // İletişim - Teams (4 soru)
+        {
+          id: 13,
+          cat: "comm",
+          q: "💬 Teams iletişim özellikleri konusunda ne kadar yetkinsiniz?",
+          opts: [
+            "Sadece temel sohbet",
+            "Link gönderip biçimlendirebiliyorum",
+            "@bahsetme ve konuları düzenleyebiliyorum",
+            "Kanallar, etiketler ve entegrasyonlarla uzman kullanıcı",
+          ],
+        },
+        {
+          id: 14,
+          cat: "comm",
+          q: "🖥️ Teams'te ekran paylaşımı konusunda ne kadar rahatsınız?",
+          opts: [
+            "Hiç ekran paylaşmadım",
+            "Tam ekran paylaşabiliyorum",
+            "Belirli pencereleri paylaşabiliyorum",
+            "Paylaşım + açıklama + izin kontrolü yapabiliyorum",
+          ],
+        },
+        {
+          id: 15,
+          cat: "comm",
+          q: "📹 Teams toplantı özelliklerini nasıl kullanıyorsunuz?",
+          opts: [
+            "Sadece aramalara katılıyorum",
+            "Kamera ve mikrofon kontrolü",
+            "Kayıt, el kaldırma ve tepkiler",
+            "Grup odalarıyla tam işbirliği",
+          ],
+        },
+        {
+          id: 16,
+          cat: "comm",
+          q: "🤝 Çoklu ekip desteğiyle ne kadar etkili işbirliği yapıyorsunuz?",
+          opts: [
+            "Bağımsız çalışıyorum",
+            "Temel ekip iletişimi",
+            "Aktif çapraz ekip işbirliği",
+            "Çoklu ekip aracı sistemlerine liderlik ediyorum",
+          ],
+        },
+        // Yapay Zeka Araçları Kullanımı (8 soru)
+        {
+          id: 17,
+          cat: "ai",
+          q: "🤖 Hangi yapay zeka araçlarını aktif olarak kullandınız?",
+          opts: [
+            "Hiçbiri",
+            "1-2 araç bazen",
+            "3-4 araç düzenli",
+            "Tüm büyük araçlar (Claude, GPT, Gemini, Grok)",
+          ],
+        },
+        {
+          id: 18,
+          cat: "ai",
+          q: "💭 Prompt mühendisliği konusunda ne kadar yeteneklisiniz?",
+          opts: [
+            "Sadece temel sorular",
+            "Net promptlar yazabiliyorum",
+            "Örneklerle gelişmiş promptlar",
+            "Uzman promptlar + tersine mühendislik + negatif promptlar",
+          ],
+        },
+        {
+          id: 19,
+          cat: "ai",
+          q: "🖼️ Görüntü oluşturma ve düzenleme için yapay zeka kullanabiliyor musunuz?",
+          opts: [
+            "Deneyim yok",
+            "Temel görüntüler oluşturabiliyorum",
+            "Daha iyi sonuçlar için promptları düzenleyebiliyorum",
+            "Görüntüden metne, metinden görüntüye, görüntüden videoya yapabiliyorum",
+          ],
+        },
+        {
+          id: 20,
+          cat: "ai",
+          q: "📊 Veri analizi ve tablolar için yapay zekayı nasıl kullanıyorsunuz?",
+          opts: [
+            "Veri için kullanmıyorum",
+            "Temel veri soruları",
+            "Tablolar ve analiz oluşturabiliyorum",
+            "Görselleştirmelerle gelişmiş analiz",
+          ],
+        },
+        {
+          id: 21,
+          cat: "ai",
+          q: "🎬 Yapay zeka araçlarıyla video oluşturabiliyor musunuz?",
+          opts: [
+            "Video oluşturmuyorum",
+            "Araçlardan haberdarım",
+            "Basit videolar oluşturabiliyorum",
+            "Promptlarla karmaşık videolar oluşturuyorum",
+          ],
+        },
+        {
+          id: 22,
+          cat: "ai",
+          q: "📈 Token sayılarını (girdi/çıktı) anlıyor musunuz?",
+          opts: [
+            "Bilgi yok",
+            "Tokenlardan duydum",
+            "Token limitlerini anlıyorum",
+            "Token verimliliği için promptları optimize ediyorum",
+          ],
+        },
+        {
+          id: 23,
+          cat: "ai",
+          q: "🔌 Yapay zeka entegrasyonlarını (Gmail, Takvim, Drive) kullandınız mı?",
+          opts: [
+            "Entegrasyon yok",
+            "Temel araç kullanımı",
+            "Bazı yapay zeka entegrasyonları",
+            "Tüm araçlarda yapay zeka destekli iş akışı",
+          ],
+        },
+        {
+          id: 24,
+          cat: "ai",
+          q: "⚙️ Kodsuz yapay zeka araçları veya çevrimiçi yapay zeka platformları kullandınız mı?",
+          opts: [
+            "Deneyim yok",
+            "Birkaç aracı keşfettim",
+            "Projeler için düzenli kullanıyorum",
+            "Kodsuz yapay zeka ile tam çözümler oluşturuyorum",
+          ],
+        },
+        // GitHub ve Codespaces (8 soru)
+        {
+          id: 25,
+          cat: "github",
+          q: "💻 GitHub temelleri konusunda ne kadar deneyimlisiniz?",
+          opts: [
+            "GitHub deneyimi yok",
+            "Depoları görüntüleyebiliyorum",
+            "Klonlayıp push edebiliyorum",
+            "Depoları, dalları, PR'ları ve fork'ları yönetebiliyorum",
+          ],
+        },
+        {
+          id: 26,
+          cat: "github",
+          q: "🔀 Git dallandırma ve PR'lar konusunda ne kadar rahatsınız?",
+          opts: [
+            "Dalları bilmiyorum",
+            "Konsepti anlıyorum",
+            "Dal oluşturup birleştirebiliyorum",
+            "PR'ları inceleyebilir, çakışmaları çözebilir ve onaylayabilirim",
+          ],
+        },
+        {
+          id: 27,
+          cat: "github",
+          q: "🤖 GitHub Copilot kullandınız mı?",
+          opts: [
+            "Hiç kullanmadım",
+            "Birkaç kez denedim",
+            "Düzenli kullanıyorum",
+            "Copilot ile ayarları ve iş akışlarını optimize ettim",
+          ],
+        },
+        {
+          id: 28,
+          cat: "github",
+          q: "☁️ GitHub Codespaces'e ne kadar aşinasınız?",
+          opts: [
+            "Hiç kullanmadım",
+            "Bir iki kez açtım",
+            "Geliştirme için kullanıyorum",
+            "MCP, uzantılar ve web uygulamalarıyla uzman kullanıcı",
+          ],
+        },
+        {
+          id: 29,
+          cat: "github",
+          q: "📁 GitHub'da dosya/klasör oluşturup düzenleyebiliyor musunuz?",
+          opts: [
+            "Deneyim yok",
+            "Arayüz üzerinden dosya oluşturabiliyorum",
+            "Yapıyı düzenleyebiliyorum",
+            "README, dokümanlar ve otomasyon konusunda uzman",
+          ],
+        },
+        {
+          id: 30,
+          cat: "github",
+          q: "🔧 Codespaces'te uzantıları kurup Copilot'u etkinleştirebiliyor musunuz?",
+          opts: [
+            "Bilgi yok",
+            "Temel uzantıları kurabiliyorum",
+            "Çalışma alanını yapılandırabiliyorum",
+            "Tam özel geliştirme ortamı kurulumu",
+          ],
+        },
+        {
+          id: 31,
+          cat: "github",
+          q: "🌐 GitHub'dan web sayfaları veya uygulamalar dağıttınız mı?",
+          opts: [
+            "Dağıtım deneyimi yok",
+            "GitHub Pages hakkında bilgi var",
+            "Statik siteler dağıttım",
+            "Otomatik dağıtımlarla tam CI/CD",
+          ],
+        },
+        {
+          id: 32,
+          cat: "github",
+          q: "💼 LinkedIn CV'niz ve proje vitriniz için GitHub kullanıyor musunuz?",
+          opts: [
+            "Profesyonel GitHub varlığı yok",
+            "Temel profil",
+            "Bazı projeler bağlantılı",
+            "Sabitlenmiş projelerle profesyonel CV",
+          ],
+        },
+        // Markdown ve Dokümantasyon (4 soru)
+        {
+          id: 33,
+          cat: "markdown",
+          q: "📝 Markdown sözdizimi konusunda ne kadar yetkinsiniz?",
+          opts: [
+            "Markdown bilgisi yok",
+            "Temel biçimlendirme",
+            "Görüntü ve linkler kullanabiliyorum",
+            "Tablolar, kod blokları ve sunumlar konusunda uzman",
+          ],
+        },
+        {
+          id: 34,
+          cat: "markdown",
+          q: "🔗 Markdown'da dahili ve harici linkler oluşturabiliyor musunuz?",
+          opts: [
+            "Nasıl yapılacağını bilmiyorum",
+            "Temel linkler oluşturabiliyorum",
+            "Bağlantı linkleri oluşturabiliyorum",
+            "Dahili gezinme ve harici referanslarda uzman",
+          ],
+        },
+        {
+          id: 35,
+          cat: "markdown",
+          q: "👁️ Markdown önizlemesini etkili kullanıyor musunuz?",
+          opts: [
+            "Önizleme kullanımı yok",
+            "Bazen önizleme kontrol ediyorum",
+            "Commit etmeden önce her zaman önizleme yapıyorum",
+            "Bölünmüş ekran iş akışıyla canlı önizleme",
+          ],
+        },
+        {
+          id: 36,
+          cat: "markdown",
+          q: "🎤 Markdown sunumları oluşturabiliyor musunuz?",
+          opts: [
+            "Deneyim yok",
+            "Araçlardan haberdarım",
+            "Temel sunumlar oluşturdum",
+            "Markdown ile profesyonel slayt desteler oluşturuyorum",
+          ],
+        },
+        // Gelişmiş Yapay Zeka ve Modeller (6 soru)
+        {
+          id: 37,
+          cat: "advanced",
+          q: "🖥️ Yapay zeka CLI araçları kullandınız mı?",
+          opts: [
+            "CLI yapay zeka deneyimi yok",
+            "Bir kez denedim",
+            "Bazen kullanıyorum",
+            "Python kütüphaneleriyle düzenli CLI yapay zeka kullanıcısı",
+          ],
+        },
+        {
+          id: 38,
+          cat: "advanced",
+          q: "🔌 MCP'yi (Model Context Protocol) anlıyor ve kullanıyor musunuz?",
+          opts: [
+            "Hiç duymadım",
+            "Ne olduğunu biliyorum",
+            "Yerel olarak MCP kullandım",
+            "Codespaces ve yerel ortamda MCP uzmanı",
+          ],
+        },
+        {
+          id: 39,
+          cat: "advanced",
+          q: "🌐 OpenRouter veya Hugging Face kullandınız mı?",
+          opts: [
+            "Deneyim yok",
+            "Hesap oluşturdum",
+            "Bazen modeller çalıştırıyorum",
+            "API entegrasyonlarıyla düzenli kullanıcı",
+          ],
+        },
+        {
+          id: 40,
+          cat: "advanced",
+          q: "💻 Yerel yapay zeka modelleri (LM Studio, Ollama) çalıştırdınız mı?",
+          opts: [
+            "Yerel model yok",
+            "Araçları kurdum",
+            "Yerel olarak modeller çalıştırıyorum",
+            "Yerel modelleri eğitip ince ayar yapıyorum",
+          ],
+        },
+        {
+          id: 41,
+          cat: "advanced",
+          q: "🐛 Yapay zeka destekli kodlamada hataları nasıl ele alıyorsunuz?",
+          opts: [
+            "Hatalarda takılıyorum",
+            "Google'da çözüm arıyorum",
+            "Hataları açıklamak için yapay zeka kullanıyorum",
+            "Yapay zeka destekli hata çözümü ve PR tamamlama",
+          ],
+        },
+        {
+          id: 42,
+          cat: "advanced",
+          q: "🧪 Yapay zeka ile teste nasıl yaklaşıyorsunuz?",
+          opts: [
+            "Test pratiği yok",
+            "Manuel test",
+            "Yapay zeka ile test verisi ekliyorum",
+            "Tam yapay zeka destekli test üretimi ve yürütme",
+          ],
+        },
+        // Proje Teslimat Pilotu (6 soru)
+        {
+          id: 43,
+          cat: "delivery",
+          q: "🎯 Net proje hedefleri ve anahtar sonuçlar tanımlayabiliyor musunuz?",
+          opts: [
+            "Belirsiz hedefler",
+            "Temel hedef belirleme",
+            "SMART hedefleri tanımlanmış",
+            "Yapay zeka ile oluşturulmuş başarı metrikleriyle net OKR'lar",
+          ],
+        },
+        {
+          id: 44,
+          cat: "delivery",
+          q: "🏗️ Proje ortamlarını nasıl kuruyorsunuz?",
+          opts: [
+            "Kurulumda zorlanıyorum",
+            "Talimatları takip ediyorum",
+            "Bağımsız kuruyorum",
+            "Özel ortamları tasarlayıp belgeliyorum",
+          ],
+        },
+        {
+          id: 45,
+          cat: "delivery",
+          q: "🎨 Yapay zeka yardımıyla kullanıcı arayüzü tasarımları oluşturabiliyor musunuz?",
+          opts: [
+            "Kullanıcı arayüzü tasarım becerisi yok",
+            "Şablonları kullanıyorum",
+            "Görüntüler ve temel kullanıcı arayüzü üretiyorum",
+            "Yapay zeka ile oluşturulmuş varlıklarla tam kullanıcı arayüzü oluşturuyorum",
+          ],
+        },
+        {
+          id: 46,
+          cat: "delivery",
+          q: "🧮 Yapay zeka ile formül ve mantık oluşturma konusunda ne kadar rahatsınız?",
+          opts: [
+            "Formül deneyimi yok",
+            "Temel hesaplamalar",
+            "Yapay zeka ile karmaşık formüller",
+            "GPT ile tam mantık sistemleri oluşturuyorum",
+          ],
+        },
+        {
+          id: 47,
+          cat: "delivery",
+          q: "💻 Yapay zeka ile oluşturulan kodu projelere entegre edebiliyor musunuz?",
+          opts: [
+            "Kodu entegre edemiyorum",
+            "Kopyala-yapıştır yapıyorum",
+            "Kodu değiştirip entegre ediyorum",
+            "Yapay zeka yardımıyla tam geliştirme döngüsü",
+          ],
+        },
+        {
+          id: 48,
+          cat: "delivery",
+          q: "🚀 Fikirden dağıtıma tam bir teslimat pilotu tamamladınız mı?",
+          opts: [
+            "Tam proje yok",
+            "Başladım ama bitirmedim",
+            "Küçük projeleri tamamladım",
+            "Yapay zeka destekli tam döngü birden fazla proje teslim ettim",
+          ],
+        },
+      ],
+    };
+
+    const levelColors = {
+      1: {
+        bg: "bg-red-100",
+        border: "border-red-400",
+        text: "text-red-700",
+        name: "Beginner",
+        emoji: "🔴",
+      },
+      2: {
+        bg: "bg-orange-100",
+        border: "border-orange-400",
+        text: "text-orange-700",
+        name: "Learning",
+        emoji: "🟠",
+      },
+      3: {
+        bg: "bg-yellow-100",
+        border: "border-yellow-400",
+        text: "text-yellow-700",
+        name: "Proficient",
+        emoji: "🟡",
+      },
+      4: {
+        bg: "bg-green-100",
+        border: "border-green-400",
+        text: "text-green-700",
+        name: "Expert",
+        emoji: "🟢",
+      },
+    };
+
+    function WorkshopAssessment() {
+      // Loading animation timing constants (in milliseconds)
+      const LOADING_STAGE_1_DELAY = 800;
+      const LOADING_STAGE_2_DELAY = 800;
+      const LOADING_STAGE_3_DELAY = 500;
+      const LOADING_FINAL_DELAY = 300;
+
+      const [step, setStep] = useState("intro");
+      const [userInfo, setUserInfo] = useState({
+        name: "",
+        org: "",
+        role: "",
+        email: "",
+        experience: "",
+      });
+      const [answers, setAnswers] = useState({});
+      const [currentQ, setCurrentQ] = useState(0);
+      const [language, setLanguage] = useState("en");
+      const [submitted, setSubmitted] = useState(false);
+      const [loadingStep, setLoadingStep] = useState(0);
+
+      const t = translations[language];
+      const categories = categoriesData[language];
+      const questions = questionsData[language];
+
+      const handleAnswer = (qId, value) => {
+        setAnswers({ ...answers, [qId]: value });
+        if (currentQ < questions.length - 1) {
+          setTimeout(() => setCurrentQ(currentQ + 1), 300);
+        }
       };
 
-      const categoriesData = {
-        en: [
-          {
-            id: "prereq",
-            name: "Prerequisites & Setup",
-            emoji: "🔧",
-            color: "from-blue-500 to-blue-600",
-          },
-          {
-            id: "creative",
-            name: "Creative Tools (Canva)",
-            emoji: "🎨",
-            color: "from-pink-500 to-pink-600",
-          },
-          {
-            id: "comm",
-            name: "Communication (Teams)",
-            emoji: "💬",
-            color: "from-green-500 to-green-600",
-          },
-          {
-            id: "ai",
-            name: "AI Tools Usage",
-            emoji: "🤖",
-            color: "from-purple-500 to-purple-600",
-          },
-          {
-            id: "github",
-            name: "GitHub & Codespaces",
-            emoji: "💻",
-            color: "from-gray-700 to-gray-800",
-          },
-          {
-            id: "markdown",
-            name: "Markdown & Documentation",
-            emoji: "📝",
-            color: "from-orange-500 to-orange-600",
-          },
-          {
-            id: "advanced",
-            name: "Advanced AI & Models",
-            emoji: "🚀",
-            color: "from-red-500 to-red-600",
-          },
-          {
-            id: "delivery",
-            name: "Project Delivery Pilot",
-            emoji: "🎯",
-            color: "from-teal-500 to-teal-600",
-          },
-        ],
-        tr: [
-          {
-            id: "prereq",
-            name: "Ön Koşullar ve Kurulum",
-            emoji: "🔧",
-            color: "from-blue-500 to-blue-600",
-          },
-          {
-            id: "creative",
-            name: "Yaratıcı Araçlar (Canva)",
-            emoji: "🎨",
-            color: "from-pink-500 to-pink-600",
-          },
-          {
-            id: "comm",
-            name: "İletişim (Teams)",
-            emoji: "💬",
-            color: "from-green-500 to-green-600",
-          },
-          {
-            id: "ai",
-            name: "Yapay Zeka Araçları Kullanımı",
-            emoji: "🤖",
-            color: "from-purple-500 to-purple-600",
-          },
-          {
-            id: "github",
-            name: "GitHub ve Codespaces",
-            emoji: "💻",
-            color: "from-gray-700 to-gray-800",
-          },
-          {
-            id: "markdown",
-            name: "Markdown ve Dokümantasyon",
-            emoji: "📝",
-            color: "from-orange-500 to-orange-600",
-          },
-          {
-            id: "advanced",
-            name: "Gelişmiş Yapay Zeka ve Modeller",
-            emoji: "🚀",
-            color: "from-red-500 to-red-600",
-          },
-          {
-            id: "delivery",
-            name: "Proje Teslimat Pilotu",
-            emoji: "🎯",
-            color: "from-teal-500 to-teal-600",
-          },
-        ],
-      };
-
-      const questionsData = {
-        en: [
-          // Prerequisites & Setup (6 questions)
-          {
-            id: 1,
-            cat: "prereq",
-            q: "🌐 How comfortable are you checking your internet connection (speed, latency, IP)?",
-            opts: [
-              "Cannot check at all",
-              "Can check speed only",
-              "Can check speed & latency",
-              "Can check all and troubleshoot with VPN",
-            ],
-          },
-          {
-            id: 2,
-            cat: "prereq",
-            q: "🖥️ What is your multi-screen setup capability?",
-            opts: [
-              "Single screen only",
-              "Dual screen but not optimized",
-              "Dual screen fully utilized",
-              "Multi-screen + multi-device in same call",
-            ],
-          },
-          {
-            id: 3,
-            cat: "prereq",
-            q: "🎧 How well can you manage audio setup in collaborative calls?",
-            opts: [
-              "Basic headphones only",
-              "Can mute/unmute",
-              "Can switch between devices",
-              "Professional multi-audio setup with backup",
-            ],
-          },
-          {
-            id: 4,
-            cat: "prereq",
-            q: "📸 How proficient are you with screenshots in Windows?",
-            opts: [
-              "Don't know how",
-              "Can take screenshots",
-              "Can take, paste & save efficiently",
-              "Can annotate and share instantly",
-            ],
-          },
-          {
-            id: 5,
-            cat: "prereq",
-            q: '🧠 Do you have a "second brain" system (notes, RAG, backups)?',
-            opts: [
-              "No organized system",
-              "Basic note-taking",
-              "Git + cloud backup setup",
-              "Full RAG system with AI integration",
-            ],
-          },
-          {
-            id: 6,
-            cat: "prereq",
-            q: "⏱️ How do you manage workshop timing and breaks?",
-            opts: [
-              "No time management",
-              "Aware of breaks",
-              "Use timers for breaks",
-              "Structured timing with 5-min breaks + 1hr lunch",
-            ],
-          },
-          // Creative Tools - Canva (6 questions)
-          {
-            id: 7,
-            cat: "creative",
-            q: "🎨 How experienced are you with Canva basics?",
-            opts: [
-              "Never used Canva",
-              "Can view templates",
-              "Can edit templates",
-              "Can create from scratch with all features",
-            ],
-          },
-          {
-            id: 8,
-            cat: "creative",
-            q: "📋 Can you use Canva's whiteboard features (stickies, lines, duplicating)?",
-            opts: [
-              "No experience",
-              "Can add basic shapes",
-              "Can add stickies & lines",
-              "Master all whiteboard tools + duplication",
-            ],
-          },
-          {
-            id: 9,
-            cat: "creative",
-            q: "👥 How comfortable are you with collaborative content creation in Canva?",
-            opts: [
-              "Work solo only",
-              "Can share links",
-              "Can collaborate in real-time",
-              "Can follow others, comment & color-code items",
-            ],
-          },
-          {
-            id: 10,
-            cat: "creative",
-            q: "🗺️ Can you navigate and organize items on a Canva timeline?",
-            opts: [
-              "Cannot organize",
-              "Basic placement",
-              "Can follow horizontal timelines",
-              "Can find anyone on screen & organize complex layouts",
-            ],
-          },
-          {
-            id: 11,
-            cat: "creative",
-            q: "💬 How well do you use commenting and feedback in Canva?",
-            opts: [
-              "No commenting",
-              "Can view comments",
-              "Can add comments",
-              "Active commenter with mentions & resolutions",
-            ],
-          },
-          {
-            id: 12,
-            cat: "creative",
-            q: "📸 Can you paste screenshots directly into Canva?",
-            opts: [
-              "Don't know how",
-              "Rarely do it",
-              "Regularly paste screenshots",
-              "Seamlessly integrate screenshots with annotations",
-            ],
-          },
-          // Communication - Teams (4 questions)
-          {
-            id: 13,
-            cat: "comm",
-            q: "💬 How proficient are you with Teams communication features?",
-            opts: [
-              "Basic chat only",
-              "Can post links & format",
-              "Can @mention & organize threads",
-              "Power user with channels, tags & integrations",
-            ],
-          },
-          {
-            id: 14,
-            cat: "comm",
-            q: "🖥️ How comfortable are you with screen sharing in Teams?",
-            opts: [
-              "Never shared screen",
-              "Can share full screen",
-              "Can share specific windows",
-              "Can share + annotate + control permissions",
-            ],
-          },
-          {
-            id: 15,
-            cat: "comm",
-            q: "📹 How do you use Teams meeting features?",
-            opts: [
-              "Join calls only",
-              "Camera & mic control",
-              "Record, raise hand & reactions",
-              "Full collaboration with breakout rooms",
-            ],
-          },
-          {
-            id: 16,
-            cat: "comm",
-            q: "🤝 How effectively do you collaborate with multi-team support?",
-            opts: [
-              "Work independently",
-              "Basic team communication",
-              "Active cross-team collaboration",
-              "Lead multi-team agentic systems",
-            ],
-          },
-          // AI Tools Usage (8 questions)
-          {
-            id: 17,
-            cat: "ai",
-            q: "🤖 Which AI tools have you actively used?",
-            opts: [
-              "None",
-              "1-2 tools occasionally",
-              "3-4 tools regularly",
-              "All major tools (Claude, GPT, Gemini, Grok)",
-            ],
-          },
-          {
-            id: 18,
-            cat: "ai",
-            q: "💭 How skilled are you at prompt engineering?",
-            opts: [
-              "Basic questions only",
-              "Can write clear prompts",
-              "Advanced prompts with examples",
-              "Master prompts + reverse engineering + negative prompts",
-            ],
-          },
-          {
-            id: 19,
-            cat: "ai",
-            q: "🖼️ Can you use AI for image generation and editing?",
-            opts: [
-              "No experience",
-              "Can generate basic images",
-              "Can edit prompts for better results",
-              "Can do image-to-text, text-to-image, image-to-video",
-            ],
-          },
-          {
-            id: 20,
-            cat: "ai",
-            q: "📊 How do you use AI for data analysis and tables?",
-            opts: [
-              "Don't use for data",
-              "Basic data questions",
-              "Can create tables & analysis",
-              "Advanced analysis with visualizations",
-            ],
-          },
-          {
-            id: 21,
-            cat: "ai",
-            q: "🎬 Can you create videos with AI tools?",
-            opts: [
-              "No video creation",
-              "Aware of tools",
-              "Can generate simple videos",
-              "Create complex videos with prompts",
-            ],
-          },
-          {
-            id: 22,
-            cat: "ai",
-            q: "📈 Do you understand token counts (input/output)?",
-            opts: [
-              "No knowledge",
-              "Heard of tokens",
-              "Understand token limits",
-              "Optimize prompts for token efficiency",
-            ],
-          },
-          {
-            id: 23,
-            cat: "ai",
-            q: "🔌 Have you used AI integrations (Gmail, Calendar, Drive)?",
-            opts: [
-              "No integrations",
-              "Basic tool usage",
-              "Some AI integrations",
-              "Full AI-powered workflow across all tools",
-            ],
-          },
-          {
-            id: 24,
-            cat: "ai",
-            q: "⚙️ Have you used no-code AI tools or online AI platforms?",
-            opts: [
-              "No experience",
-              "Explored a few tools",
-              "Use regularly for projects",
-              "Build complete solutions with no-code AI",
-            ],
-          },
-          // GitHub & Codespaces (8 questions)
-          {
-            id: 25,
-            cat: "github",
-            q: "💻 How experienced are you with GitHub basics?",
-            opts: [
-              "No GitHub experience",
-              "Can view repositories",
-              "Can clone & push",
-              "Can manage repos, branches, PRs & forks",
-            ],
-          },
-          {
-            id: 26,
-            cat: "github",
-            q: "🔀 How comfortable are you with Git branching and PRs?",
-            opts: [
-              "Don't know branches",
-              "Understand concept",
-              "Can create & merge branches",
-              "Can review PRs, resolve conflicts & approve",
-            ],
-          },
-          {
-            id: 27,
-            cat: "github",
-            q: "🤖 Have you used GitHub Copilot?",
-            opts: [
-              "Never used",
-              "Tried a few times",
-              "Use regularly",
-              "Optimized settings & workflows with Copilot",
-            ],
-          },
-          {
-            id: 28,
-            cat: "github",
-            q: "☁️ How familiar are you with GitHub Codespaces?",
-            opts: [
-              "Never used",
-              "Opened once or twice",
-              "Use for development",
-              "Power user with MCP, extensions & web apps",
-            ],
-          },
-          {
-            id: 29,
-            cat: "github",
-            q: "📁 Can you create and organize files/folders in GitHub?",
-            opts: [
-              "No experience",
-              "Can create files via UI",
-              "Can organize structure",
-              "Expert with README, docs & automation",
-            ],
-          },
-          {
-            id: 30,
-            cat: "github",
-            q: "🔧 Can you set up extensions and enable Copilot in Codespaces?",
-            opts: [
-              "No knowledge",
-              "Can install basic extensions",
-              "Can configure workspace",
-              "Full custom dev environment setup",
-            ],
-          },
-          {
-            id: 31,
-            cat: "github",
-            q: "🌐 Have you deployed web pages or apps from GitHub?",
-            opts: [
-              "No deployment experience",
-              "Know about GitHub Pages",
-              "Deployed static sites",
-              "Full CI/CD with automated deployments",
-            ],
-          },
-          {
-            id: 32,
-            cat: "github",
-            q: "💼 Do you use GitHub for your LinkedIn CV and project showcase?",
-            opts: [
-              "No professional GitHub presence",
-              "Basic profile",
-              "Some projects linked",
-              "Professional CV with pinned projects",
-            ],
-          },
-          // Markdown & Documentation (4 questions)
-          {
-            id: 33,
-            cat: "markdown",
-            q: "📝 How proficient are you with Markdown syntax?",
-            opts: [
-              "No Markdown knowledge",
-              "Basic formatting",
-              "Can use images & links",
-              "Expert with tables, code blocks & presentations",
-            ],
-          },
-          {
-            id: 34,
-            cat: "markdown",
-            q: "🔗 Can you create internal and external links in Markdown?",
-            opts: [
-              "Don't know how",
-              "Can create basic links",
-              "Can create anchor links",
-              "Master internal navigation & external references",
-            ],
-          },
-          {
-            id: 35,
-            cat: "markdown",
-            q: "👁️ Do you use Markdown preview effectively?",
-            opts: [
-              "No preview usage",
-              "Occasionally check preview",
-              "Always preview before committing",
-              "Live preview with split-screen workflow",
-            ],
-          },
-          {
-            id: 36,
-            cat: "markdown",
-            q: "🎤 Can you create Markdown presentations?",
-            opts: [
-              "No experience",
-              "Aware of tools",
-              "Created basic presentations",
-              "Create professional slide decks with Markdown",
-            ],
-          },
-          // Advanced AI & Models (6 questions)
-          {
-            id: 37,
-            cat: "advanced",
-            q: "🖥️ Have you used AI CLI tools?",
-            opts: [
-              "No CLI AI experience",
-              "Tried once",
-              "Use occasionally",
-              "Regular CLI AI user with Python libraries",
-            ],
-          },
-          {
-            id: 38,
-            cat: "advanced",
-            q: "🔌 Do you understand and use MCP (Model Context Protocol)?",
-            opts: [
-              "Never heard of it",
-              "Know what it is",
-              "Used MCP locally",
-              "Expert with MCP in Codespaces & local",
-            ],
-          },
-          {
-            id: 39,
-            cat: "advanced",
-            q: "🌐 Have you used OpenRouter or Hugging Face?",
-            opts: [
-              "No experience",
-              "Created account",
-              "Run models occasionally",
-              "Regular user with API integrations",
-            ],
-          },
-          {
-            id: 40,
-            cat: "advanced",
-            q: "💻 Have you run local AI models (LM Studio, Ollama)?",
-            opts: [
-              "No local models",
-              "Installed tools",
-              "Run models locally",
-              "Train and fine-tune local models",
-            ],
-          },
-          {
-            id: 41,
-            cat: "advanced",
-            q: "🐛 How do you handle errors in AI-assisted coding?",
-            opts: [
-              "Get stuck on errors",
-              "Google for solutions",
-              "Use AI to explain errors",
-              "AI-driven error resolution & PR completion",
-            ],
-          },
-          {
-            id: 42,
-            cat: "advanced",
-            q: "🧪 How do you approach testing with AI?",
-            opts: [
-              "No testing practice",
-              "Manual testing",
-              "Add test data with AI",
-              "Full AI-driven test generation & execution",
-            ],
-          },
-          // Project Delivery Pilot (6 questions)
-          {
-            id: 43,
-            cat: "delivery",
-            q: "🎯 Can you define clear project objectives and key results?",
-            opts: [
-              "Unclear objectives",
-              "Basic goal setting",
-              "SMART objectives defined",
-              "Clear OKRs with AI-generated success metrics",
-            ],
-          },
-          {
-            id: 44,
-            cat: "delivery",
-            q: "🏗️ How do you set up project environments?",
-            opts: [
-              "Struggle with setup",
-              "Follow instructions",
-              "Set up independently",
-              "Design & document custom environments",
-            ],
-          },
-          {
-            id: 45,
-            cat: "delivery",
-            q: "🎨 Can you create UI designs with AI assistance?",
-            opts: [
-              "No UI design skills",
-              "Use templates",
-              "Generate images & basic UI",
-              "Create complete UI with AI-generated assets",
-            ],
-          },
-          {
-            id: 46,
-            cat: "delivery",
-            q: "🧮 How comfortable are you creating formulas and logic with AI?",
-            opts: [
-              "No formula experience",
-              "Basic calculations",
-              "Complex formulas with AI",
-              "Build complete logic systems with GPT",
-            ],
-          },
-          {
-            id: 47,
-            cat: "delivery",
-            q: "💻 Can you integrate AI-generated code into projects?",
-            opts: [
-              "Cannot integrate code",
-              "Copy-paste code",
-              "Modify & integrate code",
-              "Full development cycle with AI assistance",
-            ],
-          },
-          {
-            id: 48,
-            cat: "delivery",
-            q: "🚀 Have you completed a full delivery pilot from idea to deployment?",
-            opts: [
-              "No complete projects",
-              "Started but not finished",
-              "Completed small projects",
-              "Multiple full-cycle AI-assisted projects delivered",
-            ],
-          },
-        ],
-        tr: [
-          // Ön Koşullar ve Kurulum (6 soru)
-          {
-            id: 1,
-            cat: "prereq",
-            q: "🌐 İnternet bağlantınızı (hız, gecikme, IP) kontrol etme konusunda ne kadar rahatsınız?",
-            opts: [
-              "Hiç kontrol edemiyorum",
-              "Sadece hızı kontrol edebiliyorum",
-              "Hız ve gecikmeyi kontrol edebiliyorum",
-              "Hepsini kontrol edebiliyor ve VPN ile sorun giderebiliyorum",
-            ],
-          },
-          {
-            id: 2,
-            cat: "prereq",
-            q: "🖥️ Çoklu ekran kurulum yeteneğiniz nedir?",
-            opts: [
-              "Sadece tek ekran",
-              "İki ekran ama optimize edilmemiş",
-              "İki ekran tamamen kullanılıyor",
-              "Çoklu ekran + aynı aramada çoklu cihaz",
-            ],
-          },
-          {
-            id: 3,
-            cat: "prereq",
-            q: "🎧 İşbirlikçi aramalarda ses kurulumunu ne kadar iyi yönetebiliyorsunuz?",
-            opts: [
-              "Sadece temel kulaklık",
-              "Sessize alıp açabiliyorum",
-              "Cihazlar arası geçiş yapabiliyorum",
-              "Yedekli profesyonel çoklu ses kurulumu",
-            ],
-          },
-          {
-            id: 4,
-            cat: "prereq",
-            q: "📸 Windows'ta ekran görüntüsü alma konusunda ne kadar yetkinsiniz?",
-            opts: [
-              "Nasıl yapılacağını bilmiyorum",
-              "Ekran görüntüsü alabiliyorum",
-              "Alıp, yapıştırıp verimli kaydedebiliyorum",
-              "Açıklama ekleyip anında paylaşabiliyorum",
-            ],
-          },
-          {
-            id: 5,
-            cat: "prereq",
-            q: '🧠 "İkinci beyin" sisteminiz var mı (notlar, RAG, yedekler)?',
-            opts: [
-              "Organize bir sistem yok",
-              "Temel not alma",
-              "Git + bulut yedekleme kurulumu",
-              "Yapay zeka entegrasyonlu tam RAG sistemi",
-            ],
-          },
-          {
-            id: 6,
-            cat: "prereq",
-            q: "⏱️ Atölye zamanlamasını ve molaları nasıl yönetiyorsunuz?",
-            opts: [
-              "Zaman yönetimi yok",
-              "Molalardan haberdarım",
-              "Molalar için zamanlayıcı kullanıyorum",
-              "5 dakika mola + 1 saat öğle yemeği ile yapılandırılmış zamanlama",
-            ],
-          },
-          // Yaratıcı Araçlar - Canva (6 soru)
-          {
-            id: 7,
-            cat: "creative",
-            q: "🎨 Canva temel özellikleri konusunda ne kadar deneyimlisiniz?",
-            opts: [
-              "Hiç Canva kullanmadım",
-              "Şablonları görüntüleyebiliyorum",
-              "Şablonları düzenleyebiliyorum",
-              "Tüm özelliklerle sıfırdan oluşturabiliyorum",
-            ],
-          },
-          {
-            id: 8,
-            cat: "creative",
-            q: "📋 Canva'nın beyaz tahta özelliklerini (yapışkan notlar, çizgiler, çoğaltma) kullanabiliyor musunuz?",
-            opts: [
-              "Deneyim yok",
-              "Temel şekiller ekleyebiliyorum",
-              "Yapışkan notlar ve çizgiler ekleyebiliyorum",
-              "Tüm beyaz tahta araçlarında uzman + çoğaltma",
-            ],
-          },
-          {
-            id: 9,
-            cat: "creative",
-            q: "👥 Canva'da işbirlikçi içerik oluşturma konusunda ne kadar rahatsınız?",
-            opts: [
-              "Sadece tek başına çalışıyorum",
-              "Link paylaşabiliyorum",
-              "Gerçek zamanlı işbirliği yapabiliyorum",
-              "Başkalarını takip edebiliyor, yorum yapıp öğeleri renkle kodlayabiliyorum",
-            ],
-          },
-          {
-            id: 10,
-            cat: "creative",
-            q: "🗺️ Canva zaman çizelgesinde öğeleri gezinip düzenleyebiliyor musunuz?",
-            opts: [
-              "Düzenleyemiyorum",
-              "Temel yerleştirme",
-              "Yatay zaman çizelgelerini takip edebiliyorum",
-              "Ekranda herkesi bulup karmaşık düzenler oluşturabiliyorum",
-            ],
-          },
-          {
-            id: 11,
-            cat: "creative",
-            q: "💬 Canva'da yorumlama ve geri bildirim özelliklerini ne kadar iyi kullanıyorsunuz?",
-            opts: [
-              "Yorum yapmıyorum",
-              "Yorumları görüntüleyebiliyorum",
-              "Yorum ekleyebiliyorum",
-              "Bahsetmeler ve çözümlerle aktif yorumcu",
-            ],
-          },
-          {
-            id: 12,
-            cat: "creative",
-            q: "📸 Ekran görüntülerini doğrudan Canva'ya yapıştırabiliyor musunuz?",
-            opts: [
-              "Nasıl yapılacağını bilmiyorum",
-              "Nadiren yapıyorum",
-              "Düzenli olarak ekran görüntüsü yapıştırıyorum",
-              "Açıklamalarla ekran görüntülerini sorunsuzca entegre ediyorum",
-            ],
-          },
-          // İletişim - Teams (4 soru)
-          {
-            id: 13,
-            cat: "comm",
-            q: "💬 Teams iletişim özellikleri konusunda ne kadar yetkinsiniz?",
-            opts: [
-              "Sadece temel sohbet",
-              "Link gönderip biçimlendirebiliyorum",
-              "@bahsetme ve konuları düzenleyebiliyorum",
-              "Kanallar, etiketler ve entegrasyonlarla uzman kullanıcı",
-            ],
-          },
-          {
-            id: 14,
-            cat: "comm",
-            q: "🖥️ Teams'te ekran paylaşımı konusunda ne kadar rahatsınız?",
-            opts: [
-              "Hiç ekran paylaşmadım",
-              "Tam ekran paylaşabiliyorum",
-              "Belirli pencereleri paylaşabiliyorum",
-              "Paylaşım + açıklama + izin kontrolü yapabiliyorum",
-            ],
-          },
-          {
-            id: 15,
-            cat: "comm",
-            q: "📹 Teams toplantı özelliklerini nasıl kullanıyorsunuz?",
-            opts: [
-              "Sadece aramalara katılıyorum",
-              "Kamera ve mikrofon kontrolü",
-              "Kayıt, el kaldırma ve tepkiler",
-              "Grup odalarıyla tam işbirliği",
-            ],
-          },
-          {
-            id: 16,
-            cat: "comm",
-            q: "🤝 Çoklu ekip desteğiyle ne kadar etkili işbirliği yapıyorsunuz?",
-            opts: [
-              "Bağımsız çalışıyorum",
-              "Temel ekip iletişimi",
-              "Aktif çapraz ekip işbirliği",
-              "Çoklu ekip aracı sistemlerine liderlik ediyorum",
-            ],
-          },
-          // Yapay Zeka Araçları Kullanımı (8 soru)
-          {
-            id: 17,
-            cat: "ai",
-            q: "🤖 Hangi yapay zeka araçlarını aktif olarak kullandınız?",
-            opts: [
-              "Hiçbiri",
-              "1-2 araç bazen",
-              "3-4 araç düzenli",
-              "Tüm büyük araçlar (Claude, GPT, Gemini, Grok)",
-            ],
-          },
-          {
-            id: 18,
-            cat: "ai",
-            q: "💭 Prompt mühendisliği konusunda ne kadar yeteneklisiniz?",
-            opts: [
-              "Sadece temel sorular",
-              "Net promptlar yazabiliyorum",
-              "Örneklerle gelişmiş promptlar",
-              "Uzman promptlar + tersine mühendislik + negatif promptlar",
-            ],
-          },
-          {
-            id: 19,
-            cat: "ai",
-            q: "🖼️ Görüntü oluşturma ve düzenleme için yapay zeka kullanabiliyor musunuz?",
-            opts: [
-              "Deneyim yok",
-              "Temel görüntüler oluşturabiliyorum",
-              "Daha iyi sonuçlar için promptları düzenleyebiliyorum",
-              "Görüntüden metne, metinden görüntüye, görüntüden videoya yapabiliyorum",
-            ],
-          },
-          {
-            id: 20,
-            cat: "ai",
-            q: "📊 Veri analizi ve tablolar için yapay zekayı nasıl kullanıyorsunuz?",
-            opts: [
-              "Veri için kullanmıyorum",
-              "Temel veri soruları",
-              "Tablolar ve analiz oluşturabiliyorum",
-              "Görselleştirmelerle gelişmiş analiz",
-            ],
-          },
-          {
-            id: 21,
-            cat: "ai",
-            q: "🎬 Yapay zeka araçlarıyla video oluşturabiliyor musunuz?",
-            opts: [
-              "Video oluşturmuyorum",
-              "Araçlardan haberdarım",
-              "Basit videolar oluşturabiliyorum",
-              "Promptlarla karmaşık videolar oluşturuyorum",
-            ],
-          },
-          {
-            id: 22,
-            cat: "ai",
-            q: "📈 Token sayılarını (girdi/çıktı) anlıyor musunuz?",
-            opts: [
-              "Bilgi yok",
-              "Tokenlardan duydum",
-              "Token limitlerini anlıyorum",
-              "Token verimliliği için promptları optimize ediyorum",
-            ],
-          },
-          {
-            id: 23,
-            cat: "ai",
-            q: "🔌 Yapay zeka entegrasyonlarını (Gmail, Takvim, Drive) kullandınız mı?",
-            opts: [
-              "Entegrasyon yok",
-              "Temel araç kullanımı",
-              "Bazı yapay zeka entegrasyonları",
-              "Tüm araçlarda yapay zeka destekli iş akışı",
-            ],
-          },
-          {
-            id: 24,
-            cat: "ai",
-            q: "⚙️ Kodsuz yapay zeka araçları veya çevrimiçi yapay zeka platformları kullandınız mı?",
-            opts: [
-              "Deneyim yok",
-              "Birkaç aracı keşfettim",
-              "Projeler için düzenli kullanıyorum",
-              "Kodsuz yapay zeka ile tam çözümler oluşturuyorum",
-            ],
-          },
-          // GitHub ve Codespaces (8 soru)
-          {
-            id: 25,
-            cat: "github",
-            q: "💻 GitHub temelleri konusunda ne kadar deneyimlisiniz?",
-            opts: [
-              "GitHub deneyimi yok",
-              "Depoları görüntüleyebiliyorum",
-              "Klonlayıp push edebiliyorum",
-              "Depoları, dalları, PR'ları ve fork'ları yönetebiliyorum",
-            ],
-          },
-          {
-            id: 26,
-            cat: "github",
-            q: "🔀 Git dallandırma ve PR'lar konusunda ne kadar rahatsınız?",
-            opts: [
-              "Dalları bilmiyorum",
-              "Konsepti anlıyorum",
-              "Dal oluşturup birleştirebiliyorum",
-              "PR'ları inceleyebilir, çakışmaları çözebilir ve onaylayabilirim",
-            ],
-          },
-          {
-            id: 27,
-            cat: "github",
-            q: "🤖 GitHub Copilot kullandınız mı?",
-            opts: [
-              "Hiç kullanmadım",
-              "Birkaç kez denedim",
-              "Düzenli kullanıyorum",
-              "Copilot ile ayarları ve iş akışlarını optimize ettim",
-            ],
-          },
-          {
-            id: 28,
-            cat: "github",
-            q: "☁️ GitHub Codespaces'e ne kadar aşinasınız?",
-            opts: [
-              "Hiç kullanmadım",
-              "Bir iki kez açtım",
-              "Geliştirme için kullanıyorum",
-              "MCP, uzantılar ve web uygulamalarıyla uzman kullanıcı",
-            ],
-          },
-          {
-            id: 29,
-            cat: "github",
-            q: "📁 GitHub'da dosya/klasör oluşturup düzenleyebiliyor musunuz?",
-            opts: [
-              "Deneyim yok",
-              "Arayüz üzerinden dosya oluşturabiliyorum",
-              "Yapıyı düzenleyebiliyorum",
-              "README, dokümanlar ve otomasyon konusunda uzman",
-            ],
-          },
-          {
-            id: 30,
-            cat: "github",
-            q: "🔧 Codespaces'te uzantıları kurup Copilot'u etkinleştirebiliyor musunuz?",
-            opts: [
-              "Bilgi yok",
-              "Temel uzantıları kurabiliyorum",
-              "Çalışma alanını yapılandırabiliyorum",
-              "Tam özel geliştirme ortamı kurulumu",
-            ],
-          },
-          {
-            id: 31,
-            cat: "github",
-            q: "🌐 GitHub'dan web sayfaları veya uygulamalar dağıttınız mı?",
-            opts: [
-              "Dağıtım deneyimi yok",
-              "GitHub Pages hakkında bilgi var",
-              "Statik siteler dağıttım",
-              "Otomatik dağıtımlarla tam CI/CD",
-            ],
-          },
-          {
-            id: 32,
-            cat: "github",
-            q: "💼 LinkedIn CV'niz ve proje vitriniz için GitHub kullanıyor musunuz?",
-            opts: [
-              "Profesyonel GitHub varlığı yok",
-              "Temel profil",
-              "Bazı projeler bağlantılı",
-              "Sabitlenmiş projelerle profesyonel CV",
-            ],
-          },
-          // Markdown ve Dokümantasyon (4 soru)
-          {
-            id: 33,
-            cat: "markdown",
-            q: "📝 Markdown sözdizimi konusunda ne kadar yetkinsiniz?",
-            opts: [
-              "Markdown bilgisi yok",
-              "Temel biçimlendirme",
-              "Görüntü ve linkler kullanabiliyorum",
-              "Tablolar, kod blokları ve sunumlar konusunda uzman",
-            ],
-          },
-          {
-            id: 34,
-            cat: "markdown",
-            q: "🔗 Markdown'da dahili ve harici linkler oluşturabiliyor musunuz?",
-            opts: [
-              "Nasıl yapılacağını bilmiyorum",
-              "Temel linkler oluşturabiliyorum",
-              "Bağlantı linkleri oluşturabiliyorum",
-              "Dahili gezinme ve harici referanslarda uzman",
-            ],
-          },
-          {
-            id: 35,
-            cat: "markdown",
-            q: "👁️ Markdown önizlemesini etkili kullanıyor musunuz?",
-            opts: [
-              "Önizleme kullanımı yok",
-              "Bazen önizleme kontrol ediyorum",
-              "Commit etmeden önce her zaman önizleme yapıyorum",
-              "Bölünmüş ekran iş akışıyla canlı önizleme",
-            ],
-          },
-          {
-            id: 36,
-            cat: "markdown",
-            q: "🎤 Markdown sunumları oluşturabiliyor musunuz?",
-            opts: [
-              "Deneyim yok",
-              "Araçlardan haberdarım",
-              "Temel sunumlar oluşturdum",
-              "Markdown ile profesyonel slayt desteler oluşturuyorum",
-            ],
-          },
-          // Gelişmiş Yapay Zeka ve Modeller (6 soru)
-          {
-            id: 37,
-            cat: "advanced",
-            q: "🖥️ Yapay zeka CLI araçları kullandınız mı?",
-            opts: [
-              "CLI yapay zeka deneyimi yok",
-              "Bir kez denedim",
-              "Bazen kullanıyorum",
-              "Python kütüphaneleriyle düzenli CLI yapay zeka kullanıcısı",
-            ],
-          },
-          {
-            id: 38,
-            cat: "advanced",
-            q: "🔌 MCP'yi (Model Context Protocol) anlıyor ve kullanıyor musunuz?",
-            opts: [
-              "Hiç duymadım",
-              "Ne olduğunu biliyorum",
-              "Yerel olarak MCP kullandım",
-              "Codespaces ve yerel ortamda MCP uzmanı",
-            ],
-          },
-          {
-            id: 39,
-            cat: "advanced",
-            q: "🌐 OpenRouter veya Hugging Face kullandınız mı?",
-            opts: [
-              "Deneyim yok",
-              "Hesap oluşturdum",
-              "Bazen modeller çalıştırıyorum",
-              "API entegrasyonlarıyla düzenli kullanıcı",
-            ],
-          },
-          {
-            id: 40,
-            cat: "advanced",
-            q: "💻 Yerel yapay zeka modelleri (LM Studio, Ollama) çalıştırdınız mı?",
-            opts: [
-              "Yerel model yok",
-              "Araçları kurdum",
-              "Yerel olarak modeller çalıştırıyorum",
-              "Yerel modelleri eğitip ince ayar yapıyorum",
-            ],
-          },
-          {
-            id: 41,
-            cat: "advanced",
-            q: "🐛 Yapay zeka destekli kodlamada hataları nasıl ele alıyorsunuz?",
-            opts: [
-              "Hatalarda takılıyorum",
-              "Google'da çözüm arıyorum",
-              "Hataları açıklamak için yapay zeka kullanıyorum",
-              "Yapay zeka destekli hata çözümü ve PR tamamlama",
-            ],
-          },
-          {
-            id: 42,
-            cat: "advanced",
-            q: "🧪 Yapay zeka ile teste nasıl yaklaşıyorsunuz?",
-            opts: [
-              "Test pratiği yok",
-              "Manuel test",
-              "Yapay zeka ile test verisi ekliyorum",
-              "Tam yapay zeka destekli test üretimi ve yürütme",
-            ],
-          },
-          // Proje Teslimat Pilotu (6 soru)
-          {
-            id: 43,
-            cat: "delivery",
-            q: "🎯 Net proje hedefleri ve anahtar sonuçlar tanımlayabiliyor musunuz?",
-            opts: [
-              "Belirsiz hedefler",
-              "Temel hedef belirleme",
-              "SMART hedefleri tanımlanmış",
-              "Yapay zeka ile oluşturulmuş başarı metrikleriyle net OKR'lar",
-            ],
-          },
-          {
-            id: 44,
-            cat: "delivery",
-            q: "🏗️ Proje ortamlarını nasıl kuruyorsunuz?",
-            opts: [
-              "Kurulumda zorlanıyorum",
-              "Talimatları takip ediyorum",
-              "Bağımsız kuruyorum",
-              "Özel ortamları tasarlayıp belgeliyorum",
-            ],
-          },
-          {
-            id: 45,
-            cat: "delivery",
-            q: "🎨 Yapay zeka yardımıyla kullanıcı arayüzü tasarımları oluşturabiliyor musunuz?",
-            opts: [
-              "Kullanıcı arayüzü tasarım becerisi yok",
-              "Şablonları kullanıyorum",
-              "Görüntüler ve temel kullanıcı arayüzü üretiyorum",
-              "Yapay zeka ile oluşturulmuş varlıklarla tam kullanıcı arayüzü oluşturuyorum",
-            ],
-          },
-          {
-            id: 46,
-            cat: "delivery",
-            q: "🧮 Yapay zeka ile formül ve mantık oluşturma konusunda ne kadar rahatsınız?",
-            opts: [
-              "Formül deneyimi yok",
-              "Temel hesaplamalar",
-              "Yapay zeka ile karmaşık formüller",
-              "GPT ile tam mantık sistemleri oluşturuyorum",
-            ],
-          },
-          {
-            id: 47,
-            cat: "delivery",
-            q: "💻 Yapay zeka ile oluşturulan kodu projelere entegre edebiliyor musunuz?",
-            opts: [
-              "Kodu entegre edemiyorum",
-              "Kopyala-yapıştır yapıyorum",
-              "Kodu değiştirip entegre ediyorum",
-              "Yapay zeka yardımıyla tam geliştirme döngüsü",
-            ],
-          },
-          {
-            id: 48,
-            cat: "delivery",
-            q: "🚀 Fikirden dağıtıma tam bir teslimat pilotu tamamladınız mı?",
-            opts: [
-              "Tam proje yok",
-              "Başladım ama bitirmedim",
-              "Küçük projeleri tamamladım",
-              "Yapay zeka destekli tam döngü birden fazla proje teslim ettim",
-            ],
-          },
-        ],
-      };
-
-      const levelColors = {
-        1: {
-          bg: "bg-red-100",
-          border: "border-red-400",
-          text: "text-red-700",
-          name: "Beginner",
-          emoji: "🔴",
-        },
-        2: {
-          bg: "bg-orange-100",
-          border: "border-orange-400",
-          text: "text-orange-700",
-          name: "Learning",
-          emoji: "🟠",
-        },
-        3: {
-          bg: "bg-yellow-100",
-          border: "border-yellow-400",
-          text: "text-yellow-700",
-          name: "Proficient",
-          emoji: "🟡",
-        },
-        4: {
-          bg: "bg-green-100",
-          border: "border-green-400",
-          text: "text-green-700",
-          name: "Expert",
-          emoji: "🟢",
-        },
-      };
-
-      function WorkshopAssessment() {
-        // Loading animation timing constants (in milliseconds)
-        const LOADING_STAGE_1_DELAY = 800;
-        const LOADING_STAGE_2_DELAY = 800;
-        const LOADING_STAGE_3_DELAY = 500;
-        const LOADING_FINAL_DELAY = 300;
-
-        const [step, setStep] = useState("intro");
-        const [userInfo, setUserInfo] = useState({
-          name: "",
-          org: "",
-          role: "",
-          email: "",
-          experience: "",
-        });
-        const [answers, setAnswers] = useState({});
-        const [currentQ, setCurrentQ] = useState(0);
-        const [language, setLanguage] = useState("en");
-        const [submitted, setSubmitted] = useState(false);
-        const [loadingStep, setLoadingStep] = useState(0);
-
-        const t = translations[language];
-        const categories = categoriesData[language];
-        const questions = questionsData[language];
-
-        const handleAnswer = (qId, value) => {
-          setAnswers({ ...answers, [qId]: value });
-          if (currentQ < questions.length - 1) {
-            setTimeout(() => setCurrentQ(currentQ + 1), 300);
-          }
-        };
-
-        const calcScores = () => {
-          const scores = {};
-          categories.forEach((cat) => {
-            const catQs = questions.filter((q) => q.cat === cat.id);
-            const total = catQs.reduce(
-              (sum, q) => sum + (answers[q.id] || 0),
-              0
-            );
-            scores[cat.id] = Math.round((total / (catQs.length * 3)) * 100);
-          });
-          scores.overall = Math.round(
-            Object.values(scores).reduce((a, b) => a + b, 0) / categories.length
+      const calcScores = () => {
+        const scores = {};
+        categories.forEach((cat) => {
+          const catQs = questions.filter((q) => q.cat === cat.id);
+          const total = catQs.reduce(
+            (sum, q) => sum + (answers[q.id] || 0),
+            0
           );
-          return scores;
-        };
+          scores[cat.id] = Math.round((total / (catQs.length * 3)) * 100);
+        });
+        scores.overall = Math.round(
+          Object.values(scores).reduce((a, b) => a + b, 0) / categories.length
+        );
+        return scores;
+      };
 
-        const getLevel = (score) =>
-          score < 25 ? 1 : score < 50 ? 2 : score < 75 ? 3 : 4;
+      const getLevel = (score) =>
+        score < 25 ? 1 : score < 50 ? 2 : score < 75 ? 3 : 4;
 
-        const getWorkshopReadiness = (scores) => {
-          const avg = scores.overall;
-          if (avg < 25)
-            return {
-              level: "Foundation Training",
-              desc: "Start with basics and hands-on practice",
-              icon: "📚",
-              weeks: "4-6 weeks",
-            };
-          if (avg < 50)
-            return {
-              level: "Intermediate Track",
-              desc: "Ready for guided workshops with peer support",
-              icon: "🌱",
-              weeks: "2-3 weeks",
-            };
-          if (avg < 75)
-            return {
-              level: "Advanced Track",
-              desc: "Can lead collaborative sessions and projects",
-              icon: "⚡",
-              weeks: "1-2 weeks",
-            };
+      const getWorkshopReadiness = (scores) => {
+        const avg = scores.overall;
+        if (avg < 25)
           return {
-            level: "Expert Facilitator",
-            desc: "Ready to mentor and design workshops",
-            icon: "🚀",
-            weeks: "Immediate",
+            level: "Foundation Training",
+            desc: "Start with basics and hands-on practice",
+            icon: "📚",
+            weeks: "4-6 weeks",
           };
-        };
-
-        const getRecommendations = (scores) => {
-          const recs = [];
-          categories.forEach((cat) => {
-            const score = scores[cat.id];
-            const catInfo = categories.find((c) => c.id === cat.id);
-            if (score < 50) {
-              recs.push({
-                priority: score < 25 ? "Critical" : "High",
-                area: catInfo.name,
-                emoji: catInfo.emoji,
-                score,
-                actions: getActions(cat.id, score),
-              });
-            }
-          });
-          return recs.sort((a, b) => {
-            const order = { Critical: 0, High: 1, Medium: 2 };
-            return order[a.priority] - order[b.priority];
-          });
-        };
-
-        const getActions = (catId, score) => {
-          const actionMap = {
-            prereq:
-              score < 25
-                ? [
-                    "Practice internet diagnostics",
-                    "Set up dual-screen workspace",
-                    "Master screenshot tools",
-                  ]
-                : [
-                    "Optimize multi-device setup",
-                    "Configure second brain system",
-                  ],
-            creative:
-              score < 25
-                ? [
-                    "Complete Canva basics tutorial",
-                    "Practice whiteboard features",
-                    "Try collaborative editing",
-                  ]
-                : [
-                    "Master timeline organization",
-                    "Lead collaborative sessions",
-                  ],
-            comm:
-              score < 25
-                ? [
-                    "Practice screen sharing",
-                    "Learn Teams formatting",
-                    "Use reactions and raise hand",
-                  ]
-                : ["Lead multi-team calls", "Set up breakout rooms"],
-            ai:
-              score < 25
-                ? [
-                    "Sign up for all major AI tools",
-                    "Practice basic prompting",
-                    "Try image generation",
-                  ]
-                : ["Master prompt engineering", "Integrate AI into workflow"],
-            github:
-              score < 25
-                ? [
-                    "Create GitHub account",
-                    "Clone first repository",
-                    "Make first commit",
-                  ]
-                : ["Master PR workflows", "Set up Codespaces environment"],
-            markdown:
-              score < 25
-                ? [
-                    "Learn Markdown basics",
-                    "Practice with README files",
-                    "Create first document",
-                  ]
-                : [
-                    "Build Markdown presentations",
-                    "Master advanced formatting",
-                  ],
-            advanced:
-              score < 25
-                ? [
-                    "Install LM Studio or Ollama",
-                    "Try AI CLI tools",
-                    "Learn about MCP",
-                  ]
-                : ["Train local models", "Build AI-powered workflows"],
-            delivery:
-              score < 25
-                ? [
-                    "Define first project OKRs",
-                    "Set up development environment",
-                    "Complete small AI project",
-                  ]
-                : [
-                    "Lead full delivery cycle",
-                    "Mentor others on best practices",
-                  ],
-          };
-          return actionMap[catId] || [];
-        };
-
-        const generateRoadmap = (scores) => {
-          const phases = [];
-          const weakest = Object.entries(scores)
-            .filter(([k]) => k !== "overall")
-            .sort((a, b) => a[1] - b[1]);
-
-          phases.push({
-            phase: "Week 1-2: Foundation",
-            focus: weakest
-              .slice(0, 3)
-              .map(([k]) => categories.find((c) => c.id === k)?.name),
-            goals: [
-              "Complete prerequisite setup",
-              "Master basic tools",
-              "First collaborative session",
-            ],
-          });
-          phases.push({
-            phase: "Week 3-4: Building Skills",
-            focus: weakest
-              .slice(3, 5)
-              .map(([k]) => categories.find((c) => c.id === k)?.name),
-            goals: [
-              "AI tools proficiency",
-              "GitHub workflows",
-              "Documentation practice",
-            ],
-          });
-          phases.push({
-            phase: "Week 5-6: Project Delivery",
-            focus: ["Complete Pilot Project"],
-            goals: [
-              "End-to-end project delivery",
-              "Team collaboration",
-              "Share learnings",
-            ],
-          });
-          return phases;
-        };
-
-        const prepareAssessmentData = () => {
-          const scores = calcScores();
-          const overallLevel = getLevel(scores.overall);
+        if (avg < 50)
           return {
-            metadata: {
-              generatedAt: new Date().toISOString(),
-              assessmentType: "AI Workshop Maturity",
-              language,
-            },
-            userInfo,
-            scores,
-            overallLevel,
-            levelName: levelColors[overallLevel].name,
-            workshopReadiness: getWorkshopReadiness(scores),
-            answers: Object.entries(answers).map(([qId, ans]) => {
-              const q = questions.find((qu) => qu.id === parseInt(qId));
-              return {
-                question: q.q,
-                category: q.cat,
-                answer: q.opts[ans],
-                score: ans,
-              };
-            }),
-            recommendations: getRecommendations(scores),
-            roadmap: generateRoadmap(scores),
+            level: "Intermediate Track",
+            desc: "Ready for guided workshops with peer support",
+            icon: "🌱",
+            weeks: "2-3 weeks",
           };
+        if (avg < 75)
+          return {
+            level: "Advanced Track",
+            desc: "Can lead collaborative sessions and projects",
+            icon: "⚡",
+            weeks: "1-2 weeks",
+          };
+        return {
+          level: "Expert Facilitator",
+          desc: "Ready to mentor and design workshops",
+          icon: "🚀",
+          weeks: "Immediate",
         };
+      };
 
-        const submitToN8n = async (data) => {
-          try {
-            const response = await fetch(
-              "https://n8n.rifaterdemsahin.com/webhook/cf41ca7a-08d2-4e11-8fd6-a45ea481d52f",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-              }
-            );
-            return response.ok;
-          } catch (error) {
-            console.error("Failed to submit to n8n:", error);
-            return false;
+      const getRecommendations = (scores) => {
+        const recs = [];
+        categories.forEach((cat) => {
+          const score = scores[cat.id];
+          const catInfo = categories.find((c) => c.id === cat.id);
+          if (score < 50) {
+            recs.push({
+              priority: score < 25 ? "Critical" : "High",
+              area: catInfo.name,
+              emoji: catInfo.emoji,
+              score,
+              actions: getActions(cat.id, score),
+            });
           }
-        };
+        });
+        return recs.sort((a, b) => {
+          const order = { Critical: 0, High: 1, Medium: 2 };
+          return order[a.priority] - order[b.priority];
+        });
+      };
 
-        const printResults = () => {
-          window.print();
+      const getActions = (catId, score) => {
+        const actionMap = {
+          prereq:
+            score < 25
+              ? [
+                "Practice internet diagnostics",
+                "Set up dual-screen workspace",
+                "Master screenshot tools",
+              ]
+              : [
+                "Optimize multi-device setup",
+                "Configure second brain system",
+              ],
+          creative:
+            score < 25
+              ? [
+                "Complete Canva basics tutorial",
+                "Practice whiteboard features",
+                "Try collaborative editing",
+              ]
+              : [
+                "Master timeline organization",
+                "Lead collaborative sessions",
+              ],
+          comm:
+            score < 25
+              ? [
+                "Practice screen sharing",
+                "Learn Teams formatting",
+                "Use reactions and raise hand",
+              ]
+              : ["Lead multi-team calls", "Set up breakout rooms"],
+          ai:
+            score < 25
+              ? [
+                "Sign up for all major AI tools",
+                "Practice basic prompting",
+                "Try image generation",
+              ]
+              : ["Master prompt engineering", "Integrate AI into workflow"],
+          github:
+            score < 25
+              ? [
+                "Create GitHub account",
+                "Clone first repository",
+                "Make first commit",
+              ]
+              : ["Master PR workflows", "Set up Codespaces environment"],
+          markdown:
+            score < 25
+              ? [
+                "Learn Markdown basics",
+                "Practice with README files",
+                "Create first document",
+              ]
+              : [
+                "Build Markdown presentations",
+                "Master advanced formatting",
+              ],
+          advanced:
+            score < 25
+              ? [
+                "Install LM Studio or Ollama",
+                "Try AI CLI tools",
+                "Learn about MCP",
+              ]
+              : ["Train local models", "Build AI-powered workflows"],
+          delivery:
+            score < 25
+              ? [
+                "Define first project OKRs",
+                "Set up development environment",
+                "Complete small AI project",
+              ]
+              : [
+                "Lead full delivery cycle",
+                "Mentor others on best practices",
+              ],
         };
+        return actionMap[catId] || [];
+      };
 
-        React.useEffect(() => {
-          if (step === "loading" && !submitted) {
-            const submitData = async () => {
-              try {
-                // Step 1: Show submitting message
-                setLoadingStep(1);
-                // Capture assessment data at submission time
-                const data = prepareAssessmentData();
-                
-                // Step 2: Submit to n8n with brief UX delay
-                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_1_DELAY));
-                await submitToN8n(data);
-                
-                // Step 3: Show generating message
-                setLoadingStep(2);
-                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_2_DELAY));
-                
-                // Step 4: Show almost done message
-                setLoadingStep(3);
-                await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_3_DELAY));
-                
-                setSubmitted(true);
-                
-                // Step 5: Move to results
-                setTimeout(() => {
-                  setStep("results");
-                }, LOADING_FINAL_DELAY);
-              } catch (err) {
-                console.error("Submission failed:", err);
-                // Still show results even if submission fails
-                setSubmitted(true);
+      const generateRoadmap = (scores) => {
+        const phases = [];
+        const weakest = Object.entries(scores)
+          .filter(([k]) => k !== "overall")
+          .sort((a, b) => a[1] - b[1]);
+
+        phases.push({
+          phase: "Week 1-2: Foundation",
+          focus: weakest
+            .slice(0, 3)
+            .map(([k]) => categories.find((c) => c.id === k)?.name),
+          goals: [
+            "Complete prerequisite setup",
+            "Master basic tools",
+            "First collaborative session",
+          ],
+        });
+        phases.push({
+          phase: "Week 3-4: Building Skills",
+          focus: weakest
+            .slice(3, 5)
+            .map(([k]) => categories.find((c) => c.id === k)?.name),
+          goals: [
+            "AI tools proficiency",
+            "GitHub workflows",
+            "Documentation practice",
+          ],
+        });
+        phases.push({
+          phase: "Week 5-6: Project Delivery",
+          focus: ["Complete Pilot Project"],
+          goals: [
+            "End-to-end project delivery",
+            "Team collaboration",
+            "Share learnings",
+          ],
+        });
+        return phases;
+      };
+
+      const prepareAssessmentData = () => {
+        const scores = calcScores();
+        const overallLevel = getLevel(scores.overall);
+        return {
+          metadata: {
+            generatedAt: new Date().toISOString(),
+            assessmentType: "AI Workshop Maturity",
+            language,
+          },
+          userInfo,
+          scores,
+          overallLevel,
+          levelName: levelColors[overallLevel].name,
+          workshopReadiness: getWorkshopReadiness(scores),
+          answers: Object.entries(answers).map(([qId, ans]) => {
+            const q = questions.find((qu) => qu.id === parseInt(qId));
+            return {
+              question: q.q,
+              category: q.cat,
+              answer: q.opts[ans],
+              score: ans,
+            };
+          }),
+          recommendations: getRecommendations(scores),
+          roadmap: generateRoadmap(scores),
+        };
+      };
+
+      const submitToN8n = async (data) => {
+        try {
+          const response = await fetch(
+            "https://n8n.rifaterdemsahin.com/webhook/cf41ca7a-08d2-4e11-8fd6-a45ea481d52f",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            }
+          );
+          return response.ok;
+        } catch (error) {
+          console.error("Failed to submit to n8n:", error);
+          return false;
+        }
+      };
+
+      const printResults = () => {
+        window.print();
+      };
+
+      React.useEffect(() => {
+        if (step === "loading" && !submitted) {
+          const submitData = async () => {
+            try {
+              // Step 1: Show submitting message
+              setLoadingStep(1);
+              // Capture assessment data at submission time
+              const data = prepareAssessmentData();
+
+              // Step 2: Submit to n8n with brief UX delay
+              await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_1_DELAY));
+              await submitToN8n(data);
+
+              // Step 3: Show generating message
+              setLoadingStep(2);
+              await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_2_DELAY));
+
+              // Step 4: Show almost done message
+              setLoadingStep(3);
+              await new Promise(resolve => setTimeout(resolve, LOADING_STAGE_3_DELAY));
+
+              setSubmitted(true);
+
+              // Step 5: Move to results
+              setTimeout(() => {
                 setStep("results");
-              }
-            };
-            
-            submitData();
-          }
-          // Note: Dependencies are intentionally limited to step and submitted
-          // Data (userInfo, answers, language) is captured when loading starts
-          // eslint-disable-next-line react-hooks/exhaustive-deps
-        }, [step, submitted]);
-
-        React.useEffect(() => {
-          const navWrapper = document.getElementById("nav-wrapper");
-          if (navWrapper) {
-            if (step === "results") {
-              navWrapper.style.display = "block";
-            } else {
-              navWrapper.style.display = "none";
+              }, LOADING_FINAL_DELAY);
+            } catch (err) {
+              console.error("Submission failed:", err);
+              // Still show results even if submission fails
+              setSubmitted(true);
+              setStep("results");
             }
+          };
+
+          submitData();
+        }
+        // Note: Dependencies are intentionally limited to step and submitted
+        // Data (userInfo, answers, language) is captured when loading starts
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [step, submitted]);
+
+      React.useEffect(() => {
+        const navWrapper = document.getElementById("nav-wrapper");
+        if (navWrapper) {
+          if (step === "results") {
+            navWrapper.style.display = "block";
+          } else {
+            navWrapper.style.display = "none";
           }
-        }, [step]);
+        }
+      }, [step]);
 
-        const resetAssessment = () => {
-          setStep("intro");
-          setAnswers({});
-          setCurrentQ(0);
-          setSubmitted(false);
-          setLoadingStep(0);
-        };
+      const resetAssessment = () => {
+        setStep("intro");
+        setAnswers({});
+        setCurrentQ(0);
+        setSubmitted(false);
+        setLoadingStep(0);
+      };
 
-        if (step === "intro") {
-          return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
-              <div className="max-w-3xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-white">
-                <div className="flex justify-end mb-4">
-                  <div className="flex gap-2 bg-white/20 rounded-lg p-1">
-                    <button
-                      onClick={() => setLanguage("en")}
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-                        language === "en"
-                          ? "bg-white text-purple-900"
-                          : "text-white hover:bg-white/10"
+      if (step === "intro") {
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
+            <div className="max-w-3xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-white">
+              <div className="flex justify-between items-center mb-4">
+                <a
+                  href="upskilling_pathways.html"
+                  className="flex items-center gap-2 text-white bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg transition text-sm font-medium no-underline"
+                >
+                  <span>←</span> Back to Pathways
+                </a>
+                <div className="flex gap-2 bg-white/20 rounded-lg p-1">
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition ${language === "en"
+                        ? "bg-white text-purple-900"
+                        : "text-white hover:bg-white/10"
                       }`}
-                    >
-                      🇬🇧 English
-                    </button>
-                    <button
-                      onClick={() => setLanguage("tr")}
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-                        language === "tr"
-                          ? "bg-white text-purple-900"
-                          : "text-white hover:bg-white/10"
+                  >
+                    🇬🇧 English
+                  </button>
+                  <button
+                    onClick={() => setLanguage("tr")}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition ${language === "tr"
+                        ? "bg-white text-purple-900"
+                        : "text-white hover:bg-white/10"
                       }`}
-                    >
-                      🇹🇷 Türkçe
-                    </button>
+                  >
+                    🇹🇷 Türkçe
+                  </button>
+                </div>
+              </div>
+              <div className="text-center mb-6">
+                <div className="text-6xl mb-3">🎓</div>
+                <h1 className="text-3xl font-bold mb-2">{t.title}</h1>
+                <p className="text-gray-300 text-sm">{t.subtitle}</p>
+                <p className="text-yellow-300 text-xs mt-2">{t.tagline}</p>
+              </div>
+
+              <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg p-4 mb-4">
+                <h2 className="font-bold text-purple-200 mb-2 flex items-center gap-2">
+                  <span>⚡</span> {t.raiseTitle}
+                </h2>
+                <p className="text-sm text-purple-100">
+                  {t.raiseDescription}
+                </p>
+              </div>
+
+              <div className="bg-blue-500/20 border border-blue-400/30 rounded-lg p-4 mb-6">
+                <h2 className="font-bold text-blue-200 mb-2 flex items-center gap-2">
+                  <span>📋</span> {t.prereqTitle}
+                </h2>
+                <div className="text-sm text-blue-100 space-y-1">
+                  {t.prereqItems.map((item, i) => (
+                    <p key={i}>• {item}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6">
+                {categories.map((cat) => (
+                  <div
+                    key={cat.id}
+                    className={`bg-gradient-to-r ${cat.color} rounded-lg p-3 text-center`}
+                  >
+                    <div className="text-2xl">{cat.emoji}</div>
+                    <div className="text-xs mt-1 font-medium">{cat.name}</div>
                   </div>
-                </div>
-                <div className="text-center mb-6">
-                  <div className="text-6xl mb-3">🎓</div>
-                  <h1 className="text-3xl font-bold mb-2">{t.title}</h1>
-                  <p className="text-gray-300 text-sm">{t.subtitle}</p>
-                  <p className="text-yellow-300 text-xs mt-2">{t.tagline}</p>
-                </div>
+                ))}
+              </div>
 
-                <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg p-4 mb-4">
-                  <h2 className="font-bold text-purple-200 mb-2 flex items-center gap-2">
-                    <span>⚡</span> {t.raiseTitle}
-                  </h2>
-                  <p className="text-sm text-purple-100">
-                    {t.raiseDescription}
+              <div className="space-y-3 mb-4">
+                <input
+                  className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
+                  placeholder={t.namePlaceholder}
+                  value={userInfo.name}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, name: e.target.value })
+                  }
+                />
+                <input
+                  className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
+                  placeholder={t.orgPlaceholder}
+                  value={userInfo.org}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, org: e.target.value })
+                  }
+                />
+                <input
+                  className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
+                  placeholder={t.rolePlaceholder}
+                  value={userInfo.role}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, role: e.target.value })
+                  }
+                />
+                <input
+                  className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
+                  placeholder={t.emailPlaceholder}
+                  type="email"
+                  value={userInfo.email}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, email: e.target.value })
+                  }
+                />
+                <select
+                  className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-sm text-white"
+                  value={userInfo.experience}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, experience: e.target.value })
+                  }
+                >
+                  <option value="" className="text-gray-900">
+                    {t.experienceLabel}
+                  </option>
+                  <option value="none" className="text-gray-900">
+                    {t.experienceOptions[0]}
+                  </option>
+                  <option value="beginner" className="text-gray-900">
+                    {t.experienceOptions[1]}
+                  </option>
+                  <option value="intermediate" className="text-gray-900">
+                    {t.experienceOptions[2]}
+                  </option>
+                  <option value="advanced" className="text-gray-900">
+                    {t.experienceOptions[3]}
+                  </option>
+                </select>
+              </div>
+
+              <button
+                onClick={() => setStep("questions")}
+                disabled={
+                  !userInfo.name || !userInfo.org || !userInfo.experience
+                }
+                className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-bold hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {t.startButton}
+              </button>
+            </div>
+          </div>
+        );
+      }
+
+      if (step === "questions") {
+        const q = questions[currentQ];
+        const cat = categories.find((c) => c.id === q.cat);
+        const progress = ((currentQ + 1) / questions.length) * 100;
+        const answered = Object.keys(answers).length;
+
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
+            <div className="max-w-3xl mx-auto">
+              <div className="mb-4">
+                <div className="flex justify-between text-white text-xs mb-2">
+                  <span>
+                    {t.questionOf} {currentQ + 1} {t.of} {questions.length}
+                  </span>
+                  <span>
+                    {answered} {t.answered} • {Math.round(progress)}%{" "}
+                    {t.complete}
+                  </span>
+                </div>
+                <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-green-400 to-emerald-500 transition-all duration-500"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={`bg-gradient-to-r ${cat.color} rounded-t-xl p-4 flex items-center gap-3`}
+              >
+                <span className="text-3xl">{cat.emoji}</span>
+                <div>
+                  <span className="text-white font-bold text-base">
+                    {cat.name}
+                  </span>
+                  <p className="text-white/80 text-xs">
+                    {t.category}{" "}
+                    {categories.findIndex((c) => c.id === cat.id) + 1} {t.of}{" "}
+                    {categories.length}
                   </p>
                 </div>
+              </div>
 
-                <div className="bg-blue-500/20 border border-blue-400/30 rounded-lg p-4 mb-6">
-                  <h2 className="font-bold text-blue-200 mb-2 flex items-center gap-2">
-                    <span>📋</span> {t.prereqTitle}
-                  </h2>
-                  <div className="text-sm text-blue-100 space-y-1">
-                    {t.prereqItems.map((item, i) => (
-                      <p key={i}>• {item}</p>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6">
-                  {categories.map((cat) => (
-                    <div
-                      key={cat.id}
-                      className={`bg-gradient-to-r ${cat.color} rounded-lg p-3 text-center`}
+              <div className="bg-white rounded-b-xl p-6 shadow-2xl">
+                <h2 className="text-xl font-bold text-gray-800 mb-5">
+                  {q.q}
+                </h2>
+                <div className="space-y-3">
+                  {q.opts.map((opt, i) => (
+                    <button
+                      key={i}
+                      onClick={() => handleAnswer(q.id, i)}
+                      className={`w-full p-4 rounded-lg border-2 text-left transition-all ${answers[q.id] === i
+                          ? "border-purple-500 bg-purple-50 shadow-md"
+                          : "border-gray-200 hover:border-purple-300 hover:bg-gray-50"
+                        }`}
                     >
-                      <div className="text-2xl">{cat.emoji}</div>
-                      <div className="text-xs mt-1 font-medium">{cat.name}</div>
-                    </div>
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${answers[q.id] === i
+                              ? "bg-purple-500 text-white"
+                              : "bg-gray-100 text-gray-500"
+                            }`}
+                        >
+                          {["🔴", "🟠", "🟡", "🟢"][i]}
+                        </div>
+                        <span className="text-sm font-medium flex-1">
+                          {opt}
+                        </span>
+                        {answers[q.id] === i && (
+                          <span className="text-purple-500 text-xl">✓</span>
+                        )}
+                      </div>
+                    </button>
                   ))}
                 </div>
 
-                <div className="space-y-3 mb-4">
-                  <input
-                    className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
-                    placeholder={t.namePlaceholder}
-                    value={userInfo.name}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, name: e.target.value })
-                    }
-                  />
-                  <input
-                    className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
-                    placeholder={t.orgPlaceholder}
-                    value={userInfo.org}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, org: e.target.value })
-                    }
-                  />
-                  <input
-                    className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
-                    placeholder={t.rolePlaceholder}
-                    value={userInfo.role}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, role: e.target.value })
-                    }
-                  />
-                  <input
-                    className="w-full p-3 rounded-lg bg-white/20 border border-white/30 placeholder-gray-400 text-sm text-white"
-                    placeholder={t.emailPlaceholder}
-                    type="email"
-                    value={userInfo.email}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, email: e.target.value })
-                    }
-                  />
-                  <select
-                    className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-sm text-white"
-                    value={userInfo.experience}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, experience: e.target.value })
-                    }
+                <div className="flex gap-3 mt-6">
+                  <button
+                    onClick={() => setCurrentQ(Math.max(0, currentQ - 1))}
+                    disabled={currentQ === 0}
+                    className="px-5 py-2 bg-gray-200 rounded-lg text-sm font-medium disabled:opacity-50 hover:bg-gray-300 transition"
                   >
-                    <option value="" className="text-gray-900">
-                      {t.experienceLabel}
-                    </option>
-                    <option value="none" className="text-gray-900">
-                      {t.experienceOptions[0]}
-                    </option>
-                    <option value="beginner" className="text-gray-900">
-                      {t.experienceOptions[1]}
-                    </option>
-                    <option value="intermediate" className="text-gray-900">
-                      {t.experienceOptions[2]}
-                    </option>
-                    <option value="advanced" className="text-gray-900">
-                      {t.experienceOptions[3]}
-                    </option>
-                  </select>
-                </div>
-
-                <button
-                  onClick={() => setStep("questions")}
-                  disabled={
-                    !userInfo.name || !userInfo.org || !userInfo.experience
-                  }
-                  className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-bold hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {t.startButton}
-                </button>
-              </div>
-            </div>
-          );
-        }
-
-        if (step === "questions") {
-          const q = questions[currentQ];
-          const cat = categories.find((c) => c.id === q.cat);
-          const progress = ((currentQ + 1) / questions.length) * 100;
-          const answered = Object.keys(answers).length;
-
-          return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
-              <div className="max-w-3xl mx-auto">
-                <div className="mb-4">
-                  <div className="flex justify-between text-white text-xs mb-2">
-                    <span>
-                      {t.questionOf} {currentQ + 1} {t.of} {questions.length}
-                    </span>
-                    <span>
-                      {answered} {t.answered} • {Math.round(progress)}%{" "}
-                      {t.complete}
-                    </span>
-                  </div>
-                  <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-green-400 to-emerald-500 transition-all duration-500"
-                      style={{ width: `${progress}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div
-                  className={`bg-gradient-to-r ${cat.color} rounded-t-xl p-4 flex items-center gap-3`}
-                >
-                  <span className="text-3xl">{cat.emoji}</span>
-                  <div>
-                    <span className="text-white font-bold text-base">
-                      {cat.name}
-                    </span>
-                    <p className="text-white/80 text-xs">
-                      {t.category}{" "}
-                      {categories.findIndex((c) => c.id === cat.id) + 1} {t.of}{" "}
-                      {categories.length}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-b-xl p-6 shadow-2xl">
-                  <h2 className="text-xl font-bold text-gray-800 mb-5">
-                    {q.q}
-                  </h2>
-                  <div className="space-y-3">
-                    {q.opts.map((opt, i) => (
-                      <button
-                        key={i}
-                        onClick={() => handleAnswer(q.id, i)}
-                        className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
-                          answers[q.id] === i
-                            ? "border-purple-500 bg-purple-50 shadow-md"
-                            : "border-gray-200 hover:border-purple-300 hover:bg-gray-50"
-                        }`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div
-                            className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${
-                              answers[q.id] === i
-                                ? "bg-purple-500 text-white"
-                                : "bg-gray-100 text-gray-500"
-                            }`}
-                          >
-                            {["🔴", "🟠", "🟡", "🟢"][i]}
-                          </div>
-                          <span className="text-sm font-medium flex-1">
-                            {opt}
-                          </span>
-                          {answers[q.id] === i && (
-                            <span className="text-purple-500 text-xl">✓</span>
-                          )}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3 mt-6">
+                    {t.backButton}
+                  </button>
+                  {currentQ < questions.length - 1 ? (
                     <button
-                      onClick={() => setCurrentQ(Math.max(0, currentQ - 1))}
-                      disabled={currentQ === 0}
-                      className="px-5 py-2 bg-gray-200 rounded-lg text-sm font-medium disabled:opacity-50 hover:bg-gray-300 transition"
+                      onClick={() => setCurrentQ(currentQ + 1)}
+                      className="flex-1 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition"
                     >
-                      {t.backButton}
+                      {t.nextButton}
                     </button>
-                    {currentQ < questions.length - 1 ? (
-                      <button
-                        onClick={() => setCurrentQ(currentQ + 1)}
-                        className="flex-1 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition"
-                      >
-                        {t.nextButton}
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => setStep("loading")}
-                        className="flex-1 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition"
-                      >
-                        {t.finishButton}
-                      </button>
-                    )}
-                  </div>
+                  ) : (
+                    <button
+                      onClick={() => setStep("loading")}
+                      className="flex-1 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition"
+                    >
+                      {t.finishButton}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
-          );
-        }
+          </div>
+        );
+      }
 
-        if (step === "loading") {
-          const loadingMessages = [
-            t.loadingSubmitting,
-            t.loadingGenerating,
-            t.loadingAlmostDone
-          ];
+      if (step === "loading") {
+        const loadingMessages = [
+          t.loadingSubmitting,
+          t.loadingGenerating,
+          t.loadingAlmostDone
+        ];
 
-          // Helper function to get CSS classes based on loading step state
-          // stepNumber: 1-3, loadingStep: 0-3 (0=not started, 1-3=active stages)
-          const getStepClasses = (stepNumber) => {
-            if (loadingStep > stepNumber) {
-              // Step completed
-              return "bg-green-500/30 border-2 border-green-400";
-            } else if (loadingStep === stepNumber) {
-              // Step currently active
-              return "bg-purple-500/30 border-2 border-purple-400 animate-pulse";
-            } else {
-              // Step not yet started
-              return "bg-white/5 border-2 border-white/10";
-            }
-          };
+        // Helper function to get CSS classes based on loading step state
+        // stepNumber: 1-3, loadingStep: 0-3 (0=not started, 1-3=active stages)
+        const getStepClasses = (stepNumber) => {
+          if (loadingStep > stepNumber) {
+            // Step completed
+            return "bg-green-500/30 border-2 border-green-400";
+          } else if (loadingStep === stepNumber) {
+            // Step currently active
+            return "bg-purple-500/30 border-2 border-purple-400 animate-pulse";
+          } else {
+            // Step not yet started
+            return "bg-white/5 border-2 border-white/10";
+          }
+        };
 
-          // Helper function to render step icon based on state
-          const renderStepIcon = (stepNumber) => {
-            if (loadingStep > stepNumber) {
-              return <span className="text-2xl">✅</span>;
-            } else if (loadingStep === stepNumber) {
-              return <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>;
-            } else {
-              return <span className="text-2xl opacity-30">⏳</span>;
-            }
-          };
+        // Helper function to render step icon based on state
+        const renderStepIcon = (stepNumber) => {
+          if (loadingStep > stepNumber) {
+            return <span className="text-2xl">✅</span>;
+          } else if (loadingStep === stepNumber) {
+            return <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>;
+          } else {
+            return <span className="text-2xl opacity-30">⏳</span>;
+          }
+        };
 
-          return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
-              <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-white text-center">
-                <div className="mb-6">
-                  <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mb-4"></div>
-                  <h2 className="text-2xl font-bold mb-2">{t.loadingTitle}</h2>
-                  <p className="text-purple-200 text-sm">{t.loadingMessage}</p>
-                </div>
-                
-                <div className="space-y-3">
-                  {loadingMessages.map((msg, idx) => {
-                    const stepNumber = idx + 1; // Convert 0-based index to 1-based step number
-                    return (
-                      <div 
-                        key={`loading-step-${stepNumber}`}
-                        className={`flex items-center gap-3 p-3 rounded-lg transition-all ${getStepClasses(stepNumber)}`}
-                      >
-                        {renderStepIcon(stepNumber)}
-                        <span className={`text-sm ${loadingStep >= stepNumber ? "font-semibold" : "opacity-50"}`}>
-                          {msg}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 flex items-center justify-center">
+            <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-white text-center">
+              <div className="mb-6">
+                <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent mb-4"></div>
+                <h2 className="text-2xl font-bold mb-2">{t.loadingTitle}</h2>
+                <p className="text-purple-200 text-sm">{t.loadingMessage}</p>
+              </div>
+
+              <div className="space-y-3">
+                {loadingMessages.map((msg, idx) => {
+                  const stepNumber = idx + 1; // Convert 0-based index to 1-based step number
+                  return (
+                    <div
+                      key={`loading-step-${stepNumber}`}
+                      className={`flex items-center gap-3 p-3 rounded-lg transition-all ${getStepClasses(stepNumber)}`}
+                    >
+                      {renderStepIcon(stepNumber)}
+                      <span className={`text-sm ${loadingStep >= stepNumber ? "font-semibold" : "opacity-50"}`}>
+                        {msg}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          );
-        }
+          </div>
+        );
+      }
 
-        if (step === "results") {
-          const scores = calcScores();
-          const overallLevel = getLevel(scores.overall);
-          const readiness = getWorkshopReadiness(scores);
-          const recommendations = getRecommendations(scores);
-          const roadmap = generateRoadmap(scores);
+      if (step === "results") {
+        const scores = calcScores();
+        const overallLevel = getLevel(scores.overall);
+        const readiness = getWorkshopReadiness(scores);
+        const recommendations = getRecommendations(scores);
+        const roadmap = generateRoadmap(scores);
 
-          return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
-              <div className="max-w-5xl mx-auto py-8">
-                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="bg-gradient-to-r from-purple-600 to-indigo-700 p-8 text-white">
-                    <h1 className="text-4xl font-bold mb-2">
-                      🎓 {t.resultsTitle}
-                    </h1>
-                    <p className="text-purple-100">{t.resultsSubtitle}</p>
-                  </div>
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
+            <div className="max-w-5xl mx-auto py-8">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-purple-600 to-indigo-700 p-8 text-white">
+                  <h1 className="text-4xl font-bold mb-2">
+                    🎓 {t.resultsTitle}
+                  </h1>
+                  <p className="text-purple-100">{t.resultsSubtitle}</p>
+                </div>
 
-                  <div className="p-8">
-                    <div className="mb-8">
-                      <h2 className="text-2xl font-bold mb-4">
-                        {t.overallReadiness}
-                      </h2>
-                      <div
-                        className={`${levelColors[overallLevel].bg} ${levelColors[overallLevel].border} border-2 rounded-lg p-6`}
-                      >
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center gap-3">
-                            <span className="text-5xl">
-                              {levelColors[overallLevel].emoji}
-                            </span>
-                            <div>
-                              <h3
-                                className={`text-2xl font-bold ${levelColors[overallLevel].text}`}
-                              >
-                                {levelColors[overallLevel].name}
-                              </h3>
-                              <p className="text-gray-700">{readiness.level}</p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div
-                              className={`text-5xl font-bold ${levelColors[overallLevel].text}`}
+                <div className="p-8">
+                  <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4">
+                      {t.overallReadiness}
+                    </h2>
+                    <div
+                      className={`${levelColors[overallLevel].bg} ${levelColors[overallLevel].border} border-2 rounded-lg p-6`}
+                    >
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-3">
+                          <span className="text-5xl">
+                            {levelColors[overallLevel].emoji}
+                          </span>
+                          <div>
+                            <h3
+                              className={`text-2xl font-bold ${levelColors[overallLevel].text}`}
                             >
-                              {scores.overall}%
-                            </div>
-                            <p className="text-sm text-gray-600">
-                              {readiness.weeks}
-                            </p>
+                              {levelColors[overallLevel].name}
+                            </h3>
+                            <p className="text-gray-700">{readiness.level}</p>
                           </div>
                         </div>
-                        <p className="text-gray-700 italic">{readiness.desc}</p>
+                        <div className="text-right">
+                          <div
+                            className={`text-5xl font-bold ${levelColors[overallLevel].text}`}
+                          >
+                            {scores.overall}%
+                          </div>
+                          <p className="text-sm text-gray-600">
+                            {readiness.weeks}
+                          </p>
+                        </div>
                       </div>
+                      <p className="text-gray-700 italic">{readiness.desc}</p>
                     </div>
+                  </div>
 
-                    <div className="mb-8">
-                      <h2 className="text-2xl font-bold mb-4">
-                        {t.categoryScores}
-                      </h2>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {categories.map((cat) => {
-                          const score = scores[cat.id];
-                          const level = getLevel(score);
-                          return (
-                            <div
-                              key={cat.id}
-                              className={`${levelColors[level].bg} border-2 ${levelColors[level].border} rounded-lg p-4`}
-                            >
-                              <div className="flex items-center justify-between mb-2">
-                                <div className="flex items-center gap-2">
-                                  <span className="text-2xl">{cat.emoji}</span>
-                                  <span className="font-bold text-gray-800">
-                                    {cat.name}
-                                  </span>
-                                </div>
-                                <span
-                                  className={`text-2xl font-bold ${levelColors[level].text}`}
-                                >
-                                  {score}%
+                  <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4">
+                      {t.categoryScores}
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {categories.map((cat) => {
+                        const score = scores[cat.id];
+                        const level = getLevel(score);
+                        return (
+                          <div
+                            key={cat.id}
+                            className={`${levelColors[level].bg} border-2 ${levelColors[level].border} rounded-lg p-4`}
+                          >
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-2xl">{cat.emoji}</span>
+                                <span className="font-bold text-gray-800">
+                                  {cat.name}
                                 </span>
                               </div>
-                              <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div
-                                  className={`h-full ${
-                                    cat.color
-                                      .replace("from-", "bg-")
-                                      .split(" ")[0]
+                              <span
+                                className={`text-2xl font-bold ${levelColors[level].text}`}
+                              >
+                                {score}%
+                              </span>
+                            </div>
+                            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                              <div
+                                className={`h-full ${cat.color
+                                    .replace("from-", "bg-")
+                                    .split(" ")[0]
                                   }`}
-                                  style={{ width: `${score}%` }}
-                                ></div>
-                              </div>
+                                style={{ width: `${score}%` }}
+                              ></div>
                             </div>
-                          );
-                        })}
-                      </div>
+                          </div>
+                        );
+                      })}
                     </div>
+                  </div>
 
-                    {recommendations.length > 0 && (
-                      <div className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4">
-                          🎯 {t.priorityFocusAreas}
-                        </h2>
-                        <div className="space-y-4">
-                          {recommendations.map((rec, i) => (
-                            <div
-                              key={i}
-                              className="bg-red-50 border-2 border-red-200 rounded-lg p-4"
-                            >
-                              <div className="flex items-start gap-3">
-                                <span className="text-3xl">{rec.emoji}</span>
-                                <div className="flex-1">
-                                  <div className="flex justify-between items-center mb-2">
-                                    <h3 className="font-bold text-gray-800">
-                                      {rec.area}
-                                    </h3>
-                                    <span
-                                      className={`text-xs font-bold px-3 py-1 rounded ${
-                                        rec.priority === "Critical"
-                                          ? "bg-red-200 text-red-800"
-                                          : "bg-orange-200 text-orange-800"
-                                      }`}
-                                    >
-                                      {t.priorityLabels[rec.priority]}{" "}
-                                      {t.priority}
-                                    </span>
-                                  </div>
-                                  <p className="text-sm text-gray-600 mb-2">
-                                    {t.score}: {rec.score}%
-                                  </p>
-                                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                                    {rec.actions.map((action, j) => (
-                                      <li key={j}>{action}</li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
+                  {recommendations.length > 0 && (
                     <div className="mb-8">
                       <h2 className="text-2xl font-bold mb-4">
-                        🗺️ {t.learningRoadmap}
+                        🎯 {t.priorityFocusAreas}
                       </h2>
                       <div className="space-y-4">
-                        {roadmap.map((phase, i) => (
+                        {recommendations.map((rec, i) => (
                           <div
                             key={i}
-                            className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50 rounded-r-lg"
+                            className="bg-red-50 border-2 border-red-200 rounded-lg p-4"
                           >
-                            <h3 className="font-bold text-indigo-900">
-                              {phase.phase}
-                            </h3>
-                            <p className="text-sm text-indigo-700 mb-2">
-                              {t.focus}:{" "}
-                              {phase.focus.filter((f) => f).join(", ")}
-                            </p>
-                            <ul className="list-disc list-inside text-sm text-gray-700">
-                              {phase.goals.map((goal, j) => (
-                                <li key={j}>{goal}</li>
-                              ))}
-                            </ul>
+                            <div className="flex items-start gap-3">
+                              <span className="text-3xl">{rec.emoji}</span>
+                              <div className="flex-1">
+                                <div className="flex justify-between items-center mb-2">
+                                  <h3 className="font-bold text-gray-800">
+                                    {rec.area}
+                                  </h3>
+                                  <span
+                                    className={`text-xs font-bold px-3 py-1 rounded ${rec.priority === "Critical"
+                                        ? "bg-red-200 text-red-800"
+                                        : "bg-orange-200 text-orange-800"
+                                      }`}
+                                  >
+                                    {t.priorityLabels[rec.priority]}{" "}
+                                    {t.priority}
+                                  </span>
+                                </div>
+                                <p className="text-sm text-gray-600 mb-2">
+                                  {t.score}: {rec.score}%
+                                </p>
+                                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                  {rec.actions.map((action, j) => (
+                                    <li key={j}>{action}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         ))}
                       </div>
                     </div>
+                  )}
 
-                    <div className="text-center p-4 bg-gray-100 rounded-lg mb-6">
-                      <p className="text-sm text-gray-700">
-                        {t.workshopMessage}
-                      </p>
+                  <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4">
+                      🗺️ {t.learningRoadmap}
+                    </h2>
+                    <div className="space-y-4">
+                      {roadmap.map((phase, i) => (
+                        <div
+                          key={i}
+                          className="border-l-4 border-indigo-500 pl-4 py-2 bg-indigo-50 rounded-r-lg"
+                        >
+                          <h3 className="font-bold text-indigo-900">
+                            {phase.phase}
+                          </h3>
+                          <p className="text-sm text-indigo-700 mb-2">
+                            {t.focus}:{" "}
+                            {phase.focus.filter((f) => f).join(", ")}
+                          </p>
+                          <ul className="list-disc list-inside text-sm text-gray-700">
+                            {phase.goals.map((goal, j) => (
+                              <li key={j}>{goal}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
+                  </div>
 
-                    <div className="flex gap-4">
-                      <button
-                        onClick={printResults}
-                        className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold hover:opacity-90 transition"
-                      >
-                        {t.printButton}
-                      </button>
-                      <button
-                        onClick={resetAssessment}
-                        className="flex-1 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg font-bold hover:opacity-90 transition"
-                      >
-                        🔄 {t.startNewAssessment}
-                      </button>
-                    </div>
+                  <div className="text-center p-4 bg-gray-100 rounded-lg mb-6">
+                    <p className="text-sm text-gray-700">
+                      {t.workshopMessage}
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <button
+                      onClick={printResults}
+                      className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold hover:opacity-90 transition"
+                    >
+                      {t.printButton}
+                    </button>
+                    <button
+                      onClick={resetAssessment}
+                      className="flex-1 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg font-bold hover:opacity-90 transition"
+                    >
+                      🔄 {t.startNewAssessment}
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          );
-        }
-
-        return null;
+          </div>
+        );
       }
 
-      ReactDOM.render(<WorkshopAssessment />, document.getElementById("root"));
-    </script>
-    <script src="../menu.js"></script>
+      return null;
+    }
 
-    <!-- Structured Data (Schema.org) for SEO -->
-    <script type="application/ld+json">
+    ReactDOM.render(<WorkshopAssessment />, document.getElementById("root"));
+  </script>
+  <script src="../menu.js"></script>
+
+  <!-- Structured Data (Schema.org) for SEO -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -2269,7 +2241,7 @@
       }
     </script>
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -2293,5 +2265,6 @@
         ]
       }
     </script>
-  </body>
+</body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,33 @@
             padding: 0;
             background-color: #f8fafc;
             color: #1e293b;
+        }
+
+        .back-link-container {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-3px);
         }
 
         .hub-container {
@@ -97,41 +125,48 @@
         .btn-link:hover {
             background-color: #4338ca;
         }
-        
+
         /* New Coming Soon Card style */
         .sim-card.coming-soon {
             opacity: 0.7;
             background-color: #f1f5f9;
         }
+
         .sim-card.coming-soon .btn-link {
             background-color: #94a3b8;
             cursor: not-allowed;
             pointer-events: none;
         }
-
     </style>
     <!-- Importing Global Styles -->
     <link rel="stylesheet" href="../../styles.css">
     <!-- Load menu components and i18n -->
     <script src="../../menu.js"></script>
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
+        <div class="back-link-container">
+            <a href="../upskilling_pathways.html" class="back-link">
+                <span>←</span> Back to Pathways
+            </a>
+        </div>
         <h1>Workshop Simulations</h1>
         <p>Interactive environments and checklists for the Delivery Pilot workshop series.</p>
     </div>
 
     <div class="hub-container">
         <div class="simulation-grid">
-            
+
             <!-- Environment Check -->
             <div class="sim-card">
                 <div class="sim-icon">🛠️</div>
                 <div class="sim-title">Environment Setup</div>
                 <div class="sim-desc">
-                    Verify your systems, accounts, and tools are ready for the workshop. Includes Canva, GitHub, and AI tool checks.
+                    Verify your systems, accounts, and tools are ready for the workshop. Includes Canva, GitHub, and AI
+                    tool checks.
                 </div>
                 <a href="environment_checks.html" class="btn-link">Start Check</a>
             </div>
@@ -143,7 +178,8 @@
                 <div class="sim-desc">
                     Assess your readiness for the AI-first workforce. Feedback on skills, challenges, and opportunities.
                 </div>
-                <a href="raise_expectations.html" class="btn-link" style="background-color: #059669;">Start Assessment</a>
+                <a href="raise_expectations.html" class="btn-link" style="background-color: #059669;">Start
+                    Assessment</a>
             </div>
 
             <!-- Workstation Setup Check -->
@@ -151,17 +187,19 @@
                 <div class="sim-icon">🖥️</div>
                 <div class="sim-title">Workstation Setup</div>
                 <div class="sim-desc">
-                    Optimize your physical and mental environment. Check monitor setup, connectivity, and creative flow readiness.
+                    Optimize your physical and mental environment. Check monitor setup, connectivity, and creative flow
+                    readiness.
                 </div>
                 <a href="workstation_setup.html" class="btn-link" style="background-color: #0ea5e9;">Start Check</a>
             </div>
 
-             <!-- Internet Speed Check -->
-             <div class="sim-card">
+            <!-- Internet Speed Check -->
+            <div class="sim-card">
                 <div class="sim-icon">🚀</div>
                 <div class="sim-title">Internet Speed</div>
                 <div class="sim-desc">
-                    Ensure your connection can handle live simulations. Diagnostic test for bandwidth, upload, and stability.
+                    Ensure your connection can handle live simulations. Diagnostic test for bandwidth, upload, and
+                    stability.
                 </div>
                 <a href="internet_speed.html" class="btn-link" style="background-color: #10b981;">Start Check</a>
             </div>
@@ -171,7 +209,8 @@
                 <div class="sim-icon">🧠</div>
                 <div class="sim-title">AI Tools Masterclass</div>
                 <div class="sim-desc">
-                    Learn when to use ChatGPT, Gemini, or Claude. interactive check for text, image, and analysis capabilities.
+                    Learn when to use ChatGPT, Gemini, or Claude. interactive check for text, image, and analysis
+                    capabilities.
                 </div>
                 <a href="ai_tools.html" class="btn-link" style="background-color: #6366f1;">Start Training</a>
             </div>
@@ -193,7 +232,8 @@
                 <div class="sim-desc">
                     Build your neural network with Obsidian and AI. Install plugins, setup API keys, and start linking.
                 </div>
-                <a href="personal_second_brain.html" class="btn-link" style="background-color: #7c3aed;">Start Building</a>
+                <a href="personal_second_brain.html" class="btn-link" style="background-color: #7c3aed;">Start
+                    Building</a>
             </div>
 
             <!-- RAG Simulation -->
@@ -213,7 +253,8 @@
                 <div class="sim-desc">
                     Master browser-based AI systems like Grok, Gemini, and ChatGPT. 10-step interaction guide.
                 </div>
-                <a href="browser_cli_simulation.html" class="btn-link" style="background-color: #3b82f6;">Start Mastery</a>
+                <a href="browser_cli_simulation.html" class="btn-link" style="background-color: #3b82f6;">Start
+                    Mastery</a>
             </div>
 
             <!-- Future Simulations Section (Placeholders) -->
@@ -230,7 +271,7 @@
                 <div class="sim-icon">⚖️</div>
                 <div class="sim-title">Ethics & Compliance</div>
                 <div class="sim-desc">
-                   Scenario-based training for GDPR and ethical AI decision making.
+                    Scenario-based training for GDPR and ethical AI decision making.
                 </div>
                 <span class="btn-link">Coming Soon</span>
             </div>
@@ -240,4 +281,5 @@
 
     <div id="footer-placeholder"></div>
 </body>
+
 </html>
