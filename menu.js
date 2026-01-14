@@ -42,7 +42,8 @@ const navigationConfig = {
                 { href: 'junior-engineer-training.html', textKey: 'nav.juniorTraining', text: '👨‍🎓 Junior Engineer Training' },
                 { href: 'upskilling_pathways.html', textKey: 'nav.upskillingPathways', text: '🎓 Upskilling Pathways' },
                 { href: 'comprehensive_analysis.html', textKey: 'nav.comprehensiveAnalysis', text: '📊 Comprehensive Analysis' },
-                { href: 'delivery-pilot-methodology.html', textKey: 'nav.methodology', text: '📖 Methodology' }
+                { href: 'delivery-pilot-methodology.html', textKey: 'nav.methodology', text: '📖 Methodology' },
+                { href: 'certified-professional.html', textKey: 'nav.certifiedProfessional', text: '📜 Certified Professional' }
             ]
         },
         { href: 'pricing.html', textKey: 'nav.pricing', text: '💰 Pricing' },
