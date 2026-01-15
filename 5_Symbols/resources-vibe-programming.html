@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How vibe programming and AI-driven development solve the problem of complex, ever-changing documentation and instructions that burden engineers. Learn about real-time feedback and intuitive development.">
+    <meta name="keywords" content="vibe programming, AI development, real-time feedback, documentation burden, complex instructions, AI revolution, intuitive programming, delivery pilot">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-vibe-programming.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vibe Programming: Beyond Complex Documentation | Delivery Pilot">
+    <meta property="og:description" content="How AI-driven vibe programming replaces complex, ever-changing documentation with real-time, intuitive feedback for engineers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-vibe-programming.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vibe Programming: Beyond Complex Documentation">
+    <meta name="twitter:description" content="How AI-driven development solves the documentation burden problem with real-time feedback.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+    
+    <title>Vibe Programming: Beyond Complex Documentation | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .problem-section {
+            padding: 4rem 0;
+            background: #fff5f5;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #f0fdf4;
+        }
+
+        .challenge-cards,
+        .solution-cards,
+        .benefit-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-card.old {
+            border-left: 4px solid #ef4444;
+        }
+
+        .comparison-card.new {
+            border-left: 4px solid #10b981;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .related-links {
+            background: #f3f4f6;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .related-links h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .related-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-links li {
+            margin: 0.5rem 0;
+        }
+
+        .related-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>Vibe Programming: The Future Beyond Documentation</h1>
+            <p class="subtitle">How AI-Driven Development Solves the Complex Documentation Burden</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Unnatural Burden on Modern Engineers</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    Today's engineers face an <strong>unnatural cognitive load</strong>: reading mountains of complex, ever-changing documentation, following politically-influenced instruction chains, and executing procedures that shift faster than they can be learned. This is not how humans naturally work—we thrive on <strong>intuition, real-time feedback, and contextual understanding</strong>, not on memorizing endless manuals.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Traditional development requires engineers to:
+                </p>
+                <ul style="margin: 1rem 0 1.5rem 2rem; line-height: 2;">
+                    <li>Read hundreds of pages of documentation that may be outdated by the time they finish</li>
+                    <li>Navigate organizational politics embedded in technical guidelines</li>
+                    <li>Execute complex instruction chains that require perfect sequencing</li>
+                    <li>Context-switch between countless tools, each with its own learning curve</li>
+                    <li>Maintain mental models of systems too complex for any single person to fully understand</li>
+                </ul>
+                <p>
+                    This approach is <strong>fundamentally broken</strong>. The AI revolution offers a better way: <strong>Vibe Programming</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">📚 The Documentation Nightmare</h2>
+            <p class="section-subtitle">Why Traditional Documentation Fails Modern Engineers</p>
+            
+            <div class="challenge-cards">
+                <div class="card">
+                    <span class="icon">📖</span>
+                    <h3>Ever-Changing Instructions</h3>
+                    <p>Documentation becomes obsolete within months or even weeks. Engineers waste time following outdated procedures, only to discover they no longer work. The constant churn means no one can stay current.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔗</span>
+                    <h3>Complex Instruction Chains</h3>
+                    <p>Modern systems require executing dozens of steps in precise order. Missing one step or doing them out of sequence causes failures. The cognitive load of tracking these dependencies is overwhelming.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🎭</span>
+                    <h3>Political Documentation</h3>
+                    <p>Technical documentation often reflects organizational politics rather than best practices. Engineers must decode hidden agendas and navigate political landmines embedded in "technical" guidelines.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🌪️</span>
+                    <h3>Information Overload</h3>
+                    <p>Too much information scattered across wikis, READMEs, Confluence pages, Slack channels, and tribal knowledge. Finding the right information takes longer than actually doing the work.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">⏰</span>
+                    <h3>No Time to Learn</h3>
+                    <p>By the time an engineer masters a tool or framework, it's already being replaced. The velocity of change has exceeded human capacity for learning through traditional documentation.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🤯</span>
+                    <h3>Cognitive Overload</h3>
+                    <p>Engineers are expected to maintain expertise in dozens of technologies simultaneously. The mental burden of keeping all this documentation in mind leads to burnout and errors.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <h2>💡 The Core Problem</h2>
+                <p>It is <strong>not natural</strong> for engineers to read and execute complex, ever-changing instructions that chain politically. Humans excel at pattern recognition, contextual problem-solving, and creative thinking—not at being human documentation parsers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Old vs New Approach -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">⚖️ Traditional Development vs. Vibe Programming</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card old">
+                    <h3>❌ Traditional Approach</h3>
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Documentation-Heavy Development</p>
+                    <ul style="line-height: 1.8;">
+                        <li><strong>Step 1:</strong> Read 50+ pages of documentation</li>
+                        <li><strong>Step 2:</strong> Understand complex architecture diagrams</li>
+                        <li><strong>Step 3:</strong> Follow precise instruction sequences</li>
+                        <li><strong>Step 4:</strong> Debug when something inevitably breaks</li>
+                        <li><strong>Step 5:</strong> Search for updated docs (original was outdated)</li>
+                        <li><strong>Step 6:</strong> Ask senior engineer who has tribal knowledge</li>
+                        <li><strong>Step 7:</strong> Finally get something working</li>
+                        <li><strong>Result:</strong> Days or weeks spent, high frustration, fragile understanding</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card new">
+                    <h3>✅ Vibe Programming</h3>
+                    <p style="font-weight: 600; margin-bottom: 1rem;">AI-Driven Intuitive Development</p>
+                    <ul style="line-height: 1.8;">
+                        <li><strong>Step 1:</strong> Describe what you want to achieve in natural language</li>
+                        <li><strong>Step 2:</strong> AI agent understands context and generates solution</li>
+                        <li><strong>Step 3:</strong> Get real-time feedback on what's happening</li>
+                        <li><strong>Step 4:</strong> AI automatically handles complex instruction chains</li>
+                        <li><strong>Step 5:</strong> Iterate based on intuitive feedback, not docs</li>
+                        <li><strong>Step 6:</strong> AI keeps up with latest changes automatically</li>
+                        <li><strong>Step 7:</strong> Focus on outcomes, not procedures</li>
+                        <li><strong>Result:</strong> Hours instead of days, low frustration, deep understanding through doing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Vibe Programming -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">✨ What is Vibe Programming?</h2>
+            <p class="section-subtitle">Development Through Intuition and Real-Time AI Collaboration</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    <strong>Vibe Programming</strong> is a new paradigm where engineers work <strong>with AI agents</strong> that understand context, intent, and constantly evolving best practices. Instead of reading documentation, engineers <strong>describe their intent</strong> and receive <strong>real-time, contextual guidance</strong> that adapts to their specific situation.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Think of it like this: Instead of reading a car manual to learn how to drive, you have an expert co-pilot who guides you through every situation in real-time, adapting their advice to the actual conditions you face.
+                </p>
+            </div>
+
+            <div class="benefit-cards">
+                <div class="card">
+                    <span class="icon">🎯</span>
+                    <h3>Intent-Based Development</h3>
+                    <p>Express <strong>what</strong> you want to achieve, not <strong>how</strong> to do it. AI agents translate your intent into concrete implementation steps, handling the complexity behind the scenes.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">⚡</span>
+                    <h3>Real-Time Feedback</h3>
+                    <p>Get immediate, contextual feedback as you work. No more guessing if you're on the right track or waiting hours to discover you took a wrong turn three steps back.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔄</span>
+                    <h3>Always Up-to-Date</h3>
+                    <p>AI agents continuously learn from the latest patterns, best practices, and tool updates. You automatically get current guidance without reading changelogs.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🧠</span>
+                    <h3>Contextual Intelligence</h3>
+                    <p>AI understands your project's specific context, constraints, and patterns. Guidance is tailored to your situation, not generic documentation that may or may not apply.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🤝</span>
+                    <h3>Collaborative Partnership</h3>
+                    <p>Work <strong>with</strong> AI as a pair programming partner, not as a replacement. Combine human creativity and intuition with AI's knowledge and consistency.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🚀</span>
+                    <h3>Rapid Iteration</h3>
+                    <p>Experiment fearlessly with AI safety net. Try approaches, get instant feedback, iterate quickly. Learning happens through doing, not reading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How AI Solves This -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🤖 How the AI Revolution Enables Vibe Programming</h2>
+            
+            <div style="max-width: 900px; margin: 2rem auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+                <p style="margin-bottom: 1.5rem;">
+                    The <strong>AI revolution</strong> fundamentally changes how engineers interact with complex systems. Modern AI agents can:
+                </p>
+            </div>
+
+            <div class="solution-cards">
+                <div class="card">
+                    <span class="icon">📚</span>
+                    <h3>Process Documentation Instantly</h3>
+                    <p>AI agents can read and understand thousands of pages in seconds, extracting the relevant information for your specific context without requiring you to do the same.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔗</span>
+                    <h3>Execute Complex Chains Automatically</h3>
+                    <p>AI agents handle multi-step instruction chains flawlessly, maintaining perfect sequencing and handling dependencies without human error or cognitive load.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🎓</span>
+                    <h3>Learn Continuously</h3>
+                    <p>Unlike human engineers who need dedicated learning time, AI agents continuously absorb new patterns, tools, and best practices, always staying current.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">💬</span>
+                    <h3>Communicate Naturally</h3>
+                    <p>Express your needs in plain language, not in the formal syntax of documentation. AI translates natural intent into precise technical actions.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🔍</span>
+                    <h3>Navigate Political Complexity</h3>
+                    <p>AI can identify when documentation reflects organizational politics rather than technical merit, helping you focus on what actually works.</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🛡️</span>
+                    <h3>Provide Safety Rails</h3>
+                    <p>AI agents catch potential mistakes in real-time, preventing errors before they happen rather than requiring perfect execution of complex procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The New Synthesis -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2>🌟 The Synthesis of the New World</h2>
+                <p style="margin-bottom: 1rem;">
+                    The AI revolution enables a <strong>synthesis of human intuition and machine precision</strong>. Engineers can finally work the way they naturally think—through exploration, intuition, and real-time feedback—while AI handles the unnatural burden of tracking complex, ever-changing documentation and instruction chains.
+                </p>
+                <p>
+                    This is not about replacing engineers. It's about <strong>liberating them</strong> from the soul-crushing burden of being human documentation parsers and instruction executors, allowing them to focus on what they do best: <strong>creative problem-solving and building valuable solutions</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">🔗 Related Resources</h2>
+            <p class="section-subtitle">Explore how vibe programming connects to other AI transformation concepts</p>
+            
+            <div class="related-links">
+                <h3>📖 Documentation & Knowledge Challenges</h3>
+                <ul>
+                    <li>→ <a href="resources-documentation-efficiency.html">Documentation & Communication Efficiency</a> - Transform documentation noise into actionable signals</li>
+                    <li>→ <a href="resources-knowledge-transfer.html">Knowledge Transfer Challenges</a> - How agents solve the knowledge handover problem</li>
+                    <li>→ <a href="resources-acronym-pressure.html">Acronym Pressure</a> - The cognitive burden of endless technical terminology</li>
+                </ul>
+            </div>
+
+            <div class="related-links">
+                <h3>🤖 AI Agents & Human Collaboration</h3>
+                <ul>
+                    <li>→ <a href="resources-human-in-the-loop.html">Human-in-the-Loop AI</a> - How humans and AI work together effectively</li>
+                    <li>→ <a href="resources-humans-vs-agents.html">Humans vs. Agents</a> - Understanding complementary strengths</li>
+                    <li>→ <a href="resources-agentic-vs-automation.html">Agentic AI vs. Automation</a> - Why agents are different from simple automation</li>
+                </ul>
+            </div>
+
+            <div class="related-links">
+                <h3>🚀 Transformation & New Paradigms</h3>
+                <ul>
+                    <li>→ <a href="resources-paradigm-shift.html">The Paradigm Shift</a> - Why modern professionals need new approaches</li>
+                    <li>→ <a href="resources-why-build-agents.html">Why Build AI Agents?</a> - The business case for agent-based development</li>
+                    <li>→ <a href="workshops.html">10-Step Workshop Process</a> - Learn vibe programming through hands-on practice</li>
+                </ul>
+            </div>
+
+            <div class="related-links">
+                <h3>💼 Enterprise Implementation</h3>
+                <ul>
+                    <li>→ <a href="enterprise-agent.html">Enterprise Agent Implementation</a> - 10-milestone framework for deployment</li>
+                    <li>→ <a href="junior-engineer-training.html">Junior Engineer Training</a> - Transform juniors into AI agent experts</li>
+                    <li>→ <a href="assessment.html">AI Readiness Assessment</a> - Evaluate your organization's readiness</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Impact -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">💡 Real-World Impact</h2>
+            
+            <div class="comparison-grid">
+                <div class="card">
+                    <h3>Before Vibe Programming</h3>
+                    <ul style="line-height: 1.8; margin-top: 1rem;">
+                        <li>Junior engineer takes 2 weeks to set up development environment</li>
+                        <li>Senior engineer spends 40% of time answering documentation questions</li>
+                        <li>Team velocity drops when experienced members leave (tribal knowledge loss)</li>
+                        <li>Onboarding new tools takes months of reading and experimentation</li>
+                        <li>Engineers feel like "documentation archaeologists" instead of builders</li>
+                        <li>Innovation slows because complexity creates fear of change</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>With Vibe Programming</h3>
+                    <ul style="line-height: 1.8; margin-top: 1rem;">
+                        <li>Junior engineer productive on day one with AI guidance</li>
+                        <li>Senior engineers focus on architecture and complex problems</li>
+                        <li>Team knowledge captured in AI agents, not locked in people</li>
+                        <li>New tools integrated in days with AI translation layer</li>
+                        <li>Engineers feel like builders with super-powered assistants</li>
+                        <li>Innovation accelerates as AI handles complexity confidently</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">🚀 Ready to Move Beyond Documentation?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95;">
+                Discover how vibe programming and AI agents can transform your engineering team from documentation readers to value creators.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📊 Assess Your Readiness</a>
+                <a href="workshops.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🎓 Join a Workshop</a>
+                <a href="enterprise-agent.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🤖 Implement Agents</a>
+                <a href="resources-vibe-programming-tr.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇹🇷 Türkçe Okuyun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vibe Programming: The Future Beyond Complex Documentation",
+      "description": "How AI-driven vibe programming solves the unnatural burden of complex, ever-changing documentation through real-time feedback and intuitive development",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-vibe-programming.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["vibe programming", "AI development", "real-time feedback", "documentation burden", "complex instructions", "AI revolution", "intuitive programming", "AI agents"]
+    }
+    </script>
+</body>
+</html>
