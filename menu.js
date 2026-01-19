@@ -58,6 +58,7 @@ const navigationConfig = {
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
                 { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
+                { href: 'consulting-transformation.html', textKey: 'nav.consultingTransformation', text: '🔄 Consulting Transformation' },
                 { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
                 { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
