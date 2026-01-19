@@ -34,10 +34,8 @@ echo "- **Scan Time**: $(date '+%H:%M:%S')" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 # Initialize temporary files for storing issues
-TEMP_ISSUES="/tmp/sanity_issues_$$"
-TEMP_WARNINGS="/tmp/sanity_warnings_$$"
-> "$TEMP_ISSUES"
-> "$TEMP_WARNINGS"
+TEMP_ISSUES=$(mktemp)
+TEMP_WARNINGS=$(mktemp)
 
 echo "## Page-by-Page Analysis" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
@@ -99,7 +97,7 @@ check_page() {
         ((CRITICAL_ISSUES++))
     else
         # Check if title is empty or too short
-        TITLE_LENGTH=$(grep -o '<title>[^<]*</title>' "$file" 2>/dev/null | sed 's/<title>//;s/<\/title>//' | wc -c)
+        TITLE_LENGTH=$(grep -o '<title>[^<]*</title>' "$file" 2>/dev/null | sed 's/<title>//;s/<\/title>//' | tr -d '\n' | wc -c)
         if [ "$TITLE_LENGTH" -lt 10 ]; then
             echo "- ⚠️ Title tag is too short (SEO impact)" >> "$OUTPUT_FILE"
             echo "$file: Title too short" >> "$TEMP_WARNINGS"
@@ -144,17 +142,19 @@ check_page() {
         # Construct full path relative to current file's directory
         FILE_DIR=$(dirname "$file")
         if [[ $link == /* ]]; then
-            # Absolute path
+            # Absolute path from repo root
             LINK_PATH=".${link}"
         else
             # Relative path
             LINK_PATH="${FILE_DIR}/${link}"
         fi
         
-        # Normalize the path
-        LINK_PATH=$(echo "$LINK_PATH" | sed 's|/\./|/|g' | sed 's|//|/|g')
-        
-        if [ ! -f "$LINK_PATH" ]; then
+        # Check if the resolved path exists (suppress realpath errors for non-existent paths)
+        if [ -e "$LINK_PATH" ]; then
+            # Path exists, no issue
+            continue
+        elif ! realpath -q "$LINK_PATH" &>/dev/null; then
+            # Path doesn't exist
             echo "- ⚠️ Potential broken internal link: \`$link\`" >> "$OUTPUT_FILE"
             echo "$file: Broken link to $link" >> "$TEMP_WARNINGS"
             ((page_warnings++))
@@ -286,8 +286,13 @@ SEO_PERCENTAGE=$((PAGES_WITH_META_DESC * 100 / TOTAL_PAGES))
 echo "  - $SEO_PERCENTAGE% of pages have meta descriptions" >> "$OUTPUT_FILE"
 
 echo "- **Accessibility**: " >> "$OUTPUT_FILE"
-PAGES_WITH_ALT=$(grep -L '<img[^>]*>' $(find . -name "*.html") 2>/dev/null | wc -l)
-echo "  - Images without alt tags found on multiple pages" >> "$OUTPUT_FILE"
+TOTAL_IMGS=$(grep -oh '<img[^>]*>' $(find . -name "*.html") 2>/dev/null | wc -l)
+IMGS_WITHOUT_ALT=$(grep -oh '<img[^>]*>' $(find . -name "*.html") 2>/dev/null | grep -v 'alt=' | wc -l)
+if [ "$IMGS_WITHOUT_ALT" -gt 0 ]; then
+    echo "  - Found $IMGS_WITHOUT_ALT images without alt tags out of $TOTAL_IMGS total images" >> "$OUTPUT_FILE"
+else
+    echo "  - All images have alt attributes" >> "$OUTPUT_FILE"
+fi
 
 echo "" >> "$OUTPUT_FILE"
 echo "### What Needs to Happen" >> "$OUTPUT_FILE"
