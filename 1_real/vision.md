@@ -21,11 +21,11 @@ Ultimately, we strive to be the Platform as a Service (PaaS) that allows any ent
 AI çağında kurumsal operasyonlar için nihai "Heads-Up Display" (Sanal Gösterge Paneli) olmak, organizasyonların dijital dönüşümün karmaşıklığında bir jet pilotuyla aynı durumsal farkındalıkla gezinmesini sağlamak.
 
 Şöyle bir gelecek hayal ediyoruz:
+- **AI Yeni Excel Olacak**: 1980'lerde Excel'in iş operasyonlarını dönüştürdüğü ve finansal modelleme ile veri analizini her profesyonele erişilebilir kıldığı gibi, AI ajanları 2020'lerin evrensel verimlilik aracı olacak. Delivery Pilot bu dönüşümü kolaylaştırarak, AI'ı bugünkü elektronik tablolar kadar yaygın ve vazgeçilmez hale getiriyor.
+- **AI Ajanları İnsan Yeteneğinin Doğal Uzantılarıdır**: Excel formüllerinin insan hesaplama yeteneklerini genişlettiği gibi, AI ajanları insan karar verme, yaratıcılık ve uygulama yeteneklerini genişletir. İnsanların yaptıklarını değiştirmek yerine, güçlendiren kesintisiz uzantılar olurlar.
 - **Kurumlar Sürekli Öğrenen Organizasyonlardır**: AI evriminin "jet uçağı" hızına sürekli adapte olurlar.
 - **Yetenek Açığı Kapatılmıştır**: "RAISE" (Hızlı AI Yetenek Beklentilerini Artırıyor) zorluğu, pratik ve uygulamalı beceri geliştirme ile çözülmüştür.
 - **Vibe Programlama Mühendislikle Buluşuyor**: Deterministik olmayan AI yaratıcılığı ile deterministik mühendislik disiplini arasındaki boşluk kapanmıştır.
-- **AI Yeni Excel Olacak**: 1980'lerde Excel'in iş operasyonlarını dönüştürdüğü ve finansal modelleme ile veri analizini her profesyonele erişilebilir kıldığı gibi, AI ajanları 2020'lerin evrensel verimlilik aracı olacak. Delivery Pilot bu dönüşümü kolaylaştırarak, AI'ı bugünkü elektronik tablolar kadar yaygın ve vazgeçilmez hale getiriyor.
-- **AI Ajanları İnsan Yeteneğinin Doğal Uzantılarıdır**: Excel formüllerinin insan hesaplama yeteneklerini genişlettiği gibi, AI ajanları insan karar verme, yaratıcılık ve uygulama yeteneklerini genişletir. İnsanların yaptıklarını değiştirmek yerine, güçlendiren kesintisiz uzantılar olurlar.
 - **İnsan-Ajan İşbirliği Kesintisizdir**: İnsanlar ve AI ajanları mükemmel bir sinerji içinde çalışır; ajanlar karmaşıklığı yönetirken insanlar stratejiye odaklanır.
 
 Nihayetinde, herhangi bir kurumun AI uygulamalarını güven, emniyet ve ölçülebilir iş değeri ile dağıtmasını, yönetmesini ve ölçeklendirmesini sağlayan Hizmet Olarak Platform (PaaS) olmayı hedefliyoruz.
