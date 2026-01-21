@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,42 +14,42 @@
             min-height: 100vh;
             background: #f3f4f6;
         }
-        
+
         .dashboard-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 24px 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .dashboard-header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .dashboard-title {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        
+
         .dashboard-title h1 {
             font-size: 24px;
             margin: 0;
         }
-        
+
         .user-info {
             display: flex;
             align-items: center;
             gap: 16px;
         }
-        
+
         .user-name {
             font-size: 14px;
             font-weight: 500;
         }
-        
+
         .logout-btn {
             background: rgba(255, 255, 255, 0.2);
             color: white;
@@ -59,72 +60,72 @@
             font-size: 14px;
             transition: background 0.2s;
         }
-        
+
         .logout-btn:hover {
             background: rgba(255, 255, 255, 0.3);
         }
-        
+
         .dashboard-content {
             padding: 32px 0;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
             margin-bottom: 32px;
         }
-        
+
         .stat-card {
             background: white;
             padding: 24px;
             border-radius: 12px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        
+
         .stat-card h3 {
             font-size: 14px;
             color: #6b7280;
             margin-bottom: 8px;
             font-weight: 500;
         }
-        
+
         .stat-card .stat-value {
             font-size: 32px;
             font-weight: 700;
             color: #1f2937;
         }
-        
+
         .stat-card .stat-label {
             font-size: 12px;
             color: #9ca3af;
             margin-top: 4px;
         }
-        
+
         .assessments-section {
             background: white;
             padding: 24px;
             border-radius: 12px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        
+
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 24px;
         }
-        
+
         .section-header h2 {
             font-size: 20px;
             color: #1f2937;
         }
-        
+
         .filter-buttons {
             display: flex;
             gap: 8px;
         }
-        
+
         .filter-btn {
             padding: 6px 12px;
             border: 1px solid #e5e7eb;
@@ -134,52 +135,52 @@
             font-size: 13px;
             transition: all 0.2s;
         }
-        
+
         .filter-btn.active {
             background: #667eea;
             color: white;
             border-color: #667eea;
         }
-        
+
         .assessment-list {
             display: grid;
             gap: 16px;
         }
-        
+
         .assessment-card {
             border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 20px;
             transition: all 0.2s;
         }
-        
+
         .assessment-card:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
-        
+
         .assessment-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
             margin-bottom: 12px;
         }
-        
+
         .assessment-info h3 {
             font-size: 16px;
             color: #1f2937;
             margin-bottom: 4px;
         }
-        
+
         .assessment-meta {
             font-size: 13px;
             color: #6b7280;
         }
-        
+
         .assessment-score {
             text-align: right;
         }
-        
+
         .score-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -187,34 +188,34 @@
             font-size: 12px;
             font-weight: 600;
         }
-        
+
         .score-badge.excellent {
             background: #d1fae5;
             color: #065f46;
         }
-        
+
         .score-badge.good {
             background: #dbeafe;
             color: #1e40af;
         }
-        
+
         .score-badge.fair {
             background: #fef3c7;
             color: #92400e;
         }
-        
+
         .score-badge.poor {
             background: #fee2e2;
             color: #991b1b;
         }
-        
+
         .score-value {
             font-size: 24px;
             font-weight: 700;
             color: #1f2937;
             margin-top: 4px;
         }
-        
+
         .assessment-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -223,49 +224,49 @@
             padding-top: 16px;
             border-top: 1px solid #f3f4f6;
         }
-        
+
         .detail-item {
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 13px;
         }
-        
+
         .detail-icon {
             font-size: 16px;
         }
-        
+
         .detail-label {
             color: #6b7280;
         }
-        
+
         .detail-value {
             color: #1f2937;
             font-weight: 500;
         }
-        
+
         .empty-state {
             text-align: center;
             padding: 60px 20px;
             color: #6b7280;
         }
-        
+
         .empty-state-icon {
             font-size: 64px;
             margin-bottom: 16px;
             opacity: 0.5;
         }
-        
+
         .empty-state h3 {
             font-size: 18px;
             margin-bottom: 8px;
             color: #374151;
         }
-        
+
         .empty-state p {
             font-size: 14px;
         }
-        
+
         .new-assessment-btn {
             display: inline-block;
             margin-top: 16px;
@@ -277,11 +278,11 @@
             font-weight: 500;
             transition: transform 0.2s;
         }
-        
+
         .new-assessment-btn:hover {
             transform: translateY(-2px);
         }
-        
+
         .assessment-actions {
             display: flex;
             gap: 8px;
@@ -289,7 +290,7 @@
             padding-top: 16px;
             border-top: 1px solid #f3f4f6;
         }
-        
+
         .download-pdf-btn {
             flex: 1;
             padding: 10px 16px;
@@ -306,17 +307,56 @@
             justify-content: center;
             gap: 8px;
         }
-        
+
         .download-pdf-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
-        
+
         .download-pdf-btn:active {
             transform: translateY(0);
         }
+
+        .simulations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .simulation-card {
+            background: #f9fafb;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .simulation-card:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-color: #d1d5db;
+        }
+
+        .simulation-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .simulation-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+            line-height: 1.4;
+        }
     </style>
 </head>
+
 <body>
     <div class="dashboard-container">
         <div class="dashboard-header">
@@ -331,9 +371,54 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="dashboard-content">
             <div class="container">
+                <div class="assessments-section" style="margin-bottom: 32px;">
+                    <div class="section-header">
+                        <h2>Quick Simulations</h2>
+                        <a href="simulations/index.html" class="filter-btn" style="text-decoration: none;">View All</a>
+                    </div>
+                    <div class="simulations-grid">
+                        <a href="simulations/environment_checks.html" class="simulation-card">
+                            <div class="simulation-icon">🛠️</div>
+                            <div class="simulation-name">Environment Setup</div>
+                        </a>
+                        <a href="simulations/raise_expectations.html" class="simulation-card">
+                            <div class="simulation-icon">💹</div>
+                            <div class="simulation-name">Raise Expectations</div>
+                        </a>
+                        <a href="simulations/workstation_setup.html" class="simulation-card">
+                            <div class="simulation-icon">🖥️</div>
+                            <div class="simulation-name">Workstation Setup</div>
+                        </a>
+                        <a href="simulations/internet_speed.html" class="simulation-card">
+                            <div class="simulation-icon">🚀</div>
+                            <div class="simulation-name">Internet Speed</div>
+                        </a>
+                        <a href="simulations/ai_tools.html" class="simulation-card">
+                            <div class="simulation-icon">🧠</div>
+                            <div class="simulation-name">AI Tools Masterclass</div>
+                        </a>
+                        <a href="simulations/github_signup.html" class="simulation-card">
+                            <div class="simulation-icon">🐙</div>
+                            <div class="simulation-name">GitHub Signup</div>
+                        </a>
+                        <a href="simulations/personal_second_brain.html" class="simulation-card">
+                            <div class="simulation-icon">🧠</div>
+                            <div class="simulation-name">Personal Second Brain</div>
+                        </a>
+                        <a href="simulations/rag_simulation.html" class="simulation-card">
+                            <div class="simulation-icon">🔍</div>
+                            <div class="simulation-name">RAG Architecture</div>
+                        </a>
+                        <a href="simulations/browser_cli_simulation.html" class="simulation-card">
+                            <div class="simulation-icon">💬</div>
+                            <div class="simulation-name">Browser CLI Mastery</div>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>Total Assessments</h3>
@@ -356,7 +441,7 @@
                         <div class="stat-label">Assessed users</div>
                     </div>
                 </div>
-                
+
                 <div class="assessments-section">
                     <div class="section-header">
                         <h2>Assessment History</h2>
@@ -366,20 +451,20 @@
                             <button class="filter-btn" data-filter="high">High Score</button>
                         </div>
                     </div>
-                    
+
                     <div class="assessment-list" id="assessmentList"></div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
         // Check if user is logged in
         const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
         if (!currentUser) {
             window.location.href = 'signin.html';
         }
-        
+
         // Mock assessment data for different enterprises
         const allAssessments = [
             // Enterprise A assessments
@@ -533,31 +618,31 @@
                 completionTime: 36
             }
         ];
-        
+
         // Get assessments for current user's enterprise
         const userAssessments = allAssessments.filter(a => a.enterpriseId === currentUser.id);
-        
+
         // Update user name
         document.getElementById('userName').textContent = currentUser.name;
-        
+
         // Calculate stats
         const totalAssessments = userAssessments.length;
-        const avgScore = totalAssessments > 0 
+        const avgScore = totalAssessments > 0
             ? Math.round(userAssessments.reduce((sum, a) => sum + a.overallScore, 0) / totalAssessments)
             : 0;
-        const latestAssessment = userAssessments.length > 0 
+        const latestAssessment = userAssessments.length > 0
             ? userAssessments.sort((a, b) => new Date(b.date) - new Date(a.date))[0]
             : null;
         const teamMembers = new Set(userAssessments.map(a => a.userEmail)).size;
-        
+
         // Update stats display
         document.getElementById('totalAssessments').textContent = totalAssessments;
         document.getElementById('averageScore').textContent = `${avgScore}%`;
-        document.getElementById('latestDate').textContent = latestAssessment 
+        document.getElementById('latestDate').textContent = latestAssessment
             ? new Date(latestAssessment.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
             : '-';
         document.getElementById('teamMembers').textContent = teamMembers;
-        
+
         // Function to get score badge class
         function getScoreBadge(score) {
             if (score >= 75) return 'excellent';
@@ -565,7 +650,7 @@
             if (score >= 40) return 'fair';
             return 'poor';
         }
-        
+
         // Category names mapping
         const categoryNames = {
             prereq: 'Prerequisites & Setup',
@@ -577,7 +662,7 @@
             advanced: 'Advanced AI & Models',
             delivery: 'Project Delivery Pilot'
         };
-        
+
         // Function to generate PDF for skills gap report
         function generateSkillsGapPDF(assessment) {
             // Check if jsPDF is loaded
@@ -586,26 +671,26 @@
                 openPrintableReport(assessment);
                 return;
             }
-            
+
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
-            
+
             // Title
             doc.setFontSize(20);
             doc.setTextColor(102, 126, 234);
             doc.text('AI Transformation Skills Gap Report', 105, 20, { align: 'center' });
-            
+
             // Subtitle
             doc.setFontSize(12);
             doc.setTextColor(100, 100, 100);
             doc.text('Delivery Pilot Assessment', 105, 28, { align: 'center' });
-            
+
             // User Information
             let yPos = 45;
             doc.setFontSize(14);
             doc.setTextColor(0, 0, 0);
             doc.text('Assessment Overview', 20, yPos);
-            
+
             yPos += 10;
             doc.setFontSize(10);
             doc.setTextColor(60, 60, 60);
@@ -618,76 +703,76 @@
             doc.text(`Assessment Date: ${new Date(assessment.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, 20, yPos);
             yPos += 6;
             doc.text(`Completion Time: ${assessment.completionTime} minutes`, 20, yPos);
-            
+
             // Overall Score
             yPos += 15;
             doc.setFontSize(14);
             doc.setTextColor(0, 0, 0);
             doc.text('Overall Readiness', 20, yPos);
-            
+
             yPos += 10;
             doc.setFontSize(24);
             doc.setTextColor(102, 126, 234);
             doc.text(`${assessment.overallScore}%`, 20, yPos);
-            
+
             doc.setFontSize(12);
             doc.setTextColor(60, 60, 60);
             doc.text(`Level: ${assessment.readinessLevel}`, 50, yPos);
-            
+
             // Category Scores
             yPos += 15;
             doc.setFontSize(14);
             doc.setTextColor(0, 0, 0);
             doc.text('Category Scores', 20, yPos);
-            
+
             yPos += 10;
             doc.setFontSize(10);
             Object.entries(assessment.categoryScores).forEach(([category, score]) => {
                 const categoryName = categoryNames[category] || category;
                 doc.setTextColor(60, 60, 60);
                 doc.text(`${categoryName}:`, 20, yPos);
-                
+
                 // Score color based on performance
                 if (score >= 75) doc.setTextColor(16, 185, 129); // green
                 else if (score >= 60) doc.setTextColor(59, 130, 246); // blue
                 else if (score >= 40) doc.setTextColor(251, 191, 36); // yellow
                 else doc.setTextColor(239, 68, 68); // red
-                
+
                 doc.text(`${score}%`, 170, yPos);
-                
+
                 yPos += 6;
                 if (yPos > 270) {
                     doc.addPage();
                     yPos = 20;
                 }
             });
-            
+
             // Skills Gap Analysis
             yPos += 10;
             doc.setFontSize(14);
             doc.setTextColor(0, 0, 0);
             doc.text('Skills Gap Analysis', 20, yPos);
-            
+
             yPos += 10;
             doc.setFontSize(10);
             doc.setTextColor(60, 60, 60);
-            
+
             const gaps = Object.entries(assessment.categoryScores)
                 .filter(([_, score]) => score < 60)
                 .sort((a, b) => a[1] - b[1]);
-            
+
             if (gaps.length > 0) {
                 doc.text('Areas requiring improvement (scored below 60%):', 20, yPos);
                 yPos += 8;
-                
+
                 gaps.forEach(([category, score]) => {
                     const categoryName = categoryNames[category] || category;
                     if (score < 40) doc.setTextColor(239, 68, 68); // red for critical
                     else if (score < 60) doc.setTextColor(251, 191, 36); // yellow for moderate
-                    
+
                     doc.text(`• ${categoryName}: ${score}% - ${score < 40 ? 'Critical Priority' : 'High Priority'}`, 25, yPos);
                     yPos += 6;
-                    
+
                     if (yPos > 270) {
                         doc.addPage();
                         yPos = 20;
@@ -697,7 +782,7 @@
                 doc.setTextColor(16, 185, 129);
                 doc.text('No significant skills gaps identified. All categories scored above 60%.', 20, yPos);
             }
-            
+
             // Recommendations
             if (gaps.length > 0) {
                 yPos += 10;
@@ -705,17 +790,17 @@
                     doc.addPage();
                     yPos = 20;
                 }
-                
+
                 doc.setFontSize(14);
                 doc.setTextColor(0, 0, 0);
                 doc.text('Recommended Actions', 20, yPos);
-                
+
                 yPos += 10;
                 doc.setFontSize(10);
                 doc.setTextColor(60, 60, 60);
                 doc.text('Based on your assessment, we recommend focusing on:', 20, yPos);
                 yPos += 8;
-                
+
                 doc.text('1. Prioritize training in critical gap areas (scored below 40%)', 25, yPos);
                 yPos += 6;
                 doc.text('2. Schedule workshops for high-priority areas (scored 40-60%)', 25, yPos);
@@ -724,24 +809,24 @@
                 yPos += 6;
                 doc.text('4. Review and reassess in 3 months to track improvement', 25, yPos);
             }
-            
+
             // Footer
             doc.setFontSize(8);
             doc.setTextColor(150, 150, 150);
             doc.text('Generated by Delivery Pilot - AI Transformation Platform', 105, 285, { align: 'center' });
             doc.text(new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }), 105, 290, { align: 'center' });
-            
+
             // Save the PDF
             const fileName = `AI-Skills-Gap-${assessment.userName.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`;
             doc.save(fileName);
         }
-        
+
         // Fallback function: Open printable HTML report
         function openPrintableReport(assessment) {
             const gaps = Object.entries(assessment.categoryScores)
                 .filter(([_, score]) => score < 60)
                 .sort((a, b) => a[1] - b[1]);
-            
+
             const reportHTML = `
 <!DOCTYPE html>
 <html>
@@ -804,13 +889,13 @@
     <div class="section">
         <h2>Category Scores</h2>
         ${Object.entries(assessment.categoryScores).map(([category, score]) => {
-            const categoryName = categoryNames[category] || category;
-            const scoreClass = score >= 75 ? 'excellent' : score >= 60 ? 'good' : score >= 40 ? 'fair' : 'poor';
-            return `<div class="category-score ${scoreClass}">
+                const categoryName = categoryNames[category] || category;
+                const scoreClass = score >= 75 ? 'excellent' : score >= 60 ? 'good' : score >= 40 ? 'fair' : 'poor';
+                return `<div class="category-score ${scoreClass}">
                 <span>${categoryName}</span>
                 <strong>${score}%</strong>
             </div>`;
-        }).join('')}
+            }).join('')}
     </div>
     
     <div class="section">
@@ -859,16 +944,16 @@
     </div>
 </body>
 </html>`;
-            
+
             const printWindow = window.open('', '_blank', 'width=800,height=900');
             printWindow.document.write(reportHTML);
             printWindow.document.close();
         }
-        
+
         // Function to render assessments
         function renderAssessments(assessments) {
             const listContainer = document.getElementById('assessmentList');
-            
+
             if (assessments.length === 0) {
                 listContainer.innerHTML = `
                     <div class="empty-state">
@@ -880,7 +965,7 @@
                 `;
                 return;
             }
-            
+
             listContainer.innerHTML = assessments.map(assessment => `
                 <div class="assessment-card">
                     <div class="assessment-header">
@@ -917,7 +1002,7 @@
                             <div>
                                 <div class="detail-label">Top Category</div>
                                 <div class="detail-value">${Object.entries(assessment.categoryScores)
-                                    .sort((a, b) => b[1] - a[1])[0][0].toUpperCase()}</div>
+                    .sort((a, b) => b[1] - a[1])[0][0].toUpperCase()}</div>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -936,31 +1021,31 @@
                 </div>
             `).join('');
         }
-        
+
         // Initial render
         renderAssessments(userAssessments);
-        
+
         // Filter functionality
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 // Update active state
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
+
                 // Filter assessments
                 const filter = btn.dataset.filter;
                 let filtered = [...userAssessments];
-                
+
                 if (filter === 'recent') {
                     filtered = filtered.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
                 } else if (filter === 'high') {
                     filtered = filtered.filter(a => a.overallScore >= 75);
                 }
-                
+
                 renderAssessments(filtered);
             });
         });
-        
+
         // Logout functionality
         document.getElementById('logoutBtn').addEventListener('click', () => {
             sessionStorage.removeItem('currentUser');
@@ -968,4 +1053,5 @@
         });
     </script>
 </body>
+
 </html>
