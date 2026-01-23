@@ -20,8 +20,8 @@ const navigationConfig = {
     logoLink: 'index.html',
     menuItems: [
         { href: 'index.html#home', textKey: 'nav.home', text: '🏠 Home' },
-        { 
-            text: '💻 Platform', 
+        {
+            text: '💻 Platform',
             textKey: 'nav.platform',
             submenu: [
                 { href: 'index.html#features', textKey: 'nav.features', text: '✨ Features' },
@@ -31,8 +31,8 @@ const navigationConfig = {
                 { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' }
             ]
         },
-        { 
-            text: '🛠️ Services', 
+        {
+            text: '🛠️ Services',
             textKey: 'nav.services',
             submenu: [
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
@@ -47,8 +47,8 @@ const navigationConfig = {
             ]
         },
         { href: 'pricing.html', textKey: 'nav.pricing', text: '💰 Pricing' },
-        { 
-            text: '🏢 Company', 
+        {
+            text: '🏢 Company',
             textKey: 'nav.company',
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
@@ -63,8 +63,8 @@ const navigationConfig = {
                 { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
         },
-        { 
-            text: '📚 Resources', 
+        {
+            text: '📚 Resources',
             textKey: 'nav.resources',
             submenu: [
                 { href: 'podcast.html', textKey: 'nav.podcast', text: '🎙️ Podcast' },
@@ -86,6 +86,7 @@ const navigationConfig = {
                 { href: 'resources-job-satisfaction-agents.html', textKey: 'nav.jobSatisfaction', text: '😊 Job Satisfaction' },
                 { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' },
                 { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
+                { href: 'resources-agile-red-tape.html', textKey: 'nav.agileRedTape', text: '🕸️ Agile Red Tape' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
             ]
         },
@@ -146,6 +147,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-acronym-pressure.html', textKey: 'footer.resources.acronymPressure', text: 'Acronym Overload' },
                 { type: 'link', href: 'resources-airgapped-challenges.html', textKey: 'footer.resources.airgappedChallenges', text: 'Air-gapped Challenges' },
                 { type: 'link', href: 'resources-access-security-silos.html', textKey: 'footer.resources.accessSecuritySilos', text: 'Access & Security Silos' },
+                { type: 'link', href: 'resources-agile-red-tape.html', textKey: 'footer.resources.agileRedTape', text: 'Agile Red Tape' },
                 { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
@@ -178,20 +180,20 @@ function generateNavigation() {
     const menuItemsHTML = navigationConfig.menuItems.map(item => {
         const dataI18n = item.textKey ? ` data-i18n="${item.textKey}"` : '';
         const itemClass = item.class ? ` class="${item.class}"` : '';
-        
+
         // Helper to fix paths and handle language
         const fixPath = (href) => {
             if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
                 return href;
             }
-            
+
             let finalHref = href;
             if (isTurkish && finalHref.endsWith('.html') && !finalHref.endsWith('-tr.html')) {
                 finalHref = finalHref.replace('.html', '-tr.html');
             } else if (isTurkish && finalHref.includes('.html#')) {
                 finalHref = finalHref.replace('.html', '-tr.html'); // replace first occurrence
             }
-            
+
             return pathPrefix + finalHref;
         };
 
@@ -201,7 +203,7 @@ function generateNavigation() {
                 const subDataI18n = subItem.textKey ? ` data-i18n="${subItem.textKey}"` : '';
                 return `<li><a href="${fixPath(subItem.href)}"${subDataI18n}>${subItem.text}</a></li>`;
             }).join('\n                            ');
-            
+
             return `<li class="dropdown">
                             <span class="dropdown-toggle"${dataI18n}>${item.text} <span class="dropdown-arrow">▼</span></span>
                             <ul class="dropdown-menu">
@@ -215,10 +217,10 @@ function generateNavigation() {
     }).join('\n                    ');
 
     // Fix logo link
-    let logoLink = window.location.pathname.includes('/simulations/') ? 
-        '../' + navigationConfig.logoLink : 
+    let logoLink = window.location.pathname.includes('/simulations/') ?
+        '../' + navigationConfig.logoLink :
         navigationConfig.logoLink;
-    
+
     if (isTurkish && logoLink.endsWith('index.html')) {
         logoLink = logoLink.replace('index.html', 'index-tr.html');
     }
@@ -267,28 +269,28 @@ async function searchSite(query) {
             } else if (window.location.pathname.includes('5_Symbols')) {
                 path = '../sitedata.json';
             }
-            
+
             const response = await fetch(path);
             window.siteData = await response.json();
         }
-        
+
         // Basic search implementation
         const lowerQuery = query.toLowerCase();
         return window.siteData.filter(page => {
-            return (page.title && page.title.toLowerCase().includes(lowerQuery)) || 
-                   (page.content && page.content.toLowerCase().includes(lowerQuery));
+            return (page.title && page.title.toLowerCase().includes(lowerQuery)) ||
+                (page.content && page.content.toLowerCase().includes(lowerQuery));
         }).map(page => {
-             // Create a snippet
-             const contentIndex = page.content ? page.content.toLowerCase().indexOf(lowerQuery) : -1;
-             let snippet = '';
-             if (contentIndex > -1) {
-                 const start = Math.max(0, contentIndex - 40);
-                 const end = Math.min(page.content.length, contentIndex + 80);
-                 snippet = (start > 0 ? '...' : '') + page.content.substring(start, end) + (end < page.content.length ? '...' : '');
-             } else {
-                 snippet = page.content ? page.content.substring(0, 100) + '...' : '';
-             }
-             return { ...page, snippet };
+            // Create a snippet
+            const contentIndex = page.content ? page.content.toLowerCase().indexOf(lowerQuery) : -1;
+            let snippet = '';
+            if (contentIndex > -1) {
+                const start = Math.max(0, contentIndex - 40);
+                const end = Math.min(page.content.length, contentIndex + 80);
+                snippet = (start > 0 ? '...' : '') + page.content.substring(start, end) + (end < page.content.length ? '...' : '');
+            } else {
+                snippet = page.content ? page.content.substring(0, 100) + '...' : '';
+            }
+            return { ...page, snippet };
         }).slice(0, 5); // Limit results
     } catch (e) {
         console.error('Error searching site:', e);
@@ -305,11 +307,11 @@ function initSearch() {
 
     if (searchInput && searchResults) {
         let debounceTimer;
-        
+
         searchInput.addEventListener('input', (e) => {
             clearTimeout(debounceTimer);
             const query = e.target.value;
-            
+
             if (query.length === 0) {
                 searchResults.style.display = 'none';
                 return;
@@ -317,7 +319,7 @@ function initSearch() {
 
             debounceTimer = setTimeout(async () => {
                 const results = await searchSite(query);
-                
+
                 if (results.length > 0) {
                     // Fix links in search results
                     let pathPrefix = '';
@@ -326,9 +328,9 @@ function initSearch() {
                     }
 
                     searchResults.innerHTML = results.map(result => {
-                         const rawUrl = result.url.replace('5_Symbols/', ''); 
-                         const finalUrl = pathPrefix + rawUrl;
-                         return `
+                        const rawUrl = result.url.replace('5_Symbols/', '');
+                        const finalUrl = pathPrefix + rawUrl;
+                        return `
                         <div class="search-result-item">
                             <a href="${finalUrl}">
                                 <h4>${result.title}</h4>
@@ -374,14 +376,14 @@ function generateFooter() {
                 if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
                     return href;
                 }
-                
+
                 let finalHref = href;
                 if (isTurkish && finalHref.endsWith('.html') && !finalHref.endsWith('-tr.html')) {
                     finalHref = finalHref.replace('.html', '-tr.html');
                 } else if (isTurkish && finalHref.includes('.html#')) {
                     finalHref = finalHref.replace('.html', '-tr.html');
                 }
-                
+
                 return pathPrefix + finalHref;
             };
 
@@ -449,7 +451,7 @@ function insertFooter() {
  * Initialize menu components when DOM is ready
  */
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         insertNavigation();
         insertFooter();
         initSearch();
@@ -469,7 +471,7 @@ if (document.readyState === 'loading') {
 async function displayVersion() {
     const versionElement = document.getElementById('deploy-version');
     const versionLink = document.getElementById('deploy-version-link');
-    
+
     if (!versionElement) return;
 
     try {
@@ -480,15 +482,15 @@ async function displayVersion() {
         } else if (window.location.pathname.includes('5_Symbols')) {
             path = '../version.json';
         }
-        
+
         const response = await fetch(path);
         if (!response.ok) throw new Error('Version file not found');
         const data = await response.json();
-        
+
         versionElement.textContent = data.version;
-        
+
         if (data.date) {
-             versionElement.title = data.date;
+            versionElement.title = data.date;
         }
 
         if (versionLink && data.full_sha) {
