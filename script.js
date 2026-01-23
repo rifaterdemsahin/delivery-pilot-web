@@ -2017,19 +2017,19 @@ let currentLang = 'en';
 function getTargetUrl(lang) {
     const pathname = window.location.pathname;
     const filename = pathname.split('/').pop() || 'index.html'; // Handle root as index.html
-    
+
     // Remove .html and -tr suffix
     const baseName = filename.replace(/(-tr)?\.html$/, '');
-    
+
     // Construct new filename
     const newFilename = lang === 'tr' ? `${baseName}-tr.html` : `${baseName}.html`;
-    
+
     // Preserve path
     const path = pathname.substring(0, pathname.lastIndexOf('/') + 1);
-    
+
     // Handle special case for root path results (unlikely in this structure but good safety)
     if (path === '/' && pathname !== '/') return '/' + newFilename;
-    
+
     return path + newFilename;
 }
 
@@ -2041,20 +2041,20 @@ function getNestedTranslation(obj, path) {
 // Function to update page content
 function updateContent(lang) {
     currentLang = lang;
-    
+
     // Get current year
     const currentYear = new Date().getFullYear();
-    
+
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getNestedTranslation(translations[lang], key);
         if (translation && typeof translation === 'string') {
             // Replace {year} placeholder with current year
-            element.textContent = translation.replace('{year}', currentYear);
+            element.innerHTML = translation.replace('{year}', currentYear);
         }
     });
-    
+
     // Update all elements with data-i18n-placeholder attribute
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
@@ -2063,7 +2063,7 @@ function updateContent(lang) {
             element.placeholder = translation;
         }
     });
-    
+
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -2071,7 +2071,7 @@ function updateContent(lang) {
             btn.classList.add('active');
         }
     });
-    
+
     // Store preference in localStorage
     localStorage.setItem('preferredLanguage', lang);
 }
@@ -2079,7 +2079,7 @@ function updateContent(lang) {
 // Function to update copyright year in elements without data-i18n
 function updateCopyrightYear() {
     const currentYear = new Date().getFullYear();
-    
+
     // Update copyright elements that don't use the translation system
     // Only target elements without data-i18n attribute to avoid conflicts
     document.querySelectorAll('.footer-bottom p, footer p').forEach(element => {
@@ -2087,7 +2087,7 @@ function updateCopyrightYear() {
         if (element.hasAttribute('data-i18n')) {
             return;
         }
-        
+
         // Match copyright text with 4-digit year and replace with current year
         const copyrightPattern = /©\s*(\d{4})\s+Delivery Pilot/;
         if (copyrightPattern.test(element.textContent)) {
@@ -2105,42 +2105,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pathname.endsWith('-tr.html')) {
         initialLang = 'tr';
     }
-    
+
     // Update content and active state based on URL
     updateContent(initialLang);
-    
+
     // Update copyright year for pages that don't use the translation system
     // This runs after updateContent() to avoid conflicts
     updateCopyrightYear();
-    
+
     // Add click event listeners to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const targetLang = btn.getAttribute('data-lang');
-            
+
             // If clicking the language we are already on, do nothing
             if (btn.classList.contains('active')) return;
 
             // Generate target URL
             const targetUrl = getTargetUrl(targetLang);
-            
+
             // Navigate to the target page
             window.location.href = targetUrl;
         });
     });
-    
+
     // Mobile menu toggle functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navRight = document.querySelector('.nav-right');
     const body = document.body;
-    
+
     if (mobileMenuToggle && navRight) {
         mobileMenuToggle.addEventListener('click', () => {
             mobileMenuToggle.classList.toggle('active');
             navRight.classList.toggle('active');
             body.style.overflow = navRight.classList.contains('active') ? 'hidden' : '';
         });
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.navbar') && navRight.classList.contains('active')) {
@@ -2149,7 +2149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body.style.overflow = '';
             }
         });
-        
+
         // Close mobile menu when clicking on a link
         navRight.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
@@ -2158,7 +2158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body.style.overflow = '';
             });
         });
-        
+
         // Handle dropdown menus in mobile view
         document.querySelectorAll('.nav-menu .dropdown-toggle').forEach(toggle => {
             toggle.addEventListener('click', (e) => {
@@ -2171,7 +2171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -2191,9 +2191,9 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-    
+
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -2201,7 +2201,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -2228,7 +2228,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animations
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.feature-card, .use-case-card, .stat, .step-card');
-    
+
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
