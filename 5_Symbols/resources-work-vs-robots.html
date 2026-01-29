@@ -148,6 +148,61 @@
             margin-top: 2rem;
         }
 
+        /* Bidirectional Links Component */
+        .related-pages {
+            background: var(--bg-light);
+            padding: 3rem 0;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .related-pages h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .related-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .related-link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .related-link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .related-link-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .related-link-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .related-link-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .resources-hero h1 {
                 font-size: 2rem;
@@ -433,6 +488,42 @@
                 <a href="onboarding.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">📚 Learn More</a>
                 <a href="resources-knowledge-transfer.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🧠 Knowledge Transfer</a>
                 <a href="resources-work-vs-robots-tr.html" class="btn btn-primary" style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇹🇷 Türkçe Okuyun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Pages Section (Bidirectional Links) -->
+    <section class="related-pages">
+        <div class="container">
+            <h3>🔗 Related Pages</h3>
+            <div class="related-links-grid">
+                <div class="related-link-card">
+                    <a href="resources-bidirectional-links.html">
+                        <h4>🔗 Bidirectional Links</h4>
+                        <p>Understanding bidirectional linking - how connected information enables the shift from manual work to building AI systems</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-knowledge-transfer.html">
+                        <h4>🧠 Knowledge Transfer</h4>
+                        <p>Breaking down silos and enabling knowledge transfer - essential for transitioning to collaborative AI systems</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-agent-automation.html">
+                        <h4>🔗 Agent Automation</h4>
+                        <p>How agents automate workflows - the practical implementation of building robots instead of doing the work</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-repetitive-tasks-vs-agents.html">
+                        <h4>🔄 Repetitive Tasks vs Agents</h4>
+                        <p>Why agents should handle repetitive work - enabling humans to focus on building better systems</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

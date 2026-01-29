@@ -197,6 +197,61 @@
             margin-top: 0.5rem;
         }
 
+        /* Bidirectional Links Component */
+        .related-pages {
+            background: var(--bg-light);
+            padding: 3rem 0;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .related-pages h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .related-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .related-link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .related-link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .related-link-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .related-link-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .related-link-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .comparison-grid {
                 grid-template-columns: 1fr;
@@ -526,6 +581,42 @@
                 <a href="assessment.html" class="cta-button">📊 Start Your Assessment</a>
                 <a href="workshops.html" class="cta-button">🎓 Explore Workshops</a>
                 <a href="contact.html" class="cta-button">💬 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Pages Section (Bidirectional Links) -->
+    <section class="related-pages">
+        <div class="container">
+            <h3>🔗 Related Pages</h3>
+            <div class="related-links-grid">
+                <div class="related-link-card">
+                    <a href="resources-bidirectional-links.html">
+                        <h4>🔗 Bidirectional Links</h4>
+                        <p>Understanding bidirectional linking - how connected documentation enables easier discovery and reduces search time</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-knowledge-transfer.html">
+                        <h4>🧠 Knowledge Transfer</h4>
+                        <p>Breaking down silos and enabling knowledge transfer - documentation is a key tool for knowledge sharing</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-work-vs-robots.html">
+                        <h4>🤖 Doing the Work vs Building Robots</h4>
+                        <p>The cultural transformation - good documentation enables teams to build AI systems instead of doing manual work</p>
+                    </a>
+                </div>
+                
+                <div class="related-link-card">
+                    <a href="resources-task-handover-challenge.html">
+                        <h4>🔄 Task Handover Challenge</h4>
+                        <p>Addressing task handover challenges - efficient documentation makes handovers smoother and faster</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
