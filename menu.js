@@ -68,6 +68,7 @@ const navigationConfig = {
             textKey: 'nav.resources',
             submenu: [
                 { href: 'podcast.html', textKey: 'nav.podcast', text: '🎙️ Podcast' },
+                { href: 'resources-bidirectional-links.html', textKey: 'nav.bidirectionalLinks', text: '🔗 Bidirectional Links' },
                 { href: 'resources-root-cause-analysis.html', textKey: 'nav.rootCauseAnalysis', text: '🔍 Root Cause Analysis' },
                 { href: 'resources-agent-automation.html', textKey: 'nav.agentAutomation', text: '🔗 Agent Automation' },
                 { href: 'resources-knowledge-transfer.html', textKey: 'nav.knowledgeTransfer', text: '🧠 Knowledge Transfer' },
