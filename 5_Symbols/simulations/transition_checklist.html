@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Checklist | Delivery Pilot</title>
+    <style>
+        /* Shared Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .simulation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); /* Indigo to Violet gradient */
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .btn {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #4338ca;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-info {
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .checklist-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .checklist-item:hover {
+            background-color: #f8fafc;
+        }
+
+        .checklist-checkbox {
+            margin-top: 0.25rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+
+        .checklist-content {
+            flex: 1;
+        }
+
+        .checklist-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .checklist-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        /* Sub checklist items styling */
+        .sub-checklist {
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e2e8f0;
+        }
+        
+        .sub-checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Importing Global Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- Load menu components and i18n -->
+    <script src="../../menu.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="hero">
+        <h1>The Delivery Pilot Transition Checklist 🚀</h1>
+        <p>Shift your mindset from specific, rigid coding languages to becoming an X-shaped professional who orchestrates AI to deliver end-to-end solutions.</p>
+        
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/mcefDddDVpg" title="Delivery Pilot Transition" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="simulation-container">
+        
+        <!-- Login View -->
+        <div id="login-view" class="card login-form">
+            <h2>Start Your Transition 🔄</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Enter your email to track your transition into an X-shaped professional.</p>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
+                </div>
+                <button type="submit" class="btn">Begin Transition</button>
+            </form>
+        </div>
+
+        <!-- Dashboard / Checklist View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="card dashboard-header">
+                <div class="user-info">
+                    Pilot: <span id="user-email-display" style="font-weight: bold; color: #4f46e5;"></span>
+                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <form id="checklist-form">
+                    
+                    <!-- Section 1 -->
+                    <div class="section-title">1. Foundation & Digital Presence 🏗️</div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1_1" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Retire the Traditional Resume</div>
+                            <div class="checklist-desc">
+                                Move away from static documents that get buried; your proof of work is now your primary currency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1_2" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Open/Audit your GitHub Account</div>
+                            <div class="checklist-desc">
+                                If you don't have one, create it. This is your "business card" that shows your repo count, achievements, and commit frequency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step1_3" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Adopt the "Wizard" Mindset</div>
+                            <div class="checklist-desc">
+                                Stop identifying as just a coder or tester. Embrace a multi-disciplinary role that includes coding, testing, and operations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="section-title">2. The Assessment Phase (Diagnostics) 🩺</div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2_1" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Visit DeliveryPilot.net</div>
+                            <div class="checklist-desc">
+                                Register your email to enter the ecosystem.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2_2" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Take the Skill Gap Assessment</div>
+                            <div class="checklist-desc">
+                                Start the journey by entering your details to understand your current baseline.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step2_3" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Begin with "First Principles"</div>
+                            <div class="checklist-desc">
+                                Answer the basic diagnostic questions (e.g., checking internet speed/latency) to identify what is "smoking or leaking" in your skill set.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="section-title">3. Practical Simulation (The Build) 💻</div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3_1" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Set Up Your Local Environment</div>
+                            <div class="checklist-desc">
+                                Use git clone to replicate project repositories to your local compute.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3_2" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Leverage AI Agents</div>
+                            <div class="checklist-desc">
+                                Don't write every line of code manually. Use AI agents within your IDE to create tasks and generate scripts (e.g., PowerShell/PS1 scripts).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3_3" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Iterative Implementation</div>
+                            <div class="checklist-desc">
+                                <div class="sub-checklist">
+                                    <div class="sub-checklist-item">
+                                        <input type="checkbox" id="step3_3_sub1"> Prompt the agent to create the solution (e.g., a connection checker).
+                                    </div>
+                                    <div class="sub-checklist-item">
+                                        <input type="checkbox" id="step3_3_sub2"> Review and approve the agent's plan.
+                                    </div>
+                                    <div class="sub-checklist-item">
+                                        <input type="checkbox" id="step3_3_sub3"> Execute and verify the code works in real-time.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step3_4" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Document as You Go</div>
+                            <div class="checklist-desc">
+                                Ensure the agent updates the README and creates logs (like report.log) with timestamps for every run.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div class="section-title">4. Shipping & Validation 🚢</div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4_1" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Commit and Push</div>
+                            <div class="checklist-desc">
+                                Finalize your project with an "Initial Commit" and host it on GitHub.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4_2" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Submit for Feedback</div>
+                            <div class="checklist-desc">
+                                Send your output back to the Delivery Pilot system to get your score and professional evaluation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="step4_3" class="checklist-checkbox">
+                        <div class="checklist-content">
+                            <div class="checklist-title">Repeat for Complexity</div>
+                            <div class="checklist-desc">
+                                Move from simple scripts to complex, multi-layered solutions using the same "Assessment → Simulation → Shipping" protocol.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Complete Transition</button>
+                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Logic for Transition Checklist Simulation
+        const STORAGE_KEY_EMAIL = 'dp_transition_checklist_email';
+        // Shared webhook (using same as browser cli for now, or could change type)
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
+
+        // Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const emailForm = document.getElementById('email-form');
+        const emailBox = document.getElementById('email');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const changeEmailBtn = document.getElementById('change-email');
+        const checklistForm = document.getElementById('checklist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('submission-status');
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+        });
+
+        // Toggle Views
+        function checkLogin() {
+            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
+            if (storedEmail) {
+                userEmailDisplay.textContent = storedEmail;
+                loginView.classList.add('hidden');
+                dashboardView.classList.remove('hidden');
+            } else {
+                loginView.classList.remove('hidden');
+                dashboardView.classList.add('hidden');
+            }
+        }
+
+        // Email Auth
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailBox.value;
+            if (email) {
+                localStorage.setItem(STORAGE_KEY_EMAIL, email);
+                checkLogin();
+            }
+        });
+
+        changeEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem(STORAGE_KEY_EMAIL);
+            checkLogin();
+        });
+
+        // Submit Checklist
+        checklistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
+            
+            if (!email) {
+                alert('Please sign in first.');
+                return;
+            }
+
+            // Gather Checked Status
+            // Collect all inputs that start with "step"
+            const inputs = document.querySelectorAll('input[type="checkbox"][id^="step"]');
+            const steps = {};
+            inputs.forEach(input => {
+                steps[input.id] = input.checked;
+            });
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Verifying...';
+            statusMsg.textContent = '';
+
+            try {
+                const payload = {
+                    type: 'transition_checklist',
+                    email: email,
+                    timestamp: new Date().toISOString(),
+                    steps_completed: steps,
+                    hiddenContext: {
+                        nextSteps: "Your transition to an X-shaped AI orchestrator is well underway!",
+                        resourceLink: "https://deliverypilot.net"
+                    }
+                };
+
+                await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                statusMsg.textContent = 'Transition validated! Welcome to the Pilot ranks. 🚀';
+                statusMsg.style.color = '#10b981';
+                submitBtn.textContent = '✅ Completed';
+                // checklistForm.reset(); 
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                statusMsg.textContent = 'Progress saved locally. Keep orchestrating!';
+                statusMsg.style.color = '#f59e0b';
+            } finally {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    if (submitBtn.textContent !== '✅ Completed') {
+                        submitBtn.textContent = 'Complete Transition';
+                    }
+                }, 3000);
+            }
+        });
+
+    </script>
+</body>
+</html>
