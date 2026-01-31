@@ -40,6 +40,26 @@
             opacity: 0.9;
         }
 
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         .card {
             background: white;
             border-radius: 12px;
@@ -218,6 +238,9 @@
     <div class="hero">
         <h1>AI Tools Masterclass</h1>
         <p>Learn when to use ChatGPT, Gemini, or Claude for Text & Images.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/HAikHJhzCrq" title="ChatGPT vs Gemini vs Claude" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 
     <div class="simulation-container">

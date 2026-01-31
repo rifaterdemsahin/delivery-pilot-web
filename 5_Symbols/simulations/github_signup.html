@@ -42,6 +42,26 @@
             opacity: 0.9;
         }
 
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         .card {
             background: white;
             border-radius: 12px;
@@ -159,12 +179,8 @@
     <div class="hero">
         <h1>GitHub Signup & Repo Pull</h1>
         <p>Master the essential setup: Account creation to your first clone.</p>
-        <div style="margin-top: 2rem;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/c-NikCpec7U" title="GitHub Signup Guide"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                style="max-width: 100%; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);"></iframe>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/c-NikCpec7U" title="GitHub Signup Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
