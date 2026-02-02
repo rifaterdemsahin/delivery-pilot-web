@@ -88,6 +88,7 @@ const navigationConfig = {
                 { href: 'employee-overload.html', textKey: 'nav.employeeOverload', text: '⚡ Employee Overload' },
                 { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
                 { href: 'resources-agile-red-tape.html', textKey: 'nav.agileRedTape', text: '🕸️ Agile Red Tape' },
+                { href: 'resources-multi-party-investigation.html', textKey: 'nav.multiPartyInvestigation', text: '🔍 Multi-Party Investigation' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
             ]
         },
