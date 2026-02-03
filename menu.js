@@ -89,7 +89,8 @@ const navigationConfig = {
                 { href: 'resources-humans-vs-agents.html', textKey: 'nav.humansVsAgents', text: '👥 Humans vs Agents' },
                 { href: 'resources-agile-red-tape.html', textKey: 'nav.agileRedTape', text: '🕸️ Agile Red Tape' },
                 { href: 'resources-multi-party-investigation.html', textKey: 'nav.multiPartyInvestigation', text: '🔍 Multi-Party Investigation' },
-                { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' }
+                { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' },
+                { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
@@ -151,6 +152,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-access-security-silos.html', textKey: 'footer.resources.accessSecuritySilos', text: 'Access & Security Silos' },
                 { type: 'link', href: 'resources-agile-red-tape.html', textKey: 'footer.resources.agileRedTape', text: 'Agile Red Tape' },
                 { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
+                { type: 'link', href: 'resources-single-skilled-engineers.html', textKey: 'footer.resources.singleSkilledEngineers', text: 'Single-Skilled Engineers' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
