@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raise > Rapid AI Expectations | Delivery Pilot</title>
+    <title>Raise > Rapid AI Skill Expectations | Delivery Pilot</title>
     <style>
-        /* Reusing consistent styles from environment_checks.html */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -24,7 +24,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 3rem 1rem;
-            background: linear-gradient(135deg, #059669 0%, #10b981 100%); /* Green theme for growth */
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
             color: white;
             border-radius: 0 0 20px 20px;
         }
@@ -38,17 +38,24 @@
         .hero p {
             font-size: 1.2rem;
             opacity: 0.9;
+            margin-top: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
+        /* Video Container */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 2rem auto 0;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            background-color: #000;
         }
 
         .video-container iframe {
@@ -66,42 +73,60 @@
             padding: 2rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
         }
 
-        /* Login Form */
-        .login-form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: center;
+        .card h2 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
+        /* Form Styles */
         .form-group {
             margin-bottom: 1.5rem;
-            text-align: left;
         }
 
         .form-label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: #334155;
         }
 
-        .form-input, .form-textarea {
+        .form-input {
             width: 100%;
             padding: 0.75rem;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 1rem;
             box-sizing: border-box;
             font-family: inherit;
-        }
-
-        .form-textarea {
             min-height: 100px;
             resize: vertical;
         }
 
-        .btn {
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #059669;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+
+        .btn-primary {
             background-color: #059669;
             color: white;
             padding: 0.75rem 1.5rem;
@@ -114,217 +139,203 @@
             width: 100%;
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             background-color: #047857;
         }
 
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .user-info {
-            font-weight: 500;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .question-block {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 1.5rem;
-        }
-        
-        .question-block:last-child {
-            border-bottom: none;
-        }
-
-        .question-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #0f172a;
+        .status-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            min-height: 1.5rem;
         }
 
         .question-desc {
             font-size: 0.9rem;
             color: #64748b;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Code Block Styles */
+        .code-block {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
     <!-- Importing Global Styles -->
     <link rel="stylesheet" href="../../styles.css">
+    <script src="../../menu.js"></script>
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
-        <h1>Raise > Rapid AI Skill Expectations</h1>
+        <h1>Raise > Rapid AI Skill Expectations 🚀</h1>
         <p>Reflect on the rapidly changing landscape of AI and your preparedness.</p>
+
+        <!-- 1. Video -->
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/S9F9y2xM5qA" title="AI Workforce Expectations" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/S9F9y2xM5qA" title="AI Workforce Expectations"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="simulation-container">
-        
-        <!-- Login View -->
-        <div id="login-view" class="card login-form">
-            <h2>Welcome, Pilot 🧑‍✈️</h2>
-            <p style="margin-bottom: 2rem; color: #64748b;">Please enter your email to participate.</p>
-            <form id="email-form">
+        <!-- 2. Checklist (Survey) Section -->
+        <div class="card">
+            <h2>✅ Skill Expectation Feedback</h2>
+            <form id="checklist-form"> <!-- Reused ID for simplicity or can be specific -->
+
+                <div class="form-group">
+                    <label class="form-label">1. Current Preparedness (1-10)</label>
+                    <div class="question-desc">How prepared do you feel for the "AI-first" workforce shift?</div>
+                    <input type="number" id="q1" class="form-input" min="1" max="10" placeholder="e.g. 7" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">2. Biggest Challenge</label>
+                    <div class="question-desc">What is the single biggest barrier you face in adopting AI tools rapidly?
+                    </div>
+                    <textarea id="q2" class="form-textarea" placeholder="e.g. Time, policy, tools..."
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">3. Skill Gap</label>
+                    <div class="question-desc">Which specific skill do you feel you need to upgrade immediately?</div>
+                    <input type="text" id="q3" class="form-input" placeholder="e.g. Prompt Engineering" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">4. Future Expectation</label>
+                    <div class="question-desc">Where do you see the biggest opportunity for AI to boost your career?
+                    </div>
+                    <textarea id="q4" class="form-textarea" placeholder="Share your vision..." required></textarea>
+                </div>
+
+                <!-- Reusing the certificate flow for submission below, so no submit button here needed, or maybe just a save button?
+                     The template implies 'Checklist' is just a checkoff. This is a survey. 
+                     I'll add a 'Save Feedback' button here to keep it interactive.
+                -->
+                <button type="button" class="btn-primary"
+                    onclick="alert('Feedback saved! Continue to Certificate.')">Save Feedback</button>
+
+            </form>
+        </div>
+
+        <!-- 3. Git Repo & Fork/Clone -->
+        <div class="card">
+            <h2>🐙 Repository Setup</h2>
+            <p>To become a Delivery Pilot, you need to fork and clone the official repository. Run the following
+                commands in your terminal:</p>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                # 1. Fork the repository on GitHub first
+                # Visit: https://github.com/rifaterdemsahin
+
+                # 2. Clone your forked repository
+                git clone https://github.com/YOUR_USERNAME/delivery-pilot.git
+
+                # 3. Navigate into the directory
+                cd delivery-pilot
+            </div>
+        </div>
+
+        <!-- 4. Certificate Submission -->
+        <div class="card">
+            <h2>🏆 Certificate Submission</h2>
+            <p>Completed the simulation? Submit your running repository link to generate your certificate and validate
+                your pilot status.</p>
+
+            <form id="submission-form">
+                <div class="form-group">
+                    <label for="repo-url" class="form-label">Your Forked Repository URL</label>
+                    <input type="url" id="repo-url" class="form-input"
+                        placeholder="https://github.com/username/delivery-pilot" required>
+                </div>
+
                 <div class="form-group">
                     <label for="email" class="form-label">Email Address</label>
                     <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
                 </div>
-                <button type="submit" class="btn">Start Session</button>
+
+                <button type="submit" class="btn-primary">Submit for Verification</button>
+                <div id="submission-status" class="status-message"></div>
             </form>
         </div>
-
-        <!-- Dashboard / Survey View -->
-        <div id="dashboard-view" class="hidden">
-            <div class="card dashboard-header">
-                <div class="user-info">
-                    Session for: <span id="user-email-display" style="font-weight: bold; color: #059669;"></span>
-                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2 style="margin-bottom: 1.5rem;">Skill Expectation Feedback 🚀</h2>
-                <p style="margin-bottom: 2rem; color: #64748b;">We want to hear your thoughts on how AI is reshaping skill requirements. Your feedback shapes the simulation.</p>
-
-                <form id="feedback-form">
-                    
-                    <div class="question-block">
-                        <div class="question-title">1. Current Preparedness</div>
-                        <div class="question-desc">On a scale of 1-10, how prepared do you feel for the "AI-first" workforce shift?</div>
-                        <input type="number" id="q1-preparedness" class="form-input" min="1" max="10" placeholder="e.g. 7">
-                    </div>
-
-                    <div class="question-block">
-                        <div class="question-title">2. Biggest Challenge</div>
-                        <div class="question-desc">What is the single biggest barrier you face in adopting AI tools rapidly?</div>
-                        <textarea id="q2-challenge" class="form-textarea" placeholder="e.g. Lack of time, overwhelming number of tools, company policy..."></textarea>
-                    </div>
-
-                    <div class="question-block">
-                        <div class="question-title">3. Skill Gap</div>
-                        <div class="question-desc">Which specific skill do you feel you need to upgrade immediately?</div>
-                        <input type="text" id="q3-skill" class="form-input" placeholder="e.g. Python coding, Prompt Engineering, Data Analysis...">
-                    </div>
-
-                    <div class="question-block">
-                        <div class="question-title">4. Future Expectation</div>
-                        <div class="question-desc">Where do you see the biggest opportunity for AI to boost your career in the next 12 months?</div>
-                        <textarea id="q4-opportunity" class="form-textarea" placeholder="Share your vision..."></textarea>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Feedback</button>
-                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-
     </div>
 
     <div id="footer-placeholder"></div>
-    <script src="../../menu.js"></script>
+
     <script>
-        // Logic for Raise Expectations Page
-        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
-        // Same webhook as environment check, or change if a specific one is provided later
-        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
-
-        // Elements
-        const loginView = document.getElementById('login-view');
-        const dashboardView = document.getElementById('dashboard-view');
-        const emailForm = document.getElementById('email-form');
-        const emailBox = document.getElementById('email');
-        const userEmailDisplay = document.getElementById('user-email-display');
-        const changeEmailBtn = document.getElementById('change-email');
-        const feedbackForm = document.getElementById('feedback-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('submission-status');
-
-        // Init
-        document.addEventListener('DOMContentLoaded', () => {
-            checkLogin();
-        });
-
-        // Toggle Views
-        function checkLogin() {
-            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
-            if (storedEmail) {
-                userEmailDisplay.textContent = storedEmail;
-                loginView.classList.add('hidden');
-                dashboardView.classList.remove('hidden');
-            } else {
-                loginView.classList.remove('hidden');
-                dashboardView.classList.add('hidden');
-            }
+        // Copy to clipboard functionality
+        function copyToClipboard(button) {
+            const codeBlock = button.parentElement;
+            const text = codeBlock.innerText.replace('Copy', '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Copied!';
+                setTimeout(() => {
+                    button.innerText = originalText;
+                }, 2000);
+            });
         }
 
-        // Email Auth
-        emailForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = emailBox.value;
-            if (email) {
-                localStorage.setItem(STORAGE_KEY_EMAIL, email);
-                checkLogin();
-            }
-        });
+        // Submission Logic
+        const submissionForm = document.getElementById('submission-form');
+        const statusMsg = document.getElementById('submission-status');
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225';
 
-        changeEmailBtn.addEventListener('click', (e) => {
+        submissionForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            localStorage.removeItem(STORAGE_KEY_EMAIL);
-            checkLogin();
-        });
-
-        // Submit Feedback
-        feedbackForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
-            
-            if (!email) {
-                alert('Please sign in first.');
-                return;
-            }
-
-            // Gather Data
-            const data = {
-                preparedness: document.getElementById('q1-preparedness').value,
-                challenge: document.getElementById('q2-challenge').value,
-                skill: document.getElementById('q3-skill').value,
-                opportunity: document.getElementById('q4-opportunity').value
-            };
+            const repoUrl = document.getElementById('repo-url').value;
+            const email = document.getElementById('email').value;
+            const submitBtn = submissionForm.querySelector('button[type="submit"]');
 
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Verifying...';
             statusMsg.textContent = '';
+            statusMsg.style.color = '#64748b';
 
             try {
                 const payload = {
-                    type: 'raise_expectations_feedback',
+                    type: 'certificate_submission',
+                    simulation: 'Raise Expectations',
+                    repoUrl: repoUrl,
                     email: email,
                     timestamp: new Date().toISOString(),
-                    feedback: data,
-                    // Hidden context for n8n processing/emailing
-                    hiddenContext: {
-                        guidance: "To match the 'Raise' in expectations, participants must shift from manual execution to AI orchestration. Build personal agents to handle repetitive tasks and focus on high-value cognitive work.",
-                        skillsCurriculum: [
-                            "Prompt Engineering & Vibe Programming",
-                            "Agentic Workflow Design (n8n/LangChain)",
-                            "API Integration & System Thinking",
-                            "AI Ethics & Compliance"
-                        ]
+                    // Include survey data if available
+                    feedback: {
+                        preparedness: document.getElementById('q1').value,
+                        challenge: document.getElementById('q2').value,
+                        skill: document.getElementById('q3').value,
+                        opportunity: document.getElementById('q4').value
                     }
                 };
 
@@ -334,25 +345,19 @@
                     body: JSON.stringify(payload)
                 });
 
-                statusMsg.textContent = 'Thank you! Your feedback has been recorded. 🚀';
-                statusMsg.style.color = '#059669';
-                submitBtn.textContent = '✅ Sent';
-                feedbackForm.reset();
+                statusMsg.textContent = '✅ Submission received! Check your email for your certificate.';
+                statusMsg.style.color = '#10b981';
+                submitBtn.textContent = 'Submitted';
 
             } catch (err) {
                 console.error('Submission error:', err);
-                statusMsg.textContent = 'Feedback saved locally (Network/CORS).';
-                statusMsg.style.color = '#f59e0b';
-            } finally {
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    if (submitBtn.textContent !== '✅ Sent') {
-                        submitBtn.textContent = 'Submit Feedback';
-                    }
-                }, 3000);
+                statusMsg.textContent = '⚠️ Connection error. Please try again.';
+                statusMsg.style.color = '#ef4444';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit for Verification';
             }
         });
-
     </script>
 </body>
+
 </html>

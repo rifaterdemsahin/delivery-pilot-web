@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workstation & Flow Check | Delivery Pilot</title>
     <style>
-        /* Shared Styles */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -24,7 +24,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 3rem 1rem;
-            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%); /* Blue theme for tech/flow */
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
             color: white;
             border-radius: 0 0 20px 20px;
         }
@@ -38,17 +38,24 @@
         .hero p {
             font-size: 1.2rem;
             opacity: 0.9;
+            margin-top: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
+        /* Video Container */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 2rem auto 0;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            background-color: #000;
         }
 
         .video-container iframe {
@@ -66,73 +73,25 @@
             padding: 2rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             margin-bottom: 2rem;
-        }
-
-        .login-form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-input, .form-select {
-            width: 100%;
-            padding: 0.75rem;
             border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            background-color: white;
         }
 
-        .btn {
-            background-color: #0ea5e9;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            width: 100%;
+        .card h2 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .btn:hover {
-            background-color: #0284c7;
-        }
-
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .user-info {
-            font-weight: 500;
-        }
-
-        .hidden {
-            display: none;
-        }
-
+        /* Form Styles */
         .question-block {
             margin-bottom: 2rem;
             border-bottom: 1px solid #f1f5f9;
             padding-bottom: 1.5rem;
         }
-        
+
         .question-block:last-child {
             border-bottom: none;
         }
@@ -150,7 +109,16 @@
             margin-bottom: 1rem;
         }
 
-        /* Radio group styling */
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
         .radio-group {
             display: flex;
             flex-direction: column;
@@ -166,183 +134,265 @@
 
         .radio-label input {
             margin-right: 10px;
+            accent-color: #0ea5e9;
+        }
+
+        /* Code Block Styles */
+        .code-block {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Form Input Styles for Certificate */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #0284c7;
+        }
+
+        .status-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            min-height: 1.5rem;
         }
     </style>
     <!-- Importing Global Styles -->
     <link rel="stylesheet" href="../../styles.css">
+    <script src="../../menu.js"></script>
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
-        <h1>Workstation & Flow Check</h1>
+        <h1>Workstation & Flow Check 🖥️</h1>
         <p>Optimize your physical and mental environment for high-velocity delivery.</p>
+
+        <!-- 1. Video -->
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Y0rLvyTbwkU" title="Workstation Setup" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Y0rLvyTbwkU" title="Workstation Setup"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="simulation-container">
-        
-        <!-- Login View -->
-        <div id="login-view" class="card login-form">
-            <h2>Welcome, Pilot 🧑‍✈️</h2>
-            <p style="margin-bottom: 2rem; color: #64748b;">Please enter your email to start the check.</p>
-            <form id="email-form">
+        <!-- 2. Checklist (Survey) -->
+        <div class="card">
+            <h2>✅ Environment & Mindset Survey</h2>
+            <form id="checklist-form">
+
+                <!-- Q1: Hardware -->
+                <div class="question-block">
+                    <div class="question-title">1. Monitor Setup</div>
+                    <div class="question-desc">How many screens are you currently using?</div>
+                    <select id="q1-monitor" class="form-select">
+                        <option value="single">Single Laptop Screen (I like to focus)</option>
+                        <option value="dual">Dual Monitors (One for code, one for docs)</option>
+                        <option value="triple_plus">Triple+ / Command Center (I see everything)</option>
+                        <option value="mobile">Mobile/Tablet only (Emergency mode)</option>
+                    </select>
+                </div>
+
+                <!-- Q2: Connectivity -->
+                <div class="question-block">
+                    <div class="question-title">2. Connectivity Confidence</div>
+                    <div class="question-desc">Can you maintain a stable video call + screen share + cloud tools
+                        simultaneously?</div>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="q2" value="high" checked> Yes,
+                            fiber/high-speed is rock solid.</label>
+                        <label class="radio-label"><input type="radio" name="q2" value="medium"> Usually, but video
+                            sometimes lags.</label>
+                        <label class="radio-label"><input type="radio" name="q2" value="low"> It's a struggle, I might
+                            need to turn off video.</label>
+                    </div>
+                </div>
+
+                <!-- Q3: Instructions -->
+                <div class="question-block">
+                    <div class="question-title">3. Following Protocol</div>
+                    <div class="question-desc">In a simulation, if given a strict sequence of 10 steps, how likely are
+                        you to skip one?</div>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="q3" value="never" checked> I follow every
+                            step precisely.</label>
+                        <label class="radio-label"><input type="radio" name="q3" value="sometimes"> I might skip obvious
+                            ones to save time.</label>
+                        <label class="radio-label"><input type="radio" name="q3" value="often"> I prefer to figure it
+                            out my own way.</label>
+                    </div>
+                </div>
+
+                <!-- Q4: Creativity -->
+                <div class="question-block">
+                    <div class="question-title">4. Creative Adaptation</div>
+                    <div class="question-desc">If a tool fails during a live demo, what is your immediate reaction?
+                    </div>
+                    <select id="q4-creativity" class="form-select">
+                        <option value="freeze">Pause and apologize.</option>
+                        <option value="debug">Immediately open console/logs to fix it.</option>
+                        <option value="pivot">Seamlessly switch to a backup/screenshot or 'theatre of the mind'.
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Q5: Window Management -->
+                <div class="question-block">
+                    <div class="question-title">5. Window Mastery</div>
+                    <div class="question-desc">How quickly can you switch from this browser to your terminal or code
+                        editor?</div>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="q5" value="instant" checked> Instant
+                            (Alt-Tab / Swipe muscle memory).</label>
+                        <label class="radio-label"><input type="radio" name="q5" value="slow"> I have to look for the
+                            window.</label>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="button" class="btn-primary"
+                        onclick="alert('Environment survey saved locally. Proceed to certificate submission.')">Save
+                        Survey</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- 3. Git Repo & Fork/Clone -->
+        <div class="card">
+            <h2>🐙 Repository Setup</h2>
+            <p>To become a Delivery Pilot, you need to fork and clone the official repository. Run the following
+                commands in your terminal:</p>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+                # 1. Fork the repository on GitHub first
+                # Visit: https://github.com/rifaterdemsahin
+
+                # 2. Clone your forked repository
+                git clone https://github.com/YOUR_USERNAME/delivery-pilot.git
+
+                # 3. Navigate into the directory
+                cd delivery-pilot
+            </div>
+        </div>
+
+        <!-- 4. Certificate Submission -->
+        <div class="card">
+            <h2>🏆 Certificate Submission</h2>
+            <p>Completed the simulation? Submit your running repository link to generate your certificate and validate
+                your pilot status.</p>
+
+            <form id="submission-form">
+                <div class="form-group">
+                    <label for="repo-url" class="form-label">Your Forked Repository URL</label>
+                    <input type="url" id="repo-url" class="form-input"
+                        placeholder="https://github.com/username/delivery-pilot" required>
+                </div>
+
                 <div class="form-group">
                     <label for="email" class="form-label">Email Address</label>
                     <input type="email" id="email" class="form-input" placeholder="pilot@example.com" required>
                 </div>
-                <button type="submit" class="btn">Start Check</button>
+
+                <button type="submit" class="btn-primary">Submit for Verification</button>
+                <div id="submission-status" class="status-message"></div>
             </form>
         </div>
-
-        <!-- Dashboard / Survey View -->
-        <div id="dashboard-view" class="hidden">
-            <div class="card dashboard-header">
-                <div class="user-info">
-                    Session for: <span id="user-email-display" style="font-weight: bold; color: #0ea5e9;"></span>
-                    <a href="#" id="change-email" style="font-size: 0.8rem; margin-left: 10px; color: #94a3b8;">(Change)</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2 style="margin-bottom: 1.5rem;">Environment & Mindset Survey 🧠</h2>
-                <p style="margin-bottom: 2rem; color: #64748b;">Honest answers help us tailor your simulation experience.</p>
-
-                <form id="feedback-form">
-                    
-                    <!-- Q1: Hardware -->
-                    <div class="question-block">
-                        <div class="question-title">1. Monitor Setup</div>
-                        <div class="question-desc">How many screens are you currently using?</div>
-                        <select id="q1-monitor" class="form-select">
-                            <option value="single">Single Laptop Screen (I like to focus)</option>
-                            <option value="dual">Dual Monitors (One for code, one for docs)</option>
-                            <option value="triple_plus">Triple+ / Command Center (I see everything)</option>
-                            <option value="mobile">Mobile/Tablet only (Emergency mode)</option>
-                        </select>
-                    </div>
-
-                    <!-- Q2: Connectivity -->
-                    <div class="question-block">
-                        <div class="question-title">2. Connectivity Confidence</div>
-                        <div class="question-desc">Can you maintain a stable video call + screen share + cloud tools simultaneously?</div>
-                        <div class="radio-group">
-                            <label class="radio-label"><input type="radio" name="q2" value="high" required> Yes, fiber/high-speed is rock solid.</label>
-                            <label class="radio-label"><input type="radio" name="q2" value="medium"> Usually, but video sometimes lags.</label>
-                            <label class="radio-label"><input type="radio" name="q2" value="low"> It's a struggle, I might need to turn off video.</label>
-                        </div>
-                    </div>
-
-                    <!-- Q3: Instructions -->
-                    <div class="question-block">
-                        <div class="question-title">3. Following Protocol</div>
-                        <div class="question-desc">In a simulation, if given a strict sequence of 10 steps, how likely are you to skip one?</div>
-                        <div class="radio-group">
-                            <label class="radio-label"><input type="radio" name="q3" value="never" required> I follow every step precisely.</label>
-                            <label class="radio-label"><input type="radio" name="q3" value="sometimes"> I might skip obvious ones to save time.</label>
-                            <label class="radio-label"><input type="radio" name="q3" value="often"> I prefer to figure it out my own way.</label>
-                        </div>
-                    </div>
-
-                    <!-- Q4: Creativity -->
-                    <div class="question-block">
-                        <div class="question-title">4. Creative Adaptation</div>
-                        <div class="question-desc">If a tool fails during a live demo, what is your immediate reaction?</div>
-                        <select id="q4-creativity" class="form-select">
-                            <option value="freeze">Pause and apologize.</option>
-                            <option value="debug">Immediately open console/logs to fix it.</option>
-                            <option value="pivot">Seamlessly switch to a backup/screenshot or 'theatre of the mind'.</option>
-                        </select>
-                    </div>
-
-                    <!-- Q5: Window Management -->
-                    <div class="question-block">
-                        <div class="question-title">5. Window Mastery</div>
-                        <div class="question-desc">How quickly can you switch from this browser to your terminal or code editor?</div>
-                        <div class="radio-group">
-                            <label class="radio-label"><input type="radio" name="q5" value="instant" required> Instant (Alt-Tab / Swipe muscle memory).</label>
-                            <label class="radio-label"><input type="radio" name="q5" value="slow"> I have to look for the window.</label>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button type="submit" id="submit-btn" class="btn" style="max-width: 300px;">Submit Environment Check</button>
-                        <p id="submission-status" style="margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em;"></p>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-
     </div>
 
     <div id="footer-placeholder"></div>
-    <script src="../../menu.js"></script>
+
     <script>
-        // Logic for Workstation Setup Page
-        const STORAGE_KEY_EMAIL = 'dp_simulation_email';
-        // Shared webhook - or specific one if provided
-        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; 
-
-        // Elements
-        const loginView = document.getElementById('login-view');
-        const dashboardView = document.getElementById('dashboard-view');
-        const emailForm = document.getElementById('email-form');
-        const emailBox = document.getElementById('email');
-        const userEmailDisplay = document.getElementById('user-email-display');
-        const changeEmailBtn = document.getElementById('change-email');
-        const feedbackForm = document.getElementById('feedback-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('submission-status');
-
-        // Init
-        document.addEventListener('DOMContentLoaded', () => {
-            checkLogin();
-        });
-
-        // Toggle Views
-        function checkLogin() {
-            const storedEmail = localStorage.getItem(STORAGE_KEY_EMAIL);
-            if (storedEmail) {
-                userEmailDisplay.textContent = storedEmail;
-                loginView.classList.add('hidden');
-                dashboardView.classList.remove('hidden');
-            } else {
-                loginView.classList.remove('hidden');
-                dashboardView.classList.add('hidden');
-            }
+        // Copy to clipboard functionality
+        function copyToClipboard(button) {
+            const codeBlock = button.parentElement;
+            const text = codeBlock.innerText.replace('Copy', '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Copied!';
+                setTimeout(() => {
+                    button.innerText = originalText;
+                }, 2000);
+            });
         }
 
-        // Email Auth
-        emailForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = emailBox.value;
-            if (email) {
-                localStorage.setItem(STORAGE_KEY_EMAIL, email);
-                checkLogin();
-            }
-        });
+        // Submission Logic
+        const submissionForm = document.getElementById('submission-form');
+        const statusMsg = document.getElementById('submission-status');
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225';
 
-        changeEmailBtn.addEventListener('click', (e) => {
+        submissionForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            localStorage.removeItem(STORAGE_KEY_EMAIL);
-            checkLogin();
-        });
+            const repoUrl = document.getElementById('repo-url').value;
+            const email = document.getElementById('email').value;
+            const submitBtn = submissionForm.querySelector('button[type="submit"]');
 
-        // Submit Feedback
-        feedbackForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = localStorage.getItem(STORAGE_KEY_EMAIL);
-            
-            if (!email) {
-                alert('Please sign in first.');
-                return;
-            }
-
-            // Gather Data
-            const data = {
+            // Gather check data
+            const checkData = {
                 monitor: document.getElementById('q1-monitor').value,
                 connectivity: document.querySelector('input[name="q2"]:checked')?.value,
                 instructions: document.querySelector('input[name="q3"]:checked')?.value,
@@ -351,25 +401,18 @@
             };
 
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Analyzing...';
+            submitBtn.textContent = 'Verifying...';
             statusMsg.textContent = '';
+            statusMsg.style.color = '#64748b';
 
             try {
                 const payload = {
-                    type: 'workstation_setup_check',
+                    type: 'certificate_submission',
+                    simulation: 'Workstation Setup',
+                    repoUrl: repoUrl,
                     email: email,
                     timestamp: new Date().toISOString(),
-                    survey: data,
-                    // Hidden context for n8n processing/emailing guidance
-                    hiddenContext: {
-                        hardwareAdvice: "For High-Velocity Delivery, 2 screens are minimum. If on laptop, use an iPad as Sidecar or cheap portable monitor. View documentation on one, code on the other.",
-                        mindsetAdvice: "Aim for 'Creative Compliance': Follow the core 10 steps precisely to ensure system integrity, but use your creativity to handle edge cases or unexpected API failures gracefully (The Pivot).",
-                        actionItems: [
-                            "Secure a second display if possible.",
-                            "Practice Alt-Tab switching speed.",
-                            "Prepare a 'failure pivot' story for demos."
-                        ]
-                    }
+                    checkData: checkData
                 };
 
                 await fetch(N8N_WEBHOOK_URL, {
@@ -378,25 +421,19 @@
                     body: JSON.stringify(payload)
                 });
 
-                statusMsg.textContent = 'Environment data logged. Recommendations sent to instructor. 🖥️';
-                statusMsg.style.color = '#0ea5e9';
-                submitBtn.textContent = '✅ Checked';
-                feedbackForm.reset();
+                statusMsg.textContent = '✅ Submission received! Check your email for your certificate.';
+                statusMsg.style.color = '#10b981';
+                submitBtn.textContent = 'Submitted';
 
             } catch (err) {
                 console.error('Submission error:', err);
-                statusMsg.textContent = 'Data saved locally (Network/CORS). Advice: Get a second screen!';
-                statusMsg.style.color = '#f59e0b';
-            } finally {
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    if (submitBtn.textContent !== '✅ Checked') {
-                        submitBtn.textContent = 'Submit Environment Check';
-                    }
-                }, 3000);
+                statusMsg.textContent = '⚠️ Connection error. Please try again.';
+                statusMsg.style.color = '#ef4444';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit for Verification';
             }
         });
-
     </script>
 </body>
+
 </html>
