@@ -67,6 +67,7 @@ const navigationConfig = {
             text: '📚 Resources',
             textKey: 'nav.resources',
             submenu: [
+                { href: 'resources.html', textKey: 'nav.becomeDeliveryPilot', text: '✈️ Become a Delivery Pilot' },
                 { href: 'podcast.html', textKey: 'nav.podcast', text: '🎙️ Podcast' },
                 { href: 'resources-bidirectional-links.html', textKey: 'nav.bidirectionalLinks', text: '🔗 Bidirectional Links' },
                 { href: 'resources-root-cause-analysis.html', textKey: 'nav.rootCauseAnalysis', text: '🔍 Root Cause Analysis' },
