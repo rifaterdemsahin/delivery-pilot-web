@@ -91,7 +91,8 @@ const navigationConfig = {
                 { href: 'resources-agile-red-tape.html', textKey: 'nav.agileRedTape', text: '🕸️ Agile Red Tape' },
                 { href: 'resources-multi-party-investigation.html', textKey: 'nav.multiPartyInvestigation', text: '🔍 Multi-Party Investigation' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' },
-                { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' }
+                { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' },
+                { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
