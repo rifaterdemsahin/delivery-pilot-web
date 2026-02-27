@@ -43,7 +43,8 @@ const navigationConfig = {
                 { href: 'upskilling_pathways.html', textKey: 'nav.upskillingPathways', text: '🎓 Upskilling Pathways' },
                 { href: 'comprehensive_analysis.html', textKey: 'nav.comprehensiveAnalysis', text: '📊 Comprehensive Analysis' },
                 { href: 'delivery-pilot-methodology.html', textKey: 'nav.methodology', text: '📖 Methodology' },
-                { href: 'certified-professional.html', textKey: 'nav.certifiedProfessional', text: '📜 Certified Professional' }
+                { href: 'certified-professional.html', textKey: 'nav.certifiedProfessional', text: '📜 Certified Professional' },
+                { href: '12-step-programme.html', textKey: 'nav.twelveStepProgramme', text: '🔄 12-Step Programme' }
             ]
         },
         { href: 'pricing.html', textKey: 'nav.pricing', text: '💰 Pricing' },

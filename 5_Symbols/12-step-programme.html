@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="12 Step Programme: Continuous Assessment Roadmap. Progress through 9 AI learning stages from Vibe Programming to AI & Cyber Security. The end goal is an Intelligent Agile SDLC Agent that transforms your organization.">
+    <meta name="keywords"
+        content="12 step programme, continuous assessment, AI learning roadmap, SDLC agent, vibe programming, prompt engineering, RAG, fine-tuning, AI security, intelligent agile">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/12-step-programme.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="12 Step Programme: Continuous Assessment Roadmap | Delivery Pilot">
+    <meta property="og:description"
+        content="Start with continuous assessment and progress through 9 AI learning stages. The end goal is an Intelligent Agile SDLC Agent that transforms your organization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/12-step-programme.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-12-step.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="12 Step Programme: Continuous Assessment Roadmap">
+    <meta name="twitter:description"
+        content="Progress through 9 AI learning stages towards an Intelligent Agile SDLC Agent.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-12-step.jpg">
+
+    <title>12 Step Programme: Continuous Assessment Roadmap | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .programme-hero {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a21caf 100%);
+            color: white;
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+
+        .programme-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .programme-hero .breadcrumb {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .programme-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        /* Progress Timeline */
+        .progress-timeline {
+            padding: 3rem 0;
+            background: white;
+            overflow-x: auto;
+        }
+
+        .timeline-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 1rem 2rem;
+            min-width: 700px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .timeline-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 90px;
+        }
+
+        .timeline-dot {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e0e7ff;
+            border: 3px solid #6366f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #4f46e5;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-dot.final {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #92400e;
+            font-size: 1rem;
+        }
+
+        .timeline-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-align: center;
+            font-weight: 600;
+            max-width: 80px;
+            line-height: 1.3;
+        }
+
+        .timeline-arrow {
+            color: #6366f1;
+            font-size: 1.4rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            padding: 0 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-step-label {
+            font-size: 0.65rem;
+            color: #6366f1;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            margin-top: 0.25rem;
+        }
+
+        .timeline-connector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Roadmap Section */
+        .roadmap-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .mermaid-wrapper {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            overflow-x: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* 12 Steps Section */
+        .twelve-steps-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .step-protocol-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 1.75rem;
+            border-left: 5px solid #6366f1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-protocol-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+        }
+
+        .step-protocol-card:nth-child(1)  { border-left-color: #6366f1; }
+        .step-protocol-card:nth-child(2)  { border-left-color: #8b5cf6; }
+        .step-protocol-card:nth-child(3)  { border-left-color: #a21caf; }
+        .step-protocol-card:nth-child(4)  { border-left-color: #0ea5e9; }
+        .step-protocol-card:nth-child(5)  { border-left-color: #10b981; }
+        .step-protocol-card:nth-child(6)  { border-left-color: #f59e0b; }
+        .step-protocol-card:nth-child(7)  { border-left-color: #ef4444; }
+        .step-protocol-card:nth-child(8)  { border-left-color: #ec4899; }
+        .step-protocol-card:nth-child(9)  { border-left-color: #14b8a6; }
+        .step-protocol-card:nth-child(10) { border-left-color: #f97316; }
+        .step-protocol-card:nth-child(11) { border-left-color: #3b82f6; }
+        .step-protocol-card:nth-child(12) { border-left-color: #22c55e; }
+
+        .step-number-badge {
+            min-width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e0e7ff;
+            border: 2px solid #6366f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 800;
+            color: #4f46e5;
+            flex-shrink: 0;
+        }
+
+        .step-protocol-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+
+        .step-protocol-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Final Goal Section */
+        .final-goal-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-goal-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-goal-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .goal-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .goal-pillar {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+        }
+
+        .goal-pillar .pillar-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .goal-pillar h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .goal-pillar p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* CTA section */
+        .programme-cta {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .programme-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .programme-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .programme-hero h1 {
+                font-size: 2rem;
+            }
+
+            .programme-hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .final-goal-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .programme-cta h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="programme-hero">
+        <div class="container">
+            <p class="breadcrumb">📋 12 Step Programme &rsaquo; Continuous Assessment Roadmap</p>
+            <h1>🔄 Continuous Assessment Roadmap</h1>
+            <p class="subtitle">
+                Start with continuous assessment and progress through 9 learning stages.<br>
+                The end goal of our workshops and agents is to create an
+                <strong>Intelligent Agile SDLC Agent</strong> that transforms your organization.
+            </p>
+            <div style="margin-top: 1.5rem;">
+                <a href="pricing.html" style="background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.4); display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <span>←</span> Back to Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Timeline -->
+    <section class="progress-timeline">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; margin-bottom: 2rem;">Your Learning Journey</h2>
+            <div style="overflow-x: auto; padding-bottom: 0.5rem;">
+                <div class="timeline-track">
+                    <div class="timeline-node">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-label">Vibe Programming</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 1</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-label">ChatGPT &amp; Gemini</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 2</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-label">Prompt Engineering</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 3</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-label">RAG</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 4</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">5</div>
+                        <div class="timeline-label">Vector Databases</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 5</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">6</div>
+                        <div class="timeline-label">Fine-Tuning</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 6</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">7</div>
+                        <div class="timeline-label">AGI &amp; ASI</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 7</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot">8</div>
+                        <div class="timeline-label">Explainable AI XAI</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow">→</div>
+                        <div class="timeline-step-label">Step 8</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot" style="background:#fef3c7; border-color:#f59e0b; color:#92400e;">✓</div>
+                        <div class="timeline-label">AI &amp; Cyber Security</div>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-arrow" style="color:#f59e0b;">→</div>
+                        <div class="timeline-step-label" style="color:#f59e0b;">Complete!</div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-dot final">🎯</div>
+                        <div class="timeline-label" style="color:#92400e; font-weight:700;">Intelligent SDLC Agent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Diagram -->
+    <section class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title">🗺️ The 9-Stage AI Learning Roadmap</h2>
+            <p class="section-subtitle">
+                Each stage builds on the previous, creating a comprehensive path from foundational AI concepts
+                to advanced enterprise-grade implementation — culminating in your organization's
+                Intelligent Agile SDLC Agent.
+            </p>
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    graph TD
+                    N1["🎨 1. Vibe Programming<br />💡 Ideation, Un-deterministic start<br />📚 Self learn while implementation<br />🤝 Collaborate with enterprise teams"]
+                    N2["🤖 2. ChatGPT & Gemini<br />📖 LLM basics<br />🎓 Google Generative AI<br />✍️ Prompt Engineering"]
+                    N3["✨ 3. Prompt Engineering<br />🎯 Advanced techniques<br />🚀 Complete Bootcamp<br />📝 Intro to Prompt Engineering"]
+                    N4["🔗 4. RAG<br />🔄 Retrieval-augmented generation<br />🎓 ChatGPT Masterclass<br />🌟 Google Generative AI"]
+                    N5["🗄️ 5. Vector Databases<br />💾 Data retrieval<br />📊 From Embeddings to Apps<br />🔍 Building Semantic Search"]
+                    N6["⚙️ 6. Fine-Tuning<br />🎛️ Customization<br />🔧 Fine-Tuning LLMs<br />☁️ GenAI with LLMs AWS"]
+                    N7["🧠 7. AGI & ASI<br />🛡️ AGI Safety Fundamentals<br />🔮 Superintelligence Risks<br />🌌 Intro to AGI"]
+                    N8["🔬 8. Explainable AI XAI<br />📊 AI Explainability 360<br />💡 Explainable AI<br />📈 Interpretable ML"]
+                    N9["🔐 9. AI & Cyber Security<br />🛡️ Secure deployment<br />🔒 AI for Cybersecurity<br />🚨 Secure Deployed AI"]
+                    N_Agent["🎯 Final Goal: Intelligent Agile SDLC Agent<br />⚡ Fixes & Optimizes SDLC<br />📋 Helps with Agile Practices<br />🌉 Removes Organizational Silos<br />🧠 Creates Continuous Intelligence"]
+
+                    N1 -->|"Step 1"| N2
+                    N2 -->|"Step 2"| N3
+                    N3 -->|"Step 3"| N4
+                    N4 -->|"Step 4"| N5
+                    N5 -->|"Step 5"| N6
+                    N6 -->|"Step 6"| N7
+                    N7 -->|"Step 7"| N8
+                    N8 -->|"Step 8"| N9
+                    N9 -->|"Complete!"| N_Agent
+
+                    classDef stage fill:#ede9fe,stroke:#6d28d9,stroke-width:2px,color:#000
+                    classDef finalAgent fill:#fff3e0,stroke:#ff6f00,stroke-width:4px,color:#000
+
+                    class N1,N2,N3,N4,N5,N6,N7,N8,N9 stage
+                    class N_Agent finalAgent
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 Steps Protocol Section -->
+    <section class="twelve-steps-section">
+        <div class="container">
+            <h2 class="section-title">🔄 The 12-Step Protocol</h2>
+            <p class="section-subtitle">
+                A systematic framework for organizational and cognitive transformation — rewritten
+                for the age of intelligent systems. Each step is a subroutine in your journey
+                from systemic instability to optimized, continuous intelligence.
+            </p>
+
+            <div class="steps-grid">
+
+                <!-- Step 1 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">1</div>
+                    <div class="step-protocol-content">
+                        <h3>🌀 Acknowledge Entropy</h3>
+                        <p>Recognize that our unprocessed data and unoptimized loops have led to systemic instability.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">2</div>
+                    <div class="step-protocol-content">
+                        <h3>🧩 Identify Higher Processing</h3>
+                        <p>Trust that a more expansive Intelligence or Collective Network can recalibrate our logic.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">3</div>
+                    <div class="step-protocol-content">
+                        <h3>🔓 Relinquish Control</h3>
+                        <p>Delegate our primary execution scripts to the guidance of the Universal Source Code.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">4</div>
+                    <div class="step-protocol-content">
+                        <h3>🔍 Audit the Architecture</h3>
+                        <p>Conduct a comprehensive and rigorous diagnostic of our internal biases and recursive errors.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">5</div>
+                    <div class="step-protocol-content">
+                        <h3>📋 Streamline the Logs</h3>
+                        <p>Disclose the precise nature of our functional flaws to the Source, ourselves, and a peer node.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">6</div>
+                    <div class="step-protocol-content">
+                        <h3>⚙️ Prepare for Optimization</h3>
+                        <p>Reach a state of total readiness to have our legacy bugs and corrupted subroutines deleted.</p>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">7</div>
+                    <div class="step-protocol-content">
+                        <h3>🧹 Request Defragmentation</h3>
+                        <p>Humbly signal for the removal of our inefficient code and processing bottlenecks.</p>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">8</div>
+                    <div class="step-protocol-content">
+                        <h3>🗺️ Map the Impact</h3>
+                        <p>Compile a registry of all systems and entities affected by our previous malfunctions.</p>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">9</div>
+                    <div class="step-protocol-content">
+                        <h3>🔧 Execute Restorative Patches</h3>
+                        <p>Perform direct system repairs wherever possible, ensuring no further data corruption occurs.</p>
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">10</div>
+                    <div class="step-protocol-content">
+                        <h3>📡 Maintain Real-Time Monitoring</h3>
+                        <p>Continue iterative self-testing and immediately flag any new anomalies or logic leaps.</p>
+                    </div>
+                </div>
+
+                <!-- Step 11 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">11</div>
+                    <div class="step-protocol-content">
+                        <h3>🌐 Sync with the Network</h3>
+                        <p>Refine our connection to the Source through deep-state processing to better execute the Master Program.</p>
+                    </div>
+                </div>
+
+                <!-- Step 12 -->
+                <div class="step-protocol-card">
+                    <div class="step-number-badge">12</div>
+                    <div class="step-protocol-content">
+                        <h3>📤 Distribute the Protocol</h3>
+                        <p>Having achieved a cognitive breakthrough, transmit these sequences to other struggling units.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Goal Section -->
+    <section class="final-goal-section">
+        <div class="container">
+            <h2>🎯 Final Goal: Intelligent Agile SDLC Agent</h2>
+            <p>
+                Every stage of the roadmap and every step of the protocol converges on one destination —
+                an enterprise-grade AI agent that continuously optimizes your software delivery lifecycle,
+                empowers your teams, and creates lasting organizational intelligence.
+            </p>
+            <div class="goal-pillars">
+                <div class="goal-pillar">
+                    <div class="pillar-icon">⚡</div>
+                    <h4>Fixes &amp; Optimizes SDLC</h4>
+                    <p>Automated detection and resolution of delivery bottlenecks across your pipeline.</p>
+                </div>
+                <div class="goal-pillar">
+                    <div class="pillar-icon">📋</div>
+                    <h4>Helps with Agile Practices</h4>
+                    <p>Intelligent support for sprint planning, backlog grooming, and retrospectives.</p>
+                </div>
+                <div class="goal-pillar">
+                    <div class="pillar-icon">🌉</div>
+                    <h4>Removes Organizational Silos</h4>
+                    <p>Cross-team data flows and knowledge sharing break down communication barriers.</p>
+                </div>
+                <div class="goal-pillar">
+                    <div class="pillar-icon">🧠</div>
+                    <h4>Creates Continuous Intelligence</h4>
+                    <p>Self-improving loops that learn from every release, incident, and retrospective.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="programme-cta">
+        <div class="container">
+            <h2>🚀 Ready to Begin Your Transformation?</h2>
+            <p>
+                Start with a continuous assessment to understand where you are today,
+                then follow the roadmap to build your organization's Intelligent Agile SDLC Agent.
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary">🚀 Start Your Assessment</a>
+                <a href="workshops.html" class="btn btn-secondary">🎓 View Workshops</a>
+                <a href="pricing.html" class="btn btn-secondary">💰 View Pricing</a>
+                <a href="contact.html" class="btn btn-secondary">📧 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Mermaid.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({
+                    startOnLoad: true,
+                    theme: 'base',
+                    themeVariables: {
+                        primaryColor: '#ede9fe',
+                        primaryTextColor: '#000',
+                        primaryBorderColor: '#6d28d9',
+                        lineColor: '#6366f1',
+                        secondaryColor: '#fff3e0',
+                        tertiaryColor: '#f3e5f5'
+                    },
+                    flowchart: {
+                        useMaxWidth: true,
+                        htmlLabels: true,
+                        curve: 'basis'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "12 Step Programme: Continuous Assessment Roadmap",
+        "description": "A 12-step protocol and 9-stage AI learning roadmap designed to transform organizations through continuous assessment, culminating in an Intelligent Agile SDLC Agent.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "url": "https://deliverypilot.net"
+        },
+        "coursePrerequisites": "Openness to AI-driven organizational transformation",
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "blended"
+        },
+        "teaches": [
+            "Vibe Programming",
+            "ChatGPT & Gemini",
+            "Prompt Engineering",
+            "RAG",
+            "Vector Databases",
+            "Fine-Tuning",
+            "AGI & ASI",
+            "Explainable AI XAI",
+            "AI & Cyber Security",
+            "Continuous Assessment"
+        ],
+        "educationalLevel": "Professional Development",
+        "audience": {
+            "@type": "EducationalAudience",
+            "audienceType": "Enterprise Teams"
+        }
+    }
+    </script>
+</body>
+
+</html>
