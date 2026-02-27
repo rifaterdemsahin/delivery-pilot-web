@@ -327,5 +327,21 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Resources: Multi-Party Investigation (English) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-multi-party-investigation.html</loc>
+        <lastmod>2026-01-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Resources: Multi-Party Investigation (Turkish) -->
+    <url>
+        <loc>https://deliverypilot.net/resources-multi-party-investigation-tr.html</loc>
+        <lastmod>2026-01-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Checklist | Delivery Pilot</title>
+    <title>Simulation Template | Delivery Pilot</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -24,7 +24,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 3rem 1rem;
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
             color: white;
             border-radius: 0 0 20px 20px;
         }
@@ -39,12 +39,9 @@
             font-size: 1.2rem;
             opacity: 0.9;
             margin-top: 1rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* Video Container */
+        /* 1. Video at the top */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -85,31 +82,18 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Checklist Styles */
-        .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            color: #4f46e5;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
+        /* 2. Checklist Styles */
         .checklist-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 1rem;
-            padding: 1rem;
+            padding: 0.75rem;
             border-radius: 8px;
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            transition: all 0.2s;
+            transition: background-color 0.2s;
         }
 
         .checklist-item:hover {
-            background-color: #f1f5f9;
-            border-color: #cbd5e1;
+            background-color: #f8fafc;
         }
 
         .checklist-checkbox {
@@ -118,7 +102,6 @@
             width: 1.25rem;
             height: 1.25rem;
             cursor: pointer;
-            accent-color: #4f46e5;
         }
 
         .checklist-content {
@@ -134,21 +117,6 @@
         .checklist-desc {
             font-size: 0.9rem;
             color: #64748b;
-        }
-
-        .sub-checklist {
-            margin-top: 0.5rem;
-            padding-left: 1rem;
-            border-left: 2px solid #e2e8f0;
-        }
-
-        .sub-checklist-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #475569;
         }
 
         /* Code Block Styles */
@@ -204,8 +172,8 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #4f46e5;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .btn-primary {
@@ -241,136 +209,32 @@
     <div id="navbar-placeholder"></div>
 
     <div class="hero">
-        <h1>The Delivery Pilot Transition Checklist 🚀</h1>
-        <p>Shift your mindset from specific, rigid coding languages to becoming an X-shaped professional who
-            orchestrates AI to deliver end-to-end solutions.</p>
+        <h1 id="sim-title">[Simulation Title]</h1>
+        <p id="sim-desc">[Simulation Description]</p>
 
-        <!-- 1. Video -->
+        <!-- 1. Template Video at the top -->
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Frty5ICAdOo" title="Delivery Pilot Transition"
+            <!-- Replace with specific video ID per simulation -->
+            <iframe id="sim-video" src="https://www.youtube.com/embed/placeholder" title="Simulation Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="simulation-container">
-
         <!-- 2. Checklist Section -->
         <div class="card">
-            <h2>✅ Interaction Checklist</h2>
-            <form id="checklist-form">
-
-                <!-- Section 1 -->
-                <div class="section-title">1. Foundation & Digital Presence 🏗️</div>
-
+            <h2>✅ Checklist</h2>
+            <div id="checklist-container">
+                <!-- Checklist items will go here -->
                 <div class="checklist-item">
-                    <input type="checkbox" id="step1_1" class="checklist-checkbox">
+                    <input type="checkbox" class="checklist-checkbox" id="step1">
                     <div class="checklist-content">
-                        <label for="step1_1" class="checklist-title">Retire the Traditional Resume</label>
-                        <div class="checklist-desc">Move away from static documents; your proof of work is your
-                            currency.</div>
+                        <label for="step1" class="checklist-title">Step 1: [Action]</label>
+                        <div class="checklist-desc">[Description of what to do]</div>
                     </div>
                 </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step1_2" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step1_2" class="checklist-title">Open/Audit your GitHub Account</label>
-                        <div class="checklist-desc">Your "business card" showing repo count and commit frequency.</div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step1_3" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step1_3" class="checklist-title">Adopt the "Wizard" Mindset</label>
-                        <div class="checklist-desc">Embrace a multi-disciplinary role asking "What" and "Why", not just
-                            "How".</div>
-                    </div>
-                </div>
-
-                <!-- Section 2 -->
-                <div class="section-title">2. The Assessment Phase 🩺</div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step2_1" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step2_1" class="checklist-title">Register at DeliveryPilot.net</label>
-                        <div class="checklist-desc">Enter the ecosystem to track progress.</div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step2_2" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step2_2" class="checklist-title">Skill Gap Assessment</label>
-                        <div class="checklist-desc">Establish your current baseline.</div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step2_3" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step2_3" class="checklist-title">First Principles Check</label>
-                        <div class="checklist-desc">Identify what is "smoking or leaking" (e.g. latency, tools).</div>
-                    </div>
-                </div>
-
-                <!-- Section 3 -->
-                <div class="section-title">3. Practical Simulation 💻</div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step3_1" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step3_1" class="checklist-title">Set Up Local Environment</label>
-                        <div class="checklist-desc">Clone project repositories to your local compute.</div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step3_2" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step3_2" class="checklist-title">Leverage AI Agents</label>
-                        <div class="checklist-desc">Use AI within your IDE to create tasks and generate scripts.</div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step3_3" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step3_3" class="checklist-title">Iterative Implementation</label>
-                        <div class="checklist-desc">
-                            <div class="sub-checklist">
-                                <div class="sub-checklist-item"><input type="checkbox" id="sub1"> Prompt agent for
-                                    solution</div>
-                                <div class="sub-checklist-item"><input type="checkbox" id="sub2"> Review agent's plan
-                                </div>
-                                <div class="sub-checklist-item"><input type="checkbox" id="sub3"> Execute and verify
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step3_4" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step3_4" class="checklist-title">Document as You Go</label>
-                        <div class="checklist-desc">Ensure README and logs are updated.</div>
-                    </div>
-                </div>
-
-                <!-- Section 4 -->
-                <div class="section-title">4. Shipping & Validation 🚢</div>
-
-                <div class="checklist-item">
-                    <input type="checkbox" id="step4_1" class="checklist-checkbox">
-                    <div class="checklist-content">
-                        <label for="step4_1" class="checklist-title">Commit and Push</label>
-                        <div class="checklist-desc">Finalize "Initial Commit" and host on GitHub.</div>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
 
         <!-- 3. Git Repo & Fork/Clone -->
@@ -435,7 +299,7 @@
         // Submission Logic
         const submissionForm = document.getElementById('submission-form');
         const statusMsg = document.getElementById('submission-status');
-        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225';
+        const N8N_WEBHOOK_URL = 'https://n8n.rifaterdemsahin.com/webhook/c0345ec9-8cf1-4baf-a2df-b3236a3a9225'; // Use the same webhook for now
 
         submissionForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -451,7 +315,7 @@
             try {
                 const payload = {
                     type: 'certificate_submission',
-                    simulation: 'Transition Checklist',
+                    simulation: document.title,
                     repoUrl: repoUrl,
                     email: email,
                     timestamp: new Date().toISOString()

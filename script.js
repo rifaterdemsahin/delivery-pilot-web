@@ -60,6 +60,7 @@ const translations = {
             download: "📥 Download Presentation PDF"
         },
         hero: {
+            slogan: "Everyone can make apps",
             title: "Transform Your Enterprise with AI",
             subtitle: "Delivery Pilot is the leading Platform as a Service (PaaS) solution that accelerates your AI transformation journey. Deploy, manage, and scale AI applications with confidence.",
             startJourney: "Start Your Journey",
@@ -1013,6 +1014,7 @@ const translations = {
             download: "📥 Sunum PDF'ini İndir"
         },
         hero: {
+            slogan: "Herkes uygulama yapabilir",
             title: "İşletmenizi Yapay Zeka ile Dönüştürün",
             subtitle: "Delivery Pilot, yapay zeka dönüşüm yolculuğunuzu hızlandıran lider Hizmet Olarak Platform (PaaS) çözümüdür. Yapay zeka uygulamalarını güvenle dağıtın, yönetin ve ölçeklendirin.",
             startJourney: "Yolculuğunuza Başlayın",

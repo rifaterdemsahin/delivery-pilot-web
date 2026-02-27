@@ -229,6 +229,16 @@ body {
     text-align: center;
 }
 
+.hero-slogan {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.95;
+    color: #ffd700;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;

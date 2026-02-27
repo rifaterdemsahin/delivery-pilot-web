@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Karmaşık teslimat sistemlerinde agentların neden gerekli olduğu: Agentlar olmadan Kubernetes, OpenShift ve kurumsal ortamları ölçekte hata ayıklamak ve izlemek imkansızdır.">
+    <meta name="keywords"
+        content="yapay zeka agentları, Kubernetes, OpenShift, teslimat, hata ayıklama, log izleme, kurumsal dönüşüm, agent tabanlı mimari, paydaş kararları">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-complex-delivery-agents-tr.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Karmaşık Teslimat Sistemlerinde Agentlar | Delivery Pilot">
+    <meta property="og:description"
+        content="Agentlar olmadan Kubernetes, OpenShift ve sürekli karmaşıklaşan kurumsal teslimat sistemlerini izlemek ve hata ayıklamak imkansızdır. Agent tabanlı dönüşümün bağlantılı, akıllı kararları nasıl mümkün kıldığını öğrenin.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-complex-delivery-agents-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karmaşık Teslimat Sistemlerinde Agentlar">
+    <meta name="twitter:description"
+        content="Agentlar olmadan karmaşık teslimat pipeline'larını debug etmek ve izlemek imkansızdır. Agentlar tek ileriye dönük yoldur.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+
+    <title>Karmaşık Teslimat Sistemlerinde Agentlar | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .resources-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .resources-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .challenge-section {
+            padding: 4rem 0;
+            background: #fff3cd;
+        }
+
+        .solution-section {
+            padding: 4rem 0;
+            background: #d4edda;
+        }
+
+        .transformation-section {
+            padding: 4rem 0;
+            background: #cfe2ff;
+        }
+
+        .approach-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 1rem;
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: top;
+        }
+
+        .comparison-table tr:nth-child(even) td {
+            background: #f8f9fa;
+        }
+
+        .highlight-box {
+            background: #0f3460;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>🤖 Karmaşık Teslimat Sistemlerinde Agentlar</h1>
+            <p class="subtitle">Agentlar olmadan Kubernetes, OpenShift ve sürekli gelişen<br>
+                kurumsal pipeline'ları insan ölçeğinde izlemek ve hata ayıklamak mümkün değildir.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="enterprise-agent.html"
+                    style="background: white; color: #0f3460; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600;">⚙️
+                    Kurumsal Agentlar</a>
+                <a href="resources-why-build-agents.html"
+                    style="background: rgba(255,255,255,0.15); color: white; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.4);">🏗️
+                    Neden Agent İnşa Etmeliyiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Core Argument -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Temel Argüman</h2>
+            <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; line-height: 1.8; margin-bottom: 2rem;">
+                Modern kurumsal teslimat, tek başına insan bilişinin üstesinden gelemeyeceği bir karmaşıklık eşiğini
+                aşmıştır. Kubernetes kümeleri binlerce pod çalıştırır. OpenShift pipeline'ları dakikada yüzlerce olay
+                tetikler. Mikroservis ağları saatte milyonlarca log satırı üretir. Bu ölçekte, bir mühendisi eksik
+                bir log girişini, başarısız bir probe'u veya bozulmuş bir deployment penceresini tespit etmek için
+                beklemenin bir strateji olmadığını—aksine başarısızlığın garantisi olduğunu anlamak gerekir.
+            </p>
+
+            <div class="highlight-box">
+                <h3>💡 Temel Kavrayış</h3>
+                <p style="font-size: 1.15rem; line-height: 1.8;">
+                    İnsanlar dağıtık sistemlerde belirli bir zaman dilimindeki eksik logları <em>izleyemez</em>.
+                    Agentlar <em>izleyebilir</em>. Bu bir tercih değil—sistemler daha karmaşık hale geldikçe ve
+                    teslimat talepleri hızlandıkça daha kritik hale gelen temel bir yetenek farkıdır.
+                </p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <h3>📉 İnsan Sınırı</h3>
+                    <p>Yetenekli bir SRE, normal koşullarda aynı anda yaklaşık 5–10 servisi takip edebilir.
+                        Tipik bir Kubernetes üretim kümesinde 50–500 servis, yüzlerce config map ve
+                        onlarca birbirine bağımlı pipeline bulunabilir. Matematik bunu kaldırmaz.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Karmaşıklık Eğrisi</h3>
+                    <p>Kuruluşlar cloud-native mimariler benimsedikçe sistem karmaşıklığı üstel olarak
+                        büyürken mevcut mühendislik zamanı doğrusal olarak büyür—ya da azalır.
+                        Agentlar, gözlem ve müdahaleyi sistem büyümesiyle paralel olarak ölçekleyebilecek
+                        tek mekanizmadır.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Yineleme Zorunluluğu</h3>
+                    <p>Mimarinin değişen iş taleplerini karşılamak için sürekli evrilmesi gerekir.
+                        Agentlar, yapılandırma üzerinde gerçek zamanlı olarak yineleyebilir, gerilemeyi
+                        tespit edebilir ve iyileştirmeler önerebilir—hiçbir yalnızca insan tabanlı
+                        inceleme döngüsünün hızda eşleşemeyeceği bir şekilde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Debugging Challenge -->
+    <section class="challenge-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #856404;">🔍 Agentlar Olmadan Hata Ayıklama Neden Başarısız Olur</h2>
+            <p style="font-size: 1.1rem; color: #664d03; margin-bottom: 2rem; line-height: 1.8;">
+                Karmaşık ortamlarda arızalar nadiren gürültülüdür. Bunlar fısıltılardır—saat 03:47'deki
+                eksik bir log satırı, bir kez yeniden başlatılan ama toparla bir pod, sessiz bir config
+                kaymasıyla başarılı olan bir deployment. İnsanlar yalnızca ne arayacaklarını bildikleri
+                şeyleri araştırabilir. Agentlar her şeyi, her zaman izler.
+            </p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Senaryo</th>
+                        <th>Yalnızca İnsan Yaklaşımı</th>
+                        <th>Agent Destekli Yaklaşım</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Zaman diliminde eksik loglar</strong></td>
+                        <td>Mühendisin log toplayıcıları manuel olarak sorgulaması, zaman damgalarını ilişkilendirmesi ve boşlukları fark etmesi gerekir—genellikle olaydan saatler sonra</td>
+                        <td>Agent log akışını sürekli izler, anında boşlukları işaretler ve tam bağlam ile önerilen kök neden analizi içeren bir uyarı oluşturur</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kubernetes pod çökme döngüsü</strong></td>
+                        <td>Nöbetçi mühendisin çağrılması, SSH bağlantısı kurması, logları incelemesi, kaynak limitlerini kontrol etmesi gerekir—olay başına 15–60 dakika</td>
+                        <td>Agent saniyeler içinde çökme döngüsünü tespit eder, son deploymentlarla ilişkilendirir, geri alma önerir ve yalnızca gerektiğinde eskalasyon yapar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OpenShift pipeline hatası</strong></td>
+                        <td>Geliştirici pipeline UI'ını kontrol eder, build loglarını okur, bağımlılık sürümü uyuşmazlığını tespit eder—manuel ve yavaş</td>
+                        <td>Agent hatayı otomatik olarak kök nedene izler, changelog'larla çapraz referans yapar ve bir düzeltme PR'ı açar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kümeler arası yapılandırma kayması</strong></td>
+                        <td>Periyodik denetimler kaymayı günler veya haftalar sonra yakalar; o zamana kadar birden fazla servis etkilenmiş olabilir</td>
+                        <td>Agent, canlı durumu sürekli olarak istenen durumla karşılaştırır, kaymayı anında fark ve etki analizi ile raporlar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sabah 3'te üretim olayı</strong></td>
+                        <td>Çağrı cihazı yorgun bir mühendisi uyandırır; bilişsel performans düşüktür; ortalama çözüm süresi yüksektir</td>
+                        <td>Agent triyajı özerk olarak halleder, bilinen sorun sınıflarını otomatik olarak çözer ve yalnızca gerçekten yeni sorunları eskalasyon yapar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- The Architecture Iteration Problem -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">⚙️ Mimari Sürekli Yinelenmelidir</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.8;">
+                Kubernetes ve OpenShift statik platformlar değildir. Yeni sürümler her çeyrekte çıkar. Operatörler
+                evrilir. Güvenlik yamaları gelir. Uyumluluk gereksinimleri değişir. İş talepleri deployment
+                topolojilerini bir gecede değiştirir. Mimariyi bu güçlerle uyumlu tutmak, insan inceleme
+                döngülerinin sürdüremeyeceği bir yineleme hızı gerektirir.
+            </p>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <h3>🚀 Sürekli Mimari İnceleme</h3>
+                    <p>Agentlar, çalışan kümeleri sürekli olarak en iyi uygulamalar, CIS kıyaslamaları ve
+                        kurumsal politikalar karşısında analiz eder. Yeni bir operatör sürümü çıktığında,
+                        agentlar insanlar bir bilet açmadan önce staging'de uyumluluğu test eder.</p>
+                </div>
+                <div class="card">
+                    <h3>📋 Otomatik Uyumluluk Kayması Tespiti</h3>
+                    <p>Yasal gereklilikler değişir. Agentlar, canlı küme yapılandırmasını gerçek zamanlı
+                        olarak uyumluluk çerçevelerine eşler; ihlalleri bir sonraki çeyreklik denetimi
+                        beklemek yerine ortaya çıkar çıkmaz tespit eder.</p>
+                </div>
+                <div class="card">
+                    <h3>🔁 Kendini İyileştiren Pipeline'lar</h3>
+                    <p>Agentlar geçmiş arızalardan öğrenir. Bir deployment deseni tekrar tekrar gecikme
+                        artışlarına neden olduğunda, agent bir yapılandırma değişikliği önerir, test eder
+                        ve insan onayıyla uygular—olay geçmişini mimari iyileştirmeye dönüştürür.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Talep Güdümlü Ölçekleme</h3>
+                    <p>İş talebi kalıpları öngörülemezdir. Agentlar, iş metriklerini altyapı yüküyle
+                        ilişkilendirir; kullanıcılara bozulma görünür hale gelmeden önce tepki vermek
+                        yerine, talep zirveleri gelmeden önce kaynakları önceden ölçekler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Stakeholder Dimension -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #155724;">🤝 Paydaşlar İçin Bağlantılı, Akıllı Kararlar</h2>
+            <p style="font-size: 1.1rem; color: #155724; margin-bottom: 2rem; line-height: 1.8;">
+                Agent tabanlı teslimat dönüşümünün amacı yalnızca operasyonel verimlilik değil—her paydaşın
+                <strong>bağlantılı ve akıllı kararlar</strong> almasını sağlamaktır. Agentlar, doğru sinyali
+                doğru zamanda doğru kişiye sunar: bir CTO deployment riskini sade bir dille görür, bir ürün
+                yöneticisi feature flag etkisini görür, bir uyumluluk görevlisi politika uyumunu gerçek zamanlı
+                olarak izler.
+            </p>
+
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10×</div>
+                    <div class="stat-label">Agent desteğiyle mühendis başına izlenebilen daha fazla servis</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">%80</div>
+                    <div class="stat-label">Sessiz arızalar için ortalama tespit süresinde azalma</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7/24</div>
+                    <div class="stat-label">Sürekli log ve olay izleme—yorgunluk yok, boşluk yok</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3×</div>
+                    <div class="stat-label">Agent geri bildirimiyle daha hızlı mimari yineleme döngüleri</div>
+                </div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <h3>🏢 CTO / VP Mühendislik İçin</h3>
+                    <p>Agentlar, küme sağlığını, deployment hızını ve olay trendlerini iş odaklı panolara
+                        çevirir. Risk tahmin edilmez, ölçülür. Yatırım kararları canlı verilere dayanır.</p>
+                </div>
+                <div class="card">
+                    <h3>🛡️ Güvenlik &amp; Uyumluluk Ekibi İçin</h3>
+                    <p>Agentlar, politika uygulamasının sürekli kanıtını, her yapılandırma değişikliği için
+                        denetim izlerini ve sapmalar konusunda anlık uyarıları sağlar—uyumluluğu noktasal
+                        bir alıştırmadan sürekli bir güvenceye dönüştürür.</p>
+                </div>
+                <div class="card">
+                    <h3>👩‍💻 Mühendislik Ekibi İçin</h3>
+                    <p>Agentlar gürültüyü yönetir: uyarı triyajı, log toplama, rutin geri almalar ve
+                        dokümantasyon oluşturma. Mühendisler, gerçekten insan yaratıcılığı gerektiren
+                        iş olan mimari, özellik teslimi ve sistem iyileştirmeye odaklanır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Transformation Vision -->
+    <section class="transformation-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #084298;">🚀 Delivery Pilot: Kurumsal Agent Tabanlı Dönüşüm</h2>
+            <p style="font-size: 1.1rem; color: #084298; margin-bottom: 2rem; line-height: 1.8;">
+                Delivery Pilot'un misyonu, yönetim kurulundan operasyon merkezine kadar her paydaşın
+                bağlantılı ve akıllı teslimat kararları alabilmesi için kurumları dönüştürmektir. Bu,
+                yalnızca agentların gözlemledikleri sistemlerin yanında konuşlandırıldığı, yinelendiği
+                ve geliştirildiği sistematik, agent-önce bir mimari aracılığıyla mümkündür.
+            </p>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <h3>🪄 Sistemlerin Yanına Agent Konuşlandırın</h3>
+                    <p>Agentlar sonradan düşünülmüş bir şey değildir—her servis, pipeline ve kümenin yanında
+                        birinci sınıf bileşenler olarak konuşlandırılır. İlk günden itibaren her sistemin
+                        amacını anlayan, sağlığını izleyen ve geçmişini bilen bir agenti vardır.</p>
+                </div>
+                <div class="card">
+                    <h3>🔗 Silolar Arası Sinyalleri Bağlayın</h3>
+                    <p>Kurumlar silolar halinde çalışır: platform ekipleri, uygulama ekipleri, güvenlik
+                        ekipleri, iş ekipleri. Agentlar, alanlar arası sinyalleri ilişkilendirerek ve
+                        her paydaşın kararları için önemli ilişkileri öne çıkararak bu siloları köprüler.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Mimari Üzerinde Sürekli Yinelenin</h3>
+                    <p>Agentlar her olaydan, her deploymenttan ve her performans metriğinden öğrenir.
+                        Bu kurumsal bilgi birikir ve hiçbir insan inceleme kurulunun eşleşemeyeceği bir
+                        hızda mimari iyileştirmeyi yönlendirir.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Akıllı Karar Almayı Mümkün Kılın</h3>
+                    <p>Nihai hedef kendi iyiliği için otomasyon değil—her paydaşın teslimat yaşam
+                        döngüsündeki her kritik anda mümkün olan en iyi kararı alması için gereken
+                        bağlamı, güveni ve netliği sağlamaktır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Delivery Pilot Makes This Possible -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Delivery Pilot Bunu Nasıl Mümkün Kılıyor</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.8;">
+                Delivery Pilot, bireysel mühendislerden üst düzey paydaşlara kadar her seviyede teslimat
+                organizasyonunuza agent tabanlı düşünceyi yerleştirmek için değerlendirme, atölye çalışması
+                ve sertifikasyon çerçevesini sağlar.
+            </p>
+
+            <div class="approach-cards">
+                <div class="card">
+                    <h3>🛠️ Yetenek Boşluğu Değerlendirmesi</h3>
+                    <p>Ekibinizin bugün nerede olduğunu değerlendiriyoruz: hangi mühendisler agent
+                        inşa edip çalıştırabilir, hangi paydaşlar agent güdümlü teslimatı anlıyor
+                        ve karmaşık sistemlerinizi riske atan kritik boşluklar nerede.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Simülasyon Atölyeleri</h3>
+                    <p>Uygulamalı simülasyon atölyeleri aracılığıyla ekipleriniz, gerçekçi Kubernetes
+                        ve OpenShift senaryolarında agent tabanlı teslimatı deneyimler—üretim
+                        dağıtımından önce yaparak öğrenir, güven kazanır.</p>
+                </div>
+                <div class="card">
+                    <h3>🏆 Sertifikalı Delivery Pilot'lar</h3>
+                    <p>Delivery Pilot olarak sertifikalanan mühendisler, karmaşık kurumsal ortamlarda
+                        agent mimarileri tasarlama, konuşlandırma ve yineleme konusunda niteliklere
+                        sahip olur—yetenek boşluğunu kapatır ve organizasyonunuzda agent tabanlı
+                        dönüşümü sabitleyen.</p>
+                </div>
+                <div class="card">
+                    <h3>📡 Sürekli İyileştirme Çerçevesi</h3>
+                    <p>Yolculuk sertifikasyon ile bitmez. Delivery Pilot'un çerçevesi, agentların
+                        sistemlerinizle birlikte evrilmesini, paydaş ihtiyaçlarının sürekli öne
+                        çıkarılmasını ve organizasyonun teslimat karmaşıklığının önünde kalmasını
+                        sağlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources -->
+    <section style="padding: 4rem 0; background: var(--bg-light);">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">📚 Keşfetmeye Devam Edin</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <a href="resources-why-build-agents-tr.html"
+                    style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;"
+                    onmouseover="this.style.transform='translateY(-4px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏗️</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Neden Agent İnşa Etmeliyiz</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Yapay zeka agentları ve robotlar inşa etmenin insani ve teknik argümanı</p>
+                </a>
+                <a href="resources-humans-vs-agents-tr.html"
+                    style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;"
+                    onmouseover="this.style.transform='translateY(-4px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">İnsanlar ve Agentlar</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">İnsanlar ve yapay zeka agentlarının tamamlayıcı rollerini anlamak</p>
+                </a>
+                <a href="agent-security-benefits-tr.html"
+                    style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;"
+                    onmouseover="this.style.transform='translateY(-4px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Agent Güvenlik Faydaları</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Agentların güvenli, karmaşık ortamlarda hata oranlarını nasıl azalttığı</p>
+                </a>
+                <a href="enterprise-agent-tr.html"
+                    style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;"
+                    onmouseover="this.style.transform='translateY(-4px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Kurumsal Agent Platformu</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Kurumunuza agent konuşlandırmak için 10 aşamalı çerçeve</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Teslimat Organizasyonunuzu Dönüştürmeye Hazır Mısınız?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                İnsanların karmaşık teslimat sistemlerinize yetişebileceğini ummayı bırakın. Mimarinizi
+                sürekli izleyen, hata ayıklayan ve yineleyen agentlar konuşlandırmaya başlayın—böylece
+                paydaşlarınız bağlantılı, akıllı kararlar alabilsin.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="assessment.html" class="btn btn-primary"
+                    style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🚀
+                    Dönüşümünüzü Başlatın</a>
+                <a href="workshops.html" class="btn btn-primary"
+                    style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🎓
+                    Atölyeleri Keşfedin</a>
+                <a href="resources-why-build-agents-tr.html" class="btn btn-primary"
+                    style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🏗️
+                    Neden Agent İnşa Etmeliyiz</a>
+                <a href="resources-complex-delivery-agents.html" class="btn btn-primary"
+                    style="background: white; color: var(--primary-color); padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">🇬🇧
+                    Read in English</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Karmaşık Teslimat Sistemlerinde Agentlar: Agent Tabanlı Dönüşüm İçin Argüman",
+      "description": "Agentlar olmadan Kubernetes, OpenShift ve sürekli karmaşıklaşan kurumsal teslimat sistemlerini izlemek ve hata ayıklamak imkansızdır. Agent tabanlı dönüşüm paydaşların bağlantılı, akıllı kararlar almasını sağlar.",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2025-02-19",
+      "dateModified": "2025-02-19",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/resources-complex-delivery-agents-tr.html"
+      },
+      "articleSection": "Resources",
+      "keywords": ["yapay zeka agentları", "Kubernetes", "OpenShift", "teslimat", "log izleme", "kurumsal dönüşüm", "agent tabanlı mimari", "paydaş kararları"]
+    }
+    </script>
+</body>
+
+</html>
