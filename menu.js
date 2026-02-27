@@ -83,6 +83,7 @@ const navigationConfig = {
                 { href: 'resources-governance-examples.html', textKey: 'nav.governanceExamples', text: '🏛️ Governance Examples' },
                 { href: 'resources-paradigm-shift.html', textKey: 'nav.paradigmShift', text: '⚡ Paradigm Shift' },
                 { href: 'resources-workshops-as-simulations.html', textKey: 'nav.workshopsAsSimulations', text: '🎮 Workshops as Simulations' },
+                { href: 'resources-training-vs-simulation.html', textKey: 'nav.trainingVsSimulation', text: '⚖️ Training vs Simulation' },
                 { href: 'resources-agentic-vs-automation.html', textKey: 'nav.agenticVsAutomation', text: '🤖 Agentic vs Automation' },
                 { href: 'resources-acronym-pressure.html', textKey: 'nav.acronymPressure', text: '🔤 Acronym Overload' },
                 { href: 'resources-airgapped-challenges.html', textKey: 'nav.airgappedChallenges', text: '🛑 Air-gapped Challenges' },

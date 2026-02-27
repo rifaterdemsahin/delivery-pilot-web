@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Classical Training vs Simulation Workshops: Understand the key difference between teacher-led training where everyone learns the same thing, and simulation workshops where each person follows their own curiosity and learns through self-directed exploration.">
+    <meta name="keywords"
+        content="classical training vs simulation, self-directed learning, simulation workshops, training comparison, enterprise learning, AI workshops, learning by doing, workshop vs training">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-training-vs-simulation.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Classical Training vs Simulation Workshops | Delivery Pilot">
+    <meta property="og:description"
+        content="In classical training, everyone learns one thing presented to them. In simulation workshops, people learn what they are interested in — self-directed, curiosity-driven, and far more effective.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-training-vs-simulation.html">
+    <meta property="og:image" content="https://deliverypilot.net/og-image-resources.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Classical Training vs Simulation Workshops">
+    <meta name="twitter:description"
+        content="Classical training teaches. Simulation workshops let people self-learn. Discover why the difference matters.">
+    <meta name="twitter:image" content="https://deliverypilot.net/twitter-card-resources.jpg">
+
+    <title>Classical Training vs Simulation Workshops | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .compare-hero {
+            background: linear-gradient(135deg, #1e40af 0%, #4f46e5 50%, #6d28d9 100%);
+            color: white;
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+
+        .compare-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .compare-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Head-to-head split hero */
+        .split-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 220px;
+        }
+
+        .split-panel {
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .split-panel.classical {
+            background: linear-gradient(135deg, #374151 0%, #111827 100%);
+            color: white;
+        }
+
+        .split-panel.simulation {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+        }
+
+        .split-panel .panel-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .split-panel h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .split-panel p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            width: 56px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #6b7280;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Comparison table */
+        .comparison-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 2.5rem;
+        }
+
+        .compare-table thead tr {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .compare-table tbody tr {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .compare-table tbody tr:hover {
+            background: #f8faff;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.97rem;
+            line-height: 1.6;
+        }
+
+        .compare-table th {
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .compare-table th.header-dimension {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        .compare-table th.header-classical {
+            background: #1f2937;
+            color: white;
+        }
+
+        .compare-table th.header-simulation {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .compare-table td.cell-dimension {
+            font-weight: 700;
+            color: #475569;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .compare-table td.cell-classical {
+            color: #374151;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .compare-table td.cell-simulation {
+            color: #3730a3;
+            font-weight: 500;
+            border-left: 1px solid var(--border-color);
+        }
+
+        /* Deep-dive cards */
+        .deepdive-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .deepdive-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .deepdive-card {
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .deepdive-card.classical-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+        }
+
+        .deepdive-card.simulation-card {
+            background: #eef2ff;
+            border: 2px solid #c7d2fe;
+        }
+
+        .deepdive-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .deepdive-card.classical-card h3 { color: #1f2937; }
+        .deepdive-card.simulation-card h3 { color: #3730a3; }
+
+        .trait-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .trait-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.97rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .trait-icon {
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            margin-top: 0.1rem;
+        }
+
+        /* Self-learning explainer */
+        .selflearn-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        }
+
+        .flow-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .flow-node {
+            background: white;
+            border: 2px solid #8b5cf6;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            min-width: 160px;
+            max-width: 200px;
+        }
+
+        .flow-node .node-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .flow-node h4 { font-size: 0.95rem; font-weight: 700; color: #3730a3; margin-bottom: 0.25rem; }
+        .flow-node p { font-size: 0.82rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+        .flow-arrow {
+            font-size: 1.75rem;
+            color: #8b5cf6;
+            font-weight: 700;
+        }
+
+        /* When to use section */
+        .when-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .when-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .when-card {
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .when-card.classical-when {
+            background: #f9fafb;
+            border-left: 5px solid #6b7280;
+        }
+
+        .when-card.simulation-when {
+            background: #eef2ff;
+            border-left: 5px solid #4f46e5;
+        }
+
+        .when-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .when-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .when-card ul li {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            padding-left: 1.25rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .when-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #6b7280;
+            font-weight: 700;
+        }
+
+        .when-card.simulation-when ul li::before { color: #4f46e5; }
+
+        /* CTA */
+        .compare-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .compare-cta h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .compare-cta p { font-size: 1.15rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.8; }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .compare-hero h1 { font-size: 2rem; }
+
+            .split-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .vs-divider { display: none; }
+
+            .deepdive-grid,
+            .when-grid { grid-template-columns: 1fr; }
+
+            .compare-table thead tr,
+            .compare-table tbody tr {
+                grid-template-columns: 1fr;
+            }
+
+            .compare-table td.cell-classical,
+            .compare-table td.cell-simulation { border-left: none; border-top: 1px solid var(--border-color); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="compare-hero">
+        <div class="container">
+            <h1>🎓 Classical Training vs<br>Simulation Workshops</h1>
+            <p class="subtitle">
+                In classical training, a teacher decides what everyone learns.
+                In simulation workshops, each person follows their own curiosity —
+                and learns far more deeply as a result.
+            </p>
+        </div>
+    </section>
+
+    <!-- Split Panel -->
+    <div class="split-hero">
+        <div class="split-panel classical">
+            <div class="panel-icon">📖</div>
+            <h2>Classical Training</h2>
+            <p>One topic. One presenter. Everyone receives the same content at the same pace — whether it's relevant to them or not.</p>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="split-panel simulation">
+            <div class="panel-icon">🧪</div>
+            <h2>Simulation Workshops</h2>
+            <p>Open environment. Each person explores what interests them, builds what matters to them, and learns by doing.</p>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Side-by-Side Comparison</h2>
+            <p class="section-subtitle">
+                Every dimension of the learning experience differs between classical training and simulation workshops.
+            </p>
+
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th class="header-dimension">Dimension</th>
+                        <th class="header-classical">📖 Classical Training</th>
+                        <th class="header-simulation">🧪 Simulation Workshop</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell-dimension">🎯 Focus</td>
+                        <td class="cell-classical">Teaching — the trainer delivers content</td>
+                        <td class="cell-simulation">Self-learning — the learner discovers content</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">📋 Curriculum</td>
+                        <td class="cell-classical">Fixed and identical for every participant</td>
+                        <td class="cell-simulation">Emergent — shaped by each person's interests</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">🧭 Direction</td>
+                        <td class="cell-classical">Trainer decides what is covered and when</td>
+                        <td class="cell-simulation">Participant follows their own curiosity</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">⚡ Pace</td>
+                        <td class="cell-classical">Same pace for everyone regardless of experience</td>
+                        <td class="cell-simulation">Each person moves at their own speed</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">🤝 Engagement</td>
+                        <td class="cell-classical">Passive — listen, take notes, answer questions</td>
+                        <td class="cell-simulation">Active — build, experiment, make decisions</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">💡 Knowledge source</td>
+                        <td class="cell-classical">Flows from trainer to participants</td>
+                        <td class="cell-simulation">Emerges from doing and peer collaboration</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">🔄 Retention</td>
+                        <td class="cell-classical">Often low — passive recall fades quickly</td>
+                        <td class="cell-simulation">High — learning tied to real actions and outcomes</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">🌍 Relevance</td>
+                        <td class="cell-classical">Generic — same content for everyone in the room</td>
+                        <td class="cell-simulation">Personal — directly connected to each person's work</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">📈 Outcome</td>
+                        <td class="cell-classical">Awareness of a topic that was presented</td>
+                        <td class="cell-simulation">Working knowledge gained through experience</td>
+                    </tr>
+                    <tr>
+                        <td class="cell-dimension">🏢 Enterprise fit</td>
+                        <td class="cell-classical">Best for compliance and mandatory standards</td>
+                        <td class="cell-simulation">Best for AI, innovation, and complex problem-solving</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Deep Dive Cards -->
+    <section class="deepdive-section">
+        <div class="container">
+            <h2 class="section-title">A Deeper Look</h2>
+            <p class="section-subtitle">
+                Understanding what each model is optimised for — and why that matters for AI upskilling.
+            </p>
+
+            <div class="deepdive-grid">
+                <!-- Classical -->
+                <div class="deepdive-card classical-card">
+                    <h3><span>📖</span> Classical Training</h3>
+                    <ul class="trait-list">
+                        <li>
+                            <span class="trait-icon">🎤</span>
+                            <span>A single expert stands at the front and delivers a prepared presentation. The agenda is set before the session begins.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">👥</span>
+                            <span>Every participant receives identical content. A junior developer and a senior architect sit through the same slides.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">🕐</span>
+                            <span>The clock drives progress. Topics are covered because they are scheduled, not because participants are ready.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">📝</span>
+                            <span>Learners are consumers of information. They are evaluated on whether they can recall what was presented.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">⚠️</span>
+                            <span>Irrelevant content must still be endured. Participants disengage when the material doesn't match their context.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Simulation -->
+                <div class="deepdive-card simulation-card">
+                    <h3><span>🧪</span> Simulation Workshops</h3>
+                    <ul class="trait-list">
+                        <li>
+                            <span class="trait-icon">🧭</span>
+                            <span>The environment is open and rich. Participants enter with a goal — and the path they take is their own.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">🔍</span>
+                            <span>Each person pursues what is most relevant and interesting to them. A developer digs into code; a PM explores decision flows.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">🚀</span>
+                            <span>Progress is driven by curiosity and momentum. People naturally move faster on topics they care about.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">🛠️</span>
+                            <span>Learners are builders and problem-solvers. They are evaluated on what they create and how they think.</span>
+                        </li>
+                        <li>
+                            <span class="trait-icon">🤝</span>
+                            <span>Peer knowledge sharing emerges naturally. Participants teach each other based on what they discover.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Self-Learning Flow -->
+    <section class="selflearn-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #3730a3;">🔄 How Self-Learning Works in a Simulation</h2>
+            <p class="section-subtitle" style="color: #4338ca;">
+                Simulation workshops replace the single teaching flow with a personal discovery loop.
+                Each participant cycles through this process at their own pace, in their own direction.
+            </p>
+
+            <div class="flow-row">
+                <div class="flow-node">
+                    <div class="node-icon">❓</div>
+                    <h4>Curiosity</h4>
+                    <p>A question or interest draws the participant toward a topic</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="node-icon">🛠️</div>
+                    <h4>Attempt</h4>
+                    <p>They try to build or solve something in the simulation environment</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="node-icon">💥</div>
+                    <h4>Friction</h4>
+                    <p>They hit a problem, a gap, or something unexpected</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="node-icon">🔍</div>
+                    <h4>Discovery</h4>
+                    <p>They investigate, ask peers, or explore resources to resolve it</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="node-icon">🧠</div>
+                    <h4>Deep Learning</h4>
+                    <p>Understanding is built through experience, not memorisation</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: white; border-radius: 16px; padding: 2.5rem; border-left: 6px solid #7c3aed; max-width: 860px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 1.4rem; font-weight: 700; color: #3730a3; margin-bottom: 1rem;">
+                    💡 Why Friction Is a Feature, Not a Bug
+                </h3>
+                <p style="color: var(--text-light); line-height: 1.8; margin: 0;">
+                    In classical training, confusion is hidden — participants smile and nod to avoid slowing the group down.
+                    In simulation workshops, confusion is the learning trigger. When a participant hits a wall, they are
+                    motivated to find an answer because it <em>matters to what they are building</em>. That motivated
+                    search produces retention that no slide deck can replicate.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to use each -->
+    <section class="when-section">
+        <div class="container">
+            <h2 class="section-title">When to Use Each Approach</h2>
+            <p class="section-subtitle">
+                Classical training and simulation workshops are not enemies — they serve different purposes.
+                The key is knowing which one to reach for.
+            </p>
+
+            <div class="when-grid">
+                <div class="when-card classical-when">
+                    <h3>📖 Use Classical Training When...</h3>
+                    <ul>
+                        <li>Everyone must learn the exact same procedure (compliance, safety, legal)</li>
+                        <li>The content is stable and unlikely to change quickly</li>
+                        <li>A single authoritative answer exists and must be communicated uniformly</li>
+                        <li>The audience has no existing context and needs structured foundations first</li>
+                        <li>Regulatory certification requires documented delivery to all participants</li>
+                    </ul>
+                </div>
+
+                <div class="when-card simulation-when">
+                    <h3>🧪 Use Simulation Workshops When...</h3>
+                    <ul>
+                        <li>The domain is complex, evolving, or highly contextual — like AI</li>
+                        <li>Different team members need to develop different skills from a shared experience</li>
+                        <li>You want people to actually use the knowledge in their daily work afterward</li>
+                        <li>Curiosity, creativity, and problem-solving are the desired outcomes</li>
+                        <li>You want a team to discover their own questions, not just answer yours</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: #fef3c7; border-radius: 16px; padding: 2.5rem; border-left: 6px solid #f59e0b;">
+                <h3 style="font-size: 1.3rem; font-weight: 700; color: #92400e; margin-bottom: 0.75rem;">
+                    🧠 The AI Upskilling Case
+                </h3>
+                <p style="color: #78350f; line-height: 1.8; margin: 0;">
+                    AI skills cannot be taught in a classical sense. The field moves too fast, the applications
+                    are too varied, and the "right answer" depends entirely on each team's context. A developer
+                    building a RAG pipeline needs different depth than a product manager evaluating LLM outputs.
+                    Simulation workshops honour that reality. Everyone starts from the same shared environment,
+                    then diverges according to what they actually need — producing a team where each member
+                    has deep, relevant, applicable knowledge rather than a room full of people who sat through
+                    the same deck.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="compare-cta">
+        <div class="container">
+            <h2>🧪 Ready to Try Simulation-Based Learning?</h2>
+            <p>
+                Our workshops are built entirely around the simulation model — open environments,
+                self-directed exploration, and real AI agents built by real teams.
+                No slide decks. No passive listening. Just learning by doing.
+            </p>
+            <div class="cta-buttons">
+                <a href="workshops.html" class="btn btn-primary">🎓 Explore Our Workshops</a>
+                <a href="assessment.html" class="btn btn-secondary">🚀 Start Your Assessment</a>
+                <a href="12-step-programme.html" class="btn btn-secondary">🔄 12-Step Programme</a>
+                <a href="contact.html" class="btn btn-secondary">📧 Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Classical Training vs Simulation Workshops",
+        "description": "A detailed comparison of classical training (teacher-led, fixed curriculum) and simulation workshops (self-directed, curiosity-driven learning), with guidance on when to use each approach.",
+        "author": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "url": "https://deliverypilot.net"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Delivery Pilot",
+            "url": "https://deliverypilot.net"
+        }
+    }
+    </script>
+</body>
+
+</html>
