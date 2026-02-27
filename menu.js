@@ -60,6 +60,7 @@ const navigationConfig = {
                 { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
                 { href: 'consulting-transformation.html', textKey: 'nav.consultingTransformation', text: '🔄 Consulting Transformation' },
                 { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
+                { href: 'partner-presentation.html', textKey: 'nav.partnerPresentation', text: '🎤 Partner Presentation' },
                 { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
         },

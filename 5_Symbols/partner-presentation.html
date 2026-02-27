@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot Partner Presentation — AI Transformation for Customers. Showcase our methodology, services, ROI and partnership model with confidence.">
+    <meta name="keywords" content="Delivery Pilot partner presentation, AI transformation, enterprise delivery, partner deck, customer presentation">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/5_Symbols/partner-presentation.html">
+
+    <meta property="og:title" content="Partner Presentation | Delivery Pilot">
+    <meta property="og:description" content="The official Delivery Pilot partner deck for customer presentations. AI transformation methodology, services and ROI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/5_Symbols/partner-presentation.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+
+    <title>🤝 Partner Presentation | Delivery Pilot</title>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --dark-mid: #1e293b;
+            --mid: #334155;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --green: #047857;
+            --green-dark: #065f46;
+            --white: #ffffff;
+            --slide-w: 960px;
+            --slide-h: 540px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f172a;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── TOP BAR ── */
+        .topbar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .topbar-left { display: flex; align-items: center; gap: 1rem; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            color: rgba(255,255,255,0.75);
+            background: rgba(255,255,255,0.08);
+            padding: 0.4rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: all 0.2s;
+        }
+        .back-link:hover { background: rgba(255,255,255,0.15); color: white; transform: translateX(-2px); }
+
+        .topbar-title {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topbar-title span { color: var(--primary); }
+
+        .topbar-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-ghost {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.15); color: white; }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+        /* ── SLIDE COUNTER ── */
+        .slide-counter {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* ── PRESENTATION STAGE ── */
+        .stage {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            gap: 1.5rem;
+        }
+
+        .slide-wrapper {
+            width: 100%;
+            max-width: var(--slide-w);
+            position: relative;
+        }
+
+        .slide-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+            position: relative;
+            background: white;
+        }
+
+        /* ── SLIDES ── */
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 3.5% 5%;
+            position: absolute;
+            top: 0; left: 0;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide.active { display: flex; }
+
+        .slide h1 { font-size: clamp(1.3rem, 3.5vw, 2.2rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+        .slide h2 { font-size: clamp(1rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--primary); margin-bottom: 0.8rem; }
+        .slide h3 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); font-weight: 600; margin-bottom: 0.4rem; }
+        .slide p, .slide li { font-size: clamp(0.65rem, 1.6vw, 0.95rem); line-height: 1.5; }
+        .slide ul { padding-left: 1.4em; }
+        .slide li { margin-bottom: 0.25rem; }
+
+        /* Slide themes */
+        .slide-title {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f4c75 100%);
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+        .slide-title h1 { color: white; font-size: clamp(1.6rem, 4.5vw, 3rem); }
+        .slide-title h2 { color: rgba(255,255,255,0.82); font-size: clamp(0.85rem, 2vw, 1.3rem); font-weight: 400; }
+        .slide-title .tagline { margin-top: 1rem; color: rgba(255,255,255,0.65); font-size: clamp(0.7rem, 1.4vw, 0.9rem); }
+
+        .slide-dark {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+        }
+        .slide-dark h2 { color: white; }
+        .slide-dark h3 { color: rgba(255,255,255,0.85); }
+        .slide-dark p, .slide-dark li { color: rgba(255,255,255,0.85); }
+
+        .slide-accent {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+        }
+        .slide-accent h2 { color: white; }
+        .slide-accent h3 { color: rgba(255,255,255,0.85); }
+        .slide-accent p, .slide-accent li { color: rgba(255,255,255,0.9); }
+
+        .slide-green {
+            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            color: white;
+        }
+        .slide-green h2 { color: white; }
+        .slide-green p, .slide-green li { color: rgba(255,255,255,0.9); }
+
+        /* Table styling */
+        .slide table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.55rem, 1.3vw, 0.8rem);
+            margin-top: 0.5rem;
+        }
+        .slide th {
+            background: rgba(79,70,229,0.12);
+            color: var(--primary);
+            padding: 0.4rem 0.6rem;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(79,70,229,0.2);
+        }
+        .slide-accent th, .slide-dark th, .slide-green th {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+        .slide td {
+            padding: 0.35rem 0.6rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .slide-accent td, .slide-dark td, .slide-green td {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.88);
+        }
+        .slide tr:last-child td { border-bottom: none; }
+
+        /* Blockquote */
+        .slide blockquote {
+            border-left: 3px solid var(--primary);
+            padding: 0.4rem 0.8rem;
+            background: rgba(79,70,229,0.07);
+            border-radius: 0 6px 6px 0;
+            margin: 0.5rem 0;
+            font-style: italic;
+            font-size: clamp(0.62rem, 1.5vw, 0.88rem);
+        }
+        .slide-dark blockquote, .slide-accent blockquote, .slide-green blockquote {
+            border-left-color: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Code block */
+        .slide pre {
+            background: rgba(0,0,0,0.07);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            font-size: clamp(0.55rem, 1.2vw, 0.78rem);
+            font-family: 'Fira Code', 'Courier New', monospace;
+            overflow: hidden;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .slide-accent pre, .slide-dark pre, .slide-green pre {
+            background: rgba(0,0,0,0.2);
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Grid layout helpers */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+
+        .card {
+            background: rgba(79,70,229,0.06);
+            border: 1px solid rgba(79,70,229,0.15);
+            border-radius: 8px;
+            padding: 0.7rem 0.8rem;
+        }
+        .card-dark {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 0.6rem 0.8rem;
+        }
+        .card h3, .card-dark h3 { margin-bottom: 0.25rem; }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            padding: 0.15rem 0.6rem;
+            font-size: 0.7em;
+            font-weight: 700;
+            margin-left: 0.3rem;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0.8rem;
+            font-size: 0.65rem;
+            color: rgba(0,0,0,0.25);
+            font-weight: 500;
+        }
+        .slide-title .page-number,
+        .slide-dark .page-number,
+        .slide-accent .page-number,
+        .slide-green .page-number { color: rgba(255,255,255,0.3); }
+
+        /* ── NAVIGATION ── */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: var(--slide-w);
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.18); color: white; }
+        .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        .progress-track {
+            flex: 1;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-counter {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ── THUMBNAILS ── */
+        .thumbnails-panel {
+            display: none;
+            width: 100%;
+            max-width: var(--slide-w);
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .thumbnails-panel.open { display: flex; }
+
+        .thumb {
+            width: 140px;
+            aspect-ratio: 16/9;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            position: relative;
+            font-size: 0.4rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .thumb:hover { transform: scale(1.05); border-color: rgba(79,70,229,0.6); }
+        .thumb.thumb-active { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
+
+        .thumb-inner {
+            width: 250%;
+            height: 250%;
+            transform: scale(0.4);
+            transform-origin: top left;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .thumb-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.65);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.2rem 0.3rem;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ── FULLSCREEN ── */
+        .slide-frame:fullscreen { border-radius: 0; width: 100vw; height: 100vh; }
+        .slide-frame:-webkit-full-screen { border-radius: 0; }
+
+        /* Keyboard hint */
+        .kbd-hint {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        kbd {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            padding: 0.1rem 0.4rem;
+            font-size: 0.65rem;
+            font-family: inherit;
+        }
+
+        /* ── MARP SOURCE DOWNLOAD HINT ── */
+        .marp-hint {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.72rem;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+        .marp-hint a { color: rgba(99,102,241,0.7); text-decoration: none; }
+        .marp-hint a:hover { color: #818cf8; }
+
+        @media (max-width: 600px) {
+            .topbar { padding: 0.6rem 1rem; }
+            .stage { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="topbar-left">
+        <a href="../5_Symbols/partners.html" class="back-link">← 🤝 Partners</a>
+        <span class="topbar-title">🚀 <span>Delivery Pilot</span> · Partner Deck</span>
+    </div>
+    <div class="topbar-actions">
+        <button class="btn btn-ghost" onclick="toggleThumbnails()" title="Slide overview">🗂️ Overview</button>
+        <button class="btn btn-ghost" onclick="toggleFullscreen()" title="Fullscreen presentation">⛶ Fullscreen</button>
+        <a href="partner-presentation.md" download class="btn btn-primary">⬇️ Download .md</a>
+    </div>
+</div>
+
+<!-- STAGE -->
+<div class="stage">
+
+    <!-- SLIDE FRAME -->
+    <div class="slide-wrapper">
+        <div class="slide-frame" id="slideFrame">
+
+            <!-- SLIDE 1: Title -->
+            <div class="slide slide-title active" data-title="🚀 Title">
+                <h1>🚀 Delivery Pilot</h1>
+                <h2>Partner Presentation for Customers</h2>
+                <p class="tagline">Transforming Enterprise Teams with AI Agents</p>
+                <span class="page-number">1 / 17</span>
+            </div>
+
+            <!-- SLIDE 2: Agenda -->
+            <div class="slide" style="background:#fff;" data-title="📋 Agenda">
+                <h2>📋 Agenda</h2>
+                <ul>
+                    <li>🎯 <strong>The Challenge</strong> — Why enterprises struggle with AI adoption</li>
+                    <li>💡 <strong>Our Solution</strong> — What Delivery Pilot delivers</li>
+                    <li>🤝 <strong>Partnership Model</strong> — How we work together</li>
+                    <li>🛠️ <strong>Services & Offerings</strong> — What customers receive</li>
+                    <li>📈 <strong>Results & ROI</strong> — Proven outcomes</li>
+                    <li>🌟 <strong>Success Stories</strong> — Real-world impact</li>
+                    <li>🚀 <strong>Getting Started</strong> — Next steps</li>
+                </ul>
+                <span class="page-number">2 / 17</span>
+            </div>
+
+            <!-- SLIDE 3: The Challenge -->
+            <div class="slide slide-dark" data-title="😤 The Challenge">
+                <h2>😤 The Challenge Customers Face</h2>
+                <blockquote>"Our teams know AI exists. But they can't apply it to real delivery."</blockquote>
+                <h3>3 Critical Pain Points</h3>
+                <ul>
+                    <li>🐌 <strong>Slow Delivery</strong> — Manual processes blocking velocity</li>
+                    <li>🧩 <strong>Knowledge Silos</strong> — Teams isolated, no shared intelligence</li>
+                    <li>😰 <strong>AI Overwhelm</strong> — Tools without strategy or training</li>
+                </ul>
+                <p style="margin-top:0.6rem; color:rgba(255,255,255,0.6); font-size:0.8em;">The result: Falling behind competitors while budgets are wasted on unused AI tooling.</p>
+                <span class="page-number">3 / 17</span>
+            </div>
+
+            <!-- SLIDE 4: Solution -->
+            <div class="slide" style="background:#fff;" data-title="💡 Our Solution">
+                <h2>💡 Introducing Delivery Pilot</h2>
+                <p style="margin-bottom:0.6rem;">🤖 <strong>We embed AI agents into your delivery workflow</strong> — not as a theory, but as working, measurable systems.</p>
+                <table>
+                    <thead><tr><th>Without Delivery Pilot</th><th>With Delivery Pilot</th></tr></thead>
+                    <tbody>
+                        <tr><td>🔴 Manual repetitive tasks</td><td>✅ Automated by AI agents</td></tr>
+                        <tr><td>🔴 Siloed knowledge</td><td>✅ Shared intelligence layer</td></tr>
+                        <tr><td>🔴 Slow onboarding</td><td>✅ Structured pathways</td></tr>
+                        <tr><td>🔴 No AI governance</td><td>✅ Human-in-the-loop controls</td></tr>
+                    </tbody>
+                </table>
+                <span class="page-number">4 / 17</span>
+            </div>
+
+            <!-- SLIDE 5: Methodology -->
+            <div class="slide slide-accent" data-title="🏗️ Methodology">
+                <h2>🏗️ How It Works</h2>
+                <h3>The Delivery Pilot Methodology</h3>
+                <pre>📊 Assess → 🎯 Design → 🚀 Deploy → 📈 Optimize</pre>
+                <div class="grid-2" style="margin-top:0.7rem; gap:0.6rem;">
+                    <div class="card-dark">
+                        <h3>📊 Assess</h3>
+                        <p>Identify delivery bottlenecks and AI readiness gaps</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>🎯 Design</h3>
+                        <p>Co-create an AI agent strategy tailored to your stack</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>🚀 Deploy</h3>
+                        <p>Hands-on workshops, simulations & live implementation</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>📈 Optimize</h3>
+                        <p>Continuous improvement with governance guardrails</p>
+                    </div>
+                </div>
+                <span class="page-number">5 / 17</span>
+            </div>
+
+            <!-- SLIDE 6: Services -->
+            <div class="slide" style="background:#fff;" data-title="🛠️ Services">
+                <h2>🛠️ Services We Deliver</h2>
+                <table>
+                    <thead><tr><th>Service</th><th>Description</th><th>Outcome</th></tr></thead>
+                    <tbody>
+                        <tr><td>🚀 <strong>Onboarding</strong></td><td>Structured AI adoption program</td><td>Team ready in weeks</td></tr>
+                        <tr><td>🎓 <strong>Workshops</strong></td><td>Hands-on agent training</td><td>Practical skills</td></tr>
+                        <tr><td>🤖 <strong>Enterprise Agent</strong></td><td>Custom AI agent implementation</td><td>Workflow automation</td></tr>
+                        <tr><td>📈 <strong>Agile Transformation</strong></td><td>AI-enhanced agile practices</td><td>Faster delivery</td></tr>
+                        <tr><td>👨‍🎓 <strong>Junior Training</strong></td><td>Engineer upskilling pathways</td><td>Talent retention</td></tr>
+                        <tr><td>📊 <strong>Analysis</strong></td><td>Deep-dive delivery audit</td><td>Clear roadmap</td></tr>
+                    </tbody>
+                </table>
+                <span class="page-number">6 / 17</span>
+            </div>
+
+            <!-- SLIDE 7: Certification -->
+            <div class="slide" style="background:#f8fafc;" data-title="🎓 Certification">
+                <h2>🎓 Training & Certification</h2>
+                <h3>Building Lasting Capability</h3>
+                <div class="grid-2" style="gap:0.7rem; margin-top:0.4rem;">
+                    <div class="card">
+                        <h3>🏆 Certified Professional</h3>
+                        <ul>
+                            <li>Validates AI delivery skills</li>
+                            <li>Industry-recognised credential</li>
+                            <li>Practical exam + portfolio</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📚 Learning Pathways</h3>
+                        <p>🟢 Foundations → 🟡 Practitioner → 🔴 Expert</p>
+                        <p style="margin-top:0.3rem;">Self-paced + instructor-led options</p>
+                        <p>Real project simulations built in</p>
+                    </div>
+                </div>
+                <blockquote style="margin-top:0.6rem;">💬 "Certification gave our team confidence and a common language for AI delivery."</blockquote>
+                <span class="page-number">7 / 17</span>
+            </div>
+
+            <!-- SLIDE 8: ROI -->
+            <div class="slide slide-green" data-title="📈 ROI">
+                <h2>📈 Proven Results & ROI</h2>
+                <table>
+                    <thead><tr><th>Metric</th><th>Typical Improvement</th></tr></thead>
+                    <tbody>
+                        <tr><td>⚡ Delivery Velocity</td><td><strong>+40–60%</strong> faster cycles</td></tr>
+                        <tr><td>🤖 Task Automation</td><td><strong>30–50%</strong> of repetitive work eliminated</td></tr>
+                        <tr><td>🧠 Knowledge Retention</td><td><strong>3× improvement</strong> in handover quality</td></tr>
+                        <tr><td>😊 Team Satisfaction</td><td><strong>+25 NPS points</strong> from engineers</td></tr>
+                        <tr><td>🎓 Onboarding Speed</td><td><strong>50% reduction</strong> in ramp-up time</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top:0.6rem; font-weight:700; font-size:0.85em;">🏆 ROI typically realised within 90 days.</p>
+                <span class="page-number">8 / 17</span>
+            </div>
+
+            <!-- SLIDE 9: Customer Profiles -->
+            <div class="slide" style="background:#fff;" data-title="🌟 Who We Work With">
+                <h2>🌟 Who We Work With</h2>
+                <div class="grid-2" style="gap:0.6rem; margin-top:0.3rem;">
+                    <div class="card">
+                        <h3>🏦 Financial Services</h3>
+                        <p>AI governance + secure agent deployment in regulated environments</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏥 Healthcare & Life Sciences</h3>
+                        <p>Human-in-the-loop workflows for compliance-critical delivery</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏭 Enterprise Technology</h3>
+                        <p>End-to-end delivery transformation at scale</p>
+                    </div>
+                    <div class="card">
+                        <h3>🚀 Scale-ups & Growth Teams</h3>
+                        <p>Rapid AI enablement without the enterprise overhead</p>
+                    </div>
+                </div>
+                <span class="page-number">9 / 17</span>
+            </div>
+
+            <!-- SLIDE 10: Partnership Model -->
+            <div class="slide" style="background:#f8fafc;" data-title="🤝 Partnership Model">
+                <h2>🤝 The Partnership Model</h2>
+                <div class="grid-3" style="gap:0.6rem; margin-top:0.4rem;">
+                    <div class="card">
+                        <h3>🤝 Co-Delivery</h3>
+                        <ul>
+                            <li>You bring the relationship</li>
+                            <li>We bring AI expertise</li>
+                            <li>Together deliver outcomes</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>💰 Revenue Sharing</h3>
+                        <ul>
+                            <li>Competitive partner margins</li>
+                            <li>Recurring revenue model</li>
+                            <li>Joint upsell opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>🎓 Enablement</h3>
+                        <ul>
+                            <li>Training for your team</li>
+                            <li>Co-branded materials</li>
+                            <li>Dedicated partner support</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="page-number">10 / 17</span>
+            </div>
+
+            <!-- SLIDE 11: Security -->
+            <div class="slide slide-accent" data-title="🛡️ Security">
+                <h2>🛡️ Security & Governance</h2>
+                <h3>Enterprise-Grade by Design</h3>
+                <div class="grid-2" style="gap:0.5rem; margin-top:0.5rem;">
+                    <div class="card-dark">
+                        <h3>🔒 Human-in-the-Loop</h3>
+                        <p>Every AI action has human oversight checkpoints</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>🛡️ Air-Gapped Support</h3>
+                        <p>Works in isolated, secure environments</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>📋 Audit Trails</h3>
+                        <p>Complete visibility into agent decisions</p>
+                    </div>
+                    <div class="card-dark">
+                        <h3>🔐 Access Controls</h3>
+                        <p>Role-based permissions across all workflows</p>
+                    </div>
+                </div>
+                <blockquote style="margin-top:0.6rem;">We never sacrifice compliance for convenience.</blockquote>
+                <span class="page-number">11 / 17</span>
+            </div>
+
+            <!-- SLIDE 12: Testimonials -->
+            <div class="slide" style="background:#fff;" data-title="💬 Testimonials">
+                <h2>💬 What Customers Say</h2>
+                <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.3rem;">
+                    <blockquote>🌟 "Delivery Pilot didn't just give us tools — they changed how our entire engineering culture thinks about delivery."
+                        <br><strong style="font-style:normal; font-size:0.85em; color:var(--text-muted);">— CTO, Enterprise Technology Firm</strong>
+                    </blockquote>
+                    <blockquote>🌟 "The agent simulations were the turning point. Engineers finally understood AI by doing, not just watching demos."
+                        <br><strong style="font-style:normal; font-size:0.85em; color:var(--text-muted);">— VP Engineering, FinTech Scale-up</strong>
+                    </blockquote>
+                    <blockquote>🌟 "ROI in 8 weeks. The assessment alone was worth the engagement."
+                        <br><strong style="font-style:normal; font-size:0.85em; color:var(--text-muted);">— Head of Transformation, FTSE 250 Company</strong>
+                    </blockquote>
+                </div>
+                <span class="page-number">12 / 17</span>
+            </div>
+
+            <!-- SLIDE 13: Roadmap -->
+            <div class="slide slide-dark" data-title="🗺️ Roadmap">
+                <h2>🗺️ 90-Day Transformation Roadmap</h2>
+                <div style="display:flex; flex-direction:column; gap:0.45rem; margin-top:0.5rem;">
+                    <div class="card-dark">
+                        <strong>📅 Week 1–2 · 📊 Discovery & Assessment</strong>
+                        <p style="margin-top:0.2rem;">Audit current delivery practices and AI readiness</p>
+                    </div>
+                    <div class="card-dark">
+                        <strong>📅 Week 3–6 · 🎓 Training & Workshops</strong>
+                        <p style="margin-top:0.2rem;">Hands-on AI agent simulations with real tooling</p>
+                    </div>
+                    <div class="card-dark">
+                        <strong>📅 Week 7–10 · 🚀 Implementation</strong>
+                        <p style="margin-top:0.2rem;">Deploy agents into live workflows with governance</p>
+                    </div>
+                    <div class="card-dark">
+                        <strong>📅 Week 11–12 · 📈 Measure & Optimise</strong>
+                        <p style="margin-top:0.2rem;">Review outcomes, report ROI, set next targets</p>
+                    </div>
+                </div>
+                <span class="page-number">13 / 17</span>
+            </div>
+
+            <!-- SLIDE 14: Differentiators -->
+            <div class="slide" style="background:#f8fafc;" data-title="⭐ Why Choose Us">
+                <h2>⭐ Why Choose Delivery Pilot?</h2>
+                <div class="grid-2" style="gap:0.6rem; margin-top:0.4rem;">
+                    <div class="card">
+                        <h3>🎯 Outcome-Focused</h3>
+                        <p>We measure success by your delivery velocity, not training hours completed</p>
+                    </div>
+                    <div class="card">
+                        <h3>🤝 True Co-Delivery</h3>
+                        <p>We work alongside your team — not just advise from the sidelines</p>
+                    </div>
+                    <div class="card">
+                        <h3>🔒 Governance First</h3>
+                        <p>AI safety and compliance built in from day one, not bolted on after</p>
+                    </div>
+                    <div class="card">
+                        <h3>📚 Built to Last</h3>
+                        <p>We build internal capability, not dependency on external consultants</p>
+                    </div>
+                </div>
+                <span class="page-number">14 / 17</span>
+            </div>
+
+            <!-- SLIDE 15: Pricing Hint -->
+            <div class="slide" style="background:#fff;" data-title="💰 Investment">
+                <h2>💰 Investment & Engagement Models</h2>
+                <div class="grid-3" style="gap:0.6rem; margin-top:0.5rem;">
+                    <div class="card" style="text-align:center;">
+                        <h3>🔍 Assessment</h3>
+                        <p>Discovery & roadmap</p>
+                        <p style="margin-top:0.4rem; font-weight:700; color:var(--primary);">Fixed price</p>
+                        <p style="font-size:0.8em; color:var(--text-muted);">Delivered in 2 weeks</p>
+                    </div>
+                    <div class="card" style="text-align:center; border-color:var(--primary); background:rgba(79,70,229,0.06);">
+                        <h3>🚀 Transformation <span class="badge">Popular</span></h3>
+                        <p>Full 90-day engagement</p>
+                        <p style="margin-top:0.4rem; font-weight:700; color:var(--primary);">Per engagement</p>
+                        <p style="font-size:0.8em; color:var(--text-muted);">ROI in 90 days</p>
+                    </div>
+                    <div class="card" style="text-align:center;">
+                        <h3>🔄 Ongoing</h3>
+                        <p>Continuous optimisation</p>
+                        <p style="margin-top:0.4rem; font-weight:700; color:var(--primary);">Monthly retainer</p>
+                        <p style="font-size:0.8em; color:var(--text-muted);">Recurring partnership</p>
+                    </div>
+                </div>
+                <p style="margin-top:0.7rem; font-size:0.8em; color:var(--text-muted); text-align:center;">📋 Custom proposals available within 48 hours — <a href="contact.html" style="color:var(--primary);">contact us</a></p>
+                <span class="page-number">15 / 17</span>
+            </div>
+
+            <!-- SLIDE 16: Getting Started -->
+            <div class="slide slide-green" data-title="🚀 Getting Started">
+                <h2>🚀 Getting Started</h2>
+                <h3>3 Simple Steps to Kick Off</h3>
+                <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+                    <div class="card-dark">
+                        <strong>1️⃣ Book a Discovery Call</strong>
+                        <p style="margin-top:0.2rem;">30-minute conversation to understand your customer's needs — <a href="assessment.html" style="color:rgba(255,255,255,0.7);">deliverypilot.net/assessment</a></p>
+                    </div>
+                    <div class="card-dark">
+                        <strong>2️⃣ Receive Your Custom Proposal</strong>
+                        <p style="margin-top:0.2rem;">Tailored scope, timeline and investment within 48 hours</p>
+                    </div>
+                    <div class="card-dark">
+                        <strong>3️⃣ Launch the Engagement</strong>
+                        <p style="margin-top:0.2rem;">Kick-off within 2 weeks — first results visible in 30 days</p>
+                    </div>
+                </div>
+                <span class="page-number">16 / 17</span>
+            </div>
+
+            <!-- SLIDE 17: Closing -->
+            <div class="slide slide-title" data-title="🤝 Let's Build Together">
+                <h1>🤝 Let's Build Together</h1>
+                <h2>Ready to transform your customers' delivery?</h2>
+                <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.4rem; align-items:center;">
+                    <p>📧 <a href="mailto:contact@deliverypilot.net" style="color:rgba(255,255,255,0.8);">contact@deliverypilot.net</a></p>
+                    <p>🌐 <a href="https://deliverypilot.net" style="color:rgba(255,255,255,0.8);">deliverypilot.net</a></p>
+                    <p>🚀 <a href="assessment.html" style="color:rgba(255,255,255,0.8);">deliverypilot.net/assessment</a></p>
+                </div>
+                <p style="margin-top:1rem; font-size:0.7em; color:rgba(255,255,255,0.35);">© 2025 Delivery Pilot · Transforming Delivery with AI</p>
+                <span class="page-number">17 / 17</span>
+            </div>
+
+        </div><!-- /slide-frame -->
+    </div><!-- /slide-wrapper -->
+
+    <!-- NAV BAR -->
+    <div class="nav-bar">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" title="Previous (←)">◀</button>
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill" style="width: 5.88%"></div>
+        </div>
+        <span class="nav-counter" id="navCounter">1 / 17</span>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)" title="Next (→)">▶</button>
+    </div>
+
+    <!-- THUMBNAILS PANEL -->
+    <div class="thumbnails-panel" id="thumbPanel"></div>
+
+    <!-- KEYBOARD HINT -->
+    <p class="kbd-hint">
+        <kbd>←</kbd> <kbd>→</kbd> navigate &nbsp;·&nbsp;
+        <kbd>F</kbd> fullscreen &nbsp;·&nbsp;
+        <kbd>T</kbd> thumbnail overview
+    </p>
+
+    <!-- MARP SOURCE HINT -->
+    <p class="marp-hint">
+        📄 Marp source: <a href="partner-presentation.md" download>partner-presentation.md</a>
+        &nbsp;·&nbsp; Open with <a href="https://marp.app" target="_blank" rel="noopener">Marp for VS Code</a> or <code>marp --html</code> CLI
+    </p>
+
+</div><!-- /stage -->
+
+<script>
+    const TOTAL = 17;
+    let current = 1;
+
+    const slides = document.querySelectorAll('.slide');
+    const progressFill = document.getElementById('progressFill');
+    const navCounter = document.getElementById('navCounter');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const thumbPanel = document.getElementById('thumbPanel');
+    let thumbsBuilt = false;
+    let thumbsOpen = false;
+
+    function goTo(n) {
+        if (n < 1 || n > TOTAL) return;
+        slides[current - 1].classList.remove('active');
+        current = n;
+        slides[current - 1].classList.add('active');
+        progressFill.style.width = ((current / TOTAL) * 100).toFixed(2) + '%';
+        navCounter.textContent = current + ' / ' + TOTAL;
+        prevBtn.disabled = current === 1;
+        nextBtn.disabled = current === TOTAL;
+        updateThumbActive();
+    }
+
+    function changeSlide(dir) { goTo(current + dir); }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); changeSlide(1); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); changeSlide(-1); }
+        else if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+        else if (e.key === 't' || e.key === 'T') toggleThumbnails();
+        else if (e.key === 'Home') goTo(1);
+        else if (e.key === 'End') goTo(TOTAL);
+    });
+
+    // Touch swipe
+    let touchX = 0;
+    const frame = document.getElementById('slideFrame');
+    frame.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    frame.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) changeSlide(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    // Fullscreen
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            frame.requestFullscreen && frame.requestFullscreen();
+        } else {
+            document.exitFullscreen && document.exitFullscreen();
+        }
+    }
+
+    // Thumbnails
+    function buildThumbs() {
+        thumbPanel.innerHTML = '';
+        slides.forEach((slide, i) => {
+            const wrap = document.createElement('div');
+            wrap.className = 'thumb' + (i === current - 1 ? ' thumb-active' : '');
+            wrap.title = slide.dataset.title || ('Slide ' + (i + 1));
+            wrap.onclick = () => { goTo(i + 1); };
+
+            const inner = document.createElement('div');
+            inner.className = 'thumb-inner';
+            inner.innerHTML = slide.outerHTML;
+            // Remove page-number from thumb
+            const pn = inner.querySelector('.page-number');
+            if (pn) pn.remove();
+
+            const label = document.createElement('div');
+            label.className = 'thumb-label';
+            label.textContent = (i + 1) + '. ' + (slide.dataset.title || '');
+
+            wrap.appendChild(inner);
+            wrap.appendChild(label);
+            thumbPanel.appendChild(wrap);
+        });
+        thumbsBuilt = true;
+    }
+
+    function updateThumbActive() {
+        if (!thumbsBuilt) return;
+        thumbPanel.querySelectorAll('.thumb').forEach((t, i) => {
+            t.classList.toggle('thumb-active', i === current - 1);
+        });
+    }
+
+    function toggleThumbnails() {
+        thumbsOpen = !thumbsOpen;
+        if (thumbsOpen && !thumbsBuilt) buildThumbs();
+        thumbPanel.classList.toggle('open', thumbsOpen);
+    }
+
+    // Init
+    goTo(1);
+</script>
+</body>
+</html>
