@@ -94,7 +94,8 @@ const navigationConfig = {
                 { href: 'resources-multi-party-investigation.html', textKey: 'nav.multiPartyInvestigation', text: '🔍 Multi-Party Investigation' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' },
                 { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' },
-                { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' }
+                { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' },
+                { href: 'why-delivery-pilot.html', textKey: 'nav.whyDeliveryPilot', text: '🚨 Why Delivery Pilot?' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
