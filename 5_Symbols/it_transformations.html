@@ -3,7 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Transformation | DeliveryPilot</title>
+<meta name="description" content="IT Transformations: From Waterfall to Agile to AI — how the craft of software delivery evolved through three eras, and what it means for your organisation.">
+<meta name="keywords" content="IT transformation, waterfall to agile, agile to AI, software delivery evolution, AI agents, enterprise transformation, delivery pilot, digital transformation">
+<meta name="author" content="Delivery Pilot">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://deliverypilot.net/5_Symbols/it_transformations.html">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="IT Transformations: Waterfall → Agile → AI | Delivery Pilot">
+<meta property="og:description" content="Explore how the craft of IT delivery evolved from rigid Waterfall phase gates, through human-centred Agile sprints, into an AI-first era where agents carry their own credentials.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deliverypilot.net/5_Symbols/it_transformations.html">
+<meta property="og:image" content="https://deliverypilot.net/3_ui/it_transformations.png">
+<meta property="og:site_name" content="Delivery Pilot">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IT Transformations: Waterfall → Agile → AI | Delivery Pilot">
+<meta name="twitter:description" content="How IT delivery evolved from Waterfall to Agile to AI — and what the agent era means for your organisation.">
+<meta name="twitter:image" content="https://deliverypilot.net/3_ui/it_transformations.png">
+
+<title>IT Transformations: Waterfall to Agile to AI | Delivery Pilot</title>
+<link rel="stylesheet" href="../styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Crimson+Pro:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -101,39 +122,28 @@
     to { background-position: 100px 0; }
   }
 
-  /* ── NAV ── */
-  nav {
+  /* ── IN-PAGE NAV ── */
+  .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 60px;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    background: rgba(10,13,20,0.95);
-    backdrop-filter: blur(12px);
-    z-index: 100;
-  }
-
-  .nav-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    text-decoration: none;
-  }
-
-  .nav-logo span { color: var(--electric); }
-
-  .nav-links {
-    display: flex;
     gap: 36px;
-    list-style: none;
+    padding: 18px 60px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(10,13,20,0.9);
+    flex-wrap: wrap;
   }
 
-  .nav-links a {
+  .page-nav-label {
     font-family: 'DM Mono', monospace;
-    font-size: 12px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .page-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -141,7 +151,7 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--gold); }
+  .page-nav a:hover { color: var(--gold); }
 
   /* ── PAGE HEADER ── */
   .page-header {
@@ -612,34 +622,9 @@
     font-style: italic;
   }
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 40px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-  }
-
-  .footer-logo span { color: var(--electric); }
-
-  footer p {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-  }
-
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav, section, .page-header, footer { padding-left: 24px; padding-right: 24px; }
+    .page-nav, section, .page-header, .manifesto { padding-left: 24px; padding-right: 24px; }
     .era-grid, .hud-evolution, .cred-grid { grid-template-columns: 1fr; }
     .era-grid::before, .era-grid::after { display: none; }
     .journey-strip { flex-direction: column; }
@@ -649,29 +634,25 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="https://deliverypilot.net" class="nav-logo">Delivery<span>Pilot</span></a>
-  <ul class="nav-links">
-    <li><a href="#eras">The Eras</a></li>
-    <li><a href="#hud">HUD Evolution</a></li>
-    <li><a href="#credentials">Credentials</a></li>
-    <li><a href="#manifesto">Manifesto</a></li>
-  </ul>
-</nav>
+<!-- Navigation - Loaded from menu.js -->
+<div id="navbar-placeholder"></div>
 
 <!-- RUNWAY STRIP -->
 <div class="runway"></div>
 
-<!-- HERO IMAGE SLOT -->
-<div class="hero-image">
-  <!-- REPLACE src WITH YOUR GENERATED IMAGE PATH -->
-  <!-- <img src="your-transformation-image.jpg" alt="DeliveryPilot Transformation: Waterfall to Agile to AI"> -->
-  <div class="placeholder">
-    <div class="icon">✈</div>
-    <span>[ Place your transformation image here ]</span>
-    <span style="font-size:11px;">Recommended: 21:9 cinematic ratio</span>
-  </div>
+<!-- IN-PAGE NAVIGATION -->
+<nav class="page-nav">
+  <span class="page-nav-label">On this page:</span>
+  <a href="#hero">Overview</a>
+  <a href="#eras">The Three Eras</a>
+  <a href="#hud">HUD Evolution</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#manifesto">Manifesto</a>
+</nav>
+
+<!-- HERO IMAGE -->
+<div id="hero" class="hero-image">
+  <img src="../3_ui/it_transformations.png" alt="IT Transformations: The Evolution from Waterfall to Agile to AI — Delivery Pilot">
 </div>
 
 <!-- PAGE HEADER -->
@@ -908,11 +889,9 @@
 
 <!-- FOOTER -->
 <div class="runway"></div>
-<footer>
-  <div class="footer-logo">Delivery<span>Pilot</span></div>
-  <p>deliverypilot.net &nbsp;·&nbsp; AI Transformation Program</p>
-  <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);">Waterfall → Agile → AI</p>
-</footer>
+<div id="footer-placeholder"></div>
 
+<script src="../menu.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
