@@ -13,6 +13,7 @@ const translations = {
             onboarding: "🚀 Onboarding",
             workshops: "🎓 Workshops",
             enterpriseAgent: "🤖 Enterprise Agent",
+            mspOfferings: "🏢 MSP Offerings",
             features: "✨ Features",
             howItWorks: "⚙️ How It Works",
             useCases: "💼 Use Cases",
@@ -284,7 +285,8 @@ const translations = {
                 enterpriseAgent: "Enterprise Agent",
                 onboarding: "Onboarding",
                 agileTransformation: "Agile Transformation",
-                methodology: "Methodology"
+                methodology: "Methodology",
+                mspOfferings: "MSP Offerings"
             },
             company: {
                 title: "Company",
@@ -967,6 +969,7 @@ const translations = {
             onboarding: "🚀 Katılım",
             workshops: "🎓 Atölyeler",
             enterpriseAgent: "🤖 Kurumsal Ajan",
+            mspOfferings: "🏢 MSP Yönetilen Hizmetler",
             features: "✨ Özellikler",
             howItWorks: "⚙️ Nasıl Çalışır",
             useCases: "💼 Kullanım Alanları",
@@ -1238,7 +1241,8 @@ const translations = {
                 enterpriseAgent: "Kurumsal Ajan",
                 onboarding: "Katılım",
                 agileTransformation: "Çevik Dönüşüm",
-                methodology: "Metodoloji"
+                methodology: "Metodoloji",
+                mspOfferings: "MSP Yönetilen Hizmetler"
             },
             company: {
                 title: "Şirket",
