@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot Ortak Sunumu — Müşteriler için AI Dönüşümü. Metodolojimizi, hizmetlerimizi, yatırım getirimizi ve ortaklık modelimizi güvenle sunun.">
+    <meta name="keywords" content="Delivery Pilot ortak sunumu, AI dönüşümü, kurumsal teslimat, ortak sunumu, müşteri sunumu">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/5_Symbols/partner-presentation-tr.html">
+
+    <meta property="og:title" content="Ortak Sunumu | Delivery Pilot">
+    <meta property="og:description" content="Müşteri sunumları için resmi Delivery Pilot ortak sunumu. AI dönüşüm metodolojisi, hizmetler ve yatırım getirisi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/5_Symbols/partner-presentation-tr.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+
+    <title>🤝 Ortak Sunumu | Delivery Pilot</title>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --dark-mid: #1e293b;
+            --mid: #334155;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --gold: #D4A843;
+            --gold-dark: #b8912e;
+            --navy: #0A1628;
+            --navy-mid: #0F2040;
+            --white: #ffffff;
+            --slide-w: 960px;
+            --slide-h: 540px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f172a;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── TOP BAR ── */
+        .topbar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .topbar-left { display: flex; align-items: center; gap: 1rem; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            color: rgba(255,255,255,0.75);
+            background: rgba(255,255,255,0.08);
+            padding: 0.4rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: all 0.2s;
+        }
+        .back-link:hover { background: rgba(255,255,255,0.15); color: white; transform: translateX(-2px); }
+
+        .topbar-title {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topbar-title span { color: var(--gold); }
+
+        .topbar-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-ghost {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.15); color: white; }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+        /* ── SLIDE COUNTER ── */
+        .slide-counter {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* ── PRESENTATION STAGE ── */
+        .stage {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            gap: 1.5rem;
+        }
+
+        .slide-wrapper {
+            width: 100%;
+            max-width: var(--slide-w);
+            position: relative;
+        }
+
+        .slide-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+            position: relative;
+            background: var(--navy);
+        }
+
+        /* ── SLIDES ── */
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 4% 5.5%;
+            position: absolute;
+            top: 0; left: 0;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+            background-color: var(--navy);
+            color: #FFFFFF;
+        }
+        .slide.active { display: flex; }
+
+        .slide h1 {
+            font-size: clamp(1.1rem, 3vw, 1.9rem);
+            font-weight: 900;
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.3em;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .slide h2 { font-size: clamp(0.9rem, 2.3vw, 1.5rem); font-weight: 700; color: var(--gold); margin-bottom: 0.4rem; }
+        .slide h3 { font-size: clamp(0.75rem, 1.7vw, 1.1rem); font-weight: 600; color: var(--gold); margin-bottom: 0.3rem; }
+        .slide p { font-size: clamp(0.6rem, 1.5vw, 0.9rem); line-height: 1.6; margin-bottom: 0.4rem; color: rgba(255,255,255,0.9); }
+        .slide ul { padding-left: 1.4em; margin-bottom: 0.4rem; }
+        .slide li { font-size: clamp(0.6rem, 1.5vw, 0.88rem); line-height: 1.7; margin-bottom: 0.2rem; color: rgba(255,255,255,0.9); }
+        .slide strong { color: var(--gold); }
+        .slide em { color: rgba(255,255,255,0.75); font-style: italic; }
+        .slide br { display: block; margin-top: 0.3rem; content: ''; }
+
+        /* Blockquote */
+        .slide blockquote {
+            border-left: 3px solid var(--gold);
+            background: rgba(212,168,67,0.1);
+            padding: 0.4rem 0.8rem;
+            border-radius: 0 6px 6px 0;
+            margin: 0.4rem 0;
+        }
+        .slide blockquote p { margin-bottom: 0; }
+        .slide blockquote h2 { font-size: clamp(0.8rem, 2vw, 1.3rem); }
+
+        /* Table styling */
+        .slide table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.55rem, 1.3vw, 0.78rem);
+            margin-top: 0.4rem;
+        }
+        .slide th {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.4rem 0.6rem;
+            text-align: left;
+            font-weight: 700;
+        }
+        .slide td {
+            border: 1px solid rgba(212,168,67,0.4);
+            padding: 0.35rem 0.6rem;
+            color: rgba(255,255,255,0.88);
+            background-color: var(--navy-mid);
+        }
+        .slide tr:nth-child(even) td { background-color: #162B50; }
+
+        .page-number {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0.8rem;
+            font-size: 0.6rem;
+            color: rgba(212,168,67,0.5);
+            font-weight: 500;
+        }
+
+        /* ── NAVIGATION ── */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: var(--slide-w);
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.18); color: white; }
+        .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        .progress-track {
+            flex: 1;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-counter {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ── THUMBNAILS ── */
+        .thumbnails-panel {
+            display: none;
+            width: 100%;
+            max-width: var(--slide-w);
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .thumbnails-panel.open { display: flex; }
+
+        .thumb {
+            width: 140px;
+            aspect-ratio: 16/9;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            position: relative;
+            font-size: 0.4rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .thumb:hover { transform: scale(1.05); border-color: rgba(212,168,67,0.6); }
+        .thumb.thumb-active { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+
+        .thumb-inner {
+            width: 250%;
+            height: 250%;
+            transform: scale(0.4);
+            transform-origin: top left;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .thumb-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.65);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.2rem 0.3rem;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ── FULLSCREEN ── */
+        .slide-frame:fullscreen { border-radius: 0; width: 100vw; height: 100vh; }
+        .slide-frame:-webkit-full-screen { border-radius: 0; }
+
+        /* Keyboard hint */
+        .kbd-hint {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        kbd {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            padding: 0.1rem 0.4rem;
+            font-size: 0.65rem;
+            font-family: inherit;
+        }
+
+        /* ── LANG LINK ── */
+        .lang-hint {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.72rem;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+        .lang-hint a { color: rgba(212,168,67,0.7); text-decoration: none; }
+        .lang-hint a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .topbar { padding: 0.6rem 1rem; }
+            .stage { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation - Loaded from menu.js -->
+<div id="navbar-placeholder"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="topbar-left">
+        <a href="partners-tr.html" class="back-link">← 🤝 Ortaklar</a>
+        <span class="topbar-title">🚀 <span>Delivery Pilot</span> · Ortak Sunumu</span>
+    </div>
+    <div class="topbar-actions">
+        <button class="btn btn-ghost" onclick="toggleThumbnails()" title="Slayt genel bakışı">🗂️ Genel Bakış</button>
+        <button class="btn btn-ghost" onclick="toggleFullscreen()" title="Tam ekran sunum">⛶ Tam Ekran</button>
+        <a href="partner-presentation.html" class="btn btn-ghost">🇬🇧 EN</a>
+    </div>
+</div>
+
+<!-- STAGE -->
+<div class="stage">
+
+    <!-- SLIDE FRAME -->
+    <div class="slide-wrapper">
+        <div class="slide-frame" id="slideFrame">
+
+            <!-- SLIDE 1: Başlık -->
+            <div class="slide active" data-title="🚀 Başlık">
+                <h1>🚀 Ekipleriniz AI ile Ne Yapabilir?</h1>
+                <br>
+                <h3><strong>DeliveryPilot</strong> — Kurumsal AI Yetkinlik Platformu</h3>
+                <br>
+                <blockquote>
+                    <p>🌐 <strong>Hava Boşluklu Sistemlerden Güvenli AI'ya</strong><br>
+                    Ekipleriniz için Kapsamlı Bir Yol Haritası</p>
+                </blockquote>
+                <br>
+                <p>🏙️ <em>Dijital dönüşümün öncüsü olun — güvenli, ölçülebilir, denetlenebilir</em></p>
+                <span class="page-number">1 / 14</span>
+            </div>
+
+            <!-- SLIDE 2: AI Açığı -->
+            <div class="slide" data-title="⚠️ AI Açığı">
+                <h1>⚠️ Kurumsal Dünyada AI Açığı</h1>
+                <table>
+                    <thead>
+                        <tr><th>📊 Durum</th><th>💡 Sonuç</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Fortune 500'ün <strong>%74'ü</strong> AI'ya yatırım yapıyor</td><td>Herkes koşuyor</td></tr>
+                        <tr><td>Yalnızca <strong>%24'ü</strong> ölçeklendirebiliyor</td><td>Çoğu tökezliyor</td></tr>
+                        <tr><td>Çalışanlar araç değil <strong>yetkinlik</strong> istiyor</td><td>İnsan faktörü kritik</td></tr>
+                        <tr><td><strong>Air-gapped</strong> sistemler bulut AI'ı bloke ediyor</td><td>Yeni çözüm şart</td></tr>
+                    </tbody>
+                </table>
+                <br>
+                <blockquote>
+                    <p>❌ <strong>Sonuç:</strong> Teknoloji var, insan kapasitesi yok.<br>
+                    Yatırım gidiyor ama dönüş gelmiyor.</p>
+                </blockquote>
+                <span class="page-number">2 / 14</span>
+            </div>
+
+            <!-- SLIDE 3: İzole Sistemler -->
+            <div class="slide" data-title="🔒 İzole Sistemler">
+                <h1>🔒 İzole Sistemler Daha Fazla AI'ya İhtiyaç Duyar</h1>
+                <ul>
+                    <li>🛡️ <strong>Savunma</strong> — Kapalı ağ zorunluluğu, sıfır tolerans</li>
+                    <li>⚡ <strong>Enerji</strong> — Kritik altyapı, dış erişim yasak</li>
+                    <li>🏦 <strong>Finans</strong> — Regülasyon duvarları, BDDK/SPK kısıtları</li>
+                    <li>🏥 <strong>Sağlık</strong> — KVKK/HIPAA uyumu, hasta verisi koruma</li>
+                </ul>
+                <br>
+                <blockquote>
+                    <p>🚫 Bulut AI araçlarına erişim yasak — ama <strong>iş yükü artmaya devam ediyor</strong></p>
+                </blockquote>
+                <br>
+                <p>✅ <strong>DeliveryPilot:</strong> İnternet bağlantısı olmadan, kuruma özel öğrenim ile bu boşluğu kapatır.</p>
+                <span class="page-number">3 / 14</span>
+            </div>
+
+            <!-- SLIDE 4: Risk -->
+            <div class="slide" data-title="🚨 Risk">
+                <h1>🚨 Risk Görmezden Gelinirse Büyür</h1>
+                <ul>
+                    <li>🔴 <strong>Hassas veri sızıntısı</strong> — çalışanlar yetkisiz AI araçları kullanıyor</li>
+                    <li>🔴 <strong>GDPR · KVKK · SOC2 · ISO 27001</strong> uyumsuzluğu riski</li>
+                    <li>🔴 <strong>Kırmızı bant</strong> — onaysız AI kullanımı disiplin süreçleri doğuruyor</li>
+                    <li>🔴 <strong>Shadow AI</strong> — BT bilgisi dışında kullanılan araçlar</li>
+                    <li>🔴 <strong>Audit başarısızlığı</strong> — regülatör cezaları ve itibar kaybı</li>
+                </ul>
+                <br>
+                <blockquote>
+                    <p>💡 <strong>Her gün beklenen bir gün, uyumsuzluk riskinin büyüdüğü bir gündür.</strong></p>
+                </blockquote>
+                <span class="page-number">4 / 14</span>
+            </div>
+
+            <!-- SLIDE 5: Çözüm -->
+            <div class="slide" data-title="✅ Çözüm">
+                <h1>✅ Kontrol Altında AI Yetkinliği</h1>
+                <p><strong>DeliveryPilot:</strong> Riskten Sertifikasyona Tam Çözüm</p>
+                <br>
+                <ul>
+                    <li>🎯 <strong>Şirkete özel</strong>, onaylı AI kullanım çerçevesi</li>
+                    <li>🛤️ Her çalışan için <strong>kişiselleştirilmiş öğrenme yolu</strong></li>
+                    <li>🏆 <strong>Sertifikalı yetkinlik</strong> = denetim kanıtı</li>
+                    <li>🔐 Veri güvenliği politikalarıyla <strong>entegre eğitim</strong> içerikleri</li>
+                    <li>📈 <strong>Risk azaltma + verimlilik artışı</strong> birlikte</li>
+                </ul>
+                <br>
+                <blockquote>
+                    <p>🏅 Güvenli · Ölçülebilir · Denetlenebilir</p>
+                </blockquote>
+                <span class="page-number">5 / 14</span>
+            </div>
+
+            <!-- SLIDE 6: AI Kullanım Alanları -->
+            <div class="slide" data-title="🎯 AI Kullanım Alanları">
+                <h1>🎯 AI Nerede Fark Yaratır?</h1>
+                <table>
+                    <thead>
+                        <tr><th>Alan</th><th>Açıklama</th><th>Kazanım</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🏚️ <strong>Hasar Tespit</strong></td><td>Görüntü tabanlı AI ile hasar analizi</td><td><strong>%60 daha hızlı</strong></td></tr>
+                        <tr><td>🔍 <strong>Fraud Tespiti</strong></td><td>Finansal anomali tespiti</td><td>Sahte işlem oranı ↓</td></tr>
+                        <tr><td>💰 <strong>Maliyet Analizi</strong></td><td>AI ile bütçe sapma tahmini</td><td>Tasarruf ↑</td></tr>
+                        <tr><td>📊 <strong>Veri Analizleri</strong></td><td>Ham veriyi içgörüye dönüştürme</td><td>Saatler → Dakikalar</td></tr>
+                        <tr><td>⚡ <strong>Dinamizm</strong></td><td>AI destekli senaryo planlama</td><td>Hızlı adaptasyon</td></tr>
+                        <tr><td>👥 <strong>Ekip Gelişimi</strong></td><td>Kişiselleştirilmiş yetkinlik haritası</td><td>Her rol için AI</td></tr>
+                    </tbody>
+                </table>
+                <span class="page-number">6 / 14</span>
+            </div>
+
+            <!-- SLIDE 7: Sektöre Özel -->
+            <div class="slide" data-title="🏭 Sektöre Özel">
+                <h1>🏭 Sektörünüze Özel Derinlik</h1>
+                <br>
+                <p><strong>🏦 Finans &amp; Sigorta</strong></p>
+                <ul>
+                    <li>Hasar dosyası değerlendirme egzersizleri</li>
+                    <li>Fraud senaryosu vaka çalışmaları</li>
+                </ul>
+                <p><strong>⚡ Enerji &amp; Altyapı</strong></p>
+                <ul>
+                    <li>Ekipman arıza tahmini senaryoları</li>
+                    <li>Güvenlik protokolü + AI entegrasyonu</li>
+                </ul>
+                <p><strong>🛡️ Kamu &amp; Savunma</strong></p>
+                <ul>
+                    <li>Air-gapped ortamda AI iş akışları</li>
+                    <li>Güvenlik sınıflandırması farkındalık eğitimi</li>
+                </ul>
+                <span class="page-number">7 / 14</span>
+            </div>
+
+            <!-- SLIDE 8: Değerlendirme -->
+            <div class="slide" data-title="📋 Değerlendirme">
+                <h1>📋 Nerede Durduğunuzu Bilin</h1>
+                <p><strong>Organizasyonel AI Olgunluk Değerlendirmesi</strong></p>
+                <br>
+                <ul>
+                    <li>🔬 <strong>Departman bazlı</strong> yetkinlik boşluğu analizi</li>
+                    <li>🎯 <strong>Bireysel hazırlık skoru</strong> (0–100 arası ölçüm)</li>
+                    <li>📊 <strong>Kıyaslama:</strong> Sektör ortalaması ile karşılaştırma</li>
+                    <li>🗺️ <strong>Çıktı:</strong> Öncelikli eğitim planı + hızlı kazanımlar</li>
+                </ul>
+                <br>
+                <blockquote>
+                    <p>📌 <strong>Ölçemediğinizi yönetemezsiniz.</strong><br>
+                    Önce konumunuzu bilin, sonra adım atın.</p>
+                </blockquote>
+                <p style="font-size:0.75em; margin-top:0.5rem;">→ <a href="assessment-tr.html" style="color:var(--gold);">Değerlendirme başlatın</a></p>
+                <span class="page-number">8 / 14</span>
+            </div>
+
+            <!-- SLIDE 9: Simülasyonlar -->
+            <div class="slide" data-title="🎮 Simülasyonlar">
+                <h1>🎮 Gerçek Senaryolarda Pratik Yapın</h1>
+                <p>Çalışanlar gerçek iş durumlarını simüle eden AI senaryolarını tamamlar:</p>
+                <br>
+                <ul>
+                    <li>💬 → <strong>Müşteri şikayetini</strong> AI ile çözme</li>
+                    <li>🚨 → <strong>Anomali tespiti</strong> ve karar alma</li>
+                    <li>📢 → <strong>Kriz iletişiminde</strong> AI araçları kullanımı</li>
+                    <li>🛡️ → <strong>Veri sızıntısı</strong> senaryosunda doğru prosedür</li>
+                </ul>
+                <br>
+                <blockquote>
+                    <p>🧪 Hata yapmanın <strong>güvenli</strong> olduğu öğrenme ortamı<br>
+                    📄 Tamamlama sonrası <strong>otomatik geri bildirim raporu</strong></p>
+                </blockquote>
+                <span class="page-number">9 / 14</span>
+            </div>
+
+            <!-- SLIDE 10: Sertifikasyon -->
+            <div class="slide" data-title="🏆 Sertifikasyon">
+                <h1>🏆 Kanıtlanmış Yetkinlik</h1>
+                <p><strong>DeliveryPilot AI Sertifikası</strong> — Bireysel ve Takım Düzeyinde</p>
+                <br>
+                <table>
+                    <thead>
+                        <tr><th>Seviye</th><th>Hedef Kitle</th><th>Kapsam</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🥉 <strong>Temel</strong></td><td>Tüm çalışanlar</td><td>AI farkındalık &amp; güvenlik</td></tr>
+                        <tr><td>🥈 <strong>Uygulayıcı</strong></td><td>Operasyonel roller</td><td>Araç kullanımı &amp; iş akışı</td></tr>
+                        <tr><td>🥇 <strong>Uzman</strong></td><td>Lider &amp; analistler</td><td>Strateji &amp; denetim</td></tr>
+                    </tbody>
+                </table>
+                <br>
+                <ul>
+                    <li>📊 <strong>Kurumsal dashboard:</strong> Tüm ekip tek görünümde</li>
+                    <li>✔️ Regülatör denetimlerinde <strong>kanıt olarak sunulabilir</strong></li>
+                </ul>
+                <p style="font-size:0.75em; margin-top:0.5rem;">→ <a href="certified-professional-tr.html" style="color:var(--gold);">Sertifikasyon hakkında bilgi alın</a></p>
+                <span class="page-number">10 / 14</span>
+            </div>
+
+            <!-- SLIDE 11: Yatırım Getirisi -->
+            <div class="slide" data-title="💹 Yatırım Getirisi">
+                <h1>💹 Yatırımın Karşılığı — Sayılarla</h1>
+                <br>
+                <blockquote><h2>🚀 <strong>3×</strong> Daha Hızlı AI Adaptasyonu</h2></blockquote>
+                <blockquote><h2>📉 <strong>%40</strong> Azalan Uyumsuzluk Riski</h2></blockquote>
+                <blockquote><h2>👥 <strong>%60</strong> Daha Az Shadow AI Kullanımı</h2></blockquote>
+                <blockquote><h2>⏱️ <strong>6 Hafta</strong> İçinde Ölçülebilir Yetkinlik Artışı</h2></blockquote>
+                <br>
+                <p><em>Tüm metrikler pilot müşteri verileriyle doğrulanmıştır.</em></p>
+                <span class="page-number">11 / 14</span>
+            </div>
+
+            <!-- SLIDE 12: Yol Haritası -->
+            <div class="slide" data-title="🗓️ Yol Haritası">
+                <h1>🗓️ Başlamak Kolay — 4 Adımda Dönüşüm</h1>
+                <br>
+                <p><strong>📍 Hafta 1–2:</strong> 🔍 Kurumsal değerlendirme &amp; yetkinlik haritası</p>
+                <p><strong>📍 Hafta 3–4:</strong> ✍️ Özelleştirilmiş içerik &amp; simülasyon paketi hazırlama</p>
+                <p><strong>📍 Hafta 5–8:</strong> 🎓 Pilot grup eğitimi &amp; ilk sertifikasyonlar</p>
+                <p><strong>📍 Ay 3+:</strong> 🌐 Tam ölçek dağıtım · Sürekli güncelleme · Raporlama</p>
+                <br>
+                <blockquote>
+                    <p>🏁 <strong>İlk haftadan itibaren değer üretmeye başlıyorsunuz.</strong></p>
+                </blockquote>
+                <span class="page-number">12 / 14</span>
+            </div>
+
+            <!-- SLIDE 13: Fark -->
+            <div class="slide" data-title="🌟 Farkımız">
+                <h1>🌟 Fark Yaratan 5 Şey</h1>
+                <br>
+                <p>✅ <strong>Sektöre özel</strong> — Jenerik değil, sizin iş süreçlerinize göre</p>
+                <p>✅ <strong>Air-gapped &amp; offline çalışabilir</strong> — Kapalı ağlarda tam işlevsellik</p>
+                <p>✅ <strong>Regülasyon &amp; denetim uyumlu</strong> sertifikasyon altyapısı</p>
+                <p>✅ <strong>Simülasyon tabanlı</strong> — Gerçek uygulama odaklı öğrenme</p>
+                <p>✅ <strong>Kurumsal dashboard</strong> — Tam görünürlük, anlık raporlama</p>
+                <br>
+                <blockquote>
+                    <p>💡 Rakipleriniz hazırlanırken siz zaten hazır olacaksınız.</p>
+                </blockquote>
+                <span class="page-number">13 / 14</span>
+            </div>
+
+            <!-- SLIDE 14: Kapanış -->
+            <div class="slide" data-title="🎯 Başlayalım">
+                <h1>🎯 AI Potansiyelinizi Ortaya Çıkarın</h1>
+                <br>
+                <blockquote>
+                    <p><strong>DeliveryPilot ile kurumsal AI yetkinliğini</strong><br>
+                    <strong>güvenli, ölçülebilir ve denetlenebilir hale getirin.</strong></p>
+                </blockquote>
+                <br>
+                <ul>
+                    <li>🔐 Güvenli &amp; uyumlu</li>
+                    <li>📊 Ölçülebilir &amp; raporlanabilir</li>
+                    <li>🏆 Sertifikalı &amp; denetlenebilir</li>
+                    <li>⚡ Hızlı &amp; etkili</li>
+                </ul>
+                <br>
+                <p>📧 <a href="mailto:contact@deliverypilot.net" style="color:var(--gold);">contact@deliverypilot.net</a> &nbsp;·&nbsp;
+                   🌐 <a href="https://deliverypilot.net" style="color:var(--gold);">deliverypilot.net</a> &nbsp;·&nbsp;
+                   🚀 <a href="assessment-tr.html" style="color:var(--gold);">Değerlendirme Başlatın</a></p>
+                <p style="margin-top:0.8rem; font-size:0.65em; color:rgba(255,255,255,0.3);">© 2025 Delivery Pilot · AI ile Teslimatı Dönüştürüyoruz</p>
+                <span class="page-number">14 / 14</span>
+            </div>
+
+        </div><!-- /slide-frame -->
+    </div><!-- /slide-wrapper -->
+
+    <!-- NAV BAR -->
+    <div class="nav-bar">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" title="Önceki (←)">◀</button>
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill" style="width: 7.14%"></div>
+        </div>
+        <span class="nav-counter" id="navCounter">1 / 14</span>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)" title="Sonraki (→)">▶</button>
+    </div>
+
+    <!-- THUMBNAILS PANEL -->
+    <div class="thumbnails-panel" id="thumbPanel"></div>
+
+    <!-- KEYBOARD HINT -->
+    <p class="kbd-hint">
+        <kbd>←</kbd> <kbd>→</kbd> gezin &nbsp;·&nbsp;
+        <kbd>F</kbd> tam ekran &nbsp;·&nbsp;
+        <kbd>T</kbd> küçük resim genel bakışı
+    </p>
+
+    <!-- LANGUAGE LINK -->
+    <p class="lang-hint">
+        🇬🇧 <a href="partner-presentation.html">İngilizce sürümü görüntüle</a>
+        &nbsp;·&nbsp;
+        🤝 <a href="partners-tr.html">Ortaklar sayfasına dön</a>
+        &nbsp;·&nbsp;
+        📞 <a href="contact-tr.html">İletişim</a>
+    </p>
+
+</div><!-- /stage -->
+
+<!-- Footer - Loaded from menu.js -->
+<div id="footer-placeholder"></div>
+
+<script src="../menu.js"></script>
+<script src="../script.js"></script>
+
+<script>
+    const TOTAL = 14;
+    let current = 1;
+
+    const slides = document.querySelectorAll('.slide');
+    const progressFill = document.getElementById('progressFill');
+    const navCounter = document.getElementById('navCounter');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const thumbPanel = document.getElementById('thumbPanel');
+    let thumbsBuilt = false;
+    let thumbsOpen = false;
+
+    function goTo(n) {
+        if (n < 1 || n > TOTAL) return;
+        slides[current - 1].classList.remove('active');
+        current = n;
+        slides[current - 1].classList.add('active');
+        progressFill.style.width = ((current / TOTAL) * 100).toFixed(2) + '%';
+        navCounter.textContent = current + ' / ' + TOTAL;
+        prevBtn.disabled = current === 1;
+        nextBtn.disabled = current === TOTAL;
+        updateThumbActive();
+    }
+
+    function changeSlide(dir) { goTo(current + dir); }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); changeSlide(1); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); changeSlide(-1); }
+        else if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+        else if (e.key === 't' || e.key === 'T') toggleThumbnails();
+        else if (e.key === 'Home') goTo(1);
+        else if (e.key === 'End') goTo(TOTAL);
+    });
+
+    // Touch swipe
+    let touchX = 0;
+    const frame = document.getElementById('slideFrame');
+    frame.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    frame.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) changeSlide(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    // Fullscreen
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            frame.requestFullscreen && frame.requestFullscreen();
+        } else {
+            document.exitFullscreen && document.exitFullscreen();
+        }
+    }
+
+    // Thumbnails
+    function buildThumbs() {
+        thumbPanel.innerHTML = '';
+        slides.forEach((slide, i) => {
+            const wrap = document.createElement('div');
+            wrap.className = 'thumb' + (i === current - 1 ? ' thumb-active' : '');
+            wrap.title = slide.dataset.title || ('Slayt ' + (i + 1));
+            wrap.onclick = () => { goTo(i + 1); };
+
+            const inner = document.createElement('div');
+            inner.className = 'thumb-inner';
+            inner.innerHTML = slide.outerHTML;
+            const pn = inner.querySelector('.page-number');
+            if (pn) pn.remove();
+
+            const label = document.createElement('div');
+            label.className = 'thumb-label';
+            label.textContent = (i + 1) + '. ' + (slide.dataset.title || '');
+
+            wrap.appendChild(inner);
+            wrap.appendChild(label);
+            thumbPanel.appendChild(wrap);
+        });
+        thumbsBuilt = true;
+    }
+
+    function updateThumbActive() {
+        if (!thumbsBuilt) return;
+        thumbPanel.querySelectorAll('.thumb').forEach((t, i) => {
+            t.classList.toggle('thumb-active', i === current - 1);
+        });
+    }
+
+    function toggleThumbnails() {
+        thumbsOpen = !thumbsOpen;
+        if (thumbsOpen && !thumbsBuilt) buildThumbs();
+        thumbPanel.classList.toggle('open', thumbsOpen);
+    }
+
+    // Init
+    goTo(1);
+</script>
+</body>
+</html>

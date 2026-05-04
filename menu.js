@@ -60,6 +60,7 @@ const navigationConfig = {
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
                 { href: 'founder.html', textKey: 'nav.founder', text: '👤 Founder' },
                 { href: 'transformations.html', textKey: 'nav.transformations', text: '🔄 Transformations' },
+                { href: 'it_transformations.html', textKey: 'nav.itTransformations', text: '💡 IT Transformations' },
                 { href: 'consulting-transformation.html', textKey: 'nav.consultingTransformation', text: '🔄 Consulting Transformation' },
                 { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
                 { href: 'partner-presentation.html', textKey: 'nav.partnerPresentation', text: '🎤 Partner Presentation' },
@@ -161,6 +162,7 @@ const footerConfig = {
                 { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
                 { type: 'link', href: 'resources-single-skilled-engineers.html', textKey: 'footer.resources.singleSkilledEngineers', text: 'Single-Skilled Engineers' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
+                { type: 'link', href: 'it_transformations.html', textKey: 'footer.company.itTransformations', text: 'IT Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
             ]

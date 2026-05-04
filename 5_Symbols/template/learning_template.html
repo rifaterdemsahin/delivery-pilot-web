@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Template - Stream Deck</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Learning Assessment Panel */
+        .learning-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .learning-panel.collapsed {
+            width: auto;
+            height: auto;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .learning-panel.collapsed .panel-content {
+            display: none;
+        }
+
+        .learning-panel.collapsed .panel-header {
+            margin-bottom: 0;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ffd700;
+        }
+
+        .panel-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .collapse-btn {
+            background: none;
+            border: none;
+            color: #ffd700;
+            font-size: 1.2em;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .collapse-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .bloom-item {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #ffd700;
+            transition: all 0.3s;
+        }
+
+        .bloom-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .bloom-item.completed {
+            background: rgba(76, 175, 80, 0.2);
+            border-left-color: #4CAF50;
+        }
+
+        .bloom-checkbox {
+            display: none;
+        }
+
+        .bloom-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+
+        .bloom-emoji {
+            font-size: 1.3em;
+            margin-right: 8px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .bloom-text {
+            flex: 1;
+        }
+
+        .bloom-level {
+            font-size: 0.8em;
+            color: #a8d0ff;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .custom-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffd700;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .bloom-checkbox:checked + .bloom-label .custom-checkbox {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .bloom-checkbox:checked + .bloom-label .custom-checkbox::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #ffd700);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .completion-message {
+            text-align: center;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Remembered Banner */
+        .remembered-banner {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .banner-emoji {
+            font-size: 1.5em;
+        }
+
+        .banner-text {
+            font-weight: bold;
+        }
+
+        .banner-close {
+            margin-left: auto;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .banner-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .learning-panel {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                width: auto;
+            }
+
+            .remembered-banner {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                width: auto;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="../../5_Symbols/configs/learning-assessment.css">
+<script src="../../5_Symbols/scripts/learning-assessment.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Learning Template Example</h1>
+        <p>This is an example page using the learning assessment template. Replace this content with your actual page content.</p>
+
+        <div style="margin: 40px 0; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 10px;">
+            <h2>📖 Sample Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul>
+                <li>Point 1: Understanding basic concepts</li>
+                <li>Point 2: Analyzing relationships</li>
+                <li>Point 3: Evaluating effectiveness</li>
+                <li>Point 4: Creating new solutions</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Remembered Banner -->
+    <div class="remembered-banner" id="remembered-banner">
+        <div class="banner-content">
+            <span class="banner-emoji">🧠</span>
+            <span class="banner-text">This page is remembered! 🎯</span>
+            <span class="banner-close" onclick="closeBanner()">×</span>
+        </div>
+    </div>
+
+    <!-- Learning Assessment Panel -->
+    <div class="learning-panel" id="learning-panel">
+        <div class="panel-header">
+            <div class="panel-title">🎓 Self-Assessment</div>
+            <button class="collapse-btn" onclick="togglePanel()">−</button>
+        </div>
+
+        <div class="panel-content">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="bloom-item" data-level="remember">
+                <input type="checkbox" class="bloom-checkbox" id="remember" onchange="updateProgress()">
+                <label for="remember" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">🧠</div>
+                        <div class="bloom-text">Key concepts and facts</div>
+                        <div class="bloom-level">🧠 REMEMBER</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="bloom-item" data-level="understand">
+                <input type="checkbox" class="bloom-checkbox" id="understand" onchange="updateProgress()">
+                <label for="understand" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">💡</div>
+                        <div class="bloom-text">How concepts interconnect</div>
+                        <div class="bloom-level">💡 UNDERSTAND</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="bloom-item" data-level="analyze">
+                <input type="checkbox" class="bloom-checkbox" id="analyze" onchange="updateProgress()">
+                <label for="analyze" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">🔍</div>
+                        <div class="bloom-text">Break down complex ideas</div>
+                        <div class="bloom-level">🔍 ANALYZE</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="bloom-item" data-level="evaluate">
+                <input type="checkbox" class="bloom-checkbox" id="evaluate" onchange="updateProgress()">
+                <label for="evaluate" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">⚖️</div>
+                        <div class="bloom-text">Assess effectiveness and make judgments</div>
+                        <div class="bloom-level">⚖️ EVALUATE</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="bloom-item" data-level="create">
+                <input type="checkbox" class="bloom-checkbox" id="create" onchange="updateProgress()">
+                <label for="create" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">🚀</div>
+                        <div class="bloom-text">Develop new applications and solutions</div>
+                        <div class="bloom-level">🚀 CREATE</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="completion-message" id="completion-message">
+                🎉 Great job! You've mastered this content!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Learning Assessment System
+        class LearningTracker {
+            constructor() {
+                this.pageId = this.getPageId();
+                this.cookieName = 'streamdeck_learning_progress';
+                this.bloomLevels = ['remember', 'understand', 'analyze', 'evaluate', 'create'];
+                this.completedLevels = this.loadProgress();
+
+                this.init();
+            }
+
+            getPageId() {
+                // Use pathname as unique identifier for the page
+                return window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+            }
+
+            loadProgress() {
+                const cookies = document.cookie.split(';');
+                for (let cookie of cookies) {
+                    const [name, value] = cookie.trim().split('=');
+                    if (name === this.cookieName) {
+                        try {
+                            const data = JSON.parse(decodeURIComponent(value));
+                            return data[this.pageId] || [];
+                        } catch (e) {
+                            console.error('Error parsing learning progress cookie:', e);
+                        }
+                    }
+                }
+                return [];
+            }
+
+            saveProgress() {
+                const cookies = document.cookie.split(';');
+                let existingData = {};
+
+                // Load existing cookie data
+                for (let cookie of cookies) {
+                    const [name, value] = cookie.trim().split('=');
+                    if (name === this.cookieName) {
+                        try {
+                            existingData = JSON.parse(decodeURIComponent(value));
+                        } catch (e) {}
+                        break;
+                    }
+                }
+
+                // Update with current page progress
+                existingData[this.pageId] = this.completedLevels;
+
+                // Save back to cookie (expires in 1 year)
+                const expiryDate = new Date();
+                expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+                document.cookie = `${this.cookieName}=${encodeURIComponent(JSON.stringify(existingData))}; expires=${expiryDate.toUTCString()}; path=/`;
+            }
+
+            init() {
+                // Check if page was previously completed
+                if (this.completedLevels.length === this.bloomLevels.length) {
+                    this.showRememberedBanner();
+                    this.collapsePanel();
+                }
+
+                // Restore checkbox states
+                this.completedLevels.forEach(level => {
+                    const checkbox = document.getElementById(level);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        this.markCompleted(level);
+                    }
+                });
+
+                this.updateProgress();
+            }
+
+            toggleLevel(level) {
+                const checkbox = document.getElementById(level);
+                const item = checkbox.closest('.bloom-item');
+
+                if (checkbox.checked) {
+                    if (!this.completedLevels.includes(level)) {
+                        this.completedLevels.push(level);
+                    }
+                    item.classList.add('completed');
+                } else {
+                    this.completedLevels = this.completedLevels.filter(l => l !== level);
+                    item.classList.remove('completed');
+                }
+
+                this.saveProgress();
+                this.updateProgress();
+
+                // Check if all levels completed
+                if (this.completedLevels.length === this.bloomLevels.length) {
+                    this.showCompletion();
+                }
+            }
+
+            markCompleted(level) {
+                const item = document.getElementById(level).closest('.bloom-item');
+                item.classList.add('completed');
+            }
+
+            updateProgress() {
+                const progress = (this.completedLevels.length / this.bloomLevels.length) * 100;
+                document.getElementById('progress-fill').style.width = progress + '%';
+            }
+
+            showCompletion() {
+                document.getElementById('completion-message').style.display = 'block';
+                setTimeout(() => {
+                    this.showRememberedBanner();
+                    this.collapsePanel();
+                }, 2000);
+            }
+
+            showRememberedBanner() {
+                document.getElementById('remembered-banner').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('remembered-banner').style.display = 'none';
+                }, 5000);
+            }
+
+            collapsePanel() {
+                const panel = document.getElementById('learning-panel');
+                panel.classList.add('collapsed');
+                const btn = panel.querySelector('.collapse-btn');
+                btn.textContent = '+';
+                btn.onclick = () => this.expandPanel();
+            }
+
+            expandPanel() {
+                const panel = document.getElementById('learning-panel');
+                panel.classList.remove('collapsed');
+                const btn = panel.querySelector('.collapse-btn');
+                btn.textContent = '−';
+                btn.onclick = () => this.collapsePanel();
+            }
+        }
+
+        // Global functions for HTML onclick handlers
+        function updateProgress() {
+            if (window.learningTracker) {
+                const level = event.target.id;
+                window.learningTracker.toggleLevel(level);
+            }
+        }
+
+        function togglePanel() {
+            if (window.learningTracker) {
+                const panel = document.getElementById('learning-panel');
+                if (panel.classList.contains('collapsed')) {
+                    window.learningTracker.expandPanel();
+                } else {
+                    window.learningTracker.collapsePanel();
+                }
+            }
+        }
+
+        function closeBanner() {
+            document.getElementById('remembered-banner').style.display = 'none';
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            window.learningTracker = new LearningTracker();
+        });
+    </script>
+<!-- Learning Assessment Component -->
+<!-- Include this HTML snippet in any page for self-evaluation -->
+<!-- Requires: learning-assessment.css and learning-assessment.js -->
+
+<!-- Remembered Banner -->
+<div class="learning-remembered-banner" id="learning-remembered-banner">
+    <div class="learning-banner-content">
+        <span class="learning-banner-emoji">🧠</span>
+        <span class="learning-banner-text">This page is remembered! 🎯</span>
+        <span class="learning-banner-close" onclick="closeLearningBanner()">×</span>
+    </div>
+</div>
+
+<!-- Learning Assessment Panel -->
+<div class="learning-assessment-panel" id="learning-assessment-panel">
+    <div class="learning-panel-header">
+        <div class="learning-panel-title">🎓 Self-Assessment</div>
+        <button class="learning-collapse-btn" onclick="toggleLearningPanel()">−</button>
+    </div>
+
+    <div class="learning-panel-content">
+        <div class="learning-progress-bar">
+            <div class="learning-progress-fill" id="learning-progress-fill"></div>
+        </div>
+
+        <div class="bloom-item" data-level="remember">
+            <input type="checkbox" class="bloom-checkbox" id="bloom-remember" onchange="toggleLearningLevel('remember')">
+            <label for="bloom-remember" class="bloom-label">
+                <span class="custom-checkbox"></span>
+                <div>
+                    <div class="bloom-emoji">🧠</div>
+                    <div class="bloom-text">Key concepts and facts</div>
+                    <div class="bloom-level">🧠 REMEMBER</div>
+                </div>
+            </label>
+        </div>
+
+        <div class="bloom-item" data-level="understand">
+            <input type="checkbox" class="bloom-checkbox" id="bloom-understand" onchange="toggleLearningLevel('understand')">
+            <label for="bloom-understand" class="bloom-label">
+                <span class="custom-checkbox"></span>
+                <div>
+                    <div class="bloom-emoji">💡</div>
+                    <div class="bloom-text">How concepts interconnect</div>
+                    <div class="bloom-level">💡 UNDERSTAND</div>
+                </div>
+            </label>
+        </div>
+
+        <div class="bloom-item" data-level="analyze">
+            <input type="checkbox" class="bloom-checkbox" id="bloom-analyze" onchange="toggleLearningLevel('analyze')">
+            <label for="bloom-analyze" class="bloom-label">
+                <span class="custom-checkbox"></span>
+                <div>
+                    <div class="bloom-emoji">🔍</div>
+                    <div class="bloom-text">Break down complex ideas</div>
+                    <div class="bloom-level">🔍 ANALYZE</div>
+                </div>
+            </label>
+        </div>
+
+        <div class="bloom-item" data-level="evaluate">
+            <input type="checkbox" class="bloom-checkbox" id="bloom-evaluate" onchange="toggleLearningLevel('evaluate')">
+            <label for="bloom-evaluate" class="bloom-label">
+                <span class="custom-checkbox"></span>
+                <div>
+                    <div class="bloom-emoji">⚖️</div>
+                    <div class="bloom-text">Assess effectiveness and make judgments</div>
+                    <div class="bloom-level">⚖️ EVALUATE</div>
+                </div>
+            </label>
+            </div>
+
+            <div class="bloom-item" data-level="create">
+                <input type="checkbox" class="bloom-checkbox" id="bloom-create" onchange="toggleLearningLevel('create')">
+                <label for="bloom-create" class="bloom-label">
+                    <span class="custom-checkbox"></span>
+                    <div>
+                        <div class="bloom-emoji">🚀</div>
+                        <div class="bloom-text">Develop new applications and solutions</div>
+                        <div class="bloom-level">🚀 CREATE</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="learning-completion-message" id="learning-completion-message">
+                🎉 Great job! You've mastered this content!
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

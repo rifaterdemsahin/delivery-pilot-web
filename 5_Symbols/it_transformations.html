@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IT Transformations: From Waterfall to Agile to AI — how the craft of software delivery evolved through three eras, and what it means for your organisation.">
+<meta name="keywords" content="IT transformation, waterfall to agile, agile to AI, software delivery evolution, AI agents, enterprise transformation, delivery pilot, digital transformation">
+<meta name="author" content="Delivery Pilot">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://deliverypilot.net/5_Symbols/it_transformations.html">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="IT Transformations: Waterfall → Agile → AI | Delivery Pilot">
+<meta property="og:description" content="Explore how the craft of IT delivery evolved from rigid Waterfall phase gates, through human-centred Agile sprints, into an AI-first era where agents carry their own credentials.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deliverypilot.net/5_Symbols/it_transformations.html">
+<meta property="og:image" content="https://deliverypilot.net/3_ui/it_transformations.png">
+<meta property="og:site_name" content="Delivery Pilot">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IT Transformations: Waterfall → Agile → AI | Delivery Pilot">
+<meta name="twitter:description" content="How IT delivery evolved from Waterfall to Agile to AI — and what the agent era means for your organisation.">
+<meta name="twitter:image" content="https://deliverypilot.net/3_ui/it_transformations.png">
+
+<title>IT Transformations: Waterfall to Agile to AI | Delivery Pilot</title>
+<link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Crimson+Pro:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #f0a500;
+    --amber: #e07b00;
+    --electric: #00d4ff;
+    --dim: #0a0d14;
+    --panel: #0e1220;
+    --surface: #141828;
+    --border: rgba(240,165,0,0.2);
+    --text: #c8cdd8;
+    --bright: #eef0f5;
+    --muted: #5a6070;
+    --runway: #f0a500;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dim);
+    color: var(--text);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.4;
+  }
+
+  /* ── IMAGE HERO ── */
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 21/9;
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-image .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: linear-gradient(135deg, #0a0d14 0%, #0e1220 40%, #141828 70%, #0a0d14 100%);
+  }
+
+  .hero-image .placeholder span {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .hero-image .placeholder .icon {
+    font-size: 48px;
+    opacity: 0.3;
+  }
+
+  /* ── RUNWAY STRIP ── */
+  .runway {
+    height: 6px;
+    background: repeating-linear-gradient(90deg,
+      var(--gold) 0px, var(--gold) 40px,
+      transparent 40px, transparent 60px
+    );
+    animation: runway-scroll 2s linear infinite;
+  }
+
+  @keyframes runway-scroll {
+    from { background-position: 0 0; }
+    to { background-position: 100px 0; }
+  }
+
+  /* ── IN-PAGE NAV ── */
+  .page-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 18px 60px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(10,13,20,0.9);
+    flex-wrap: wrap;
+  }
+
+  .page-nav-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .page-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .page-nav a:hover { color: var(--gold); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    padding: 80px 60px 60px;
+    max-width: 900px;
+    animation: fade-up 0.8s ease both;
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--electric);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--electric);
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--bright);
+    margin-bottom: 28px;
+  }
+
+  h1 em {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--text);
+    max-width: 680px;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ── SECTION ── */
+  section {
+    padding: 80px 60px;
+    border-top: 1px solid var(--border);
+    animation: fade-up 0.8s ease both;
+  }
+
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.2s; }
+  section:nth-child(4) { animation-delay: 0.3s; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── ERA CARDS ── */
+  .era-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+    position: relative;
+  }
+
+  /* Arrow connectors between cards */
+  .era-grid::before,
+  .era-grid::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: var(--gold);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .era-grid::before { left: calc(33.33% - 16px); }
+  .era-grid::after  { left: calc(66.66% - 16px); }
+
+  .era-card {
+    background: var(--panel);
+    padding: 44px 36px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .era-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    z-index: 2;
+  }
+
+  .era-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .era-card.waterfall::before { background: #4a6fa5; }
+  .era-card.agile::before     { background: var(--amber); }
+  .era-card.ai::before        { background: var(--electric); }
+
+  .era-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 96px;
+    line-height: 1;
+    position: absolute;
+    top: 16px; right: 20px;
+    opacity: 0.06;
+    letter-spacing: -0.05em;
+  }
+
+  .era-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .era-card.waterfall .era-label { color: #4a6fa5; }
+  .era-card.agile     .era-label { color: var(--amber); }
+  .era-card.ai        .era-label { color: var(--electric); }
+
+  .era-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.06em;
+    color: var(--bright);
+    margin-bottom: 20px;
+  }
+
+  .era-body {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+
+  .era-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .era-card.waterfall .tag { background: rgba(74,111,165,0.15); color: #7a9fc5; border: 1px solid rgba(74,111,165,0.3); }
+  .era-card.agile     .tag { background: rgba(224,123,0,0.12);  color: var(--gold); border: 1px solid rgba(240,165,0,0.25); }
+  .era-card.ai        .tag { background: rgba(0,212,255,0.1);   color: var(--electric); border: 1px solid rgba(0,212,255,0.25); }
+
+  /* ── HUD EVOLUTION ── */
+  .hud-section { background: var(--surface); }
+
+  .hud-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    color: var(--bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .section-intro {
+    font-style: italic;
+    color: var(--text);
+    max-width: 640px;
+    margin-bottom: 56px;
+    font-size: 18px;
+  }
+
+  .hud-evolution {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .hud-display {
+    background: var(--dim);
+    border: 1px solid var(--border);
+    padding: 28px;
+    position: relative;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .hud-display .hud-era {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .hud-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .hud-btn {
+    height: 22px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 8px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Waterfall HUD — 4 buttons, muted blue */
+  .hud-display.wf .hud-btn { background: rgba(74,111,165,0.25); color: #7a9fc5; border: 1px solid rgba(74,111,165,0.4); width: calc(50% - 3px); }
+
+  /* Agile HUD — 12 buttons, amber */
+  .hud-display.ag .hud-btn { background: rgba(224,123,0,0.15); color: var(--gold); border: 1px solid rgba(240,165,0,0.3); width: calc(33% - 4px); }
+
+  /* AI HUD — 30+ buttons, electric */
+  .hud-display.ai-hud .hud-btn { background: rgba(0,212,255,0.08); color: var(--electric); border: 1px solid rgba(0,212,255,0.2); width: calc(25% - 5px); font-size: 6px; height: 18px; }
+
+  .hud-count {
+    font-size: 32px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .hud-display.wf .hud-count  { color: #4a6fa5; }
+  .hud-display.ag .hud-count  { color: var(--amber); }
+  .hud-display.ai-hud .hud-count { color: var(--electric); }
+
+  .hud-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* ── CREDENTIALS ── */
+  .credentials-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    color: var(--bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .cred-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 56px;
+  }
+
+  .cred-panel {
+    padding: 40px;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .cred-panel.human { background: linear-gradient(135deg, var(--panel) 0%, #0f1520 100%); }
+  .cred-panel.agent { background: linear-gradient(135deg, #0a1218 0%, #0d1822 100%); border-color: rgba(0,212,255,0.25); }
+
+  .cred-panel::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    background: var(--dim);
+  }
+
+  .cred-panel.human::before { color: var(--amber); border: 1px solid rgba(224,123,0,0.4); }
+  .cred-panel.agent::before { color: var(--electric); border: 1px solid rgba(0,212,255,0.4); }
+
+  .cred-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    color: var(--bright);
+    margin-bottom: 20px;
+  }
+
+  .diploma-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .diploma {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    border-left: 3px solid;
+  }
+
+  .diploma.past { background: rgba(74,111,165,0.08); border-color: #4a6fa5; color: #7a9fc5; }
+  .diploma.current { background: rgba(224,123,0,0.08); border-color: var(--amber); color: var(--gold); }
+  .diploma.agent-cert { background: rgba(0,212,255,0.06); border-color: var(--electric); color: var(--electric); }
+
+  .diploma-icon { font-size: 18px; flex-shrink: 0; }
+
+  .cred-note {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── MANIFESTO ── */
+  .manifesto {
+    text-align: center;
+    padding: 100px 60px;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .manifesto::before {
+    content: 'DELIVERY PILOT';
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 200px;
+    color: rgba(240,165,0,0.04);
+    letter-spacing: 0.1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .manifesto-quote {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--bright);
+    max-width: 900px;
+    margin: 0 auto 36px;
+    line-height: 1.35;
+    position: relative;
+  }
+
+  .manifesto-quote em { color: var(--gold); font-style: normal; }
+
+  .manifesto-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 48px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+  }
+
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .cta-btn:hover { color: var(--dim); }
+  .cta-btn:hover::before { transform: scaleX(1); }
+  .cta-btn span { position: relative; }
+
+  /* ── TAUGHT → TRAINED → CERTIFIED STRIP ── */
+  .journey-strip {
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .journey-step {
+    flex: 1;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+
+  .journey-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--gold);
+    z-index: 2;
+  }
+
+  .journey-step:nth-child(1) { background: rgba(74,111,165,0.06); }
+  .journey-step:nth-child(2) { background: rgba(224,123,0,0.06); }
+  .journey-step:nth-child(3) { background: rgba(0,212,255,0.06); }
+
+  .journey-step .step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .journey-step .step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+
+  .journey-step:nth-child(1) .step-title { color: #7a9fc5; }
+  .journey-step:nth-child(2) .step-title { color: var(--gold); }
+  .journey-step:nth-child(3) .step-title { color: var(--electric); }
+
+  .journey-step .step-desc {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .page-nav, section, .page-header, .manifesto { padding-left: 24px; padding-right: 24px; }
+    .era-grid, .hud-evolution, .cred-grid { grid-template-columns: 1fr; }
+    .era-grid::before, .era-grid::after { display: none; }
+    .journey-strip { flex-direction: column; }
+    .journey-step:not(:last-child)::after { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation - Loaded from menu.js -->
+<div id="navbar-placeholder"></div>
+
+<!-- RUNWAY STRIP -->
+<div class="runway"></div>
+
+<!-- IN-PAGE NAVIGATION -->
+<nav class="page-nav">
+  <span class="page-nav-label">On this page:</span>
+  <a href="#hero">Overview</a>
+  <a href="#eras">The Three Eras</a>
+  <a href="#hud">HUD Evolution</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#manifesto">Manifesto</a>
+</nav>
+
+<!-- HERO IMAGE -->
+<div id="hero" class="hero-image">
+  <img src="../3_ui/it_transformations.png" alt="IT Transformations: The Evolution from Waterfall to Agile to AI — Delivery Pilot">
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Transformation Program</div>
+  <h1>From <em>Waterfall</em><br>to <em>AI</em> Flight</h1>
+  <p class="subtitle">How the craft of delivery evolved from rigid phase gates, through human-centred agile sprints, into an age where software agents carry their own credentials and fly on autopilot.</p>
+</div>
+
+<!-- JOURNEY STRIP -->
+<div class="journey-strip">
+  <div class="journey-step">
+    <span class="step-num">Phase 01</span>
+    <span class="step-title">Taught by Humans</span>
+    <span class="step-desc">Knowledge locked in diplomas, manuals, and managed handoffs</span>
+  </div>
+  <div class="journey-step">
+    <span class="step-num">Phase 02</span>
+    <span class="step-title">Trained by Data</span>
+    <span class="step-desc">Teams equipped with frameworks, certifications, and real-time HUDs</span>
+  </div>
+  <div class="journey-step">
+    <span class="step-num">Phase 03</span>
+    <span class="step-title">Certified for Agents</span>
+    <span class="step-desc">Software robots carry verified credentials and execute autonomously</span>
+  </div>
+</div>
+
+<!-- ERA CARDS -->
+<section id="eras">
+  <div class="eyebrow">Three Eras of Delivery</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:var(--bright);letter-spacing:0.04em;margin-bottom:12px;">The Arc of Transformation</h2>
+  <p class="section-intro" style="font-style:italic;color:var(--text);max-width:640px;margin-bottom:0;">Every era believed it had reached the pinnacle. Every era was right — and wrong.</p>
+
+  <div class="era-grid">
+
+    <!-- WATERFALL -->
+    <div class="era-card waterfall">
+      <span class="era-number">01</span>
+      <div class="era-label">1970s – 2000s</div>
+      <div class="era-title">Waterfall</div>
+      <p class="era-body">Delivery flowed in one direction: down. Requirements were cast in stone, designs were signed off in triplicate, and code was written in isolation. Gates separated every phase. Humans carried paper diplomas that proved their authority to proceed.</p>
+      <p class="era-body">The machine was predictable. It was also slow, brittle, and catastrophically wrong by the time it shipped.</p>
+      <div class="era-tags">
+        <span class="tag">Phase Gates</span>
+        <span class="tag">Gantt Charts</span>
+        <span class="tag">Paper Diplomas</span>
+        <span class="tag">Manual Handoffs</span>
+        <span class="tag">Big Bang Release</span>
+        <span class="tag">PRINCE2</span>
+      </div>
+    </div>
+
+    <!-- AGILE -->
+    <div class="era-card agile">
+      <span class="era-number">02</span>
+      <div class="era-label">2001 – 2020s</div>
+      <div class="era-title">Agile</div>
+      <p class="era-body">The manifesto changed everything. Teams became pods. Months became sprints. Feedback loops tightened from years to weeks. People wore Scrum Master badges and SAFe certifications — physical proof of a new fluency.</p>
+      <p class="era-body">And they wore HUDs. Heads-up displays of burndown charts, velocity graphs, and Kanban boards floated in their field of vision. The number of buttons grew. Teams were in control — and they knew it, in real time.</p>
+      <div class="era-tags">
+        <span class="tag">Scrum</span>
+        <span class="tag">SAFe</span>
+        <span class="tag">KPIs on Glass</span>
+        <span class="tag">Sprint Reviews</span>
+        <span class="tag">HUD Dashboards</span>
+        <span class="tag">Human Certified</span>
+      </div>
+    </div>
+
+    <!-- AI -->
+    <div class="era-card ai">
+      <span class="era-number">03</span>
+      <div class="era-label">2023 – Present</div>
+      <div class="era-title">AI Transformation</div>
+      <p class="era-body">The HUD didn't disappear — it exploded. Hundreds of controls, live feeds, decision trees, and tool integrations now flow through systems too fast for human reaction. So humans stepped back. Agents stepped forward.</p>
+      <p class="era-body">Software robots now carry their own certificates. Not paper. Not badges. Machine-readable, cryptographically signed agent credentials that prove capability, scope, and trust level — ready to board the next deployment, autonomously.</p>
+      <div class="era-tags">
+        <span class="tag">AI Agents</span>
+        <span class="tag">Agent Certs</span>
+        <span class="tag">ML Pipelines</span>
+        <span class="tag">300+ Controls</span>
+        <span class="tag">Autonomous Deploy</span>
+        <span class="tag">DeliveryPilot</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HUD EVOLUTION -->
+<section id="hud" class="hud-section">
+  <div class="eyebrow">Interface Evolution</div>
+  <h2>The HUD That Grew Up</h2>
+  <p class="section-intro">As delivery matured, so did the cockpit. Each era added instruments — until humans needed co-pilots who never sleep.</p>
+
+  <div class="hud-evolution">
+
+    <!-- Waterfall HUD -->
+    <div class="hud-display wf">
+      <div class="hud-era">// Waterfall Era HUD</div>
+      <div class="hud-buttons">
+        <div class="hud-btn">Schedule</div>
+        <div class="hud-btn">Budget</div>
+        <div class="hud-btn">Sign-off</div>
+        <div class="hud-btn">Risk Log</div>
+      </div>
+      <div class="hud-count">4</div>
+      <div class="hud-desc">Controls visible to the delivery manager. One screen. Monthly updates. Manual everything.</div>
+    </div>
+
+    <!-- Agile HUD -->
+    <div class="hud-display ag">
+      <div class="hud-era">// Agile Era HUD</div>
+      <div class="hud-buttons">
+        <div class="hud-btn">Velocity</div>
+        <div class="hud-btn">Burndown</div>
+        <div class="hud-btn">Backlog</div>
+        <div class="hud-btn">WIP Limit</div>
+        <div class="hud-btn">CI/CD</div>
+        <div class="hud-btn">Defects</div>
+        <div class="hud-btn">Retro</div>
+        <div class="hud-btn">Release</div>
+        <div class="hud-btn">Standup</div>
+        <div class="hud-btn">OKRs</div>
+        <div class="hud-btn">Alerts</div>
+        <div class="hud-btn">Deploys</div>
+      </div>
+      <div class="hud-count">12</div>
+      <div class="hud-desc">Scrum teams operate live dashboards. Humans watch, decide, act. Certifications required to fly.</div>
+    </div>
+
+    <!-- AI HUD -->
+    <div class="hud-display ai-hud">
+      <div class="hud-era">// AI Transformation HUD</div>
+      <div class="hud-buttons">
+        <div class="hud-btn">LLM</div><div class="hud-btn">RAG</div><div class="hud-btn">Deploy</div><div class="hud-btn">Monitor</div>
+        <div class="hud-btn">Agents</div><div class="hud-btn">Guardrails</div><div class="hud-btn">Embeddings</div><div class="hud-btn">Eval</div>
+        <div class="hud-btn">Tool Use</div><div class="hud-btn">Autoscale</div><div class="hud-btn">GitOps</div><div class="hud-btn">IaC</div>
+        <div class="hud-btn">Observ.</div><div class="hud-btn">RLHF</div><div class="hud-btn">Vector DB</div><div class="hud-btn">Context</div>
+        <div class="hud-btn">Prompt</div><div class="hud-btn">Safety</div><div class="hud-btn">Fine-tune</div><div class="hud-btn">API Keys</div>
+        <div class="hud-btn">Certs</div><div class="hud-btn">Sandbox</div><div class="hud-btn">Workflow</div><div class="hud-btn">Trigger</div>
+        <div class="hud-btn">Memory</div><div class="hud-btn">Chain</div><div class="hud-btn">Rollback</div><div class="hud-btn">A/B</div>
+        <div class="hud-btn">Audit</div><div class="hud-btn">Telemetry</div><div class="hud-btn">Cost</div><div class="hud-btn">Latency</div>
+      </div>
+      <div class="hud-count">300+</div>
+      <div class="hud-desc">Too many controls for human reaction time. Agents hold the controls. Humans set the destination.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="credentials-section">
+  <div class="eyebrow">The Credential Shift</div>
+  <h2>Who Carries the Badge?</h2>
+  <p class="section-intro">Credentials have always been a proxy for trust. The question is: who — or what — earns them now?</p>
+
+  <div class="cred-grid">
+
+    <!-- Human side -->
+    <div class="cred-panel human" data-label="Human Credentials">
+      <div class="cred-title">The Human Era</div>
+      <div class="diploma-stack">
+        <div class="diploma past">
+          <span class="diploma-icon">🎓</span>
+          <span>Computer Science BSc — University Diploma</span>
+        </div>
+        <div class="diploma past">
+          <span class="diploma-icon">📜</span>
+          <span>PRINCE2 Practitioner — Paper Certificate</span>
+        </div>
+        <div class="diploma past">
+          <span class="diploma-icon">📋</span>
+          <span>PMP — Project Management Professional</span>
+        </div>
+        <div class="diploma current">
+          <span class="diploma-icon">🏅</span>
+          <span>SAFe 6.0 Agilist — Digital Badge</span>
+        </div>
+        <div class="diploma current">
+          <span class="diploma-icon">⚙️</span>
+          <span>Certified Scrum Master — Online Cert</span>
+        </div>
+        <div class="diploma current">
+          <span class="diploma-icon">☁️</span>
+          <span>AWS Solutions Architect — Cloud Cert</span>
+        </div>
+      </div>
+      <p class="cred-note">Credentials lived in wallets, LinkedIn profiles, and office walls. They proved a human had learned — and could be trusted to decide.</p>
+    </div>
+
+    <!-- Agent side -->
+    <div class="cred-panel agent" data-label="Agent Credentials">
+      <div class="cred-title">The Agent Era</div>
+      <div class="diploma-stack">
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">🤖</span>
+          <span>Agent-v2.1 — Deployment Scope: Production</span>
+        </div>
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">🔐</span>
+          <span>Tool Trust Level 3 — Cryptographic Cert</span>
+        </div>
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">📡</span>
+          <span>RAG Agent — Read/Write: approved repos only</span>
+        </div>
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">🧠</span>
+          <span>LLM Orchestrator — Guardrail-Compliant v4</span>
+        </div>
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">✅</span>
+          <span>CI/CD Robot — Rollback Authority Granted</span>
+        </div>
+        <div class="diploma agent-cert">
+          <span class="diploma-icon">🛡️</span>
+          <span>Audit Agent — Immutable Ledger Access</span>
+        </div>
+      </div>
+      <p class="cred-note">Agent credentials are machine-readable, scope-bounded, and time-limited. They do not hang on walls. They live in vaults, and they expire.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" class="manifesto">
+  <p class="manifesto-quote">"We don't replace the pilot.<br>We give them a <em>co-pilot</em> that never tires,<br>and teaches the plane to learn."</p>
+  <p class="manifesto-sub">— The DeliveryPilot Transformation Program</p>
+  <a href="https://deliverypilot.net" class="cta-btn"><span>Begin Your Transformation →</span></a>
+</section>
+
+<!-- FOOTER -->
+<div class="runway"></div>
+<div id="footer-placeholder"></div>
+
+<script src="../menu.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>
