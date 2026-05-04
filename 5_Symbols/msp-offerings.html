@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Managed Service Provider (MSP) Offerings - Enterprise-grade AI setup, deployment, and ongoing management services for organizations adopting Delivery Pilot.">
+    <meta name="keywords" content="managed services, MSP, enterprise AI setup, AI deployment, ongoing support, managed service provider, enterprise transformation, AI operations">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/msp-offerings.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Managed Service Provider Offerings | Delivery Pilot">
+    <meta property="og:description" content="Enterprise-grade AI setup, deployment, and ongoing management services for organizations adopting Delivery Pilot.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/msp-offerings.html">
+    <meta property="og:image" content="https://deliverypilot.net/images/msp/msp-service-overview.jpeg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Managed Service Provider Offerings">
+    <meta name="twitter:description" content="Enterprise-grade AI setup, deployment, and ongoing management services.">
+    <meta name="twitter:image" content="https://deliverypilot.net/images/msp/msp-service-overview.jpeg">
+    
+    <title>Managed Service Provider Offerings | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        /* Hero section styles */
+        .msp-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #2563eb 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .msp-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.2) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .msp-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .msp-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .msp-hero .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Visual showcase section */
+        .visual-showcase {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .visual-showcase .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .visual-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .visual-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .visual-card .caption {
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        /* Services section */
+        .services-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .services-section .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .services-section .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Benefits section */
+        .benefits-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .benefits-section .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Engagement models section */
+        .engagement-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .engagement-section .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .engagement-section .section-description {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .engagement-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .engagement-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .engagement-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+        }
+
+        .engagement-card.featured {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        .engagement-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .engagement-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .engagement-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .engagement-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .msp-hero h1 {
+                font-size: 2rem;
+            }
+
+            .msp-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .visual-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .engagement-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="msp-hero">
+        <div class="container">
+            <h1 data-i18n="msp.hero.title">Managed Service Provider Offerings</h1>
+            <p class="subtitle" data-i18n="msp.hero.subtitle">Enterprise-grade AI setup, deployment, and ongoing management services that transform how your organization delivers value.</p>
+            <p class="tagline" data-i18n="msp.hero.tagline">We handle the complexity so you can focus on the outcome.</p>
+        </div>
+    </section>
+
+    <!-- Visual Showcase Section -->
+    <section class="visual-showcase">
+        <div class="container">
+            <h2 class="section-title" data-i18n="msp.visuals.title">Our Managed Service Framework</h2>
+            <div class="visual-grid">
+                <div class="visual-card">
+                    <img src="images/msp/msp-service-overview.jpeg" alt="MSP Service Overview - Delivery Pilot Managed Services" loading="lazy">
+                    <p class="caption" data-i18n="msp.visuals.caption1">End-to-end managed services covering setup, deployment, and continuous optimization.</p>
+                </div>
+                <div class="visual-card">
+                    <img src="images/msp/msp-enterprise-setup.jpeg" alt="Enterprise AI Setup - Delivery Pilot Implementation" loading="lazy">
+                    <p class="caption" data-i18n="msp.visuals.caption2">Enterprise-ready infrastructure and AI agent configurations tailored to your environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="msp.services.title">What We Deliver</h2>
+            <p class="section-description" data-i18n="msp.services.description">Comprehensive managed services designed to accelerate your AI transformation while reducing operational risk and cost.</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 class="service-title" data-i18n="msp.service1.title">Enterprise AI Setup</h3>
+                    <p class="service-description" data-i18n="msp.service1.description">Complete setup and configuration of AI agents within your enterprise environment, including security hardening, datasource integration, and compliance validation.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service1.feature1">Infrastructure assessment and planning</li>
+                        <li data-i18n="msp.service1.feature2">Secure agent deployment</li>
+                        <li data-i18n="msp.service1.feature3">Datasource connectivity</li>
+                        <li data-i18n="msp.service1.feature4">Compliance and governance setup</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title" data-i18n="msp.service2.title">Ongoing Management</h3>
+                    <p class="service-description" data-i18n="msp.service2.description">Continuous monitoring, maintenance, and optimization of your AI agent fleet to ensure peak performance, security, and reliability.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service2.feature1">24/7 agent health monitoring</li>
+                        <li data-i18n="msp.service2.feature2">Performance optimization</li>
+                        <li data-i18n="msp.service2.feature3">Security patch management</li>
+                        <li data-i18n="msp.service2.feature4">Incident response and recovery</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3 class="service-title" data-i18n="msp.service3.title">Scaling & Evolution</h3>
+                    <p class="service-description" data-i18n="msp.service3.description">As your needs grow, we scale your AI capabilities, add new use cases, and evolve your agent configurations to match business demands.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service3.feature1">Use case expansion</li>
+                        <li data-i18n="msp.service3.feature2">Capacity scaling</li>
+                        <li data-i18n="msp.service3.feature3">Agent capability upgrades</li>
+                        <li data-i18n="msp.service3.feature4">Integration with new systems</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title" data-i18n="msp.service4.title">Security & Governance</h3>
+                    <p class="service-description" data-i18n="msp.service4.description">Enterprise-grade security management, access control, audit logging, and governance frameworks to keep your AI operations compliant and secure.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service4.feature1">Role-based access control (RBAC)</li>
+                        <li data-i18n="msp.service4.feature2">Audit trails and compliance reporting</li>
+                        <li data-i18n="msp.service4.feature3">Data privacy enforcement</li>
+                        <li data-i18n="msp.service4.feature4">Regular security assessments</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3 class="service-title" data-i18n="msp.service5.title">Team Enablement</h3>
+                    <p class="service-description" data-i18n="msp.service5.description">Training, documentation, and knowledge transfer to ensure your internal teams can collaborate effectively with the managed AI environment.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service5.feature1">Administrator training</li>
+                        <li data-i18n="msp.service5.feature2">End-user onboarding</li>
+                        <li data-i18n="msp.service5.feature3">Technical documentation</li>
+                        <li data-i18n="msp.service5.feature4">Ongoing support and coaching</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title" data-i18n="msp.service6.title">Reporting & Insights</h3>
+                    <p class="service-description" data-i18n="msp.service6.description">Regular reporting on agent performance, usage patterns, ROI metrics, and recommendations for continuous improvement.</p>
+                    <ul class="service-features">
+                        <li data-i18n="msp.service6.feature1">Monthly performance dashboards</li>
+                        <li data-i18n="msp.service6.feature2">ROI and efficiency metrics</li>
+                        <li data-i18n="msp.service6.feature3">Usage and adoption analytics</li>
+                        <li data-i18n="msp.service6.feature4">Strategic recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="msp.benefits.title">Why Choose Delivery Pilot MSP?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 class="benefit-title" data-i18n="msp.benefit1.title">Faster Time-to-Value</h3>
+                    <p class="benefit-description" data-i18n="msp.benefit1.description">Skip the learning curve. Our experts deploy and configure your AI environment in weeks, not months.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title" data-i18n="msp.benefit2.title">Predictable Costs</h3>
+                    <p class="benefit-description" data-i18n="msp.benefit2.description">Fixed monthly pricing eliminates surprise expenses and makes budgeting straightforward.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3 class="benefit-title" data-i18n="msp.benefit3.title">Reduced Risk</h3>
+                    <p class="benefit-description" data-i18n="msp.benefit3.description">Enterprise security expertise, compliance management, and proactive monitoring protect your operations.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3 class="benefit-title" data-i18n="msp.benefit4.title">Focus on Core Business</h3>
+                    <p class="benefit-description" data-i18n="msp.benefit4.description">Let us manage the AI infrastructure while your team focuses on delivering business outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Models Section -->
+    <section class="engagement-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="msp.engagement.title">Engagement Models</h2>
+            <p class="section-description" data-i18n="msp.engagement.description">Flexible service tiers designed to match your organization's size, complexity, and ambitions.</p>
+
+            <div class="engagement-cards">
+                <div class="engagement-card">
+                    <div class="engagement-icon">🌱</div>
+                    <h3 class="engagement-title" data-i18n="msp.engagement1.title">Foundation</h3>
+                    <p class="engagement-description" data-i18n="msp.engagement1.description">Perfect for teams starting their AI journey. Includes initial setup, basic monitoring, and quarterly reviews.</p>
+                </div>
+
+                <div class="engagement-card featured">
+                    <div class="engagement-badge" data-i18n="msp.engagement2.badge">Most Popular</div>
+                    <div class="engagement-icon">🚀</div>
+                    <h3 class="engagement-title" data-i18n="msp.engagement2.title">Professional</h3>
+                    <p class="engagement-description" data-i18n="msp.engagement2.description">Full-service management for growing enterprises. Includes advanced monitoring, priority support, and monthly optimization.</p>
+                </div>
+
+                <div class="engagement-card">
+                    <div class="engagement-icon">🏢</div>
+                    <h3 class="engagement-title" data-i18n="msp.engagement3.title">Enterprise</h3>
+                    <p class="engagement-description" data-i18n="msp.engagement3.description">Tailored for large organizations with complex requirements. Includes dedicated account management, custom integrations, and SLA guarantees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources Section -->
+    <section class="content-section" style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">📚 Learn More About Our Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <a href="enterprise-agent.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Enterprise Agent</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Deploy enterprise-ready AI agents with integrated datasources</p>
+                </a>
+                <a href="onboarding.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Onboarding</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Structured onboarding to get your teams productive quickly</p>
+                </a>
+                <a href="security.html" style="background: var(--bg-light); padding: 1.5rem; border-radius: 8px; text-decoration: none; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Security</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">How we protect your enterprise AI operations</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="msp.cta.title">Ready to Accelerate Your AI Transformation?</h2>
+            <p data-i18n="msp.cta.description">Let our managed services team handle the setup, operations, and optimization while you focus on delivering business value.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary" data-i18n="msp.cta.contact">Contact Us</a>
+                <a href="assessment.html" class="btn btn-secondary" data-i18n="msp.cta.assess">Start Assessment</a>
+                <a href="pricing.html" class="btn btn-secondary" data-i18n="msp.cta.pricing">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Managed Service Provider Offerings",
+      "provider": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "description": "Enterprise-grade AI setup, deployment, and ongoing management services for organizations adopting Delivery Pilot.",
+      "serviceType": "Managed AI Services",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "MSP Service Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Enterprise AI Setup"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ongoing Management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Scaling & Evolution"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Security & Governance"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://deliverypilot.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Managed Service Provider Offerings",
+          "item": "https://deliverypilot.net/msp-offerings.html"
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
