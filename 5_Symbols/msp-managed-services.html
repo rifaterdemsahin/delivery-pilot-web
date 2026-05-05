@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MSP Managed Service Provider - Real-time ML, Custom Models, Enterprise DSL, and Autocomplete functionality to leverage stakeholders and uplift skill gaps.">
+    <meta name="keywords" content="MSP, Managed Service Provider, Real-time ML, Custom AI Models, Enterprise DSL, AI Autocomplete, Skill Gap Uplifting, Enterprise AI">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/msp-managed-services.html">
+    
+    <title>MSP Managed Service Provider | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-blue: #00f2ff;
+            --deep-slate: #0f172a;
+        }
+
+        .msp-managed-hero {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .msp-managed-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/msp/msp-core-offering.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            filter: grayscale(100%) brightness(0.5);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid var(--primary-color);
+            color: var(--neon-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .msp-managed-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Core Offering Section */
+        .core-offering {
+            padding: 8rem 0;
+            background: #020617;
+            color: white;
+        }
+
+        .glass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .card-text {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Gap Section */
+        .skills-gap {
+            padding: 8rem 0;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .skills-content h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .skills-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+        }
+
+        .skill-check {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .skill-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-info p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .skills-visual img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* CTA Section */
+        .msp-cta {
+            padding: 6rem 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .msp-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .msp-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 968px) {
+            .msp-managed-hero h1 { font-size: 2.5rem; }
+            .split-section { grid-template-columns: 1fr; }
+            .glass-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="msp-managed-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag" data-i18n="msp.managed.tag">Core Managed Offering</span>
+                <h1 data-i18n="msp.managed.title">Enterprise AI Orchestration</h1>
+                <p class="hero-subtitle" data-i18n="msp.managed.subtitle">We provide real-time machine learning and custom models specifically tuned for your enterprise DNA.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="msp.managed.cta">Contact an Expert</a>
+                    <a href="assessment.html" class="btn btn-secondary" data-i18n="msp.managed.assess">Run Readiness Check</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-offering">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 1rem;" data-i18n="msp.core.title">The Future of Enterprise AI</h2>
+            <p class="section-description" style="color: #94a3b8; margin-bottom: 4rem;" data-i18n="msp.core.subtitle">Our MSP platform isn't just about support—it's about building a living, breathing AI nervous system for your business.</p>
+            
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <span class="card-icon">🧠</span>
+                    <h3 class="card-title" data-i18n="msp.core1.title">Real-time ML & Custom Models</h3>
+                    <p class="card-text" data-i18n="msp.core1.description">Deploy models that learn from your enterprise data in real-time. We don't just use generic LLMs; we build custom architectures that understand your specific domain, products, and processes.</p>
+                </div>
+
+                <div class="glass-card">
+                    <span class="card-icon">⌨️</span>
+                    <h3 class="card-title" data-i18n="msp.core2.title">Custom DSL & Autocomplete</h3>
+                    <p class="card-text" data-i18n="msp.core2.description">Enable your organization to create its own Domain Specific Language. Our real-time autocomplete functionality leverages this DSL to empower every stakeholder, from business analysts to senior architects.</p>
+                </div>
+
+                <div class="glass-card">
+                    <span class="card-icon">🤝</span>
+                    <h3 class="card-title" data-i18n="msp.core3.title">Stakeholder Leverage</h3>
+                    <p class="card-text" data-i18n="msp.core3.description">Bridging the communication gap. Our AI agents act as the connective tissue between departments, ensuring that every stakeholder can contribute to and benefit from the AI transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-gap">
+        <div class="container">
+            <div class="split-section">
+                <div class="skills-content">
+                    <h2 data-i18n="msp.skills.title">Uplifting the Skills Gap</h2>
+                    <p data-i18n="msp.skills.subtitle">Enterprise transformation fails when the skills gap is too wide. Our MSP approach doesn't just provide tools; it uplifts your entire workforce through integrated AI assistance.</p>
+                    
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills1.title">Interactive Guardrails</h4>
+                                <p data-i18n="msp.skills1.text">Real-time feedback and guidance within the custom DSL editor prevents common mistakes and accelerates learning.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills2.title">Contextual Onboarding</h4>
+                                <p data-i18n="msp.skills2.text">New employees are productive from day one by leveraging the autocomplete and DSL capabilities of the enterprise AI.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills3.title">Knowledge Democratization</h4>
+                                <p data-i18n="msp.skills3.text">Expert knowledge is captured in models and made accessible to every stakeholder via intuitive interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-visual">
+                    <img src="images/msp/msp-core-offering.png" alt="Enterprise AI Core Offering" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="msp-cta">
+        <div class="container">
+            <h2 data-i18n="msp.cta.title">Transform Your Enterprise Today</h2>
+            <p data-i18n="msp.cta.description">Partner with the Managed Service Provider that builds the future of your business through real-time AI leverage.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary" style="background: white; color: var(--primary-color);">Get Started</a>
+                <a href="pricing.html" class="btn btn-secondary">View Subscription Models</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

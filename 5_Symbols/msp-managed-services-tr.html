@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MSP Yönetilen Hizmet Sağlayıcı - Paydaşları güçlendirmek ve yetenek boşluklarını gidermek için gerçek zamanlı ML, Özel Modeller, Kurumsal DSL ve Otomatik Tamamlama işlevselliği.">
+    <meta name="keywords" content="MSP, Yönetilen Hizmet Sağlayıcı, Gerçek Zamanlı ML, Özel Yapay Zeka Modelleri, Kurumsal DSL, Yapay Zeka Otomatik Tamamlama, Yetenek Geliştirme, Kurumsal Yapay Zeka">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/msp-managed-services-tr.html">
+    
+    <title>MSP Yönetilen Hizmet Sağlayıcı | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-blue: #00f2ff;
+            --deep-slate: #0f172a;
+        }
+
+        .msp-managed-hero {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .msp-managed-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/msp/msp-core-offering.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+            filter: grayscale(100%) brightness(0.5);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid var(--primary-color);
+            color: var(--neon-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .msp-managed-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Core Offering Section */
+        .core-offering {
+            padding: 8rem 0;
+            background: #020617;
+            color: white;
+        }
+
+        .glass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .card-text {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Gap Section */
+        .skills-gap {
+            padding: 8rem 0;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .skills-content h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .skills-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+        }
+
+        .skill-check {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .skill-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-info p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .skills-visual img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* CTA Section */
+        .msp-cta {
+            padding: 6rem 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .msp-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .msp-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 968px) {
+            .msp-managed-hero h1 { font-size: 2.5rem; }
+            .split-section { grid-template-columns: 1fr; }
+            .glass-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="msp-managed-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag" data-i18n="msp.managed.tag">Temel Yönetilen Hizmet Teklifi</span>
+                <h1 data-i18n="msp.managed.title">Kurumsal Yapay Zeka Orkestrasyonu</h1>
+                <p class="hero-subtitle" data-i18n="msp.managed.subtitle">Kurumsal DNA'nıza özel olarak uyarlanmış, gerçek zamanlı makine öğrenimi ve özel modeller sunuyoruz.</p>
+                <div class="hero-buttons">
+                    <a href="contact-tr.html" class="btn btn-primary" data-i18n="msp.managed.cta">Bir Uzmanla Görüşün</a>
+                    <a href="assessment-tr.html" class="btn btn-secondary" data-i18n="msp.managed.assess">Hazırlık Kontrolü Yapın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-offering">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 1rem;" data-i18n="msp.core.title">Kurumsal Yapay Zekanın Geleceği</h2>
+            <p class="section-description" style="color: #94a3b8; margin-bottom: 4rem;" data-i18n="msp.core.subtitle">MSP platformumuz sadece destekten ibaret değildir; işletmeniz için yaşayan, nefes alan bir yapay zeka sinir sistemi inşa etmekle ilgilidir.</p>
+            
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <span class="card-icon">🧠</span>
+                    <h3 class="card-title" data-i18n="msp.core1.title">Gerçek Zamanlı ML ve Özel Modeller</h3>
+                    <p class="card-text" data-i18n="msp.core1.description">Kurumsal verilerinizden gerçek zamanlı olarak öğrenen modelleri konuşlandırın. Sadece genel LLM'leri kullanmıyoruz; özel alanınızı, ürünlerinizi ve süreçlerinizi anlayan özel mimariler inşa ediyoruz.</p>
+                </div>
+
+                <div class="glass-card">
+                    <span class="card-icon">⌨️</span>
+                    <h3 class="card-title" data-i18n="msp.core2.title">Özel DSL ve Otomatik Tamamlama</h3>
+                    <p class="card-text" data-i18n="msp.core2.description">Kuruluşunuzun kendi Etki Alanına Özel Dilini (DSL) oluşturmasını sağlayın. Gerçek zamanlı otomatik tamamlama işlevselliğimiz, iş analistlerinden kıdemli mimarlara kadar her paydaşı güçlendirmek için bu DSL'den yararlanır.</p>
+                </div>
+
+                <div class="glass-card">
+                    <span class="card-icon">🤝</span>
+                    <h3 class="card-title" data-i18n="msp.core3.title">Paydaş Kaldıracı</h3>
+                    <p class="card-text" data-i18n="msp.core3.description">İletişim kopukluğunu gideriyoruz. Yapay zeka ajanlarımız, departmanlar arasındaki bağlayıcı doku görevi görerek her paydaşın yapay zeka dönüşümüne katkıda bulunmasını ve bundan faydalanmasını sağlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-gap">
+        <div class="container">
+            <div class="split-section">
+                <div class="skills-content">
+                    <h2 data-i18n="msp.skills.title">Yetenek Boşluğunu Giderme</h2>
+                    <p data-i18n="msp.skills.subtitle">Yetenek boşluğu çok geniş olduğunda kurumsal dönüşüm başarısız olur. MSP yaklaşımımız sadece araçlar sağlamaz; entegre yapay zeka yardımıyla tüm iş gücünüzü geliştirir.</p>
+                    
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills1.title">Etkileşimli Koruma Rayları</h4>
+                                <p data-i18n="msp.skills1.text">Özel DSL editörü içindeki gerçek zamanlı geri bildirim ve rehberlik, yaygın hataları önler ve öğrenmeyi hızlandırır.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills2.title">Bağlamsal Onboarding</h4>
+                                <p data-i18n="msp.skills2.text">Yeni çalışanlar, kurumsal yapay zekanın otomatik tamamlama ve DSL yeteneklerinden yararlanarak ilk günden itibaren üretken olurlar.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-check">✓</span>
+                            <div class="skill-info">
+                                <h4 data-i18n="msp.skills3.title">Bilginin Demokratikleşmesi</h4>
+                                <p data-i18n="msp.skills3.text">Uzman bilgisi modellerde yakalanır ve sezgisel arayüzler aracılığıyla her paydaşın erişimine sunulur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-visual">
+                    <img src="images/msp/msp-core-offering.png" alt="Kurumsal Yapay Zeka Temel Teklifi" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="msp-cta">
+        <div class="container">
+            <h2 data-i18n="msp.cta.title">Kurumunuzu Bugün Dönüştürün</h2>
+            <p data-i18n="msp.cta.description">Gerçek zamanlı yapay zeka kaldıracıyla işinizin geleceğini inşa eden Yönetilen Hizmet Sağlayıcısı ile ortak olun.</p>
+            <div class="cta-buttons">
+                <a href="contact-tr.html" class="btn btn-primary" style="background: white; color: var(--primary-color);">Hemen Başlayın</a>
+                <a href="pricing-tr.html" class="btn btn-secondary">Abonelik Modellerini İnceleyin</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
