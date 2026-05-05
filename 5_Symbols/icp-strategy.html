@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ideal Customer Profile (ICP) Strategy - Explaining the 'Paid Problem' and the 'Prize' using Daniel Priestley's formula for Delivery Pilot.">
+    <meta name="keywords" content="ICP, Ideal Customer Profile, Daniel Priestley, Paid Problem, Prize, Business Strategy, AI Transformation, Delivery Excellence">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/icp-strategy.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ICP Strategy: Problem & Prize | Delivery Pilot">
+    <meta property="og:description" content="Unlock enterprise value by solving the 'Paid Problem' and achieving the 'Prize' with Delivery Pilot.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/icp-strategy.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>ICP Strategy: Problem & Prize | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --text-white: #ffffff;
+            --text-muted: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .icp-hero {
+            background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icp-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, #0f172a);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent-blue);
+            padding: 0.5rem 1.2rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .icp-hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icp-hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .formula-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 5rem;
+        }
+
+        .formula-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .formula-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .formula-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+        }
+
+        .formula-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .formula-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 33.33%;
+            width: 33.33%;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            z-index: -1;
+            display: none; /* Hidden on small screens, can be styled with SVG later */
+        }
+
+        .detailed-sections {
+            padding: 5rem 0;
+        }
+
+        .section-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .section-block:nth-child(even) {
+            direction: rtl;
+        }
+
+        .section-block:nth-child(even) .content-box {
+            direction: ltr;
+        }
+
+        .content-box h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            color: #e2e8f0;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .visual-element {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 32px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .visual-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .prize-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #7e22ce 100%);
+            padding: 6rem 0;
+            border-radius: 40px;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .prize-gradient h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4rem;
+            border-radius: 32px;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .btn-premium {
+            background: var(--accent-blue);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.6);
+            background: #2563eb;
+        }
+
+        @media (max-width: 1024px) {
+            .formula-container {
+                grid-template-columns: 1fr;
+                margin-top: 0;
+            }
+            
+            .section-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-block:nth-child(even) {
+                direction: ltr;
+            }
+        }
+
+        /* New Formula Styles */
+        .math-logic-section {
+            padding: 6rem 0;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin: 4rem 0;
+        }
+
+        .math-formula {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #fff;
+        }
+
+        .math-formula span {
+            color: var(--accent-blue);
+        }
+
+        .segments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .segment-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .segment-card:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: var(--accent-blue);
+        }
+
+        .segment-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="icp-hero">
+        <div class="container">
+            <span class="hero-badge">The Strategy Framework</span>
+            <h1>The Paid Problem <br>& The Prize</h1>
+            <p>Using the Daniel Priestley formula to define our Ideal Customer Profile (ICP) and the transformational journey we lead them through.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="formula-container">
+            <div class="formula-card">
+                <div class="icon">🎯</div>
+                <h3>The ICP</h3>
+                <p>High-stakes Delivery Leaders and MSP Executives navigating the complex intersection of AI and Enterprise Operations.</p>
+            </div>
+            <div class="formula-card">
+                <div class="icon">💸</div>
+                <h3>The Paid Problem</h3>
+                <p>Delivery Friction & AI Complexity. The costly gap between "having AI" and "delivering AI value" securely and at scale.</p>
+            </div>
+            <div class="formula-card">
+                <div class="icon">🏆</div>
+                <h3>The Prize</h3>
+                <p>The Autonomous Delivery Engine. A state of hyper-efficiency where delivery is automated, secure, and infinitely scalable.</p>
+            </div>
+        </div>
+
+        <div class="detailed-sections">
+            <!-- ICP Section -->
+            <div class="section-block">
+                <div class="content-box">
+                    <span class="hero-badge" style="color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3);">Step 1: Identification</span>
+                    <h2>Who is the Ideal Customer?</h2>
+                    <p>Our ICP consists of visionaries who understand that AI is not just a tool, but a paradigm shift. They are typically:</p>
+                    <ul class="feature-list">
+                        <li><strong>Enterprise Delivery Managers:</strong> Overwhelmed by legacy processes and manual overhead.</li>
+                        <li><strong>MSP Leadership:</strong> Looking to differentiate their offerings with AI-first frameworks.</li>
+                        <li><strong>CTOs & Transformation Leads:</strong> Tasked with "AI implementation" but facing security and talent roadblocks.</li>
+                    </ul>
+                </div>
+                <div class="visual-element">
+                    <img src="images/msp/msp-enterprise-setup.jpeg" alt="Ideal Customer Profile Target">
+                </div>
+            </div>
+
+            <!-- Problem Section -->
+            <div class="section-block">
+                <div class="content-box">
+                    <span class="hero-badge" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Step 2: The Pain Point</span>
+                    <h2>The "Paid Problem"</h2>
+                    <p>A "Paid Problem" is one that is so painful, organizations are actively budgeting to solve it. For our ICP, that problem is <strong>Delivery Friction</strong>.</p>
+                    <ul class="feature-list">
+                        <li><strong>The Cost of Delay:</strong> Slower releases mean lost market share and wasted engineering burn.</li>
+                        <li><strong>Shadow AI Risks:</strong> Teams using unvetted AI tools, creating massive security and compliance silos.</li>
+                        <li><strong>The Talent Gap:</strong> The inability to find or train engineers fast enough to handle AI-driven delivery.</li>
+                    </ul>
+                </div>
+                <div class="visual-element">
+                    <img src="images/msp/msp-service-overview.jpeg" alt="Solving the Paid Problem">
+                </div>
+            </div>
+
+            <!-- Prize Section -->
+            <div class="prize-gradient">
+                <div class="container">
+                    <span class="hero-badge" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">Step 3: The Ultimate Outcome</span>
+                    <h2>The Prize: Autonomous Excellence</h2>
+                    <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 2rem;">When the problem is solved, the ICP achieves a state of "Delivery Nirvana" — where AI agents handle the repetitive, the complex, and the risky.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left; padding: 0 2rem;">
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀 10x Speed</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">From weeks to hours for complex deployments.</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🛡️ Zero-Trust AI</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Complete governance over every agent interaction.</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈 Infinite Scale</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Scaling capacity without linear headcount growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathematical Logic Section -->
+            <div class="math-logic-section">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <span class="hero-badge">Step 4: The Calculus of Opportunity</span>
+                        <h2>The Mathematical Logic</h2>
+                        <p style="max-width: 700px; margin: 1rem auto;">We don't just guess; we calculate the ROI of AI transformation based on organizational complexity.</p>
+                    </div>
+
+                    <div class="math-formula">
+                        Value = (<span>Complexity</span> &times; <span>Urgency</span>) / <span>Efficiency</span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
+                        <div class="content-box">
+                            <h4 style="color: var(--accent-blue);">Complexity</h4>
+                            <p style="font-size: 0.9rem;">Density of delivery pipelines, channel noise, and multi-party stakeholder coordination.</p>
+                        </div>
+                        <div class="content-box">
+                            <h4 style="color: var(--accent-blue);">Urgency</h4>
+                            <p style="font-size: 0.9rem;">The "RAISE" pressure—Rapid AI Increases Skills Expectations in your specific market.</p>
+                        </div>
+                        <div class="content-box">
+                            <h4 style="color: var(--accent-blue);">Efficiency</h4>
+                            <p style="font-size: 0.9rem;">Current legacy bottlenecks and "Agile Red Tape" that slow down value delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Segmentation Section -->
+            <div style="padding: 6rem 0;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="hero-badge" style="color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3);">Step 5: Engagement Paths</span>
+                    <h2>Strategic ICP Segmentation</h2>
+                    <p>Tailored transformation paths based on organizational maturity and intent.</p>
+                </div>
+
+                <div class="segments-grid">
+                    <div class="segment-card">
+                        <span class="segment-tag">Skill Upgrading</span>
+                        <h3>Prosumer</h3>
+                        <p>Individual visionaries looking to bridge their personal skills gap and lead from within.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>Free Readiness Assessment</li>
+                            <li>YouTube Academy Access</li>
+                            <li>Self-Paced Learning</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card" style="border-color: var(--accent-blue); background: rgba(59, 130, 246, 0.05);">
+                        <span class="segment-tag">Team Transformation</span>
+                        <h3>Workshop</h3>
+                        <p>SME and Mid-market teams facing high collaboration friction and delivery delay.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>8-Hour Hands-on Simulations</li>
+                            <li>Agent Prototype Building</li>
+                            <li>Collaborative Workflows</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card">
+                        <span class="segment-tag">Enterprise Scale</span>
+                        <h3>Managed Service</h3>
+                        <p>Fortune 500 organizations requiring Zero-Trust security and infinite delivery scale.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>Custom Platform Licensing</li>
+                            <li>24/7 Agent Operations</li>
+                            <li>Governance & Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Ready to unlock the prize?</h2>
+                <p>Delivery Pilot is the bridge between your current reality and the prize of autonomous excellence.</p>
+                <div style="margin-top: 2.5rem;">
+                    <a href="assessment.html" class="btn-premium">Start Your Transformation</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem;"><a href="contact.html" style="color: var(--accent-blue);">Or book a strategy call</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

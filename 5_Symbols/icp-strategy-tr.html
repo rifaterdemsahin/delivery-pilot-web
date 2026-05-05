@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İdeal Müşteri Profili (ICP) Stratejisi - Daniel Priestley'nin formülünü kullanarak Delivery Pilot için 'Ücretli Problem' ve 'Ödül' açıklaması.">
+    <meta name="keywords" content="ICP, İdeal Müşteri Profili, Daniel Priestley, Ücretli Problem, Ödül, İş Stratejisi, AI Dönüşümü, Teslimat Mükemmelliği">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/icp-strategy-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ICP Stratejisi: Problem ve Ödül | Delivery Pilot">
+    <meta property="og:description" content="Delivery Pilot ile 'Ücretli Problemi' çözerek ve 'Ödüle' ulaşarak kurumsal değerin kilidini açın.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/icp-strategy-tr.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>ICP Stratejisi: Problem ve Ödül | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --text-white: #ffffff;
+            --text-muted: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .icp-hero {
+            background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icp-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, #0f172a);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent-blue);
+            padding: 0.5rem 1.2rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .icp-hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icp-hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .formula-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 5rem;
+        }
+
+        .formula-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .formula-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .formula-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+        }
+
+        .formula-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .formula-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .detailed-sections {
+            padding: 5rem 0;
+        }
+
+        .section-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .section-block:nth-child(even) {
+            direction: rtl;
+        }
+
+        .section-block:nth-child(even) .content-box {
+            direction: ltr;
+        }
+
+        .content-box h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .content-box p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            color: #e2e8f0;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .visual-element {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 32px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .visual-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .prize-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #7e22ce 100%);
+            padding: 6rem 0;
+            border-radius: 40px;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .prize-gradient h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4rem;
+            border-radius: 32px;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .btn-premium {
+            background: var(--accent-blue);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.6);
+            background: #2563eb;
+        }
+
+        @media (max-width: 1024px) {
+            .formula-container {
+                grid-template-columns: 1fr;
+                margin-top: 0;
+            }
+            
+            .section-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-block:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="icp-hero">
+        <div class="container">
+            <span class="hero-badge">Strateji Çerçevesi</span>
+            <h1>Ücretli Problem <br>& Ödül</h1>
+            <p>İdeal Müşteri Profilimizi (ICP) ve onları yönlendirdiğimiz dönüşüm yolculuğunu tanımlamak için Daniel Priestley formülünü kullanıyoruz.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="formula-container">
+            <div class="formula-card">
+                <div class="icon">🎯</div>
+                <h3>ICP</h3>
+                <p>AI ve Kurumsal Operasyonların karmaşık kesişim noktasında yol alan yüksek riskli Teslimat Liderleri ve MSP Yöneticileri.</p>
+            </div>
+            <div class="formula-card">
+                <div class="icon">💸</div>
+                <h3>Ücretli Problem</h3>
+                <p>Teslimat Sürtünmesi ve AI Karmaşıklığı. "AI'ya sahip olmak" ile "AI değerini" güvenli ve ölçeklenebilir şekilde sunmak arasındaki maliyetli boşluk.</p>
+            </div>
+            <div class="formula-card">
+                <div class="icon">🏆</div>
+                <h3>Ödül</h3>
+                <p>Otonom Teslimat Motoru. Teslimatın otomatik, güvenli ve sonsuz ölçeklenebilir olduğu bir hiper-verimlilik durumu.</p>
+            </div>
+        </div>
+
+        <div class="detailed-sections">
+            <!-- ICP Section -->
+            <div class="section-block">
+                <div class="content-box">
+                    <span class="hero-badge" style="color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3);">Adım 1: Tanımlama</span>
+                    <h2>İdeal Müşteri Kimdir?</h2>
+                    <p>ICP'miz, AI'nın sadece bir araç değil, bir paradigma değişimi olduğunu anlayan vizyonerlerden oluşur. Genellikle şunlardır:</p>
+                    <ul class="feature-list">
+                        <li><strong>Kurumsal Teslimat Yöneticileri:</strong> Eski süreçler ve manuel iş yükü altında ezilmiş.</li>
+                        <li><strong>MSP Liderliği:</strong> Tekliflerini AI öncelikli çerçevelerle farklılaştırmak isteyenler.</li>
+                        <li><strong>CTO'lar ve Dönüşüm Liderleri:</strong> "AI uygulaması" ile görevlendirilmiş ancak güvenlik ve yetenek engelleriyle karşılaşanlar.</li>
+                    </ul>
+                </div>
+                <div class="visual-element">
+                    <img src="images/msp/msp-enterprise-setup.jpeg" alt="İdeal Müşteri Profili Hedefi">
+                </div>
+            </div>
+
+            <!-- Problem Section -->
+            <div class="section-block">
+                <div class="content-box">
+                    <span class="hero-badge" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">Adım 2: Acı Noktası</span>
+                    <h2>"Ücretli Problem"</h2>
+                    <p>"Ücretli Problem", kurumların çözmek için aktif olarak bütçe ayırdığı kadar acı verici olan bir problemdir. ICP'miz için bu problem <strong>Teslimat Sürtünmesi</strong>'dir.</p>
+                    <ul class="feature-list">
+                        <li><strong>Gecikme Maliyeti:</strong> Daha yavaş sürümler, pazar payı kaybı ve boşa giden mühendislik maliyeti demektir.</li>
+                        <li><strong>Gölge AI Riskleri:</strong> Ekiplerin denetlenmemiş AI araçlarını kullanması, büyük güvenlik ve uyumluluk boşlukları yaratır.</li>
+                        <li><strong>Yetenek Boşluğu:</strong> AI odaklı teslimatı yönetecek mühendisleri yeterince hızlı bulamama veya eğitememe.</li>
+                    </ul>
+                </div>
+                <div class="visual-element">
+                    <img src="images/msp/msp-service-overview.jpeg" alt="Ücretli Problemi Çözmek">
+                </div>
+            </div>
+
+            <!-- Prize Section -->
+            <div class="prize-gradient">
+                <div class="container">
+                    <span class="hero-badge" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">Adım 3: Nihai Sonuç</span>
+                    <h2>Ödül: Otonom Mükemmellik</h2>
+                    <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 2rem;">Problem çözüldüğünde, ICP bir "Teslimat Nirvanası" durumuna ulaşır; AI ajanlarının tekrarlayan, karmaşık ve riskli işleri üstlendiği bir yer.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left; padding: 0 2rem;">
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀 10 Kat Hız</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Karmaşık dağıtımlar için haftalardan saatlere iniş.</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🛡️ Sıfır Güven AI</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Her ajan etkileşimi üzerinde tam yönetişim.</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈 Sonsuz Ölçek</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Doğrusal çalışan sayısı artışı olmadan kapasiteyi ölçeklendirme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Ödülün kilidini açmaya hazır mısınız?</h2>
+                <p>Delivery Pilot, mevcut gerçekliğiniz ile otonom mükemmellik ödülü arasındaki köprüdür.</p>
+                <div style="margin-top: 2.5rem;">
+                    <a href="assessment-tr.html" class="btn-premium">Dönüşümünüzü Başlatın</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem;"><a href="contact-tr.html" style="color: var(--accent-blue);">Veya bir strateji görüşmesi ayarlayın</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

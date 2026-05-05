@@ -51,7 +51,8 @@ const translations = {
             pricing: "💰 Pricing",
             useCasesDetailed: "🤖 AI Agent Use Cases",
             productionDelivery: "🚀 Production Delivery",
-            missionVision: "🎯 Mission & Vision"
+            missionVision: "🎯 Mission & Vision",
+            icpStrategy: "🎯 ICP Strategy"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1007,7 +1008,8 @@ const translations = {
             pricing: "💰 Fiyatlandırma",
             useCasesDetailed: "🤖 Yapay Zeka Ajanı Kullanım Alanları",
             productionDelivery: "🚀 Üretim Teslimatı",
-            missionVision: "🎯 Misyon & Vizyon"
+            missionVision: "🎯 Misyon & Vizyon",
+            icpStrategy: "🎯 ICP Stratejisi"
         },
         podcast: {
             title: "Delivery Pilot Podcast",

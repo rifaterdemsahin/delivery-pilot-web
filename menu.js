@@ -28,7 +28,8 @@ const navigationConfig = {
                 { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: '⚙️ How It Works' },
                 { href: 'index.html#use-cases', textKey: 'nav.useCases', text: '💼 Use Cases' },
                 { href: 'usecases.html', textKey: 'nav.useCasesDetailed', text: '🤖 AI Agent Use Cases' },
-                { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' }
+                { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' },
+                { href: 'icp-strategy.html', textKey: 'nav.icpStrategy', text: '🎯 ICP Strategy' }
             ]
         },
         {
@@ -132,7 +133,8 @@ const footerConfig = {
                 { type: 'link', href: 'index.html#features', textKey: 'footer.platform.features', text: 'Features' },
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },
                 { type: 'link', href: 'index.html#use-cases', textKey: 'footer.platform.useCases', text: 'Use Cases' },
-                { type: 'link', href: 'pricing.html', textKey: 'footer.platform.pricing', text: 'Pricing' }
+                { type: 'link', href: 'pricing.html', textKey: 'footer.platform.pricing', text: 'Pricing' },
+                { type: 'link', href: 'icp-strategy.html', textKey: 'nav.icpStrategy', text: 'ICP Strategy' }
             ]
         },
         {
