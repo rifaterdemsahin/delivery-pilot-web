@@ -53,7 +53,8 @@ const translations = {
             productionDelivery: "🚀 Production Delivery",
             missionVision: "🎯 Mission & Vision",
             icpStrategy: "🎯 ICP Strategy",
-            dynamicDocumentation: "📄 Dynamic Documentation"
+            dynamicDocumentation: "📄 Dynamic Documentation",
+            multiAgentOrchestrator: "🤖 Multi-Agent Orchestrator"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1011,7 +1012,8 @@ const translations = {
             productionDelivery: "🚀 Üretim Teslimatı",
             missionVision: "🎯 Misyon & Vizyon",
             icpStrategy: "🎯 ICP Stratejisi",
-            dynamicDocumentation: "📄 Dinamik Dokümantasyon"
+            dynamicDocumentation: "📄 Dinamik Dokümantasyon",
+            multiAgentOrchestrator: "🤖 Çoklu Ajan Orkestratörü"
         },
         podcast: {
             title: "Delivery Pilot Podcast",

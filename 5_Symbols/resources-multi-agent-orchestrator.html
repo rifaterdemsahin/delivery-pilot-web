@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transition from vendor-locked solo runners to scalable multi-agent orchestrator systems. Learn how to break the vendor silo and implement model-agnostic routing.">
+    <meta name="keywords" content="multi-agent orchestrator, AI agents, RAG pipeline, vendor lock-in, orchestration architecture, scalable systems, AI transformation">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-multi-agent-orchestrator.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Multi-Agent Orchestrator System | Delivery Pilot">
+    <meta property="og:description" content="Breaking the vendor silo with flexible RAG pipelines and multi-agent orchestration.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-multi-agent-orchestrator.html">
+    <meta property="og:image" content="https://deliverypilot.net/3_ui/multi_agent_orchestrator.png">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>Multi-Agent Orchestrator System | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        :root {
+            --problem-color: #ef4444;
+            --transition-color: #f59e0b;
+            --solution-color: #10b981;
+            --impact-color: #6366f1;
+        }
+
+        .orchestrator-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .orchestrator-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../3_ui/multi_agent_orchestrator.png') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .orchestrator-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-container {
+            max-width: 1000px;
+            margin: 2rem auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-container:hover img {
+            transform: scale(1.02);
+        }
+
+        .evolution-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .evolution-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid #ccc;
+        }
+
+        .evolution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .evolution-card.problem { border-top-color: var(--problem-color); background: #fffcfc; }
+        .evolution-card.transition { border-top-color: var(--transition-color); background: #fffdf7; }
+        .evolution-card.solution { border-top-color: var(--solution-color); background: #fcfdfc; }
+        .evolution-card.impact { border-top-color: var(--impact-color); background: #fcfcff; }
+
+        .card-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .problem .card-header { color: var(--problem-color); }
+        .transition .card-header { color: var(--transition-color); }
+        .solution .card-header { color: var(--solution-color); }
+        .impact .card-header { color: var(--impact-color); }
+
+        .evolution-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .evolution-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .evolution-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .evolution-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .problem .evolution-list li::before { color: var(--problem-color); }
+        .transition .evolution-list li::before { color: var(--transition-color); }
+        .solution .evolution-list li::before { color: var(--solution-color); }
+        .impact .evolution-list li::before { color: var(--impact-color); }
+
+        .connector {
+            position: absolute;
+            top: 50%;
+            right: -1rem;
+            transform: translateY(-50%);
+            z-index: 10;
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .evolution-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .connector {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .evolution-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .detail-section {
+            padding: 6rem 0;
+            background: #f8fafc;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 3rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-item p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            padding: 4rem;
+            border-radius: 32px;
+            text-align: center;
+            margin: 6rem 0;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .cta-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-box p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            background: white;
+            color: #4f46e5;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="orchestrator-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.02em;">Multi-Agent Orchestrator</h1>
+            <p style="font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">Breaking Vendor Silos and Evolving Ad-hoc Scripting into Scalable Orchestration Architecture</p>
+            
+            <div class="hero-image-container">
+                <img src="../3_ui/multi_agent_orchestrator.png" alt="Multi-Agent Orchestrator Architecture Diagram">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="evolution-grid">
+                <!-- The Problem -->
+                <div class="evolution-card problem">
+                    <div class="card-header">🔴 The Problem</div>
+                    <h3>Vendor-Locked Solo Runner</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Dependency & Anxiety:</strong> Total reliance on a single provider's closed ecosystem creates operational fragility.</li>
+                        <li><strong>Slave to Subscription:</strong> Trapped in single-vendor pricing models with limited negotiation leverage.</li>
+                        <li><strong>Fragile Automation:</strong> Simple scripts that break when vendor APIs or UI elements change.</li>
+                    </ul>
+                    <div class="connector">→</div>
+                </div>
+
+                <!-- The Transition -->
+                <div class="evolution-card transition">
+                    <div class="card-header">🟡 The Transition</div>
+                    <h3>Process Comparison</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Breaking the Silo:</strong> Actively migrating logic out of vendor-specific tools into controlled environments.</li>
+                        <li><strong>Ad-hoc to Pipeline:</strong> Moving from isolated scripting to a structured, <strong>Flexible RAG Pipeline</strong>.</li>
+                        <li><strong>Hybrid Strategy:</strong> Running legacy workflows alongside new agentic experiments.</li>
+                    </ul>
+                    <div class="connector">→</div>
+                </div>
+
+                <!-- The Solution -->
+                <div class="evolution-card solution">
+                    <div class="card-header">🟢 The Solution</div>
+                    <h3>Multi-Agent Orchestrator</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Control & Choice:</strong> Full ownership of the orchestration layer and decision-making logic.</li>
+                        <li><strong>Model-Agnostic Routing:</strong> Dynamically switch between LLMs based on cost, speed, or performance.</li>
+                        <li><strong>Scalable Systems:</strong> Purpose-built agents that handle specific sub-tasks within a unified system.</li>
+                    </ul>
+                    <div class="connector">→</div>
+                </div>
+
+                <!-- Engineering Impact -->
+                <div class="evolution-card impact">
+                    <div class="card-header">🔵 Engineering Impact</div>
+                    <h3>Scalable Systems</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Orchestration Architecture:</strong> Shift from "building tools" to "designing systems" that manage themselves.</li>
+                        <li><strong>Operational Velocity:</strong> Rapid deployment of new agents without rewriting core infrastructure.</li>
+                        <li><strong>Future-Proofing:</strong> A foundation that survives the inevitable rise and fall of individual AI vendors.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <h2 class="section-title">The Shift to Multi-Agent Orchestration</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4><span>🛡️</span> Risk Mitigation</h4>
+                        <p>Eliminate the catastrophic risk of vendor shutdown or sudden pricing spikes. By owning the orchestrator, you retain the ability to swap backend models in real-time without user disruption.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><span>🚀</span> Performance Optimization</h4>
+                        <p>Not every task requires a massive, expensive model. The orchestrator routes simple requests to lightweight models and complex reasoning to "frontier" models, optimizing for both speed and cost.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><span>🧱</span> Modular Intelligence</h4>
+                        <p>Instead of one "God Script" trying to do everything, deploy specialized agents for data extraction, verification, reporting, and notification. Each module is independently testable and upgradable.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><span>⚖️</span> Strategic Autonomy</h4>
+                        <p>Gain the freedom to build proprietary IP on top of an open-standard orchestration layer. Stop being a consumer of AI and start being a producer of AI-driven value.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Ready to Break the Vendor Silo?</h2>
+                <p>Transition your enterprise from ad-hoc scripting to a professional multi-agent orchestration architecture. Build systems that scale with your vision, not your vendor's limits.</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="assessment.html" class="btn-white">🚀 Run Maturity Assessment</a>
+                    <a href="contact.html" class="btn-white" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid white;">📧 Talk to an Architect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Multi-Agent Orchestrator System",
+      "description": "How to transition from vendor-locked ad-hoc scripting to a scalable, model-agnostic multi-agent orchestration architecture.",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net"
+      },
+      "image": "https://deliverypilot.net/3_ui/multi_agent_orchestrator.png",
+      "articleSection": "Resources",
+      "keywords": ["multi-agent orchestrator", "AI agents", "vendor lock-in", "RAG pipeline", "orchestration"]
+    }
+    </script>
+</body>
+</html>
