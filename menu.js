@@ -99,7 +99,8 @@ const navigationConfig = {
                 { href: 'resources-multi-party-investigation.html', textKey: 'nav.multiPartyInvestigation', text: '🔍 Multi-Party Investigation' },
                 { href: 'agent-security-benefits.html', textKey: 'nav.agentSecurity', text: '🔒 Agent Security Benefits' },
                 { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' },
-                { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' }
+                { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' },
+                { href: 'resources-dynamic-documentation-agentic.html', textKey: 'nav.dynamicDocumentation', text: '📄 Dynamic Documentation' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
@@ -165,6 +166,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-agile-red-tape.html', textKey: 'footer.resources.agileRedTape', text: 'Agile Red Tape' },
                 { type: 'link', href: 'employee-overload.html', textKey: 'footer.resources.employeeOverload', text: 'Employee Overload' },
                 { type: 'link', href: 'resources-single-skilled-engineers.html', textKey: 'footer.resources.singleSkilledEngineers', text: 'Single-Skilled Engineers' },
+                { type: 'link', href: 'resources-dynamic-documentation-agentic.html', textKey: 'nav.dynamicDocumentation', text: 'Dynamic Documentation' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'it_transformations.html', textKey: 'footer.company.itTransformations', text: 'IT Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },

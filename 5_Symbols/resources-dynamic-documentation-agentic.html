@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bridging the gap between static documentation and live system state with Agentic Coding and Human-in-the-loop orchestration.">
+    <meta name="keywords" content="dynamic documentation, agentic coding, devops, sre, human in the loop, operator pattern, enterprise documentation, AI transformation">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-dynamic-documentation-agentic.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dynamic Documentation & Agentic Orchestration | Delivery Pilot">
+    <meta property="og:description" content="Solve the documentation decay problem in high-speed enterprise environments using agentic systems and human-in-the-loop workflows.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-dynamic-documentation-agentic.html">
+    <meta property="og:image" content="https://deliverypilot.net/5_Symbols/images/dynamic-docs-hero.png">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>Dynamic Documentation & Agentic Orchestration | Delivery Pilot Resources</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        :root {
+            --accent-color: #00d2ff;
+            --accent-dark: #3a7bd5;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-premium {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/dynamic-docs-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-premium h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-premium .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-dark {
+            background: #0f172a;
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .operator-cycle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+        }
+
+        .cycle-step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cycle-step .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .hitl-box {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 2rem;
+            margin: 3rem 0;
+        }
+
+        .hitl-box h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .comparison-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent-color);
+        }
+
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .hero-premium h1 { font-size: 2.5rem; }
+            .operator-cycle { flex-direction: column; }
+            .arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-premium">
+        <div class="container">
+            <h1>Dynamic Documentation & Agentic Orchestration</h1>
+            <p class="subtitle">Closing the Documentation Gap in High-Velocity Operator Environments</p>
+            <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <a href="#problem" class="cta-button" style="background: var(--accent-color); color: #000;">The Problem</a>
+                <a href="#solution" class="cta-button" style="border: 1px solid white;">The Agentic Solution</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="section-dark" id="problem">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">The Documentation Decay Problem</h2>
+            <p style="text-align: center; opacity: 0.8; max-width: 700px; margin: 0 auto 4rem;">In modern enterprise environments, technology upgrades are constant. Human-written documentation is obsolete the moment it is published.</p>
+            
+            <div class="grid-3">
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">🐌</span>
+                    <h3>The Speed Constraint</h3>
+                    <p>Operators must upgrade systems frequently for security and performance. Manual documentation cannot keep pace with 10+ deployments per day.</p>
+                </div>
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">📉</span>
+                    <h3>Information Asymmetry</h3>
+                    <p>The "Live State" of the system and the "Documented State" diverge rapidly, leading to failed SRE investigations and dangerous operational assumptions.</p>
+                </div>
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">😫</span>
+                    <h3>Documentation Toil</h3>
+                    <p>Engineers spend up to 30% of their time updating wikis, diagrams, and READMEs instead of solving core architectural problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Agentic Vision -->
+    <section class="content-section" style="background: #fff; color: #333;" id="solution">
+        <div class="container">
+            <h2 style="text-align: center; color: #0f172a;">The Agentic Documentation Framework</h2>
+            <p style="text-align: center; margin-bottom: 4rem;">Moving from "Writing Docs" to "Orchestrating Knowledge" through AI Agents.</p>
+
+            <div class="operator-cycle" style="background: #f8fafc; color: #0f172a;">
+                <div class="cycle-step">
+                    <span class="icon">🔍</span>
+                    <h4>Monitor</h4>
+                    <p>Agents watch code commits, infra changes, and logs.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">🧩</span>
+                    <h4>Synthesize</h4>
+                    <p>Agents cross-reference changes with existing documentation.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">✍️</span>
+                    <h4>Draft</h4>
+                    <p>Agents generate updated diagrams, technical specs, and guides.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">👤</span>
+                    <h4>Human Review</h4>
+                    <p>Human-in-the-loop approves or refines the draft.</p>
+                </div>
+            </div>
+
+            <div class="hitl-box">
+                <h3>Human-in-the-Loop (HITL) Orchestration</h3>
+                <p>We don't remove the human; we elevate them. In our framework, agents do the <strong>Action</strong> (scanning code, writing markdown, generating Mermaid diagrams) while the human provides the <strong>Intent</strong> and <strong>Final Validation</strong>.</p>
+                <p style="margin-top: 1rem;">This ensures that documentation is not just "AI-generated noise" but <span class="highlight-text">Verified System Intelligence</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps & SRE Integration -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 style="text-align: center;">Integration across DevOps & SRE Cycles</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Traditional Limitation</th>
+                        <th>Agentic Potential</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Development</strong></td>
+                        <td>Jira tickets vs Code drift.</td>
+                        <td>Agents update specs in real-time based on PR content.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deployment</strong></td>
+                        <td>Release notes are manual and vague.</td>
+                        <td>Agents generate diff-based, impact-aware release documentation.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operations</strong></td>
+                        <td>Runbooks are 6 months out of date.</td>
+                        <td>Dynamic Runbooks: Agents update steps based on recent infra changes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE / Incident</strong></td>
+                        <td>Searching for "How this works" during a P0.</td>
+                        <td>Agents provide instant, up-to-second system architecture maps.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Business Value -->
+    <section class="content-section" style="background: #f1f5f9;">
+        <div class="container">
+            <div class="grid-3">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">100% Accuracy</h4>
+                    <p>Documentation is a living mirror of your production environment.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">Zero Toil</h4>
+                    <p>Engineers focus on code; Agents focus on the "Paperwork".</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">Compliance Ready</h4>
+                    <p>Continuous auditing through auto-documented change histories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Pages -->
+    <section class="related-pages" style="padding: 4rem 0; background: #0f172a; color: white;">
+        <div class="container">
+            <h3 style="text-align: center; margin-bottom: 3rem;">🔗 Explore the Agentic Ecosystem</h3>
+            <div class="related-links-grid">
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-human-in-the-loop.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🤝 Human-in-the-loop</h4>
+                        <p>Deep dive into why the human element is critical for agentic safety.</p>
+                    </a>
+                </div>
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-agentic-vs-automation.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🤖 Agentic vs Automation</h4>
+                        <p>Learn why simple scripts aren't enough for modern documentation.</p>
+                    </a>
+                </div>
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-sre-rollback-support.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🚨 SRE Rollback Support</h4>
+                        <p>How dynamic docs accelerate incident response and recovery.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

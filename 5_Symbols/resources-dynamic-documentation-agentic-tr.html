@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Statik dokümantasyon ile canlı sistem durumu arasındaki boşluğu Ajanatik Kodlama ve İnsan Denetimli (HITL) orkestrasyon ile kapatın.">
+    <meta name="keywords" content="dinamik dokümantasyon, ajanatik kodlama, devops, sre, insan denetimi, operator pattern, kurumsal dokümantasyon, yapay zeka dönüşümü">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-dynamic-documentation-agentic-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dinamik Dokümantasyon ve Ajanatik Orkestrasyon | Delivery Pilot">
+    <meta property="og:description" content="Yüksek hızlı kurumsal ortamlarda dokümantasyon eskimesi sorununu ajanatik sistemler ve insan denetimli iş akışlarıyla çözün.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-dynamic-documentation-agentic-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/5_Symbols/images/dynamic-docs-hero.png">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>Dinamik Dokümantasyon ve Ajanatik Orkestrasyon | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        :root {
+            --accent-color: #00d2ff;
+            --accent-dark: #3a7bd5;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-premium {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/dynamic-docs-hero.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-premium h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-premium .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-dark {
+            background: #0f172a;
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .operator-cycle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+        }
+
+        .cycle-step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cycle-step .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .hitl-box {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 2rem;
+            margin: 3rem 0;
+        }
+
+        .hitl-box h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .comparison-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent-color);
+        }
+
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .hero-premium h1 { font-size: 2.5rem; }
+            .operator-cycle { flex-direction: column; }
+            .arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-premium">
+        <div class="container">
+            <h1>Dinamik Dokümantasyon ve Ajanatik Orkestrasyon</h1>
+            <p class="subtitle">Yüksek Hızlı Operatör Ortamlarında Dokümantasyon Boşluğunu Kapatmak</p>
+            <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <a href="#problem" class="cta-button" style="background: var(--accent-color); color: #000;">Sorun</a>
+                <a href="#solution" class="cta-button" style="border: 1px solid white;">Ajanatik Çözüm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sorun Bölümü -->
+    <section class="section-dark" id="problem">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Dokümantasyon Eskimesi Sorunu</h2>
+            <p style="text-align: center; opacity: 0.8; max-width: 700px; margin: 0 auto 4rem;">Modern kurumsal ortamlarda teknoloji güncellemeleri süreklidir. İnsan tarafından yazılan dokümantasyon, yayınlandığı anda eskimiş olur.</p>
+            
+            <div class="grid-3">
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">🐌</span>
+                    <h3>Hız Kısıtı</h3>
+                    <p>Operatörler güvenlik ve performans için sistemleri sık sık güncellemelidir. Manuel dokümantasyon günde 10+ dağıtım yapılan hıza ayak uyduramaz.</p>
+                </div>
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">📉</span>
+                    <h3>Bilgi Asimetrisi</h3>
+                    <p>Sistemin "Canlı Durumu" ile "Dokümante Edilmiş Durumu" hızla birbirinden uzaklaşır; bu da hatalı SRE incelemelerine ve tehlikeli operasyonel varsayımlara yol açar.</p>
+                </div>
+                <div class="glass-card">
+                    <span style="font-size: 3rem;">😫</span>
+                    <h3>Dokümantasyon Yükü</h3>
+                    <p>Mühendisler zamanlarının %30'unu temel mimari sorunları çözmek yerine viki, diyagram ve README dosyalarını güncellemekle harcarlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ajanatik Vizyon -->
+    <section class="content-section" style="background: #fff; color: #333;" id="solution">
+        <div class="container">
+            <h2 style="text-align: center; color: #0f172a;">Ajanatik Dokümantasyon Çerçevesi</h2>
+            <p style="text-align: center; margin-bottom: 4rem;">"Doküman Yazmaktan" Yapay Zeka Ajanları Aracılığıyla "Bilgi Orkestrasyonuna" Geçiş.</p>
+
+            <div class="operator-cycle" style="background: #f8fafc; color: #0f172a;">
+                <div class="cycle-step">
+                    <span class="icon">🔍</span>
+                    <h4>İzle</h4>
+                    <p>Ajanlar kod değişikliklerini, altyapı değişimlerini ve logları izler.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">🧩</span>
+                    <h4>Sentezle</h4>
+                    <p>Ajanlar değişiklikleri mevcut dokümantasyonla çapraz kontrol eder.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">✍️</span>
+                    <h4>Taslak Oluştur</h4>
+                    <p>Ajanlar güncel diyagramlar, teknik özellikler ve kılavuzlar üretir.</p>
+                </div>
+                <span class="arrow">➡</span>
+                <div class="cycle-step">
+                    <span class="icon">👤</span>
+                    <h4>İnsan İncelemesi</h4>
+                    <p>İnsan denetimi (HITL), taslağı onaylar veya iyileştirir.</p>
+                </div>
+            </div>
+
+            <div class="hitl-box">
+                <h3>İnsan Denetimli (HITL) Orkestrasyon</h3>
+                <p>İnsanı devreden çıkarmıyoruz; onu yükseltiyoruz. Çerçevemizde ajanlar <strong>Eylemi</strong> (kod tarama, markdown yazma, Mermaid diyagramı oluşturma) yaparken, insan <strong>Niyeti</strong> ve <strong>Final Onayını</strong> sağlar.</p>
+                <p style="margin-top: 1rem;">Bu, dokümantasyonun sadece "AI tarafından üretilmiş gürültü" değil, <span class="highlight-text">Doğrulanmış Sistem Zekası</span> olmasını sağlar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps ve SRE Entegrasyonu -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 style="text-align: center;">DevOps ve SRE Döngülerinde Entegrasyon</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aşama</th>
+                        <th>Geleneksel Kısıt</th>
+                        <th>Ajanatik Potansiyel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Geliştirme</strong></td>
+                        <td>Jira biletleri vs Kod uyumsuzluğu.</td>
+                        <td>Ajanlar, PR içeriğine göre teknik özellikleri gerçek zamanlı günceller.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dağıtım</strong></td>
+                        <td>Sürüm notları manuel ve belirsizdir.</td>
+                        <td>Ajanlar, fark tabanlı ve etki farkındalıklı sürüm dokümantasyonu üretir.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operasyonlar</strong></td>
+                        <td>İş akışları (Runbooks) 6 ay geriden gelir.</td>
+                        <td>Dinamik Runbook'lar: Ajanlar adımları son altyapı değişikliklerine göre günceller.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE / Olay Yönetimi</strong></td>
+                        <td>Kritik hatalarda "Bu nasıl çalışıyordu" araması.</td>
+                        <td>Ajanlar anlık, saniyesi saniyesine güncel mimari haritaları sunar.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- İş Değeri -->
+    <section class="content-section" style="background: #f1f5f9;">
+        <div class="container">
+            <div class="grid-3">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">%100 Doğruluk</h4>
+                    <p>Dokümantasyon, üretim ortamınızın canlı bir aynasıdır.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">Sıfır Angarya</h4>
+                    <p>Mühendisler koda odaklanır; Ajanlar "kağıt işlerine" odaklanır.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--accent-dark);">Uyumluluğa Hazır</h4>
+                    <p>Otomatik dokümante edilen değişim geçmişleri ile sürekli denetim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İlgili Sayfalar -->
+    <section class="related-pages" style="padding: 4rem 0; background: #0f172a; color: white;">
+        <div class="container">
+            <h3 style="text-align: center; margin-bottom: 3rem;">🔗 Ajanatik Ekosistemi Keşfedin</h3>
+            <div class="related-links-grid">
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-human-in-the-loop-tr.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🤝 İnsan Denetimi (HITL)</h4>
+                        <p>Ajan güvenliği için insan faktörünün neden kritik olduğuna derinlemesine bakış.</p>
+                    </a>
+                </div>
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-agentic-vs-automation-tr.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🤖 Ajanatik vs Otomasyon</h4>
+                        <p>Basit betiklerin modern dokümantasyon için neden yetersiz olduğunu öğrenin.</p>
+                    </a>
+                </div>
+                <div class="related-link-card" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">
+                    <a href="resources-sre-rollback-support-tr.html" style="color: white;">
+                        <h4 style="color: var(--accent-color);">🚨 SRE Geri Alma Desteği</h4>
+                        <p>Dinamik dokümanların olay müdahalesini ve kurtarmayı nasıl hızlandırdığı.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scriptler -->
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
