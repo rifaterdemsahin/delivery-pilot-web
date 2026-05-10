@@ -101,7 +101,8 @@ const navigationConfig = {
                 { href: 'resources-single-skilled-engineers.html', textKey: 'nav.singleSkilledEngineers', text: '⚔️ Single-Skilled Engineers' },
                 { href: 'resources-complex-delivery-agents.html', textKey: 'nav.complexDeliveryAgents', text: '☸️ Complex Delivery Agents' },
                 { href: 'resources-dynamic-documentation-agentic.html', textKey: 'nav.dynamicDocumentation', text: '📄 Dynamic Documentation' },
-                { href: 'resources-multi-agent-orchestrator.html', textKey: 'nav.multiAgentOrchestrator', text: '🤖 Multi-Agent Orchestrator' }
+                { href: 'resources-multi-agent-orchestrator.html', textKey: 'nav.multiAgentOrchestrator', text: '🤖 Multi-Agent Orchestrator' },
+                { href: 'resources-executive-transformation.html', textKey: 'nav.executiveTransformation', text: '🚀 Executive Transformation' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
@@ -169,6 +170,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-single-skilled-engineers.html', textKey: 'footer.resources.singleSkilledEngineers', text: 'Single-Skilled Engineers' },
                 { type: 'link', href: 'resources-dynamic-documentation-agentic.html', textKey: 'nav.dynamicDocumentation', text: 'Dynamic Documentation' },
                 { type: 'link', href: 'resources-multi-agent-orchestrator.html', textKey: 'nav.multiAgentOrchestrator', text: 'Multi-Agent Orchestrator' },
+                { type: 'link', href: 'resources-executive-transformation.html', textKey: 'nav.executiveTransformation', text: 'Executive Transformation' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'it_transformations.html', textKey: 'footer.company.itTransformations', text: 'IT Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
