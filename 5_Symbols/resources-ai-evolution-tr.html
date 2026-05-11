@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yazılım geliştirmede yapay zekanın evrimi, basit yardımdan tam ölçekli orkestrasyona geçişi temsil ediyor.">
+    <meta name="keywords" content="Yapay Zeka Olgunluğu, Ajanik Mühendislik, Yazılım Geliştirme, Otonom Orkestrasyon">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/resources-ai-evolution-tr.html">
+    
+    <meta property="og:title" content="Mühendislikte Yapay Zeka Evrimi | Delivery Pilot">
+    <meta property="og:description" content="Basit yardımdan tam ölçekli otonom orkestrasyona geçiş.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/resources-ai-evolution-tr.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+    
+    <title>Mühendislikte Yapay Zeka Evrimi | Delivery Pilot Kaynaklar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        :root {
+            --stage1-color: #3b82f6; /* Blue */
+            --stage2-color: #a855f7; /* Purple */
+            --stage3-color: #f59e0b; /* Amber */
+            --stage4-color: #10b981; /* Emerald */
+        }
+
+        .evolution-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .evolution-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .svg-container {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .evolution-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .evolution-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .evolution-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .evolution-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid #ccc;
+        }
+
+        .evolution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .evolution-card.stage-1 { border-top-color: var(--stage1-color); background: #f0f9ff; }
+        .evolution-card.stage-2 { border-top-color: var(--stage2-color); background: #faf5ff; }
+        .evolution-card.stage-3 { border-top-color: var(--stage3-color); background: #fffbeb; }
+        .evolution-card.stage-4 { border-top-color: var(--stage4-color); background: #f0fdf4; }
+
+        .card-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stage-1 .card-header { color: var(--stage1-color); }
+        .stage-2 .card-header { color: var(--stage2-color); }
+        .stage-3 .card-header { color: var(--stage3-color); }
+        .stage-4 .card-header { color: var(--stage4-color); }
+
+        .evolution-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .evolution-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .evolution-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .evolution-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stage-1 .evolution-list li::before { color: var(--stage1-color); }
+        .stage-2 .evolution-list li::before { color: var(--stage2-color); }
+        .stage-3 .evolution-list li::before { color: var(--stage3-color); }
+        .stage-4 .evolution-list li::before { color: var(--stage4-color); }
+
+        .singularity-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 4rem;
+            border-radius: 32px;
+            text-align: center;
+            margin: 4rem 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .singularity-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #38bdf8;
+        }
+
+        .singularity-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="evolution-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.02em;">Yapay Zeka Olgunluğunun Evrimi</h1>
+            <p style="font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">Mühendislikte Basit Yardımdan Tam Ölçekli Otonom Orkestrasyona Geçiş</p>
+            
+            <div class="svg-container">
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Connection Lines -->
+                    <path d="M 100 150 L 300 150" stroke="url(#grad1)" stroke-width="4" stroke-dasharray="8,8" fill="none" />
+                    <path d="M 300 150 L 500 150" stroke="url(#grad2)" stroke-width="4" stroke-dasharray="8,8" fill="none" />
+                    <path d="M 500 150 L 700 150" stroke="url(#grad3)" stroke-width="4" stroke-dasharray="8,8" fill="none" />
+
+                    <!-- Nodes -->
+                    <circle cx="100" cy="150" r="40" fill="#3b82f6" opacity="0.2"/>
+                    <circle cx="100" cy="150" r="30" fill="#3b82f6"/>
+                    <text x="100" y="155" font-family="Arial" font-size="24" fill="white" text-anchor="middle">1</text>
+                    <text x="100" y="215" font-family="Arial" font-weight="bold" font-size="14" fill="#cbd5e1" text-anchor="middle">Yardımcı Pilot</text>
+                    <text x="100" y="235" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">2022-2024</text>
+
+                    <circle cx="300" cy="150" r="45" fill="#a855f7" opacity="0.2"/>
+                    <circle cx="300" cy="150" r="35" fill="#a855f7"/>
+                    <text x="300" y="155" font-family="Arial" font-size="24" fill="white" text-anchor="middle">2</text>
+                    <text x="300" y="220" font-family="Arial" font-weight="bold" font-size="14" fill="#cbd5e1" text-anchor="middle">Prototipleme</text>
+                    <text x="300" y="240" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">2025</text>
+
+                    <circle cx="500" cy="150" r="50" fill="#f59e0b" opacity="0.2"/>
+                    <circle cx="500" cy="150" r="40" fill="#f59e0b"/>
+                    <text x="500" y="157" font-family="Arial" font-size="24" fill="white" text-anchor="middle">3</text>
+                    <text x="500" y="225" font-family="Arial" font-weight="bold" font-size="14" fill="#cbd5e1" text-anchor="middle">Sistem Farkındalığı</text>
+                    <text x="500" y="245" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">Geç 2025-2026</text>
+
+                    <circle cx="700" cy="150" r="60" fill="#10b981" opacity="0.3"/>
+                    <circle cx="700" cy="150" r="45" fill="#10b981"/>
+                    <text x="700" y="157" font-family="Arial" font-size="24" fill="white" text-anchor="middle">4</text>
+                    <text x="700" y="235" font-family="Arial" font-weight="bold" font-size="16" fill="#cbd5e1" text-anchor="middle">Otonom</text>
+                    <text x="700" y="255" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">2026 &amp; Ötesi</text>
+
+                    <!-- Emojis inside the circles -->
+                    <text x="100" y="110" font-size="20" text-anchor="middle">⌨️</text>
+                    <text x="300" y="105" font-size="22" text-anchor="middle">🎨</text>
+                    <text x="500" y="95" font-size="24" text-anchor="middle">🧩</text>
+                    <text x="700" y="85" font-size="28" text-anchor="middle">🤖</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="evolution-grid">
+                
+                <!-- Stage 1 -->
+                <div class="evolution-card stage-1">
+                    <div class="card-header">⌨️ Aşama 1: (2022 – 2024)</div>
+                    <h3>Kademeli Yardımcı Pilotluk (Co-Piloting)</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Konsept:</strong> Yapay zeka, mevcut desenlere dayanarak sonraki kod satırlarını tahmin eden gelişmiş bir otomatik tamamlama aracı olarak hareket eder.</li>
+                        <li><strong>İş Akışı:</strong> Mühendisler, önerileri manuel olarak inceleyip "Tab" tuşuyla geçiş yaparak ana yazarlar olarak kalırlar.</li>
+                        <li><strong>Etki:</strong> Tuş vuruşlarını azaltır ve sözdizimine yardımcı olarak günlük çıktıya sınırlı ama yararlı bir destek sağlar.</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="evolution-card stage-2">
+                    <div class="card-header">🎨 Aşama 2: (2025)</div>
+                    <h3>Niyet Odaklı Prototipleme</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Konsept:</strong> Genellikle "vibe coding" (his kodlaması) olarak adlandırılan bu aşama, geliştiricilerin istenen bir özelliği sade bir dille tanımlamasına ve işlevsel komut dosyaları oluşturmasına olanak tanır.</li>
+                        <li><strong>İş Akışı:</strong> Odak, sözdizimi yazmaktan <strong>niyeti</strong> tanımlamaya kayar. Hızlı "eskizler" veya kavram kanıtları için mükemmeldir.</li>
+                        <li><strong>Ödünleşim:</strong> Hızlı olmasına rağmen, oluşturulan kod genellikle karmaşık sistemler için gereken sağlamlıktan, güvenlik derinliğinden veya uzun vadeli sürdürülebilirlikten yoksundur.</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="evolution-card stage-3">
+                    <div class="card-header">🧩 Aşama 3: (Geç 2025 – 2026)</div>
+                    <h3>Sistem Farkındalıklı Mühendislik</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Konsept:</strong> Odak, bireysel istemlerden <strong>mimarinin hizalanmasına</strong> kayar. Başarı, yapay zekaya "büyük resmi" ne kadar iyi beslediğinize bağlıdır.</li>
+                        <li><strong>İş Akışı:</strong> Mühendisler, yapay zekanın tüm kod tabanını, dahili kütüphaneleri ve tasarım kısıtlamalarını anladığından emin olarak bağlam yöneticisi olarak görev yapar.</li>
+                        <li><strong>Etki:</strong> Yapay zeka, yalnızca işlevsel olmakla kalmayıp mevcut kurumsal ekosisteme kusursuz bir şekilde uyan kodlar üretir.</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="evolution-card stage-4">
+                    <div class="card-header">🤖 Aşama 4: (2026 &amp; Ötesi)</div>
+                    <h3>Otonom Orkestrasyon</h3>
+                    <ul class="evolution-list">
+                        <li><strong>Konsept:</strong> <strong>Ajanik Mühendislik</strong> dönemi. Geliştiricinin rolü, yapay zeka işgücünün "Baş Mimarı"na dönüşür.</li>
+                        <li><strong>İş Akışı:</strong> Tüm modülleri otonom olarak planlayabilen, yürütebilen ve test edebilen özelleşmiş yapay zeka ajanlarından oluşan bir filoyu yönetirsiniz.</li>
+                        <li><strong>Yeni Standart:</strong> <strong>"Devret, İncele, Sahip Çık."</strong> Mühendis, temel sözdiziminden ziyade sistem genelindeki mantığa ve nihai sorumluluğa odaklanır.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- The Vision Box -->
+            <div class="singularity-box">
+                <h2>🌌 Nihai Paradigma Değişimi</h2>
+                <p>
+                    Tamamen otonom mimarilere geçiş yaparken, yazılım mühendisliğinin sınırları radikal bir şekilde genişleyecek. <strong>Kurumdaki herkes, geleneksel DevOps'tan yapay zeka ile Robotik'e geçecek ve burada tekillik (singularity) dünyasının gerçeğinde faaliyet göstereceğiz.</strong> Artık sadece uygulamalar kodlamıyoruz; etrafımızdaki fiziksel ve dijital dünyayla etkileşime giren ve onu yeniden şekillendiren zeki ajanları orkestre ediyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
