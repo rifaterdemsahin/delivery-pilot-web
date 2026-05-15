@@ -11,335 +11,861 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Onboarding Page -->
+
+    <!-- Core Pages -->
+    <url>
+        <loc>https://deliverypilot.net/index.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/onboarding.html</loc>
         <lastmod>2024-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <!-- Assessment Page -->
+
     <url>
         <loc>https://deliverypilot.net/assessment.html</loc>
         <lastmod>2024-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <!-- Founder Page -->
-    <url>
-        <loc>https://deliverypilot.net/founder.html</loc>
-        <lastmod>2024-12-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Previous Customers Page -->
-    <url>
-        <loc>https://deliverypilot.net/previous-customers.html</loc>
-        <lastmod>2024-12-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Success Stories Page -->
-    <url>
-        <loc>https://deliverypilot.net/success-stories.html</loc>
-        <lastmod>2024-12-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Pricing Page -->
+
     <url>
         <loc>https://deliverypilot.net/pricing.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <!-- Contact Page -->
+
+    <url>
+        <loc>https://deliverypilot.net/workshops.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/contact.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- FAQ Page -->
+
     <url>
         <loc>https://deliverypilot.net/faq.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Partners Page -->
+
+    <url>
+        <loc>https://deliverypilot.net/founder.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/previous-customers.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/success-stories.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/partners.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Transformations Page -->
+
     <url>
         <loc>https://deliverypilot.net/transformations.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Agile Transformation Page -->
+
     <url>
         <loc>https://deliverypilot.net/agile-transformation.html</loc>
         <lastmod>2024-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Podcast Page -->
-    <url>
-        <loc>https://deliverypilot.net/podcast.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Knowledge Transfer (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-knowledge-transfer.html</loc>
-        <lastmod>2024-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Knowledge Transfer (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-knowledge-transfer-tr.html</loc>
-        <lastmod>2024-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Work vs Robots (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
-        <lastmod>2024-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Work vs Robots (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
-        <lastmod>2024-12-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Enterprise Agent Implementation Page -->
+
     <url>
         <loc>https://deliverypilot.net/enterprise-agent.html</loc>
         <lastmod>2024-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Junior Engineer Training Page (English) -->
+
     <url>
         <loc>https://deliverypilot.net/junior-engineer-training.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Junior Engineer Training Page (Turkish) -->
+
     <url>
-        <loc>https://deliverypilot.net/junior-engineer-training-tr.html</loc>
+        <loc>https://deliverypilot.net/delivery-pilot-methodology.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/podcast.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/security.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/delivery-pilot-concept.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/usecases.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/usecase-production-delivery.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/icp-strategy.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/msp-offerings.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/msp-managed-services.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/mission-vision.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/certified-professional.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/12-step-programme.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/upskilling_pathways.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/comprehensive_analysis.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/consulting-transformation.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/it_transformations.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/dashboard.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/signin.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/partner-presentation.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/employee-overload.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Governance Examples (English) -->
+
+    <url>
+        <loc>https://deliverypilot.net/agent-security-benefits.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Resources Pages -->
+    <url>
+        <loc>https://deliverypilot.net/resources.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-knowledge-transfer.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/resources-governance-examples.html</loc>
         <lastmod>2024-12-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Governance Examples (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-governance-examples-tr.html</loc>
-        <lastmod>2024-12-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Paradigm Shift (English) -->
+
     <url>
         <loc>https://deliverypilot.net/resources-paradigm-shift.html</loc>
-    <!-- Resources: Agent Security Benefits -->
-    <url>
-        <loc>https://deliverypilot.net/agent-security-benefits.html</loc>
-    <!-- Resources: Why Build Agents (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-why-build-agents.html</loc>
-    <!-- Resources: Work vs Robots (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
         <lastmod>2024-12-16</lastmod>
-    <!-- Resources: Task Handover Challenge (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-task-handover-challenge.html</loc>
-    <!-- Security Page -->
-    <url>
-        <loc>https://deliverypilot.net/security.html</loc>
-    <!-- Delivery Pilot Concept Page -->
-    <url>
-        <loc>https://deliverypilot.net/delivery-pilot-concept.html</loc>
-    <!-- Resources: Work vs Robots (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
-        <lastmod>2024-12-15</lastmod>
-    <!-- Resources: Documentation Efficiency (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-documentation-efficiency.html</loc>
-        <lastmod>2025-12-17</lastmod>
-    <!-- Resources: Access & Security Silos (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-access-security-silos.html</loc>
-    <!-- Employee Overload Awareness Page -->
-    <url>
-        <loc>https://deliverypilot.net/employee-overload.html</loc>
-        <lastmod>2024-12-17</lastmod>
-        <changefreq>weekly</changefreq>
-    <!-- Resources: Work vs Robots (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
-        <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Work vs Robots (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots.html</loc>
-    <!-- Resources: Work vs Robots (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
-        <lastmod>2024-12-16</lastmod>
-        <lastmod>2024-12-15</lastmod>
-        <lastmod>2024-12-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Workshops as Simulations -->
-    <url>
-        <loc>https://deliverypilot.net/resources-workshops-as-simulations.html</loc>
-        <lastmod>2024-12-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Resources: Human-in-the-Loop -->
-    <url>
-        <loc>https://deliverypilot.net/resources-human-in-the-loop.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Workshops Page -->
-    <url>
-        <loc>https://deliverypilot.net/workshops.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    <!-- Resources: Agentic vs Automation (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-agentic-vs-automation.html</loc>
-    <!-- Resources: Task Handover Challenge (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-task-handover-challenge-tr.html</loc>
-    <!-- Resources: Acronym Pressure (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-acronym-pressure.html</loc>
-    <!-- Resources: Humans vs Agents (English) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-humans-vs-agents.html</loc>
-    <!-- Resources: Root Cause Analysis (English) -->
+
     <url>
         <loc>https://deliverypilot.net/resources-root-cause-analysis.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <!-- Resources: Root Cause Analysis (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-root-cause-analysis-tr.html</loc>
-        <lastmod>2024-12-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    <!-- Delivery Pilot Methodology Page -->
-    <url>
-        <loc>https://deliverypilot.net/delivery-pilot-methodology.html</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    <!-- Resources: Agent Automation (English) -->
+
     <url>
         <loc>https://deliverypilot.net/resources-agent-automation.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Why Build Agents (Turkish) -->
+
     <url>
-        <loc>https://deliverypilot.net/resources-why-build-agents-tr.html</loc>
-    <!-- Resources: Agentic vs Automation (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-agentic-vs-automation-tr.html</loc>
-    <!-- Resources: Acronym Pressure (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-acronym-pressure-tr.html</loc>
-    <!-- Resources: Documentation Efficiency (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-documentation-efficiency-tr.html</loc>
-        <lastmod>2025-12-17</lastmod>
-    <!-- Resources: Access & Security Silos (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-access-security-silos-tr.html</loc>
-    <!-- Resources: Humans vs Agents (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-humans-vs-agents-tr.html</loc>
-    <!-- Resources: Agent Automation (Turkish) -->
-    <url>
-        <loc>https://deliverypilot.net/resources-agent-automation-tr.html</loc>
+        <loc>https://deliverypilot.net/resources-agentic-vs-automation.html</loc>
         <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Multi-Party Investigation (English) -->
+
+    <url>
+        <loc>https://deliverypilot.net/resources-acronym-pressure.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-airgapped-challenges.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-access-security-silos.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-job-satisfaction-agents.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-humans-vs-agents.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-agile-red-tape.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/resources-multi-party-investigation.html</loc>
         <lastmod>2026-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Resources: Multi-Party Investigation (Turkish) -->
+
+    <url>
+        <loc>https://deliverypilot.net/resources-single-skilled-engineers.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-complex-delivery-agents.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-dynamic-documentation-agentic.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-multi-agent-orchestrator.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-executive-transformation.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-ai-evolution.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-task-handover-challenge.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-documentation-efficiency.html</loc>
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-sre-rollback-support.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-workshops-as-simulations.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-training-vs-simulation.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-human-in-the-loop.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-bidirectional-links.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-vibe-programming.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-repetitive-tasks-vs-agents.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-bmad.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Turkish Pages -->
+    <url>
+        <loc>https://deliverypilot.net/index-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/onboarding-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/assessment-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/pricing-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/workshops-tr.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/contact-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/faq-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/founder-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/previous-customers-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/success-stories-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/agile-transformation-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/enterprise-agent-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/junior-engineer-training-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/delivery-pilot-methodology-tr.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/podcast-tr.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/security-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/delivery-pilot-concept-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/usecases-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/usecase-production-delivery-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/icp-strategy-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/msp-offerings-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/msp-managed-services-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/mission-vision-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/certified-professional-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/transformations-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/dashboard-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/signin-tr.html</loc>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/employee-overload-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Turkish Resource Pages -->
+    <url>
+        <loc>https://deliverypilot.net/resources-tr.html</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-knowledge-transfer-tr.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-work-vs-robots-tr.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-governance-examples-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-paradigm-shift-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-root-cause-analysis-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-agent-automation-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-agentic-vs-automation-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-acronym-pressure-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-airgapped-challenges-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-access-security-silos-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-job-satisfaction-agents-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-humans-vs-agents-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://deliverypilot.net/resources-multi-party-investigation-tr.html</loc>
         <lastmod>2026-01-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-dynamic-documentation-agentic-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-executive-transformation-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-ai-evolution-tr.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-why-build-agents-tr.html</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-task-handover-challenge-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-documentation-efficiency-tr.html</loc>
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-sre-rollback-support-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-workshops-as-simulations-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-human-in-the-loop-tr.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-bidirectional-links-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-vibe-programming-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://deliverypilot.net/resources-complex-delivery-agents-tr.html</loc>
+        <lastmod>2024-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
