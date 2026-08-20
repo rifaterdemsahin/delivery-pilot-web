@@ -65,6 +65,7 @@ const navigationConfig = {
                 { href: 'it_transformations.html', textKey: 'nav.itTransformations', text: '💡 IT Transformations' },
                 { href: 'consulting-transformation.html', textKey: 'nav.consultingTransformation', text: '🔄 Consulting Transformation' },
                 { href: 'partners.html', textKey: 'nav.partners', text: '🤝 Partners' },
+                { href: 'claude-partner-ai-professional.html', textKey: 'nav.claudePartner', text: '⚡ Claude Partner & AI Professional' },
                 { href: 'partner-presentation.html', textKey: 'nav.partnerPresentation', text: '🎤 Partner Presentation' },
                 { href: 'security.html', textKey: 'nav.security', text: '🔒 Security' }
             ]
@@ -74,6 +75,7 @@ const navigationConfig = {
             textKey: 'nav.resources',
             submenu: [
                 { href: 'resources.html', textKey: 'nav.becomeDeliveryPilot', text: '✈️ Become a Delivery Pilot' },
+                { href: 'claude-partner-ai-professional.html', textKey: 'nav.claudePartnerResource', text: '⚡ Claude Partner & Use Case' },
                 { href: 'podcast.html', textKey: 'nav.podcast', text: '🎙️ Podcast' },
                 { href: 'resources-bidirectional-links.html', textKey: 'nav.bidirectionalLinks', text: '🔗 Bidirectional Links' },
                 { href: 'resources-root-cause-analysis.html', textKey: 'nav.rootCauseAnalysis', text: '🔍 Root Cause Analysis' },
@@ -178,6 +180,7 @@ const footerConfig = {
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'it_transformations.html', textKey: 'footer.company.itTransformations', text: 'IT Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
+                { type: 'link', href: 'claude-partner-ai-professional.html', textKey: 'nav.claudePartner', text: 'Claude Partner' },
                 { type: 'link', href: 'contact.html', textKey: 'footer.company.contact', text: 'Contact' }
             ]
         }
