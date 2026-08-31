@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive list of the last 50 added and updated pages, resources, and frameworks on Delivery Pilot.">
+    <meta name="keywords" content="delivery pilot, recent updates, last pages, site index, change history, AI transformation, updates">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/recent-updates.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Last 50 Added & Updated Pages | Delivery Pilot">
+    <meta property="og:description" content="Comprehensive list of the last 50 added and updated pages, resources, and frameworks on Delivery Pilot.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/recent-updates.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Last 50 Added & Updated Pages | Delivery Pilot">
+    <meta name="twitter:description" content="Comprehensive list of the last 50 added and updated pages, resources, and frameworks on Delivery Pilot.">
+    
+    <title>Last 50 Added & Updated Pages | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        .updates-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 4.5rem 0 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .updates-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .updates-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .updates-hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: #cbd5e1;
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .stats-banner {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .stat-chip {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-chip strong {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        .updates-controls-section {
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .controls-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .search-bar-container {
+            position: relative;
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .search-bar-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem 0.9rem 2.8rem;
+            border-radius: 12px;
+            border: 2px solid #cbd5e1;
+            font-size: 1rem;
+            background: #ffffff;
+            color: #1e293b;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .search-bar-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+
+        .search-icon-inside {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: #94a3b8;
+            pointer-events: none;
+        }
+
+        .filter-buttons-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+            border-color: #94a3b8;
+        }
+
+        .filter-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+        }
+
+        .updates-content-section {
+            padding: 3.5rem 0 5rem;
+            background: #f1f5f9;
+            min-height: 60vh;
+        }
+
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .update-card {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .update-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.09);
+            border-color: #cbd5e1;
+        }
+
+        .update-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 0.5rem;
+        }
+
+        .badges-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .badge-added {
+            background: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+
+        .badge-updated {
+            background: #e0f2fe;
+            color: #0369a1;
+            border: 1px solid #bae6fd;
+        }
+
+        .category-badge {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .update-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .update-card-title {
+            font-size: 1.25rem;
+            margin: 0.25rem 0 0.75rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .update-card-title a {
+            color: #1e293b;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .update-card-title a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .update-card-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .update-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        .page-index {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #94a3b8;
+        }
+
+        .card-action-link {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: gap 0.2s ease, color 0.2s ease;
+        }
+
+        .card-action-link:hover {
+            color: #1d4ed8;
+            gap: 0.45rem;
+        }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px dashed #cbd5e1;
+            color: #64748b;
+            display: none;
+        }
+
+        .empty-state h3 {
+            font-size: 1.3rem;
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .updates-hero h1 {
+                font-size: 2.1rem;
+            }
+            .updates-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-buttons-row {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <header class="updates-hero">
+        <div class="container">
+            <h1>🕒 Recently Added & Updated Pages</h1>
+            <p class="subtitle">Explore the latest 50 published and updated pages, resources, frameworks, and strategies across Delivery Pilot.</p>
+            <div class="stats-banner">
+                <div class="stat-chip">
+                    <span>📑 Pages Listed:</span>
+                    <strong>50</strong>
+                </div>
+                <div class="stat-chip">
+                    <span>📅 Latest Update:</span>
+                    <strong>2026-08-20</strong>
+                </div>
+                <div class="stat-chip">
+                    <span>✨ Recent Additions:</span>
+                    <strong>29</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="updates-controls-section">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="search-bar-container">
+                    <span class="search-icon-inside">🔍</span>
+                    <input type="text" id="updates-filter-input" class="search-bar-input" placeholder="Search recent pages by title or keyword..." aria-label="Filter updates">
+                </div>
+                <div class="filter-buttons-row">
+                    <button class="filter-btn active" data-filter="all">All (50)</button>
+                    <button class="filter-btn" data-filter="added">✨ Newly Added</button>
+                    <button class="filter-btn" data-filter="updated">🔄 Updated</button>
+                    <button class="filter-btn" data-filter="resources">📚 Resources</button>
+                    <button class="filter-btn" data-filter="services">🛠️ Services</button>
+                    <button class="filter-btn" data-filter="company">🏢 Company</button>
+                    <button class="filter-btn" data-filter="platform">💻 Platform</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="updates-content-section">
+        <div class="container">
+            <div class="updates-grid" id="updates-grid">
+                
+      <article class="update-card" data-category="company" data-type="added" data-title="become an ai professional & claude partner" data-desc="become an ai professional & claude partner with delivery pilot. eliminate long teams triage calls, overcome kubernetes release silos, and replace repetitive firefighting with autonomous ai agent loops. join our skool community.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-08-20</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="claude-partner-ai-professional.html">Become an AI Professional & Claude Partner</a>
+        </h3>
+        <p class="update-card-desc">Become an AI Professional & Claude Partner with Delivery Pilot. Eliminate long Teams triage calls, overcome Kubernetes release silos, and replace repetitive firefighting with autonomous AI agent loops. Join our Skool community.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#1</span>
+          <a href="claude-partner-ai-professional.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="platform" data-type="updated" data-title="pricing - ai transformation services" data-desc="delivery pilot pricing for ai transformation services. free assessments, affordable workshop sessions starting at $500, and enterprise solutions. transparent pricing with no hidden fees.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Platform</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-08-20</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="pricing.html">Pricing - AI Transformation Services</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot pricing for AI transformation services. Free assessments, affordable workshop sessions starting at $500, and enterprise solutions. Transparent pricing with no hidden fees.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#2</span>
+          <a href="pricing.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="roadmap for community-driven growth" data-desc="roadmap for community-driven growth: from viral social content and skool community enrollment to professional certification, independent contracting, and 10-year joint company building.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-08-20</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="roadmap-vision.html">Roadmap for Community-Driven Growth</a>
+        </h3>
+        <p class="update-card-desc">Roadmap for Community-Driven Growth: From viral social content and Skool community enrollment to professional certification, independent contracting, and 10-year joint company building.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#3</span>
+          <a href="roadmap-vision.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="topluluk odaklı büyüme yol haritası" data-desc="topluluk odaklı büyüme yol haritası: popüler videolardan skool topluluğuna, profesyonel sertifikasyondan bağımsız yükleniciliğe ve 10 yıllık ortak şirket inşasına uzanan 5 aşamalı vizyonumuz.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-08-20</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="roadmap-vision-tr.html">Topluluk Odaklı Büyüme Yol Haritası</a>
+        </h3>
+        <p class="update-card-desc">Topluluk Odaklı Büyüme Yol Haritası: Popüler videolardan Skool topluluğuna, profesyonel sertifikasyondan bağımsız yükleniciliğe ve 10 yıllık ortak şirket inşasına uzanan 5 aşamalı vizyonumuz.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#4</span>
+          <a href="roadmap-vision-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="bmad: break through agile delivery" data-desc="traditional agile and safe frameworks are creating increasing chaos. discover bmad — break through agile delivery — a framework that solves the real problems instead of adding more process.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-15</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-bmad.html">BMAD: Break Through Agile Delivery</a>
+        </h3>
+        <p class="update-card-desc">Traditional Agile and SAFe frameworks are creating increasing chaos. Discover BMAD — Break Through Agile Delivery — a framework that solves the real problems instead of adding more process.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#5</span>
+          <a href="resources-bmad.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="ai evolution in engineering" data-desc="the evolution of ai in software development represents a shift from simple assistance to full-scale orchestration.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-11</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-ai-evolution.html">AI Evolution in Engineering</a>
+        </h3>
+        <p class="update-card-desc">The evolution of AI in software development represents a shift from simple assistance to full-scale orchestration.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#6</span>
+          <a href="resources-ai-evolution.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="mühendislikte yapay zeka evrimi" data-desc="yazılım geliştirmede yapay zekanın evrimi, basit yardımdan tam ölçekli orkestrasyona geçişi temsil ediyor.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-11</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-ai-evolution-tr.html">Mühendislikte Yapay Zeka Evrimi</a>
+        </h3>
+        <p class="update-card-desc">Yazılım geliştirmede yapay zekanın evrimi, basit yardımdan tam ölçekli orkestrasyona geçişi temsil ediyor.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#7</span>
+          <a href="resources-ai-evolution-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="executive transformation: mastering software & hardware" data-desc="discover why executive transformation in the ai revolution requires mastering both software and hardware, moving beyond traditional workshops to achieve singularity.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-10</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-executive-transformation.html">Executive Transformation: Mastering Software & Hardware</a>
+        </h3>
+        <p class="update-card-desc">Discover why executive transformation in the AI revolution requires mastering both software and hardware, moving beyond traditional workshops to achieve singularity.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#8</span>
+          <a href="resources-executive-transformation.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="yönetici dönüşümü: yazılım ve donanıma hakim olmak" data-desc="yapay zeka devriminde yönetici dönüşümünün neden hem yazılım hem de donanıma hakim olmayı gerektirdiğini ve tekilliğe ulaşmak için geleneksel atölye çalışmalarının ötesine nasıl geçileceğini keşfedin.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-10</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-executive-transformation-tr.html">Yönetici Dönüşümü: Yazılım ve Donanıma Hakim Olmak</a>
+        </h3>
+        <p class="update-card-desc">Yapay zeka devriminde yönetici dönüşümünün neden hem yazılım hem de donanıma hakim olmayı gerektirdiğini ve tekilliğe ulaşmak için geleneksel atölye çalışmalarının ötesine nasıl geçileceğini keşfedin.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#9</span>
+          <a href="resources-executive-transformation-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="dinamik dokümantasyon ve ajanatik orkestrasyon" data-desc="statik dokümantasyon ile canlı sistem durumu arasındaki boşluğu ajanatik kodlama ve i̇nsan denetimli (hitl) orkestrasyon ile kapatın.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-07</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-dynamic-documentation-agentic-tr.html">Dinamik Dokümantasyon ve Ajanatik Orkestrasyon</a>
+        </h3>
+        <p class="update-card-desc">Statik dokümantasyon ile canlı sistem durumu arasındaki boşluğu Ajanatik Kodlama ve İnsan Denetimli (HITL) orkestrasyon ile kapatın.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#10</span>
+          <a href="resources-dynamic-documentation-agentic-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="dynamic documentation & agentic orchestration" data-desc="bridging the gap between static documentation and live system state with agentic coding and human-in-the-loop orchestration.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-07</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-dynamic-documentation-agentic.html">Dynamic Documentation & Agentic Orchestration</a>
+        </h3>
+        <p class="update-card-desc">Bridging the gap between static documentation and live system state with Agentic Coding and Human-in-the-loop orchestration.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#11</span>
+          <a href="resources-dynamic-documentation-agentic.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="multi-agent orchestrator system" data-desc="transition from vendor-locked solo runners to scalable multi-agent orchestrator systems. learn how to break the vendor silo and implement model-agnostic routing.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-07</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-multi-agent-orchestrator.html">Multi-Agent Orchestrator System</a>
+        </h3>
+        <p class="update-card-desc">Transition from vendor-locked solo runners to scalable multi-agent orchestrator systems. Learn how to break the vendor silo and implement model-agnostic routing.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#12</span>
+          <a href="resources-multi-agent-orchestrator.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="platform" data-type="added" data-title="icp strategy: problem & prize" data-desc="ideal customer profile (icp) strategy - explaining the">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Platform</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="icp-strategy.html">ICP Strategy: Problem & Prize</a>
+        </h3>
+        <p class="update-card-desc">Ideal Customer Profile (ICP) Strategy - Explaining the</p>
+        <div class="update-card-footer">
+          <span class="page-index">#13</span>
+          <a href="icp-strategy.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="platform" data-type="added" data-title="icp stratejisi: problem ve ödül" data-desc="i̇deal müşteri profili (icp) stratejisi - daniel priestley">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Platform</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="icp-strategy-tr.html">ICP Stratejisi: Problem ve Ödül</a>
+        </h3>
+        <p class="update-card-desc">İdeal Müşteri Profili (ICP) Stratejisi - Daniel Priestley</p>
+        <div class="update-card-footer">
+          <span class="page-index">#14</span>
+          <a href="icp-strategy-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="updated" data-title="managed service provider offerings" data-desc="managed service provider (msp) offerings - enterprise-grade ai setup, deployment, and ongoing management services for organizations adopting delivery pilot.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="msp-offerings.html">Managed Service Provider Offerings</a>
+        </h3>
+        <p class="update-card-desc">Managed Service Provider (MSP) Offerings - Enterprise-grade AI setup, deployment, and ongoing management services for organizations adopting Delivery Pilot.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#15</span>
+          <a href="msp-offerings.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="added" data-title="msp managed service provider" data-desc="msp managed service provider - real-time ml, custom models, enterprise dsl, and autocomplete functionality to leverage stakeholders and uplift skill gaps.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="msp-managed-services.html">MSP Managed Service Provider</a>
+        </h3>
+        <p class="update-card-desc">MSP Managed Service Provider - Real-time ML, Custom Models, Enterprise DSL, and Autocomplete functionality to leverage stakeholders and uplift skill gaps.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#16</span>
+          <a href="msp-managed-services.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="added" data-title="msp yönetilen hizmet sağlayıcı" data-desc="msp yönetilen hizmet sağlayıcı - paydaşları güçlendirmek ve yetenek boşluklarını gidermek için gerçek zamanlı ml, özel modeller, kurumsal dsl ve otomatik tamamlama işlevselliği.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="msp-managed-services-tr.html">MSP Yönetilen Hizmet Sağlayıcı</a>
+        </h3>
+        <p class="update-card-desc">MSP Yönetilen Hizmet Sağlayıcı - Paydaşları güçlendirmek ve yetenek boşluklarını gidermek için gerçek zamanlı ML, Özel Modeller, Kurumsal DSL ve Otomatik Tamamlama işlevselliği.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#17</span>
+          <a href="msp-managed-services-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="updated" data-title="msp yönetilen hizmet teklifleri" data-desc="msp yönetilen hizmet teklifleri - delivery pilot">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-05-05</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="msp-offerings-tr.html">MSP Yönetilen Hizmet Teklifleri</a>
+        </h3>
+        <p class="update-card-desc">MSP Yönetilen Hizmet Teklifleri - Delivery Pilot</p>
+        <div class="update-card-footer">
+          <span class="page-index">#18</span>
+          <a href="msp-offerings-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="🤝 ortak sunumu" data-desc="delivery pilot ortak sunumu — müşteriler için ai dönüşümü. metodolojimizi, hizmetlerimizi, yatırım getirimizi ve ortaklık modelimizi güvenle sunun.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-03-11</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="partner-presentation-tr.html">🤝 Ortak Sunumu</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot Ortak Sunumu — Müşteriler için AI Dönüşümü. Metodolojimizi, hizmetlerimizi, yatırım getirimizi ve ortaklık modelimizi güvenle sunun.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#19</span>
+          <a href="partner-presentation-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="it transformations: waterfall to agile to ai" data-desc="it transformations: from waterfall to agile to ai — how the craft of software delivery evolved through three eras, and what it means for your organisation.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-03-11</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="it_transformations.html">IT Transformations: Waterfall to Agile to AI</a>
+        </h3>
+        <p class="update-card-desc">IT Transformations: From Waterfall to Agile to AI — how the craft of software delivery evolved through three eras, and what it means for your organisation.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#20</span>
+          <a href="it_transformations.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="🤝 partner presentation" data-desc="delivery pilot partner presentation — ai transformation for customers. showcase our methodology, services, roi and partnership model with confidence.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-27</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="partner-presentation.html">🤝 Partner Presentation</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot Partner Presentation — AI Transformation for Customers. Showcase our methodology, services, ROI and partnership model with confidence.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#21</span>
+          <a href="partner-presentation.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="updated" data-title="10-step ai workshop process" data-desc="collaborative simulation workshops - hands-on learning where participants build ai agent solutions together. 10-step process for secure, explainable ai products with practical experience in real-world scenarios.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-27</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="workshops.html">10-Step AI Workshop Process</a>
+        </h3>
+        <p class="update-card-desc">Collaborative Simulation Workshops - Hands-on learning where participants build AI agent solutions together. 10-step process for secure, explainable AI products with practical experience in real-world scenarios.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#22</span>
+          <a href="workshops.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="added" data-title="12 step programme: continuous assessment roadmap" data-desc="12 step programme: continuous assessment roadmap. progress through 9 ai learning stages from vibe programming to ai & cyber security. the end goal is an intelligent agile sdlc agent that transforms your organization.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-27</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="12-step-programme.html">12 Step Programme: Continuous Assessment Roadmap</a>
+        </h3>
+        <p class="update-card-desc">12 Step Programme: Continuous Assessment Roadmap. Progress through 9 AI learning stages from Vibe Programming to AI & Cyber Security. The end goal is an Intelligent Agile SDLC Agent that transforms your organization.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#23</span>
+          <a href="12-step-programme.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="added" data-title="classical training vs simulation workshops" data-desc="classical training vs simulation workshops: understand the key difference between teacher-led training where everyone learns the same thing, and simulation workshops where each person follows their own curiosity and learns through self-directed exploration.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-27</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-training-vs-simulation.html">Classical Training vs Simulation Workshops</a>
+        </h3>
+        <p class="update-card-desc">Classical Training vs Simulation Workshops: Understand the key difference between teacher-led training where everyone learns the same thing, and simulation workshops where each person follows their own curiosity and learns through self-directed exploration.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#24</span>
+          <a href="resources-training-vs-simulation.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="empowering ai agent delivery | skills assessments, workshops & certification" data-desc="delivery pilot is a comprehensive program that empowers professionals to deliver ai agent-based solutions effectively through skills gap assessments, collaborative simulation workshops, and pilot certification with focus on technical debt management and security compliance.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-27</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="index.html">Empowering AI Agent Delivery | Skills Assessments, Workshops & Certification</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot is a comprehensive program that empowers professionals to deliver AI agent-based solutions effectively through skills gap assessments, collaborative simulation workshops, and pilot certification with focus on technical debt management and security compliance.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#25</span>
+          <a href="index.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="agents in complex delivery systems" data-desc="why agents are essential for complex delivery systems: without agents it is impossible to debug and monitor kubernetes, openshift and other complex enterprise environments at scale.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-19</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-complex-delivery-agents.html">Agents in Complex Delivery Systems</a>
+        </h3>
+        <p class="update-card-desc">Why agents are essential for complex delivery systems: Without agents it is impossible to debug and monitor Kubernetes, OpenShift and other complex enterprise environments at scale.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#26</span>
+          <a href="resources-complex-delivery-agents.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="karmaşık teslimat sistemlerinde agentlar" data-desc="karmaşık teslimat sistemlerinde agentların neden gerekli olduğu: agentlar olmadan kubernetes, openshift ve kurumsal ortamları ölçekte hata ayıklamak ve izlemek imkansızdır.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-19</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-complex-delivery-agents-tr.html">Karmaşık Teslimat Sistemlerinde Agentlar</a>
+        </h3>
+        <p class="update-card-desc">Karmaşık teslimat sistemlerinde agentların neden gerekli olduğu: Agentlar olmadan Kubernetes, OpenShift ve kurumsal ortamları ölçekte hata ayıklamak ve izlemek imkansızdır.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#27</span>
+          <a href="resources-complex-delivery-agents-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="become a build secure apps" data-desc="learn to build secure apps with on-premise data. become a delivery pilot and master application lifecycles with a focus on security and enterprise data protection.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-15</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources.html">Become a Build Secure Apps</a>
+        </h3>
+        <p class="update-card-desc">Learn to build secure apps with on-premise data. Become a Delivery Pilot and master application lifecycles with a focus on security and enterprise data protection.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#28</span>
+          <a href="resources.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="delivery pilot olun - güvenli uygulamalar geliştirin" data-desc="yerinde veri ile güvenli uygulamalar oluşturmayı öğrenin. delivery pilot olun ve güvenlik odaklı uygulama yaşam döngülerinde uzmanlaşın.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-15</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-tr.html">Delivery Pilot Olun - Güvenli Uygulamalar Geliştirin</a>
+        </h3>
+        <p class="update-card-desc">Yerinde veri ile güvenli uygulamalar oluşturmayı öğrenin. Delivery Pilot olun ve güvenlik odaklı uygulama yaşam döngülerinde uzmanlaşın.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#29</span>
+          <a href="resources-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="updated" data-title="partners - collaborate on ai transformation" data-desc="partner with delivery pilot for ai transformation success. collaborate on customer onboarding, co-delivery opportunities, and joint ventures in enterprise ai implementation and training.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-03</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="partners-tr.html">Partners - Collaborate on AI Transformation</a>
+        </h3>
+        <p class="update-card-desc">Partner with Delivery Pilot for AI transformation success. Collaborate on customer onboarding, co-delivery opportunities, and joint ventures in enterprise AI implementation and training.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#30</span>
+          <a href="partners-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="updated" data-title="partners - collaborate on ai transformation" data-desc="partner with delivery pilot for ai transformation success. collaborate on customer onboarding, co-delivery opportunities, and joint ventures in enterprise ai implementation and training.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-03</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="partners.html">Partners - Collaborate on AI Transformation</a>
+        </h3>
+        <p class="update-card-desc">Partner with Delivery Pilot for AI transformation success. Collaborate on customer onboarding, co-delivery opportunities, and joint ventures in enterprise AI implementation and training.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#31</span>
+          <a href="partners.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="single-skilled engineers vs concurrent complexity" data-desc="in a world of concurrent risks and tasks, single-skilled engineers without ai agent support struggle to keep pace. discover how agents help teams combat complexity and achieve excellence.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-03</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-single-skilled-engineers.html">Single-Skilled Engineers vs Concurrent Complexity</a>
+        </h3>
+        <p class="update-card-desc">In a world of concurrent risks and tasks, single-skilled engineers without AI agent support struggle to keep pace. Discover how agents help teams combat complexity and achieve excellence.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#32</span>
+          <a href="resources-single-skilled-engineers.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="çok taraflı araştırma zorlukları" data-desc="çok taraflı araştırma zorlukları: birden fazla ekip karmaşık sistem sorunları üzerinde çalışırken ai ajanları nasıl spekülasyonu, stresi ve katı karar vermeyi azaltır.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-02</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-multi-party-investigation-tr.html">Çok Taraflı Araştırma Zorlukları</a>
+        </h3>
+        <p class="update-card-desc">Çok taraflı araştırma zorlukları: Birden fazla ekip karmaşık sistem sorunları üzerinde çalışırken AI ajanları nasıl spekülasyonu, stresi ve katı karar vermeyi azaltır.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#33</span>
+          <a href="resources-multi-party-investigation-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="multi-party investigation challenges" data-desc="multi-party investigation challenges: how ai agents reduce speculation, stress, and rigid decision-making when multiple teams work on complex system issues without clear direction.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-02</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-multi-party-investigation.html">Multi-Party Investigation Challenges</a>
+        </h3>
+        <p class="update-card-desc">Multi-party investigation challenges: How AI agents reduce speculation, stress, and rigid decision-making when multiple teams work on complex system issues without clear direction.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#34</span>
+          <a href="resources-multi-party-investigation.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="assessment" data-type="updated" data-title="dashboard" data-desc="view and manage your ai transformation assessments">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Assessment</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-01</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="dashboard-tr.html">Dashboard</a>
+        </h3>
+        <p class="update-card-desc">View and manage your AI transformation assessments</p>
+        <div class="update-card-footer">
+          <span class="page-index">#35</span>
+          <a href="dashboard-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="assessment" data-type="updated" data-title="dashboard" data-desc="view and manage your ai transformation assessments">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Assessment</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-01</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="dashboard.html">Dashboard</a>
+        </h3>
+        <p class="update-card-desc">View and manage your AI transformation assessments</p>
+        <div class="update-card-footer">
+          <span class="page-index">#36</span>
+          <a href="dashboard.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="index (tr)" data-desc="delivery pilot, profesyonellerin yapay zeka ajan tabanlı çözümler sunmalarını güçlendiren kapsamlı bir programdır. yetenek açığı değerlendirmeleri, işbirlikçi simülasyon atölyeleri ve teknik borç yönetimi ve güvenlik uyumluluğuna odaklanan pilot sertifikasyonu sunar.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-01</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="index-tr.html">Index (TR)</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot, profesyonellerin yapay zeka ajan tabanlı çözümler sunmalarını güçlendiren kapsamlı bir programdır. Yetenek açığı değerlendirmeleri, işbirlikçi simülasyon atölyeleri ve teknik borç yönetimi ve güvenlik uyumluluğuna odaklanan pilot sertifikasyonu sunar.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#37</span>
+          <a href="index-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="root cause analysis: the missing glue" data-desc="root cause analysis: the missing glue between knowledge and action. understand why engineers make repetitive errors in complex agile environments and how ai bridges this critical gap.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-01</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-root-cause-analysis.html">Root Cause Analysis: The Missing Glue</a>
+        </h3>
+        <p class="update-card-desc">Root Cause Analysis: The Missing Glue Between Knowledge and Action. Understand why engineers make repetitive errors in complex agile environments and how AI bridges this critical gap.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#38</span>
+          <a href="resources-root-cause-analysis.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="sre rollback support with ai agents" data-desc="how ai agents help sre engineers manage rollbacks during high-stress releases. learn how agentic support reduces stress and ensures rollback pipelines work reliably.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-02-01</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-sre-rollback-support.html">SRE Rollback Support with AI Agents</a>
+        </h3>
+        <p class="update-card-desc">How AI agents help SRE engineers manage rollbacks during high-stress releases. Learn how agentic support reduces stress and ensures rollback pipelines work reliably.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#39</span>
+          <a href="resources-sre-rollback-support.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="bidirectional links in knowledge management" data-desc="understanding bidirectional linking in knowledge management systems. how delivery pilot enables connected thinking and reduces information silos through bidirectional navigation.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-bidirectional-links.html">Bidirectional Links in Knowledge Management</a>
+        </h3>
+        <p class="update-card-desc">Understanding bidirectional linking in knowledge management systems. How Delivery Pilot enables connected thinking and reduces information silos through bidirectional navigation.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#40</span>
+          <a href="resources-bidirectional-links.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="added" data-title="bilgi yönetiminde çift yönlü bağlantılar" data-desc="bilgi yönetim sistemlerinde çift yönlü bağlantıları anlamak. delivery pilot">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-bidirectional-links-tr.html">Bilgi Yönetiminde Çift Yönlü Bağlantılar</a>
+        </h3>
+        <p class="update-card-desc">Bilgi yönetim sistemlerinde çift yönlü bağlantıları anlamak. Delivery Pilot</p>
+        <div class="update-card-footer">
+          <span class="page-index">#41</span>
+          <a href="resources-bidirectional-links-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="documentation & communication efficiency" data-desc="solving the enterprise documentation and meeting overload problem. learn how to transform noise into signal through capture, organize, distill, and express process.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-documentation-efficiency.html">Documentation & Communication Efficiency</a>
+        </h3>
+        <p class="update-card-desc">Solving the enterprise documentation and meeting overload problem. Learn how to transform noise into signal through capture, organize, distill, and express process.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#42</span>
+          <a href="resources-documentation-efficiency.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="doing the work vs building robots" data-desc="understanding the transformation from doing the work yourself to building robots. how delivery pilot enables the shift from individual delivery to collaborative ai-powered systems.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-work-vs-robots.html">Doing the Work vs Building Robots</a>
+        </h3>
+        <p class="update-card-desc">Understanding the transformation from doing the work yourself to building robots. How Delivery Pilot enables the shift from individual delivery to collaborative AI-powered systems.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#43</span>
+          <a href="resources-work-vs-robots.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="resources" data-type="updated" data-title="knowledge transfer in agile environments" data-desc="addressing knowledge transfer challenges in agile environments. learn how ai transformation bridges silos and enables collaborative intelligence in enterprises.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Resources</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-knowledge-transfer.html">Knowledge Transfer in Agile Environments</a>
+        </h3>
+        <p class="update-card-desc">Addressing knowledge transfer challenges in agile environments. Learn how AI transformation bridges silos and enables collaborative intelligence in enterprises.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#44</span>
+          <a href="resources-knowledge-transfer.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="updated" data-title="mission & vision" data-desc="delivery pilot mission and vision: accelerating enterprise ai transformation and empowering organizations to navigate the digital era.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-29</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="mission-vision.html">Mission & Vision</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot Mission and Vision: Accelerating enterprise AI transformation and empowering organizations to navigate the digital era.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#45</span>
+          <a href="mission-vision.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="added" data-title="agile & microservices: the red tape hell" data-desc="how agile fragmentation and microservice complexity create red tape hell, causing access bottlenecks and team overload. learn how to solve this with agent-driven access.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-23</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="resources-agile-red-tape.html">Agile & Microservices: The Red Tape Hell</a>
+        </h3>
+        <p class="update-card-desc">How Agile fragmentation and microservice complexity create red tape hell, causing access bottlenecks and team overload. Learn how to solve this with agent-driven access.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#46</span>
+          <a href="resources-agile-red-tape.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="updated" data-title="misyon & vizyon" data-desc="delivery pilot misyon ve vizyon: kurumsal ai dönüşümünü hızlandırmak ve organizasyonları dijital çağda yönlendirmek.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-21</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="mission-vision-tr.html">Misyon & Vizyon</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot Misyon ve Vizyon: Kurumsal AI dönüşümünü hızlandırmak ve organizasyonları dijital çağda yönlendirmek.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#47</span>
+          <a href="mission-vision-tr.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="added" data-title="consulting transformation: from old world to new world" data-desc="how consulting transforms from old-world specialist teams to new-world x-shaped orchestrators. learn about the shift from billable hours to productized outcomes, from powerpoint decks to working agents, and the democratization of code through ai.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-added">✨ Added</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-19</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="consulting-transformation.html">Consulting Transformation: From Old World to New World</a>
+        </h3>
+        <p class="update-card-desc">How consulting transforms from old-world specialist teams to new-world X-shaped orchestrators. Learn about the shift from billable hours to productized outcomes, from PowerPoint decks to working agents, and the democratization of code through AI.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#48</span>
+          <a href="consulting-transformation.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="services" data-type="updated" data-title="delivery pilot methodology | 4 essential roles for ai agents" data-desc="delivery pilot methodology - a comprehensive program that empowers professionals through skills gap assessments, collaborative simulation workshops, and pilot certification. learn about the four essential roles (implementer, designer, planner, operator) with focus on technical debt management and security compliance.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Services</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-19</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="delivery-pilot-methodology.html">Delivery Pilot Methodology | 4 Essential Roles for AI Agents</a>
+        </h3>
+        <p class="update-card-desc">Delivery Pilot Methodology - A comprehensive program that empowers professionals through skills gap assessments, collaborative simulation workshops, and pilot certification. Learn about the four essential roles (Implementer, Designer, Planner, Operator) with focus on technical debt management and security compliance.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#49</span>
+          <a href="delivery-pilot-methodology.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+
+      <article class="update-card" data-category="company" data-type="updated" data-title="tech transformations journey - from agile to ai" data-desc="tech transformations journey with rifat erdem sahin - from agile to ai and robotic transformation, helping enterprises navigate digital change globally.">
+        <div class="update-card-header">
+          <div class="badges-row">
+            <span class="status-badge badge-updated">🔄 Updated</span>
+            <span class="category-badge">Company</span>
+          </div>
+          <span class="update-date"><i class="date-icon">📅</i> 2026-01-19</span>
+        </div>
+        <h3 class="update-card-title">
+          <a href="transformations.html">Tech Transformations Journey - From Agile to AI</a>
+        </h3>
+        <p class="update-card-desc">Tech Transformations Journey with Rifat Erdem Sahin - From Agile to AI and Robotic transformation, helping enterprises navigate digital change globally.</p>
+        <div class="update-card-footer">
+          <span class="page-index">#50</span>
+          <a href="transformations.html" class="card-action-link">View Page →</a>
+        </div>
+      </article>
+    
+                <div class="empty-state" id="empty-state">
+                    <h3>No matching pages found</h3>
+                    <p>Try adjusting your search query or reset the filters.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById("updates-filter-input");
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const cards = document.querySelectorAll(".update-card");
+            const emptyState = document.getElementById("empty-state");
+
+            let currentFilter = "all";
+            let currentSearch = "";
+
+            function applyFilters() {
+                let visibleCount = 0;
+                const query = currentSearch.toLowerCase().trim();
+
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category") || "";
+                    const cardType = card.getAttribute("data-type") || "";
+                    const title = card.getAttribute("data-title") || "";
+                    const desc = card.getAttribute("data-desc") || "";
+
+                    let matchesFilter = true;
+                    if (currentFilter === "added") {
+                        matchesFilter = (cardType === "added");
+                    } else if (currentFilter === "updated") {
+                        matchesFilter = (cardType === "updated");
+                    } else if (currentFilter !== "all") {
+                        matchesFilter = (cardCategory === currentFilter);
+                    }
+
+                    let matchesSearch = true;
+                    if (query.length > 0) {
+                        matchesSearch = title.includes(query) || desc.includes(query) || cardCategory.includes(query);
+                    }
+
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = "flex";
+                        visibleCount++;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    emptyState.style.display = "block";
+                } else {
+                    emptyState.style.display = "none";
+                }
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener("input", function(e) {
+                    currentSearch = e.target.value;
+                    applyFilters();
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    filterButtons.forEach(b => b.classList.remove("active"));
+                    this.classList.add("active");
+                    currentFilter = this.getAttribute("data-filter");
+                    applyFilters();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

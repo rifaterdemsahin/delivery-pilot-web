@@ -54,7 +54,9 @@ const translations = {
             missionVision: "🎯 Mission & Vision",
             icpStrategy: "🎯 ICP Strategy",
             dynamicDocumentation: "📄 Dynamic Documentation",
-            multiAgentOrchestrator: "🤖 Multi-Agent Orchestrator"
+            multiAgentOrchestrator: "🤖 Multi-Agent Orchestrator",
+            enterpriseGap: "🌌 The Enterprise Gap",
+            recentUpdates: "🕒 Recent Updates"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1013,7 +1015,9 @@ const translations = {
             missionVision: "🎯 Misyon & Vizyon",
             icpStrategy: "🎯 ICP Stratejisi",
             dynamicDocumentation: "📄 Dinamik Dokümantasyon",
-            multiAgentOrchestrator: "🤖 Çoklu Ajan Orkestratörü"
+            multiAgentOrchestrator: "🤖 Çoklu Ajan Orkestratörü",
+            enterpriseGap: "🌌 Kurumsal Boşluk",
+            recentUpdates: "🕒 Son Güncellemeler"
         },
         podcast: {
             title: "Delivery Pilot Podcast",

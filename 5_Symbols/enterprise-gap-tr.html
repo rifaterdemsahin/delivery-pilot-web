@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk. Yüksek teknolojili LLM mekanik zırhları inşa ediliyor; ancak işletmelerin bu bilinmeyen evreni keşfetmek ve gerçek değer üretmek için sertifikalı Delivery Pilot ekiplerine, GitHub kanıtlarına ve agent-first BMAD uygulamalarına ihtiyacı var.">
+    <meta name="keywords" content="Kurumsal Boşluk, LLM keşfi, yapay zeka mekanik zırh, Delivery Pilot, BMAD çerçevesi, agent-first kanıt, yapay zeka sertifikası, GitHub varlığı, kurumsal yapay zeka dönüşümü, çoklu ajan sistemleri">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/enterprise-gap-tr.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk | Delivery Pilot">
+    <meta property="og:description" content="İşletmeler güçlü LLM mekanik zırhlarına sahip, ancak bu evreni keşfedip somut değerle geri dönecek pilotlardan yoksun. Sertifikalı Delivery Pilot ekibinin ve agent-first BMAD kanıtının bu boşluğu nasıl kapattığını keşfedin.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deliverypilot.net/enterprise-gap-tr.html">
+    <meta property="og:image" content="https://deliverypilot.net/3_ui/enterprise_gap_mech_suit.jpg">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <meta property="og:locale" content="tr_TR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk">
+    <meta name="twitter:description" content="İşletmelerin bilinmeyen yapay zeka evrenini keşfetmesi gerekiyor. Delivery Pilot, somut kurumsal değer üretmek için sertifikalı yetenek ve agent-first BMAD kanıtı sunar.">
+    <meta name="twitter:image" content="https://deliverypilot.net/3_ui/enterprise_gap_mech_suit.jpg">
+    
+    <title>Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../onboarding-styles.css">
+    <style>
+        :root {
+            --space-dark: #070e1e;
+            --space-card: #0f1f38;
+            --cosmic-blue: #1e3a8a;
+            --accent-glow: #38bdf8;
+            --gold-accent: #f59e0b;
+        }
+
+        .enterprise-gap-hero {
+            background: linear-gradient(145deg, #050b17 0%, #0d1e38 45%, #172554 100%);
+            color: white;
+            padding: 5rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enterprise-gap-hero::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(30, 58, 138, 0.08) 50%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .hero-badge-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.12);
+            color: #7dd3fc;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            padding: 0.4rem 1.1rem;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .enterprise-gap-hero h1 {
+            font-size: 3.3rem;
+            margin-bottom: 1.25rem;
+            font-weight: 800;
+            line-height: 1.18;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #ffffff 30%, #bae6fd 70%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .enterprise-gap-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 880px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.65;
+            color: #cbd5e1;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            max-width: 980px;
+            margin: 2.5rem auto 0;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.25);
+            border: 1px solid rgba(125, 211, 252, 0.3);
+            background: #020617;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-image-wrapper:hover .hero-image {
+            transform: scale(1.02);
+        }
+
+        .stat-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            max-width: 1040px;
+            margin: 3.5rem auto 0;
+            padding: 0 1rem;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            padding: 1.75rem 1.25rem;
+            border-radius: 14px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.5);
+        }
+
+        .stat-value {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #38bdf8;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.45;
+            font-weight: 500;
+        }
+
+        /* Sections */
+        .content-section {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .content-section.alt-bg {
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.95rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .section-badge.warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .section-badge.success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* Metaphor & Dilemma */
+        .metaphor-box {
+            background: linear-gradient(135deg, #0b1528 0%, #172554 100%);
+            color: white;
+            padding: 3.2rem;
+            border-radius: 18px;
+            margin-bottom: 3.5rem;
+            border: 1px solid #1e3a8a;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.18);
+            position: relative;
+        }
+
+        .metaphor-box h3 {
+            font-size: 1.9rem;
+            color: #7dd3fc;
+            margin-bottom: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+        }
+
+        .metaphor-box p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: #e2e8f0;
+            margin-bottom: 1.2rem;
+        }
+
+        .metaphor-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cards-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2.3rem 2rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+            border-color: #93c5fd;
+        }
+
+        .feature-card .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: #0f172a;
+            margin-bottom: 0.85rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 1.02rem;
+            margin-bottom: 0;
+        }
+
+        /* Proof vs Marketing Trick */
+        .proof-box {
+            background: #f0fdf4;
+            border: 2px solid #86efac;
+            border-radius: 18px;
+            padding: 2.8rem;
+            margin: 3.5rem 0 1rem;
+            box-shadow: 0 8px 24px rgba(22, 101, 52, 0.06);
+        }
+
+        .proof-box h3 {
+            color: #14532d;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+        }
+
+        .proof-box p.proof-intro {
+            color: #166534;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .proof-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .proof-pillar-item {
+            background: white;
+            padding: 1.6rem;
+            border-radius: 12px;
+            border-left: 4px solid #16a34a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: transform 0.25s ease;
+        }
+
+        .proof-pillar-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .proof-pillar-item h4 {
+            color: #0f172a;
+            font-size: 1.18rem;
+            margin-bottom: 0.55rem;
+            font-weight: 700;
+        }
+
+        .proof-pillar-item p {
+            color: #475569;
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        /* Comparison Table/Cards */
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .comparison-column {
+            border-radius: 18px;
+            padding: 2.6rem;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-column.gap-column {
+            background: #fff5f5;
+            border: 1px solid #fecaca;
+        }
+
+        .comparison-column.solution-column {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+        }
+
+        .comparison-column h3 {
+            font-size: 1.65rem;
+            margin-bottom: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+        }
+
+        .gap-column h3 { color: #991b1b; }
+        .solution-column h3 { color: #0369a1; }
+
+        .comparison-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .comparison-list li {
+            padding: 1.1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+            line-height: 1.65;
+            position: relative;
+            padding-left: 2.2rem;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+
+        .comparison-list li:last-child {
+            border-bottom: none;
+        }
+
+        .gap-column .comparison-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .solution-column .comparison-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        /* 4-Stage Exploration Protocol */
+        .timeline-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.75rem;
+            margin-top: 3.5rem;
+            position: relative;
+        }
+
+        .timeline-step {
+            background: white;
+            border-radius: 16px;
+            padding: 2.2rem 1.8rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+            border-color: #60a5fa;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #1e40af;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 1.3rem;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        .timeline-step h4 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .timeline-step p {
+            font-size: 0.98rem;
+            color: #64748b;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5.5rem 0;
+            background: linear-gradient(145deg, #050b17 0%, #0d1e38 50%, #1e3a8a 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.28rem;
+            opacity: 0.95;
+            max-width: 840px;
+            margin: 0 auto 2.8rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.15rem 2.3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.08rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 4px 18px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0f172a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+        }
+
+        @media (max-width: 860px) {
+            .enterprise-gap-hero h1 {
+                font-size: 2.3rem;
+            }
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .metaphor-box {
+                padding: 2rem;
+            }
+            .cta-section h2 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="enterprise-gap-hero">
+        <div class="container">
+            <div class="hero-badge-container">
+                <span>🌌</span> Kurumsal Yapay Zeka Vizyonu
+            </div>
+            <h1>Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk</h1>
+            <p class="subtitle">
+                Öncü laboratuvarlar benzeri görülmemiş LLM ve ajan "mekanik zırhları" inşa ediyor. Ancak işletmeler hava kilidinde mahsur kalmış durumda; bilinmeyene adım atacak, somut kurumsal değer üretecek ve güvenle geri dönecek sertifikalı pilotlardan, doğrulanmış GitHub kodlarından ve agent-first yaklaşımlardan yoksunlar.
+            </p>
+            
+            <div class="hero-image-wrapper">
+                <img src="../3_ui/enterprise_gap_mech_suit.jpg" alt="Kurumsal Yapay Zeka Mekanik Zırh Uzay Keşfi - Delivery Pilot Kurumsal Boşluk" class="hero-image" loading="eager">
+            </div>
+
+            <div class="stat-banner">
+                <div class="stat-card">
+                    <div class="stat-value">100x</div>
+                    <div class="stat-label">LLM mimarilerinde model kabiliyeti ve hız ivmesi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">&lt; %15</div>
+                    <div class="stat-label">Ajanları başarıyla canlı üretime alan kurumsal şirket oranı</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">%100</div>
+                    <div class="stat-label">Sertifikalı pilotlar ve GitHub ile doğrulanmış canlı kod kanıtları</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Core Dilemma Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge warning">Stratejik Darboğaz</span>
+                <h2 class="section-title">Şu Anda Kurumsal Boşluk Nedir?</h2>
+                <p class="section-subtitle">
+                    Sorun model eksikliği değildir. Asıl boşluk, LLM dış iskeletlerini kurumsal arazide yönetecek ve ölçülebilir iş sonuçları üretecek operasyonel pilotluk yetkinliğidir.
+                </p>
+            </div>
+
+            <div class="metaphor-box">
+                <h3>🌌 Derin Uzay ve Mekanik Zırh Gerçeği</h3>
+                <p>
+                    Kurumunuzun özerk imkanlarla dolu, keşfedilmemiş devasa bir galaksinin eşiğinde durduğunu hayal edin. Öncü yapay zeka laboratuvarları (Google DeepMind, Anthropic, OpenAI) inanılmaz güçte <strong>"mekanik zırhlar"</strong> (Büyük Dil Modelleri, çok modlu akıl yürütme motorları, araç çağırma protokolleri ve ajan çalışma ortamları) inşa etti.
+                </p>
+                <p>
+                    Her hafta bu zırhlar daha güçlü, daha hızlı ve daha yetenekli hale geliyor. Ancak kurumsal tarafta <strong>neredeyse hiç kimse bu zırhı nasıl giyeceğini ve yöneteceğini bilmiyor</strong>. Liderler hava kilidinden nasıl çıkılacağını, sıfır yerçekimli ortamların nasıl keşfedileceğini, yüksek değerli madenlerin (somut iş değeri) nasıl çıkarılacağını, radyasyon kuşaklarından (güvenlik, gizlilik, halüsinasyon) nasıl korunulacağını ve kritik görev yükleriyle güvenle nasıl dönüleceğini bilmiyor.
+                </p>
+                <p>
+                    Geleneksel danışmanlık firmaları ise hala 2 boyutlu düzlemde nasıl yürüneceğini anlatan 300 sayfalık kılavuzlar dağıtıyor. Yapay zeka güdümlü sıfır yerçekimi ortamında bu eski çerçeveler çökmektedir.
+                </p>
+            </div>
+
+            <div class="cards-grid-3">
+                <div class="feature-card">
+                    <span class="card-icon">🦾</span>
+                    <h3>Hangarda Bekleyen Zırhlar</h3>
+                    <p>İşletmeler pahalı kurumsal LLM lisansları ve API kredileri satın alıyor; ancak bunlar basit bir metin özetleyici veya izole sohbet aracı olmanın ötesine geçemiyor. Eğitilmiş pilotlar olmadan milyon dolarlık sistemler atıl kalıyor.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-icon">🧭</span>
+                    <h3>Keşif Felci</h3>
+                    <p>Ekipler belirlenemez (non-deterministic) davranışlardan, veri sızıntılarından ve regresyonlardan çekiniyor. Güvenli navigasyon protokolleri olmadığı için projeler canlıya geçemeyen sonsuz PoC döngülerine hapsoluyor.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-icon">📑</span>
+                    <h3>Sunum İllüzyonu</h3>
+                    <p>Eski nesil danışmanlıklar statik yol haritaları ve şık slaytlar için devasa bütçeler alıyor; fakat tek bir satır çalışan ajan orkestrasyon kodu veya doğrulanabilir bir GitHub pull request'i sunamıyor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Delivery Pilot Solution Section -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge success">Köprü Çözüm</span>
+                <h2 class="section-title">Sertifikalı Delivery Pilot Mürettebatı</h2>
+                <p class="section-subtitle">
+                    Biz teorik danışmanlık satmıyoruz. Doğrulanabilir açık kaynak ayak izine ve gerçek operasyonel güce sahip sertifikalı pilotlar sunuyoruz.
+                </p>
+            </div>
+
+            <div class="cards-grid-3">
+                <div class="feature-card">
+                    <span class="card-icon">🎖️</span>
+                    <h3>Sertifikalı Pilot Yeteneği</h3>
+                    <p>Profesyonellerimiz zorlu simülasyon tabanlı sertifikasyonlardan geçer: Prompt orkestrasyonu, çoklu ajan koordinasyonu, durum yönetimi ve kurumsal kısıtlar altında otomatik hata kurtarma refleksleri kazanır.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-icon">🐙</span>
+                    <h3>Doğrulanabilir GitHub Varlığı</h3>
+                    <p>Kanıt sunumlarda değil, kodun kendisindedir. Delivery Pilot; açık depolar, CI/CD entegrasyonları, otomatik test paketleri ve şeffaf mimarilerle kapsamlı bir GitHub varlığı sergiler.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="card-icon">🛡️</span>
+                    <h3>Kurumsal Görev Kontrolü</h3>
+                    <p>Sıkı güvenlik sınırlarında pilotluk yapıyoruz: İnternetten izole (air-gapped) ortamlar, SOC2 ve GDPR uyumluluğu, rol tabanlı erişim kontrolü (RBAC) ve otomatik geri alma (rollback) güvenlik mekanizmaları.</p>
+                </div>
+            </div>
+
+            <!-- Proof vs Trick Highlight -->
+            <div class="proof-box">
+                <h3>🚀 Agent-First BMAD: Pazarlama Numarası Değil, Gerçek Dünya Kanıtı</h3>
+                <p class="proof-intro">
+                    Sektör yapay zeka illüzyonları ve kurumsal ürün kılığına sokulmuş basit prompt kabuklarıyla doluyken; Delivery Pilot, <strong>Agent-First BMAD (Break Through Agile Delivery)</strong> uygulamasıyla gerçek mühendislik gücünü kanıtlar. Bu, kurumsal tıkanıklıkları ortadan kaldıran sahada test edilmiş yaşayan bir mimaridir.
+                </p>
+                
+                <div class="proof-pillars">
+                    <div class="proof-pillar-item">
+                        <h4>🤖 Otonom Görev Ayrıştırma</h4>
+                        <p>Ajanlar karmaşık iş gereksinimlerini ayrıştırır, kurumsal depoları tarar ve insan darboğazı olmadan yapılandırılmış yürütme planları üretir.</p>
+                    </div>
+
+                    <div class="proof-pillar-item">
+                        <h4>🔄 Kendi Kendini Düzelten CI/CD Döngüleri</h4>
+                        <p>Ajanlar kodu çalıştırır, birim ve entegrasyon testlerini yürütür, regresyonları yakalar ve insan onayına sunmadan önce hataları otonom olarak giderir.</p>
+                    </div>
+
+                    <div class="proof-pillar-item">
+                        <h4>📚 Dinamik Yaşayan Dokümantasyon</h4>
+                        <p>Eski ve güncelliğini yitirmiş Confluence sayfalarına veda edin. BMAD ajanları mimari şemaları, API tanımlarını ve sistem dokümanlarını kodun kendisiyle anlık senkronize eder.</p>
+                    </div>
+
+                    <div class="proof-pillar-item">
+                        <h4>⚡ SRE Güvenli Geri Alma & Bariyerler</h4>
+                        <p>Otomatik sağlık telemetrisi, anomali tespiti ve beklenmeyen sapmalarda anında tetiklenen geri alma mekanizmalarıyla kurumsal seviyede güvenlik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side-by-Side Comparison Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Doğrudan Karşılaştırma</span>
+                <h2 class="section-title">Kurumsal Gerçeklik Kontrolü</h2>
+                <p class="section-subtitle">Mevcut kurumsal yaklaşım ile Delivery Pilot operasyonel modelinin net karşılaştırması</p>
+            </div>
+
+            <div class="comparison-container">
+                <div class="comparison-column gap-column">
+                    <h3>🛑 Kurumsal Boşluk (Mevcut Durum)</h3>
+                    <ul class="comparison-list">
+                        <li><strong>Pilotsuz güçlü modeller:</strong> LLM API'lerine harcanan yüksek bütçeler ve canlıya geçemeyen iş akışları.</li>
+                        <li><strong>İllüzyon danışmanlığı:</strong> Sıfır çalışan kod üreten, yalnızca statik sunumlardan ibaret pahalı danışmanlıklar.</li>
+                        <li><strong>Risk felci:</strong> Deterministik güvenlik sınırları olmadığı için canlı yayına izin vermeyen uyum ekipleri.</li>
+                        <li><strong>Tek kişilik mühendis siloları:</strong> Kurumsal standartlar olmadan tekil geliştiricilerde kilitli kalan bilgi.</li>
+                        <li><strong>Kırılgan prompt betikleri:</strong> Model güncellendiğinde veya bağlam değiştiğinde bozulan versiyonsuz yapılar.</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-column solution-column">
+                    <h3>✅ Delivery Pilot Köprüsü</h3>
+                    <ul class="comparison-list">
+                        <li><strong>Sertifikalı Pilot ekibi:</strong> Belirli iş hedeflerine (OKR) ulaşmak için ajan sürülerini yöneten deneyimli uzmanlar.</li>
+                        <li><strong>GitHub ile doğrulanmış mühendislik:</strong> Şeffaf kodlar, açık mimariler ve sahada kanıtlanmış depolar.</li>
+                        <li><strong>Güçlendirilmiş kurumsal bariyerler:</strong> SOC2 uyumlu, air-gapped çalışabilen, otomatik rollback destekli sistemler.</li>
+                        <li><strong>BMAD Agent-First çerçevesi:</strong> Bağımlılıkları kıran, QA süreçlerini otomatikleştiren ve teslimatı hızlandıran mimari.</li>
+                        <li><strong>Ölçülebilir iş getirisi (ROI):</strong> Yıllarca süren planlar yerine günler içinde üretim seviyesinde otonom yetenekler.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Stage Exploration Protocol Section -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge success">Operasyonel Protokol</span>
+                <h2 class="section-title">Bilinmeyeni Keşfetme ve Değerle Dönme Protokolü</h2>
+                <p class="section-subtitle">Kurumsal yapay zeka sistemlerini ilk keşiften canlı ölçeklemeye taşıyan 4 Aşamalı Yol Haritamız</p>
+            </div>
+
+            <div class="timeline-steps">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <h4>Zırh Kuşanma & Sistem Kontrolü</h4>
+                    <p>Ajan çalışma alanını kalibre etmek ve temel telemetriyi kurmak için mevcut veri kaynaklarınızı, güvenlik sınırlarınızı ve teknik borçlarınızı denetleriz.</p>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <h4>Derin Uzay Keşfi & Analiz</h4>
+                    <p>Sertifikalı pilotlarımız, çoklu ajan otomasyonunun 10 kat getiri sağlayacağı en kritik teslimat darboğazlarını belirler.</p>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <h4>BMAD Ajan Sürüsü Yürütmesi</h4>
+                    <p>Doğrudan kod depolarınız üzerinde çalışan, test eden, refactor eden ve entegre eden agent-first BMAD döngülerini devreye alırız.</p>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <h4>Güvenli Dönüş & Bilgi Transferi</h4>
+                    <p>Güvenlik bariyerlerini sıkılaştırır, yaşayan dokümantasyonu eşitler ve kurum içi mühendislerinizi sertifikalı pilotlara dönüştürürüz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Kurumsal Boşluğu Kapatmaya Hazır mısınız?</h2>
+            <p>
+                LLM mekanik zırhlarınızın hangarda tozlanmasına izin vermeyin. Yapay zeka evrenini keşfedip dönüştürücü değerle dönecek koda, sertifikasyona ve BMAD kanıtına sahip sertifikalı Delivery Pilot ekibiyle tanışın.
+            </p>
+            <div class="cta-buttons">
+                <a href="assessment-tr.html" class="btn btn-primary">🚀 Ücretsiz Yapay Zeka Değerlendirmesi</a>
+                <a href="resources-bmad.html" class="btn btn-secondary">⚡ BMAD Kanıtını İnceleyin</a>
+                <a href="workshops-tr.html" class="btn btn-outline">🎓 Pilot Çalıştayı Planlayın</a>
+                <a href="contact-tr.html" class="btn btn-outline">📞 Lider Pilot ile Görüşün</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Kurumsal Boşluk: Keşfedilmemiş Yapay Zeka Evreninde Yolculuk",
+      "description": "İşletmelerin güçlü LLM mekanik zırhlarına sahip olmasına rağmen neden pilot eksikliği yaşadığını ve Delivery Pilot'un agent-first BMAD kanıtını keşfedin.",
+      "image": "https://deliverypilot.net/3_ui/enterprise_gap_mech_suit.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Delivery Pilot"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Delivery Pilot",
+        "url": "https://deliverypilot.net",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://deliverypilot.net/logo.png"
+        }
+      },
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-08-31",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://deliverypilot.net/enterprise-gap-tr.html"
+      },
+      "articleSection": "Platform & Dönüşüm",
+      "keywords": ["Kurumsal Boşluk", "LLM mekanik zırh", "Delivery Pilot", "BMAD çerçevesi", "agent-first kanıt", "yapay zeka sertifikası", "GitHub varlığı", "kurumsal yapay zeka"]
+    }
+    </script>
+</body>
+</html>

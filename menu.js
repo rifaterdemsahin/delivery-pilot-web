@@ -28,6 +28,7 @@ const navigationConfig = {
                 { href: 'index.html#how-it-works', textKey: 'nav.howItWorks', text: '⚙️ How It Works' },
                 { href: 'index.html#use-cases', textKey: 'nav.useCases', text: '💼 Use Cases' },
                 { href: 'usecases.html', textKey: 'nav.useCasesDetailed', text: '🤖 AI Agent Use Cases' },
+                { href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: '🌌 The Enterprise Gap' },
                 { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' },
                 { href: 'icp-strategy.html', textKey: 'nav.icpStrategy', text: '🎯 ICP Strategy' }
             ]
@@ -57,6 +58,7 @@ const navigationConfig = {
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
                 { href: 'mission-vision.html', textKey: 'nav.missionVision', text: '🎯 Mission & Vision' },
+                { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' },
                 { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },
                 { href: 'success-stories.html', textKey: 'nav.successStories', text: '⭐ Success Stories' },
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },
@@ -74,6 +76,7 @@ const navigationConfig = {
             text: '📚 Resources',
             textKey: 'nav.resources',
             submenu: [
+                { href: 'recent-updates.html', textKey: 'nav.recentUpdates', text: '🕒 Recent Updates' },
                 { href: 'resources.html', textKey: 'nav.becomeDeliveryPilot', text: '✈️ Become a Delivery Pilot' },
                 { href: 'claude-partner-ai-professional.html', textKey: 'nav.claudePartnerResource', text: '⚡ Claude Partner & Use Case' },
                 { href: 'podcast.html', textKey: 'nav.podcast', text: '🎙️ Podcast' },
@@ -106,7 +109,9 @@ const navigationConfig = {
                 { href: 'resources-multi-agent-orchestrator.html', textKey: 'nav.multiAgentOrchestrator', text: '🤖 Multi-Agent Orchestrator' },
                 { href: 'resources-executive-transformation.html', textKey: 'nav.executiveTransformation', text: '🚀 Executive Transformation' },
                 { href: 'resources-ai-evolution.html', textKey: 'nav.aiEvolution', text: '📈 AI Evolution' },
-                { href: 'resources-bmad.html', textKey: 'nav.bmad', text: '🚀 BMAD' }
+                { href: 'resources-bmad.html', textKey: 'nav.bmad', text: '🚀 BMAD' },
+                { href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: '🌌 The Enterprise Gap' },
+                { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
@@ -136,6 +141,7 @@ const footerConfig = {
                 { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', textKey: 'footer.platform.agileTransformation', text: 'Agile Transformation' },
                 { type: 'link', href: 'enterprise-agent.html', textKey: 'footer.platform.enterpriseAgent', text: 'Enterprise Agent' },
+                { type: 'link', href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: 'The Enterprise Gap' },
                 { type: 'link', href: 'msp-offerings.html', textKey: 'footer.platform.mspOfferings', text: 'MSP Offerings' },
                 { type: 'link', href: 'msp-managed-services.html', textKey: 'nav.mspManagedServices', text: 'MSP Managed Services' },
                 { type: 'link', href: 'delivery-pilot-methodology.html', textKey: 'footer.platform.methodology', text: 'Methodology' },
@@ -151,6 +157,8 @@ const footerConfig = {
             titleKey: 'footer.company.title',
             content: [
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
+                { type: 'link', href: 'mission-vision.html', textKey: 'nav.missionVision', text: 'Mission & Vision' },
+                { type: 'link', href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: 'Roadmap Vision' },
                 { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
                 { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
@@ -161,6 +169,8 @@ const footerConfig = {
             title: 'Resources',
             titleKey: 'footer.resources.title',
             content: [
+                { type: 'link', href: 'recent-updates.html', textKey: 'nav.recentUpdates', text: 'Recent Updates' },
+                { type: 'link', href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: 'The Enterprise Gap' },
                 { type: 'link', href: 'resources-knowledge-transfer.html', textKey: 'footer.resources.knowledgeTransfer', text: 'Knowledge Transfer' },
                 { type: 'link', href: 'resources-task-handover-challenge.html', textKey: 'footer.resources.taskHandover', text: 'Task Handover Challenge' },
                 { type: 'link', href: 'resources-work-vs-robots.html', textKey: 'footer.resources.workVsRobots', text: 'Work vs Robots' },
@@ -177,6 +187,7 @@ const footerConfig = {
                 { type: 'link', href: 'resources-executive-transformation.html', textKey: 'nav.executiveTransformation', text: 'Executive Transformation' },
                 { type: 'link', href: 'resources-ai-evolution.html', textKey: 'nav.aiEvolution', text: 'AI Evolution' },
                 { type: 'link', href: 'resources-bmad.html', textKey: 'nav.bmad', text: 'BMAD' },
+                { type: 'link', href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: 'Roadmap Vision' },
                 { type: 'link', href: 'transformations.html', textKey: 'footer.company.transformations', text: 'Transformations' },
                 { type: 'link', href: 'it_transformations.html', textKey: 'footer.company.itTransformations', text: 'IT Transformations' },
                 { type: 'link', href: 'partners.html', textKey: 'footer.company.partners', text: 'Partners' },
