@@ -159,8 +159,10 @@ const footerConfig = {
             titleKey: 'footer.company.title',
             content: [
                 { type: 'link', href: 'index.html#about', textKey: 'footer.company.about', text: 'About' },
+                { type: 'link', href: 'who-is-a-delivery-pilot.html', textKey: 'nav.whoIsDeliveryPilot', text: '🏎️ Who is a Delivery Pilot?' },
                 { type: 'link', href: 'mission-vision.html', textKey: 'nav.missionVision', text: 'Mission & Vision' },
                 { type: 'link', href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: 'Roadmap Vision' },
+                { type: 'link', href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },
                 { type: 'link', href: 'success-stories.html', textKey: 'footer.company.successStories', text: 'Success Stories' },
                 { type: 'link', href: 'faq.html', textKey: 'footer.company.faq', text: 'FAQ' },
                 { type: 'link', href: 'founder.html', textKey: 'footer.company.founder', text: 'Founder' },
@@ -474,7 +476,7 @@ function generateFooter() {
  * Insert navigation into page
  */
 function insertNavigation() {
-    const placeholder = document.getElementById('navbar-placeholder');
+    const placeholder = document.getElementById('navbar-placeholder') || document.getElementById('menu-placeholder') || document.getElementById('nav-placeholder');
     if (placeholder) {
         placeholder.outerHTML = generateNavigation();
     }
@@ -484,7 +486,7 @@ function insertNavigation() {
  * Insert footer into page
  */
 function insertFooter() {
-    const placeholder = document.getElementById('footer-placeholder');
+    const placeholder = document.getElementById('footer-placeholder') || document.getElementById('foot-placeholder');
     if (placeholder) {
         placeholder.outerHTML = generateFooter();
     }
