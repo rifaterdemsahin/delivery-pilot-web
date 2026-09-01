@@ -56,7 +56,9 @@ const translations = {
             dynamicDocumentation: "📄 Dynamic Documentation",
             multiAgentOrchestrator: "🤖 Multi-Agent Orchestrator",
             enterpriseGap: "🌌 The Enterprise Gap",
-            recentUpdates: "🕒 Recent Updates"
+            oneScreenLanding: "📄 One-Screen Landing",
+            recentUpdates: "🕒 Recent Updates",
+            whoIsDeliveryPilot: "🏎️ Who is a Delivery Pilot?"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -66,126 +68,154 @@ const translations = {
             download: "📥 Download Presentation PDF"
         },
         hero: {
-            slogan: "Everyone can make apps",
-            title: "Transform Your Enterprise with AI",
-            subtitle: "Delivery Pilot is the leading Platform as a Service (PaaS) solution that accelerates your AI transformation journey. Deploy, manage, and scale AI applications with confidence.",
-            startJourney: "Start Your Journey",
-            learnMore: "Learn More"
+            slogan: "Embedded Delivery & Upskilling Program",
+            title: "Your last production outage wasn't a technology failure. It was a delivery failure.",
+            subtitle: "An expired certificate takes down production. A key person leaves and the AI project stalls. The skills gap nobody flagged becomes the deadline nobody hits. These aren't AI problems - they're delivery problems, and most enterprise AI initiatives die on exactly this ground.<br><br>Delivery Pilot embeds a certified pilot inside your team to close the skills gap while the work ships - through hands-on simulation workshops and certification, not slideware. You get delivery capability that stays after we leave.",
+            findGap: "Find Your Delivery Gap",
+            seeWorkshop: "See the 10-Step Workshop",
+            startJourney: "Find Your Delivery Gap",
+            learnMore: "See the 10-Step Workshop"
+        },
+        raise: {
+            title: "Solving the RAISE Challenge",
+            subtitle: "Rapid AI is raising the bar faster than teams can clear it.",
+            problem: {
+                title: "The Problem",
+                description: "Every quarter brings new tools, frameworks, and \"best practices.\" Your people are expected to keep up and deliver. The gap between what's now required and what the team can do today isn't a training-budget line item — it's the thing quietly putting your deadlines at risk.<br><br>The problem isn't ambition. It's the gap between strategy and the hands that have to execute it."
+            },
+            solution: {
+                title: "Our Solution",
+                description: "Delivery Pilot closes that gap three ways — all of them hands-on, all of them inside your team:",
+                assessment: "📊 <strong>Skills Gap Assessment:</strong> We map what your team can deliver today against what your AI initiative actually demands, and pinpoint exactly where delivery will break.",
+                workshops: "🎓 <strong>Collaborative Simulation Workshops:</strong> Your people build real AI-agent solutions alongside a pilot, in your context, on scenarios that mirror your systems — learning by shipping, not by watching.",
+                certification: "🏆 <strong>Pilot Certification:</strong> We certify the people who can carry it forward, with specific focus on technical-debt management and security compliance - the two places delivery quietly rots."
+            },
+            cta: {
+                assess: "Assess Your Delivery Readiness",
+                workshops: "View 10-Step Workshop Process",
+                twelveStep: "See 12-Step Programme",
+                learn: "Learn About Our Process"
+            }
+        },
+        impact: {
+            title: "Where Enterprise AI Projects <span class=\"highlight\">Go Wrong</span>",
+            subtitle: "Most enterprise AI projects don't fail on strategy. They fail on execution.<br>They stumble on the same three things every time: missing specialised skills, mounting technical debt, and no one who can answer the question that actually matters — <em>\"What do we do with this, here, on our systems?\"</em>",
+            challenge: {
+                title: "The Challenge",
+                description: "The distance between \"we should use AI\" and a thing running safely in production is filled with technical debt and skills gaps. Closing those gaps is the whole job - and it's the part most programs skip."
+            },
+            approach: {
+                title: "The Approach",
+                description: "We embed an expert Delivery Pilot in your team to do the work with your people, not for them. They build real solutions, transfer the skill by doing, and leave your team able to run it."
+            },
+            result: {
+                title: "The Result",
+                description: "Strategy and execution finally meet. Your AI initiative launches, scales, and - critically - keeps running once we're gone, because the capability now lives in your team."
+            },
+            cta: "Deploy a Pilot"
         },
         features: {
-            title: "Powerful Features for AI Transformation",
-            rapidDeployment: {
-                title: "Rapid Deployment",
-                description: "Deploy AI models and applications in minutes, not months. Our streamlined platform eliminates complexity and accelerates time-to-market."
+            title: "What an Embedded Pilot Actually Does",
+            description: "Delivery capabilities brought directly into your team to ensure promises and execution stay congruent.",
+            shipsEnvironment: {
+                title: "Ships in Your Environment",
+                description: "A pilot works on your systems, your constraints, your codebase — so what gets built actually runs where it needs to, not in a demo sandbox."
             },
-            security: {
-                title: "Enterprise Security",
-                description: "Bank-grade security with compliance support for GDPR, SOC 2, and HIPAA. Your data and models are always protected."
+            securityCompliance: {
+                title: "Hardens Security & Compliance as It Builds",
+                description: "GDPR, SOC 2, HIPAA — handled as delivery decisions during the work, not bolted on after. The people we certify know how to keep it that way."
             },
-            analytics: {
-                title: "AI Analytics",
-                description: "Real-time monitoring and insights into your AI applications. Make data-driven decisions with comprehensive analytics dashboards."
+            technicalDebt: {
+                title: "Attacks Technical Debt on the Way In",
+                description: "Every solution is built to be maintained by your team, not to become the next thing nobody can touch. Debt management is part of the delivery, not a future clean-up project."
             },
-            autoScaling: {
-                title: "Auto-Scaling",
-                description: "Automatically scale your AI workloads based on demand. Pay only for what you use with intelligent resource optimization."
+            preventOutages: {
+                title: "Prevents the Outages You Already Know About",
+                description: "Expired certificates, silent failures, manual processes that break under load — a pilot builds the monitoring and hand-off that stops these before they reach production."
             },
-            integration: {
-                title: "Easy Integration",
-                description: "Seamlessly integrate with your existing tools and workflows. Support for popular AI frameworks and enterprise systems."
+            transferSkill: {
+                title: "Transfers the Skill, Not Just the Code",
+                description: "The point isn't a deliverable. It's a team that can build the next one without us. Every engagement ends with people, not just artefacts."
             },
-            support: {
-                title: "Expert Support",
-                description: "24/7 support from AI transformation experts. Get guidance from strategy to implementation and beyond."
+            certifyTeam: {
+                title: "Certifies Who Can Carry It Forward",
+                description: "When we hand off, you know exactly who on your team is qualified to fly it — because we've assessed and certified them against real delivery."
             }
         },
         howItWorks: {
             title: "How It Works",
-            description: "Our platform simplifies your AI transformation journey through a streamlined, four-step process designed for enterprise success.",
+            description: "A four-step engagement designed to leave capability behind, not dependency.",
             step1: {
-                title: "Assess Your Needs",
-                description: "We start by understanding your business objectives, current infrastructure, and AI readiness. Our experts conduct a comprehensive assessment to identify opportunities and challenges.",
-                detail1: "Business requirements analysis",
-                detail2: "Current infrastructure evaluation",
-                detail3: "AI readiness assessment",
-                detail4: "ROI projection and timeline planning"
+                title: "1 — Assess Where Delivery Will Break",
+                description: "Before anything ships, we map your team's current delivery capability against what the initiative demands: skills, infrastructure readiness, and the technical-debt and security risks that will surface later. You get a clear picture of exactly where the gaps are.",
+                detail1: "Delivery-skills gap assessment",
+                detail2: "Current infrastructure and readiness review",
+                detail3: "Technical-debt and security-risk mapping",
+                detail4: "Realistic timeline and hand-off plan"
             },
             step2: {
-                title: "Design & Plan",
-                description: "Based on the assessment, we create a customized AI transformation roadmap tailored to your enterprise needs, complete with architecture design and implementation strategy.",
-                detail1: "Custom architecture design",
-                detail2: "Technology stack selection",
-                detail3: "Integration planning",
-                detail4: "Risk mitigation strategies"
+                title: "2 — Design with Your Team, Not for Them",
+                description: "We build the roadmap and architecture with the people who'll own it, so the plan is one your team understands and can defend - not a document that arrives and gets ignored.",
+                detail1: "Architecture designed for maintainability",
+                detail2: "Technology choices your team can support",
+                detail3: "Integration mapped to your real systems",
+                detail4: "Risk and compliance built into the plan"
             },
             step3: {
-                title: "Deploy & Integrate",
-                description: "Our platform enables rapid deployment of AI models and applications. We ensure seamless integration with your existing systems and provide comprehensive training for your team.",
-                detail1: "One-click model deployment",
-                detail2: "API and system integration",
-                detail3: "Team training and onboarding",
-                detail4: "Performance testing and validation"
+                title: "3 — Build and Transfer by Doing",
+                description: "The pilot works inside your team, shipping real AI-agent solutions in hands-on simulation workshops built on your scenarios. Skills transfer because your people are building alongside — this is where the gap actually closes.",
+                detail1: "Real solutions built in your environment",
+                detail2: "Hands-on workshops on your scenarios",
+                detail3: "Skill transfer through paired delivery",
+                detail4: "Security and testing validated in-flight"
             },
             step4: {
-                title: "Monitor & Optimize",
-                description: "Continuous monitoring and optimization ensure your AI applications deliver maximum value. Our analytics dashboard provides real-time insights and performance metrics.",
-                detail1: "Real-time performance monitoring",
-                detail2: "Automated scaling and optimization",
-                detail3: "Regular performance reviews",
-                detail4: "Continuous improvement recommendations"
+                title: "4 — Certify and Hand Off",
+                description: "We certify the people who can carry the work forward and hand off cleanly, with the monitoring and safeguards in place to keep it running. You're left with capability, not a support contract you can't escape.",
+                detail1: "Pilot certification for your team",
+                detail2: "Proactive monitoring and safeguards in place",
+                detail3: "Clean hand-off, documented",
+                detail4: "Optional check-ins as your team scales it"
             }
         },
         useCases: {
-            title: "AI Transformation Use Cases",
+            title: "Use Cases",
+            description: "Where an embedded pilot pays for itself first.",
+            linkText: "See how AI-enabled delivery works →",
+            certificateManagement: {
+                title: "Certificate Management — Stop the Outages You Can Predict",
+                description: "Expired certificates cause production outages that are entirely preventable. Pilots build agents that monitor, renew on time, and notify stakeholders — turning a recurring firefight into a solved problem, and teaching your team to keep it solved."
+            },
             customerService: {
                 title: "Customer Service Automation",
-                description: "Deploy intelligent chatbots and virtual assistants that understand and respond to customer needs 24/7."
+                description: "Intelligent agents that handle real customer needs — built to your policies and integrated with your systems, not dropped in as a black box."
             },
             predictive: {
                 title: "Predictive Analytics",
-                description: "Leverage machine learning models to forecast trends, optimize operations, and make proactive decisions."
+                description: "Forecasting and decision-support your team can actually maintain, because they helped build the models."
             },
             document: {
                 title: "Document Intelligence",
-                description: "Automate document processing with AI-powered extraction, classification, and analysis capabilities."
+                description: "Extraction, classification, and analysis automated against your document types and your compliance requirements."
             },
             quality: {
                 title: "Quality Assurance",
-                description: "Implement AI-driven quality control systems that detect defects and ensure product excellence."
-            },
-            certificateManagement: {
-                title: "Certificate Management & Automation",
-                description: "Eliminate production outages from expired certificates. AI agents proactively monitor, update on time, and notify stakeholders—continuously learning and improving where manual processes fail."
-            }
-        },
-        raise: {
-            title: "Solving the RAISE Challenge",
-            subtitle: "Rapid AI Increases Skills Expectations - The Critical Challenge Facing Modern Enterprises",
-            problem: {
-                title: "The Problem",
-                description: "AI technology is evolving at an unprecedented pace, creating a widening gap between required skills and current capabilities. Professionals struggle to keep up with rapidly changing tools, frameworks, and best practices, while enterprises face delivery gaps that threaten their competitive advantage."
-            },
-            solution: {
-                title: "Our Solution",
-                description: "Delivery Pilot bridges this gap through a systematic approach designed specifically for professionals and enterprises:",
-                assessment: "📊 Assessments: Identify your current AI maturity level and pinpoint specific delivery gaps",
-                workshops: "🎓 Workshops: Hands-on training on the Top 10 AI topics to rapidly upskill your team",
-                gitBased: "💻 Git-Based Product Outputs: Real project deliverables that demonstrate practical skills and close the execution gap"
-            },
-            cta: {
-                assess: "Identify Your Delivery Gaps",
-                workshops: "View 10-Step Workshop Process",
-                learn: "Learn About Our Process"
+                description: "AI-driven quality control that fits your existing QA process instead of replacing it wholesale."
             }
         },
         about: {
             title: "About Delivery Pilot",
-            description1: "Delivery Pilot is a state-of-the-art Platform-as-a-Service (PaaS) solution specifically designed for businesses embarking on their AI transformation journey. We understand that adopting AI technology can be complex and challenging, which is why we've created a platform that simplifies every step of the process.",
-            description2: "Our goal is to make powerful AI tools, infrastructure, and expertise accessible to everyone, helping businesses of all sizes rapidly implement AI solutions that create real business value.",
+            description1: "Delivery Pilot is a program that puts expert delivery capability inside your team — not another platform to learn.",
+            description2: "Most enterprises don't lack AI ambition or AI tools. They lack the specialised, hands-on delivery skill to turn either into something that runs safely in production and keeps running. That's the gap we close.",
+            description3: "We embed certified Delivery Pilots who build real solutions alongside your people, close skills gaps by doing the work, and manage technical debt and security compliance as they go. When we hand off, the capability stays with your team.",
+            description4: "<strong>How we grow:</strong> Through trust and reach — sharing real delivery insight on our <a href=\"founder.html\">founder's YouTube channel</a>, and extending our capacity through a <a href=\"partners.html\">partner network</a> that delivers across global markets.",
             stats: {
-                customers: "Enterprise Customers",
-                github: "in GitHub with +200 repos",
-                deployment: "Faster Deployment"
+                outages: "Preventable Outages Eliminated",
+                outagesDesc: "Across systems where proactive monitoring was deployed",
+                teams: "Teams Certified Independently",
+                teamsDesc: "Engineers who can now ship AI-agent solutions without us",
+                speed: "Faster to Production",
+                speedDesc: "Measured against prior baseline by clearing debt"
             }
         },
         contact: {
@@ -957,7 +987,7 @@ const translations = {
             point2: "<strong>The Skills Gap is Bridged</strong>: The \"RAISE\" (Rapid AI Increases Skills Expectations) challenge is solved through practical, hands-on upskilling.",
             point3: "<strong>Vibe Programming Meets Engineering</strong>: The gap between non-deterministic AI creativity and deterministic engineering rigor is closed.",
             point4: "<strong>Human-Agent Collaboration is Seamless</strong>: Humans and AI agents work in perfect synergy, with agents handling complexity and humans focusing on strategy.",
-            outro: "Ultimately, we strive to be the Platform as a Service (PaaS) that allows any enterprise to deploy, manage, and scale AI applications with confidence, security, and measurable business value.",
+            outro: "Ultimately, we strive to be the embedded delivery and upskilling partner that allows any enterprise to deploy, manage, and scale AI agent solutions with confidence, security, and measurable business value.",
             imageAlt: "Delivery Pilot Vision"
         }
     },
@@ -1017,7 +1047,9 @@ const translations = {
             dynamicDocumentation: "📄 Dinamik Dokümantasyon",
             multiAgentOrchestrator: "🤖 Çoklu Ajan Orkestratörü",
             enterpriseGap: "🌌 Kurumsal Boşluk",
-            recentUpdates: "🕒 Son Güncellemeler"
+            oneScreenLanding: "📄 Tek Ekran İniş Sayfası",
+            recentUpdates: "🕒 Son Güncellemeler",
+            whoIsDeliveryPilot: "🏎️ Delivery Pilot Kimdir?"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1027,126 +1059,154 @@ const translations = {
             download: "📥 Sunum PDF'ini İndir"
         },
         hero: {
-            slogan: "Herkes uygulama yapabilir",
-            title: "İşletmenizi Yapay Zeka ile Dönüştürün",
-            subtitle: "Delivery Pilot, yapay zeka dönüşüm yolculuğunuzu hızlandıran lider Hizmet Olarak Platform (PaaS) çözümüdür. Yapay zeka uygulamalarını güvenle dağıtın, yönetin ve ölçeklendirin.",
-            startJourney: "Yolculuğunuza Başlayın",
-            learnMore: "Daha Fazla Bilgi"
+            slogan: "Gömülü Teslimat ve Yetkinlik Geliştirme Programı",
+            title: "Son üretim kesintiniz bir teknoloji arızası değildi. Bir teslimat başarısızlığıydı.",
+            subtitle: "Süresi dolan bir sertifika üretimi durdurur. Kilit bir kişi ayrılır ve yapay zeka projesi duraklar. Kimsenin fark etmediği yetenek açığı, kimsenin tutturamadığı teslim tarihine dönüşür. Bunlar yapay zeka sorunları değil; teslimat sorunlarıdır ve kurumsal yapay zeka girişimlerinin çoğu tam da bu noktada başarısızlığa uğrar.<br><br>Delivery Pilot, işler canlıya alınırken yetenek açığını kapatmak için ekibinize sertifikalı bir pilot dahil eder — slaytlarla değil, uygulamalı simülasyon atölyeleri ve sertifikasyonla. Biz ayrıldıktan sonra ekibinizde kalıcı bir teslimat yetkinliği kazanırsınız.",
+            findGap: "Teslimat Açığınızı Belirleyin",
+            seeWorkshop: "10 Adımlık Atölyeyi İnceleyin",
+            startJourney: "Teslimat Açığınızı Belirleyin",
+            learnMore: "10 Adımlık Atölyeyi İnceleyin"
+        },
+        raise: {
+            title: "RAISE Zorluğunu Çözmek",
+            subtitle: "Hızlı Yapay Zeka Çıtayı Ekiplerin Aşabileceğinden Daha Hızlı Yükseltiyor",
+            problem: {
+                title: "Sorun",
+                description: "Her çeyrek yeni araçlar, çerçeveler ve 'en iyi uygulamalar' getiriyor. Çalışanlarınızdan hem ayak uydurmaları hem de teslim etmeleri bekleniyor. Bugün gerekenler ile ekibin bugün yapabildikleri arasındaki boşluk bir eğitim bütçesi kalemi değil; teslim tarihlerinizi sessizce riske atan asıl unsurdur.<br><br>Sorun vizyon veya hırs eksikliği değil; strateji ile onu uygulayacak eller arasındaki boşluktur."
+            },
+            solution: {
+                title: "Çözümümüz",
+                description: "Delivery Pilot bu boşluğu üç yolla kapatır — hepsi uygulamalı, hepsi ekibinizin içinde:",
+                assessment: "📊 <strong>Yetenek Açığı Değerlendirmesi:</strong> Ekibinizin bugün teslim edebileceklerini, yapay zeka girişiminizin gerçekte talep ettikleriyle eşleştirir ve teslimatın tam olarak nerede kırılacağını saptarız.",
+                workshops: "🎓 <strong>İşbirlikçi Simülasyon Atölyeleri:</strong> Ekibiniz, bir pilotla birlikte, kendi sistemlerinizi yansıtan senaryolar üzerinde, kendi bağlamınızda gerçek yapay zeka ajanı çözümleri üretir — izleyerek değil, üreterek öğrenir.",
+                certification: "🏆 <strong>Pilot Sertifikasyonu:</strong> İşi ileriye taşıyabilecek kişileri; teslimatın sessizce çürüdüğü iki alan olan teknik borç yönetimi ve güvenlik uyumluluğuna özel odaklanarak sertifikalandırırız."
+            },
+            cta: {
+                assess: "Teslimat Hazırlığınızı Değerlendirin",
+                workshops: "10 Adımlık Atölye Sürecini Görüntüleyin",
+                twelveStep: "12 Adımlık Programı Görün",
+                learn: "Sürecimiz Hakkında Bilgi Edinin"
+            }
+        },
+        impact: {
+            title: "Kurumsal Yapay Zeka Projeleri Nerede <span class=\"highlight\">Yanlış Gidiyor?</span>",
+            subtitle: "Çoğu kurumsal yapay zeka projesi strateji yüzünden başarısız olmaz. Yürütme/teslimat yüzünden başarısız olur.<br>Her seferinde aynı üç engelde tökezlerler: uzmanlaşmış beceri eksikliği, biriken teknik borç ve şu kritik soruyu cevaplayacak kimsenin olmaması: <em>\"Bununla, burada, kendi sistemlerimizde ne yapacağız?\"</em>",
+            challenge: {
+                title: "Zorluk",
+                description: "\"Yapay zeka kullanmalıyız\" demek ile üretimde güvenle çalışan bir sistem arasındaki mesafe teknik borç ve yetenek açıklarıyla doludur. Bu boşlukları kapatmak asıl iştir ve çoğu programın atladığı kısımdır."
+            },
+            approach: {
+                title: "Yaklaşım",
+                description: "İşi ekibiniz için değil, ekibinizle birlikte yapmak üzere ekibinize uzman bir Delivery Pilot dahil ederiz. Gerçek çözümler üretir, beceriyi yaparak aktarır ve ekibinizi sistemi yürütebilecek durumda bırakırlar."
+            },
+            result: {
+                title: "Sonuç",
+                description: "Strateji ve yürütme nihayet buluşur. Yapay zeka girişiminiz başlar, ölçeklenir ve en önemlisi biz ayrıldıktan sonra da çalışmaya devam eder; çünkü yetkinlik artık ekibinizdedir."
+            },
+            cta: "Pilot Dahil Edin"
         },
         features: {
-            title: "Yapay Zeka Dönüşümü için Güçlü Özellikler",
-            rapidDeployment: {
-                title: "Hızlı Dağıtım",
-                description: "Yapay zeka modellerini ve uygulamalarını aylar değil, dakikalar içinde dağıtın. Kolaylaştırılmış platformumuz karmaşıklığı ortadan kaldırır ve pazara çıkış süresini hızlandırır."
+            title: "Gömülü Bir Pilot Gerçekte Ne Yapar?",
+            description: "Vaatler ve yürütmenin tutarlı kalmasını sağlamak için doğrudan ekibinize kazandırılan teslimat yetkinlikleri.",
+            shipsEnvironment: {
+                title: "Kendi Ortamınızda Canlıya Alır",
+                description: "Bir pilot sistemleriniz, kısıtlamalarınız ve kod tabanınız üzerinde çalışır — böylece inşa edilenler bir demo havuzunda değil, gerçekte ihtiyaç duyulan yerde çalışır."
             },
-            security: {
-                title: "Kurumsal Güvenlik",
-                description: "GDPR, SOC 2 ve HIPAA uyumluluk desteği ile banka düzeyinde güvenlik. Verileriniz ve modelleriniz her zaman korunur."
+            securityCompliance: {
+                title: "İnşa Ederken Güvenliği ve Uyumluluğu Güçlendirir",
+                description: "GDPR, SOC 2, HIPAA — sonradan eklenmek yerine iş sırasında teslimat kararları olarak ele alınır. Sertifikalandırdığımız kişiler bunu bu şekilde korumayı bilir."
             },
-            analytics: {
-                title: "Yapay Zeka Analitiği",
-                description: "Yapay zeka uygulamalarınıza gerçek zamanlı izleme ve içgörüler. Kapsamlı analitik panolarıyla veriye dayalı kararlar alın."
+            technicalDebt: {
+                title: "Teknik Borca Girişte Müdahale Eder",
+                description: "Her çözüm, ekibiniz tarafından sürdürülebilir olacak şekilde inşa edilir; kimsenin dokunamadığı bir sonraki yük haline gelmez. Borç yönetimi teslimatın bir parçasıdır."
             },
-            autoScaling: {
-                title: "Otomatik Ölçeklendirme",
-                description: "Yapay zeka iş yüklerinizi talebe göre otomatik olarak ölçeklendirin. Akıllı kaynak optimizasyonu ile yalnızca kullandığınız kadar ödeyin."
+            preventOutages: {
+                title: "Bildiğiniz Kesintileri Önceden Engeller",
+                description: "Süresi dolan sertifikalar, sessiz arızalar, yük altında kırılan manuel süreçler — bir pilot bunların üretime ulaşmasını engelleyen izleme ve devir süreçlerini kurar."
             },
-            integration: {
-                title: "Kolay Entegrasyon",
-                description: "Mevcut araçlarınız ve iş akışlarınızla sorunsuz bir şekilde entegre olun. Popüler yapay zeka çerçeveleri ve kurumsal sistemler için destek."
+            transferSkill: {
+                title: "Sadece Kodu Değil, Yetkinliği Aktarır",
+                description: "Amaç tek bir teslimat değildir. Biz olmadan bir sonrakini inşa edebilecek bir ekiptir. Her çalışma yalnızca artefaktlarla değil, yetkin insanlarla sona erer."
             },
-            support: {
-                title: "Uzman Desteği",
-                description: "Yapay zeka dönüşüm uzmanlarından 7/24 destek. Stratejiden uygulamaya ve ötesine kadar rehberlik alın."
+            certifyTeam: {
+                title: "İşi İleriye Taşıyacak Kişileri Sertifikalandırır",
+                description: "Devir teslim yaptığımızda, ekibinizden kimin bunu yönetmeye yetkili olduğunu tam olarak bilirsiniz — çünkü onları gerçek teslimat üzerinden değerlendirip sertifikalandırırız."
             }
         },
         howItWorks: {
             title: "Nasıl Çalışır",
-            description: "Platformumuz, kurumsal başarı için tasarlanmış kolaylaştırılmış, dört adımlı bir süreç aracılığıyla yapay zeka dönüşüm yolculuğunuzu basitleştirir.",
+            description: "Bağımlılık değil, yetkinlik bırakmak üzere tasarlanmış dört adımlı bir çalışma modeli.",
             step1: {
-                title: "İhtiyaçlarınızı Değerlendirin",
-                description: "İş hedeflerinizi, mevcut altyapınızı ve yapay zeka hazırlığınızı anlayarak başlıyoruz. Uzmanlarımız, fırsatları ve zorlukları belirlemek için kapsamlı bir değerlendirme yapar.",
-                detail1: "İş gereksinimleri analizi",
-                detail2: "Mevcut altyapı değerlendirmesi",
-                detail3: "Yapay zeka hazırlık değerlendirmesi",
-                detail4: "Yatırım getirisi projeksiyonu ve zaman çizelgesi planlaması"
+                title: "1 — Teslimatın Nerede Kırılacağını Değerlendirin",
+                description: "Hiçbir şey canlıya alınmadan önce, ekibinizin mevcut teslimat yetkinliğini girişimin talep ettikleriyle eşleştiririz: beceriler, altyapı hazırlığı ve daha sonra ortaya çıkacak teknik borç ve güvenlik riskleri. Boşlukların tam olarak nerede olduğuna dair net bir resim elde edersiniz.",
+                detail1: "Teslimat becerileri açık değerlendirmesi",
+                detail2: "Mevcut altyapı ve hazırlık incelemesi",
+                detail3: "Teknik borç ve güvenlik riski haritalaması",
+                detail4: "Gerçekçi zaman çizelgesi ve devir teslim planı"
             },
             step2: {
-                title: "Tasarlayın ve Planlayın",
-                description: "Değerlendirmeye dayanarak, mimari tasarım ve uygulama stratejisiyle birlikte kurumsal ihtiyaçlarınıza özel özelleştirilmiş bir yapay zeka dönüşüm yol haritası oluşturuyoruz.",
-                detail1: "Özel mimari tasarım",
-                detail2: "Teknoloji yığını seçimi",
-                detail3: "Entegrasyon planlaması",
-                detail4: "Risk azaltma stratejileri"
+                title: "2 — Ekibiniz İçin Değil, Ekibinizle Birlikte Tasarlayın",
+                description: "Yol haritasını ve mimariyi, sistemi sahiplenecek kişilerle birlikte oluştururuz; böylece plan ekibinizin anladığı ve savunabileceği bir plan olur — gelip göz ardı edilen bir doküman değil.",
+                detail1: "Sürdürülebilirlik için tasarlanmış mimari",
+                detail2: "Ekibinizin destekleyebileceği teknoloji seçimleri",
+                detail3: "Gerçek sistemlerinizle eşleştirilmiş entegrasyon",
+                detail4: "Plana dahil edilmiş risk ve uyumluluk"
             },
             step3: {
-                title: "Dağıtın ve Entegre Edin",
-                description: "Platformumuz, yapay zeka modellerinin ve uygulamalarının hızlı dağıtımını sağlar. Mevcut sistemlerinizle sorunsuz entegrasyon sağlıyor ve ekibiniz için kapsamlı eğitim sunuyoruz.",
-                detail1: "Tek tıkla model dağıtımı",
-                detail2: "API ve sistem entegrasyonu",
-                detail3: "Ekip eğitimi ve işe alıştırma",
-                detail4: "Performans testi ve doğrulama"
+                title: "3 — Yaparak İnşa Edin ve Aktarın",
+                description: "Pilot ekibinizin içinde çalışır, senaryolarınız üzerine kurulu uygulamalı simülasyon atölyelerinde gerçek yapay zeka ajanı çözümleri sunar. Beceriler aktarılır çünkü ekibiniz yan yana üretir — boşluk tam burada kapanır.",
+                detail1: "Kendi ortamınızda inşa edilen gerçek çözümler",
+                detail2: "Senaryolarınız üzerine uygulamalı atölyeler",
+                detail3: "Eşli teslimat yoluyla beceri transferi",
+                detail4: "Süreç içinde doğrulanan güvenlik ve testler"
             },
             step4: {
-                title: "İzleyin ve Optimize Edin",
-                description: "Sürekli izleme ve optimizasyon, yapay zeka uygulamalarınızın maksimum değer sağlamasını garanti eder. Analitik panosumuz gerçek zamanlı içgörüler ve performans metrikleri sağlar.",
-                detail1: "Gerçek zamanlı performans izleme",
-                detail2: "Otomatik ölçeklendirme ve optimizasyon",
-                detail3: "Düzenli performans incelemeleri",
-                detail4: "Sürekli iyileştirme önerileri"
+                title: "4 — Sertifikalandırın ve Devredin",
+                description: "İşi ileriye taşıyabilecek kişileri sertifikalandırır ve sistemi çalışır halde tutacak izleme ve koruma önlemleriyle temiz bir devir teslim yaparız. Kaçamadığınız bir destek sözleşmesiyle değil, kalıcı yetkinlikle baş başa kalırsınız.",
+                detail1: "Ekibiniz için pilot sertifikasyonu",
+                detail2: "Proaktif izleme ve koruma mekanizmaları",
+                detail3: "Temiz, belgelenmiş devir teslim",
+                detail4: "Ekibiniz ölçeklenirken isteğe bağlı kontroller"
             }
         },
         useCases: {
-            title: "Yapay Zeka Dönüşümü Kullanım Alanları",
+            title: "Kullanım Senaryoları",
+            description: "Gömülü bir pilotun maliyetini en hızlı karşıladığı alanlar.",
+            linkText: "Yapay zeka destekli teslimatın nasıl çalıştığını görün →",
+            certificateManagement: {
+                title: "Sertifika Yönetimi — Öngörülebilir Kesintileri Durdurun",
+                description: "Süresi dolan sertifikalar, tamamen önlenebilir üretim kesintilerine neden olur. Pilotlar; izleyen, zamanında yenileyen ve paydaşları bilgilendiren ajanlar inşa eder — tekrarlayan bir krizi çözülmüş bir probleme dönüştürür ve ekibinize bunu sürdürmeyi öğretir."
+            },
             customerService: {
                 title: "Müşteri Hizmetleri Otomasyonu",
-                description: "Müşteri ihtiyaçlarını anlayan ve 7/24 yanıt veren akıllı sohbet robotları ve sanal asistanlar dağıtın."
+                description: "Gerçek müşteri ihtiyaçlarını karşılayan akıllı ajanlar — kara kutu olarak bırakılmak yerine, politikalarınıza göre inşa edilmiş ve sistemlerinizle entegre."
             },
             predictive: {
                 title: "Tahmine Dayalı Analitik",
-                description: "Trendleri tahmin etmek, operasyonları optimize etmek ve proaktif kararlar almak için makine öğrenimi modellerinden yararlanın."
+                description: "Ekibinizin modellerin inşasına yardım ettiği için gerçekten sürdürebileceği tahmin ve karar destek sistemleri."
             },
             document: {
                 title: "Belge Zekası",
-                description: "Yapay zeka destekli çıkarma, sınıflandırma ve analiz yetenekleriyle belge işlemeyi otomatikleştirin."
+                description: "Belge türlerinize ve uyumluluk gereksinimlerinize göre otomatikleştirilmiş veri çıkarma, sınıflandırma ve analiz."
             },
             quality: {
                 title: "Kalite Güvencesi",
-                description: "Kusurları tespit eden ve ürün mükemmelliğini sağlayan yapay zeka odaklı kalite kontrol sistemleri uygulayın."
-            },
-            certificateManagement: {
-                title: "Sertifika Yönetimi ve Otomasyonu",
-                description: "Süresi dolan sertifikalardan kaynaklanan üretim kesintilerini ortadan kaldırın. Yapay zeka ajanları proaktif olarak izler, zamanında günceller ve paydaşları bilgilendirir—manuel süreçlerin başarısız olduğu yerde sürekli öğrenir ve gelişir."
-            }
-        },
-        raise: {
-            title: "RAISE Zorluğunu Çözmek",
-            subtitle: "Hızlı Yapay Zeka Beceri Beklentilerini Artırıyor - Modern İşletmelerin Karşılaştığı Kritik Zorluk",
-            problem: {
-                title: "Sorun",
-                description: "Yapay zeka teknolojisi benzeri görülmemiş bir hızla gelişiyor ve gerekli beceriler ile mevcut yetenekler arasında genişleyen bir boşluk yaratıyor. Profesyoneller hızla değişen araçlara, çerçevelere ve en iyi uygulamalara ayak uydurmakta zorlanırken, işletmeler rekabet avantajlarını tehdit eden teslimat boşluklarıyla karşı karşıya kalıyor."
-            },
-            solution: {
-                title: "Çözümümüz",
-                description: "Delivery Pilot, profesyoneller ve işletmeler için özel olarak tasarlanmış sistematik bir yaklaşımla bu boşluğu kapatır:",
-                assessment: "📊 Değerlendirmeler: Mevcut yapay zeka olgunluk seviyenizi belirleyin ve spesifik teslimat boşluklarını tespit edin",
-                workshops: "🎓 Atölyeler: Ekibinizi hızla geliştirmek için En İyi 10 Yapay Zeka konusunda uygulamalı eğitim",
-                gitBased: "💻 Git Tabanlı Ürün Çıktıları: Pratik becerileri gösteren ve yürütme boşluğunu kapatan gerçek proje teslimatları"
-            },
-            cta: {
-                assess: "Teslimat Boşluklarınızı Belirleyin",
-                workshops: "10 Adımlık Atölye Sürecini Görüntüleyin",
-                learn: "Sürecimiz Hakkında Bilgi Edinin"
+                description: "Mevcut kalite güvence sürecinizi tamamen değiştirmek yerine ona uyum sağlayan yapay zeka odaklı kalite kontrolü."
             }
         },
         about: {
             title: "Delivery Pilot Hakkında",
-            description1: "Delivery Pilot, yapay zeka dönüşüm yolculuğuna çıkan işletmeler için özel olarak tasarlanmış son teknoloji bir Platform-as-a-Service (PaaS) çözümüdür. Yapay zeka teknolojisini benimsemenin karmaşık ve zorlayıcı olabileceğini anlıyoruz, bu yüzden sürecin her adımını basitleştiren bir platform oluşturduk.",
-            description2: "Amacımız; güçlü yapay zeka araçlarını, altyapıyı ve uzmanlığı herkes için erişilebilir hale getirerek her ölçekteki işletmenin gerçek iş değeri yaratan yapay zeka çözümlerini hızla hayata geçirmesine yardımcı olmaktır.",
+            description1: "Delivery Pilot, ekibinizin içine uzman teslimat yetkinliği yerleştiren bir programdır — öğrenilmesi gereken başka bir platform değil.",
+            description2: "Çoğu kurum yapay zeka vizyonu veya yapay zeka araçları eksikliği yaşamaz. Eksik olan; bu araçları üretimde güvenle çalışan ve çalışmaya devam eden bir sisteme dönüştürecek uzmanlaşmış, uygulamalı teslimat becerisidir. İşte kapattığımız boşluk budur.",
+            description3: "Çalışanlarınızla birlikte gerçek çözümler üreten, işi yaparak beceri açıklarını kapatan, teknik borcu ve güvenlik uyumluluğunu süreç içinde yöneten sertifikalı Delivery Pilot'larını ekibinize dahil ediyoruz. Devrettiğimizde, yetkinlik ekibinizde kalır.",
+            description4: "<strong>Büyüme modelimiz:</strong> Güven ve erişim yoluyla — <a href=\"founder-tr.html\">kurucumuzun YouTube kanalında</a> gerçek teslimat içgörüleri paylaşıyor ve küresel pazarlarda teslimat yapan <a href=\"partners-tr.html\">iş ortağı ağımız</a> aracılığıyla kapasitemizi genişletiyoruz.",
             stats: {
-                customers: "Kurumsal Müşteri",
-                github: "GitHub'da +200 repo",
-                deployment: "Daha Hızlı Dağıtım"
+                outages: "Önlenebilir Kesintilerin Engellenmesi",
+                outagesDesc: "Proaktif izleme ve sertifika koruması uygulanan sistemlerde",
+                teams: "Bağımsız Teslimat Yetkinliği",
+                teamsDesc: "Biz olmadan yapay zeka ajanı çözümleri üretebilen sertifikalı ekipler",
+                speed: "Canlıya Alımda Hızlanma",
+                speedDesc: "Yürütme engelleri ve teknik borç kaldırılarak önceki temel çizgiye göre"
             }
         },
         contact: {
@@ -2022,7 +2082,7 @@ const translations = {
             point2: "<strong>Yetenek Açığı Kapatılmıştır</strong>: \"RAISE\" (Hızlı AI Yetenek Beklentilerini Artırıyor) zorluğu, pratik ve uygulamalı beceri geliştirme ile çözülmüştür.",
             point3: "<strong>Vibe Programlama Mühendislikle Buluşuyor</strong>: Deterministik olmayan AI yaratıcılığı ile deterministik mühendislik disiplini arasındaki boşluk kapanmıştır.",
             point4: "<strong>İnsan-Ajan İşbirliği Kesintisizdir</strong>: İnsanlar ve AI ajanları mükemmel bir sinerji içinde çalışır; ajanlar karmaşıklığı yönetirken insanlar stratejiye odaklanır.",
-            outro: "Nihayetinde, herhangi bir kurumun AI uygulamalarını güven, emniyet ve ölçülebilir iş değeri ile dağıtmasını, yönetmesini ve ölçeklendirmesini sağlayan Hizmet Olarak Platform (PaaS) olmayı hedefliyoruz.",
+            outro: "Nihayetinde, herhangi bir kurumun yapay zeka ajanı çözümlerini güven, emniyet ve ölçülebilir iş değeri ile dağıtmasını, yönetmesini ve ölçeklendirmesini sağlayan gömülü teslimat ve yetkinlik geliştirme ortağı olmayı hedefliyoruz.",
             imageAlt: "Delivery Pilot Vizyonu"
         }
     }

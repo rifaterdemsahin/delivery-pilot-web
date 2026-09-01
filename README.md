@@ -1,33 +1,31 @@
-📅 Updated: 2025-12-23
+📅 Updated: 2026-08-31
 
-# Delivery Pilot - Enterprise AI Transformation Platform
+# Delivery Pilot - Embedded AI Delivery & Upskilling Program
 
-A modern Platform as a Service (PaaS) website designed to help enterprises accelerate their AI transformation journey.
+An embedded delivery and upskilling program designed to close skills gaps, eliminate technical debt, and ensure enterprise AI agent solutions reach and stay safely in production.
 
 ## Overview
 
-Delivery Pilot is a comprehensive program that empowers professionals to deliver AI agent-based solutions effectively. The program provides three core components:
+Delivery Pilot embeds certified delivery pilots inside enterprise teams to build real AI agent solutions collaboratively, closing execution gaps and leaving behind certified, independent capability. The program provides three core components:
 
 ### 1. Skills Gap Assessments
-Delivery Pilot conducts thorough assessments to identify professionals' current capabilities and pinpoint areas for development in AI agent implementation.
+We map what your team can deliver today against what your AI initiative actually demands, pinpointing exactly where delivery will break.
 
 ### 2. Collaborative Simulation Workshops
-Through hands-on simulation workshops, participants learn to build solutions with AI agents collaboratively, gaining practical experience in real-world scenarios.
+Through hands-on simulation workshops, your people build real AI-agent solutions alongside a pilot in your environment on scenarios mirroring your systems — learning by shipping.
 
 ### 3. Pilot Certification
-The program certifies professionals as qualified pilots for delivering AI agent applications, with specific focus on critical metrics including:
-- Technical debt management
-- Security compliance and best practices
+Certifies the team members who carry the work forward, with specific focus on:
+- Technical debt management on the way in
+- Security compliance (GDPR, SOC 2, HIPAA) built into the delivery
 
-## Features
+## What an Embedded Pilot Does
 
-- **Rapid Deployment**: Deploy AI models and applications in minutes
-- **Enterprise Security**: Bank-grade security with compliance support (GDPR, SOC 2, HIPAA)
-- **AI Analytics**: Real-time monitoring and comprehensive insights
-- **Auto-Scaling**: Intelligent resource optimization
-- **Easy Integration**: Seamless integration with existing tools and workflows
-- **Expert Support**: 24/7 support from AI transformation experts
-- **Bilingual Support**: Full Turkish and English language support with easy toggle switching
+- **Ships in Your Environment**: Works directly on your codebase, constraints, and architecture.
+- **Hardens Security & Compliance**: Handles governance (GDPR, SOC 2, HIPAA) as delivery decisions during work.
+- **Attacks Technical Debt**: Ensures every solution is maintainable by your own team.
+- **Prevents Predictable Outages**: Eliminates recurring incidents like expired certificates and silent pipeline failures.
+- **Transfers Skill & Certifies**: Leaves behind certified people who can build and run the next solution independently.
 
 ## Marketing Strategy
 

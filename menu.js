@@ -30,6 +30,7 @@ const navigationConfig = {
                 { href: 'usecases.html', textKey: 'nav.useCasesDetailed', text: '🤖 AI Agent Use Cases' },
                 { href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: '🌌 The Enterprise Gap' },
                 { href: 'usecase-production-delivery.html', textKey: 'nav.productionDelivery', text: '🚀 Production Delivery' },
+                { href: 'one-screen-landing-page.html', textKey: 'nav.oneScreenLanding', text: '📄 One-Screen Landing' },
                 { href: 'icp-strategy.html', textKey: 'nav.icpStrategy', text: '🎯 ICP Strategy' }
             ]
         },
@@ -59,6 +60,7 @@ const navigationConfig = {
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
                 { href: 'mission-vision.html', textKey: 'nav.missionVision', text: '🎯 Mission & Vision' },
                 { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' },
+                { href: 'who-is-a-delivery-pilot.html', textKey: 'nav.whoIsDeliveryPilot', text: '🏎️ Who is a Delivery Pilot?' },
                 { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },
                 { href: 'success-stories.html', textKey: 'nav.successStories', text: '⭐ Success Stories' },
                 { href: 'faq.html', textKey: 'nav.faq', text: '❓ FAQ' },

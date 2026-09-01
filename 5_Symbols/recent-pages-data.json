@@ -1,5 +1,29 @@
 [
   {
+    "file": "who-is-a-delivery-pilot.html",
+    "url": "who-is-a-delivery-pilot.html",
+    "title": "Who is a Delivery Pilot? The Niki Lauda Standard in AI Delivery",
+    "description": "Niki Lauda fundamentally redefined professional motorsport through clinical precision, technical mastery, and risk management. Learn how Certified Delivery Pilots bring that exact standard to enterprise AI delivery.",
+    "lastDate": "2026-09-01",
+    "createdDate": "2026-09-01",
+    "isAdded": true,
+    "type": "Added",
+    "isTurkish": false,
+    "category": "Company"
+  },
+  {
+    "file": "who-is-a-delivery-pilot-tr.html",
+    "url": "who-is-a-delivery-pilot-tr.html",
+    "title": "Delivery Pilot Kimdir? Yapay Zeka Teslimatında Niki Lauda Standardı",
+    "description": "Niki Lauda klinik hassasiyet, teknik ustalık ve risk yönetimiyle motor sporlarını kökten değiştirdi. Sertifikalı Delivery Pilot'ların bu standardı kurumsal yapay zeka teslimatına nasıl getirdiğini keşfedin.",
+    "lastDate": "2026-09-01",
+    "createdDate": "2026-09-01",
+    "isAdded": true,
+    "type": "Added",
+    "isTurkish": true,
+    "category": "Company"
+  },
+  {
     "file": "enterprise-gap.html",
     "url": "enterprise-gap.html",
     "title": "The Enterprise Gap: Navigating the Unknown AI Universe",
