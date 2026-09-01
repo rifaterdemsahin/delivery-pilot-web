@@ -184,120 +184,161 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Admin Storage Quick Access Widget */
+        /* Discreet Admin Storage Quick Access Widget */
         .admin-storage-widget {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 9999;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99999;
+        }
+
+        .admin-storage-fab {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #94a3b8;
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-
-        .admin-storage-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #0078d4 0%, #004e8c 100%);
-            color: #ffffff !important;
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 16px rgba(0, 120, 212, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
             backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .admin-storage-btn:hover {
-            background: linear-gradient(135deg, #106ebe 0%, #005a9e 100%);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 24px rgba(0, 120, 212, 0.6);
-            color: #ffffff !important;
-            text-decoration: none;
+        .admin-storage-fab:hover {
+            background: #0078d4;
+            color: #ffffff;
+            border-color: #38bdf8;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 120, 212, 0.55);
         }
 
-        .admin-storage-banner {
-            margin-top: 3.5rem;
-            background: #f0f7ff;
-            border: 1px solid #c7e0f4;
-            border-radius: 12px;
-            padding: 1.5rem 2rem;
+        .admin-storage-popover {
+            position: absolute;
+            bottom: 54px;
+            right: 0;
+            width: 320px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            padding: 1.25rem;
+            color: #0f172a;
+            font-size: 0.9rem;
+            animation: popoverFadeIn 0.2s ease-out;
+            text-align: left;
+        }
+
+        body.dark-theme .admin-storage-popover {
+            background: #111827;
+            border-color: #1e3a8a;
+            color: #f8fafc;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes popoverFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .popover-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        body.dark-theme .admin-storage-banner {
-            background: #0f1f38;
-            border-color: #1e3a8a;
-            color: #e2e8f0;
-        }
-
-        .admin-storage-info h4 {
-            margin: 0 0 0.35rem 0;
+        .popover-header h4 {
+            margin: 0;
+            font-size: 0.95rem;
             color: #0078d4;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        body.dark-theme .admin-storage-info h4 {
+        body.dark-theme .popover-header h4 {
             color: #38bdf8;
         }
 
-        .admin-storage-info p {
-            margin: 0;
-            font-size: 0.92rem;
-            color: #475569;
+        .popover-close {
+            background: transparent;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: #94a3b8;
+            line-height: 1;
         }
 
-        body.dark-theme .admin-storage-info p {
+        .popover-close:hover {
+            color: #ef4444;
+        }
+
+        .popover-desc {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.82rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        body.dark-theme .popover-desc {
             color: #94a3b8;
         }
 
-        .admin-storage-links {
+        .popover-links {
             display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.4rem;
         }
 
-        .admin-storage-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.45rem 0.9rem;
+        .popover-link {
+            display: block;
+            padding: 0.55rem 0.75rem;
+            background: #f1f5f9;
             border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            background: #ffffff;
-            border: 1px solid #0078d4;
-            color: #0078d4;
+            color: #0f172a;
             text-decoration: none;
+            font-size: 0.84rem;
             transition: all 0.2s ease;
         }
 
-        body.dark-theme .admin-storage-chip {
+        body.dark-theme .popover-link {
             background: #1e293b;
-            border-color: #38bdf8;
-            color: #38bdf8;
+            color: #e2e8f0;
         }
 
-        .admin-storage-chip:hover {
+        .popover-link:hover {
             background: #0078d4;
             color: #ffffff;
-            text-decoration: none;
         }
 
-        body.dark-theme .admin-storage-chip:hover {
+        body.dark-theme .popover-link:hover {
             background: #38bdf8;
             color: #0f172a;
+        }
+
+        .popover-last-saved {
+            margin-top: 0.75rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.78rem;
+            color: #64748b;
+        }
+
+        body.dark-theme .popover-last-saved {
+            border-top-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .popover-last-saved code {
+            display: block;
+            word-break: break-all;
+            font-size: 0.72rem;
+            color: #0078d4;
+            margin-top: 0.25rem;
+        }
+
+        body.dark-theme .popover-last-saved code {
+            color: #38bdf8;
         }
 
         /* Responsive Design */
@@ -475,9 +516,18 @@
                         }
 
                         if (savedToAzure || (backupRes.status === 'fulfilled' && backupRes.value.ok)) {
-                            statusMsg.innerHTML = `✅ <strong>Mesajınız başarıyla kaydedildi ve iletildi!</strong><br><small style="color: #0078d4;">Azure Depolama nesnesi oluşturuldu: <code>dpprojects/states/${blobPath}</code></small>`;
+                            // Standard public confirmation - does NOT reveal internal storage details to public users
+                            statusMsg.innerHTML = '✅ <strong>Mesajınız başarıyla gönderildi!</strong> Sizinle en kısa sürede iletişime geçeceğiz.';
                             statusMsg.style.color = '#10b981';
                             document.getElementById('contactFormTr').reset();
+
+                            // Update admin popover with latest blob details (visible only to admin upon clicking icon)
+                            const adminInfo = document.getElementById('adminLastSavedInfo');
+                            const adminBlobCode = document.getElementById('adminLastSavedBlob');
+                            if (adminInfo && adminBlobCode) {
+                                adminBlobCode.innerText = blobPath;
+                                adminInfo.style.display = 'block';
+                            }
                         } else {
                             throw new Error('Azure Storage upload failed');
                         }
@@ -499,41 +549,68 @@
                 <p>Book a consultation call at your convenience</p>
                 <a href="https://calendly.com/rifaterdem/schedule" target="_blank" rel="noopener noreferrer" class="meeting-btn">Book a consultation call</a>
             </div>
-
-            <!-- Admin Azure Storage Location Banner -->
-            <div class="admin-storage-banner">
-                <div class="admin-storage-info">
-                    <h4>☁️ Azure Nesne Depolama (dpprojects)</h4>
-                    <p>Canlı durumlar, iletişim anlık görüntüleri ve yedekleme arşivleri <code>uksouth / deliverypilot-rg</code> içinde.</p>
-                </div>
-                <div class="admin-storage-links">
-                    <a href="https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/states" target="_blank" rel="noopener noreferrer" class="admin-storage-chip">
-                        📂 states/
-                    </a>
-                    <a href="https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/backup" target="_blank" rel="noopener noreferrer" class="admin-storage-chip">
-                        🗄️ backup/
-                    </a>
-                    <a href="https://portal.azure.com/#@deliverypilot.net/resource/subscriptions/b85b029d-9f7c-4c5a-8939-819480780c5d/resourceGroups/deliverypilot-rg/providers/Microsoft.Storage/storageAccounts/dpprojects/overview" target="_blank" rel="noopener noreferrer" class="admin-storage-chip">
-                        ⚡ Genel Bakış
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Floating Admin Storage Quick Access Widget -->
+    <!-- Discreet Admin Storage Quick Access Icon & Popover -->
     <div class="admin-storage-widget">
-        <a href="https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/states" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="admin-storage-btn" 
-           title="Azure Storage Konumu: dpprojects (states & backup)">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <button id="adminStorageToggle" class="admin-storage-fab" aria-label="Admin Storage Location" title="Admin Storage Access">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
             </svg>
-            <span>☁️ Depolama: dpprojects</span>
-        </a>
+        </button>
+        <div id="adminStorageModal" class="admin-storage-popover" style="display: none;">
+            <div class="popover-header">
+                <h4>☁️ Azure Depolama: <code>dpprojects</code></h4>
+                <button id="closeAdminModal" class="popover-close">&times;</button>
+            </div>
+            <p class="popover-desc">Form yanıtları Azure Blob Depolama'ya değişmez JSON nesneleri olarak kaydedilir:</p>
+            <div class="popover-links">
+                <a href="https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/states" target="_blank" rel="noopener noreferrer" class="popover-link">
+                    📂 <strong>states/submissions/</strong>
+                </a>
+                <a href="https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/backup" target="_blank" rel="noopener noreferrer" class="popover-link">
+                    🗄️ <strong>backup/submissions/</strong>
+                </a>
+                <a href="https://portal.azure.com/#@deliverypilot.net/resource/subscriptions/b85b029d-9f7c-4c5a-8939-819480780c5d/resourceGroups/deliverypilot-rg/providers/Microsoft.Storage/storageAccounts/dpprojects/overview" target="_blank" rel="noopener noreferrer" class="popover-link">
+                    ⚡ <strong>Genel Bakış (Overview)</strong>
+                </a>
+            </div>
+            <div id="adminLastSavedInfo" class="popover-last-saved" style="display: none;">
+                <small>Son yerel kayıt:</small>
+                <code id="adminLastSavedBlob"></code>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Admin Popover Toggle Logic
+        (function() {
+            const toggleBtn = document.getElementById('adminStorageToggle');
+            const modal = document.getElementById('adminStorageModal');
+            const closeBtn = document.getElementById('closeAdminModal');
+
+            if (toggleBtn && modal) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+                });
+
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        modal.style.display = 'none';
+                    });
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!modal.contains(e.target) && e.target !== toggleBtn) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+        })();
+    </script>
 
     <!-- Footer - Loaded from menu.js -->
     <div id="footer-placeholder"></div>
