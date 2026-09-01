@@ -450,18 +450,32 @@
                     const submissionId = 'sub_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
                     const blobPath = `submissions/${cleanDate}_${submissionId}.json`;
 
+                    // Azure Storage Portal URLs for backup & gap checking
+                    const storageStatesUrl = 'https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/states';
+                    const storageBackupUrl = 'https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fb85b029d-9f7c-4c5a-8939-819480780c5d%2FresourceGroups%2Fdeliverypilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fdpprojects/path/backup';
+                    const storageOverviewUrl = 'https://portal.azure.com/#@deliverypilot.net/resource/subscriptions/b85b029d-9f7c-4c5a-8939-819480780c5d/resourceGroups/deliverypilot-rg/providers/Microsoft.Storage/storageAccounts/dpprojects/overview';
+
+                    const rawMessage = document.getElementById('message').value.trim();
+                    const emailStorageFooter = `\n\n---\n📦 Azure Storage Backup (check for gaps):\n• States: ${storageStatesUrl}\n• Backup: ${storageBackupUrl}\n• Blob Path: ${blobPath}`;
+
                     const submissionData = {
                         id: submissionId,
                         timestamp: timestamp,
                         name: document.getElementById('name').value.trim(),
                         email: document.getElementById('email').value.trim(),
                         interest: document.getElementById('interest').value,
-                        message: document.getElementById('message').value.trim(),
-                        source: 'contact_page_en',
+                        message: rawMessage,
+                        messageWithStorage: rawMessage + emailStorageFooter,
+                        azureStorageUrl: storageStatesUrl,
+                        azureBackupStorageUrl: storageBackupUrl,
+                        azureStorageOverviewUrl: storageOverviewUrl,
                         storage: {
                             account: 'dpprojects',
                             containers: ['states', 'backup'],
-                            blob: blobPath
+                            blob: blobPath,
+                            portalStatesUrl: storageStatesUrl,
+                            portalBackupUrl: storageBackupUrl,
+                            portalOverviewUrl: storageOverviewUrl
                         },
                         clientMetadata: {
                             url: window.location.href,
@@ -471,6 +485,12 @@
                     };
 
                     const jsonPayload = JSON.stringify(submissionData, null, 2);
+
+                    // Webhook payload includes email footer appended to message so email recipients immediately see the Azure Storage link
+                    const webhookPayload = JSON.stringify({
+                        ...submissionData,
+                        message: rawMessage + emailStorageFooter
+                    }, null, 2);
 
                     // SAS URLs for dpprojects Azure Blob Storage
                     const statesUrl = `https://dpprojects.blob.core.windows.net/states/${blobPath}?se=2036-09-01T00%3A00%3A00Z&sp=racwdl&sv=2026-04-06&sr=c&sig=a/uQA160fUVz75hJZj0SubKJzFpHArUYCyZvyva6f8Q%3D`;
@@ -509,7 +529,7 @@
                             await fetch(webhookUrl, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
-                                body: jsonPayload
+                                body: webhookPayload
                             });
                         } catch (webhookErr) {
                             console.warn('Webhook notification fallback:', webhookErr);
