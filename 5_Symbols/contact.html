@@ -401,41 +401,90 @@
                     
                     // Disable button and show loading state
                     submitBtn.disabled = true;
-                    submitBtn.innerText = 'Sending...';
+                    submitBtn.innerText = 'Saving to Azure Storage & Submitting...';
                     statusMsg.style.display = 'none';
 
-                    const formData = {
-                        name: document.getElementById('name').value,
-                        email: document.getElementById('email').value,
+                    const timestamp = new Date().toISOString();
+                    const cleanDate = timestamp.replace(/[:.]/g, '-');
+                    const submissionId = 'sub_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
+                    const blobPath = `submissions/${cleanDate}_${submissionId}.json`;
+
+                    const submissionData = {
+                        id: submissionId,
+                        timestamp: timestamp,
+                        name: document.getElementById('name').value.trim(),
+                        email: document.getElementById('email').value.trim(),
                         interest: document.getElementById('interest').value,
-                        message: document.getElementById('message').value,
+                        message: document.getElementById('message').value.trim(),
                         source: 'contact_page_en',
-                        timestamp: new Date().toISOString()
+                        storage: {
+                            account: 'dpprojects',
+                            containers: ['states', 'backup'],
+                            blob: blobPath
+                        },
+                        clientMetadata: {
+                            url: window.location.href,
+                            referrer: document.referrer || 'direct',
+                            userAgent: navigator.userAgent
+                        }
                     };
 
-                    try {
-                        // Replace with your actual n8n webhook URL
-                        const webhookUrl = 'https://n8n.rifaterdemsahin.com/webhook/contact-form';
-                        
-                        const response = await fetch(webhookUrl, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(formData)
-                        });
+                    const jsonPayload = JSON.stringify(submissionData, null, 2);
 
-                        if (response.ok) {
-                            statusMsg.innerText = '✅ Message sent successfully! We will get back to you soon.';
-                            statusMsg.style.color = 'green';
+                    // SAS URLs for dpprojects Azure Blob Storage
+                    const statesUrl = `https://dpprojects.blob.core.windows.net/states/${blobPath}?se=2036-09-01T00%3A00%3A00Z&sp=racwdl&sv=2026-04-06&sr=c&sig=a/uQA160fUVz75hJZj0SubKJzFpHArUYCyZvyva6f8Q%3D`;
+                    const backupUrl = `https://dpprojects.blob.core.windows.net/backup/${blobPath}?se=2036-09-01T00%3A00%3A00Z&sp=racwdl&sv=2026-04-06&sr=c&sig=6z7Q9bmIVEIKwbAvoPHbbsZ8eEqVTKC774iqtZ687yk%3D`;
+
+                    let savedToAzure = false;
+
+                    try {
+                        // 1. Save directly to Azure Storage (states and backup containers)
+                        const [statesRes, backupRes] = await Promise.allSettled([
+                            fetch(statesUrl, {
+                                method: 'PUT',
+                                headers: {
+                                    'x-ms-blob-type': 'BlockBlob',
+                                    'Content-Type': 'application/json'
+                                },
+                                body: jsonPayload
+                            }),
+                            fetch(backupUrl, {
+                                method: 'PUT',
+                                headers: {
+                                    'x-ms-blob-type': 'BlockBlob',
+                                    'Content-Type': 'application/json'
+                                },
+                                body: jsonPayload
+                            })
+                        ]);
+
+                        if (statesRes.status === 'fulfilled' && (statesRes.value.status === 201 || statesRes.value.ok)) {
+                            savedToAzure = true;
+                        }
+
+                        // 2. Also forward to webhook as notification handler (non-blocking)
+                        try {
+                            const webhookUrl = 'https://n8n.rifaterdemsahin.com/webhook/contact-form';
+                            await fetch(webhookUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: jsonPayload
+                            });
+                        } catch (webhookErr) {
+                            console.warn('Webhook notification fallback:', webhookErr);
+                        }
+
+                        if (savedToAzure || (backupRes.status === 'fulfilled' && backupRes.value.ok)) {
+                            statusMsg.innerHTML = `✅ <strong>Message saved & submitted successfully!</strong><br><small style="color: #0078d4;">Stored in Azure Storage <code>dpprojects/states/${blobPath}</code></small>`;
+                            statusMsg.style.color = '#10b981';
                             document.getElementById('contactForm').reset();
                         } else {
-                            throw new Error('Network response was not ok');
+                            throw new Error('Azure Storage upload failed');
                         }
                     } catch (error) {
-                        console.error('Error:', error);
-                        statusMsg.innerText = '❌ Failed to send message. Please try again later or email us directly.';
-                        statusMsg.style.color = 'red';
+                        console.error('Submission error:', error);
+                        statusMsg.innerText = '❌ Failed to record submission. Please try again or email us directly.';
+                        statusMsg.style.color = '#ef4444';
                     } finally {
                         submitBtn.disabled = false;
                         submitBtn.innerText = originalBtnText;
