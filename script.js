@@ -58,7 +58,8 @@ const translations = {
             enterpriseGap: "🌌 The Enterprise Gap",
             oneScreenLanding: "📄 One-Screen Landing",
             recentUpdates: "🕒 Recent Updates",
-            whoIsDeliveryPilot: "🏎️ Who is a Delivery Pilot?"
+            whoIsDeliveryPilot: "🏎️ Who is a Delivery Pilot?",
+            sampleBots: "🤖 Sample Bots"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -68,7 +69,7 @@ const translations = {
             download: "📥 Download Presentation PDF"
         },
         hero: {
-            slogan: "Embedded Delivery & Upskilling Program",
+            slogan: "Master AI and Build the Future",
             title: "Your last production outage wasn't a technology failure. It was a delivery failure.",
             subtitle: "An expired certificate takes down production. A key person leaves and the AI project stalls. The skills gap nobody flagged becomes the deadline nobody hits. These aren't AI problems - they're delivery problems, and most enterprise AI initiatives die on exactly this ground.<br><br>Delivery Pilot embeds a certified pilot inside your team to close the skills gap while the work ships - through hands-on simulation workshops and certification, not slideware. You get delivery capability that stays after we leave.",
             findGap: "Find Your Delivery Gap",
@@ -254,7 +255,7 @@ const translations = {
         pricing: {
             hero: {
                 title: "Pricing Plans",
-                subtitle: "Choose the perfect plan for your AI transformation journey"
+                subtitle: "Master AI and Build the Future. Standard is free for self learners. Premium is $1/month. VIP is $10/month."
             },
             prosumer: {
                 title: "1. Assesment",
@@ -1049,7 +1050,8 @@ const translations = {
             enterpriseGap: "🌌 Kurumsal Boşluk",
             oneScreenLanding: "📄 Tek Ekran İniş Sayfası",
             recentUpdates: "🕒 Son Güncellemeler",
-            whoIsDeliveryPilot: "🏎️ Delivery Pilot Kimdir?"
+            whoIsDeliveryPilot: "🏎️ Delivery Pilot Kimdir?",
+            sampleBots: "🤖 Örnek Botlar"
         },
         podcast: {
             title: "Delivery Pilot Podcast",
@@ -1059,7 +1061,7 @@ const translations = {
             download: "📥 Sunum PDF'ini İndir"
         },
         hero: {
-            slogan: "Gömülü Teslimat ve Yetkinlik Geliştirme Programı",
+            slogan: "Yapay Zekada Ustalaşın ve Geleceği İnşa Edin",
             title: "Son üretim kesintiniz bir teknoloji arızası değildi. Bir teslimat başarısızlığıydı.",
             subtitle: "Süresi dolan bir sertifika üretimi durdurur. Kilit bir kişi ayrılır ve yapay zeka projesi duraklar. Kimsenin fark etmediği yetenek açığı, kimsenin tutturamadığı teslim tarihine dönüşür. Bunlar yapay zeka sorunları değil; teslimat sorunlarıdır ve kurumsal yapay zeka girişimlerinin çoğu tam da bu noktada başarısızlığa uğrar.<br><br>Delivery Pilot, işler canlıya alınırken yetenek açığını kapatmak için ekibinize sertifikalı bir pilot dahil eder — slaytlarla değil, uygulamalı simülasyon atölyeleri ve sertifikasyonla. Biz ayrıldıktan sonra ekibinizde kalıcı bir teslimat yetkinliği kazanırsınız.",
             findGap: "Teslimat Açığınızı Belirleyin",
@@ -1245,7 +1247,7 @@ const translations = {
         pricing: {
             hero: {
                 title: "Fiyatlandırma Planları",
-                subtitle: "Yapay zeka dönüşüm yolculuğunuz için mükemmel planı seçin"
+                subtitle: "Yapay zekada ustalaşın ve geleceği inşa edin. Standard kendi kendine öğrenenler için ücretsiz. Premium ayda $1. VIP ayda $10."
             },
             prosumer: {
                 title: "1. Değerlendirme",
@@ -1452,26 +1454,26 @@ const translations = {
                 title: "Destek Planları",
                 subtitle: "Öğrenme ve uygulama ihtiyaçlarınıza uygun destek planını seçin",
                 prosumer: {
-                    name: "Prosumer",
-                    subtitle: "1'e 1 Değerlendirme",
-                    price: "$50",
-                    period: "oturum başına",
-                    bookButton: "📅 Değerlendirme Rezervasyonu"
+                    name: "Standard",
+                    subtitle: "Kendi kendine öğrenenler",
+                    price: "Ücretsiz",
+                    period: "eğitim hesapları dahil",
+                    bookButton: "Topluluğa Katılın"
                 },
                 workshops: {
-                    name: "Atölyeler",
-                    subtitle: "Yerinde İngiltere ve Küresel Oturumlar",
-                    price: "£500",
-                    period: "danışman/gün başına",
-                    scheduleButton: "📅 Görüşme Planla"
+                    name: "Premium",
+                    subtitle: "Prosumer'lar",
+                    price: "$1",
+                    period: "aylık · gelecekteki kayıt $10",
+                    scheduleButton: "Premium'a Başlayın"
                 },
                 enterprise: {
-                    badge: "En Popüler",
-                    name: "Profesyonel ve Kurumsal",
-                    subtitle: "Ekip Kurumsal Çapta Yapay Zeka Adaptasyonu",
-                    price: "Teklif İsteyin",
-                    period: "özel fiyatlandırma",
-                    scheduleButton: "📅 Görüşme Planla"
+                    badge: "İşletme",
+                    name: "VIP",
+                    subtitle: "Yönetilen botlar bot başına $100",
+                    price: "$10",
+                    period: "aylık · gelecekteki kayıt $100",
+                    scheduleButton: "Bizimle Konuşun"
                 },
                 assessmentCta: {
                     title: "🔍 Ücretsiz Değerlendirme Görüşmesi Planlayın",

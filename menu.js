@@ -44,6 +44,7 @@ const navigationConfig = {
                 { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
                 { href: 'msp-offerings.html', textKey: 'nav.mspOfferings', text: '🏢 MSP Offerings' },
                 { href: 'msp-managed-services.html', textKey: 'nav.mspManagedServices', text: '🏢 MSP Managed Services' },
+                { href: 'sample-bots.html', textKey: 'nav.sampleBots', text: '🤖 Sample Bots' },
                 { href: 'junior-engineer-training.html', textKey: 'nav.juniorTraining', text: '👨‍🎓 Junior Engineer Training' },
                 { href: 'upskilling_pathways.html', textKey: 'nav.upskillingPathways', text: '🎓 Upskilling Pathways' },
                 { href: 'comprehensive_analysis.html', textKey: 'nav.comprehensiveAnalysis', text: '📊 Comprehensive Analysis' },
@@ -151,6 +152,7 @@ const footerConfig = {
                 { type: 'link', href: 'index.html#how-it-works', textKey: 'footer.platform.howItWorks', text: 'How It Works' },
                 { type: 'link', href: 'index.html#use-cases', textKey: 'footer.platform.useCases', text: 'Use Cases' },
                 { type: 'link', href: 'pricing.html', textKey: 'footer.platform.pricing', text: 'Pricing' },
+                { type: 'link', href: 'sample-bots.html', textKey: 'nav.sampleBots', text: 'Sample Bots' },
                 { type: 'link', href: 'icp-strategy.html', textKey: 'nav.icpStrategy', text: 'ICP Strategy' }
             ]
         },
