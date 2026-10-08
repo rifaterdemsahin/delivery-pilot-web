@@ -61,6 +61,7 @@ const navigationConfig = {
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
                 { href: 'mission-vision.html', textKey: 'nav.missionVision', text: '🎯 Mission & Vision' },
                 { href: 'business-model.html', textKey: 'nav.businessModel', text: '🔁 Business Model' },
+                { href: 'b2c2b-loop.html', textKey: 'nav.b2c2bLoop', text: '🔁 B2C2B Loop' },
                 { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' },
                 { href: 'who-is-a-delivery-pilot.html', textKey: 'nav.whoIsDeliveryPilot', text: '🏎️ Who is a Delivery Pilot?' },
                 { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },

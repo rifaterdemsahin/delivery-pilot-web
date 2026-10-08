@@ -122,6 +122,7 @@ All pages are hosted on the **deliverypilot.net** domain. Below is the complete 
 | **Transformations** | https://deliverypilot.net/transformations.html | Examples of successful AI transformations |
 | **Partners** | https://deliverypilot.net/partners.html | Strategic partners and integrations |
 | **Previous Customers** | https://deliverypilot.net/previous-customers.html | Showcase of previous clients and testimonials |
+| **B2C2B Loop** | https://deliverypilot.net/5_Symbols/b2c2b-loop.html | The four-stage loop: B2C learners prepare for frontier-lab certifications, the lab certifies them, C2B graduates deliver the managed bots, enterprises come back as learners |
 
 ### 📚 Resources & Support
 

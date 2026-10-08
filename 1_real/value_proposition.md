@@ -1,6 +1,23 @@
 
 # Value Proposition Document
 
+## The B2C2B loop
+
+We turn AI learners into certified delivery pilots, and delivery pilots into enterprise results.
+
+1. **B2C** — Professionals and students prepare for frontier-lab certifications with us. Students get free access.
+2. **Certified** — The lab certifies them, not us. That borrows credibility instead of asking people to trust a new badge.
+3. **C2B** — Our certified graduates become the delivery pilots who build and run bots for enterprises, under our managed service.
+4. **B** — Enterprises get AI transformation without the jungle, and their staff come back into the loop as learners.
+
+Each stage feeds the next: learners supply talent, talent supplies delivery capacity, and enterprise projects supply real case studies for the next cohort.
+
+**Tight pitch.** "AI is raising skill expectations faster than anyone can keep up. We prepare professionals and students for frontier-lab AI certifications, then deploy them as delivery pilots who build managed AI bots for enterprises. Companies get a transformation partner, and learners get certified and employed."
+
+**One-liner.** "We turn AI learners into certified delivery pilots, and delivery pilots into enterprise results."
+
+---
+
 ## Overview
 **Delivery Pilot** is a self‑paced learning system on **deliverypilot.net** for professionals and prosumers who want to learn **end‑to‑end delivery in an AI‑ and agent‑driven world**.
 
