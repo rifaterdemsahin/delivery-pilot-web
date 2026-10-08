@@ -265,6 +265,34 @@
                 direction: ltr;
             }
         }
+        .segments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .segment-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .segment-card:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: var(--accent-blue);
+        }
+
+        .segment-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -351,6 +379,46 @@
                             <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈 Sonsuz Ölçek</h4>
                             <p style="font-size: 0.9rem; opacity: 0.8;">Doğrusal çalışan sayısı artışı olmadan kapasiteyi ölçeklendirme.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 6rem 0;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="hero-badge" style="color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3);">Adım 5: Etkileşim Yolları</span>
+                    <h2>Stratejik ICP Ayrımı</h2>
+                    <p>Olgunluk ve niyete göre üç plan: Standard, Premium ve VIP.</p>
+                </div>
+                <div class="segments-grid">
+                    <div class="segment-card">
+                        <span class="segment-tag">Ücretsiz</span>
+                        <h3>Standard · Kendi kendine öğrenenler</h3>
+                        <p>Toplulukta kalan, kohorta katılan ve kendi botunu çalıştıran eğitim hesapları ve kendi kendine öğrenenler.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>Topluluk güncellemeleri ve kohort erişimi</li>
+                            <li>Topluluk yanıtı</li>
+                            <li>Kendi botu</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card" style="border-color: var(--accent-blue); background: rgba(59, 130, 246, 0.05);">
+                        <span class="segment-tag">Ayda $1</span>
+                        <h3>Premium · Prosumer'lar</h3>
+                        <p>Yetenek açığını kapatan profesyoneller. Tam kurs erişimi ve uygulamalı bot kurulumu. Gelecekteki kayıt $10.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>Aktif bire bir oturumlar</li>
+                            <li>Tam kurs erişimi</li>
+                            <li>72 saat yanıt ve uygulamalı bot kurulumu</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card">
+                        <span class="segment-tag">Ayda $10</span>
+                        <h3>VIP · İşletme</h3>
+                        <p>Öğrencileri finanse eden ve bot başına $100 yönetilen bot çalıştıran işletme. Gelecekteki kayıt $100.</p>
+                        <ul class="feature-list" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            <li>Aktif kapalı gruplar ve tüm içerik</li>
+                            <li>24 saat yanıt</li>
+                            <li>Yönetilen botlar — güvence, uyarlama, eğitim</li>
+                        </ul>
                     </div>
                 </div>
             </div>

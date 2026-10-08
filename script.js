@@ -73,6 +73,7 @@ const translations = {
             title: "Your last production outage wasn't a technology failure. It was a delivery failure.",
             subtitle: "An expired certificate takes down production. A key person leaves and the AI project stalls. The skills gap nobody flagged becomes the deadline nobody hits. These aren't AI problems - they're delivery problems, and most enterprise AI initiatives die on exactly this ground.<br><br>Delivery Pilot embeds a certified pilot inside your team to close the skills gap while the work ships - through hands-on simulation workshops and certification, not slideware. You get delivery capability that stays after we leave.",
             findGap: "Find Your Delivery Gap",
+            readinessAssessment: "1-Minute Readiness Assessment",
             seeWorkshop: "See the 10-Step Workshop",
             startJourney: "Find Your Delivery Gap",
             learnMore: "See the 10-Step Workshop"
@@ -1065,6 +1066,7 @@ const translations = {
             title: "Son üretim kesintiniz bir teknoloji arızası değildi. Bir teslimat başarısızlığıydı.",
             subtitle: "Süresi dolan bir sertifika üretimi durdurur. Kilit bir kişi ayrılır ve yapay zeka projesi duraklar. Kimsenin fark etmediği yetenek açığı, kimsenin tutturamadığı teslim tarihine dönüşür. Bunlar yapay zeka sorunları değil; teslimat sorunlarıdır ve kurumsal yapay zeka girişimlerinin çoğu tam da bu noktada başarısızlığa uğrar.<br><br>Delivery Pilot, işler canlıya alınırken yetenek açığını kapatmak için ekibinize sertifikalı bir pilot dahil eder — slaytlarla değil, uygulamalı simülasyon atölyeleri ve sertifikasyonla. Biz ayrıldıktan sonra ekibinizde kalıcı bir teslimat yetkinliği kazanırsınız.",
             findGap: "Teslimat Açığınızı Belirleyin",
+            readinessAssessment: "1 Dakikalık Hazırlık Değerlendirmesi",
             seeWorkshop: "10 Adımlık Atölyeyi İnceleyin",
             startJourney: "Teslimat Açığınızı Belirleyin",
             learnMore: "10 Adımlık Atölyeyi İnceleyin"
