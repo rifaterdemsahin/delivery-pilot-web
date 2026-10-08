@@ -60,6 +60,7 @@ const navigationConfig = {
             submenu: [
                 { href: 'index.html#about', textKey: 'nav.about', text: 'ℹ️ About' },
                 { href: 'mission-vision.html', textKey: 'nav.missionVision', text: '🎯 Mission & Vision' },
+                { href: 'business-model.html', textKey: 'nav.businessModel', text: '🔁 Business Model' },
                 { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' },
                 { href: 'who-is-a-delivery-pilot.html', textKey: 'nav.whoIsDeliveryPilot', text: '🏎️ Who is a Delivery Pilot?' },
                 { href: 'delivery-pilot-concept.html', textKey: 'nav.deliveryPilotConcept', text: '✈️ Delivery Pilot Concept' },

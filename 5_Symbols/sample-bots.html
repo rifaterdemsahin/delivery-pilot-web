@@ -92,6 +92,26 @@
             font-weight: 700;
         }
 
+        .harness-figure {
+            margin: 0 auto 2rem;
+            max-width: 1100px;
+        }
+
+        .harness-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.18);
+        }
+
+        .harness-caption {
+            margin-top: 0.75rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 768px) {
             .bots-hero h1 {
                 font-size: 2rem;
@@ -107,7 +127,61 @@
         <div class="container">
             <p class="slogan">Master AI and Build the Future</p>
             <h1>Sample Bots</h1>
-            <p>These are the marketing bots we are already building. VIP businesses run them as a managed service at <strong>$100 per bot</strong>. Each bot has a role, a domain, and a set of topics. That is how a business keeps the AI transformation on the output, and how Delivery Pilot keeps the software development life cycle going.</p>
+            <p>These are the marketing bots we are already building. VIP businesses run them as a managed service at <strong>$100 per bot</strong>.</p>
+            <p style="margin-top: 1.5rem;"><a href="pricing.html" style="display: inline-block; background: white; color: #1e3a5f; font-weight: 700; padding: 0.85rem 1.4rem; border-radius: 8px; text-decoration: none;">See Pricing</a></p>
+        </div>
+    </section>
+
+    <section class="bots-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">What is an AI harness?</h2>
+            <p class="section-description">The layer that helps a model orchestrate tools, memory, and workflows. A bot is not the model alone. The harness is what makes the bot useful in a business.</p>
+            <figure class="harness-figure">
+                <img src="images/ai-harness.jpg" alt="What is an AI harness? Four steps: start with a model, the harness orchestrates tools, it manages memory and context, and it compounds.">
+                <figcaption class="harness-caption">Models, then tools, then data connectors, then memory systems. The harness holds them together.</figcaption>
+            </figure>
+            <div class="practice-grid">
+                <div class="practice">
+                    <h3>1. Start with a model</h3>
+                    <p>A harness begins by calling the model through an API: a prompt in, a temperature, a structured answer out, sometimes streamed.</p>
+                </div>
+                <div class="practice">
+                    <h3>2. The harness orchestrates</h3>
+                    <p>Instead of one question and one answer, it plans, loops, delegates, and uses tools, subagents, containers, and recipes.</p>
+                </div>
+                <div class="practice">
+                    <h3>3. It manages memory and context</h3>
+                    <p>Models do not keep a lasting memory. The harness retrieves and writes an external store so the context stays in good shape.</p>
+                </div>
+                <div class="practice">
+                    <h3>4. It compounds</h3>
+                    <p>As models improve, they help extend the harness itself: programs, books, complex systems, and long-running tasks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bots-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Who does what</h2>
+            <p class="section-description">The same harness, three ways in. Business customers subsidize the students. Professionals learn to build it. We create, manage, and maintain it for the enterprise.</p>
+            <div class="bots-grid">
+                <article class="bot-card">
+                    <h3>Standard · Students</h3>
+                    <p>Free to learn and join, including education accounts. Subsidized by the business customers. Community updates, cohort access, and a self bot.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing.html">Free on Standard</a></p>
+                </article>
+                <article class="bot-card">
+                    <h3>Premium · Professionals</h3>
+                    <p>We help you build the harness and become a Delivery Pilot. Full course access, active 1-1 sessions, and hands-on bot setup. $1 a month.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing.html">Start Premium</a></p>
+                </article>
+                <article class="bot-card">
+                    <h3>VIP · Enterprises</h3>
+                    <p>As a managed service provider we create, manage, and maintain the harness for the business. $10 a month, and managed bots at $100 per bot.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing.html">Talk to us</a></p>
+                </article>
+            </div>
         </div>
     </section>
 

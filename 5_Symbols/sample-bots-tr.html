@@ -29,6 +29,9 @@
         .practice { background: var(--bg-light); box-shadow: none; }
         .bot-card h3 { margin: 0.4rem 0 0.6rem; }
         .bot-card p, .practice p { color: var(--text-light); line-height: 1.6; margin: 0; }
+        .harness-figure { margin: 0 auto 2rem; max-width: 1100px; }
+        .harness-figure img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 12px 40px rgba(15, 23, 42, 0.18); }
+        .harness-caption { margin-top: 0.75rem; text-align: center; color: var(--text-light); font-size: 0.95rem; }
         @media (max-width: 768px) { .bots-hero h1 { font-size: 2rem; } }
     </style>
 </head>
@@ -40,7 +43,61 @@
         <div class="container">
             <p class="slogan">Yapay Zekada Ustalaşın ve Geleceği İnşa Edin</p>
             <h1>Örnek Botlar</h1>
-            <p>Bunlar hâlihazırda kurduğumuz pazarlama botlarıdır. VIP işletmeler bunları <strong>bot başına $100</strong> karşılığında yönetilen hizmet olarak çalıştırır. Her botun bir rolü, bir alanı ve bir konu kümesi vardır.</p>
+            <p>Bunlar hâlihazırda kurduğumuz pazarlama botlarıdır. VIP işletmeler bunları <strong>bot başına $100</strong> karşılığında yönetilen hizmet olarak çalıştırır.</p>
+            <p style="margin-top: 1.5rem;"><a href="pricing-tr.html" style="display: inline-block; background: white; color: #1e3a5f; font-weight: 700; padding: 0.85rem 1.4rem; border-radius: 8px; text-decoration: none;">Fiyatlandırmayı Görün</a></p>
+        </div>
+    </section>
+
+    <section class="bots-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Yapay zeka koşumu nedir?</h2>
+            <p class="section-description">Modelin araçları, belleği ve iş akışlarını yönetmesini sağlayan katman. Bot yalnızca model değildir. Koşum, botu işletmede işe yarar hale getirir.</p>
+            <figure class="harness-figure">
+                <img src="images/ai-harness.jpg" alt="Yapay zeka koşumu nedir? Dört adım: modelle başla, koşum araçları yönetir, bellek ve bağlamı tutar, sonra bileşik hale gelir.">
+                <figcaption class="harness-caption">Modeller, sonra araçlar, sonra veri bağlayıcıları, sonra bellek sistemleri. Koşum bunları bir arada tutar.</figcaption>
+            </figure>
+            <div class="practice-grid">
+                <div class="practice">
+                    <h3>1. Modelle başla</h3>
+                    <p>Koşum, modele bir API üzerinden sorar: istem girer, sıcaklık ayarlanır, yapılandırılmış yanıt çıkar, bazen akış halinde.</p>
+                </div>
+                <div class="practice">
+                    <h3>2. Koşum yönetir</h3>
+                    <p>Tek soru ve tek yanıt yerine planlar, döngü kurar, devreder ve araç, alt ajan, kapsayıcı ve tarif kullanır.</p>
+                </div>
+                <div class="practice">
+                    <h3>3. Bellek ve bağlamı tutar</h3>
+                    <p>Modeller kalıcı bellek tutmaz. Koşum dış depoya yazar ve oradan okur; bağlam düzenli kalır.</p>
+                </div>
+                <div class="practice">
+                    <h3>4. Bileşik hale gelir</h3>
+                    <p>Modeller iyileştikçe koşumun kendisini genişletir: programlar, kitaplar, karmaşık sistemler ve uzun süren işler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bots-section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Kim ne yapar</h2>
+            <p class="section-description">Aynı koşum, üç giriş. İşletme müşterileri öğrencileri finanse eder. Profesyoneller kurmayı öğrenir. Biz işletme için koşumu oluşturur, yönetir ve sürdürürüz.</p>
+            <div class="bots-grid">
+                <article class="bot-card">
+                    <h3>Standard · Öğrenciler</h3>
+                    <p>Öğrenmek ve katılmak ücretsizdir, eğitim hesapları dahil. İşletme müşterileri finanse eder. Topluluk güncellemeleri, kohort erişimi ve kendi botu.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing-tr.html">Standard ücretsiz</a></p>
+                </article>
+                <article class="bot-card">
+                    <h3>Premium · Profesyoneller</h3>
+                    <p>Koşumu kurmanıza ve Delivery Pilot olmanıza yardım ederiz. Tam kurs, aktif bire bir oturum ve uygulamalı bot kurulumu. Ayda $1.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing-tr.html">Premium'a başlayın</a></p>
+                </article>
+                <article class="bot-card">
+                    <h3>VIP · İşletmeler</h3>
+                    <p>Yönetilen hizmet sağlayıcı olarak koşumu işletme için oluşturur, yönetir ve sürdürürüz. Ayda $10, yönetilen botlar bot başına $100.</p>
+                    <p style="margin-top: 1rem;"><a href="pricing-tr.html">Bizimle konuşun</a></p>
+                </article>
+            </div>
         </div>
     </section>
 
