@@ -26,6 +26,10 @@
         .bots-grid, .practice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
         .bot-card, .practice { background: white; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
         .bot-card { border-top: 4px solid var(--primary-color); }
+        .bot-card.featured { border-top-color: #d97706; background: linear-gradient(180deg, #fffbeb 0%, #ffffff 42%); }
+        .status-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: #dcfce7; color: #166534; border-radius: 999px; padding: 0.15rem 0.55rem; }
+        .biz-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem 1.5rem; margin-top: 1.5rem; list-style: none; padding: 0; }
+        .biz-list li { background: white; border-radius: 10px; padding: 0.85rem 1rem; line-height: 1.45; }
         .practice { background: var(--bg-light); box-shadow: none; }
         .bot-card h3 { margin: 0.4rem 0 0.6rem; }
         .bot-card p, .practice p { color: var(--text-light); line-height: 1.6; margin: 0; }
@@ -124,36 +128,71 @@
 
     <section class="bots-section" style="background: var(--bg-light);">
         <div class="container">
-            <h2 class="section-title">Katalogdaki pazarlama botları</h2>
+            <h2 class="section-title">Pazarlama botları, şu an çalışıyor</h2>
+            <p class="section-description">github.com/rifaterdemsahin/bots özel kataloğunda 52 rol var. Son okuma 4 Ekim 2026. Aşağıdaki pazarlama rolleri Aktif. Öne alındılar çünkü bir işletmenin satın alabileceği kanıt bunlar.</p>
             <div class="bots-grid">
-                <article class="bot-card">
-                    <div>✍️</div>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
                     <h3>İçerik üretimi</h3>
-                    <p>Topluluk ve onu finanse eden işletme için müşteri keşif içeriği üretir.</p>
+                    <p>Müşteri keşif içeriği yazar ve bir sonraki alıcıyı bulmak için kullanılan video hattını besler.</p>
                 </article>
-                <article class="bot-card">
-                    <div>💬</div>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
                     <h3>LinkedIn mesajlaşma</h3>
-                    <p>Profesyonel konuşmaları taslaklar, sıralar ve ilişki hattını tutar.</p>
+                    <p>Profesyonel mesajları taslaklar, sıralar ve ilişki hattını tutar. Ulaşım bir kişinin hafızasına bağlı kalmaz.</p>
                 </article>
-                <article class="bot-card">
-                    <div>🔗</div>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
                     <h3>LinkedIn bakımı</h3>
-                    <p>Kitle listesini sağlıklı tutar, bağlantıları takipçiye çevirir ve geri bildirim toplar.</p>
+                    <p>Kitleyi bağlantı sınırında tutar, bağlantıları takipçiye çevirir ve geri bildirim toplar.</p>
                 </article>
-                <article class="bot-card">
-                    <div>🗂️</div>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
                     <h3>İçerik kürasyonu</h3>
-                    <p>Gönderi ve notları tutarlı kılar; kamu mesajı sertifikalı pratikle örtüşür.</p>
+                    <p>Gönderi ve notları tek standartta tutar. Kamu mesajı sertifikalı pratikle örtüşür.</p>
                 </article>
-                <article class="bot-card">
-                    <div>📚</div>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
                     <h3>Öğrenme</h3>
-                    <p>Öğrenme yolları kurar ve beceri kazanımını izler; kendi kendine öğrenen kişi sertifikaya ilerler.</p>
+                    <p>Öğrenme yolları kurar ve beceri kazanımını izler. Ücretsiz öğrenci buradan sertifikaya yürür.</p>
+                </article>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
+                    <h3>Video adlandırma</h3>
+                    <p>Her klibi ilk karesinden adlandırır. İçerik kütüphanesi hacim artsa da aranabilir kalır.</p>
+                </article>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
+                    <h3>Anlatım</h3>
+                    <p>Gönderi ve notlar için yerel metinden sese. Bir pazarlama parçası stüdyo ayırmadan sesle çıkar.</p>
+                </article>
+                <article class="bot-card featured">
+                    <span class="status-pill">Aktif</span>
+                    <h3>Kapasite planı</h3>
+                    <p>Video üretimi, müşteri keşfi ve danışmanlık artık bir haftaya sığmayınca uyarır.</p>
                 </article>
             </div>
+
+            <h2 class="section-title" style="margin-top: 3.5rem;">İş için çalışan diğerleri</h2>
+            <p class="section-description">Aynı katalogda bunlar da Aktif. Zamanlanmış işi çalıştıran Hermes ağ geçidi Sağlıklı. Kayıtlı bir sonuç: gider botu Eylül 2026 için 23 fiş dosyası bildirdi. Paket kapanmadan önce bir insan incelemesi gerekiyor.</p>
+            <ul class="biz-list">
+                <li><strong>Teslimat</strong> — sözleşme işi, sabah kontrol listesi ve müşteri adayı takibi.</li>
+                <li><strong>Proje yönetimi</strong> — uçuştaki işin teslim tarihleri ve durumu.</li>
+                <li><strong>Stratejik plan</strong> — hedefler, kaynaklar ve riskler aynı hizada.</li>
+                <li><strong>Finans</strong> — giren nakit, çıkan nakit ve faturalama.</li>
+                <li><strong>Otomasyon</strong> — betikler, n8n akışları ve diğer ajanlar.</li>
+                <li><strong>E-posta</strong> — n8n yoluyla giden posta.</li>
+                <li><strong>Drive arama</strong> — paylaşılan iş sürücüsünde tam metin ve OCR.</li>
+                <li><strong>Drive tarama</strong> — bir dosyayı açar ve içindekini yazar.</li>
+                <li><strong>Bilgi sentezi</strong> — notları bağlar ve örüntüyü çıkarır.</li>
+                <li><strong>Getirme ayarı</strong> — tam yeniden eğitim olmadan dosya getirmeyi iyileştirir.</li>
+                <li><strong>Azure teslimatı</strong> — kod olarak altyapı ve ada göre sırlar.</li>
+                <li><strong>Kurma ekibi</strong> — keşif, yazma, inceleme ve araştırma ayrı işçilerdir.</li>
+                <li><strong>Çoklu ajan orkestrasyonu</strong> — bağımsız Delivery Pilot işlerini paralel çalıştırır.</li>
+                <li><strong>Hermes ağ geçidi</strong> — Sağlıklı. Zamanlanmış işleri ve nabzı çalıştırır.</li>
+            </ul>
             <p style="margin-top: 1.25rem; font-weight: 700;">
-                Tam katalog: <a href="https://github.com/rifaterdemsahin/bots" target="_blank" rel="noopener noreferrer">github.com/rifaterdemsahin/bots</a>
+                Katalog, özel: <a href="https://github.com/rifaterdemsahin/bots" target="_blank" rel="noopener noreferrer">github.com/rifaterdemsahin/bots</a>
             </p>
         </div>
     </section>
