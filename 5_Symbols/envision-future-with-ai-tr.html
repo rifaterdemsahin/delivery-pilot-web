@@ -7,7 +7,7 @@
     <meta name="description"
         content="Yapay zekanın yükselişiyle geleceği öngörmek: Herkes uygulama yazabildiğinde, üst düzey eğitimli profesyoneller bilgisayarları ve robotları denetleyen teslimat pilotlarına dönüşür.">
     <meta name="keywords"
-        content="yapay zekanın geleceği, teslimat pilotu, yapay zeka kodlama, uygulama geliştirme, robotları denetleme, otonom ajanlar, yapay zeka sertifikasyonu, MSP modeli, yönetilen hizmet sağlayıcı">
+        content="yapay zekanın geleceği, teslimat pilotu, yapay zeka kodlama, uygulama geliştirme, robotları denetleme, otonom ajanlar, yapay zeka sertifikasyonu, MSP modeli, yönetilen hizmet sağlayıcı, kokpit telemetrisi">
     <meta name="author" content="Delivery Pilot">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://deliverypilot.net/5_Symbols/envision-future-with-ai-tr.html">
@@ -18,7 +18,7 @@
         content="1. Herkes uygulama yazabilir. 2. Üst düzey eğitimli profesyoneller robotları ve bilgisayarları denetleyen teslimat pilotları olur. Sertifikasyon ve MSP modelimizi keşfedin.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deliverypilot.net/5_Symbols/envision-future-with-ai-tr.html">
-    <meta property="og:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta property="og:image" content="https://deliverypilot.net/5_Symbols/images/future-ai-delivery-pilot.jpg">
     <meta property="og:site_name" content="Delivery Pilot">
     <meta property="og:locale" content="tr_TR">
 
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yapay Zekanın Yükselişiyle Geleceği Öngörmek | Delivery Pilot">
     <meta name="twitter:description" content="Herkes uygulama yazabildiğinde, üst düzey eğitimli profesyoneller otonom ajanları denetleyen teslimat pilotları olur.">
-    <meta name="twitter:image" content="https://deliverypilot.net/og-image.jpg">
+    <meta name="twitter:image" content="https://deliverypilot.net/5_Symbols/images/future-ai-delivery-pilot.jpg">
 
     <title>Yapay Zekanın Yükselişiyle Geleceği Öngörmek | Delivery Pilot</title>
     <link rel="stylesheet" href="../styles.css">
@@ -35,7 +35,7 @@
         .future-hero {
             background: linear-gradient(135deg, #091a3a 0%, #1e1b4b 50%, #312e81 100%);
             color: #ffffff;
-            padding: 5rem 0 3.75rem;
+            padding: 4.5rem 0 3.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -79,6 +79,129 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* Hero Visual Illustration Card */
+        .visual-hero-card {
+            max-width: 980px;
+            margin: 2.5rem auto 0;
+            background: #0f172a;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: left;
+        }
+
+        .visual-hero-img-wrap {
+            position: relative;
+            width: 100%;
+            max-height: 480px;
+            overflow: hidden;
+        }
+
+        .visual-hero-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .visual-hero-card:hover .visual-hero-img-wrap img {
+            transform: scale(1.02);
+        }
+
+        .visual-hero-caption {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.92) 0%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .visual-hero-caption p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 740px;
+        }
+
+        .cockpit-pill {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid #6366f1;
+            color: #a5b4fc;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* Diagrams Styles */
+        .diagram-container {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.25rem 2rem;
+            margin: 3.5rem 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .diagram-container.dark {
+            background: #090e1a;
+            border: 1px solid #1e293b;
+            color: #ffffff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diagram-container.dark::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981);
+        }
+
+        .diagram-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .diagram-header h3 {
+            font-size: 1.65rem;
+            margin: 0 0 0.5rem;
+            color: #0f172a;
+        }
+
+        .diagram-container.dark .diagram-header h3 {
+            color: #f8fafc;
+        }
+
+        .diagram-header p {
+            color: #64748b;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .diagram-container.dark .diagram-header p {
+            color: #94a3b8;
+        }
+
+        .svg-responsive {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .future-section {
@@ -360,6 +483,11 @@
             .promotion-box p.statement {
                 font-size: 1.15rem;
             }
+
+            .visual-hero-caption {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -374,11 +502,107 @@
             <div class="badge">🔮 Yazılım ve Operasyonların Geleceği</div>
             <h1>Yapay Zekanın Yükselişiyle Geleceği Öngörmek</h1>
             <p class="lead">Yazılım yazmak artık yalnızca kod uzmanlarına ayrılmış bir ayrıcalık değil. Gelişen yapay zeka çağında, iki sismik değişim teknolojiyi, sektörü ve insan kariyerlerini baştan şekillendiriyor.</p>
+
+            <!-- Hero Illustration Visual Card -->
+            <div class="visual-hero-card">
+                <div class="visual-hero-img-wrap">
+                    <img src="images/future-ai-delivery-pilot.jpg" alt="Yapay Zeka ve Otonom Robotları Denetleyen Teslimat Pilotu Kokpiti" loading="eager">
+                </div>
+                <div class="visual-hero-caption">
+                    <p>
+                        <strong>Kokpit Paradigması:</strong> Yapay zeka modelleri herkesin uygulama üretmesini sağlarken, sertifikalı <em>Teslimat Pilotları</em> uçuş güvertesini yönetir — telemetriyi izler, otonom ajan filolarını yönlendirir, güvenlik sınırlarını uygular ve kurumsal sonuçları garanti eder.
+                    </p>
+                    <span class="cockpit-pill">✈️ Uçuş Güvertesi Komutada</span>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Visual Diagram 1: The AI Paradigm Shift Flow -->
+    <section class="future-wrap" style="margin-top: 2rem;">
+        <div class="diagram-container">
+            <div class="diagram-header">
+                <h3>Değişimin Görsel Şeması: Üretim Kaosundan Yönetilen Teslimata</h3>
+                <p>Yazılım dünyasının uygulama patlamasından pilot denetimli görev kontrolüne evrimi.</p>
+            </div>
+
+            <svg class="svg-responsive" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="blueGradTR" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3b82f6" />
+                        <stop offset="100%" stop-color="#1d4ed8" />
+                    </linearGradient>
+                    <linearGradient id="purpleGradTR" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#8b5cf6" />
+                        <stop offset="100%" stop-color="#6d28d9" />
+                    </linearGradient>
+                    <linearGradient id="amberGradTR" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f59e0b" />
+                        <stop offset="100%" stop-color="#d97706" />
+                    </linearGradient>
+                    <filter id="shadowTR" x="-5%" y="-5%" width="110%" height="115%">
+                        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
+                    </filter>
+                </defs>
+
+                <!-- Connector Line 1 -->
+                <path d="M 310 160 L 380 160" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="6,6" />
+                <polygon points="385,160 375,153 375,167" fill="#64748b" />
+
+                <!-- Connector Line 2 -->
+                <path d="M 620 160 L 690 160" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="6,6" />
+                <polygon points="695,160 685,153 685,167" fill="#64748b" />
+
+                <!-- Box 1: Democratization (Left) -->
+                <g filter="url(#shadowTR)">
+                    <rect x="30" y="45" width="280" height="230" rx="14" fill="#ffffff" stroke="#3b82f6" stroke-width="3" />
+                    <rect x="30" y="45" width="280" height="42" rx="14" fill="url(#blueGradTR)" />
+                    <rect x="30" y="70" width="280" height="17" fill="url(#blueGradTR)" />
+                    <text x="170" y="72" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" text-anchor="middle">1. UYGULAMA ÜRETİM PATLAMASI</text>
+                    <text x="170" y="120" font-size="32" text-anchor="middle">📱</text>
+                    <text x="170" y="150" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="700" font-size="16" text-anchor="middle">Herkes Uygulama Yazar</text>
+                    <text x="170" y="175" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Doğal dil ile istemleme (prompting)</text>
+                    <text x="170" y="195" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Anlık mikro uygulamalar ve betikler</text>
+                    <text x="170" y="215" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Geliştirici kuyruğu beklemeden üretim</text>
+                    <rect x="60" y="235" width="220" height="24" rx="6" fill="#eff6ff" />
+                    <text x="170" y="251" fill="#1d4ed8" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">Sonuç: Sınırsız Yazılım Arzı</text>
+                </g>
+
+                <!-- Box 2: The Enterprise Dilemma (Center) -->
+                <g filter="url(#shadowTR)">
+                    <rect x="385" y="45" width="235" height="230" rx="14" fill="#fffbeb" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,4" />
+                    <rect x="385" y="45" width="235" height="42" rx="14" fill="url(#amberGradTR)" />
+                    <rect x="385" y="70" width="235" height="17" fill="url(#amberGradTR)" />
+                    <text x="502" y="72" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="14" text-anchor="middle">RİSK UÇURUMU</text>
+                    <text x="502" y="120" font-size="32" text-anchor="middle">⚠️</text>
+                    <text x="502" y="150" fill="#92400e" font-family="system-ui, sans-serif" font-weight="700" font-size="16" text-anchor="middle">Denetimsiz Kod Yayılımı</text>
+                    <text x="502" y="175" fill="#78350f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Üretilen kodu kim test edecek?</text>
+                    <text x="502" y="195" fill="#78350f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Halüsinasyonlar ve kaçak ajan döngüleri</text>
+                    <text x="502" y="215" fill="#78350f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Güvenlik ve uyumluluk ihlalleri</text>
+                    <rect x="405" y="235" width="195" height="24" rx="6" fill="#fef3c7" />
+                    <text x="502" y="251" fill="#b45309" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">İhtiyaç: Uçuş Kalitesinde Denetim</text>
+                </g>
+
+                <!-- Box 3: Orchestration Cockpit (Right) -->
+                <g filter="url(#shadowTR)">
+                    <rect x="690" y="45" width="280" height="230" rx="14" fill="#ffffff" stroke="#8b5cf6" stroke-width="3" />
+                    <rect x="690" y="45" width="280" height="42" rx="14" fill="url(#purpleGradTR)" />
+                    <rect x="690" y="70" width="280" height="17" fill="url(#purpleGradTR)" />
+                    <text x="830" y="72" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="14" text-anchor="middle">2. TESLİMAT PİLOTU KOKPİTİ</text>
+                    <text x="830" y="120" font-size="32" text-anchor="middle">👨‍✈️</text>
+                    <text x="830" y="150" fill="#0f172a" font-family="system-ui, sans-serif" font-weight="700" font-size="16" text-anchor="middle">Robotları ve Yapay Zekayı Yönetme</text>
+                    <text x="830" y="175" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Telemetri ve deterministik korkuluklar</text>
+                    <text x="830" y="195" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Anlık otomatik geri alma kapıları</text>
+                    <text x="830" y="215" fill="#475569" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Kurumsal SLA ve Hedef başarıları</text>
+                    <rect x="720" y="235" width="220" height="24" rx="6" fill="#f5f3ff" />
+                    <text x="830" y="251" fill="#6d28d9" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">Garantili Canlı Sistem Değeri</text>
+                </g>
+            </svg>
+        </div>
+    </section>
+
     <!-- Two Core Pillars -->
-    <main class="future-section">
+    <main class="future-section" style="padding-top: 1rem;">
         <div class="future-wrap">
             <div style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem;">
                 <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 0.75rem;">Yeni Gerçekliğin İki Temel Direği</h2>
@@ -433,6 +657,96 @@
                         </small>
                     </div>
                 </article>
+            </div>
+
+            <!-- Visual Diagram 2: The Cockpit Telemetry & Architecture Schematic -->
+            <div class="diagram-container dark">
+                <div class="diagram-header">
+                    <h3>✈️ Şema: Teslimat Pilotu Komuta Güvertesinin İçi</h3>
+                    <p>Sertifikalı Teslimat Pilotlarının otonom botları, telemetriyi, token bütçelerini ve güvenliği nasıl yönettiği.</p>
+                </div>
+
+                <svg class="svg-responsive" viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="centerGlowTR" cx="50%" cy="50%" r="60%">
+                            <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="#090e1a" stop-opacity="0" />
+                        </radialGradient>
+                        <linearGradient id="cyberBorderTR" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#38bdf8" />
+                            <stop offset="50%" stop-color="#818cf8" />
+                            <stop offset="100%" stop-color="#34d399" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Background radial glow -->
+                    <rect x="0" y="0" width="1000" height="460" fill="url(#centerGlowTR)" rx="12" />
+
+                    <!-- Outer Cockpit Boundary Frame -->
+                    <rect x="20" y="20" width="960" height="420" rx="16" fill="none" stroke="#1e293b" stroke-width="2" />
+                    
+                    <!-- Top Status Bar -->
+                    <rect x="40" y="35" width="920" height="38" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+                    <circle cx="65" cy="54" r="6" fill="#10b981" />
+                    <text x="85" y="58" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold">SİSTEM DURUMU: AKTİF YÖNETİŞİM</text>
+                    <text x="500" y="58" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">FİLO TELEMETRİSİ: 52 AKTİF BOT</text>
+                    <text x="940" y="58" fill="#34d399" font-family="monospace" font-size="12" text-anchor="end">İZOLASYON GÜVENLİĞİ: DEVREDE ✓</text>
+
+                    <!-- Command Deck: Delivery Pilot Central Node -->
+                    <g>
+                        <rect x="330" y="95" width="340" height="75" rx="12" fill="#1e1b4b" stroke="url(#cyberBorderTR)" stroke-width="2" />
+                        <text x="500" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="800" font-size="17" text-anchor="middle">👨‍✈️ SERTİFİKALI TESLİMAT PİLOTU</text>
+                        <text x="500" y="148" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Görev Kontrolü · Mimari Doğrulama · SLA Sorumluluğu</text>
+                    </g>
+
+                    <!-- Downward Flow Connectors -->
+                    <path d="M 400 170 L 220 220" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,4" />
+                    <path d="M 460 170 L 400 220" stroke="#818cf8" stroke-width="2" />
+                    <path d="M 540 170 L 600 220" stroke="#f59e0b" stroke-width="2" />
+                    <path d="M 600 170 L 780 220" stroke="#34d399" stroke-width="2" stroke-dasharray="4,4" />
+
+                    <!-- Telemetry & Instrument Pods -->
+                    <!-- Pod 1: Guardrails -->
+                    <g>
+                        <rect x="110" y="220" width="210" height="95" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+                        <text x="215" y="245" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle">🛡️ Güvenlik Korkulukları</text>
+                        <text x="215" y="270" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Halüsinasyon Engelleme</text>
+                        <text x="215" y="290" fill="#94a3b8" font-family="monospace" font-size="10" text-anchor="middle">Sınır İhlali: %0.00</text>
+                    </g>
+
+                    <!-- Pod 2: Token Meter -->
+                    <g>
+                        <rect x="330" y="220" width="160" height="95" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+                        <text x="410" y="245" fill="#818cf8" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle">🪙 Token Sayacı</text>
+                        <text x="410" y="270" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Tüketim Maliyeti</text>
+                        <text x="410" y="290" fill="#a5b4fc" font-family="monospace" font-size="10" text-anchor="middle">Şeffaf Denetim</text>
+                    </g>
+
+                    <!-- Pod 3: Value Recognition -->
+                    <g>
+                        <rect x="500" y="220" width="170" height="95" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5" />
+                        <text x="585" y="245" fill="#fbbf24" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle">🎯 Hedef Başarıları</text>
+                        <text x="585" y="270" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Değer Tanıma Ücreti</text>
+                        <text x="585" y="290" fill="#fcd34d" font-family="monospace" font-size="10" text-anchor="middle">Hedef Dönüm Noktası: Ulaşıldı ✓</text>
+                    </g>
+
+                    <!-- Pod 4: Instant Rollback -->
+                    <g>
+                        <rect x="680" y="220" width="210" height="95" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5" />
+                        <text x="785" y="245" fill="#34d399" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle">🚨 Geri Alma Kapıları</text>
+                        <text x="785" y="270" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Saniyenin Altında Güvenli Dönüş</text>
+                        <text x="785" y="290" fill="#86efac" font-family="monospace" font-size="10" text-anchor="middle">Kurtarma Hazır</text>
+                    </g>
+
+                    <!-- Bottom Fleet & Enterprise Layer -->
+                    <path d="M 500 315 L 500 345" stroke="#64748b" stroke-width="2" />
+                    
+                    <g>
+                        <rect x="110" y="345" width="780" height="75" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+                        <text x="500" y="372" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="14" text-anchor="middle">🤖 YÖNETİLEN OTONOM ROBOTLAR VE BOT FİLOSU</text>
+                        <text x="500" y="396" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Pazarlama Botları • Hata Ayıklama Botları • CI/CD Koşumu • Bilgi Botları • Kurumsal Üretim Sistemleri</text>
+                    </g>
+                </svg>
             </div>
 
             <!-- Aviation Analogy Box -->
@@ -501,6 +815,47 @@
                 <p class="statement">
                     <strong>İnsanların sertifika almasına yardımcı oluyor, profesyonellerin teslimat pilotu olmaları için farkındalık yaratıyoruz. Ve işletmelerin yönetilen hizmet sağlayıcı (MSP) modelimizi kullanmalarını sağlıyoruz.</strong>
                 </p>
+
+                <!-- Visual Diagram 3: Certification & MSP Flywheel -->
+                <div style="background: rgba(15, 23, 42, 0.5); border-radius: 14px; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.15); margin: 2rem 0;">
+                    <svg class="svg-responsive" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Left Wing: Certification -->
+                        <g>
+                            <rect x="30" y="30" width="270" height="180" rx="12" fill="rgba(255,255,255,0.08)" stroke="#818cf8" stroke-width="2" />
+                            <text x="165" y="65" font-size="28" text-anchor="middle">🎓</text>
+                            <text x="165" y="95" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="16" text-anchor="middle">YETENEK SERTİFİKASYONU</text>
+                            <text x="165" y="125" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Profesyonel Farkındalık</text>
+                            <text x="165" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Öncü Laboratuvar Hazırlığı</text>
+                            <text x="165" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Gerçekçi Uçuş Simülasyonları</text>
+                            <text x="165" y="190" fill="#a5b4fc" font-family="system-ui, sans-serif" font-weight="700" font-size="12" text-anchor="middle">Sertifikalı Teslimat Pilotları</text>
+                        </g>
+
+                        <!-- Center Bridge -->
+                        <path d="M 300 120 L 380 120" stroke="#a5b4fc" stroke-width="3" stroke-dasharray="6,4" />
+                        <polygon points="385,120 375,114 375,126" fill="#a5b4fc" />
+
+                        <g>
+                            <circle cx="450" cy="120" r="55" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+                            <text x="450" y="112" font-size="24" text-anchor="middle">🔁</text>
+                            <text x="450" y="132" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="800" font-size="12" text-anchor="middle">DELIVERY PILOT</text>
+                            <text x="450" y="148" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">B2C2B Koşumu</text>
+                        </g>
+
+                        <path d="M 520 120 L 600 120" stroke="#a5b4fc" stroke-width="3" stroke-dasharray="6,4" />
+                        <polygon points="605,120 595,114 595,126" fill="#a5b4fc" />
+
+                        <!-- Right Wing: Enterprise MSP -->
+                        <g>
+                            <rect x="600" y="30" width="270" height="180" rx="12" fill="rgba(255,255,255,0.08)" stroke="#34d399" stroke-width="2" />
+                            <text x="735" y="65" font-size="28" text-anchor="middle">🏢</text>
+                            <text x="735" y="95" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="700" font-size="16" text-anchor="middle">KURUMSAL MSP MODELİ</text>
+                            <text x="735" y="125" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Ayda $10 VIP + Bot Başına $100</text>
+                            <text x="735" y="145" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Şeffaf Tüketim Bazlı Token Maliyeti</text>
+                            <text x="735" y="165" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Hedef Başarıları İçin Değer Tanıma Ücreti</text>
+                            <text x="735" y="190" fill="#6ee7b7" font-family="system-ui, sans-serif" font-weight="700" font-size="12" text-anchor="middle">Yönetilen SLA Çıktıları</text>
+                        </g>
+                    </svg>
+                </div>
 
                 <div class="dual-promo-grid">
                     <!-- For Professionals & Learners -->
