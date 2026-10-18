@@ -123,6 +123,7 @@ All pages are hosted on the **deliverypilot.net** domain. Below is the complete 
 | **Partners** | https://deliverypilot.net/partners.html | Strategic partners and integrations |
 | **Previous Customers** | https://deliverypilot.net/previous-customers.html | Showcase of previous clients and testimonials |
 | **B2C2B Loop** | https://deliverypilot.net/5_Symbols/b2c2b-loop.html | The four-stage loop: B2C learners prepare for frontier-lab certifications, the lab certifies them, C2B graduates deliver the managed bots, enterprises come back as learners |
+| **Future with AI** | https://deliverypilot.net/5_Symbols/envision-future-with-ai.html | Envisioning the future: everyone can write apps, highly trained people become delivery pilots overseeing computers and robots, promoting certification and the MSP model |
 
 ### 📚 Resources & Support
 

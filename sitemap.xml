@@ -945,4 +945,16 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+<url>
+        <loc>https://deliverypilot.net/5_Symbols/envision-future-with-ai.html</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+<url>
+        <loc>https://deliverypilot.net/5_Symbols/envision-future-with-ai-tr.html</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>

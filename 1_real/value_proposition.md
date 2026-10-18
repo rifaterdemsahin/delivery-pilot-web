@@ -18,6 +18,19 @@ Each stage feeds the next: learners supply talent, talent supplies delivery capa
 
 ---
 
+## Envisioning the Future with the Rise of AI
+
+In the emerging AI era, two core shifts define technology and industry:
+
+1. **Everyone can write apps** — With natural language interfaces, LLMs, and agentic coding harnesses, syntax is no longer a bottleneck. Domain specialists everywhere build micro-apps and bespoke tools instantly.
+2. **Highly trained people become delivery pilots to oversee what computers and robots do** — As autonomous agents write code and perform operations, human engineering elevates to the flight deck. Delivery pilots enforce guardrails, maintain deterministic reliability, and steer fleets of robots across the enterprise.
+
+**Our Promotion & Dual Mission:**
+- **For Professionals:** We help people get certified and create awareness on professionals to become delivery pilots.
+- **For Enterprises:** We enable enterprises to use our managed service provider (MSP) model to safely run governed AI bots with guaranteed outcomes.
+
+---
+
 ## Overview
 **Delivery Pilot** is a self‑paced learning system on **deliverypilot.net** for professionals and prosumers who want to learn **end‑to‑end delivery in an AI‑ and agent‑driven world**.
 
