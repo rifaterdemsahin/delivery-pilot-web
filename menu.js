@@ -117,7 +117,8 @@ const navigationConfig = {
                 { href: 'resources-ai-evolution.html', textKey: 'nav.aiEvolution', text: '📈 AI Evolution' },
                 { href: 'resources-bmad.html', textKey: 'nav.bmad', text: '🚀 BMAD' },
                 { href: 'enterprise-gap.html', textKey: 'nav.enterpriseGap', text: '🌌 The Enterprise Gap' },
-                { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' }
+                { href: 'roadmap-vision.html', textKey: 'nav.roadmapVision', text: '🗺️ Roadmap Vision' },
+                { href: 'why-delivery-pilot.html', textKey: 'nav.whyDeliveryPilot', text: '🚨 Why Delivery Pilot?' }
             ]
         },
         { href: 'contact.html', textKey: 'nav.contact', text: '📧 Contact' },
