@@ -476,6 +476,64 @@
             text-decoration: underline;
         }
 
+        /* Top Mission Mention */
+        .mission-mention {
+            background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 55%, #111827 100%);
+            border-bottom: 1px solid rgba(239, 68, 68, 0.35);
+            color: #e2e8f0;
+            padding: 2.5rem 0;
+        }
+
+        .mission-mention-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .mission-mention-line {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            margin-bottom: 1.15rem;
+        }
+
+        .mission-mention-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .mission-mention-line .mission-emoji {
+            font-size: 1.55rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        .mission-mention-line strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .mission-mention-founder {
+            margin-top: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #06b6d4;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.02rem;
+            line-height: 1.75;
+            color: #cbd5e1;
+        }
+
+        .mission-mention-founder a {
+            color: #38bdf8;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .mission-mention-founder a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .lauda-hero h1 {
                 font-size: 2.3rem;
@@ -492,12 +550,37 @@
             .video-showcase {
                 padding: 1.25rem;
             }
+            .mission-mention {
+                padding: 1.75rem 0;
+            }
+            .mission-mention-line {
+                font-size: 1.02rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation Header - Loaded from menu.js -->
     <div id="navbar-placeholder"></div>
+
+    <!-- Top Mission Mention -->
+    <section class="mission-mention" aria-label="Mission statement">
+        <div class="container">
+            <div class="mission-mention-inner">
+                <div class="mission-mention-line">
+                    <span class="mission-emoji" aria-hidden="true">💡</span>
+                    <p>In a world where <strong>AI is raising skills expectations</strong>, the ability to master AI and adapt will define how we build the future.</p>
+                </div>
+                <div class="mission-mention-line">
+                    <span class="mission-emoji" aria-hidden="true">🚀</span>
+                    <p><strong>DeliveryPilot is a pioneering role designed for the AI era.</strong> It bridges critical skill gaps on the path to AGI by architecting, operating, and leading high-leverage delivery systems and strategic execution.</p>
+                </div>
+                <div class="mission-mention-founder">
+                    It lines up with the founder's passion: starting from business requirements, moving into development, then to DevOps global contractor managing critical national infrastructure — where he understood the need for continuous delivery, with integration left to AI so we all level up to continuous delivery. The Delivery Pilot is a role that focuses on using AI as leverage. <strong>Rifat Erdem Sahin</strong> is working on AGI research and its effects on the workplace. His whitepaper: <a href="https://github.com/rifaterdemsahin/whitepaper" target="_blank" rel="noopener noreferrer">github.com/rifaterdemsahin/whitepaper</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <header class="lauda-hero">
