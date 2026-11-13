@@ -72,7 +72,88 @@
             <p class="section-description">
                 Building an AI bot is easy; making it survive production harnesses, security audits, and continuous model drift is where enterprise initiatives break. We take over the engineering, harness break-fix, and continuous fleet maintenance—simplifying management so enterprises can adapt at market speed.
             </p>
-            <div class="bot-cards-grid">
+
+            <!-- Show Not Tell: Visual Harness Blueprint & Live Break-Fix Telemetry -->
+            <div class="harness-visual-row">
+                <div class="harness-blueprint-card">
+                    <div class="blueprint-header">
+                        <span class="blueprint-title">📐 AI Harness Architecture Blueprint</span>
+                        <span class="blueprint-status"><span class="blueprint-pulse"></span> Telemetry Active</span>
+                    </div>
+                    <img src="images/ai-harness.jpg" alt="AI Harness Architectural Framework: Models, Tools, Connectors, and Context Store">
+                    <p class="blueprint-caption">
+                        <strong>The Enterprise Harness:</strong> Models alone do not make production bots. The harness orchestrates tools, enforces memory isolation, runs validation gates, and compounds intelligence safely across your IT infrastructure.
+                    </p>
+                </div>
+
+                <div class="harness-terminal-window">
+                    <div class="terminal-topbar">
+                        <div class="terminal-dots">
+                            <span class="t-dot t-red"></span>
+                            <span class="t-dot t-yellow"></span>
+                            <span class="t-dot t-green"></span>
+                        </div>
+                        <span class="terminal-filename">dp-harness-cli — telemetry & break-fix</span>
+                    </div>
+                    <div class="terminal-content">
+                        <p class="term-comment"># Probing enterprise bot fleet inside test & runtime harness</p>
+                        <p><span class="term-cmd">$</span> dp-harness verify --fleet=enterprise-prod --auto-heal</p>
+                        <p class="term-info">[09:21:04] 🤖 Multi-Model Router: Claude 3.7 / GPT-4o / Gemini Pro ... <span class="term-ok">[OK]</span></p>
+                        <p class="term-info">[09:21:05] 💾 Context Store: Vector Memory & Redis Cache sync ... <span class="term-ok">[100%]</span></p>
+                        <p class="term-warn">[09:21:06] ⚠️ Bot #DP-104 (CertExpiryMonitor): Webhook handshake timeout on internal CA</p>
+                        <p class="term-fix">[09:21:06] 🛠️ BREAK-FIX PIPELINE ACTIVATED BY HARNESS:</p>
+                        <p class="term-fix">    ↳ Isolating broken adapter in sandbox container ... [DONE]</p>
+                        <p class="term-fix">    ↳ Re-synthesizing schema contract & rotating mTLS token ... [PATCHED]</p>
+                        <p class="term-fix">    ↳ Running harness regression suite (18 unit tests passed) ... [100% OK]</p>
+                        <p class="term-info">[09:21:07] 🛡️ Governance: SOC 2 & HIPAA audit log committed to immutable store</p>
+                        <p class="term-ok">[09:21:07] 🚀 Status: 28/28 Bots Healthy | Zero Manual Intervention | SLA: 99.99%</p>
+                    </div>
+                    <div class="terminal-pills">
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">85%</div>
+                            <div class="term-stat-label">Fewer Outages</div>
+                        </div>
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">0 Tech Debt</div>
+                            <div class="term-stat-label">Harness CI/CD</div>
+                        </div>
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">24/7</div>
+                            <div class="term-stat-label">Pilot Coverage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show Not Tell: Side-by-Side Comparison Matrix -->
+            <div class="show-matrix-section">
+                <h3 class="show-matrix-title">Show Not Tell: The Enterprise Reality Check</h3>
+                <div class="show-matrix-grid">
+                    <div class="matrix-card matrix-card-bad">
+                        <span class="matrix-badge badge-bad">⚠️ Unmanaged Shadow Bots</span>
+                        <h3>The Maintenance Trap</h3>
+                        <ul class="matrix-list">
+                            <li><span class="m-icon">❌</span> <span><strong>Silent Failures:</strong> Fragile scripts break undetected when upstream LLM output formats or schema endpoints drift.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Engineering Drain:</strong> Senior developers spend weekends firefighting broken integrations instead of shipping core features.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Security & Compliance Blindspots:</strong> Hardcoded API tokens, untracked prompts, and unvetted data leaks putting SOC 2 / HIPAA at risk.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Knowledge Vacuum:</strong> Solo contractor leaves and nobody in the enterprise knows how the agent pipeline works.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="matrix-card matrix-card-good">
+                        <span class="matrix-badge badge-good">🚀 Delivery Pilot Managed Bots</span>
+                        <h3>Managed AI Bot Harness</h3>
+                        <ul class="matrix-list">
+                            <li><span class="m-icon">✅</span> <span><strong>Automated Break-Fix:</strong> Self-healing test harnesses detect drift, sandbox failures, and patch adapter schemas automatically.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Zero Operational Overhead:</strong> Enterprises get fully managed SLA-backed bot fleets so teams can focus purely on business adaptation.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Ironclad Enterprise Governance:</strong> Built-in guardrails, role-based access, and automated audit logging for complete compliance.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Certified Delivery Pilots:</strong> High-leverage human pilots oversee the fleet and transfer lasting delivery capability to your team.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bot-cards-grid" style="margin-top: 3.5rem;">
                 <div class="bot-card">
                     <div class="bot-card-icon">🛠️</div>
                     <span class="bot-card-badge badge-harness">Harness Engineering</span>

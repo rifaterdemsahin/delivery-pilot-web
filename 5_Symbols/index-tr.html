@@ -72,7 +72,88 @@
             <p class="section-description">
                 Yapay zeka botu yazmak kolaydır; ancak onun kurumsal test ortamlarında, güvenlik denetimlerinde ve model sapmalarında ayakta kalmasını sağlamak asıl zorluktur. Bot mühendisliğini, entegrasyon onarımlarını ve sürekli filo yönetimini üstleniyoruz — kurumlar yönetimi sadeleştirip hızla adapte oluyor.
             </p>
-            <div class="bot-cards-grid">
+
+            <!-- Show Not Tell: Görsel Harness Mimarisi & Canlı Telemetri -->
+            <div class="harness-visual-row">
+                <div class="harness-blueprint-card">
+                    <div class="blueprint-header">
+                        <span class="blueprint-title">📐 AI Harness Mimari Taslağı</span>
+                        <span class="blueprint-status"><span class="blueprint-pulse"></span> Telemetri Aktif</span>
+                    </div>
+                    <img src="images/ai-harness.jpg" alt="AI Harness Mimari Çerçevesi: Modeller, Araçlar, Bağlayıcılar ve Bellek Katmanı">
+                    <p class="blueprint-caption">
+                        <strong>Kurumsal Harness:</strong> Yalnızca modeller üretime hazır botlar oluşturamaz. Harness (koşum takımı) araçları orkestre eder, bellek izolasyonunu sağlar, doğrulama kapılarını yürütür ve bilişsel yetenekleri güvenle birleştirir.
+                    </p>
+                </div>
+
+                <div class="harness-terminal-window">
+                    <div class="terminal-topbar">
+                        <div class="terminal-dots">
+                            <span class="t-dot t-red"></span>
+                            <span class="t-dot t-yellow"></span>
+                            <span class="t-dot t-green"></span>
+                        </div>
+                        <span class="terminal-filename">dp-harness-cli — telemetri ve onarım</span>
+                    </div>
+                    <div class="terminal-content">
+                        <p class="term-comment"># Kurumsal bot filosu test ve çalışma ortamında denetleniyor</p>
+                        <p><span class="term-cmd">$</span> dp-harness verify --fleet=enterprise-prod --auto-heal</p>
+                        <p class="term-info">[09:21:04] 🤖 Çoklu Model Yönlendirici: Claude 3.7 / GPT-4o / Gemini Pro ... <span class="term-ok">[TAMAM]</span></p>
+                        <p class="term-info">[09:21:05] 💾 Bağlam Deposu: Vektör Bellek & Redis Önbellek senkronizasyonu ... <span class="term-ok">[%100]</span></p>
+                        <p class="term-warn">[09:21:06] ⚠️ Bot #DP-104 (CertExpiryMonitor): Dahili CA üzerinde webhook zaman aşımı</p>
+                        <p class="term-fix">[09:21:06] 🛠️ HARNESS ONARIM HATTI TETİKLENDİ:</p>
+                        <p class="term-fix">    ↳ Kırık adaptör yalıtılmış kum havuzuna alındı ... [TAMAMLANDI]</p>
+                        <p class="term-fix">    ↳ Şema sözleşmesi yeniden sentezlendi & mTLS belirteci yenilendi ... [YAMALANDI]</p>
+                        <p class="term-fix">    ↳ Regresyon test seti çalıştırıldı (18 birim test başarıyla geçti) ... [%100 TAMAM]</p>
+                        <p class="term-info">[09:21:07] 🛡️ Yönetişim: SOC 2 & HIPAA denetim günlüğü sabit depoya işlendi</p>
+                        <p class="term-ok">[09:21:07] 🚀 Durum: 28/28 Bot Sağlıklı | Sıfır Manuel Müdahale | SLA: %99.99</p>
+                    </div>
+                    <div class="terminal-pills">
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">%85</div>
+                            <div class="term-stat-label">Daha Az Kesinti</div>
+                        </div>
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">0 Teknik Borç</div>
+                            <div class="term-stat-label">Harness CI/CD</div>
+                        </div>
+                        <div class="term-stat-pill">
+                            <div class="term-stat-val">7/24</div>
+                            <div class="term-stat-label">Pilot Kapsamı</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show Not Tell: Yan Yana Karşılaştırma Matrisi -->
+            <div class="show-matrix-section">
+                <h3 class="show-matrix-title">Show Not Tell: Kurumsal Gerçeklik Tablosu</h3>
+                <div class="show-matrix-grid">
+                    <div class="matrix-card matrix-card-bad">
+                        <span class="matrix-badge badge-bad">⚠️ Yönetilmeyen Gölge Botlar</span>
+                        <h3>Bakım Çıkmazı</h3>
+                        <ul class="matrix-list">
+                            <li><span class="m-icon">❌</span> <span><strong>Sessiz Hatalar:</strong> LLM çıktı şemaları kaydığında kontrolsüz betikler fark edilmeden çöker.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Mühendislik Tüketimi:</strong> Kıdemli yazılımcılar yeni özellikler üretmek yerine hafta sonlarını bot onarımlarıyla geçirir.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Güvenlik Açıkları:</strong> Sabit kodlanmış API anahtarları, denetlenmeyen veri sızıntıları SOC 2 / HIPAA standartlarını riske atar.</span></li>
+                            <li><span class="m-icon">❌</span> <span><strong>Bilgi Boşluğu:</strong> Yapan dış yüklenici ayrıldığında şirket içinde botu nasıl yöneteceğini kimse bilmez.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="matrix-card matrix-card-good">
+                        <span class="matrix-badge badge-good">🚀 Delivery Pilot Yönetilen Botlar</span>
+                        <h3>Yönetilen AI Bot Harness</h3>
+                        <ul class="matrix-list">
+                            <li><span class="m-icon">✅</span> <span><strong>Otomatik Onarım:</strong> Kendi kendini iyileştiren harness, şema sapmalarını algılar ve adaptörleri anında otomatik onarır.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Sıfır Operasyonel Yük:</strong> Ekiplerin sadece iş adaptasyonuna odaklanması için tam yönetilen SLA garantili bot filoları.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Tavizsiz Kurumsal Yönetişim:</strong> Tam uyum için yerleşik bariyerler, rol tabanlı erişim ve otomatik denetim günlükleri.</span></li>
+                            <li><span class="m-icon">✅</span> <span><strong>Sertifikalı Teslimat Pilotları:</strong> Filoyu denetleyen ve ekibinize kalıcı teslimat yetkinliği devreden insan pilotlar.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bot-cards-grid" style="margin-top: 3.5rem;">
                 <div class="bot-card">
                     <div class="bot-card-icon">🛠️</div>
                     <span class="bot-card-badge badge-harness">Harness Mühendisliği</span>

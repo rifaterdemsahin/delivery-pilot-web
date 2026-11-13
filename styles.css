@@ -1229,3 +1229,306 @@ body {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   Visual "Show Not Tell" Harness Architecture & Terminal Telemetry
+   ========================================================================== */
+.harness-visual-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin: 3.5rem 0 4rem 0;
+    text-align: left;
+}
+
+.harness-blueprint-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+}
+
+.blueprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blueprint-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.blueprint-status {
+    background: rgba(34, 197, 94, 0.18);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.blueprint-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4ade80;
+    display: inline-block;
+}
+
+.harness-blueprint-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.harness-blueprint-card img:hover {
+    transform: scale(1.015);
+}
+
+.blueprint-caption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* Terminal Console Visual */
+.harness-terminal-window {
+    background: #030712;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-topbar {
+    background: #111827;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.t-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.t-red { background: #ef4444; }
+.t-yellow { background: #f59e0b; }
+.t-green { background: #10b981; }
+
+.terminal-filename {
+    margin-left: 0.75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.78rem;
+    color: #9ca3af;
+    letter-spacing: 0.03em;
+}
+
+.terminal-content {
+    padding: 1.25rem 1.4rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.term-cmd {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.term-comment {
+    color: #64748b;
+}
+
+.term-ok {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.term-warn {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.term-fix {
+    color: #c084fc;
+    font-weight: 700;
+}
+
+.term-info {
+    color: #94a3b8;
+}
+
+.terminal-pills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(17, 24, 39, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.term-stat-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+}
+
+.term-stat-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #60a5fa;
+    line-height: 1.2;
+}
+
+.term-stat-label {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 0.2rem;
+}
+
+/* Before / After Comparison Matrix */
+.show-matrix-section {
+    margin: 3.5rem 0 2rem 0;
+}
+
+.show-matrix-title {
+    text-align: center;
+    font-size: 1.85rem;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.show-matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+}
+
+.matrix-card {
+    border-radius: 14px;
+    padding: 2.25rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.matrix-card-bad {
+    background: linear-gradient(145deg, rgba(239, 68, 68, 0.06) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.matrix-card-good {
+    background: linear-gradient(145deg, rgba(37, 99, 235, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.matrix-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.badge-bad {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badge-good {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.matrix-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.matrix-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.matrix-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.matrix-list li:last-child {
+    margin-bottom: 0;
+}
+
+.matrix-list li strong {
+    color: #ffffff;
+}
+
+.m-icon {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .harness-visual-row {
+        grid-template-columns: 1fr;
+    }
+    .show-matrix-grid {
+        grid-template-columns: 1fr;
+    }
+}
