@@ -73,11 +73,11 @@ const translations = {
         },
         hero: {
             slogan: "Master AI and Build the Future",
-            title: "Your last production outage wasn't a technology failure. It was a delivery failure.",
-            subtitle: "An expired certificate takes down production. A key person leaves and the AI project stalls. The skills gap nobody flagged becomes the deadline nobody hits. These aren't AI problems - they're delivery problems, and most enterprise AI initiatives die on exactly this ground.<br><br>Delivery Pilot embeds a certified pilot inside your team to close the skills gap while the work ships - through hands-on simulation workshops and certification, not slideware. You get delivery capability that stays after we leave.",
+            title: "We Build & Fix Bots for AI Harness — So Enterprises Simplify Management & Focus on Adapting 🚀",
+            subtitle: "Enterprises struggle when fragile bots fail in production and unmanaged harnesses create operational chaos. We engineer, repair, and harden intelligent bots under our turnkey <strong>Managed AI Bot Services</strong>—simplifying management overhead so leadership can focus purely on strategic adaptation.<br><br>Backed by our dedication to open self-learning, our entire curriculum is <strong>100% free for students</strong> and emerging tech talent, while we train and certify professionals into the pivotal <strong>Delivery Pilot</strong> role to steer AI fleets safely.",
             findGap: "Find Your Delivery Gap",
-            readinessAssessment: "1-Minute Readiness Assessment",
-            seeWorkshop: "See the 10-Step Workshop",
+            readinessAssessment: "📊 1-Minute Readiness Assessment",
+            seeWorkshop: "🎓 See the 10-Step Workshop",
             startJourney: "Find Your Delivery Gap",
             learnMore: "See the 10-Step Workshop"
         },
@@ -1069,11 +1069,11 @@ const translations = {
         },
         hero: {
             slogan: "Yapay Zekada Ustalaşın ve Geleceği İnşa Edin",
-            title: "Son üretim kesintiniz bir teknoloji arızası değildi. Bir teslimat başarısızlığıydı.",
-            subtitle: "Süresi dolan bir sertifika üretimi durdurur. Kilit bir kişi ayrılır ve yapay zeka projesi duraklar. Kimsenin fark etmediği yetenek açığı, kimsenin tutturamadığı teslim tarihine dönüşür. Bunlar yapay zeka sorunları değil; teslimat sorunlarıdır ve kurumsal yapay zeka girişimlerinin çoğu tam da bu noktada başarısızlığa uğrar.<br><br>Delivery Pilot, işler canlıya alınırken yetenek açığını kapatmak için ekibinize sertifikalı bir pilot dahil eder — slaytlarla değil, uygulamalı simülasyon atölyeleri ve sertifikasyonla. Biz ayrıldıktan sonra ekibinizde kalıcı bir teslimat yetkinliği kazanırsınız.",
+            title: "Yapay Zeka Test ve Çalışma Ortamları İçin Botlar İnşa Ediyor ve Onarıyoruz — Kurumlar Yönetimi Sadeleştirip Adaptasyona Odaklanıyor 🚀",
+            subtitle: "Kırılgan botlar üretimde çöktüğünde ve yönetilemeyen entegrasyonlar operasyonel karmaşa yarattığında kurumlar zorlanır. Kurumların yönetim yükünü sadeleştirmesi ve tamamen stratejik adaptasyona odaklanabilmesi için <strong>Yönetilen Yapay Zeka Bot Hizmetleri (MSP)</strong> ürünümüz kapsamında üretime hazır botlar inşa ediyor, onarıyor ve yönetiyoruz.<br><br>Açık ve kendi kendine öğrenmeye olan sarsılmaz bağlılığımızla, tüm eğitim müfredatımız <strong>öğrenciler için %100 ücretsizdir</strong>. Profesyonelleri ise otonom bot filolarını güvenle uçuracak öncü <strong>Teslimat Pilotu (Delivery Pilot)</strong> rolünde eğitip sertifikalandırıyoruz.",
             findGap: "Teslimat Açığınızı Belirleyin",
-            readinessAssessment: "1 Dakikalık Hazırlık Değerlendirmesi",
-            seeWorkshop: "10 Adımlık Atölyeyi İnceleyin",
+            readinessAssessment: "📊 1 Dakikalık Hazırlık Değerlendirmesi",
+            seeWorkshop: "🎓 10 Adımlık Atölyeyi İnceleyin",
             startJourney: "Teslimat Açığınızı Belirleyin",
             learnMore: "10 Adımlık Atölyeyi İnceleyin"
         },
