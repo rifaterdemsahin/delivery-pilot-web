@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot tracks: ship an AI system to production, then choose the FDE track (forward deployed / applied AI roles) or the Founder track (your own business). Free starter business, weekly build logs, security-checked launches.">
+    <meta name="keywords" content="Delivery Pilot, forward deployed engineer, FDE, applied AI engineer, AI solutions engineer, AI business, Skool community, AI skills gap">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/pilot-tracks.html">
+    <link rel="alternate" hreflang="tr" href="https://deliverypilot.net/pilot-tracks-tr.html">
+
+    <meta property="og:title" content="Pilot Tracks: FDE or Founder | Delivery Pilot">
+    <meta property="og:description" content="Ship an AI system to production. Then use it to get hired as an FDE or to run your own business.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/pilot-tracks.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+
+    <title>Pilot Tracks: FDE or Founder | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .tracks-hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: #fff; padding: 4rem 0 3rem; text-align: center; }
+        .tracks-hero h1 { font-size: 2.4rem; margin-bottom: 1rem; font-weight: 700; }
+        .tracks-hero p { max-width: 760px; margin: 0 auto; font-size: 1.15rem; opacity: .95; }
+        .tracks-section { padding: 3.5rem 0; }
+        .tracks-section h2 { text-align: center; margin-bottom: .75rem; }
+        .tracks-section .lead { text-align: center; max-width: 720px; margin: 0 auto 2rem; color: #4b5563; }
+        .core-card { max-width: 820px; margin: 0 auto; background: #f8fafc; border: 2px solid var(--primary-color); border-radius: 14px; padding: 2rem; }
+        .core-card ul, .track-card ul { margin: 1rem 0 0 1.2rem; line-height: 1.8; }
+        .tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 980px; margin: 0 auto; }
+        .track-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 6px 24px rgba(0,0,0,.08); border-top: 5px solid var(--primary-color); }
+        .track-card.founder { border-top-color: #f59e0b; }
+        .track-card h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+        .track-card .finish { margin-top: 1rem; padding: .75rem 1rem; background: #eef2ff; border-radius: 8px; }
+        .track-card.founder .finish { background: #fff7ed; }
+        .steps { max-width: 820px; margin: 0 auto; counter-reset: step; list-style: none; padding: 0; }
+        .steps li { position: relative; padding: 1rem 1rem 1rem 3.5rem; margin-bottom: .75rem; background: #f8fafc; border-radius: 10px; }
+        .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 1rem; top: 1rem; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--primary-color); color: #fff; text-align: center; line-height: 1.8rem; font-weight: 700; }
+        .cta-row .btn { background: var(--primary-color); color: #fff; border: 2px solid var(--primary-color); }
+        .cta-row .btn-secondary { background: #fff; color: var(--primary-color); }
+        .cta-row { text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <section class="tracks-hero">
+        <div class="container">
+            <h1>✈️ Pilot Tracks: FDE or Founder</h1>
+            <p>AI is changing which jobs exist. The people who can take AI from demo to production are in demand. Delivery Pilot trains you to do that, and then you choose how to use it: get hired, or build your own business.</p>
+        </div>
+    </section>
+
+    <section class="tracks-section">
+        <div class="container">
+            <h2>🛫 Every Pilot ships first</h2>
+            <p class="lead">A Delivery Pilot is anyone who ships an AI system to production. A proof of concept doesn't count. It has to be live, used and secured.</p>
+            <div class="core-card">
+                <strong>Launch checklist (both tracks)</strong>
+                <ul>
+                    <li>✅ A live system that real users can access</li>
+                    <li>✅ A working Stripe checkout or a real internal user</li>
+                    <li>🔒 Security check: secrets kept in env or a vault, webhook signatures verified, nothing sensitive in Git</li>
+                    <li>🔧 A README that documents known technical debt</li>
+                    <li>📓 Weekly build logs shared with the community</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracks-section" style="background:#f9fafb;">
+        <div class="container">
+            <h2>🧭 Then choose your track</h2>
+            <p class="lead">Everyone uses the same curriculum and starts with the same free project. Only the finish line differs, and you can switch tracks at any time.</p>
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <h3>🏢 FDE Track</h3>
+                    <p><strong>For people who want to be employed.</strong> This track prepares you for forward deployed engineer roles, which are also advertised as applied AI engineer or AI solutions engineer. These engineers work inside companies to get AI working in production.</p>
+                    <ul>
+                        <li>Write up your launch as a client engagement case study</li>
+                        <li>Build a Git portfolio aimed at FDE job specs</li>
+                        <li>Practise interviews with the community</li>
+                    </ul>
+                    <div class="finish">🏁 <strong>Finish line:</strong> an FDE or applied-AI interview or offer, <em>or</em> an AI system shipped inside your current employer.</div>
+                </div>
+                <div class="track-card founder">
+                    <h3>🚀 Founder Track</h3>
+                    <p><strong>For people who want to be self-employed.</strong> Take a free, MIT-licensed starter business, make it your own, and sell it.</p>
+                    <ul>
+                        <li>Claim a niche so that only one pilot runs each niche</li>
+                        <li>Launch within 14 days of claiming it</li>
+                        <li>Share your numbers and lessons openly</li>
+                    </ul>
+                    <div class="finish">🏁 <strong>Finish line:</strong> your first paying customer.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracks-section">
+        <div class="container">
+            <h2>🗺️ How it works</h2>
+            <ol class="steps">
+                <li><strong>Join the community.</strong> Pick your track and claim a project.</li>
+                <li><strong>Build.</strong> Start from the free starter business, which comes with the payments backend already built.</li>
+                <li><strong>Launch.</strong> Pass the launch checklist above to earn the 🛫 Launched badge.</li>
+                <li><strong>Reach your finish line.</strong> Earn the 🏢 FDE Pilot or 🚀 Founder Pilot badge.</li>
+                <li><strong>Get certified.</strong> Your shipped work counts as Git-based evidence towards full <a href="onboarding.html">Pilot Certification</a>.</li>
+                <li><strong>Pay it forward.</strong> Help a newer pilot reach launch.</li>
+            </ol>
+            <div class="cta-row">
+                <a href="https://www.skool.com/delivery-pilot-8938" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join the Community</a>
+                <a href="https://github.com/rifaterdemsahin/reverse-any-video" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Free Starter Business</a>
+                <a href="assessment.html" class="btn btn-secondary">Free Skills Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

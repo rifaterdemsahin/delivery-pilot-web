@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delivery Pilot yolları: bir yapay zeka sistemini canlıya alın, ardından FDE yolunu (forward deployed / uygulamalı yapay zeka rolleri) veya Kurucu yolunu (kendi işiniz) seçin.">
+    <meta name="keywords" content="Delivery Pilot, forward deployed engineer, FDE, uygulamalı yapay zeka mühendisi, yapay zeka işi, Skool topluluğu, yapay zeka yetenek açığı">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/pilot-tracks-tr.html">
+    <link rel="alternate" hreflang="en" href="https://deliverypilot.net/pilot-tracks.html">
+
+    <meta property="og:title" content="Pilot Yolları: FDE veya Kurucu | Delivery Pilot">
+    <meta property="og:description" content="Bir yapay zeka sistemini canlıya alın. Sonra bunu FDE olarak işe girmek ya da kendi işinizi kurmak için kullanın.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/pilot-tracks-tr.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+
+    <title>Pilot Yolları: FDE veya Kurucu | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .tracks-hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: #fff; padding: 4rem 0 3rem; text-align: center; }
+        .tracks-hero h1 { font-size: 2.4rem; margin-bottom: 1rem; font-weight: 700; }
+        .tracks-hero p { max-width: 760px; margin: 0 auto; font-size: 1.15rem; opacity: .95; }
+        .tracks-section { padding: 3.5rem 0; }
+        .tracks-section h2 { text-align: center; margin-bottom: .75rem; }
+        .tracks-section .lead { text-align: center; max-width: 720px; margin: 0 auto 2rem; color: #4b5563; }
+        .core-card { max-width: 820px; margin: 0 auto; background: #f8fafc; border: 2px solid var(--primary-color); border-radius: 14px; padding: 2rem; }
+        .core-card ul, .track-card ul { margin: 1rem 0 0 1.2rem; line-height: 1.8; }
+        .tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 980px; margin: 0 auto; }
+        .track-card { background: #fff; border-radius: 14px; padding: 2rem; box-shadow: 0 6px 24px rgba(0,0,0,.08); border-top: 5px solid var(--primary-color); }
+        .track-card.founder { border-top-color: #f59e0b; }
+        .track-card h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+        .track-card .finish { margin-top: 1rem; padding: .75rem 1rem; background: #eef2ff; border-radius: 8px; }
+        .track-card.founder .finish { background: #fff7ed; }
+        .steps { max-width: 820px; margin: 0 auto; counter-reset: step; list-style: none; padding: 0; }
+        .steps li { position: relative; padding: 1rem 1rem 1rem 3.5rem; margin-bottom: .75rem; background: #f8fafc; border-radius: 10px; }
+        .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 1rem; top: 1rem; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--primary-color); color: #fff; text-align: center; line-height: 1.8rem; font-weight: 700; }
+        .cta-row .btn { background: var(--primary-color); color: #fff; border: 2px solid var(--primary-color); }
+        .cta-row .btn-secondary { background: #fff; color: var(--primary-color); }
+        .cta-row { text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <section class="tracks-hero">
+        <div class="container">
+            <h1>✈️ Pilot Yolları: FDE veya Kurucu</h1>
+            <p>Yapay zeka hangi işlerin var olacağını değiştiriyor. Yapay zekayı demodan canlı ortama taşıyabilen insanlara talep var. Delivery Pilot sizi bunu yapmaya hazırlar. Sonra nasıl kullanacağınızı siz seçersiniz: işe girmek veya kendi işinizi kurmak.</p>
+        </div>
+    </section>
+
+    <section class="tracks-section">
+        <div class="container">
+            <h2>🛫 Her Pilot önce canlıya alır</h2>
+            <p class="lead">Delivery Pilot, bir yapay zeka sistemini canlıya alan herkestir. Kavram kanıtı (POC) sayılmaz. Sistem canlı, kullanılan ve güvenli olmalıdır.</p>
+            <div class="core-card">
+                <strong>Lansman kontrol listesi (iki yol için de)</strong>
+                <ul>
+                    <li>✅ Gerçek kullanıcıların erişebildiği canlı bir sistem</li>
+                    <li>✅ Çalışan bir Stripe ödeme sayfası veya gerçek bir şirket içi kullanıcı</li>
+                    <li>🔒 Güvenlik kontrolü: gizli anahtarlar env veya vault'ta saklanıyor, webhook imzaları doğrulanıyor, Git'te hassas bilgi yok</li>
+                    <li>🔧 Bilinen teknik borcu belgeleyen bir README</li>
+                    <li>📓 Toplulukla paylaşılan haftalık geliştirme günlükleri</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracks-section" style="background:#f9fafb;">
+        <div class="container">
+            <h2>🧭 Sonra yolunuzu seçin</h2>
+            <p class="lead">Herkes aynı müfredatı izler ve aynı ücretsiz projeyle başlar. Yalnızca bitiş çizgisi farklıdır ve istediğiniz zaman yol değiştirebilirsiniz.</p>
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <h3>🏢 FDE Yolu</h3>
+                    <p><strong>İşe girmek isteyenler için.</strong> Bu yol sizi forward deployed engineer rollerine hazırlar. Bu roller uygulamalı yapay zeka mühendisi veya yapay zeka çözüm mühendisi olarak da ilan edilir. Bu mühendisler, yapay zekayı canlı ortamda çalıştırmak için şirketlerin içinde çalışır.</p>
+                    <ul>
+                        <li>Lansmanınızı bir müşteri projesi vaka çalışması olarak yazın</li>
+                        <li>FDE iş ilanlarına yönelik bir Git portföyü oluşturun</li>
+                        <li>Toplulukla mülakat pratiği yapın</li>
+                    </ul>
+                    <div class="finish">🏁 <strong>Bitiş çizgisi:</strong> bir FDE veya uygulamalı yapay zeka mülakatı ya da iş teklifi, <em>veya</em> mevcut işvereninizde canlıya alınmış bir yapay zeka sistemi.</div>
+                </div>
+                <div class="track-card founder">
+                    <h3>🚀 Kurucu Yolu</h3>
+                    <p><strong>Kendi işini kurmak isteyenler için.</strong> MIT lisanslı ücretsiz bir başlangıç işini alın, kendinize uyarlayın ve satın.</p>
+                    <ul>
+                        <li>Bir niş seçin; her nişi yalnızca bir pilot yürütür</li>
+                        <li>Seçtikten sonra 14 gün içinde lansman yapın</li>
+                        <li>Rakamlarınızı ve derslerinizi açıkça paylaşın</li>
+                    </ul>
+                    <div class="finish">🏁 <strong>Bitiş çizgisi:</strong> ilk ödeme yapan müşteriniz.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracks-section">
+        <div class="container">
+            <h2>🗺️ Nasıl çalışır</h2>
+            <ol class="steps">
+                <li><strong>Topluluğa katılın.</strong> Yolunuzu seçin ve bir proje alın.</li>
+                <li><strong>Geliştirin.</strong> Ödeme altyapısı hazır gelen ücretsiz başlangıç işinden başlayın.</li>
+                <li><strong>Lansman yapın.</strong> Yukarıdaki kontrol listesini geçerek 🛫 Lansman rozetini kazanın.</li>
+                <li><strong>Bitiş çizgisine ulaşın.</strong> 🏢 FDE Pilotu veya 🚀 Kurucu Pilot rozetini kazanın.</li>
+                <li><strong>Sertifika alın.</strong> Canlıya aldığınız işler, tam <a href="onboarding-tr.html">Pilot Sertifikasyonu</a> için Git tabanlı kanıt olarak sayılır.</li>
+                <li><strong>Başkalarına destek olun.</strong> Yeni bir pilotun lansmana ulaşmasına yardım edin.</li>
+            </ol>
+            <div class="cta-row">
+                <a href="https://www.skool.com/delivery-pilot-8938" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Topluluğa Katılın</a>
+                <a href="https://github.com/rifaterdemsahin/reverse-any-video" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ücretsiz Başlangıç İşi</a>
+                <a href="assessment-tr.html" class="btn btn-secondary">Ücretsiz Yetenek Değerlendirmesi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
