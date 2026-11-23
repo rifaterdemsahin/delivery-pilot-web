@@ -12,6 +12,7 @@ const translations = {
             successStories: "⭐ Success Stories",
             onboarding: "🚀 Onboarding",
             pilotTracks: "✈️ Pilot Tracks",
+            aiRoles: "🧭 AI Roles",
             workshops: "🎓 Workshops",
             enterpriseAgent: "🤖 Enterprise Agent",
             mspOfferings: "🏢 MSP Offerings",
@@ -326,6 +327,7 @@ const translations = {
                 enterpriseAgent: "Enterprise Agent",
                 onboarding: "Onboarding",
                 pilotTracks: "Pilot Tracks",
+                aiRoles: "AI Roles",
                 agileTransformation: "Agile Transformation",
                 methodology: "Methodology",
                 mspOfferings: "MSP Offerings"
@@ -1010,6 +1012,7 @@ const translations = {
             successStories: "⭐ Başarı Hikayeleri",
             onboarding: "🚀 Katılım",
             pilotTracks: "✈️ Pilot Yolları",
+            aiRoles: "🧭 Yapay Zeka Rolleri",
             workshops: "🎓 Atölyeler",
             enterpriseAgent: "🤖 Kurumsal Ajan",
             mspOfferings: "🏢 MSP Yönetilen Hizmetler",
@@ -1324,6 +1327,7 @@ const translations = {
                 enterpriseAgent: "Kurumsal Ajan",
                 onboarding: "Katılım",
                 pilotTracks: "Pilot Yolları",
+                aiRoles: "Yapay Zeka Rolleri",
                 agileTransformation: "Çevik Dönüşüm",
                 methodology: "Metodoloji",
                 mspOfferings: "MSP Yönetilen Hizmetler"

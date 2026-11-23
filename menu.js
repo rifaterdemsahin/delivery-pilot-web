@@ -40,6 +40,7 @@ const navigationConfig = {
             submenu: [
                 { href: 'onboarding.html', textKey: 'nav.onboarding', text: '🚀 Onboarding' },
                 { href: 'pilot-tracks.html', textKey: 'nav.pilotTracks', text: '✈️ Pilot Tracks' },
+                { href: 'ai-roles.html', textKey: 'nav.aiRoles', text: '🧭 AI Roles' },
                 { href: 'workshops.html', textKey: 'nav.workshops', text: '🎓 Workshops' },
                 { href: 'agile-transformation.html', textKey: 'nav.agileTransformation', text: '📈 Agile Transformation' },
                 { href: 'enterprise-agent.html', textKey: 'nav.enterpriseAgent', text: '🤖 Enterprise Agent' },
@@ -147,6 +148,7 @@ const footerConfig = {
             content: [
                 { type: 'link', href: 'onboarding.html', textKey: 'footer.platform.onboarding', text: 'Onboarding' },
                 { type: 'link', href: 'pilot-tracks.html', textKey: 'footer.platform.pilotTracks', text: 'Pilot Tracks' },
+                { type: 'link', href: 'ai-roles.html', textKey: 'footer.platform.aiRoles', text: 'AI Roles' },
                 { type: 'link', href: 'workshops.html', textKey: 'footer.platform.workshops', text: 'Workshops' },
                 { type: 'link', href: 'agile-transformation.html', textKey: 'footer.platform.agileTransformation', text: 'Agile Transformation' },
                 { type: 'link', href: 'enterprise-agent.html', textKey: 'footer.platform.enterpriseAgent', text: 'Enterprise Agent' },

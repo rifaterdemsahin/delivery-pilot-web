@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI roles you can do: forward deployed engineer, applied AI engineer, AI agent engineer, LLMOps, AI security, AI product manager and more, mapped to Delivery Pilot tracks.">
+    <meta name="author" content="Delivery Pilot">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deliverypilot.net/ai-roles.html">
+    <link rel="alternate" hreflang="tr" href="https://deliverypilot.net/ai-roles-tr.html">
+    <meta property="og:title" content="AI Roles You Can Do | Delivery Pilot">
+    <meta property="og:description" content="AI roles you can do: forward deployed engineer, applied AI engineer, AI agent engineer, LLMOps, AI security, AI product manager and more, mapped to Delivery Pilot tracks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deliverypilot.net/ai-roles.html">
+    <meta property="og:site_name" content="Delivery Pilot">
+    <title>AI Roles You Can Do | Delivery Pilot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .roles-hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
+        .roles-hero h1 { font-size:2.4rem; margin-bottom:1rem; font-weight:700; }
+        .roles-hero p { max-width:760px; margin:0 auto .75rem; font-size:1.1rem; opacity:.95; }
+        .roles-hero .note { font-size:.95rem; opacity:.85; }
+        .roles-filter { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; padding:2rem 1rem 0; }
+        .roles-filter button { border:2px solid var(--primary-color); background:#fff; color:var(--primary-color); padding:.5rem 1rem; border-radius:999px; font-weight:600; cursor:pointer; }
+        .roles-filter button.active { background:var(--primary-color); color:#fff; }
+        .roles-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.25rem; max-width:1150px; margin:0 auto; padding:2rem 1rem 3rem; }
+        .role-card { background:#fff; border-radius:14px; padding:1.5rem; box-shadow:0 6px 24px rgba(0,0,0,.08); border-top:5px solid var(--primary-color); line-height:1.6; }
+        .role-card[data-track="founder"] { border-top-color:#f59e0b; }
+        .role-card[data-track="both"] { border-top-color:#10b981; }
+        .role-head { display:flex; align-items:center; gap:.6rem; margin-bottom:.5rem; }
+        .role-emoji { font-size:1.8rem; }
+        .role-head h2 { font-size:1.25rem; margin:0; }
+        .role-track { display:inline-block; font-size:.8rem; font-weight:700; padding:.2rem .6rem; border-radius:999px; background:#eef2ff; color:var(--primary-color); margin-bottom:.75rem; }
+        .role-track.founder { background:#fff7ed; color:#b45309; }
+        .role-track.both { background:#ecfdf5; color:#047857; }
+        .role-card p { margin:.4rem 0; color:#374151; }
+        .role-start { background:#f8fafc; border-radius:8px; padding:.6rem .75rem; }
+        .roles-cta { text-align:center; padding:3rem 1rem 4rem; background:#f9fafb; }
+        .roles-cta .row { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.25rem; }
+        .roles-cta .btn { background:var(--primary-color); color:#fff; border:2px solid var(--primary-color); }
+        .roles-cta .btn.alt { background:#fff; color:var(--primary-color); }
+    </style>
+</head>
+<body>
+    <!-- Navigation - Loaded from menu.js -->
+    <div id="navbar-placeholder"></div>
+
+    <section class="roles-hero">
+        <div class="container">
+            <h1>🧭 AI Roles You Can Do</h1>
+            <p>AI is changing which jobs exist. These are roles where people who can ship AI are in demand. Each one maps to a Delivery Pilot track and a first project you can start this week.</p>
+            <p class="note">Job titles vary between companies. FDE roles are also advertised as applied AI engineer or AI solutions engineer.</p>
+        </div>
+    </section>
+
+    <div class="roles-filter" role="group">
+        <button type="button" class="active" data-filter="all">All</button>
+        <button type="button" data-filter="fde">🏢 FDE track</button>
+        <button type="button" data-filter="founder">🚀 Founder track</button>
+    </div>
+
+    <section class="roles-grid">
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🏢</span><h2>Forward Deployed Engineer (FDE)</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Works inside a client company to get AI running in production: connects models to real data, workflows and systems, then proves the value.</p>
+                <p><strong>Key skills:</strong> APIs and integrations, agents and tool use, security, talking to stakeholders</p>
+                <p class="role-start"><strong>Your first project:</strong> Ship the starter business and write it up as a client engagement case study.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🧪</span><h2>Applied AI Engineer</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Builds AI features into products: retrieval (RAG), prompts, evaluations and guardrails, so the feature works reliably for real users.</p>
+                <p><strong>Key skills:</strong> Python or TypeScript, LLM APIs, RAG and vector search, evals</p>
+                <p class="role-start"><strong>Your first project:</strong> Add a RAG feature to your project and measure its answers with a small eval set.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🧩</span><h2>AI Solutions Engineer / Architect</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Designs the AI solution before it is built: picks models, patterns and platforms, and explains the trade-offs to customers and teams.</p>
+                <p><strong>Key skills:</strong> System design, cloud, agent design patterns, cost and risk trade-offs</p>
+                <p class="role-start"><strong>Your first project:</strong> Draw the architecture of your shipped project and explain one decision you would change.</p>
+            </article>
+            <article class="role-card" data-track="both">
+                <div class="role-head"><span class="role-emoji">🤖</span><h2>AI Agent Engineer</h2></div>
+                <span class="role-track both">🏢 FDE or 🚀 Founder</span>
+                <p><strong>What you do:</strong> Builds agents that take actions with tools: they plan, call APIs, recover from errors and hand off to humans when needed.</p>
+                <p><strong>Key skills:</strong> Tool use, MCP, orchestration, observability, safe permissions</p>
+                <p class="role-start"><strong>Your first project:</strong> Build one agent that does a real task end to end and logs every step.</p>
+            </article>
+            <article class="role-card" data-track="founder">
+                <div class="role-head"><span class="role-emoji">⚙️</span><h2>AI Automation Specialist</h2></div>
+                <span class="role-track founder">🚀 Founder track</span>
+                <p><strong>What you do:</strong> Automates business workflows with AI and tools like n8n: inboxes, documents, reports and hand-offs between systems.</p>
+                <p><strong>Key skills:</strong> Workflow tools, APIs and webhooks, prompt design, process mapping</p>
+                <p class="role-start"><strong>Your first project:</strong> Automate one painful workflow for a real person and measure the hours saved.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🔁</span><h2>LLMOps / MLOps Engineer</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Keeps AI systems running in production: deployment, monitoring, cost control, model updates and rollbacks.</p>
+                <p><strong>Key skills:</strong> CI/CD, containers and Kubernetes, monitoring, cost tracking</p>
+                <p class="role-start"><strong>Your first project:</strong> Add monitoring and a cost dashboard to your shipped project.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🔒</span><h2>AI Security Engineer</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Protects AI systems from prompt injection, data leaks and unsafe tool use, and checks they meet security rules.</p>
+                <p><strong>Key skills:</strong> Threat modelling, secrets management, red-teaming, access control</p>
+                <p class="role-start"><strong>Your first project:</strong> Red-team your own project: try to break it, then document and fix what you found.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">📊</span><h2>AI Evaluator / Quality Engineer</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Measures whether AI output is good enough: builds test sets, scores answers and catches regressions before users do.</p>
+                <p><strong>Key skills:</strong> Test design, domain knowledge, data analysis, attention to detail</p>
+                <p class="role-start"><strong>Your first project:</strong> Write 30 test questions for an AI feature and track its score over a week.</p>
+            </article>
+            <article class="role-card" data-track="both">
+                <div class="role-head"><span class="role-emoji">🧭</span><h2>AI Product Manager</h2></div>
+                <span class="role-track both">🏢 FDE or 🚀 Founder</span>
+                <p><strong>What you do:</strong> Decides what AI should build and why: finds the problem worth solving, sets success measures and works with engineers to ship.</p>
+                <p><strong>Key skills:</strong> User research, specs, metrics, knowing what AI can and cannot do</p>
+                <p class="role-start"><strong>Your first project:</strong> Write a one-page spec for an AI feature, ship it and report what users did.</p>
+            </article>
+            <article class="role-card" data-track="fde">
+                <div class="role-head"><span class="role-emoji">🛡️</span><h2>AI Governance & Compliance Lead</h2></div>
+                <span class="role-track fde">🏢 FDE track</span>
+                <p><strong>What you do:</strong> Makes sure AI is used responsibly and legally: policies, risk reviews, data protection and audit trails.</p>
+                <p><strong>Key skills:</strong> Regulation (for example GDPR and the EU AI Act), risk assessment, policy writing</p>
+                <p class="role-start"><strong>Your first project:</strong> Write a short AI use policy and risk review for your own project.</p>
+            </article>
+            <article class="role-card" data-track="founder">
+                <div class="role-head"><span class="role-emoji">📈</span><h2>AI Transformation & Enablement Coach</h2></div>
+                <span class="role-track founder">🚀 Founder track</span>
+                <p><strong>What you do:</strong> Helps teams change how they work with AI: training, new workflows and showing where AI creates value.</p>
+                <p><strong>Key skills:</strong> Coaching, change management, value recognition, hands-on AI tools</p>
+                <p class="role-start"><strong>Your first project:</strong> Run one workshop where a team ships a small AI workflow and measures the result.</p>
+            </article>
+            <article class="role-card" data-track="founder">
+                <div class="role-head"><span class="role-emoji">🎓</span><h2>AI Educator & Content Creator</h2></div>
+                <span class="role-track founder">🚀 Founder track</span>
+                <p><strong>What you do:</strong> Teaches AI to others through courses, videos and communities, turning hands-on experience into lessons people can follow.</p>
+                <p><strong>Key skills:</strong> Clear explaining, video and writing, real projects to show</p>
+                <p class="role-start"><strong>Your first project:</strong> Publish a breakdown of something you shipped, using the reverse-engineer method.</p>
+            </article>
+            <article class="role-card" data-track="founder">
+                <div class="role-head"><span class="role-emoji">💼</span><h2>AI Implementation Consultant</h2></div>
+                <span class="role-track founder">🚀 Founder track</span>
+                <p><strong>What you do:</strong> Sells and delivers AI projects to businesses as an independent: scopes the work, builds it and hands it over.</p>
+                <p><strong>Key skills:</strong> Scoping and pricing, delivery, client communication, a portfolio of shipped work</p>
+                <p class="role-start"><strong>Your first project:</strong> Land your first paying client and deliver one small project end to end.</p>
+            </article>
+    </section>
+
+    <section class="roles-cta">
+        <h2>Not sure which role fits?</h2>
+        <p>Join the community, pick a track and ship your first project. You can switch roles as you learn.</p>
+        <div class="row">
+            <a href="https://www.skool.com/delivery-pilot-8938" target="_blank" rel="noopener noreferrer" class="btn">Join the free community</a>
+            <a href="pilot-tracks.html" class="btn alt">See the Pilot Tracks</a>
+            <a href="assessment.html" class="btn alt">Free skills assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer - Loaded from menu.js -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../menu.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll('.roles-filter button');
+            var cards = document.querySelectorAll('.role-card');
+            buttons.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    buttons.forEach(function (x) { x.classList.remove('active'); });
+                    b.classList.add('active');
+                    var f = b.getAttribute('data-filter');
+                    cards.forEach(function (card) {
+                        var t = card.getAttribute('data-track');
+                        card.style.display = (f === 'all' || t === f || t === 'both') ? '' : 'none';
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
