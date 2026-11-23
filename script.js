@@ -13,6 +13,7 @@ const translations = {
             onboarding: "🚀 Onboarding",
             pilotTracks: "✈️ Pilot Tracks",
             aiRoles: "🧭 AI Roles",
+            cambridgeAcademy: "🎓 Cambridge AI Academy",
             workshops: "🎓 Workshops",
             enterpriseAgent: "🤖 Enterprise Agent",
             mspOfferings: "🏢 MSP Offerings",
@@ -328,6 +329,7 @@ const translations = {
                 onboarding: "Onboarding",
                 pilotTracks: "Pilot Tracks",
                 aiRoles: "AI Roles",
+                cambridgeAcademy: "Cambridge AI Academy",
                 agileTransformation: "Agile Transformation",
                 methodology: "Methodology",
                 mspOfferings: "MSP Offerings"
@@ -1013,6 +1015,7 @@ const translations = {
             onboarding: "🚀 Katılım",
             pilotTracks: "✈️ Pilot Yolları",
             aiRoles: "🧭 Yapay Zeka Rolleri",
+            cambridgeAcademy: "🎓 Cambridge AI Academy",
             workshops: "🎓 Atölyeler",
             enterpriseAgent: "🤖 Kurumsal Ajan",
             mspOfferings: "🏢 MSP Yönetilen Hizmetler",
@@ -1328,6 +1331,7 @@ const translations = {
                 onboarding: "Katılım",
                 pilotTracks: "Pilot Yolları",
                 aiRoles: "Yapay Zeka Rolleri",
+                cambridgeAcademy: "Cambridge AI Academy",
                 agileTransformation: "Çevik Dönüşüm",
                 methodology: "Metodoloji",
                 mspOfferings: "MSP Yönetilen Hizmetler"
